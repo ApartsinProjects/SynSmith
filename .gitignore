@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Run artefacts
+runs/*/
+!runs/.gitkeep
+
+# Cached embeddings and models
+.cache/
+*.pkl
+*.npy
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log

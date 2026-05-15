@@ -1,0 +1,15 @@
+{"text": "Hi, I was charged twice for my subscription this month, can you refund the duplicate? Order #99431.", "label": "refund_request", "metadata": {"source": "email"}}
+{"text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.", "label": "technical_problem", "metadata": {"source": "chat"}}
+{"text": "Forgot my password and the reset email never arrives. Already checked spam.", "label": "account_issue", "metadata": {"source": "chat"}}
+{"text": "this is ridiculous. third time this week. nobody answers. i want to speak to a manager.", "label": "complaint", "metadata": {"source": "chat"}}
+{"text": "Do you guys ship to Norway? Trying to figure out if it's worth signing up.", "label": "general_question", "metadata": {"source": "email"}}
+{"text": "transaction failed but money was deducted. screenshot attached.", "label": "refund_request", "metadata": {"source": "form"}}
+{"text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.", "label": "technical_problem", "metadata": {"source": "chat"}}
+{"text": "two factor codes never come through, I've been locked out for 2 days now", "label": "account_issue", "metadata": {"source": "email"}}
+{"text": "ordered Tuesday, said 2-day shipping, it's been 6 days, where is my package", "label": "complaint", "metadata": {"source": "email"}}
+{"text": "is the pro plan billed monthly or yearly?", "label": "general_question", "metadata": {"source": "chat"}}
+{"text": "got the wrong size, want my money back not a store credit thanks", "label": "refund_request", "metadata": {"source": "email"}}
+{"text": "the export to PDF button is greyed out for me, other team members can use it fine", "label": "technical_problem", "metadata": {"source": "chat"}}
+{"text": "deleted my account by mistake yesterday is there any way to undo that", "label": "account_issue", "metadata": {"source": "email"}}
+{"text": "i paid for the upgrade but features are still locked", "label": "complaint", "metadata": {"source": "chat"}}
+{"text": "Hi team, quick one - does the API have a rate limit on the search endpoint?", "label": "general_question", "metadata": {"source": "email"}}

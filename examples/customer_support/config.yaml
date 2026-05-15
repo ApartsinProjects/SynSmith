@@ -1,0 +1,71 @@
+# AttrForge run configuration: customer support intent classification
+schema_path: examples/customer_support/schema.yaml
+real_examples_path: examples/customer_support/real_examples.jsonl
+
+domain: customer_support
+task_description: |
+  Classify a customer support message into one of five intents. Messages may
+  be informal, fragmented, ambiguous, or contain typos and irrelevant details.
+
+iterations: 5
+samples_per_iteration: 20
+seed: 17
+run_dir: runs
+
+initial_prompt: |
+  Generate realistic customer support messages that match the requested intent
+  and style. The example should be plausible for a customer support channel
+  (email, chat, in-app form). Keep it short to medium length. Output a JSON
+  object with the sample id, the text, and the attribute values.
+
+# Backends. Set ``backend: echo`` to dry-run with no API key.
+generator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.9
+  max_tokens: 800
+
+verifier_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400
+
+discriminator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 1200
+
+auditor_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.2
+  max_tokens: 800
+
+updater_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.3
+  max_tokens: 600
+
+planner:
+  strategy: coverage_gap
+  batch_size: 20
+
+generator:
+  num_few_shot: 3
+  temperature: 0.9
+  max_tokens: 800
+
+discriminator:
+  max_samples: 24
+
+auditor:
+  near_duplicate_threshold: 0.92
+  use_embeddings: false

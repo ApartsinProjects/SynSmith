@@ -1,0 +1,25 @@
+# Offline dry-run configuration. Uses the in-process EchoClient so the loop
+# can be exercised without any API keys. Useful for CI and local smoke tests.
+schema_path: examples/customer_support/schema.yaml
+real_examples_path: examples/customer_support/real_examples.jsonl
+
+domain: customer_support
+iterations: 2
+samples_per_iteration: 6
+seed: 17
+run_dir: runs
+
+initial_prompt: |
+  Generate realistic customer support messages that match the requested intent
+  and style. Output a JSON object with sample_id, text, and attributes.
+
+generator_llm: { backend: echo, model: echo }
+verifier_llm: { backend: echo, model: echo }
+discriminator_llm: { backend: echo, model: echo }
+auditor_llm: { backend: echo, model: echo }
+updater_llm: { backend: echo, model: echo }
+
+planner: { strategy: stratified, batch_size: 6 }
+generator: { num_few_shot: 2 }
+discriminator: { max_samples: 12 }
+auditor: { use_embeddings: false }
