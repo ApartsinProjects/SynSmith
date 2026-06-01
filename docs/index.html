@@ -31,31 +31,20 @@
 <main>
 
 <header class="paper-title">
-  <a class="download-badge" href="attrforge.docx" title="Download a Microsoft Word version of this paper with native editable equations">Download .docx</a>
+  <a class="download-badge" href="attrforge.docx" title="Download a Microsoft Word version of this paper with native editable equations">.docx</a>
 
   <h1>It Depends on the Classifier: GAN-Style Adversaries in LLM Prompt Debugging Reveal a Representation-Dependent Diversity-Utility Tradeoff</h1>
-  <p class="subtitle">We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop. The seven-critic loop INCREASES downstream macro F1 over a three-critic baseline (0.71 vs 0.67) when the downstream classifier is a sentence-transformer, but DECREASES it (0.40 vs 0.58) when the classifier is TF-IDF. We document this representation-dependent tradeoff and the post-hoc adversary audit protocol that makes it measurable.</p>
+  <p class="subtitle">We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop. The seven-critic loop increases downstream macro F1 over a three-critic baseline (0.71 vs 0.67) when the downstream classifier is a sentence-transformer, but decreases it (0.40 vs 0.58) when the classifier is TF-IDF. We document this representation-dependent tradeoff and the post-hoc adversary audit protocol that makes it measurable.</p>
   <div class="authors">
-    <strong>Alexander Apartsin</strong><sup>1</sup> &middot;
+    <strong>Alexander Apartsin</strong><sup>1</sup> &emsp;
     <strong>Yehudit Aperstein</strong><sup>2</sup>
   </div>
   <div class="affiliations">
-    <sup>1</sup>Holon Institute of Technology, Israel &middot;
+    <sup>1</sup>Holon Institute of Technology, Israel &emsp;
     <sup>2</sup>Afeka College of Engineering, Israel
   </div>
-  <div class="meta">Research preview &middot; v0.5 &middot; 2026</div>
-  <div class="badges">
-    <a href="https://github.com/ApartsinProjects/PromptForge">GitHub</a>
-    <a href="https://github.com/ApartsinProjects/PromptForge/blob/main/attrforge_project_description.md">Full description</a>
-    <a href="https://github.com/ApartsinProjects/PromptForge/blob/main/README.md">README</a>
-    <a href="#bibtex">BibTeX</a>
-  </div>
+  <div class="meta">v0.6 &middot; 2026</div>
 </header>
-
-<section class="hero">
-  <img src="figures/hero.png" alt="AttrForge hero image: a forge anvil with a glowing crystalline prompt above it, surrounded by three luminous critic spirits (cyan attribute verifier, amber diversity auditor, magenta realism discriminator) sending structured feedback streams back into the prompt." />
-  <p class="caption">The AttrForge loop: critics judge the synthetic batch, and their structured feedback is the "gradient" that rewrites the generator prompt.</p>
-</section>
 
 <section class="abstract">
   <h2>Abstract</h2>
@@ -702,8 +691,8 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 </code></pre>
 
 <footer class="paper-footer">
-  Built with HTML and <a href="https://katex.org/">KaTeX</a>. Source on
-  <a href="https://github.com/ApartsinProjects/PromptForge">GitHub</a>.
+  Code: <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+  Word version: <a href="attrforge.docx">attrforge.docx</a>.
 </footer>
 
 </main>
