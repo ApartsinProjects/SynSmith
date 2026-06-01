@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AttrForge: Multi-Objective Prompt Debugging for Realistic, Diverse, and Attribute-Controlled Synthetic Data Generation</title>
-<meta name="description" content="A research-preview framework that frames synthetic data generation as iterative, critic-guided prompt optimization. Three baseline LLM critics plus four GAN-style adversaries (Pack Discriminator, Mode-Seeking, Mode Hunter, Coverage Hole Finder) attack mode collapse in prompt space." />
-<meta name="author" content="AttrForge Contributors" />
+<title>More Critics, Worse Data? GAN-Style Adversaries Expose a Diversity-Discriminability Tradeoff in LLM Synthetic Data Generation</title>
+<meta name="description" content="We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop and document a diversity-discriminability tradeoff: adding the 4 GAN-style adversaries to a 3-critic baseline drops downstream macro F1 by 0.18 while measurably increasing surface diversity." />
+<meta name="author" content="Alexander Apartsin, Yehudit Aperstein" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="AttrForge: Multi-Objective Prompt Debugging for Synthetic Data Generation" />
-<meta property="og:image" content="figures/hero.png" />
+<meta property="og:title" content="More Critics, Worse Data? GAN-Style Adversaries Expose a Diversity-Discriminability Tradeoff" />
+<meta property="og:description" content="Bridging GAN mode-collapse defenses into multi-critic LLM prompt optimization reveals a diversity-discriminability tradeoff." />
+<meta property="og:image" content="figures/architecture.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="More Critics, Worse Data?" />
+<meta name="twitter:image" content="figures/architecture.png" />
 
 <link rel="stylesheet" href="style.css" />
 
