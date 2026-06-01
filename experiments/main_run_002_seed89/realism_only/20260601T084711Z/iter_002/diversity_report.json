@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a comprehensive coverage of the attribute schema, with all modes represented. However, there are instances of near-duplicate phrasings and some overrepresented styles that could be diversified.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "complaint"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse emotional expressions in the complaint and refund_request intents.",
+    "Introduce more edge cases and rare scenarios to enhance the variety of situations presented.",
+    "Reduce the frequency of similar phrasing by varying sentence structures and vocabulary."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

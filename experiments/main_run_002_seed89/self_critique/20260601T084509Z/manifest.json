@@ -1,0 +1,168 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\main_run_002_seed89\\self_critique\\20260601T084509Z",
+  "n_iterations": 3,
+  "final_prompt_version": 2,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.6,
+      "entropy/intent": 0.9592101522724051,
+      "entropy/difficulty": 0.8957541375001009,
+      "entropy/ambiguity": 0.9850568223215079,
+      "entropy/style": 0.8822716235122602,
+      "entropy/noise": 0.8274070571684498,
+      "entropy/scenario_type": 0.9497012164384108,
+      "coverage/intent": 1.0,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 0.8333333333333334,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 1.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.6666666666666666,
+      "entropy/intent": 0.9487027337173605,
+      "entropy/difficulty": 0.8024052436705212,
+      "entropy/ambiguity": 0.9755307720176264,
+      "entropy/style": 0.9306282244165779,
+      "entropy/noise": 0.9415787376332126,
+      "entropy/scenario_type": 0.9755307720176264,
+      "coverage/intent": 1.0,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 2.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.6,
+      "entropy/intent": 0.9415787376332126,
+      "entropy/difficulty": 0.7559752426306121,
+      "entropy/ambiguity": 0.8957541375001009,
+      "entropy/style": 0.9488801212514659,
+      "entropy/noise": 0.9822177815287606,
+      "entropy/scenario_type": 0.946394630357186,
+      "coverage/intent": 1.0,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic customer support messages that match the requested intent\nand style. The example should be plausible for a customer support channel\n(email, chat, in-app form). Keep it short to medium length. Output a JSON\nobject with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-01T08:45:09.005556+00:00"
+    },
+    {
+      "version": 1,
+      "iteration": 1,
+      "prompt": "\"\"\"Generate realistic customer support messages that match the requested intent and style. The examples should be plausible for a customer support channel (email, chat, in-app form) and should vary in tone and length. Include styles such as informal, verbose, concise, and emotional to enhance diversity. Ensure that the messages reflect distinct variations in phrasing to minimize near-duplicates. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- Avoid repetitive phrases or structures that lead to near-duplicates.\n- Do not use overly formal language in informal styles.\n\nEnsure that each message is tailored to the specific intent, difficulty, and ambiguity while maintaining a realistic tone. Aim for a balance of styles to create a rich dataset that captures a wide range of customer support interactions. The generated messages should reflect a variety of customer scenarios, including common inquiries, complaints, and requests for assistance, while showcasing different levels of formality and verbosity. Strive for uniqueness in each output to enhance the overall quality and applicability of the generated data.\"\"\"",
+      "motivation": "The batch exhibits a good variety of intents, difficulties, and ambiguities, but there is a noticeable lack of diversity in the 'style' attribute, particularly with the absence of 'informal' and 'verbose' styles. Additionally, the presence of near-duplicate phrasings indicates a need for more distinct variations in the generated samples.",
+      "feedback_summary": {
+        "iteration": 0,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 0,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "informal",
+          "verbose"
+        ],
+        "overrepresented_modes": [
+          "concise",
+          "emotional"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 0.5,
+          "synthetic_detection_rate": 0.5,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.6,
+          "entropy/intent": 0.9592101522724051,
+          "entropy/difficulty": 0.8957541375001009,
+          "entropy/ambiguity": 0.9850568223215079,
+          "entropy/style": 0.8822716235122602,
+          "entropy/noise": 0.8274070571684498,
+          "entropy/scenario_type": 0.9497012164384108,
+          "coverage/intent": 1.0,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 0.8333333333333334,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-01T08:45:49.780997+00:00"
+    },
+    {
+      "version": 2,
+      "iteration": 2,
+      "prompt": "\"\"\"\"\"\"Generate realistic customer support messages that align with the requested intent and style. The examples should be plausible for a customer support channel (email, chat, in-app form) and should vary in tone and length. Include styles such as informal, formal, verbose, concise, and emotional to enhance diversity. Ensure that the messages reflect distinct variations in phrasing to minimize near-duplicates. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- Avoid repetitive phrases or structures that lead to near-duplicates.\n- Do not use overly formal language in informal styles.\n\nEnsure that each message is tailored to the specific intent, difficulty, and ambiguity while maintaining a realistic tone. Aim for a balance of styles to create a rich dataset that captures a wide range of customer support interactions. The generated messages should reflect various customer scenarios, including common inquiries, complaints, requests for assistance, and technical problems, while showcasing different levels of formality and verbosity. Strive for uniqueness in each output to enhance the overall quality and applicability of the generated data. Specifically, include edge cases for technical issues and account problems, and ensure a balanced representation of all styles across different intents to reduce overrepresentation of any single mode.",
+      "motivation": "The batch exhibits a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity could be enhanced by including more edge cases and varying the phrasing.",
+      "feedback_summary": {
+        "iteration": 1,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 0,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "intent: technical_problem (edge_case)",
+          "style: formal (common)",
+          "style: concise (common)",
+          "style: verbose (common)",
+          "noise: missing_details (common)",
+          "scenario_type: common (technical_problem)"
+        ],
+        "overrepresented_modes": [
+          "intent: refund_request",
+          "style: emotional",
+          "scenario_type: edge_case"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 0.5,
+          "synthetic_detection_rate": 0.5,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.6666666666666666,
+          "entropy/intent": 0.9487027337173605,
+          "entropy/difficulty": 0.8024052436705212,
+          "entropy/ambiguity": 0.9755307720176264,
+          "entropy/style": 0.9306282244165779,
+          "entropy/noise": 0.9415787376332126,
+          "entropy/scenario_type": 0.9755307720176264,
+          "coverage/intent": 1.0,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 1.0,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-01T08:46:32.836831+00:00"
+    }
+  ]
+}

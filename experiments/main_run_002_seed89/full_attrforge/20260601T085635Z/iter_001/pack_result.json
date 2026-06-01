@@ -1,0 +1,155 @@
+{
+  "pack_accuracy": 0.875,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "questions posed in a casual tone",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repeated use of 'hey' as an opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more conversational structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive detail in personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamation marks for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey' or 'hey there!'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual conversational tone with personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy, run-on sentences with multiple ideas",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone (e.g., 'hey there!', 'like', 'ya know')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of personal anecdotes or experiences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of dissatisfaction or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated questioning or uncertainty about the status of orders or accounts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greeting (e.g., 'hey', 'hey there!')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler phrases (e.g., 'so like', 'ya know', 'just wondering')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing stress or confusion about an issue",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, conversational sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of personal anecdotes or comparisons (e.g., referencing a friend's experience)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests and expressions of dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of introductory phrases like 'i’ve been experiencing' or 'i can't log into'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated questioning format, such as 'can someone assist me?' or 'what’s going on?'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory statements expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of personal pronouns like 'i' and 'my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of issues with service or account access",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of personal touch or emotional expression",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical language and specific details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "minimal variation in sentence length and complexity",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greeting at the beginning of multiple samples (e.g., 'hey there!')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion about service issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in asking for help or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone with filler words like 'like' and 'you know'",
+      "n_pairs_observed": 1
+    }
+  ]
+}

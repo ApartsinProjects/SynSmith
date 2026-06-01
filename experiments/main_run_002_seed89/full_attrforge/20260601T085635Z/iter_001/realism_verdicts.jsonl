@@ -1,0 +1,24 @@
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Casual language and direct request indicate a genuine customer complaint."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Specific issue with billing and a clear request for resolution suggest authenticity."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Realistic scenario with a common issue and specific details about checking spam."}
+{"sample_id":"target_00028","prediction":"synthetic","confidence":0.8,"reason":"Overly dramatic language and informal tone suggest a constructed complaint."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with email verification indicates a real user problem."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Describes a common technical issue with clear symptoms."}
+{"sample_id":"target_00030","prediction":"synthetic","confidence":0.75,"reason":"Casual language and vague references suggest a less authentic complaint."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"Specific and urgent request regarding account security indicates a real issue."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct request for a refund with clear details about the order."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Urgent request for a refund with evidence (photos) suggests authenticity."}
+{"sample_id":"R015","prediction":"real","confidence":0.85,"reason":"Specific issue with account management indicates a real user problem."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Clear request for a refund with order number suggests a genuine complaint."}
+{"sample_id":"R024","prediction":"real","confidence":0.85,"reason":"Technical inquiry about API suggests a knowledgeable user."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Specific issue with paid features indicates a real user concern."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Long-term customer expressing dissatisfaction suggests authenticity."}
+{"sample_id":"R026","prediction":"real","confidence":0.85,"reason":"Technical inquiry about outages indicates a real user concern."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Specific technical issue with documentation suggests a genuine inquiry."}
+{"sample_id":"R029","prediction":"real","confidence":0.85,"reason":"Simple and direct question about billing indicates authenticity."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Clear request for refund after cancellation suggests a real issue."}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"Specific technical issue with logs attached indicates a genuine complaint."}
+{"sample_id":"target_00019","prediction":"synthetic","confidence":0.7,"reason":"Casual language and exaggerated expressions suggest a constructed complaint."}
+{"sample_id":"target_00027","prediction":"synthetic","confidence":0.6,"reason":"Irrelevant detail about a cat and informal tone suggest a less authentic complaint."}
+{"sample_id":"R027","prediction":"real","confidence":0.85,"reason":"Direct question about discounts indicates a genuine inquiry."}
+{"sample_id":"target_00032","prediction":"synthetic","confidence":0.7,"reason":"Informal language and repetitive phrasing suggest a constructed complaint."}

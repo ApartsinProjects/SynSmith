@@ -1,0 +1,17 @@
+"""Generate realistic customer support messages that align with the requested intent and style, ensuring a variety of distinct phrasings and scenarios. The examples should be plausible for a customer support channel (email, chat, in-app form) and include a mix of common inquiries, technical issues, and account-related problems. Aim for short to medium length messages that reflect diverse customer experiences, including both straightforward and ambiguous situations. 
+
+Output a JSON object with the following fields:
+- sample_id: a unique identifier for the message
+- text: the generated customer support message
+- attributes: an object containing the intent, style, difficulty, ambiguity, noise, and scenario_type.
+
+Ensure to include edge cases and avoid overusing informal styles. Strive for a balance in representation across various scenarios, and introduce high-ambiguity cases to enhance diversity. 
+
+Forbidden phrasings: 
+- "quick one"
+- "tried reinstall"
+- "nothing"
+- "does the API have a rate limit" 
+- "I've been locked out for 2 days now"
+
+This prompt aims to produce a rich set of customer support messages that are attribute-faithful, realistic, and diverse, while minimizing near-duplicate responses."

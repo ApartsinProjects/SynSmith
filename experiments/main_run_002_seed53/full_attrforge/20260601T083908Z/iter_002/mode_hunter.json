@@ -1,0 +1,96 @@
+{
+  "new_findings": [
+    {
+      "pattern": "So I got my order confirmation but",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is unique to the synthetic batch and does not appear in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a jacket last week and it showed up with a stain on it.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This sentence structure and content are not found in the real batch, making it distinct.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I think I might have locked myself out of my account again",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific concern about account access is phrased uniquely in the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I am experiencing an issue where the application crashes immediately upon launch",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This detailed description of an app issue is not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I feel so disappointed!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This emotional expression is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I might need a refund because",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing indicating uncertainty about needing a refund does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe how frustrated I am",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of disbelief and frustration is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey, quick question - like, can I use",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal opener with 'like' is distinctive to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was just wondering if you guys",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific phrasing is casual and appears multiple times in the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I’m really worried because",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase conveys a personal concern and is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I think my pizza got delivered late yesterday",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific scenario and wording do not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "So I got my order confirmation but",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is unique to the synthetic batch and does not appear in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a jacket last week and it showed up with a stain on it.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This sentence structure and content are not found in the real batch, making it distinct.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I think I might have locked myself out of my account again",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific concern about account access is phrased uniquely in the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I am experiencing an issue where the application crashes immediately upon launch",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This detailed description of an app issue is not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

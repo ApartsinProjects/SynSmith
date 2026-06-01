@@ -1,0 +1,24 @@
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Casual language and specific issue indicate a real user experience."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.8,"reason":"Overly polished grammar and predictable structure suggest LLM generation."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Direct complaint with a specific issue reflects a genuine user concern."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.75,"reason":"Informal language and structure feel overly simplified and generic."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.7,"reason":"Casual phrasing and uncertainty seem scripted rather than authentic."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Specific request for a correction indicates a real user issue."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"Generic phrasing and lack of detail suggest a synthetic response."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.65,"reason":"Casual language and vague details indicate a less authentic user experience."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.75,"reason":"Overly casual and uncertain language feels scripted."}
+{"sample_id":"R026","prediction":"real","confidence":0.85,"reason":"Specific inquiry about outages reflects a real user concern."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Detailed technical issue suggests a genuine user experience."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Clear request for a refund indicates a real transaction issue."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Frustrated tone and specific complaint suggest a real user experience."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue with two-factor authentication indicates a real user problem."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Inquiring about future options reflects a genuine user interest."}
+{"sample_id":"R028","prediction":"real","confidence":0.85,"reason":"Specific question about service tiers indicates a real user inquiry."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.7,"reason":"Casual language and structure feel overly simplified and generic."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.6,"reason":"Overly detailed and casual narrative suggests LLM generation."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with email verification indicates a real user problem."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct request for a refund indicates a real transaction issue."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Specific complaint about shipping delay reflects a real user experience."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Technical issue with filters indicates a genuine user concern."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Specific request for a refund indicates a real transaction issue."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct request for a refund reflects a real user experience."}

@@ -1,0 +1,30 @@
+{
+  "summary": "The batch exhibits a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity could be enhanced by including more edge cases and varying the phrasing.",
+  "missing_modes": [
+    "intent: technical_problem (edge_case)",
+    "style: formal (common)",
+    "style: concise (common)",
+    "style: verbose (common)",
+    "noise: missing_details (common)",
+    "scenario_type: common (technical_problem)"
+  ],
+  "overrepresented_modes": [
+    "intent: refund_request",
+    "style: emotional",
+    "scenario_type: edge_case"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Introduce more edge cases for technical problems and account issues.",
+    "Vary the phrasing in refund requests to avoid near-duplicates.",
+    "Ensure a balanced representation of all styles across different intents."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,15 @@
+"""Generate realistic customer support messages that match the requested intent and style, ensuring a range of emotional tones and varying levels of detail. The examples should reflect diverse scenarios, including common and edge cases, while maintaining a balance of difficulty and ambiguity. Output a JSON object with the sample id, the text, and the attribute values. 
+
+Please consider the following guidelines:
+- Use informal language and varied sentence structures to enhance realism and reduce repetition.
+- Include a mix of intents, such as general questions, refund requests, and technical issues, ensuring some messages express frustration or urgency.
+- Avoid overly polished or formal phrasing; aim for a natural, conversational tone that includes typical user noise (e.g., typos, informal expressions).
+- Strive for diversity in style, ensuring representation of both emotional and neutral tones.
+
+Forbidden phrasings:
+- 'I just wanted to express my disappointment'
+- 'I seem to be facing some difficulty'
+- 'I’m really confused about my account status'
+- "Could you clarify if there's a limitation"
+
+By following these guidelines, the generated messages will be more attribute-faithful, realistic, and diverse, providing a richer dataset for customer support scenarios."""

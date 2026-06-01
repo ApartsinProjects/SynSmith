@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "repetitive structure of stating an issue followed by a request for help",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "exclamatory statements expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal conversational tone with personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about functionality or service",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u' instead of 'you')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory sentences expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at the service provider",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greeting followed by a question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler words like 'like' and 'i guess'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or uncertainty",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone with personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or upset",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with personal feelings or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual language and abbreviations like 'u'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon (e.g., '502', 'android 14')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with lack of capitalization",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'acct', 'nvr', 'u')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of dissatisfaction and requests for escalation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about technical issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions without much elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific browser or device names",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of personal touch or conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite inquiries with filler phrases",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of dissatisfaction with requests for escalation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "combination of multiple questions in a single sentence",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual language and informal tone",
+      "n_pairs_observed": 1
+    }
+  ]
+}

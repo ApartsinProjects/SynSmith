@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, but there are some missing combinations and potential overrepresentation of certain styles and intents. Additionally, there are instances of near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "high ambiguity",
+    "hard difficulty"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied expressions of emotional styles to reduce overrepresentation.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that the generator creates more unique phrasings to minimize near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

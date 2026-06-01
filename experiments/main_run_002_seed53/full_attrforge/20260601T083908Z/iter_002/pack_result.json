@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "issues with app crashing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about order status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with conversational elements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of describing a problem followed by a question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or comparisons",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of problems without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account access or functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or uncertainty",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a demand or question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed context or personal touch",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise technical issues presented in a straightforward manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations and technical jargon (e.g., mfa, api, 502)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on specific problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "issues with account access",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "app crashing or malfunctioning",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or support",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone (e.g., 'hey', 'kinda confusing', 'not sure what’s going on')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of uncertainty expressed (e.g., 'not sure if', 'maybe it didn't go through')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "multiple issues in a single sample",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed to the recipient",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone",
+      "n_pairs_observed": 1
+    }
+  ]
+}

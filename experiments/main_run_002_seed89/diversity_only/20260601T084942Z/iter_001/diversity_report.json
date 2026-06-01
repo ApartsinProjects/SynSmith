@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a comprehensive coverage of attribute values, but there are instances of near-duplicate phrasings and some missing combinations of attributes. The diversity could be improved by including more edge cases and varying the emotional tone.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Incorporate more edge cases and rare scenarios to enhance diversity.",
+    "Vary the emotional tone across samples to avoid overrepresentation of emotional and verbose styles.",
+    "Ensure a wider range of phrasing to reduce near-duplicate instances."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

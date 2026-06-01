@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6502361068377098
+    },
+    {
+      "text": "I've been a customer for years and this is by far the worst experience. Cancel my plan.",
+      "label": "complaint",
+      "p_real": 0.6454929368341903
+    },
+    {
+      "text": "Are there any planned outages this weekend? Asking for our release schedule.",
+      "label": "general_question",
+      "p_real": 0.6454202182622676
+    },
+    {
+      "text": "csv import keeps timing out at ~3000 rows. is there a row limit nobody documented?",
+      "label": "technical_problem",
+      "p_real": 0.642061330707212
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

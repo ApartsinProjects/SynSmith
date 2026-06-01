@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6639991646816837
+    },
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.6523008339468143
+    },
+    {
+      "text": "what's the difference between the pro and business tier exactly",
+      "label": "general_question",
+      "p_real": 0.6484118427620124
+    },
+    {
+      "text": "Are there any planned outages this weekend? Asking for our release schedule.",
+      "label": "general_question",
+      "p_real": 0.6420915364437956
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

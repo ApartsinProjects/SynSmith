@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples exhibits a good range of intents, difficulties, ambiguities, and styles, but there are some missing noise categories and potential near-duplicates. The noise attribute is underrepresented, particularly in the 'contradiction' category.",
+  "missing_modes": [
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "irrelevant_details"
+  ],
+  "near_duplicate_rate": 0.1,
+  "recommendations": [
+    "Ensure to include examples with 'contradiction' noise in future batches.",
+    "Diversify the use of 'irrelevant_details' to avoid overrepresentation.",
+    "Review samples for near-duplicate phrasings and enhance paraphrasing to improve diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

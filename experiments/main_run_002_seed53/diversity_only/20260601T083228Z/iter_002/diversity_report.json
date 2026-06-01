@@ -1,0 +1,24 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents, difficulties, and styles, but there is a notable absence of certain noise types and some near-duplicate phrasings. Additionally, the noise attribute is underrepresented, particularly in the 'missing_details' category.",
+  "missing_modes": [
+    "missing_details",
+    "irrelevant_details"
+  ],
+  "overrepresented_modes": [
+    "contradiction"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with 'missing_details' noise to enhance diversity.",
+    "Reduce the frequency of 'contradiction' noise in generated samples to balance representation.",
+    "Ensure a wider range of scenarios, especially edge cases, are included in future batches."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

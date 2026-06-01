@@ -1,0 +1,24 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, and styles, but there are some missing noise categories and a notable presence of contradictions. Additionally, near-duplicate phrasings are present, indicating a need for more diverse expressions.",
+  "missing_modes": [
+    "irrelevant_details",
+    "typos"
+  ],
+  "overrepresented_modes": [
+    "contradiction"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generator to produce more varied expressions for similar intents to reduce near-duplicates.",
+    "Ensure all noise categories are represented in future samples.",
+    "Introduce more edge cases to enhance diversity in scenario types."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

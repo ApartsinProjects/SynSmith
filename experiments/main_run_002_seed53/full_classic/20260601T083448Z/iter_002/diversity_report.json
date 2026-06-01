@@ -1,0 +1,24 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, and styles, but there are some missing noise types and a high occurrence of contradictions. Additionally, there are near-duplicates and shallow paraphrases present.",
+  "missing_modes": [
+    "missing_details",
+    "irrelevant_details"
+  ],
+  "overrepresented_modes": [
+    "contradiction"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Ensure to include examples with missing details and irrelevant details to enhance diversity.",
+    "Reduce the frequency of contradictions in the generated samples to avoid overrepresentation.",
+    "Encourage the generation of more unique phrasings to minimize near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

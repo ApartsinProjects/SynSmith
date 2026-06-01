@@ -1,0 +1,24 @@
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Natural language with a specific issue; lacks over-polished grammar."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Casual tone and specific complaint; feels authentic."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Technical issue described in a straightforward manner; realistic detail."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Specific inquiry about future options; lacks generic phrasing."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct complaint with a clear request; feels genuine."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Frustration expressed in a relatable way; realistic context."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Specific technical issue with a clear description; authentic."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Describes a common app issue; lacks overly polished language."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Specific problem with password reset; feels genuine."}
+{"sample_id":"R009","prediction":"real","confidence":0.8,"reason":"Technical issue with a specific detail; realistic."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Clear complaint about an order; lacks generic phrasing."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.6,"reason":"Overly casual and verbose; lacks concise structure."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct complaint with urgency; feels authentic."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Technical inquiry; straightforward and realistic."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Specific complaint about shipping; feels genuine."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.65,"reason":"Casual language but lacks depth; feels scripted."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue with urgency; realistic context."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"Long-term customer complaint; feels authentic."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Casual tone but lacks specific detail; feels less authentic."}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.6,"reason":"Overly emotional and verbose; lacks concise structure."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.65,"reason":"Generic phrasing and lack of specific detail; feels scripted."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.7,"reason":"Casual tone but lacks depth; feels less authentic."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.6,"reason":"Casual language and generic complaint; feels scripted."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"Specific inquiry about outages; straightforward and realistic."}

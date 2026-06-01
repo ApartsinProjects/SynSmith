@@ -1,0 +1,78 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey there!",
+      "n_synthetic_occurrences": 3,
+      "rationale": "This casual greeting appears multiple times in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I mean,",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This conversational filler phrase is used frequently in the synthetic samples but not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "like,",
+      "n_synthetic_occurrences": 7,
+      "rationale": "This informal discourse marker is present in several synthetic samples but does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "what's going on?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used to express confusion in the synthetic batch but is not found in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I just wanted to express my disappointment",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is not found in any real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I seem to be facing some difficulty",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This construction is unique to the synthetic batch and does not appear in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’m really confused about my account status",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This exact wording does not exist in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you clarify if there's a limitation",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase structure is not present in any real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey there!",
+      "n_synthetic_occurrences": 3,
+      "rationale": "This casual greeting appears multiple times in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I mean,",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This conversational filler phrase is used frequently in the synthetic samples but not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "like,",
+      "n_synthetic_occurrences": 7,
+      "rationale": "This informal discourse marker is present in several synthetic samples but does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "what's going on?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used to express confusion in the synthetic batch but is not found in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ]
+}

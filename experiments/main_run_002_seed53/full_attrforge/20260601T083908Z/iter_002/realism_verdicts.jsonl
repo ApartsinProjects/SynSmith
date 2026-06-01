@@ -1,0 +1,24 @@
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Casual language and specific issue indicate a real user experience."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"Overly structured and polished; lacks real-world noise."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Direct complaint with a specific issue, typical of real user feedback."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.6,"reason":"Casual tone but feels overly generic and lacks depth."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.65,"reason":"Predictable structure and phrasing; lacks unique user experience."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Specific complaint about billing, typical of real user issues."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.5,"reason":"Generic phrasing and structure; lacks specific details."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.55,"reason":"Vague and lacks specificity; feels scripted."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.6,"reason":"Overly structured and generic; lacks real-world noise."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"Specific inquiry about outages, typical of real user concerns."}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"Technical issue described in a straightforward manner."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct complaint about an order, typical of real user feedback."}
+{"sample_id":"R020","prediction":"real","confidence":0.9,"reason":"Emotional tone and specific complaint indicate a real user experience."}
+{"sample_id":"R016","prediction":"real","confidence":0.85,"reason":"Specific issue with account access, typical of real user concerns."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Inquires about future options, typical of real user feedback."}
+{"sample_id":"R028","prediction":"real","confidence":0.75,"reason":"Specific question about product tiers, typical of real user inquiries."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.5,"reason":"Casual tone but lacks depth and specificity."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.4,"reason":"Overly detailed and structured; feels scripted."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with account management, typical of real user feedback."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct complaint about a damaged item, typical of real user issues."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"Specific complaint about shipping delay, typical of real user feedback."}
+{"sample_id":"R007","prediction":"real","confidence":0.85,"reason":"Technical issue described in a straightforward manner."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Specific billing issue, typical of real user concerns."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct complaint about size issue, typical of real user feedback."}

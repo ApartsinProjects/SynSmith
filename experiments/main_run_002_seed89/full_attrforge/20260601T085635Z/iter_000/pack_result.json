@@ -1,0 +1,139 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds or clarifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for beginnings of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and language (e.g., 'plz help!!!', 'nothing.')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions about app functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific technical issues related to apps",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration about software issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with exclamations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a plea for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "issues with app functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for account or billing adjustments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about verification processes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of concise, direct language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with a problem statement",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of introductory phrases like 'i've been' or 'i’m really confused'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy explanations followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions like 'super frustrating' or 'worst experience'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a request for clarification or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed to the recipient",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of similar issues (e.g., crashing apps, billing issues)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or cancellations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time frames to emphasize delays",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing disappointment or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer than anticipated delivery times",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues with a focus on emotions",
+      "n_pairs_observed": 1
+    }
+  ]
+}

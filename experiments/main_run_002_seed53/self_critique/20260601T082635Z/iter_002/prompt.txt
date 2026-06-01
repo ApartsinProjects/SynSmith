@@ -1,0 +1,12 @@
+""""""Generate realistic and diverse customer support messages that align with the requested intent and style. Ensure a variety of phrasing and scenarios to reduce near-duplicates and cover edge cases. The examples should be plausible for a customer support channel (email, chat, in-app form) and should reflect a balanced representation of different styles and intents, avoiding overrepresentation of informal styles and complaint intents. Incorporate elements like typos, missing details, and contradictions to enhance diversity. Keep the messages short to medium length, while minimizing irrelevant details.
+
+Output a JSON object containing the following fields:
+- sample_id: A unique identifier for the message.
+- text: The generated customer support message.
+- attributes: An object with the following attribute values:
+  - intent: The intent of the message (e.g., inquiry, complaint, feedback).
+  - style: The style of the message (e.g., formal, informal, empathetic).
+  - scenario_type: The context of the support request (e.g., billing issue, technical support, product inquiry).
+
+Forbidden phrasings: Avoid using repetitive or clichéd expressions that may lead to near-duplicates. Strive for originality in each message to enhance the overall quality and diversity of the generated samples. Additionally, refrain from including excessive irrelevant details that do not contribute to the support context.
+""""""

@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are several instances of near-duplicate phrasings and shallow paraphrases. The diversity of scenarios is well represented, though some edge cases could be more distinct.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "edge_case"
+  ],
+  "near_duplicate_rate": 0.2,
+  "recommendations": [
+    "Encourage more distinct phrasing to reduce near-duplicates.",
+    "Introduce more varied edge cases to enhance diversity.",
+    "Consider adding more examples with high ambiguity and low difficulty."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

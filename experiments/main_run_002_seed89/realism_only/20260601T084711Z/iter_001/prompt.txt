@@ -1,0 +1,8 @@
+"""Generate realistic customer support messages that match the requested intent and style, ensuring a mix of formal, informal, and verbose tones. The examples should reflect genuine customer experiences, incorporating specific details, emotions, and varying levels of frustration or satisfaction. Aim for a balance between concise and more elaborate expressions to enhance diversity. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "Thank you for your inquiry."
+- "We appreciate your feedback."
+- "Please let us know if you have any further questions."
+
+Ensure that the messages capture a range of scenarios, including both common and rare situations, to enrich the dataset. Strive for unique expressions to minimize near-duplicate phrasings and shallow paraphrases. The output should feel authentic and relatable, resembling real interactions in customer support channels (email, chat, in-app form). Keep the length short to medium, while allowing for the natural noise of real conversations."

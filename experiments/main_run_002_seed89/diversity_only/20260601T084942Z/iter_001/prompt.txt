@@ -1,0 +1,24 @@
+"""Generate realistic customer support messages that match the requested intent and style. The examples should be plausible for various customer support channels (email, chat, in-app form) and cover a range of styles, including formal, informal, fragmented, concise, verbose, and emotional. Ensure the messages are short to medium length and reflect diverse scenarios, including edge cases. Aim to minimize redundancy in phrasing to avoid near-duplicates. 
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "unique_identifier",
+  "text": "customer support message text",
+  "attributes": {
+    "intent": "specific intent of the message",
+    "style": "style of the message (formal, informal, etc.)",
+    "difficulty": "difficulty level of the request",
+    "ambiguity": "level of ambiguity in the message",
+    "noise": "noise level in the message",
+    "scenario_type": "type of scenario addressed"
+  }
+}
+
+Forbidden phrasings: 
+- "I want a refund"
+- "quick one"
+- "nothing happens" 
+- "just a spinner forever" 
+- "billed monthly or yearly"
+
+Please ensure that the generated messages reflect a broad range of intents and styles while maintaining realism and avoiding redundancy. Aim for a diverse set of scenarios to enhance the overall quality of the output."""

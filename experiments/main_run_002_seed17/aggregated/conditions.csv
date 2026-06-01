@@ -1,0 +1,8 @@
+condition,iterations,total_samples,attribute_match_rate,discriminator_accuracy,synthetic_detection_rate,near_duplicate_rate,combination_coverage,pack_accuracy,mode_seeking_ratio,banned_phrasings_total,coverage_classifier_auroc,downstream_accuracy,downstream_macro_f1,wall_time_seconds
+naive,1,16,0.0,0.5,0.5,0.0,0.6,,,,,0.4,0.3333333333333333,44.42411780357361
+few_shot,1,16,0.0,0.5,0.5,0.0,0.6,,,,,0.5,0.4666666666666666,39.50832438468933
+self_critique,3,48,0.0,0.5,0.5,0.15,0.8,,,,,0.4,0.3504761904761905,117.685067653656
+realism_only,3,48,0.0,1.0,1.0,0.15,0.8,,,,,0.4,0.32666666666666666,180.31645894050598
+diversity_only,3,48,0.0,0.5,0.5,0.15,0.8,,0.23026650861278236,,1.0,0.4,0.26,164.52827286720276
+full_classic,3,48,0.125,1.0,1.0,0.15,0.8,,,,,0.7,0.6266666666666666,267.1391279697418
+full_attrforge,3,48,0.0625,0.8333333333333334,0.3333333333333333,0.15,0.8,0.625,0.2327494097321027,12.0,1.0,0.4,0.4,400.8339204788208

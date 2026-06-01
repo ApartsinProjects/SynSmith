@@ -1,0 +1,54 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I just wanted to express my disappointment",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is not found in any real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I seem to be facing some difficulty",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This construction is unique to the synthetic batch and does not appear in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’m really confused about my account status",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This exact wording does not exist in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you clarify if there's a limitation",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase structure is not present in any real samples.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I just wanted to express my disappointment",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is not found in any real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I seem to be facing some difficulty",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This construction is unique to the synthetic batch and does not appear in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’m really confused about my account status",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This exact wording does not exist in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you clarify if there's a limitation",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase structure is not present in any real samples.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

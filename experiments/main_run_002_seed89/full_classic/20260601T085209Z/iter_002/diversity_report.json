@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are some near-duplicate phrasings and a few edge cases that could be better represented. Overall, the diversity is satisfactory.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "complaint",
+    "medium difficulty",
+    "common scenario_type"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more unique scenarios, especially for edge cases and rare situations.",
+    "Vary the phrasing and structure of complaints to reduce near-duplicate instances.",
+    "Introduce more complex scenarios that involve multiple attributes interacting in unexpected ways."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

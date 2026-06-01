@@ -1,0 +1,24 @@
+{
+  "summary": "The batch of synthetic samples demonstrates good coverage across most attributes, but there is a notable absence of certain styles and a high rate of near-duplicate phrasings. The emotional and verbose styles are overrepresented, while the fragmented style is underrepresented.",
+  "missing_modes": [
+    "fragmented"
+  ],
+  "overrepresented_modes": [
+    "emotional",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more diverse phrasing to reduce near-duplicates.",
+    "Include more examples in the fragmented style to balance representation.",
+    "Consider adding edge cases that involve rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of intents, difficulties, ambiguities, and noise types, but lacks diversity in the style attribute, with only five out of six styles represented. Additionally, there are several near-duplicate phrasings and shallow paraphrases present.",
+  "missing_modes": [
+    "informal"
+  ],
+  "overrepresented_modes": [
+    "high ambiguity",
+    "hard difficulty",
+    "common scenario type"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with informal style to enhance diversity.",
+    "Introduce more edge cases and rare scenarios to balance the common scenarios.",
+    "Vary the phrasing and structure of similar intents to reduce near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

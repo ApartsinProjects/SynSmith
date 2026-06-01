@@ -1,0 +1,24 @@
+{"sample_id":"R028","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward question indicate a genuine user inquiry."}
+{"sample_id":"R027","prediction":"real","confidence":0.9,"reason":"Direct and simple question about discounts, typical of real customer interactions."}
+{"sample_id":"R006","prediction":"real","confidence":0.95,"reason":"Informal language and specific issue with an app suggest a real user experience."}
+{"sample_id":"target_00010","prediction":"synthetic","confidence":0.8,"reason":"Overly polished and structured, lacks the typical noise of real complaints."}
+{"sample_id":"R024","prediction":"real","confidence":0.85,"reason":"Concise and technical question about API, typical of a real user."}
+{"sample_id":"target_00012","prediction":"synthetic","confidence":0.75,"reason":"Confusing phrasing and structure suggest a lack of genuine user experience."}
+{"sample_id":"target_00001","prediction":"synthetic","confidence":0.7,"reason":"Overly verbose and formal, lacking the spontaneity of real user frustration."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct and informal complaint about a wrong size, typical of real customer feedback."}
+{"sample_id":"target_00015","prediction":"synthetic","confidence":0.8,"reason":"Excessive emotional expression and structured narrative suggest synthetic generation."}
+{"sample_id":"target_00014","prediction":"synthetic","confidence":0.85,"reason":"Simple and direct, but lacks the nuance of a real user experience."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Technical inquiry about self-hosting, typical of a knowledgeable user."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.75,"reason":"Generic expression of frustration, lacks specific details typical of real complaints."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Strong emotional response and specific complaint indicate a real user."}
+{"sample_id":"target_00016","prediction":"synthetic","confidence":0.7,"reason":"Polished language and structured inquiry suggest synthetic generation."}
+{"sample_id":"R011","prediction":"real","confidence":0.95,"reason":"Specific technical issue with a clear description indicates a real user."}
+{"sample_id":"target_00013","prediction":"synthetic","confidence":0.75,"reason":"Vague phrasing and lack of detail suggest a synthetic response."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"Urgent and specific request for help indicates a real user issue."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Strong emotional language and a clear complaint suggest a real user."}
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"Specific issue with account settings indicates a real user inquiry."}
+{"sample_id":"target_00007","prediction":"synthetic","confidence":0.8,"reason":"Overly formal and structured complaint lacks the spontaneity of real feedback."}
+{"sample_id":"target_00005","prediction":"synthetic","confidence":0.75,"reason":"Generic confusion about subscription tiers suggests a synthetic generation."}
+{"sample_id":"R002","prediction":"real","confidence":0.95,"reason":"Direct and urgent request for a refund indicates a real user experience."}
+{"sample_id":"target_00003","prediction":"synthetic","confidence":0.7,"reason":"Vague and informal phrasing suggests a lack of genuine user experience."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with email verification indicates a real user inquiry."}

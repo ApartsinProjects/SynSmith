@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attribute values, but there are some near-duplicate phrasings and a few missing edge cases. The diversity could be improved by introducing more unique scenarios and phrasing.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "complaint"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more varied emotional expressions to reduce redundancy.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Vary the phrasing of common complaints to avoid near-duplicate texts."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

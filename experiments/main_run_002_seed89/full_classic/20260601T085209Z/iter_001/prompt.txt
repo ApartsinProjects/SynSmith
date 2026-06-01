@@ -1,0 +1,13 @@
+"""Generate realistic customer support messages that align with the requested intent and style. Ensure the examples reflect common scenarios (e.g., inquiries, complaints, requests) and vary in emotional expression, including fragmented and concise styles. Aim for short to medium length messages that incorporate typical user noise and detail. Output a JSON object with the sample id, the text, and the attribute values.
+
+**Forbidden phrasings:** Avoid overly polished language, excessive emotional expression, and structured narratives that suggest synthetic generation.
+
+**Guidelines:**
+1. **Intent:** Clearly reflect the user's purpose (e.g., asking a question, expressing frustration).
+2. **Style:** Include a mix of emotional, fragmented, and concise styles to enhance diversity.
+3. **Difficulty:** Maintain easy difficulty with clear, relatable issues.
+4. **Ambiguity:** Ensure low ambiguity by providing specific details relevant to the scenario.
+5. **Noise:** Incorporate typical user noise, such as typos or informal language, to enhance realism.
+6. **Scenario Type:** Cover a range of scenarios, including edge cases and less common situations to improve diversity.
+
+This approach will help create a more attribute-faithful, realistic, and diverse set of customer support messages."

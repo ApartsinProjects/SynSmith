@@ -1,0 +1,22 @@
+schema_path: examples/customer_support/schema.yaml
+real_examples_path: E:\Projects\PromptForge\experiments\_splits\real_train.jsonl
+domain: customer_support
+task_description: 'Classify a customer support message into one of five intents. Messages
+  may
+
+  be informal, fragmented, ambiguous, or contain typos and irrelevant details.
+
+  '
+iterations: 1
+samples_per_iteration: 16
+initial_prompt: 'Generate realistic customer support messages that match the requested
+  intent
+
+  and style. The example should be plausible for a customer support channel
+
+  (email, chat, in-app form). Keep it short to medium length. Output a JSON
+
+  object with the sample id, the text, and the attribute values.
+
+  '
+seed: 89
