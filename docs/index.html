@@ -215,12 +215,12 @@ $$
 </p>
 
 <p>
-  Each iteration the updater renders seven labeled blocks. <strong>Table 0</strong> gives the grammar of each block: what the critic produces, and what local rewrite the updater can produce in response. This table is the core conceptual claim of our architecture: structured named complaints admit locally targeted rewrites that a scalar reward does not.
+  Each iteration the updater renders seven labeled blocks. <strong>Table 1</strong> gives the grammar of each block: what the critic produces, and what local rewrite the updater can produce in response. This table is the core conceptual claim of our architecture: structured named complaints admit locally targeted rewrites that a scalar reward does not.
 </p>
 
 <div class="table-wrap">
 <table>
-<caption>Table 0: The complaint grammar of each critic. Each row gives the structured output the critic emits, and the kind of locally-targeted rewrite the updater can produce in response. Bottom four rows are the new GAN-style adversaries introduced in this paper.</caption>
+<caption>Table 1: The complaint grammar of each critic. Each row gives the structured output the critic emits, and the kind of locally-targeted rewrite the updater can produce in response. Bottom four rows are the new GAN-style adversaries introduced in this paper.</caption>
 <thead>
 <tr><th>Critic</th><th>Returns</th><th>Example complaint</th><th>Updater can produce</th></tr>
 </thead>
@@ -320,7 +320,7 @@ $$
 
 <div class="table-wrap">
 <table>
-<caption>Table 1: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same three random seeds (17, 23, 41), same dataset, same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally bumps the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated); they affect what each condition is meant to measure rather than being a confound, but Section 9.1 quantifies their contribution.</caption>
+<caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same three random seeds (17, 23, 41), same dataset, same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally bumps the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated); they affect what each condition is meant to measure rather than being a confound.</caption>
 <thead>
 <tr><th>Condition</th><th class="num">Iters</th><th>Verifier</th><th>Realism disc.</th><th>Auditor</th><th>Pack</th><th>Mode-seeking</th><th>Mode hunter</th><th>Coverage hole</th><th>Updater</th></tr>
 </thead>
@@ -365,7 +365,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <div class="table-wrap">
 <table>
-<caption>Table 2: Per-condition metrics at the final iteration, mean &plusmn; std over 3 random seeds, live <code>gpt-4o-mini</code>. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers, where every critic runs against every condition, are reported in <a href="#sec-audit">Section 8 Table 3</a>. Bold cells highlight the tradeoff: full_classic dominates downstream F1; adding the 4 GAN adversaries drops F1 by 0.18 absolute.</caption>
+<caption>Table 3: Per-condition metrics at the final iteration, mean &plusmn; std over 3 random seeds, live <code>gpt-4o-mini</code>. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers, where every critic runs against every condition, are reported in <a href="#sec-audit">Section 8 Table 5</a>. Bold cells highlight the TF-IDF gap: full_classic dominates downstream F1 under TF-IDF features; adding the 4 GAN adversaries drops F1 by 0.18 absolute (directional 3/3 seeds, underpowered at $N=3$).</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -389,7 +389,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 </div>
 
 <p>
-  Three observations from Table 2. <strong>(i)</strong> Under TF-IDF $+$ logistic regression, the three-critic loop (<code>full_classic</code>) achieves macro F1 $0.58 \pm 0.05$; adding the four GAN-style adversaries (<code>full_attrforge</code>) drops it to $0.40 \pm 0.06$. The mean paired difference is $-0.187$ with 95% bootstrap CI $[-0.267, -0.067]$. The gap is in the same direction across all three seeds (per-seed diffs $-0.23$, $-0.27$, $-0.07$); the conventional paired-t $p=0.09$ and Wilcoxon $p=0.25$ fall short of $0.05$ at $N=3$, so the finding is directional rather than significant under standard tests. <strong>(ii)</strong> The loop-internal realism discriminator moves <em>away</em> from the chance-level target through iteration: <code>full_classic</code> reaches $0.92 \pm 0.14$ accuracy and <code>full_attrforge</code> reaches $0.83 \pm 0.17$ (chance is $0.50$). Iteration is making the samples more detectable as synthetic, not less. <strong>(iii)</strong> Attribute fidelity is low: $0.06 \pm 0.06$ and $0.10 \pm 0.10$ for the two conditions where the verifier runs. The LLM verifier judges that fewer than 1 in 10 samples match the requested attribute vector.
+  Three observations from Table 3. <strong>(i)</strong> Under TF-IDF $+$ logistic regression, the three-critic loop (<code>full_classic</code>) achieves macro F1 $0.58 \pm 0.05$; adding the four GAN-style adversaries (<code>full_attrforge</code>) drops it to $0.40 \pm 0.06$. The mean paired difference is $-0.187$ with 95% bootstrap CI $[-0.267, -0.067]$. The gap is in the same direction across all three seeds (per-seed diffs $-0.23$, $-0.27$, $-0.07$); the conventional paired-t $p=0.09$ and Wilcoxon $p=0.25$ fall short of $0.05$ at $N=3$, so the finding is directional rather than significant under standard tests. <strong>(ii)</strong> The loop-internal realism discriminator moves <em>away</em> from the chance-level target through iteration: <code>full_classic</code> reaches $0.92 \pm 0.14$ accuracy and <code>full_attrforge</code> reaches $0.83 \pm 0.17$ (chance is $0.50$). Iteration is making the samples more detectable as synthetic, not less. <strong>(iii)</strong> Attribute fidelity is low: $0.06 \pm 0.06$ and $0.10 \pm 0.10$ for the two conditions where the verifier runs. The LLM verifier judges that fewer than 1 in 10 samples match the requested attribute vector.
 </p>
 
 <p>
@@ -414,7 +414,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <div class="table-wrap">
 <table>
-<caption>Table 2b: Multi-classifier downstream macro F1 (mean &plusmn; std across 3 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is reliably below the 3-critic loop across all 3 seeds (paired-t $p=0.09$, Wilcoxon $p=0.25$, 95% bootstrap CI $[-0.27, -0.07]$ on the diff; underpowered but directional). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.66$, Wilcoxon $p=0.75$, CI $[-0.07, +0.18]$).</caption>
+<caption>Table 4: Multi-classifier downstream macro F1 (mean &plusmn; std across 3 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is reliably below the 3-critic loop across all 3 seeds (paired-t $p=0.09$, Wilcoxon $p=0.25$, 95% bootstrap CI $[-0.27, -0.07]$ on the diff; underpowered but directional). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.66$, Wilcoxon $p=0.75$, CI $[-0.07, +0.18]$).</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -444,7 +444,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 </p>
 
 <p>
-  Two observations from Table 2 and Figure 2. First, on this $N_{\text{test}} = 10$ task the downstream metric saturates the moment a condition gets 48 training samples regardless of which critics are enabled, so the downstream metric alone cannot distinguish AttrForge from other iterated baselines. Second, the only loop-internal metric where <code>full_attrforge</code> differs from <code>full_classic</code> by more than one seed-std is the realism discriminator accuracy: $0.69 \pm 0.06$ vs $0.72 \pm 0.10$. The full AttrForge stack moves the realism objective $0.03$ closer to chance than the three-critic baseline, while exactly matching it on attribute fidelity ($1.00$) and downstream metrics.
+  Two observations from Table 3 and Figure 2. First, the downstream metric on this $N_{\text{test}} = 10$ task carries a wide noise floor; any TF-IDF F1 difference smaller than about $0.10$ is within seed-std for several conditions. Second, the only loop-internal metric where <code>full_attrforge</code> differs from <code>full_classic</code> by more than one seed-std is the realism discriminator accuracy, where <code>full_attrforge</code> sits $0.09$ closer to chance than <code>full_classic</code> (Table 3). On attribute fidelity, both verifier-using conditions are below 10% match.
 </p>
 
 <h3><span class="subsection-num">7.2</span>Realism trajectory</h3>
@@ -476,7 +476,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 <h2 id="sec-audit"><span class="section-num">8</span>Post-hoc adversary audit</h2>
 
 <p>
-  Table 2's "n/a" entries are a structural symptom of the experimental design: a critic's metric is computed only when that critic is enabled in the loop. So when we report "Pack accuracy $= 0.50$ only for <code>full_attrforge</code>," we are partly observing that no other condition <em>ran</em> Pack. To defuse this concern, we run each of the four GAN-style adversaries as a <strong>post-hoc auditor</strong> on every condition's final batch. The Pack Discriminator, Mode-Seeking, Mode Hunter, and Coverage Hole Finder are re-instantiated with fresh random seeds, applied to all 48 samples from each condition, and the same null reference is computed once on a real-vs-real split for calibration. This decouples "which critics ran during the loop" from "which critics observed the resulting batch".
+  Table 3's "n/a" entries are a structural symptom of the experimental design: a critic's metric is computed only when that critic is enabled in the loop. So when we report "Pack accuracy $= 0.50$ only for <code>full_attrforge</code>," we are partly observing that no other condition <em>ran</em> Pack. To defuse this concern, we run each of the four GAN-style adversaries as a <strong>post-hoc auditor</strong> on every condition's final batch. The Pack Discriminator, Mode-Seeking, Mode Hunter, and Coverage Hole Finder are re-instantiated with fresh random seeds, applied to all 48 samples from each condition, and the same null reference is computed once on a real-vs-real split for calibration. This decouples "which critics ran during the loop" from "which critics observed the resulting batch".
 </p>
 
 <figure>
@@ -494,7 +494,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <div class="table-wrap">
 <table>
-<caption>Table 3: Post-hoc adversary audit on the live-LLM run (<code>main_run_002</code>, mean &plusmn; std across 3 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.54$ in this domain. Pack accuracy below null indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates collapse. The loop disc. acc. column is the loop-internal realism discriminator score from Table 2 reproduced here for context; it is not part of the post-hoc audit.</caption>
+<caption>Table 5: Post-hoc adversary audit on the live-LLM run (<code>main_run_002</code>, mean &plusmn; std across 3 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.54$ in this domain. Pack accuracy below null indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates collapse. The loop disc. acc. column is the loop-internal realism discriminator score from Table 3 reproduced here for context; it is not part of the post-hoc audit.</caption>
 <thead>
 <tr>
   <th>Condition</th>
