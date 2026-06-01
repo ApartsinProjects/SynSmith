@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>More Critics, Worse Data? GAN-Style Adversaries Expose a Diversity-Discriminability Tradeoff in LLM Synthetic Data Generation</title>
-<meta name="description" content="We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop and document a diversity-discriminability tradeoff: adding the 4 GAN-style adversaries to a 3-critic baseline drops downstream macro F1 by 0.18 while measurably increasing surface diversity." />
+<title>It Depends on the Classifier: GAN-Style Adversaries in LLM Prompt Debugging Are Penalised by a TF-IDF Reader and Tolerated by a Sentence-Transformer Reader</title>
+<meta name="description" content="We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop and document a representation-dependent reading of the diversity-utility tradeoff: the 7-critic loop scores 0.18 below the 3-critic baseline on a TF-IDF classifier (directional 3/3 seeds, CI excludes zero, paired-t p=0.09) but is statistically indistinguishable on a sentence-transformer classifier." />
 <meta name="author" content="Alexander Apartsin, Yehudit Aperstein" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="More Critics, Worse Data? GAN-Style Adversaries Expose a Diversity-Discriminability Tradeoff" />
-<meta property="og:description" content="Bridging GAN mode-collapse defenses into multi-critic LLM prompt optimization reveals a diversity-discriminability tradeoff." />
-<meta property="og:image" content="figures/architecture.png" />
+<meta property="og:title" content="It Depends on the Classifier" />
+<meta property="og:description" content="GAN-style adversaries in LLM prompt debugging are penalised by a TF-IDF reader and tolerated by a sentence-transformer reader." />
+<meta property="og:image" content="figures/main_run_002_multi_classifier.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="More Critics, Worse Data?" />
-<meta name="twitter:image" content="figures/architecture.png" />
+<meta name="twitter:title" content="It Depends on the Classifier" />
+<meta name="twitter:image" content="figures/main_run_002_multi_classifier.png" />
 
 <link rel="stylesheet" href="style.css" />
 
