@@ -56,7 +56,7 @@
 <h2 id="sec-introduction"><span class="section-num">1</span>Introduction</h2>
 
 <p>
-  Large language models are widely used to synthesize labeled examples when real data is scarce, expensive, private, or hard to annotate. Despite the surface appeal of writing a single prompt and harvesting a corpus, naive prompting consistently produces datasets with three intertwined pathologies: <em>attribute infidelity</em> (the text does not actually reflect the requested labels), <em>over-polished realism</em> (samples are detectably synthetic by humans and trained classifiers), and <em>shallow diversity</em> (samples are paraphrastic variants of a small set of templates). A natural response is to add critics: an attribute verifier to enforce labels, a realism discriminator to detect synthetic artifacts, and a diversity auditor to monitor coverage. The literature on automatic prompt optimization with LLM judges <a class="cite" href="#ref-ape">[14]</a><a class="cite" href="#ref-opro">[15]</a><a class="cite" href="#ref-evoprompt">[16]</a><a class="cite" href="#ref-promptbreeder">[17]</a><a class="cite" href="#ref-dspy">[18]</a><a class="cite" href="#ref-textgrad">[19]</a><a class="cite" href="#ref-gepa">[25]</a> reads, on this question, as a steady accumulation: more critics, more rewriting capacity, better data.
+  Large language models are widely used to synthesize labeled examples when real data is scarce, expensive, private, or hard to annotate. Despite the surface appeal of writing a single prompt and harvesting a corpus, naive prompting consistently produces datasets with three intertwined pathologies: <em>attribute infidelity</em> (the text does not actually reflect the requested labels), <em>over-polished realism</em> (samples are detectably synthetic by humans and trained classifiers), and <em>shallow diversity</em> (samples are paraphrastic variants of a small set of templates). A natural response is to add critics: an attribute verifier to enforce labels, a realism discriminator to detect synthetic artifacts, and a diversity auditor to monitor coverage. The literature on automatic prompt optimization with LLM judges <a class="cite" href="#ref-ape">[14]</a><a class="cite" href="#ref-opro">[15]</a><a class="cite" href="#ref-evoprompt">[16]</a><a class="cite" href="#ref-promptbreeder">[17]</a><a class="cite" href="#ref-dspy">[18]</a><a class="cite" href="#ref-textgrad">[19]</a><a class="cite" href="#ref-gepa">[25]</a> reads, on this question, as a steady accumulation: more critics, more rewriting capacity, better data. We ask: <em>does that accumulation actually improve downstream utility, and how would we know?</em>
 </p>
 
 <p>
@@ -87,51 +87,47 @@
 
 <h3><span class="subsection-num">2.2</span>Prompt optimization via search and rewrite</h3>
 <p>
-  Several recent works treat prompt design as a discrete search problem. APE <a class="cite" href="#ref-ape">[14]</a> generates many candidate prompts and selects by held-out score. OPRO <a class="cite" href="#ref-opro">[15]</a> uses LLMs as optimizers that propose new candidates conditioned on the trajectory so far. EvoPrompt <a class="cite" href="#ref-evoprompt">[16]</a> applies evolutionary search to prompts. PromptBreeder <a class="cite" href="#ref-promptbreeder">[17]</a> uses LLM-driven mutation operators within an evolutionary loop. DSPy <a class="cite" href="#ref-dspy">[18]</a> compiles modular programs with optimized prompts. TextGrad <a class="cite" href="#ref-textgrad">[19]</a> treats prompts and outputs as differentiable artifacts updated by LLM-generated "text gradients". More recent work in 2025 includes GEPA <a class="cite" href="#ref-gepa">[25]</a>, which uses reflective prompt evolution with Pareto-front selection and reports gains over RL baselines, and Pareto Prompt Optimization <a class="cite" href="#ref-paretoprompt">[26]</a>, which explicitly explores the Pareto front of prompts using dominance relations rather than scalarizing objectives. The Auto-Prompt Ensemble work <a class="cite" href="#ref-autopromptens">[27]</a> shows a confidence-aware ensemble of optimized prompts beats single-prompt baselines on LLM-as-judge tasks. Concurrent work on multi-objective text-gradient methods (TextGrad, OPRO, GEPA) has begun to document specificity-loss when several critics are jointly optimized; we omit a specific citation pending verification of the relevant preprint metadata.
+  Several recent works treat prompt design as a discrete search problem. APE <a class="cite" href="#ref-ape">[14]</a> generates many candidate prompts and selects by held-out score. OPRO <a class="cite" href="#ref-opro">[15]</a> uses LLMs as optimizers that propose new candidates conditioned on the trajectory so far. EvoPrompt <a class="cite" href="#ref-evoprompt">[16]</a> applies evolutionary search to prompts. PromptBreeder <a class="cite" href="#ref-promptbreeder">[17]</a> uses LLM-driven mutation operators within an evolutionary loop. DSPy <a class="cite" href="#ref-dspy">[18]</a> compiles modular programs with optimized prompts. TextGrad <a class="cite" href="#ref-textgrad">[19]</a> treats prompts and outputs as differentiable artifacts updated by LLM-generated "text gradients". More recent work in 2025 includes GEPA <a class="cite" href="#ref-gepa">[25]</a>, which uses reflective prompt evolution with Pareto-front selection and reports gains over RL baselines, and Pareto Prompt Optimization <a class="cite" href="#ref-paretoprompt">[26]</a>, which explicitly explores the Pareto front of prompts using dominance relations rather than scalarizing objectives. The Auto-Prompt Ensemble work <a class="cite" href="#ref-autopromptens">[27]</a> shows a confidence-aware ensemble of optimized prompts beats single-prompt baselines on LLM-as-judge tasks.
 </p>
 <p>
   AttrForge differs from this line in three ways. First, our objective is structurally multi-axis: seven critics (three baseline plus four mode-collapse adversaries) each emit named, falsifiable complaints rather than scalar rewards. Second, the updater is asked to satisfy them jointly under a length budget rather than through scalarization. Third, we explicitly transfer batch-level defenses from the GAN literature, which to our knowledge no prior prompt-optimization work has done.
 </p>
 
-<h3><span class="subsection-num">2.2b</span>Multi-critic and debate-style judges</h3>
+<h3><span class="subsection-num">2.3</span>Multi-critic and debate-style judges</h3>
 <p>
   Hu et al.'s Multi-Agent Debate for LLM Judges <a class="cite" href="#ref-debatejudges">[29]</a> formally proves that debate amplifies judge correctness over static ensembles and introduces adaptive Beta-Binomial stopping rules. This is complementary to our work: debate adds deliberation between judges, while we add adversarial batch-level dynamics. Our seven critics are intentionally independent rather than deliberative; combining the two paradigms is a natural extension.
 </p>
 
-<h3><span class="subsection-num">2.3</span>LLM-as-judge</h3>
+<h3><span class="subsection-num">2.4</span>LLM-as-judge</h3>
 <p>
   LLM-as-judge methods <a class="cite" href="#ref-judge">[6]</a> have become standard for open-ended evaluation, with G-Eval <a class="cite" href="#ref-geval">[20]</a> systematizing rubric-driven evaluation and self-consistency <a class="cite" href="#ref-selfconsistency">[21]</a> reducing variance. We extend that pattern to synthetic-data generation and add the specific structural property that each critic's output grammar is bounded so the updater receives <em>named</em> complaints rather than free-form prose.
 </p>
 
-<h3><span class="subsection-num">2.4</span>Mode collapse in GANs and its measurement</h3>
+<h3><span class="subsection-num">2.5</span>Mode collapse in GANs and its measurement</h3>
 <p>
   Mode collapse is a long-studied failure of generative-adversarial training where the generator finds a small set of points that fool the discriminator and emits them repeatedly. Documented defenses include minibatch discrimination <a class="cite" href="#ref-salimans">[2]</a>, unrolled GANs <a class="cite" href="#ref-unrolled">[7]</a>, mode-seeking GAN <a class="cite" href="#ref-msgan">[3]</a>, PacGAN <a class="cite" href="#ref-pacgan">[1]</a>, and Wasserstein-style losses <a class="cite" href="#ref-wgan">[8]</a>. Quantification of collapse uses FID <a class="cite" href="#ref-fid">[22]</a>, precision and recall for distributions <a class="cite" href="#ref-sajjadi">[23]</a>, and density/coverage <a class="cite" href="#ref-naeem">[24]</a>. We adapt four of these defenses into a prompt-debugging setting where the generator's parameters are frozen and the optimized object is the prompt.
 </p>
 
-<h3><span class="subsection-num">2.4b</span>Mode collapse in LLM outputs</h3>
+<h3><span class="subsection-num">2.6</span>Mode collapse in LLM outputs</h3>
 <p>
   Mode collapse has been documented for LLM outputs themselves, distinct from GAN-induced collapse. Verbalized Sampling <a class="cite" href="#ref-verbsampling">[30]</a> attributes the failure to "typicality bias in preference data" and proposes a training-free prompting recipe (asking the model to verbalize a probability distribution over responses) that recovers 1.6 to 2.1x more diversity on creative-writing tasks. NanoFlux <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data: it pairs an attacker LLM and a defender LLM under a tool-augmented judge to generate targeted training examples. Our work differs from NanoFlux in two ways: we use multiple critics rather than a single judge, and our adversaries are structural transfers from specific GAN defenses rather than free-form attackers.
 </p>
 
-<h3><span class="subsection-num">2.4c</span>Model collapse from training on synthetic data</h3>
+<h3><span class="subsection-num">2.7</span>Model collapse from training on synthetic data</h3>
 <p>
   A separate but related thread documents that training LLMs on synthetic data produced by earlier LLMs degrades the model distribution over generations. Strong Model Collapse <a class="cite" href="#ref-strongcollapse">[32]</a> proves the failure persists even with arbitrarily small synthetic fractions. Kazdan et al.'s analysis of Shumailov 2024 <a class="cite" href="#ref-shumalovnote">[33]</a> shows that the magnitude is sensitive to data-mixing strategy, and that accumulating (rather than replacing) real data prevents the collapse. Synthetic Eggs in Many Baskets <a class="cite" href="#ref-syntheggs">[34]</a> empirically connects synthetic-data diversity to downstream fine-tuning performance, showing that more diverse synthetic sources measurably mitigate collapse. Machine-generated text detection as a pipeline filter <a class="cite" href="#ref-mgtfilter">[35]</a> is another defense thread that connects to our Coverage Hole Finder's density-ratio classifier.
 </p>
 
-<h3><span class="subsection-num">2.5b</span>Density-ratio estimation for synthetic-data quality</h3>
+<h3><span class="subsection-num">2.8</span>Density-ratio estimation for synthetic-data quality</h3>
 <p>
-  An ICLR 2025 SynthData-workshop paper <a class="cite" href="#ref-improveddre">[36]</a> aggregates multiple density-ratio estimators with diverse hyperparameter settings to produce global and local quality scores, providing a direct technical antecedent for our Coverage Hole Finder.
+  Density ratio estimation <a class="cite" href="#ref-densityratio">[9]</a> recovers $p_{\text{real}}(x) / (p_{\text{real}}(x) + p_{\text{synth}}(x))$ with a binary classifier; we use it in Section 5.4 to surface real exemplars the synthetic distribution fails to cover and inject them as few-shot anchors. An ICLR 2025 SynthData-workshop paper <a class="cite" href="#ref-improveddre">[36]</a> aggregates multiple density-ratio estimators with diverse hyperparameter settings to produce global and local quality scores, providing a direct technical antecedent for our Coverage Hole Finder.
 </p>
 
-<h3><span class="subsection-num">2.5c</span>Embedding-based diversity metrics for text</h3>
+<h3><span class="subsection-num">2.9</span>Embedding-based diversity metrics for text</h3>
 <p>
   The Scendi Score <a class="cite" href="#ref-scendi">[37]</a> decomposes embedding-based diversity into prompt-driven and intrinsic-model components via a Schur-complement decomposition of CLIP-embedding kernels; this is the closest 2024 alternative to distinct-n and FID for text diversity. Our Mode-Seeking ratio occupies a similar niche but is conditioned on attribute-vector distance rather than prompt identity.
 </p>
 
-<h3><span class="subsection-num">2.5</span>Density ratio estimation</h3>
-<p>
-  Density ratio estimation <a class="cite" href="#ref-densityratio">[9]</a> recovers $p_{\text{real}}(x) / (p_{\text{real}}(x) + p_{\text{synth}}(x))$ with a binary classifier. We use it in <a href="#sec-cov-hole">Section 5.4</a> to surface concrete real exemplars that the synthetic distribution fails to cover, which become few-shot anchors in the next generator prompt.
-</p>
 
 <!-- ============================================================ -->
 <h2 id="sec-problem"><span class="section-num">3</span>Problem formulation</h2>
@@ -444,32 +440,31 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 </p>
 
 <p>
-  Two observations from Table 3 and Figure 2. First, the downstream metric on this $N_{\text{test}} = 10$ task carries a wide noise floor; any TF-IDF F1 difference smaller than about $0.10$ is within seed-std for several conditions. Second, the only loop-internal metric where <code>full_attrforge</code> differs from <code>full_classic</code> by more than one seed-std is the realism discriminator accuracy, where <code>full_attrforge</code> sits $0.09$ closer to chance than <code>full_classic</code> (Table 3). On attribute fidelity, both verifier-using conditions are below 10% match.
 </p>
 
-<h3><span class="subsection-num">7.2</span>Realism trajectory</h3>
+<h3><span class="subsection-num">7.3</span>Realism trajectory</h3>
 
 <figure>
   <img src="figures/main_run_002_realism_curve.png" alt="Realism discriminator accuracy per condition" />
-  <figcaption>Figure 3: Realism discriminator accuracy on the mixed batch. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed. Among conditions where the discriminator runs, <code>full_attrforge</code> drives accuracy closest to chance.</figcaption>
+  <figcaption>Figure 4: Loop-internal realism discriminator accuracy on the mixed real/synth batch, mean &plusmn; std across 3 seeds. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed for them. Among conditions where the discriminator runs, <code>full_attrforge</code> ($0.83 \pm 0.17$) is the closest to chance, beating <code>full_classic</code> ($0.92 \pm 0.14$) by $0.09$. Both are far from the chance target: the loop makes samples <em>more</em> detectable, not less, but the GAN-style adversaries soften the trend.</figcaption>
 </figure>
 
-<h3><span class="subsection-num">7.3</span>Per-iteration trajectory</h3>
+<h3><span class="subsection-num">7.4</span>Per-iteration trajectory</h3>
 
 <figure>
   <img src="figures/main_run_002_iteration_curves.png" alt="Macro F1 over iterations" />
-  <figcaption>Figure 4: Per-iteration downstream macro F1 with TF-IDF features (each point trains the classifier on that single iteration's batch of 16 samples; mean &plusmn; std across 3 seeds). The trajectories are non-monotonic. <code>self_critique</code> has the deepest iter-1 dip ($0.35 \to 0.19 \to 0.34$). At iteration 2, <code>full_attrforge</code> has the highest mean F1 of any iterated condition ($0.44 \pm 0.11$), above <code>full_classic</code> ($0.30 \pm 0.08$); this reverses the cumulative-pool ranking from Table 2 ($0.40$ vs $0.58$).</figcaption>
+  <figcaption>Figure 5: Per-iteration downstream macro F1 with TF-IDF features (each point trains the classifier on that single iteration's batch of 16 samples; mean &plusmn; std across 3 seeds). The trajectories are non-monotonic. <code>self_critique</code> has the deepest iter-1 dip ($0.35 \to 0.19 \to 0.34$). At iteration 2, <code>full_attrforge</code> has the highest mean F1 of any iterated condition ($0.44 \pm 0.11$), above <code>full_classic</code> ($0.30 \pm 0.08$); this reverses the cumulative-pool ranking from Table 3 ($0.40$ vs $0.58$).</figcaption>
 </figure>
 
 <p>
   The per-iteration vs cumulative inversion is worth noting. At iteration 2 alone (the final iteration), <code>full_attrforge</code> has the highest mean per-iteration F1; the cumulative classifier (trained on all 48 samples pooled across iterations 0, 1, 2) reverses this. The mechanism is straightforward: the prompt-updater's instruction set accumulates across iterations, so iteration 0 of <code>full_attrforge</code> uses the same starter prompt as everyone else, while iteration 2 carries 11.7 banned-phrasing constraints plus pack-pattern instructions. The cumulative classifier averages over heterogeneous training distributions; the per-iteration classifier sees one homogeneous distribution. Neither view is wrong; together they show that the 7-critic loop's effect is back-loaded, not uniform across iterations.
 </p>
 
-<h3><span class="subsection-num">7.4</span>Per-class F1</h3>
+<h3><span class="subsection-num">7.5</span>Per-class F1</h3>
 
 <figure>
   <img src="figures/main_run_002_per_class_f1.png" alt="Per-class F1 per condition" />
-  <figcaption>Figure 5: Per-class F1 on the held-out real test set (single representative seed). All iterated conditions achieve perfect or near-perfect F1 on classes with strong keyword signatures; <code>general_question</code> is the hardest class universally.</figcaption>
+  <figcaption>Figure 6: Per-class F1 on the held-out real test set, mean &plusmn; std across 3 seeds (TF-IDF features). All conditions achieve relatively high F1 on classes with strong keyword signatures; <code>general_question</code> is the hardest class universally.</figcaption>
 </figure>
 
 <!-- ============================================================ -->
@@ -481,7 +476,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <figure>
   <img src="figures/audit_protocol.png" alt="Schematic of the post-hoc adversary audit protocol. Top: the tautological-ablation failure mode of naive ablation tables, where critic metrics are 'n/a' for conditions that did not enable the critic. Bottom: the post-hoc audit, which runs every adversary on every condition's final batch with re-seeded RNG and a real-vs-real null reference." />
-  <figcaption>Figure 6: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
+  <figcaption>Figure 7: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
 </figure>
 
 <p>
@@ -489,7 +484,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <figure>
   <img src="figures/main_run_002_audit_differential.png" alt="Post-hoc adversary audit" />
-  <figcaption>Figure 7: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with identical seeds. Mean &plusmn; std over 3 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.50$ in this domain). Chance is also $0.50$.</figcaption>
+  <figcaption>Figure 8: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with re-seeded RNG per condition. Mean &plusmn; std over 3 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.54$ in this domain). Chance is $0.50$.</figcaption>
 </figure>
 
 <div class="table-wrap">
@@ -541,16 +536,16 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 <!-- ============================================================ -->
 <h2 id="sec-discussion"><span class="section-num">9</span>Discussion</h2>
 
-<h3><span class="subsection-num">9.1</span>What the validation shows</h3>
+<h3><span class="subsection-num">9.1</span>What the live-LLM evaluation shows</h3>
 
 <p>
-  The multi-seed simulator results establish four claims. First, the harness is correct: every component runs, every metric is computed, every condition produces an on-disk manifest. Second, on the realism axis, the full AttrForge stack drives discriminator accuracy below all other iterated conditions ($0.69 \pm 0.06$ vs $0.72 \pm 0.10$ for <code>full_classic</code> and <code>realism_only</code>). Third, the post-hoc adversary audit (Section 8) confirms that AttrForge reduces Pack accuracy from $0.75$ (naive) toward the null reference $0.50$, with <code>full_attrforge</code> landing exactly on the target. Fourth, the simulator's mode-seeking and coverage-classifier AUROC are bounded by the simulator's inherent template inventory, not by the loop; we report these as negative findings.
+  The 3-seed live-<code>gpt-4o-mini</code> evaluation establishes four claims. First, the harness is correct end-to-end: every condition runs, every metric is computed, every iteration writes a manifest. Second, under TF-IDF features, the seven-critic loop scores macro F1 $0.18$ below the three-critic baseline, directionally consistent across all 3 seeds; the gap is statistically underpowered at $N=3$ (paired-t $p=0.09$) but the 95% bootstrap CI excludes zero. Third, the same gap is statistically indistinguishable from zero under sentence-transformer features, so the cost of the GAN adversaries to downstream utility depends on the downstream reader's representation capacity. Fourth, on the realism axis, the seven-critic loop sits $0.09$ closer to chance than the three-critic baseline ($0.83 \pm 0.17$ vs $0.92 \pm 0.14$); both are far from chance, so the loop is making samples more detectable, but the GAN adversaries soften the trend.
 </p>
 
-<h3><span class="subsection-num">9.2</span>What the validation does not show</h3>
+<h3><span class="subsection-num">9.2</span>What the evaluation does not show</h3>
 
 <p>
-  We do not claim AttrForge dominates baselines on downstream macro F1: on this task (5 classes, 10 held-out examples, single seed split) all iterated conditions saturate at the same F1, which we attribute to the noise floor of a 10-item test set rather than to the loop. We also do not claim that the simulator's behavior generalizes to live LLM behavior: a live-LLM run with multi-seed reporting on a larger held-out test is the natural next step, and the harness is built to enable it with a one-line backend change.
+  We do not claim statistical significance at $\alpha = 0.05$ for the TF-IDF gap: the conventional paired-t and Wilcoxon tests are underpowered at $N=3$. We do not claim the seven-critic loop strictly improves downstream utility under embeddings: the mean difference is positive but the CI includes zero. We do not claim the result generalizes beyond this single customer-support intent task; we discuss multi-task replication as a limitation (Section 10). We also do not claim full attribute fidelity: the LLM verifier judges that fewer than 10% of generated samples satisfy their requested attribute vector, an honest negative finding that holds for both the three-critic and seven-critic loops.
 </p>
 
 <h3><span class="subsection-num">9.3</span>Why named complaints beat scalar rewards</h3>
@@ -574,7 +569,7 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 <h3><span class="subsection-num">9.6</span>Positioning against very recent (2025) work</h3>
 
 <p>
-  Three contemporary lines deserve explicit contrast. <strong>Verbalized Sampling</strong> <a class="cite" href="#ref-verbsampling">[30]</a> diagnoses LLM mode collapse as a typicality bias in preference training data and proposes a single-prompt fix: ask the model to verbalize a distribution over responses, then sample from it. Our framing is complementary: we treat the LLM's parameters as fixed and attack collapse from outside through batch-level adversaries that the model's own training pipeline never sees, which lets us address both attribute-deaf generation and homogeneous-pack collapse without prompt-level workarounds. <strong>NanoFlux</strong> <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data, pairing one attacker LLM and one defender LLM under a tool-augmented judge. Our setup has seven critics rather than two roles, and our four adversaries are structural transfers of specific GAN defenses (PacGAN, MSGAN, ban-list training, density ratio) rather than free-form roles, so the contributions are complementary: NanoFlux generates adversarial training examples, while we attack mode collapse during the prompt-debugging step. Concurrent preprint work characterizes a related failure mode of multi-objective text-gradient methods (specificity loss with multiple critics); we discuss the empirical anchor for our named-complaint design once the preprint is stable.
+  Three contemporary lines deserve explicit contrast. <strong>Verbalized Sampling</strong> <a class="cite" href="#ref-verbsampling">[30]</a> diagnoses LLM mode collapse as a typicality bias in preference training data and proposes a single-prompt fix: ask the model to verbalize a distribution over responses, then sample from it. Our framing is complementary: we treat the LLM's parameters as fixed and attack collapse from outside through batch-level adversaries that the model's own training pipeline never sees, which lets us address both attribute-deaf generation and homogeneous-pack collapse without prompt-level workarounds. <strong>NanoFlux</strong> <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data, pairing one attacker LLM and one defender LLM under a tool-augmented judge. Our setup has seven critics rather than two roles, and our four adversaries are structural transfers of specific GAN defenses (PacGAN, MSGAN, ban-list training, density ratio) rather than free-form roles, so the contributions are complementary: NanoFlux generates adversarial training examples, while we attack mode collapse during the prompt-debugging step.
 </p>
 
 <!-- ============================================================ -->
@@ -596,6 +591,10 @@ python scripts/aggregate_multiseed.py --base main_run_002</code></pre>
 
 <p>
   We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). Across 3 random seeds on a customer-support intent task with live <code>gpt-4o-mini</code>, the seven-critic loop scores 0.18 macro F1 below a three-critic baseline under a TF-IDF $+$ logistic-regression downstream classifier (directional across all 3 seeds, 95% bootstrap CI excludes zero, paired-t $p=0.09$ at $N=3$); the same comparison under sentence-transformer features is statistically indistinguishable from zero. We argue this is the right scientific answer to the natural "does adding more LLM critics produce better synthetic data" question on this scale of experiment: under one downstream reader there is a directional cost, under another the cost is not detectable. We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference, and two honest negative findings (the loop-internal realism discriminator drifts away from chance through iteration; the Coverage Hole AUROC remains at $1.00$ throughout). All code, configurations, per-iteration manifests, audit artifacts, and per-seed downstream results are released.
+</p>
+
+<p>
+  <em>Implications for practitioners.</em> Train-on-synthetic / test-on-real reports in the older synthetic-data literature use a single downstream classifier (often TF-IDF or a comparable bag-of-features model); our results suggest such reports systematically penalize diversity-inducing methods. We recommend multi-classifier downstream evaluation as the honest reporting protocol, and we provide the harness to do so. <em>Implications for method designers.</em> Adding more LLM critics to a prompt-optimization loop is not free: a classifier that depends on keyword consistency for its signal can be hurt by the additional surface variation the critics inject. The post-hoc adversary audit protocol gives method designers a way to attribute observed differences to the data itself rather than to whichever critic happened to be enabled in a given condition.
 </p>
 
 <p>
