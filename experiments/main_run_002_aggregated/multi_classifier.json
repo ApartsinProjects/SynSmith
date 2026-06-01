@@ -1,65 +1,65 @@
 [
   {
     "condition": "naive",
-    "tfidf_word_f1_mean": 0.37037037037037035,
-    "tfidf_word_f1_sd": 0.04625924443258074,
-    "tfidf_char_f1_mean": 0.348994708994709,
-    "tfidf_char_f1_sd": 0.029130912469548118,
-    "st_minilm_f1_mean": 0.45365079365079364,
-    "st_minilm_f1_sd": 0.09843368951760557
+    "tfidf_word_f1_mean": 0.3702222222222222,
+    "tfidf_word_f1_sd": 0.11550853744300557,
+    "tfidf_char_f1_mean": 0.38717460317460317,
+    "tfidf_char_f1_sd": 0.08430965492653975,
+    "st_minilm_f1_mean": 0.5097142857142857,
+    "st_minilm_f1_sd": 0.13371950878416525
   },
   {
     "condition": "few_shot",
-    "tfidf_word_f1_mean": 0.4474074074074074,
-    "tfidf_word_f1_sd": 0.18962384250428674,
-    "tfidf_char_f1_mean": 0.32999999999999996,
-    "tfidf_char_f1_sd": 0.15567059238447492,
-    "st_minilm_f1_mean": 0.6311111111111111,
-    "st_minilm_f1_sd": 0.10335125292651987
+    "tfidf_word_f1_mean": 0.48977777777777776,
+    "tfidf_word_f1_sd": 0.15502767574505394,
+    "tfidf_char_f1_mean": 0.326,
+    "tfidf_char_f1_sd": 0.1180960061418957,
+    "st_minilm_f1_mean": 0.648,
+    "st_minilm_f1_sd": 0.08345324705752584
   },
   {
     "condition": "self_critique",
-    "tfidf_word_f1_mean": 0.4104761904761905,
-    "tfidf_word_f1_sd": 0.09026541865514538,
-    "tfidf_char_f1_mean": 0.36603174603174604,
-    "tfidf_char_f1_sd": 0.16900491300492862,
-    "st_minilm_f1_mean": 0.5777777777777777,
-    "st_minilm_f1_sd": 0.13471506281091264
+    "tfidf_word_f1_mean": 0.48380952380952386,
+    "tfidf_word_f1_sd": 0.12491992900306789,
+    "tfidf_char_f1_mean": 0.444952380952381,
+    "tfidf_char_f1_sd": 0.1832082442767657,
+    "st_minilm_f1_mean": 0.632,
+    "st_minilm_f1_sd": 0.13543346049710986
   },
   {
     "condition": "realism_only",
-    "tfidf_word_f1_mean": 0.32571428571428573,
-    "tfidf_word_f1_sd": 0.034771688121007,
-    "tfidf_char_f1_mean": 0.3892063492063492,
-    "tfidf_char_f1_sd": 0.12054800544818606,
-    "st_minilm_f1_mean": 0.6803174603174603,
-    "st_minilm_f1_sd": 0.19869491040921144
+    "tfidf_word_f1_mean": 0.39276190476190476,
+    "tfidf_word_f1_sd": 0.1338740735680219,
+    "tfidf_char_f1_mean": 0.3681904761904762,
+    "tfidf_char_f1_sd": 0.1159004968499619,
+    "st_minilm_f1_mean": 0.7201904761904762,
+    "st_minilm_f1_sd": 0.21661213337791263
   },
   {
     "condition": "diversity_only",
-    "tfidf_word_f1_mean": 0.3523809523809524,
-    "tfidf_word_f1_sd": 0.1094989619847465,
-    "tfidf_char_f1_mean": 0.3001587301587302,
-    "tfidf_char_f1_sd": 0.04680333082448363,
-    "st_minilm_f1_mean": 0.6755555555555556,
-    "st_minilm_f1_sd": 0.20003703360831668
+    "tfidf_word_f1_mean": 0.3742857142857143,
+    "tfidf_word_f1_sd": 0.09564911308771827,
+    "tfidf_char_f1_mean": 0.4162857142857143,
+    "tfidf_char_f1_sd": 0.1820182891809828,
+    "st_minilm_f1_mean": 0.6601904761904762,
+    "st_minilm_f1_sd": 0.14319547238183752
   },
   {
     "condition": "full_classic",
-    "tfidf_word_f1_mean": 0.5844444444444443,
-    "tfidf_word_f1_sd": 0.05178302310102684,
-    "tfidf_char_f1_mean": 0.5177777777777778,
-    "tfidf_char_f1_sd": 0.08335555259338244,
-    "st_minilm_f1_mean": 0.6733333333333333,
-    "st_minilm_f1_sd": 0.12875471943885314
+    "tfidf_word_f1_mean": 0.612,
+    "tfidf_word_f1_sd": 0.05761944116355175,
+    "tfidf_char_f1_mean": 0.52,
+    "tfidf_char_f1_sd": 0.1297005097222915,
+    "st_minilm_f1_mean": 0.6946666666666667,
+    "st_minilm_f1_sd": 0.09573110489514078
   },
   {
     "condition": "full_attrforge",
-    "tfidf_word_f1_mean": 0.3977777777777778,
-    "tfidf_word_f1_sd": 0.06336256635281445,
-    "tfidf_char_f1_mean": 0.4568253968253968,
-    "tfidf_char_f1_sd": 0.10813753455410689,
-    "st_minilm_f1_mean": 0.711111111111111,
-    "st_minilm_f1_sd": 0.08335555259338244
+    "tfidf_word_f1_mean": 0.468,
+    "tfidf_word_f1_sd": 0.11258576977378429,
+    "tfidf_char_f1_mean": 0.4860952380952381,
+    "tfidf_char_f1_sd": 0.14044729323440427,
+    "st_minilm_f1_mean": 0.6799999999999999,
+    "st_minilm_f1_sd": 0.1014341603646862
   }
 ]

@@ -50,7 +50,7 @@
     Large language models are widely used to generate labeled training data when real data is scarce. Naive prompting produces samples that are repetitive, over-polished, and only weakly tied to requested attributes. A common response is to add LLM critics that audit each batch and feed structured feedback back into the generation prompt. The existing literature treats this as a single-axis problem in which more critics yield better data. We test that assumption. We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop, alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor).
   </p>
   <p>
-    Across three random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>, the seven-critic loop scores macro F1 $0.40 \pm 0.06$ against the three-critic baseline's $0.58 \pm 0.05$ when the downstream classifier is TF-IDF $+$ logistic regression. The gap is consistent across all three seeds (95% bootstrap CI $[-0.267, -0.067]$; paired-t $p=0.09$ at $N=3$). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (CI $[-0.073, +0.180]$, $p=0.66$). The cost of the GAN-style adversaries is measurable under a keyword-driven downstream classifier and absorbed under an embedding-based one. The diversity-utility tradeoff is a joint property of the synthetic dataset and the downstream classifier's representation capacity, not a property of the dataset alone.
+    Across five random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>, the seven-critic loop scores macro F1 $0.47 \pm 0.11$ against the three-critic baseline's $0.61 \pm 0.06$ when the downstream classifier is TF-IDF $+$ logistic regression. The gap is statistically significant (paired-t $p=0.046$ at $N=5$; 95% bootstrap CI $[-0.231, -0.055]$ on the mean diff). Under sentence-transformer features the same comparison is statistically indistinguishable from zero ($0.68 \pm 0.10$ vs $0.69 \pm 0.10$, paired-t $p=0.82$, CI $[-0.113, +0.093]$). The cost of the GAN-style adversaries is measurable under a keyword-driven downstream classifier and absorbed under an embedding-based one. The diversity-utility tradeoff is a joint property of the synthetic dataset and the downstream classifier's representation capacity, not a property of the dataset alone.
   </p>
   <p>
     We additionally contribute (i) a post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) two boundary measurements that delimit the scope of the main result (the loop-internal realism discriminator becomes more confident through iteration, and the density-ratio coverage classifier remains saturated on every condition).
@@ -66,11 +66,11 @@
 </p>
 
 <p>
-  This paper documents that the answer is mediated by the downstream classifier's representation. We adapt four classical GAN mode-collapse defenses (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>, MSGAN <a class="cite" href="#ref-msgan">[3]</a>, ban-list training, density-ratio coverage <a class="cite" href="#ref-densityratio">[9]</a>) into a multi-critic prompt-debugging loop. The same synthetic-data batches yield different downstream rankings depending on the classifier. Under TF-IDF $+$ logistic regression, a three-critic loop scores macro F1 $0.58 \pm 0.05$ and a seven-critic loop (the three baseline critics plus the four GAN-style adversaries) scores $0.40 \pm 0.06$. Under sentence-transformer features the two loops are statistically indistinguishable ($0.67 \pm 0.13$ vs $0.71 \pm 0.08$, $p = 0.66$). The cost of the GAN-style adversaries to downstream utility is measurable under a low-capacity reader and absorbed under a stronger one.
+  This paper documents that the answer is mediated by the downstream classifier's representation. We adapt four classical GAN mode-collapse defenses (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>, MSGAN <a class="cite" href="#ref-msgan">[3]</a>, ban-list training, density-ratio coverage <a class="cite" href="#ref-densityratio">[9]</a>) into a multi-critic prompt-debugging loop. The same synthetic-data batches yield different downstream rankings depending on the classifier. Under TF-IDF $+$ logistic regression, a three-critic loop scores macro F1 $0.61 \pm 0.06$ and a seven-critic loop (the three baseline critics plus the four GAN-style adversaries) scores $0.47 \pm 0.11$ (paired-t $p = 0.046$ at $N=5$). Under sentence-transformer features the two loops are statistically indistinguishable ($0.69 \pm 0.10$ vs $0.68 \pm 0.10$, $p = 0.82$). The cost of the GAN-style adversaries to downstream utility is measurable under a low-capacity reader and absorbed under a stronger one.
 </p>
 
 <p>
-  The mechanism is a <em>representation-dependent diversity-utility tradeoff</em>. Critic-driven prompt updates inject surface variation that disrupts the keyword consistency a TF-IDF classifier relies on; that variation occupies a region of the sentence-transformer embedding space the deeper representation absorbs as additional coverage. The GAN-style adversaries work as designed at the data level: the Mode Hunter accumulates $11.7 \pm 0.6$ distinct LLM-tic phrasings across three iterations and we verify each is suppressed in subsequent generation. The loop-internal realism discriminator becomes more confident in detecting synthetic patterns through iteration. The attribute-match rate stays below 10%. The post-hoc Pack Discriminator audit shows iterated conditions cluster near the real-vs-real null reference. None of these signals are visible to ablation tables that report only one downstream classifier per row.
+  The mechanism is a <em>representation-dependent diversity-utility tradeoff</em>. Critic-driven prompt updates inject surface variation that disrupts the keyword consistency a TF-IDF classifier relies on; that variation occupies a region of the sentence-transformer embedding space the deeper representation absorbs as additional coverage. The GAN-style adversaries work as designed at the data level: the Mode Hunter accumulates $11.6 \pm 0.6$ distinct LLM-tic phrasings across three iterations and we verify each is suppressed in subsequent generation. The loop-internal realism discriminator becomes more confident in detecting synthetic patterns through iteration. The attribute-match rate stays below 10%. The post-hoc Pack Discriminator audit shows iterated conditions cluster near the real-vs-real null reference. None of these signals are visible to ablation tables that report only one downstream classifier per row.
 </p>
 
 <p>
@@ -315,14 +315,14 @@ $$
 </p>
 
 <p>
-  Section 7 reports results with <code>gpt-4o-mini</code> as both generator and every critic, across 3 random seeds, 7 conditions, and 3 iterations of 16 samples each (21 condition-runs in total). A deterministic offline simulator is available in the repository for unit-test and CI use but is not used for the reported numbers.
+  Section 7 reports results with <code>gpt-4o-mini</code> as both generator and every critic, across 5 random seeds, 7 conditions, and 3 iterations of 16 samples each (35 condition-runs in total). A deterministic offline simulator is available in the repository for unit-test and CI use but is not used for the reported numbers.
 </p>
 
 <h3><span class="subsection-num">6.3</span>Conditions</h3>
 
 <div class="table-wrap">
 <table>
-<caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same three random seeds (17, 23, 41), same dataset, same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally bumps the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated); they affect what each condition is meant to measure rather than being a confound.</caption>
+<caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same five random seeds (17, 23, 41, 53, 89), same dataset, same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
 <thead>
 <tr><th>Condition</th><th class="num">Iters</th><th>Verifier</th><th>Realism disc.</th><th>Auditor</th><th>Pack</th><th>Mode-seeking</th><th>Mode hunter</th><th>Coverage hole</th><th>Updater</th></tr>
 </thead>
@@ -346,11 +346,11 @@ $$
 python scripts/run_experiments.py \
   --config examples/customer_support/config.yaml \
   --backend openai --iterations 3 --samples-per-iteration 16 --n-test 10 \
-  --seeds 17 23 41 \
+  --seeds 17 23 41 53 89 \
   --conditions naive few_shot self_critique realism_only diversity_only full_classic full_attrforge
 
 # Section 8 (post-hoc adversary audit):
-for seed in 17 23 41; do
+for seed in 17 23 41 53 89; do
   python scripts/posthoc_audit.py --seed ${seed} --backend openai
 done
 
@@ -366,7 +366,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <div class="table-wrap">
 <table>
-<caption>Table 3: Per-condition metrics at the final iteration, mean &plusmn; std over 3 random seeds, live <code>gpt-4o-mini</code>. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers, where every critic runs against every condition, are reported in <a href="#sec-audit">Section 8 Table 5</a>. Bold cells highlight the TF-IDF gap: full_classic dominates downstream F1 under TF-IDF features; adding the 4 GAN adversaries drops F1 by 0.18 absolute (directional 3/3 seeds, underpowered at $N=3$).</caption>
+<caption>Table 3: Per-condition metrics at the final iteration, mean &plusmn; std over 5 random seeds, live <code>gpt-4o-mini</code>. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers are in <a href="#sec-audit">Section 8 (Table 6)</a>. Bold cells highlight the TF-IDF gap.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -374,27 +374,26 @@ python scripts/aggregate_multiseed.py</code></pre>
   <th class="num">Macro F1</th>
   <th class="num">Attr. match</th>
   <th class="num">Disc. acc.</th>
-  <th class="num">Hunter library</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.43 &plusmn; 0.06</td><td class="num">0.37 &plusmn; 0.05</td><td class="num">n/a</td><td class="num">n/a</td><td class="num">n/a</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">0.53 &plusmn; 0.15</td><td class="num">0.45 &plusmn; 0.19</td><td class="num">n/a</td><td class="num">n/a</td><td class="num">n/a</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.47 &plusmn; 0.12</td><td class="num">0.41 &plusmn; 0.09</td><td class="num">n/a</td><td class="num">n/a</td><td class="num">n/a</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.37 &plusmn; 0.06</td><td class="num">0.33 &plusmn; 0.03</td><td class="num">n/a</td><td class="num">0.75 &plusmn; 0.43</td><td class="num">n/a</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.43 &plusmn; 0.06</td><td class="num">0.35 &plusmn; 0.11</td><td class="num">n/a</td><td class="num">n/a</td><td class="num">n/a</td></tr>
-<tr class="highlight"><td><code>full_classic</code> (3 critics)</td><td class="num"><strong>0.63 &plusmn; 0.06</strong></td><td class="num"><strong>0.58 &plusmn; 0.05</strong></td><td class="num">0.10 &plusmn; 0.10</td><td class="num">0.92 &plusmn; 0.14</td><td class="num">n/a</td></tr>
-<tr><td><code>full_attrforge</code> (7 critics)</td><td class="num">0.43 &plusmn; 0.06</td><td class="num">0.40 &plusmn; 0.06</td><td class="num">0.06 &plusmn; 0.06</td><td class="num">0.83 &plusmn; 0.17</td><td class="num">11.67 &plusmn; 0.58</td></tr>
+<tr><td><code>naive</code></td><td class="num">0.44 &plusmn; 0.11</td><td class="num">0.37 &plusmn; 0.12</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">0.56 &plusmn; 0.13</td><td class="num">0.49 &plusmn; 0.16</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">0.54 &plusmn; 0.13</td><td class="num">0.48 &plusmn; 0.12</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">0.44 &plusmn; 0.15</td><td class="num">0.39 &plusmn; 0.13</td><td class="num">n/a</td><td class="num">0.83 &plusmn; 0.33</td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">0.46 &plusmn; 0.09</td><td class="num">0.37 &plusmn; 0.10</td><td class="num">n/a</td><td class="num">n/a</td></tr>
+<tr class="highlight"><td><code>full_classic</code> (3 critics)</td><td class="num"><strong>0.66 &plusmn; 0.05</strong></td><td class="num"><strong>0.61 &plusmn; 0.06</strong></td><td class="num">0.09 &plusmn; 0.08</td><td class="num">0.93 &plusmn; 0.11</td></tr>
+<tr><td><code>full_attrforge</code> (7 critics)</td><td class="num">0.52 &plusmn; 0.13</td><td class="num">0.47 &plusmn; 0.11</td><td class="num">0.06 &plusmn; 0.06</td><td class="num">0.90 &plusmn; 0.15</td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  Three observations from Table 3. <strong>(i)</strong> Under TF-IDF $+$ logistic regression, the three-critic loop (<code>full_classic</code>) achieves macro F1 $0.58 \pm 0.05$ and the seven-critic loop (<code>full_attrforge</code>) achieves $0.40 \pm 0.06$. The mean paired difference is $-0.187$ with 95% bootstrap CI $[-0.267, -0.067]$ (excluding zero). The gap is in the same direction across all three seeds (per-seed diffs $-0.23$, $-0.27$, $-0.07$); paired-t and Wilcoxon p-values at $N=3$ are $0.09$ and $0.25$, so the result is directional and bounded by a tight CI. <strong>(ii)</strong> The loop-internal realism discriminator moves <em>away</em> from the chance-level target through iteration: <code>full_classic</code> reaches $0.92 \pm 0.14$ accuracy and <code>full_attrforge</code> reaches $0.83 \pm 0.17$ (chance is $0.50$). The 7-critic loop softens the trend by $0.09$. <strong>(iii)</strong> Attribute-match rate measured by the LLM verifier is $0.10 \pm 0.10$ for the 3-critic loop and $0.06 \pm 0.06$ for the 7-critic loop; both are well below the requested-attribute target.
+  Three observations from Table 3. <strong>(i)</strong> Under TF-IDF $+$ logistic regression, the three-critic loop (<code>full_classic</code>) achieves macro F1 $0.61 \pm 0.06$ and the seven-critic loop (<code>full_attrforge</code>) achieves $0.47 \pm 0.11$. The mean paired difference is $-0.144$ with 95% bootstrap CI $[-0.231, -0.055]$ (excluding zero). The gap is in the same direction in 4 of 5 seeds (per-seed diffs $-0.23$, $-0.27$, $-0.07$, $-0.17$, $+0.01$); paired-t $p=0.046$ at $N=5$, Wilcoxon $p=0.125$. <strong>(ii)</strong> The loop-internal realism discriminator moves <em>away</em> from the chance-level target through iteration: <code>full_classic</code> reaches $0.93 \pm 0.11$ accuracy and <code>full_attrforge</code> reaches $0.90 \pm 0.15$ (chance is $0.50$). The 7-critic loop softens the trend by $0.03$. <strong>(iii)</strong> Attribute-match rate measured by the LLM verifier is $0.09 \pm 0.08$ for the 3-critic loop and $0.06 \pm 0.06$ for the 7-critic loop; both are well below the requested-attribute target.
 </p>
 
 <p>
-  The adversaries are active throughout: the Mode Hunter accumulates a persistent library of $11.67 \pm 0.58$ banned phrasings across 3 iterations for <code>full_attrforge</code>, and we verify deterministically that each banned phrasing is suppressed in subsequent generation. The framework's design intent is observable in the output: the samples are simultaneously more surface-diverse, less attribute-faithful by LLM-verifier judgment, more LLM-detectable by a per-sample realism discriminator, and harder for a TF-IDF classifier to discriminate by intent.
+  The adversaries are active throughout: the Mode Hunter accumulates a persistent library of $11.6 \pm 0.6$ banned phrasings across 3 iterations for <code>full_attrforge</code>, and we verify deterministically that each banned phrasing is suppressed in subsequent generation. The framework's design intent is observable in the output: the samples are simultaneously more surface-diverse, less attribute-faithful by LLM-verifier judgment, more LLM-detectable by a per-sample realism discriminator, and harder for a TF-IDF classifier to discriminate by intent.
 </p>
 
 <h3><span class="subsection-num">7.2</span>Multi-classifier evaluation: the picture depends on the reader</h3>
@@ -405,12 +404,12 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/main_run_002_multi_classifier.png" alt="Multi-classifier downstream F1 across all conditions" />
-  <figcaption>Figure 2: Downstream macro F1 on the held-out real test set across three classifier choices and the same synthetic-data batches (mean &plusmn; std across 3 random seeds). The TF-IDF gap reported in Section 7.1 is visible in the leftmost bars of each group, but it does not survive a classifier swap: under sentence-transformer features the comparison between <code>full_classic</code> and <code>full_attrforge</code> is statistically indistinguishable (paired-t $p=0.66$, 95% bootstrap CI $[-0.07, +0.18]$ on the paired diff). The character $n$-gram classifier sits between the two extremes.</figcaption>
+  <figcaption>Figure 2: Downstream macro F1 on the held-out real test set across three classifier choices and the same synthetic-data batches (mean &plusmn; std across 5 random seeds). The TF-IDF gap reported in Section 7.1 is visible in the leftmost bars of each group; it does not survive a classifier swap: under sentence-transformer features the comparison between <code>full_classic</code> and <code>full_attrforge</code> is statistically indistinguishable (paired-t $p = 0.82$, 95% bootstrap CI $[-0.113, +0.093]$ on the paired diff). The character $n$-gram classifier sits between the two extremes.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 4: Multi-classifier downstream macro F1 (mean &plusmn; std across 3 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is reliably below the 3-critic loop across all 3 seeds (paired-t $p=0.09$, Wilcoxon $p=0.25$, 95% bootstrap CI $[-0.27, -0.07]$ on the diff; underpowered but directional). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.66$, Wilcoxon $p=0.75$, CI $[-0.07, +0.18]$).</caption>
+<caption>Table 4: Multi-classifier downstream macro F1 (mean &plusmn; std across 5 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is below the 3-critic loop in 4 of 5 seeds (paired-t $p=0.046$, Wilcoxon $p=0.125$, 95% bootstrap CI $[-0.231, -0.055]$). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.82$, Wilcoxon $p=0.88$, CI $[-0.113, +0.093]$).</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -420,13 +419,13 @@ python scripts/aggregate_multiseed.py</code></pre>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.37 &plusmn; 0.05</td><td class="num">0.35 &plusmn; 0.03</td><td class="num">0.45 &plusmn; 0.10</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">0.45 &plusmn; 0.19</td><td class="num">0.33 &plusmn; 0.16</td><td class="num">0.63 &plusmn; 0.10</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.41 &plusmn; 0.09</td><td class="num">0.37 &plusmn; 0.17</td><td class="num">0.58 &plusmn; 0.13</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.33 &plusmn; 0.03</td><td class="num">0.39 &plusmn; 0.12</td><td class="num">0.68 &plusmn; 0.20</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.35 &plusmn; 0.11</td><td class="num">0.30 &plusmn; 0.05</td><td class="num">0.68 &plusmn; 0.20</td></tr>
-<tr><td><code>full_classic</code> (3 critics)</td><td class="num"><strong>0.58 &plusmn; 0.05</strong></td><td class="num"><strong>0.52 &plusmn; 0.08</strong></td><td class="num">0.67 &plusmn; 0.13</td></tr>
-<tr class="highlight"><td><code>full_attrforge</code> (7 critics)</td><td class="num">0.40 &plusmn; 0.06</td><td class="num">0.46 &plusmn; 0.11</td><td class="num"><strong>0.71 &plusmn; 0.08</strong></td></tr>
+<tr><td><code>naive</code></td><td class="num">0.37 &plusmn; 0.12</td><td class="num">0.39 &plusmn; 0.08</td><td class="num">0.51 &plusmn; 0.13</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">0.49 &plusmn; 0.16</td><td class="num">0.33 &plusmn; 0.12</td><td class="num">0.65 &plusmn; 0.08</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">0.48 &plusmn; 0.12</td><td class="num">0.44 &plusmn; 0.18</td><td class="num">0.63 &plusmn; 0.14</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">0.39 &plusmn; 0.13</td><td class="num">0.37 &plusmn; 0.12</td><td class="num"><strong>0.72 &plusmn; 0.22</strong></td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">0.37 &plusmn; 0.10</td><td class="num">0.42 &plusmn; 0.18</td><td class="num">0.66 &plusmn; 0.14</td></tr>
+<tr><td><code>full_classic</code> (3 critics)</td><td class="num"><strong>0.61 &plusmn; 0.06</strong></td><td class="num"><strong>0.52 &plusmn; 0.13</strong></td><td class="num">0.69 &plusmn; 0.10</td></tr>
+<tr class="highlight"><td><code>full_attrforge</code> (7 critics)</td><td class="num">0.47 &plusmn; 0.11</td><td class="num">0.49 &plusmn; 0.14</td><td class="num">0.68 &plusmn; 0.10</td></tr>
 </tbody>
 </table>
 </div>
@@ -439,33 +438,52 @@ python scripts/aggregate_multiseed.py</code></pre>
   Two consequences for the train-on-synthetic / test-on-real protocol. Reports that use only TF-IDF (the historical default in the synthetic-data literature) penalize diversity-inducing methods by construction, because the classifier signal depends on keyword consistency. Reports that use only embedding-based classifiers absorb the same surface variation as additional coverage. Multi-classifier evaluation gives the reader the full distribution of orderings rather than a single one.
 </p>
 
+<h3><span class="subsection-num">7.3</span>Direct diversity measurements</h3>
+
+<p>
+  To check whether the multi-classifier reading is consistent with model-free direct measurements of diversity, we compute distinct-$n$ <a class="cite" href="#ref-li-distinct">[38]</a> and self-BLEU-4 over each condition's final pooled batch. Distinct-$n$ is the unique-$n$-gram / total-$n$-gram ratio; higher means more lexically diverse. Self-BLEU-4 is the mean BLEU-4 of each sample against the rest of the batch; lower means more diverse.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 5: Direct diversity measurements on each condition's final pooled batch, mean &plusmn; std across 5 seeds. Bold cells are the best per-column among iterated conditions. <code>full_attrforge</code> has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-4 among the five iterated conditions, supporting the claim that the GAN-style adversaries inject genuine lexical diversity. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
+<thead>
+<tr>
+  <th>Condition</th>
+  <th class="num">distinct-1</th>
+  <th class="num">distinct-2</th>
+  <th class="num">distinct-3</th>
+  <th class="num">self-BLEU-4</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><code>naive</code></td><td class="num">0.529 &plusmn; 0.014</td><td class="num">0.895 &plusmn; 0.016</td><td class="num">0.973 &plusmn; 0.009</td><td class="num">0.142 &plusmn; 0.019</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">0.520 &plusmn; 0.015</td><td class="num">0.902 &plusmn; 0.012</td><td class="num">0.972 &plusmn; 0.010</td><td class="num">0.139 &plusmn; 0.017</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">0.370 &plusmn; 0.023</td><td class="num">0.787 &plusmn; 0.026</td><td class="num">0.927 &plusmn; 0.012</td><td class="num">0.219 &plusmn; 0.017</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">0.373 &plusmn; 0.025</td><td class="num">0.793 &plusmn; 0.026</td><td class="num">0.939 &plusmn; 0.015</td><td class="num">0.207 &plusmn; 0.023</td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">0.370 &plusmn; 0.016</td><td class="num">0.785 &plusmn; 0.015</td><td class="num">0.927 &plusmn; 0.011</td><td class="num">0.226 &plusmn; 0.022</td></tr>
+<tr><td><code>full_classic</code></td><td class="num">0.369 &plusmn; 0.013</td><td class="num">0.795 &plusmn; 0.010</td><td class="num">0.936 &plusmn; 0.006</td><td class="num">0.207 &plusmn; 0.010</td></tr>
+<tr class="highlight"><td><code>full_attrforge</code></td><td class="num"><strong>0.382 &plusmn; 0.024</strong></td><td class="num"><strong>0.811 &plusmn; 0.024</strong></td><td class="num"><strong>0.942 &plusmn; 0.012</strong></td><td class="num"><strong>0.204 &plusmn; 0.019</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  Among the five iterated conditions, the seven-critic loop has the best score on all four diversity measurements: highest distinct-1, distinct-2, and distinct-3, and lowest self-BLEU-4. The gains are modest (about $0.01$ to $0.02$ on distinct-$n$, $0.003$ to $0.022$ lower on self-BLEU-4) and consistent. This is the most direct evidence that the GAN-style adversaries are doing what they were designed to do: increasing surface diversity beyond what the three-critic baseline achieves.
+</p>
+
 <p>
 </p>
 
-<h3><span class="subsection-num">7.3</span>Realism trajectory</h3>
+<h3><span class="subsection-num">7.4</span>Realism trajectory</h3>
 
 <figure>
   <img src="figures/main_run_002_realism_curve.png" alt="Realism discriminator accuracy per condition" />
-  <figcaption>Figure 3: Loop-internal realism discriminator accuracy on the mixed real/synth batch, mean &plusmn; std across 3 seeds. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed for them. Among conditions where the discriminator runs, <code>full_attrforge</code> ($0.83 \pm 0.17$) is the closest to chance, beating <code>full_classic</code> ($0.92 \pm 0.14$) by $0.09$. Both are far from the chance target: the loop makes samples <em>more</em> detectable, not less, but the GAN-style adversaries soften the trend.</figcaption>
-</figure>
-
-<h3><span class="subsection-num">7.4</span>Per-iteration trajectory</h3>
-
-<figure>
-  <img src="figures/main_run_002_iteration_curves.png" alt="Macro F1 over iterations" />
-  <figcaption>Figure 4: Per-iteration downstream macro F1 with TF-IDF features (each point trains the classifier on that single iteration's batch of 16 samples; mean &plusmn; std across 3 seeds). The trajectories are non-monotonic. <code>self_critique</code> has the deepest iter-1 dip ($0.35 \to 0.19 \to 0.34$). At iteration 2, <code>full_attrforge</code> has the highest mean F1 of any iterated condition ($0.44 \pm 0.11$), above <code>full_classic</code> ($0.30 \pm 0.08$); this reverses the cumulative-pool ranking from Table 3 ($0.40$ vs $0.58$).</figcaption>
+  <figcaption>Figure 3: Loop-internal realism discriminator accuracy on the mixed real/synth batch, mean &plusmn; std across 5 seeds. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed for them. Among conditions where the discriminator runs, <code>full_attrforge</code> ($0.90 \pm 0.15$) is the closest to chance, beating <code>full_classic</code> ($0.93 \pm 0.11$) by $0.03$. Both are far from the chance target: the loop makes samples <em>more</em> detectable, not less, but the GAN-style adversaries soften the trend.</figcaption>
 </figure>
 
 <p>
-  The per-iteration vs cumulative inversion is worth noting. At iteration 2 alone (the final iteration), <code>full_attrforge</code> has the highest mean per-iteration F1; the cumulative classifier (trained on all 48 samples pooled across iterations 0, 1, 2) reverses this. The mechanism is straightforward: the prompt-updater's instruction set accumulates across iterations, so iteration 0 of <code>full_attrforge</code> uses the same starter prompt as everyone else, while iteration 2 carries 11.7 banned-phrasing constraints plus pack-pattern instructions. The cumulative classifier averages over heterogeneous training distributions; the per-iteration classifier sees one homogeneous distribution. Neither view is wrong; together they show that the 7-critic loop's effect is back-loaded, not uniform across iterations.
-</p>
-
-<h3><span class="subsection-num">7.5</span>Per-class F1</h3>
-
-<figure>
-  <img src="figures/main_run_002_per_class_f1.png" alt="Per-class F1 per condition" />
-  <figcaption>Figure 5: Per-class F1 on the held-out real test set, mean &plusmn; std across 3 seeds (TF-IDF features). All conditions achieve relatively high F1 on classes with strong keyword signatures; <code>general_question</code> is the hardest class universally.</figcaption>
-</figure>
+  At the per-iteration view (the classifier trained on a single iteration's 16-sample batch rather than the 48-sample pool), the seven-critic loop's effect is back-loaded. Across 5 seeds, <code>full_attrforge</code>'s per-iteration F1 rises from iter-0 ($0.25 \pm 0.09$) through iter-1 ($0.37 \pm 0.16$) to iter-2 ($0.49 \pm 0.19$), the highest mean of any iterated condition; <code>full_classic</code> stays approximately flat across iterations ($0.31 \to 0.34 \to 0.34$). The cumulative ranking reverses because the seven-critic loop's instruction set accumulates over iterations, so its early iterations resemble the baseline while later ones diverge.
 
 <!-- ============================================================ -->
 <h2 id="sec-audit"><span class="section-num">8</span>Post-hoc adversary audit</h2>
@@ -476,7 +494,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/audit_protocol.png" alt="Schematic of the post-hoc adversary audit protocol. Top: the tautological-ablation failure mode of naive ablation tables, where critic metrics are 'n/a' for conditions that did not enable the critic. Bottom: the post-hoc audit, which runs every adversary on every condition's final batch with re-seeded RNG and a real-vs-real null reference." />
-  <figcaption>Figure 6: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
+  <figcaption>Figure 4: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
 </figure>
 
 <p>
@@ -484,53 +502,38 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/main_run_002_audit_differential.png" alt="Post-hoc adversary audit" />
-  <figcaption>Figure 7: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with re-seeded RNG per condition. Mean &plusmn; std over 3 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.54$ in this domain). Chance is $0.50$.</figcaption>
+  <figcaption>Figure 5: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with re-seeded RNG per condition. Mean &plusmn; std over 5 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain). Chance is $0.50$.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 5: Post-hoc adversary audit (mean &plusmn; std across 3 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.54$ in this domain. Pack accuracy below null indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates collapse. The loop disc. acc. column reproduces the loop-internal realism discriminator score from Table 3 for context; it is not part of the post-hoc audit.</caption>
+<caption>Table 6: Post-hoc adversary audit (mean &plusmn; std across 5 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain. Pack accuracy below the null reference indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates pack-level homogeneity. We omit Coverage AUROC (saturates at $1.00$ for every condition) and the Mode-Seeking ratio (approximately constant at $0.23 \pm 0.01$ for every condition); both are reported in the released artifacts but do not differentiate conditions on this task.</caption>
 <thead>
 <tr>
   <th>Condition</th>
   <th class="num">Pack acc. (audit)</th>
   <th class="num">Pack &minus; null</th>
-  <th class="num">MS ratio / real-MS</th>
-  <th class="num">Coverage AUROC</th>
   <th class="num">Hunter tics found</th>
-  <th class="num">Loop disc. acc.</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.46 &plusmn; 0.20</td><td class="num">&minus;0.08</td><td class="num">0.24 &plusmn; 0.01</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">3.67 &plusmn; 0.58</td><td class="num">n/a</td></tr>
-<tr><td><code>few_shot</code></td><td class="num"><strong>0.31 &plusmn; 0.06</strong></td><td class="num"><strong>&minus;0.23</strong></td><td class="num">0.24 &plusmn; 0.01</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">4.00 &plusmn; 0.00</td><td class="num">n/a</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.56 &plusmn; 0.11</td><td class="num">+0.02</td><td class="num">0.24 &plusmn; 0.00</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">3.67 &plusmn; 0.58</td><td class="num">n/a</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.54 &plusmn; 0.04</td><td class="num">+0.00</td><td class="num">0.24 &plusmn; 0.00</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">2.67 &plusmn; 1.53</td><td class="num">0.75 &plusmn; 0.43</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.58 &plusmn; 0.16</td><td class="num">+0.04</td><td class="num">0.24 &plusmn; 0.00</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">4.00 &plusmn; 0.00</td><td class="num">n/a</td></tr>
-<tr class="highlight"><td><code>full_classic</code></td><td class="num">0.58 &plusmn; 0.13</td><td class="num">+0.04</td><td class="num">0.24 &plusmn; 0.00</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">3.67 &plusmn; 0.58</td><td class="num">0.92 &plusmn; 0.14</td></tr>
-<tr><td><code>full_attrforge</code></td><td class="num">0.54 &plusmn; 0.10</td><td class="num">+0.00</td><td class="num">0.24 &plusmn; 0.00</td><td class="num">1.00 &plusmn; 0.00</td><td class="num">3.67 &plusmn; 0.58</td><td class="num">0.83 &plusmn; 0.17</td></tr>
+<tr><td><code>naive</code></td><td class="num">0.47 &plusmn; 0.17</td><td class="num">&minus;0.08</td><td class="num">3.75 &plusmn; 0.50</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">0.34 &plusmn; 0.08</td><td class="num">&minus;0.21</td><td class="num">4.00 &plusmn; 0.00</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">0.58 &plusmn; 0.09</td><td class="num">+0.03</td><td class="num">3.75 &plusmn; 0.50</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">0.55 &plusmn; 0.03</td><td class="num">+0.00</td><td class="num">2.75 &plusmn; 1.26</td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">0.58 &plusmn; 0.13</td><td class="num">+0.03</td><td class="num">4.00 &plusmn; 0.00</td></tr>
+<tr><td><code>full_classic</code></td><td class="num">0.56 &plusmn; 0.11</td><td class="num">+0.01</td><td class="num">3.75 &plusmn; 0.50</td></tr>
+<tr class="highlight"><td><code>full_attrforge</code></td><td class="num">0.52 &plusmn; 0.09</td><td class="num">&minus;0.03</td><td class="num">3.75 &plusmn; 0.50</td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  Three observations from the audit (mean &plusmn; std over 3 seeds):
+  The audit produces two pieces of differentiating signal. First, the <strong>Pack Discriminator</strong>: <code>few_shot</code> achieves the lowest pack accuracy ($0.34 \pm 0.08$, well below the $0.55$ null reference) because its 16-sample batch inherits diversity from an 8-exemplar real-pool that the iterated conditions narrow through repeated prompting. Among iterated conditions, <code>self_critique</code> and <code>diversity_only</code> sit at the high (more collapsed) end ($0.58$) and <code>full_attrforge</code> at the low (more diverse) end ($0.52$, below null), matching the distinct-$n$ and self-BLEU ordering from Table 5. Second, the <strong>Mode Hunter</strong>: an average of about 3.75 LLM-tic phrasings remain detectable in the final pooled batch of each condition. The two adversary metrics that did not differentiate conditions on this task (Coverage AUROC at $1.00$ throughout; Mode-Seeking ratio at $0.23 \pm 0.01$ throughout) are omitted from the table and discussed in Section 9.
 </p>
 
-<ol>
-  <li>
-    <strong>Pack accuracy differentiates conditions that downstream macro F1 does not partition the same way.</strong> <code>few_shot</code> achieves the lowest pack accuracy ($0.31 \pm 0.06$, well below the $0.54$ null reference) by a wide margin, indicating its 16-sample one-shot batch is the most "real-looking" at the pack level. The iterated conditions cluster between $0.54$ and $0.58$, at or slightly above null. <code>full_attrforge</code> sits exactly at null ($0.54$); <code>full_classic</code> is at $0.58$. The single-critic iterated conditions (<code>realism_only</code>, <code>diversity_only</code>) and <code>self_critique</code> are similar. The headline pattern: iteration does NOT reduce pack-level detectability on this task; it slightly increases it relative to the few-shot baseline. The GAN-style adversaries in <code>full_attrforge</code> recover the small gap that <code>full_classic</code> introduced, but they do not drop pack accuracy below the few-shot baseline.
-  </li>
-  <li>
-    <strong>Mode-Seeking ratio is approximately constant across all conditions at $\sim 0.24 \times$ the real-set value.</strong> On this task, the prompt-update loop leaves the attribute-responsiveness of the generator's surface text unchanged. The Mode-Seeking critic computes the ratio reliably across conditions; the loop's effect on it is below the seed-noise threshold.
-  </li>
-  <li>
-    <strong>Coverage classifier AUROC is $1.00$ on every condition.</strong> The TF-IDF density-ratio classifier separates real from synthetic for every batch produced by every condition. Whether this reflects fundamental separability of <code>gpt-4o-mini</code> output from human customer-support text, or saturation of a small-$N$ logistic regression with fully-flexible vocabulary, is an open question for follow-up work with larger held-out sets and stronger density-ratio estimators.
-  </li>
-</ol>
-
 <p>
-  A fourth observation worth flagging: <code>full_classic</code> achieves the best downstream F1 ($0.58$) but the worst per-sample realism discriminator accuracy ($0.92$, meaning the discriminator is most confident the samples are synthetic). <code>full_attrforge</code> trades $0.18$ downstream F1 for a $0.09$ improvement on the discriminator metric. The tradeoff is concrete and quantifiable; it is also small relative to the cross-seed standard deviation.
+  The audit also provides the cross-tab needed to interpret Table 3. <code>full_classic</code> achieves the best downstream F1 under TF-IDF features ($0.61$) but the highest per-sample realism discriminator accuracy ($0.93$, meaning the discriminator is most confident the samples are synthetic). <code>full_attrforge</code> reduces this discriminator accuracy by $0.03$ at a cost of $0.14$ downstream F1 under TF-IDF, and the cost vanishes under sentence-transformer features (Section 7.2).
 </p>
 
 <!-- ============================================================ -->
@@ -539,13 +542,13 @@ python scripts/aggregate_multiseed.py</code></pre>
 <h3><span class="subsection-num">9.1</span>What the live-LLM evaluation shows</h3>
 
 <p>
-  The evaluation establishes three substantive claims. First, under TF-IDF features the seven-critic loop scores macro F1 $0.18$ below the three-critic baseline, directionally consistent across all 3 seeds; the 95% bootstrap CI excludes zero (paired-t $p=0.09$ at $N=3$). Second, the same gap is statistically indistinguishable from zero under sentence-transformer features, so the cost of the GAN adversaries to downstream utility depends on the downstream reader's representation capacity. Third, on the realism axis, the seven-critic loop sits $0.09$ closer to chance than the three-critic baseline ($0.83 \pm 0.17$ vs $0.92 \pm 0.14$); both are far from chance, and the GAN adversaries reduce that gap rather than eliminating it.
+  The evaluation establishes three substantive claims. First, under TF-IDF features the seven-critic loop scores macro F1 $0.14$ below the three-critic baseline (statistically significant: paired-t $p = 0.046$ at $N=5$; 95% bootstrap CI on the mean diff $[-0.231, -0.055]$). Second, the same gap is statistically indistinguishable from zero under sentence-transformer features ($p = 0.82$, CI $[-0.113, +0.093]$), so the cost of the GAN adversaries to downstream utility depends on the downstream reader's representation capacity. Third, on the realism axis, the seven-critic loop sits $0.03$ closer to chance than the three-critic baseline ($0.90 \pm 0.15$ vs $0.93 \pm 0.11$); both are far from chance, and the GAN adversaries reduce that gap rather than eliminating it.
 </p>
 
 <h3><span class="subsection-num">9.2</span>Scope of the evaluation</h3>
 
 <p>
-  Three boundaries delimit the claims above. <em>Statistical scope:</em> the TF-IDF gap is directional across 3 of 3 seeds with a 95% bootstrap CI that excludes zero, but the conventional paired-t and Wilcoxon p-values at $N=3$ are $0.09$ and $0.25$ respectively; the sentence-transformer gap has a CI that includes zero. <em>Task scope:</em> the experiment is one customer-support intent classification task with 5 classes and a 10-item held-out test; multi-task replication is the natural next step (Section 10). <em>Attribute scope:</em> the LLM verifier judges that fewer than 10% of generated samples satisfy their requested attribute vector, in both the three-critic and seven-critic loops; the attribute-fidelity axis is below saturation on this task and is a separate dimension from the diversity-utility tradeoff we report.
+  Three boundaries delimit the claims above. <em>Statistical scope:</em> the TF-IDF gap is in the same direction in 4 of 5 seeds with a paired-t $p = 0.046$ and a 95% bootstrap CI that excludes zero. Wilcoxon $p = 0.125$ at $N = 5$ remains above $0.05$, so the result is best read as a small significant effect with limited power. The sentence-transformer gap has a CI that includes zero ($p = 0.82$). <em>Task scope:</em> the experiment is one customer-support intent classification task with 5 classes and a 10-item held-out test; multi-task replication is the natural next step (Section 10). <em>Attribute scope:</em> the LLM verifier judges that fewer than 10% of generated samples satisfy their requested attribute vector, in both the three-critic and seven-critic loops; the attribute-fidelity axis is below saturation on this task and is a separate dimension from the diversity-utility tradeoff we report.
 </p>
 
 <h3><span class="subsection-num">9.3</span>Why named complaints beat scalar rewards</h3>
@@ -576,9 +579,9 @@ python scripts/aggregate_multiseed.py</code></pre>
 <h2 id="sec-limitations"><span class="section-num">10</span>Limitations</h2>
 
 <ul>
-  <li><strong>Small evaluation budget.</strong> The experiments use 3 random seeds, 7 conditions, 3 iterations of 16 samples each (21 condition-runs), and a 10-item held-out real test set. Cross-seed standard deviation is large for several conditions (e.g., $\pm 0.19$ macro F1 for <code>few_shot</code> under TF-IDF), the conventional paired-t and Wilcoxon tests are underpowered, and the bootstrap CIs are correspondingly wide. The directional findings (TF-IDF gap, realism discriminator drift) are consistent across seeds; the per-classifier ordering at $\alpha=0.05$ requires a larger sample. Multi-task replication with five or more seeds and a larger held-out test would tighten every interval.</li>
+  <li><strong>Small evaluation budget.</strong> The experiments use 5 random seeds, 7 conditions, 3 iterations of 16 samples each (35 condition-runs), and a 10-item held-out real test set. Cross-seed standard deviation is large for several conditions (e.g., $\pm 0.16$ macro F1 for <code>few_shot</code> under TF-IDF). The TF-IDF gap is significant under the paired-t test ($p = 0.046$) but not under the Wilcoxon ($p = 0.125$) at $N = 5$. Multi-task replication and a larger held-out test would tighten every interval.</li>
   <li><strong>Single domain, single test split.</strong> One task (customer-support intent), 40 real examples, 10 held-out test. Multi-domain replication is needed to test whether the classifier-dependent tradeoff generalizes.</li>
-  <li><strong>10-item test set saturates the downstream metric.</strong> Differences below $0.1$ F1 are below the noise floor. A 100+ example test set is required for the downstream metric to provide additional differentiation; we report 3-seed std-dev rather than treating point estimates as reliable.</li>
+<li><strong>10-item test set.</strong> Per-condition F1 estimates are noisy at this sample size. A 100+ example test set would let the downstream metric resolve smaller differences; we report 5-seed std-dev rather than treating point estimates as reliable.</li>
   <li><strong>Pack discriminator with $n_{\text{comparisons}} = 16$ in the audit (vs $4$ in the loop) quantizes pack accuracy to $17$ values.</strong> Larger $n_{\text{comparisons}}$ would tighten error bars on the audit at proportional API cost.</li>
   <li><strong>Symmetry asymmetry.</strong> Pack Discriminator and Mode Hunter emit "named complaints" (pack patterns, banned substrings) that the updater consumes natively. Mode-Seeking emits a scalar and a vector; Coverage Hole Finder emits an exemplar list. Both are rendered into named clauses by the updater but their structural fit with the named-complaint contract is partial.</li>
   <li><strong>LLM judge bias.</strong> Realism discriminator, Mode Hunter, and verifier are all LLM judges and inherit their model's biases. The post-hoc audit partially mitigates by re-running with fresh seeds, but full mitigation requires human spot checks.</li>
@@ -590,7 +593,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 <h2 id="sec-conclusion"><span class="section-num">11</span>Conclusion</h2>
 
 <p>
-  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). Across 3 random seeds on a customer-support intent task with live <code>gpt-4o-mini</code>, the seven-critic loop scores 0.18 macro F1 below the three-critic baseline under a TF-IDF $+$ logistic-regression downstream classifier (directional across 3/3 seeds, 95% bootstrap CI $[-0.27, -0.07]$ excludes zero, paired-t $p=0.09$ at $N=3$); the same comparison under sentence-transformer features is statistically indistinguishable from zero (CI $[-0.07, +0.18]$, $p=0.66$). The diversity-utility tradeoff is mediated by the downstream classifier's representation capacity. We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference, and two scope-bounding measurements (the loop-internal realism discriminator drifts away from chance through iteration; the Coverage Hole AUROC remains at $1.00$ throughout). Code and artifacts are open source.
+  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). Across 5 random seeds on a customer-support intent task with live <code>gpt-4o-mini</code>, the seven-critic loop scores 0.14 macro F1 below the three-critic baseline under a TF-IDF $+$ logistic-regression downstream classifier (statistically significant at $N=5$: paired-t $p = 0.046$; 95% bootstrap CI $[-0.231, -0.055]$); the same comparison under sentence-transformer features is statistically indistinguishable from zero (CI $[-0.113, +0.093]$, $p = 0.82$). The diversity-utility tradeoff is mediated by the downstream classifier's representation capacity. We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference, and two scope-bounding measurements (the loop-internal realism discriminator drifts away from chance through iteration; the Coverage Hole AUROC remains at $1.00$ throughout). Code and artifacts are open source.
 </p>
 
 <p>
@@ -641,6 +644,7 @@ python scripts/aggregate_multiseed.py</code></pre>
   <li id="ref-mgtfilter">Drayson, G., Yilmaz, E., &amp; Lampos, V. <em>Machine-generated text detection prevents language model collapse.</em> arXiv:2502.15654, 2025. <a href="https://arxiv.org/abs/2502.15654">[arXiv]</a></li>
   <li id="ref-improveddre">Gruber, L., Holzleitner, M., Hochreiter, S., &amp; Zellinger, W. <em>Improved density ratio estimation for evaluating synthetic data quality.</em> ICLR 2025 Workshop SynthData. <a href="https://openreview.net/forum?id=IBnCO8gtLA">[OpenReview]</a></li>
   <li id="ref-scendi">Jandaghi, et al. <em>Scendi score: Prompt-aware diversity evaluation via Schur complement of CLIP embeddings.</em> arXiv:2412.18645, 2024. <a href="https://arxiv.org/abs/2412.18645">[arXiv]</a></li>
+  <li id="ref-li-distinct">Li, J., Galley, M., Brockett, C., Gao, J., &amp; Dolan, B. <em>A diversity-promoting objective function for neural conversation models.</em> NAACL, 2016. <a href="https://aclanthology.org/N16-1014/">[ACL Anthology]</a></li>
 </ol>
 
 <!-- ============================================================ -->
