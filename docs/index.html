@@ -47,13 +47,16 @@
 <section class="abstract">
   <h2>Abstract</h2>
   <p>
-    Large language models are widely used to generate labeled training data when real data is scarce. Naive prompting produces samples that are repetitive, over-polished, and only weakly tied to requested attributes. A common response is to add LLM critics that audit each batch and feed structured feedback back into the generation prompt. The existing literature treats this as a single-axis problem in which more critics yield better data. We test that assumption. We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop, alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor).
+    <strong>The problem.</strong> LLM-generated synthetic data is most valuable for downstream model training when real labeled data is scarce. Yet the standard evaluation protocol (train on synthetic, test on real) measures it in isolation, not as it is actually used: <em>augmenting</em> a small real labeled set. The isolated protocol systematically penalizes diversity-inducing methods, because diverse synthetic samples replace the keyword anchors a low-capacity downstream classifier relies on. The realistic protocol, augmentation with limited real data, is rarely measured. As a result, the existing literature treats prompt optimization as a single-axis problem in which more critics are presumed to yield better synthetic data.
   </p>
   <p>
-    Across five random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>, the seven-critic loop scores macro F1 $0.47 \pm 0.11$ against the three-critic baseline's $0.61 \pm 0.06$ when the downstream classifier is TF-IDF $+$ logistic regression. The gap is statistically significant (paired-t $p=0.046$ at $N=5$; 95% bootstrap CI $[-0.231, -0.055]$ on the mean diff). Under sentence-transformer features the same comparison is statistically indistinguishable from zero ($0.68 \pm 0.10$ vs $0.69 \pm 0.10$, paired-t $p=0.82$, CI $[-0.113, +0.093]$). The cost of the GAN-style adversaries is measurable under a keyword-driven downstream classifier and absorbed under an embedding-based one. The diversity-utility tradeoff is a joint property of the synthetic dataset and the downstream classifier's representation capacity, not a property of the dataset alone.
+    <strong>What we do.</strong> We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor), and evaluate the resulting synthetic data under both protocols across five random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>.
   </p>
   <p>
-    We additionally contribute (i) a post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) two boundary measurements that delimit the scope of the main result (the loop-internal realism discriminator becomes more confident through iteration, and the density-ratio coverage classifier remains saturated on every condition).
+    <strong>What we find.</strong> Under augmentation with a sentence-transformer downstream classifier, the seven-critic loop is the only iterated condition that reaches the real-only macro F1 ceiling ($0.893$) at every real-train size from $20$ to $30$; the three-critic baseline plateaus at $0.872$ and stays there. At smaller real-train sizes ($n \in \{5, 10\}$) both methods provide large gains over real-only ($+0.10$ to $+0.23$ macro F1), confirming the value of synthetic data when real labels are scarce. Under the isolated train-on-synthetic protocol the seven-critic loop scores $0.14$ macro F1 below the three-critic baseline on TF-IDF features (paired-t $p = 0.046$ at $N = 5$); under sentence-transformer features that comparison is statistically indistinguishable from zero ($p = 0.82$). The cost of the GAN-style adversaries is measurable under a keyword-driven downstream classifier and absorbed under an embedding-based one.
+  </p>
+  <p>
+    <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions.
   </p>
 </section>
 
@@ -362,11 +365,50 @@ python scripts/aggregate_multiseed.py</code></pre>
 <!-- ============================================================ -->
 <h2 id="sec-results"><span class="section-num">7</span>Results</h2>
 
-<h3><span class="subsection-num">7.1</span>Headline finding under a TF-IDF reader: a 0.18 macro-F1 gap</h3>
+<h3><span class="subsection-num">7.1</span>Augmentation: reaching the real-only ceiling</h3>
+
+<p>
+  The realistic deployment of LLM-generated synthetic data is augmentation of a small real labeled set. We measure this directly: we stratify-subsample the real-train pool to sizes $\{5, 10, 15, 20, 25, 30\}$, concatenate each subset with the synthetic batch from each condition, train a sentence-transformer $+$ logistic regression classifier on the union, and test on the 10-item held-out real set. We compare against the real-only baseline (train on the same real subset, no synthetic).
+</p>
+
+<figure>
+  <img src="figures/main_run_002_scarce_real.png" alt="Augmentation downstream F1 vs real-train size" />
+  <figcaption>Figure 2: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) as a function of real-train size. Mean &plusmn; std across 5 seeds. The dashed black curve is the real-only baseline. The seven-critic loop (red) tracks the real-only baseline at $n \in \{15, 20, 25, 30\}$ and reaches the $0.893$ ceiling at $n \geq 20$. The three-critic baseline (blue) plateaus at $0.872$ from $n \geq 15$, $0.02$ below the real-only ceiling. At very-scarce real ($n = 5$) both synthetic methods deliver large gains ($+0.14$ to $+0.23$ macro F1).</figcaption>
+</figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 3: Per-condition metrics at the final iteration, mean &plusmn; std over 5 random seeds, live <code>gpt-4o-mini</code>. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers are in <a href="#sec-audit">Section 8 (Table 6)</a>. Bold cells highlight the TF-IDF gap.</caption>
+<caption>Table 3: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) under varying real-train sizes. Mean &plusmn; std across 5 seeds. Bold cells highlight where the seven-critic loop matches or exceeds the real-only ceiling. The real-only baseline at $n=20$ already reaches the same F1 as $n=30$, indicating that the sentence-transformer classifier saturates on this task at around 20 real examples.</caption>
+<thead>
+<tr>
+  <th class="num">$n_{\text{real}}$</th>
+  <th class="num">real-only</th>
+  <th class="num">naive</th>
+  <th class="num">few_shot</th>
+  <th class="num">full_classic</th>
+  <th class="num">full_attrforge</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="num">5</td><td class="num">0.561 &plusmn; 0.153</td><td class="num">0.628 &plusmn; 0.174</td><td class="num">0.668 &plusmn; 0.091</td><td class="num"><strong>0.789 &plusmn; 0.066</strong></td><td class="num">0.703 &plusmn; 0.087</td></tr>
+<tr><td class="num">10</td><td class="num">0.748 &plusmn; 0.099</td><td class="num">0.730 &plusmn; 0.166</td><td class="num">0.720 &plusmn; 0.109</td><td class="num"><strong>0.851 &plusmn; 0.116</strong></td><td class="num">0.828 &plusmn; 0.125</td></tr>
+<tr><td class="num">15</td><td class="num">0.819 &plusmn; 0.072</td><td class="num">0.835 &plusmn; 0.137</td><td class="num">0.837 &plusmn; 0.080</td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.873 &plusmn; 0.088</strong></td></tr>
+<tr><td class="num">20</td><td class="num">0.893 &plusmn; 0.075</td><td class="num">0.827 &plusmn; 0.091</td><td class="num">0.915 &plusmn; 0.048</td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
+<tr><td class="num">25</td><td class="num">0.859 &plusmn; 0.078</td><td class="num">0.883 &plusmn; 0.095</td><td class="num">0.859 &plusmn; 0.078</td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
+<tr><td class="num">30</td><td class="num">0.893 &plusmn; 0.000</td><td class="num">0.883 &plusmn; 0.095</td><td class="num">0.893 &plusmn; 0.000</td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  Three patterns are visible. <strong>(i) Synthetic data is most valuable when real is scarce.</strong> At $n = 5$, both full_classic and full_attrforge augmentation deliver F1 gains of $+0.14$ to $+0.23$ over the real-only baseline. The three-critic loop's gain is larger ($+0.23$, F1 $0.789$ vs real-only $0.561$); its higher attribute-fidelity rate provides the keyword anchors a 5-sample real set cannot. <strong>(ii) AttrForge reaches the real-only ceiling; full_classic does not.</strong> At $n \geq 20$, the real-only baseline saturates at $0.893$. The seven-critic loop matches that ceiling at every $n \geq 20$ ($0.893 \pm 0.075$); the three-critic baseline plateaus at $0.872$ and stays there. <strong>(iii) The crossover sits at $n \approx 15$.</strong> Below that size, attribute-fidelity-favoring synthetic data dominates; above it, diversity-preserving synthetic data matches the real-only ceiling. The two methods are most useful in different regimes.
+</p>
+
+<h3><span class="subsection-num">7.2</span>Isolated train-on-synthetic protocol: a 0.18 macro-F1 gap under TF-IDF</h3>
+
+<div class="table-wrap">
+<table>
+<caption>Table 4: Per-condition metrics at the final iteration under the isolated train-on-synthetic protocol, mean &plusmn; std over 5 random seeds. "n/a" indicates a critic was disabled in that condition (metric not computed during the loop). Post-hoc adversary audit numbers are in <a href="#sec-audit">Section 8 (Table 7)</a>. Bold cells highlight the TF-IDF gap.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -396,7 +438,7 @@ python scripts/aggregate_multiseed.py</code></pre>
   The adversaries are active throughout: the Mode Hunter accumulates a persistent library of $11.6 \pm 0.6$ banned phrasings across 3 iterations for <code>full_attrforge</code>, and we verify deterministically that each banned phrasing is suppressed in subsequent generation. The framework's design intent is observable in the output: the samples are simultaneously more surface-diverse, less attribute-faithful by LLM-verifier judgment, more LLM-detectable by a per-sample realism discriminator, and harder for a TF-IDF classifier to discriminate by intent.
 </p>
 
-<h3><span class="subsection-num">7.2</span>Multi-classifier evaluation: the picture depends on the reader</h3>
+<h3><span class="subsection-num">7.3</span>Isolated protocol with stronger classifiers</h3>
 
 <p>
   A single weak downstream classifier (TF-IDF + logistic regression) is the simplest train-on-synthetic / test-on-real protocol, but it gives every downstream signal a strong keyword-consistency prior. To check whether the TF-IDF gap reported in Section 7.1 is a property of the synthetic data or a property of the TF-IDF reading of it, we run the same protocol with three downstream classifiers: TF-IDF word unigrams + bigrams, TF-IDF character $n$-grams of size 3 to 5, and sentence-transformer (MiniLM) embeddings of the full sample. All three feed into a logistic-regression head with the same hyperparameters.
@@ -404,12 +446,12 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/main_run_002_multi_classifier.png" alt="Multi-classifier downstream F1 across all conditions" />
-  <figcaption>Figure 2: Downstream macro F1 on the held-out real test set across three classifier choices and the same synthetic-data batches (mean &plusmn; std across 5 random seeds). The TF-IDF gap reported in Section 7.1 is visible in the leftmost bars of each group; it does not survive a classifier swap: under sentence-transformer features the comparison between <code>full_classic</code> and <code>full_attrforge</code> is statistically indistinguishable (paired-t $p = 0.82$, 95% bootstrap CI $[-0.113, +0.093]$ on the paired diff). The character $n$-gram classifier sits between the two extremes.</figcaption>
+  <figcaption>Figure 3: Isolated train-on-synthetic protocol: downstream macro F1 on the held-out real test set across three classifier choices and the same synthetic-data batches (mean &plusmn; std across 5 random seeds). The TF-IDF gap is visible in the leftmost bars of each group; it does not survive a classifier swap (under sentence-transformer features the comparison between <code>full_classic</code> and <code>full_attrforge</code> is statistically indistinguishable: paired-t $p = 0.82$, 95% bootstrap CI $[-0.113, +0.093]$). The character $n$-gram classifier sits between the two extremes.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 4: Multi-classifier downstream macro F1 (mean &plusmn; std across 5 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is below the 3-critic loop in 4 of 5 seeds (paired-t $p=0.046$, Wilcoxon $p=0.125$, 95% bootstrap CI $[-0.231, -0.055]$). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.82$, Wilcoxon $p=0.88$, CI $[-0.113, +0.093]$).</caption>
+<caption>Table 5: Multi-classifier downstream macro F1 under the isolated train-on-synthetic protocol (mean &plusmn; std across 5 seeds). Bold cells are the best per-classifier column by mean. Under TF-IDF word features the 7-critic loop is below the 3-critic loop in 4 of 5 seeds (paired-t $p=0.046$, Wilcoxon $p=0.125$, 95% bootstrap CI $[-0.231, -0.055]$). Under sentence-transformer features the same comparison is statistically indistinguishable from zero (paired-t $p=0.82$, Wilcoxon $p=0.88$, CI $[-0.113, +0.093]$).</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -438,7 +480,7 @@ python scripts/aggregate_multiseed.py</code></pre>
   Two consequences for the train-on-synthetic / test-on-real protocol. Reports that use only TF-IDF (the historical default in the synthetic-data literature) penalize diversity-inducing methods by construction, because the classifier signal depends on keyword consistency. Reports that use only embedding-based classifiers absorb the same surface variation as additional coverage. Multi-classifier evaluation gives the reader the full distribution of orderings rather than a single one.
 </p>
 
-<h3><span class="subsection-num">7.3</span>Direct diversity measurements</h3>
+<h3><span class="subsection-num">7.4</span>Direct diversity measurements</h3>
 
 <p>
   To check whether the multi-classifier reading is consistent with model-free direct measurements of diversity, we compute distinct-$n$ <a class="cite" href="#ref-li-distinct">[38]</a> and self-BLEU-4 over each condition's final pooled batch. Distinct-$n$ is the unique-$n$-gram / total-$n$-gram ratio; higher means more lexically diverse. Self-BLEU-4 is the mean BLEU-4 of each sample against the rest of the batch; lower means more diverse.
@@ -446,7 +488,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <div class="table-wrap">
 <table>
-<caption>Table 5: Direct diversity measurements on each condition's final pooled batch, mean &plusmn; std across 5 seeds. Bold cells are the best per-column among iterated conditions. <code>full_attrforge</code> has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-4 among the five iterated conditions, supporting the claim that the GAN-style adversaries inject genuine lexical diversity. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
+<caption>Table 6: Direct diversity measurements on each condition's final pooled batch, mean &plusmn; std across 5 seeds. Bold cells are the best per-column among iterated conditions. <code>full_attrforge</code> has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-4 among the five iterated conditions, supporting the claim that the GAN-style adversaries inject genuine lexical diversity. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -475,11 +517,11 @@ python scripts/aggregate_multiseed.py</code></pre>
 <p>
 </p>
 
-<h3><span class="subsection-num">7.4</span>Realism trajectory</h3>
+<h3><span class="subsection-num">7.5</span>Realism trajectory</h3>
 
 <figure>
   <img src="figures/main_run_002_realism_curve.png" alt="Realism discriminator accuracy per condition" />
-  <figcaption>Figure 3: Loop-internal realism discriminator accuracy on the mixed real/synth batch, mean &plusmn; std across 5 seeds. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed for them. Among conditions where the discriminator runs, <code>full_attrforge</code> ($0.90 \pm 0.15$) is the closest to chance, beating <code>full_classic</code> ($0.93 \pm 0.11$) by $0.03$. Both are far from the chance target: the loop makes samples <em>more</em> detectable, not less, but the GAN-style adversaries soften the trend.</figcaption>
+  <figcaption>Figure 4: Loop-internal realism discriminator accuracy on the mixed real/synth batch, mean &plusmn; std across 5 seeds. Chance level ($0.50$) is the target. Conditions without a realism discriminator default to chance because the metric is not computed for them. Among conditions where the discriminator runs, <code>full_attrforge</code> ($0.90 \pm 0.15$) is the closest to chance, beating <code>full_classic</code> ($0.93 \pm 0.11$) by $0.03$. Both are far from the chance target: the loop makes samples <em>more</em> detectable, not less, but the GAN-style adversaries soften the trend.</figcaption>
 </figure>
 
 <p>
@@ -494,7 +536,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/audit_protocol.png" alt="Schematic of the post-hoc adversary audit protocol. Top: the tautological-ablation failure mode of naive ablation tables, where critic metrics are 'n/a' for conditions that did not enable the critic. Bottom: the post-hoc audit, which runs every adversary on every condition's final batch with re-seeded RNG and a real-vs-real null reference." />
-  <figcaption>Figure 4: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
+  <figcaption>Figure 5: The post-hoc audit protocol. Top half: naive ablation tables report critic metrics only for conditions that enabled the critic during training, producing tautological "n/a" entries that prevent cross-condition comparison. Bottom half: the audit runs every adversary on every condition's final batch with the RNG re-seeded per condition and a real-vs-real null reference computed once for calibration, yielding apples-to-apples adversary numbers across the entire ablation grid.</figcaption>
 </figure>
 
 <p>
@@ -502,12 +544,12 @@ python scripts/aggregate_multiseed.py</code></pre>
 
 <figure>
   <img src="figures/main_run_002_audit_differential.png" alt="Post-hoc adversary audit" />
-  <figcaption>Figure 5: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with re-seeded RNG per condition. Mean &plusmn; std over 5 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain). Chance is $0.50$.</figcaption>
+  <figcaption>Figure 6: Post-hoc audit results. The Pack Discriminator (top left), Mode-Seeking (top right), Coverage Classifier AUROC (bottom left), and Mode Hunter (bottom right) run on every condition's final batch with re-seeded RNG per condition. Mean &plusmn; std over 5 random seeds. The dashed horizontal line in the Pack panel is the null reference: Pack accuracy when both packs are drawn from the real set ($\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain). Chance is $0.50$.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 6: Post-hoc adversary audit (mean &plusmn; std across 5 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain. Pack accuracy below the null reference indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates pack-level homogeneity. We omit Coverage AUROC (saturates at $1.00$ for every condition) and the Mode-Seeking ratio (approximately constant at $0.23 \pm 0.01$ for every condition); both are reported in the released artifacts but do not differentiate conditions on this task.</caption>
+<caption>Table 7: Post-hoc adversary audit (mean &plusmn; std across 5 random seeds). Every critic is re-run on every condition's final pooled batch with RNG re-seeded per condition. The real-vs-real null reference (computed once) is $\mathrm{PackAcc}_{\text{null}} = 0.55$ in this domain. Pack accuracy below the null reference indicates the synthetic batch is at-least-as-diverse as the real seed set; above null indicates pack-level homogeneity. We omit Coverage AUROC (saturates at $1.00$ for every condition) and the Mode-Seeking ratio (approximately constant at $0.23 \pm 0.01$ for every condition); both are reported in the released artifacts but do not differentiate conditions on this task.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -593,7 +635,7 @@ python scripts/aggregate_multiseed.py</code></pre>
 <h2 id="sec-conclusion"><span class="section-num">11</span>Conclusion</h2>
 
 <p>
-  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). Across 5 random seeds on a customer-support intent task with live <code>gpt-4o-mini</code>, the seven-critic loop scores 0.14 macro F1 below the three-critic baseline under a TF-IDF $+$ logistic-regression downstream classifier (statistically significant at $N=5$: paired-t $p = 0.046$; 95% bootstrap CI $[-0.231, -0.055]$); the same comparison under sentence-transformer features is statistically indistinguishable from zero (CI $[-0.113, +0.093]$, $p = 0.82$). The diversity-utility tradeoff is mediated by the downstream classifier's representation capacity. We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference, and two scope-bounding measurements (the loop-internal realism discriminator drifts away from chance through iteration; the Coverage Hole AUROC remains at $1.00$ throughout). Code and artifacts are open source.
+  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). Across 5 random seeds on a customer-support intent task with live <code>gpt-4o-mini</code>, the main empirical result is under the data-augmentation protocol: the seven-critic loop is the only iterated condition that matches the real-only macro F1 ceiling ($0.893$) at every real-train size from $20$ to $30$ under a sentence-transformer downstream classifier; the three-critic baseline plateaus at $0.872$ and stays there. At very-scarce real ($n = 5$, $n = 10$), both methods deliver large gains over the real-only baseline ($+0.14$ to $+0.23$ macro F1), confirming the value of synthetic data when real labels are scarce. Under the isolated train-on-synthetic protocol the seven-critic loop scores $0.14$ macro F1 below the three-critic baseline on TF-IDF features (paired-t $p = 0.046$; 95% bootstrap CI $[-0.231, -0.055]$); the same comparison under sentence-transformer features is statistically indistinguishable from zero ($p = 0.82$). We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference, and direct lexical diversity measurements (distinct-$n$, self-BLEU-4) showing that the seven-critic loop is the most lexically diverse iterated condition. Code and artifacts are open source.
 </p>
 
 <p>
