@@ -3,15 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>It Depends on the Classifier: GAN-Style Adversaries in LLM Prompt Debugging Are Penalised by a TF-IDF Reader and Tolerated by a Sentence-Transformer Reader</title>
-<meta name="description" content="We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop and document a representation-dependent reading of the diversity-utility tradeoff: the 7-critic loop scores 0.18 below the 3-critic baseline on a TF-IDF classifier (directional 3/3 seeds, CI excludes zero, paired-t p=0.09) but is statistically indistinguishable on a sentence-transformer classifier." />
+<title>Adversarial Prompt Debugging for LLM Synthetic Data Generation</title>
 <meta name="author" content="Alexander Apartsin, Yehudit Aperstein" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="It Depends on the Classifier" />
-<meta property="og:description" content="GAN-style adversaries in LLM prompt debugging are penalised by a TF-IDF reader and tolerated by a sentence-transformer reader." />
+<meta property="og:title" content="Adversarial Prompt Debugging for LLM Synthetic Data Generation" />
 <meta property="og:image" content="figures/main_run_002_multi_classifier.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="It Depends on the Classifier" />
+<meta name="twitter:title" content="Adversarial Prompt Debugging for LLM Synthetic Data Generation" />
 <meta name="twitter:image" content="figures/main_run_002_multi_classifier.png" />
 
 <link rel="stylesheet" href="style.css" />
@@ -31,10 +29,9 @@
 <main>
 
 <header class="paper-title">
-  <a class="download-badge" href="attrforge.docx" title="Download a Microsoft Word version of this paper with native editable equations">.docx</a>
+  <a class="download-badge" href="attrforge.docx" title="Download a Microsoft Word version of this paper with native editable equations">Download .docx</a>
 
-  <h1>It Depends on the Classifier: GAN-Style Adversaries in LLM Prompt Debugging Are Penalised by a TF-IDF Reader and Tolerated by a Sentence-Transformer Reader</h1>
-  <p class="subtitle">We adapt four GAN mode-collapse defenses (PacGAN, MSGAN, ban-list, density-ratio coverage) into a multi-critic LLM prompt-debugging loop. The seven-critic loop scores 0.18 macro F1 below a three-critic baseline when the downstream classifier is TF-IDF word features (directional 3/3 seeds; 95% bootstrap CI excludes zero; underpowered paired t p=0.09 at N=3). The gap disappears when the downstream classifier is a sentence-transformer (mean diff +0.04; CI [-0.07, 0.18] includes zero; not significant). We document this representation-dependent reading of the diversity-utility tradeoff and the post-hoc adversary audit protocol that makes it measurable.</p>
+  <h1>Adversarial Prompt Debugging for LLM Synthetic Data Generation</h1>
   <div class="authors">
     <strong>Alexander Apartsin</strong><sup>1</sup> &emsp;
     <strong>Yehudit Aperstein</strong><sup>2</sup>
@@ -43,19 +40,13 @@
     <sup>1</sup>Holon Institute of Technology, Israel &emsp;
     <sup>2</sup>Afeka College of Engineering, Israel
   </div>
-  <div class="meta">v0.6 &middot; 2026</div>
+  <div class="meta">v0.7 &middot; 2026</div>
 </header>
 
 <section class="abstract">
   <h2>Abstract</h2>
   <p>
-    The diversity vs utility tradeoff in LLM-generated synthetic data is widely understood as a single-axis question: more variety, harder to classify. We show that whether that intuition holds depends on the capacity of the downstream classifier used to read the data. We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a multi-critic prompt-debugging loop combining them with three baseline LLM critics (attribute verifier, per-sample realism discriminator, diversity auditor), giving us a 3-critic baseline and a 7-critic loop that share the same harness and the same generator (<code>gpt-4o-mini</code>).
-  </p>
-  <p>
-    Across 3 random seeds on a customer-support intent classification task, the gap between the 3-critic and 7-critic loops is mediated by the downstream classifier (Section 7). With TF-IDF word features and logistic regression, the 3-critic loop achieves macro F1 <strong>0.58 &plusmn; 0.05</strong> on the held-out real test set; adding the 4 GAN-style adversaries drops F1 to <strong>0.40 &plusmn; 0.06</strong> (mean paired diff $-0.187$, 95% bootstrap CI $[-0.267, -0.067]$, conventional paired-t $p=0.09$ and Wilcoxon $p=0.25$ at $N=3$). All three seeds show the gap in the same direction. With sentence-transformer embeddings as features, the 3-critic loop scores <strong>0.67 &plusmn; 0.13</strong> and the 7-critic loop scores <strong>0.71 &plusmn; 0.08</strong>; the paired difference (mean $+0.038$, CI $[-0.073, +0.180]$, paired-t $p=0.66$, Wilcoxon $p=0.75$) is statistically indistinguishable from zero. The honest reading is that the 7-critic loop carries a measurable cost under a keyword-driven downstream reader and a cost that disappears under an embedding-based reader: <em>the disadvantage flips into a tie, not a reversal</em>.
-  </p>
-  <p>
-    Beyond this main result we release: (i) an open-source seven-critic harness with a single-flag-per-critic ablation contract; (ii) a <em>post-hoc adversary audit</em> that re-runs every critic against every condition's final batch with re-seeded RNG and a real-vs-real null reference, breaking the tautological-firing failure mode of naive ablation tables; (iii) a complaint-grammar contract that lets future work add new critics without breaking the protocol; (iv) two honest negative findings (loop-internal realism discriminator drifts <em>away</em> from chance under iteration; the Coverage Hole Finder's density-ratio classifier remains at AUROC $1.00$ across all conditions); and (v) per-iteration on-disk manifests sufficient for byte-for-byte reproduction.
+    We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a multi-critic LLM prompt-debugging loop and combine them with three baseline LLM critics (attribute verifier, realism discriminator, diversity auditor) in a single open-source harness. On a customer-support intent classification task with <code>gpt-4o-mini</code> across three random seeds, the seven-critic loop scores macro F1 $0.40 \pm 0.06$ against the three-critic baseline's $0.58 \pm 0.05$ when the downstream classifier is TF-IDF $+$ logistic regression (paired diff $-0.187$, 95% bootstrap CI $[-0.267, -0.067]$, directional 3/3 seeds, paired-t $p=0.09$ at $N=3$); the gap is statistically indistinguishable from zero ($+0.038$, CI $[-0.073, +0.180]$, $p=0.66$) when the same batches are read by sentence-transformer embeddings. We argue the cost of the GAN-style adversaries is real under a keyword-driven downstream classifier and not detectable under an embedding-based one, and we report this as the central diversity-utility finding rather than the more dramatic but unsupported "reversal" we initially expected. We also contribute a post-hoc adversary audit protocol that re-runs every critic against every condition's final batch with re-seeded RNG and a real-vs-real null reference (defusing the tautological-firing failure mode of naive ablation tables), a complaint-grammar contract that lets future work add new critics without breaking the protocol, and two honest negative findings (loop-internal realism discriminator drifts away from chance through iteration; Coverage Hole AUROC remains at $1.00$ on every condition).
   </p>
 </section>
 

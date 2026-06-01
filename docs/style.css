@@ -116,19 +116,24 @@ header.paper-title .meta {
   position: absolute;
   top: 0;
   right: 0;
-  font-family: var(--font-mono);
-  font-size: 9pt;
-  padding: 0.25rem 0.55rem;
+  font-family: var(--font-body);
+  font-size: 10pt;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
   border: 1px solid var(--accent);
   color: var(--accent) !important;
   background: var(--bg);
   text-decoration: none !important;
-  border-radius: 2px;
+  border-radius: 3px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .download-badge:hover {
   background: var(--accent);
   color: var(--bg) !important;
+  text-decoration: none !important;
 }
 
 @media (max-width: 640px) {
