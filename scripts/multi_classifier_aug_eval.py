@@ -219,10 +219,10 @@ def main():
         rm = [statistics.mean(real_only[cls][n]) for n in sizes_arr]
         rs = [statistics.stdev(real_only[cls][n]) if len(real_only[cls][n]) > 1 else 0 for n in sizes_arr]
         ax.errorbar(sizes_arr, rm, yerr=rs, marker="s", linewidth=2, capsize=4, color="#444444", linestyle="--", label="real-only")
-        for c, col in [("full_classic", "#3a6ea5"), ("full_attrforge", "#c0392b")]:
+        for c, col, label in [("full_classic", "#3a6ea5", "3-critic loop"), ("full_attrforge", "#c0392b", "7-critic loop (AttrForge)")]:
             m = [statistics.mean(bag[cls][c][n]) if bag[cls][c][n] else 0 for n in sizes_arr]
             s = [statistics.stdev(bag[cls][c][n]) if bag[cls][c][n] and len(bag[cls][c][n]) > 1 else 0 for n in sizes_arr]
-            ax.errorbar(sizes_arr, m, yerr=s, marker="o", linewidth=2, capsize=4, color=col, label=c)
+            ax.errorbar(sizes_arr, m, yerr=s, marker="o", linewidth=2, capsize=4, color=col, label=label)
         ax.set_title(cls_names[cls])
         ax.set_xlabel("number of real training examples")
         ax.set_xticks(sizes_arr)
