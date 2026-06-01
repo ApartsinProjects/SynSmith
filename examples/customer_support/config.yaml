@@ -69,3 +69,19 @@ discriminator:
 auditor:
   near_duplicate_threshold: 0.92
   use_embeddings: false
+
+# GAN-style adversary configs. min_repeats=1 makes Mode Hunter sensitive at
+# batch_size=16; lower batch sizes would need higher min_repeats.
+pack_discriminator:
+  pack_size: 4
+  n_comparisons: 8
+
+mode_hunter:
+  max_findings_per_iter: 4
+  min_repeats: 1
+
+mode_seeking:
+  use_embeddings: false
+
+coverage_hole:
+  top_k: 4

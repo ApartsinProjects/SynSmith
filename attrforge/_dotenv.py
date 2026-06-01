@@ -15,8 +15,22 @@ import os
 from pathlib import Path
 
 
-def load_dotenv(path: str | Path | None = None) -> int:
-    """Populate ``os.environ`` from a ``.env`` file. Returns count loaded."""
+def load_dotenv(path: str | Path | None = None, override: bool | None = None) -> int:
+    """Populate ``os.environ`` from a ``.env`` file. Returns count loaded.
+
+    ``override`` controls precedence:
+      * ``None`` (default): if the env var ``ATTRFORGE_DOTENV_OVERRIDE`` is set
+        to a truthy value (``1``, ``true``, ``yes``), .env values override the
+        existing environment; otherwise existing env values win.
+      * ``True``: .env values always override.
+      * ``False``: existing env values always win.
+
+    The override path exists because shell-exported stale keys often shadow the
+    intended-to-be-used .env key, and that failure mode is silent.
+    """
+    if override is None:
+        flag = os.environ.get("ATTRFORGE_DOTENV_OVERRIDE", "").lower()
+        override = flag in ("1", "true", "yes", "on")
     if path is None:
         # Search the repo root, which is two levels up from this file.
         here = Path(__file__).resolve().parent.parent
@@ -41,7 +55,7 @@ def load_dotenv(path: str | Path | None = None) -> int:
                 value.startswith("'") and value.endswith("'")
             ):
                 value = value[1:-1]
-            if key and key not in os.environ:
+            if key and (override or key not in os.environ):
                 os.environ[key] = value
                 loaded += 1
         break

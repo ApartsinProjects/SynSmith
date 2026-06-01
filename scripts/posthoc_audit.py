@@ -98,19 +98,20 @@ def run_audit(
     real_for_audit = real_train + real_test
 
     # Build auditors. Use the same backend for the LLM-needing ones.
-    pack = PackDiscriminator(
-        build_client(LLMConfig(backend=backend, model=f"{backend}-audit")),
-        PackDiscriminatorConfig(pack_size=4, n_comparisons=16, seed=99),
-    )
+    # IMPORTANT: do NOT instantiate the pack discriminator once and reuse it
+    # across conditions, because its RNG state would evolve with each call,
+    # making pack accuracies for later conditions a function of processing
+    # order rather than data. We re-instantiate per condition below.
+    pack_cfg = PackDiscriminatorConfig(pack_size=4, n_comparisons=16, seed=99)
+    pack_client = build_client(LLMConfig(backend=backend, model=f"{backend}-audit"))
+
     mode_seeking = ModeSeeking(ModeSeekingConfig(use_embeddings=False))
-    mode_hunter = ModeHunter(
-        build_client(LLMConfig(backend=backend, model=f"{backend}-audit")),
-        ModeHunterConfig(max_findings_per_iter=4, min_repeats=2),
-    )
+    hunter_client = build_client(LLMConfig(backend=backend, model=f"{backend}-audit"))
     coverage_hole = CoverageHoleFinder(CoverageHoleConfig(top_k=5))
 
     # Compute the null reference once. real-vs-real-split pack accuracy.
-    null_pack_acc = pack_null_real_vs_real(real_for_audit, pack)
+    null_pack = PackDiscriminator(pack_client, pack_cfg)
+    null_pack_acc = pack_null_real_vs_real(real_for_audit, null_pack)
 
     # Also compute mode-seeking on the real set, for the M2 review point.
     real_as_synth = [
@@ -137,8 +138,13 @@ def run_audit(
             print(f"[skip] {cond}: no samples found", flush=True)
             continue
 
-        # Reset Mode Hunter library across conditions (each gets its own audit).
-        mode_hunter._library = []  # noqa: SLF001
+        # Fresh pack discriminator and mode hunter per condition: identical
+        # RNG state, identical inputs, identical output for identical data.
+        pack = PackDiscriminator(pack_client, pack_cfg)
+        mode_hunter = ModeHunter(
+            hunter_client,
+            ModeHunterConfig(max_findings_per_iter=4, min_repeats=1),
+        )
         pack_res = pack.attack(real_for_audit, samples)
         ms_res = mode_seeking.score(samples)
         hunt_res = mode_hunter.hunt(real_for_audit, samples, iteration=999)

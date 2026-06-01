@@ -57,6 +57,45 @@ header.paper-title {
   margin-bottom: 2.4rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+/* Floating download badge in the upper-right of the header. */
+.download-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--accent);
+  color: white !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.download-badge:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.download-badge::before {
+  content: "↓";
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .download-badge {
+    position: static;
+    margin: 0 auto 1rem;
+  }
 }
 
 header.paper-title h1 {
@@ -176,6 +215,18 @@ h4 {
 
 p {
   margin: 0.8rem 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Lists and tables keep left-aligned text inside cells. */
+li, td, th {
+  text-align: left;
+}
+
+td.num, th.num {
+  text-align: right;
 }
 
 /* --- Abstract --- */
