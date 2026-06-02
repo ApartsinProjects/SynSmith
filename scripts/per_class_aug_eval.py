@@ -79,8 +79,10 @@ def main():
     ap.add_argument("--sizes", nargs="+", type=int, default=[5, 10, 20, 30])
     args = ap.parse_args()
 
-    real_all = [RealExample.model_validate(r) for r in load_jsonl(REPO / "experiments/_splits/real_train.jsonl")]
-    real_test = [RealExample.model_validate(r) for r in load_jsonl(REPO / "experiments/_splits/real_test.jsonl")]
+    from scripts._splits_resolver import resolve_splits
+    _real_train_path, _real_test_path = resolve_splits(args.base)
+    real_all = [RealExample.model_validate(r) for r in load_jsonl(_real_train_path)]
+    real_test = [RealExample.model_validate(r) for r in load_jsonl(_real_test_path)]
     y_test = np.array([r.label for r in real_test])
     labels = sorted(set(y_test.tolist()))
     test_texts = [r.text for r in real_test]

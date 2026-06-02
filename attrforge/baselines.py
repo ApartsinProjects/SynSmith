@@ -170,6 +170,21 @@ def no_coverage_hole(cfg: AttrForgeConfig) -> AttrForgeConfig:
     return out
 
 
+def full_attrforge_vs(cfg: AttrForgeConfig) -> AttrForgeConfig:
+    """full_attrforge + Verbalized Sampling generator (scout D1.1).
+
+    Asks the generator to verbalize 5 candidates with self-reported
+    probabilities per call, then samples one. Single-prompt fix demonstrated
+    to yield 1.6-2.1x diversity gain on creative-writing in arXiv:2510.01171.
+    """
+    out = full_attrforge(cfg)
+    out.label = "full_attrforge_vs"
+    out.generator.verbalized_sampling = True
+    out.generator.vs_n_candidates = 5
+    out.generator.vs_sample_strategy = "weighted"
+    return out
+
+
 BASELINES = {
     "naive": naive,
     "few_shot": few_shot,
@@ -184,6 +199,8 @@ BASELINES = {
     "no_mode_seeking": no_mode_seeking,
     "no_mode_hunter": no_mode_hunter,
     "no_coverage_hole": no_coverage_hole,
+    # Verbalized-Sampling variant (scout D1.1).
+    "full_attrforge_vs": full_attrforge_vs,
 }
 
 

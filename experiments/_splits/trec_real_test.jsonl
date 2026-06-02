@@ -1,0 +1,89 @@
+{"text": "What does the acronym NASA stand for ?", "label": "abbreviation"}
+{"text": "What is TMJ ?", "label": "abbreviation"}
+{"text": "What does the abbreviation SOS mean ?", "label": "abbreviation"}
+{"text": "What does I.V. stand for ?", "label": "abbreviation"}
+{"text": "What does USPS stand for ?", "label": "abbreviation"}
+{"text": "What does CPR stand for ?", "label": "abbreviation"}
+{"text": "What does NASA stand for ?", "label": "abbreviation"}
+{"text": "What does the technical term ISDN mean ?", "label": "abbreviation"}
+{"text": "What is the abbreviation for Texas ?", "label": "abbreviation"}
+{"text": "What is sonar ?", "label": "description_and_abstract_concepts"}
+{"text": "What is a biosphere ?", "label": "description_and_abstract_concepts"}
+{"text": "What is cholesterol ?", "label": "description_and_abstract_concepts"}
+{"text": "What is semolina ?", "label": "description_and_abstract_concepts"}
+{"text": "What is osteoporosis ?", "label": "description_and_abstract_concepts"}
+{"text": "What is metabolism ?", "label": "description_and_abstract_concepts"}
+{"text": "What is mad cow disease ?", "label": "description_and_abstract_concepts"}
+{"text": "What is fungus ?", "label": "description_and_abstract_concepts"}
+{"text": "What is acid rain ?", "label": "description_and_abstract_concepts"}
+{"text": "What is the esophagus used for ?", "label": "description_and_abstract_concepts"}
+{"text": "What are spider veins ?", "label": "description_and_abstract_concepts"}
+{"text": "What is the chunnel ?", "label": "description_and_abstract_concepts"}
+{"text": "What is vertigo ?", "label": "description_and_abstract_concepts"}
+{"text": "What is the Moulin Rouge ?", "label": "description_and_abstract_concepts"}
+{"text": "What is schizophrenia ?", "label": "description_and_abstract_concepts"}
+{"text": "What is bipolar disorder ?", "label": "description_and_abstract_concepts"}
+{"text": "What is the birthstone for June ?", "label": "entities"}
+{"text": "What metal has the highest melting point ?", "label": "entities"}
+{"text": "What is a baby lion called ?", "label": "entities"}
+{"text": "What color is a giraffe 's tongue ?", "label": "entities"}
+{"text": "What breed of hunting dog did the Beverly Hillbillies own ?", "label": "entities"}
+{"text": "Material called linen is made from what plant ?", "label": "entities"}
+{"text": "What do you call a word that is spelled the same backwards and forwards ?", "label": "entities"}
+{"text": "What is New York 's state bird ?", "label": "entities"}
+{"text": "What is a group of turkeys called ?", "label": "entities"}
+{"text": "What is the active ingredient in baking soda ?", "label": "entities"}
+{"text": "What is the proper name for a female walrus ?", "label": "entities"}
+{"text": "What is the money they use in Zambia ?", "label": "entities"}
+{"text": "What was FDR 's dog 's name ?", "label": "entities"}
+{"text": "What are the spots on dominoes called ?", "label": "entities"}
+{"text": "What currency do they use in Brazil ?", "label": "entities"}
+{"text": "What is foot and mouth disease ?", "label": "entities"}
+{"text": "Who invented the calculator ?", "label": "human_beings"}
+{"text": "Who was Galileo ?", "label": "human_beings"}
+{"text": "What person 's head is on a dime ?", "label": "human_beings"}
+{"text": "Who is the governor of Alaska ?", "label": "human_beings"}
+{"text": "Who founded American Red Cross ?", "label": "human_beings"}
+{"text": "What baseball team was the first to make numbers part of their uniform ?", "label": "human_beings"}
+{"text": "Who invented the hula hoop ?", "label": "human_beings"}
+{"text": "Who was the first U.S. president to appear on TV ?", "label": "human_beings"}
+{"text": "Who was the first American to walk in space ?", "label": "human_beings"}
+{"text": "What was W.C. Fields ' real name ?", "label": "human_beings"}
+{"text": "Who is the congressman from state of Texas on the armed forces committee ?", "label": "human_beings"}
+{"text": "Who was the first Prime Minister of Canada ?", "label": "human_beings"}
+{"text": "Who invented the instant Polaroid camera ?", "label": "human_beings"}
+{"text": "Who discovered radium ?", "label": "human_beings"}
+{"text": "What is the name of the chocolate company in San Francisco ?", "label": "human_beings"}
+{"text": "Who developed the Macintosh computer ?", "label": "human_beings"}
+{"text": "What is the deepest lake in the US ?", "label": "locations"}
+{"text": "In which state would you find the Catskill Mountains ?", "label": "locations"}
+{"text": "What is the largest city in the world ?", "label": "locations"}
+{"text": "What is the location of the Sea of Tranquility ?", "label": "locations"}
+{"text": "Where did Howard Hughes die ?", "label": "locations"}
+{"text": "What is the largest city in the U.S. ?", "label": "locations"}
+{"text": "What continent is Egypt on ?", "label": "locations"}
+{"text": "What is the longest suspension bridge in the U.S. ?", "label": "locations"}
+{"text": "Where are the British crown jewels kept ?", "label": "locations"}
+{"text": "What planet is known as the `` red '' planet ?", "label": "locations"}
+{"text": "In the late 1700 's British convicts were used to populate which colony ?", "label": "locations"}
+{"text": "What city 's newspaper is called `` The Enquirer '' ?", "label": "locations"}
+{"text": "Where are the Rocky Mountains ?", "label": "locations"}
+{"text": "What soviet seaport is on the Black Sea ?", "label": "locations"}
+{"text": "What are the twin cities ?", "label": "locations"}
+{"text": "What city had a world fair in 1900 ?", "label": "locations"}
+{"text": "When was Rosa Parks born ?", "label": "numeric_values"}
+{"text": "How many Great Lakes are there ?", "label": "numeric_values"}
+{"text": "How much does the human adult female brain weigh ?", "label": "numeric_values"}
+{"text": "What year did Oklahoma become a state ?", "label": "numeric_values"}
+{"text": "What is the conversion rate between dollars and pounds ?", "label": "numeric_values"}
+{"text": "How wide is the Milky Way galaxy ?", "label": "numeric_values"}
+{"text": "How long is the Columbia River in miles ?", "label": "numeric_values"}
+{"text": "What is the population of Seattle ?", "label": "numeric_values"}
+{"text": "When was the telephone invented ?", "label": "numeric_values"}
+{"text": "When was the first stamp issued ?", "label": "numeric_values"}
+{"text": "What year did the Titanic sink ?", "label": "numeric_values"}
+{"text": "What is Susan B. Anthony 's birthday ?", "label": "numeric_values"}
+{"text": "How cold should a refrigerator be ?", "label": "numeric_values"}
+{"text": "How much fiber should you have per day ?", "label": "numeric_values"}
+{"text": "When did North Carolina enter the union ?", "label": "numeric_values"}
+{"text": "What was the last year that the Chicago Cubs won the World Series ?", "label": "numeric_values"}

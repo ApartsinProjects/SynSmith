@@ -1,0 +1,70 @@
+# AttrForge run configuration: TREC question-type classification
+schema_path: examples/trec/schema.yaml
+real_examples_path: experiments/_splits/trec_real_train.jsonl
+
+domain: trec_question_type
+task_description: |
+  Classify an English open-domain question into one of six coarse-grained
+  TREC question-type categories. The classes are distinguished by the
+  expected answer type, not the topic.
+
+iterations: 3
+samples_per_iteration: 16
+seed: 17
+run_dir: runs
+
+initial_prompt: |
+  Generate realistic open-domain English questions that match the requested
+  TREC question-type category. The example should be a single complete question
+  that ends with a question mark and reads as something a user might ask in
+  an open-domain QA system. Match the requested style and noise level. Output
+  a JSON object with the sample id, the text, and the attribute values.
+
+generator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.9
+  max_tokens: 600
+
+verifier_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400
+
+discriminator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400
+
+auditor_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 500
+
+updater_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 800
+
+pack_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 300
+
+hunter_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400

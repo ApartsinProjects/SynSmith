@@ -85,8 +85,8 @@ def main() -> None:
     ap.add_argument("--base", required=True)
     args = ap.parse_args()
 
-    real_train_path = REPO / "experiments" / "_splits" / "real_train.jsonl"
-    real_test_path = REPO / "experiments" / "_splits" / "real_test.jsonl"
+    from scripts._splits_resolver import resolve_splits
+    real_train_path, real_test_path = resolve_splits(args.base)
     real_train = [RealExample.model_validate(r) for r in load_jsonl(real_train_path)]
     real_test = [RealExample.model_validate(r) for r in load_jsonl(real_test_path)]
 

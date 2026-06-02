@@ -141,7 +141,9 @@ def main():
     ap.add_argument("--base", required=True)
     args = ap.parse_args()
 
-    real_train = [RealExample.model_validate(r) for r in load_jsonl(REPO / "experiments/_splits/real_train.jsonl")]
+    from scripts._splits_resolver import resolve_splits
+    _real_train_path, _ = resolve_splits(args.base)
+    real_train = [RealExample.model_validate(r) for r in load_jsonl(_real_train_path)]
     real_texts = [r.text for r in real_train]
 
     from sentence_transformers import SentenceTransformer
