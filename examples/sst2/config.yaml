@@ -1,0 +1,71 @@
+# AttrForge run configuration: SST-2 binary sentiment classification
+schema_path: examples/sst2/schema.yaml
+real_examples_path: experiments/_splits/sst2_real_train.jsonl
+
+domain: sst2_movie_review_sentiment
+task_description: |
+  Classify a short movie review sentence as positive or negative sentiment.
+  Reviews are colloquial and may use sarcasm, hedged praise/criticism, or
+  explicit polarity words.
+
+iterations: 3
+samples_per_iteration: 16
+seed: 17
+run_dir: runs
+
+initial_prompt: |
+  Generate realistic short movie review sentences that match the requested
+  sentiment polarity (positive or negative). Reviews should sound like
+  natural film criticism: short, opinionated, using a mix of explicit
+  sentiment words and comparative judgments. Match the requested style,
+  intensity, and scenario type. Output a JSON object with the sample id,
+  the text, and the attribute values.
+
+generator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.9
+  max_tokens: 400
+
+verifier_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400
+
+discriminator_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400
+
+auditor_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 500
+
+updater_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 800
+
+pack_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 300
+
+hunter_llm:
+  backend: openai
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 400

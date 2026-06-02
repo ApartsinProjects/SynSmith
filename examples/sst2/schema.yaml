@@ -1,0 +1,48 @@
+domain: sst2_movie_review_sentiment
+task_description: |
+  Classify a movie review sentence into one of two sentiment polarities
+  (negative, positive). The reviews are drawn from the Stanford Sentiment
+  Treebank's binary subset (Socher et al. 2013), HuggingFace `glue/sst2`,
+  validation split used as test (the test labels are hidden).
+  Reviews are short (often one sentence), colloquial, and use a mix of
+  film-critic jargon and informal opinion. The model must distinguish
+  polarity expressed via explicit sentiment words, sarcasm, comparative
+  judgments, and hedged criticism / praise.
+
+label_attribute: intent
+
+attributes:
+  intent:
+    - negative
+    - positive
+
+  difficulty:
+    - easy
+    - medium
+    - hard
+
+  polarity_intensity:
+    - mild
+    - moderate
+    - strong
+
+  style:
+    - formal
+    - informal
+    - sarcastic
+    - poetic
+    - concise
+
+  noise:
+    - clean
+    - typos
+    - missing_punctuation
+    - irrelevant_aside
+
+  scenario_type:
+    - acting_quality
+    - story_plot
+    - pacing
+    - visuals
+    - emotion
+    - overall_verdict

@@ -15,6 +15,7 @@ from pathlib import Path
 DATASET_STEMS = {
     "banking77": ("banking77_real_train.jsonl", "banking77_real_test.jsonl"),
     "trec": ("trec_real_train.jsonl", "trec_real_test.jsonl"),
+    "sst2": ("sst2_real_train.jsonl", "sst2_real_test.jsonl"),
 }
 
 
