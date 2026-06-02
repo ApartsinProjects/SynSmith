@@ -211,12 +211,12 @@ $$
 
 <h3><span class="subsection-num">4.3</span>Three baseline critics</h3>
 <p>
-  <strong>Verifier</strong>: judges per-sample whether the text actually reflects the requested attribute vector. Returns <code>attribute_match</code>, <code>failed_attributes</code>, and a one-sentence reason. <strong>Realism discriminator</strong>: receives a shuffled batch of real and synthetic samples (without labels) and classifies each as <code>real</code> or <code>synthetic</code> with confidence and a named-cue reason. Its accuracy on the mixed batch is the realism scalar; chance accuracy is the target. <strong>Diversity auditor</strong>: a deterministic layer (per-attribute coverage, Shannon entropy, near-duplicate rate at cosine threshold $\theta = 0.92$, computed over TF-IDF features in our default configuration; sentence-transformer embeddings are an opt-in) plus an optional LLM judgment layer returning missing modes, overrepresented modes, and recommendations.
+  <strong>Verifier</strong>: judges per-sample whether the text reflects the requested attribute vector. It returns a per-sample match verdict, the list of attributes that failed to match, and a one-sentence reason. <strong>Realism discriminator</strong>: receives a shuffled batch of real and synthetic samples (without labels) and classifies each as real or synthetic with a confidence and a named-cue reason. Its accuracy on the mixed batch is the realism scalar; chance accuracy is the target. <strong>Diversity auditor</strong>: a deterministic layer (per-attribute coverage, Shannon entropy, near-duplicate rate at cosine threshold $\theta = 0.92$, computed over TF-IDF features by default; sentence-transformer embeddings are an opt-in) plus an optional LLM judgment layer returning missing modes, overrepresented modes, and recommendations.
 </p>
 
 <h3><span class="subsection-num">4.4</span>Prompt updater</h3>
 <p>
-  The updater is the optimization step. It receives <em>verbatim critic transcripts</em> in named sections of a single template (one section per critic), and rewrites the prompt. The rewrite is constrained by a length budget (280 words for the user instruction). The output is appended to a versioned <code>PromptHistory</code> with the feedback bundle that motivated it.
+  The updater is the optimization step. It receives <em>verbatim critic transcripts</em> in named sections of a single template (one section per critic), and rewrites the prompt. The rewrite is constrained by a length budget (280 words for the user instruction). Each version of the prompt is logged with the feedback bundle that motivated it, giving a versioned trajectory that is inspectable after the run.
 </p>
 
 <p>
@@ -314,11 +314,7 @@ $$
 
 <h3><span class="subsection-num">6.2</span>Backends</h3>
 <p>
-  Four backends are implemented (<code>openai</code>, <code>anthropic</code>, <code>echo</code> for unit tests, and a deterministic prompt-sensitive <code>sim</code>). All seven critics, the generator, and the updater are backend-agnostic. The headline results in this paper use the <code>sim</code> backend, which implements rule-based generation that <em>responds to specific prompt content</em> (forbidden-phrasing lists, opener-variation directives, scenario-rarity instructions, typo-injection requests). Every condition shares an identical simulator and an identical seed, so any measured difference attributes to the loop's prompt evolution.
-</p>
-
-<p>
-  Section 7 reports results with <code>gpt-4o-mini</code> as both generator and every critic, across 5 random seeds, 7 conditions, and 3 iterations of 16 samples each (35 condition-runs in total). A deterministic offline simulator is available in the repository for unit-test and CI use but is not used for the reported numbers.
+  The critics, generator, and updater are backend-agnostic. The headline results in Section 7 use <code>gpt-4o-mini</code> as both generator and every critic, across 5 random seeds, 7 conditions, and 3 iterations of 16 samples each (35 condition-runs in total). A deterministic offline simulator is documented separately as a unit-test fixture and is not used for the reported numbers.
 </p>
 
 <h3><span class="subsection-num">6.3</span>Conditions</h3>
@@ -342,22 +338,8 @@ $$
 </div>
 
 <p>
-  Each condition produces $|S| = 16$ synthetic samples per iteration; iterated conditions therefore produce $48$ total samples. Reproduce with:
+  Each condition produces $|S| = 16$ synthetic samples per iteration; iterated conditions therefore produce $48$ total samples. The post-hoc adversary audit of Section 8 is run once per seed on every condition's final pooled batch with the same five seeds; aggregation across seeds uses paired statistics (paired-t, Wilcoxon, $95\%$ bootstrap CI). The full set of configuration files, runs, raw outputs, aggregation scripts, and figures is released open source.
 </p>
-
-<pre><code># Section 7 numbers:
-python scripts/run_experiments.py \
-  --config examples/customer_support/config.yaml \
-  --backend openai --iterations 3 --samples-per-iteration 16 --n-test 10 \
-  --seeds 17 23 41 53 89 \
-  --conditions naive few_shot self_critique realism_only diversity_only full_classic full_attrforge
-
-# Section 8 (post-hoc adversary audit):
-for seed in 17 23 41 53 89; do
-  python scripts/posthoc_audit.py --seed ${seed} --backend openai
-done
-
-python scripts/aggregate_multiseed.py</code></pre>
 
 <h3><span class="subsection-num">6.4</span>Metrics</h3>
 <p>Per-iteration metrics include attribute match rate, realism discriminator accuracy, diversity (per-attribute Shannon entropy, combination coverage, and near-duplicate rate at $\theta = 0.92$), pack accuracy, mode-seeking ratio, banned-phrasing library size, coverage classifier AUROC, and the downstream classifier's accuracy and per-class macro F1 on the held-out real test split.</p>
