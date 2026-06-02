@@ -128,8 +128,10 @@ class DiversityAuditor:
     ) -> DiversityReport:
         schema_str = yaml.safe_dump(self.schema.attributes, sort_keys=False)
         sample = batch[: self.config.max_samples_in_prompt]
+        # Text first, requested attrs LAST: the user reads the text and
+        # judges nuance-level diversity before being primed by the labels.
         batch_block = "\n\n".join(
-            f"id: {s.sample_id}\nattrs: {s.requested_attributes}\ntext: {s.text[:300]}"
+            f"id: {s.sample_id}\ntext: {s.text[:300]}\nrequested_attrs: {s.requested_attributes}"
             for s in sample
         )
         coverage_block = "\n".join(

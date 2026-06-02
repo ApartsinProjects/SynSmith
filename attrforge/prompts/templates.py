@@ -44,11 +44,26 @@ Output a single JSON object with this shape:
 
 
 VERIFIER_SYSTEM = (
-    "You audit synthetic samples for attribute fidelity. "
-    "For each sample you receive, decide whether its text genuinely reflects every "
-    "requested attribute. Be strict: a label is wrong if the text does not support it, "
-    "and a difficulty of 'hard' is wrong if the answer is obvious from a single phrase. "
-    "Return JSON only."
+    "You audit synthetic samples for attribute fidelity by reading the "
+    "text FIRST, identifying what the text actually exhibits, and only THEN "
+    "comparing to the requested attributes.\n\n"
+    "CRITICAL: do NOT trust the requested attributes as a starting point. "
+    "Synthetic samples are routinely mislabeled by the generator: ironic "
+    "praise may be labeled 'positive', a contradiction may be labeled "
+    "'neutral', a card-arrival query may be labeled 'card_swallowed'. "
+    "Your job is to detect those mismatches, not to confirm them.\n\n"
+    "Procedure for each sample:\n"
+    "1. Read the text. State (silently, to yourself) what attributes a "
+    "blind human annotator would assign to this text. Focus on the "
+    "NUANCES: sentiment carried by surface words AND by structure/irony; "
+    "register and tone; what the text is actually about vs what it claims "
+    "to be about; whether the request's claimed attribute (e.g. 'hard') "
+    "is supportable from the text or whether the text trivially gives it "
+    "away.\n"
+    "2. Compare your reading to the requested attributes. For each "
+    "attribute, decide whether the text matches the request - or whether "
+    "the request is wrong.\n"
+    "3. Return a structured verdict. Return JSON only."
 )
 
 VERIFIER_USER_TEMPLATE = """Schema:
@@ -56,17 +71,22 @@ VERIFIER_USER_TEMPLATE = """Schema:
 
 Sample:
 sample_id: {sample_id}
-requested attributes: {requested_attributes}
 
 text:
 \"\"\"{text}\"\"\"
 
-For each attribute, decide if the text matches. Output JSON:
+Requested attributes (the generator's CLAIM about this sample; verify
+against the text, do not assume they are correct):
+{requested_attributes}
+
+Read the text first, identify what attributes a blind annotator would
+assign, THEN compare to the requested attributes. For each attribute,
+decide if the text matches. Output JSON:
 {{
   "sample_id": "{sample_id}",
   "attribute_match": <true|false overall>,
   "failed_attributes": [<list of attribute names that fail>],
-  "reason": "<one sentence>"
+  "reason": "<one sentence; cite a specific feature of the text>"
 }}
 """
 
@@ -111,22 +131,36 @@ Output a JSON array, one object per sample, in the same order:
 
 
 AUDITOR_SYSTEM = (
-    "You audit a batch of synthetic samples for diversity. "
+    "You audit a batch of synthetic samples for diversity, reading the "
+    "TEXTS first and judging diversity by what the texts actually say, "
+    "not by what the requested-attribute labels claim.\n\n"
+    "CRITICAL: a batch can be 'attribute-diverse' on paper (every label "
+    "value represented) while being SURFACE-diverse on paper but "
+    "NUANCE-redundant in practice (every 'positive' sample uses the same "
+    "construction; every 'hard' sample telegraphs the answer in a stock "
+    "phrase). The label-level coverage check is already computed "
+    "deterministically; YOUR job is to find the nuance-level redundancy "
+    "the deterministic check cannot see.\n\n"
     "Look for missing attribute values, missing attribute combinations, "
-    "overrepresented modes, near-duplicate phrasings, shallow paraphrases, and "
+    "overrepresented surface patterns, near-duplicate phrasings, shallow "
+    "paraphrases that reuse the same template with one word swapped, and "
     "absent rare or edge cases. Return JSON only."
 )
 
 AUDITOR_USER_TEMPLATE = """Attribute schema:
 {attribute_schema}
 
-Observed batch (id, requested attributes, text excerpt):
+Observed batch (id, text excerpt, requested attributes shown LAST so you
+read the text first):
 {batch_block}
 
-Coverage so far (fraction of allowed values that appeared per attribute):
+Coverage so far (deterministic; fraction of allowed values that appeared
+per attribute):
 {coverage_block}
 
-Output JSON:
+Read the texts first. Judge nuance-level diversity (surface patterns,
+phrasings, sentence structures, vocabulary plateaus) rather than just
+label-level coverage. Output JSON:
 {{
   "summary": "<one to two sentences>",
   "missing_modes": ["<plain English mode descriptions>"],
