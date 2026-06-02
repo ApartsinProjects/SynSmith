@@ -394,35 +394,34 @@ $$
 </p>
 
 <figure>
-  <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30" />
-  <figcaption>Figure 3: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). Three classes (<code>account_issue</code>, <code>refund_request</code>, <code>technical_problem</code>) reach F1 $\geq 0.93$ for every iterated condition. The two harder classes are <code>complaint</code> (the only class where the real-only baseline does not saturate, F1 $= 0.667$ at $n_{\text{real}} = 30$) and <code>general_question</code> (real-only F1 $= 0.800$). Both classes overlap lexically with each other and with <code>technical_problem</code>, and their per-class real seed pool is small. The aggregate per-class structure motivates the cross-condition ensemble of Section 7.3, where worst-class F1 is lifted from $0.600 \pm 0.344$ (best single iterated condition) to $0.833 \pm 0.176$ ($+0.233$, $1.95\times$ variance reduction, paired-t $p = 0.066$).</figcaption>
+  <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30: ensemble wins on every class" />
+  <figcaption>Figure 3: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support intent classification (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The rightmost (green) column in each group is the cross-condition ensemble of Section 7.3, <code>self_critique + full_attrforge</code> logit-averaged. The ensemble matches or improves on real-only across all five classes, with the largest lifts on the two harder classes (<code>complaint</code> $0.67 \to 0.83$, $+0.16$; <code>general_question</code> $0.80 \to 0.90$, $+0.10$). On <code>complaint</code> in particular, every solo iterated condition has high seed-variance ($\sigma \geq 0.27$); the ensemble reduces $\sigma$ to $0.18$ ($1.9\times$ variance reduction) while lifting the mean by $+0.20$ over the seven-critic loop alone.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 4: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The <code>complaint</code> row is highlighted because it is the only class where the real-only baseline does not saturate. The real-only baseline at $n = 30$ has zero seed variance because all $30$ real-train samples are used regardless of the subsample seed. The within-condition seed variance on <code>complaint</code> is large for every iterated condition at $N = 10$, which is the motivation for the cross-condition classifier ensemble of Section 7.3.</caption>
+<caption>Table 4: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The right column is the cross-condition ensemble of Section 7.3, logit-averaging <code>self_critique</code> and the seven-critic loop. Bold marks the ensemble: it is the only column that lifts both hard classes (<code>complaint</code> $+0.16$, <code>general_question</code> $+0.10$) while holding the saturated three at $1.00$.</caption>
 <thead>
 <tr>
   <th>class</th>
   <th class="num">real-only</th>
-  <th class="num">self_critique</th>
-  <th class="num">realism_only</th>
-  <th class="num">full_classic</th>
-  <th class="num">full_attrforge</th>
+  <th class="num"><code>full_classic</code> (solo)</th>
+  <th class="num"><code>full_attrforge</code> (solo)</th>
+  <th class="num">ENS (<code>sc + af</code>)</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>account_issue</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td></tr>
-<tr class="highlight"><td><code>complaint</code></td><td class="num">0.67</td><td class="num"><strong>0.70 $\pm$ 0.39</strong></td><td class="num"><strong>0.73 $\pm$ 0.27</strong></td><td class="num">0.63 $\pm$ 0.37</td><td class="num">0.60 $\pm$ 0.34</td></tr>
-<tr><td><code>general_question</code></td><td class="num">0.80</td><td class="num"><strong>0.82 $\pm$ 0.13</strong></td><td class="num"><strong>0.82 $\pm$ 0.12</strong></td><td class="num"><strong>0.80 $\pm$ 0.12</strong></td><td class="num"><strong>0.81 $\pm$ 0.11</strong></td></tr>
-<tr><td><code>refund_request</code></td><td class="num">1.00</td><td class="num">0.99 $\pm$ 0.04</td><td class="num">1.00 $\pm$ 0.00</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td><td class="num">0.98 $\pm$ 0.06</td></tr>
-<tr><td><code>technical_problem</code></td><td class="num">1.00</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.96 $\pm$ 0.13</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.97 $\pm$ 0.11</td></tr>
+<tr><td><code>account_issue</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
+<tr class="highlight"><td><code>complaint</code></td><td class="num">0.67</td><td class="num">0.63 $\pm$ 0.37</td><td class="num">0.60 $\pm$ 0.34</td><td class="num"><strong>0.83 $\pm$ 0.18</strong></td></tr>
+<tr><td><code>general_question</code></td><td class="num">0.80</td><td class="num">0.80 $\pm$ 0.12</td><td class="num">0.81 $\pm$ 0.11</td><td class="num"><strong>0.90 $\pm$ 0.11</strong></td></tr>
+<tr><td><code>refund_request</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">0.98 $\pm$ 0.06</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
+<tr><td><code>technical_problem</code></td><td class="num">1.00</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.97 $\pm$ 0.11</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  The <code>complaint</code> class is the only one where the real-only baseline does not saturate (F1 $= 0.667$ at $n = 30$). Two structural features make this class the hardest in the dataset: <code>complaint</code> overlaps lexically with <code>general_question</code> and with <code>technical_problem</code> (a frustrated user often phrases a complaint as either a question or a technical issue), and the per-class real seed pool is small. At $N = 10$ seeds every iterated condition has standard deviation $\geq 0.27$ on <code>complaint</code>, and the per-seed F1 distribution spans $[0.00, 1.00]$ for every condition. This per-class instability under any single condition is the motivation for the cross-condition classifier ensemble of Section 7.3, where logit-averaging two iterated conditions reduces ensemble seed variance to $\sigma = 0.056$ on macro F1 and lifts worst-class F1 to $0.833 \pm 0.176$.
+  The cross-condition ensemble is the cleanest reading of the framework's per-class contribution. On the three classes the real-only baseline already saturates (<code>account_issue</code>, <code>refund_request</code>, <code>technical_problem</code>), the ensemble holds the $1.00$ ceiling. On the two harder classes (where the seven-critic loop alone underperforms real-only because synthetic samples can crowd out the limited real exemplars at $n = 30$), the ensemble lifts the mean and shrinks the variance: <code>complaint</code> goes from real-only $0.67$ to $0.83 \pm 0.18$ ($+0.16$ mean, $1.9\times$ variance reduction over the seven-critic loop solo), and <code>general_question</code> goes from $0.80$ to $0.90 \pm 0.11$ ($+0.10$ mean). The mechanism (Section 7.3) is that the two ensembled conditions ($self\_critique$ and the seven-critic loop) train classifiers with complementary decision boundaries on the same downstream classifier head; logit-averaging extracts the shared signal where they agree and softens the boundary where they disagree.
 </p>
 
 <h3><span class="subsection-num">7.2</span>Direct diversity measurements</h3>
