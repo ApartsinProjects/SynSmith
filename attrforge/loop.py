@@ -243,8 +243,14 @@ class AttrForge:
         self.generator = Generator(
             gen_client, self.schema, self.real_examples, config.generator
         )
+        from attrforge.critics.verifier import VerifierConfig
         self.verifier = (
-            AttributeVerifier(ver_client, self.schema)
+            AttributeVerifier(
+                ver_client,
+                self.schema,
+                real_examples=self.real_examples,
+                config=VerifierConfig(seed=config.seed),
+            )
             if config.enable_verifier else None
         )
         self.discriminator = (

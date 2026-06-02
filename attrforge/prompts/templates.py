@@ -69,6 +69,10 @@ VERIFIER_SYSTEM = (
 VERIFIER_USER_TEMPLATE = """Schema:
 {attribute_schema}
 
+Real-distribution empirical anchors (the attribute value labels MEAN what
+the real examples show; do NOT use a generic-English interpretation):
+{real_anchor_block}
+
 Sample:
 sample_id: {sample_id}
 
@@ -76,17 +80,20 @@ text:
 \"\"\"{text}\"\"\"
 
 Requested attributes (the generator's CLAIM about this sample; verify
-against the text, do not assume they are correct):
+against the text AND against the real-distribution anchors above; do
+not assume the request is correct):
 {requested_attributes}
 
-Read the text first, identify what attributes a blind annotator would
-assign, THEN compare to the requested attributes. For each attribute,
-decide if the text matches. Output JSON:
+Read the text first. Identify what attributes a blind annotator would
+assign by COMPARING the text to the real-distribution anchors for each
+attribute value. THEN compare to the requested attributes. For each
+attribute, decide if the text matches. Output JSON:
 {{
   "sample_id": "{sample_id}",
   "attribute_match": <true|false overall>,
   "failed_attributes": [<list of attribute names that fail>],
-  "reason": "<one sentence; cite a specific feature of the text>"
+  "reason": "<one sentence; cite a specific feature of the text OR a
+             specific contrast with the real-distribution anchors>"
 }}
 """
 
