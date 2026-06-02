@@ -811,6 +811,120 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </p>
 
 <!-- ============================================================ -->
+<h2 id="sec-appendix-b"><span class="section-num">B</span>Appendix: examples, prompt evolution, and critic-output samples</h2>
+
+<p>
+  This appendix grounds the empirical sections in concrete examples from the released artifacts: real vs synthetic samples from each domain, an example prompt-rewrite trajectory (iteration $0 \to 2$ for <code>full_attrforge</code>, seed $17$, customer-support), Mode Hunter library growth across three iterations, and Coverage Hole exemplars that the density-ratio classifier surfaces as uncovered. Every example below is verbatim from <code>experiments/main_run_002_seed17/full_attrforge/.../iter_*/</code> and the corresponding split files.
+</p>
+
+<h3><span class="subsection-num">B.1</span>Real vs synthetic samples per domain</h3>
+
+<div class="table-wrap">
+<table>
+<caption>Table 13: Real (top half) vs <code>full_attrforge</code> synthetic (bottom half) samples for two of the three example datasets shipped with the framework, conditioned on the same intent labels. Samples truncated to $140$ characters for display. The seven-critic loop's synthetic batch matches the real-seed register (informal, fragmented, with specific scenario detail) and reproduces the multi-issue, off-topic-mention pattern (the <code>complaint</code> sample mentions both a delivery problem and a tweet; the <code>general_question</code> sample mentions both an account charge and lunch) that the diversity auditor pushes the generator toward.</caption>
+<thead>
+<tr>
+  <th>Domain</th>
+  <th>Class</th>
+  <th>Source</th>
+  <th>Text</th>
+</tr>
+</thead>
+<tbody>
+<tr><td rowspan="6">customer-support</td><td><code>complaint</code></td><td>real</td><td>i paid for the upgrade but features are still locked</td></tr>
+<tr><td><code>refund_request</code></td><td>real</td><td>got the wrong size, want my money back not a store credit thanks</td></tr>
+<tr><td><code>general_question</code></td><td>real</td><td>Are there any planned outages this weekend? Asking for our release schedule.</td></tr>
+<tr><td><code>complaint</code></td><td>synth</td><td>I've been waiting for my package forever, and I just saw a tweet saying it was delivered, but I have no idea where! Plus, my neighbor's been...</td></tr>
+<tr><td><code>refund_request</code></td><td>synth</td><td>I ordered a jacket and it arrived with a huge stain on it. I'm really upset because it was supposed to be a gift. Can I get a refund or a replacement?</td></tr>
+<tr><td><code>general_question</code></td><td>synth</td><td>why is my account showing weird charges? also, had a sushi for lunch today.</td></tr>
+<tr><td rowspan="6">Banking77 (cards)</td><td><code>card_swallowed</code></td><td>real</td><td>An ATM swallowed my credit card!</td></tr>
+<tr><td><code>card_payment_not_recognised</code></td><td>real</td><td>I have a payment I didnt make on my account</td></tr>
+<tr><td><code>top_up_failed</code></td><td>real</td><td>I am having problems with a top-up.</td></tr>
+<tr><td><code>card_swallowed</code></td><td>synth</td><td>The ATM ate my card and won't return it. What do I do now?</td></tr>
+<tr><td><code>card_payment_not_recognised</code></td><td>synth</td><td>There's a $47 charge from a grocery store I've never been to. Need to dispute.</td></tr>
+<tr><td><code>top_up_failed</code></td><td>synth</td><td>Tried to add funds, but it didn't work. What happened?</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3><span class="subsection-num">B.2</span>Prompt evolution: iteration $0 \to 2$</h3>
+
+<p>
+  The generator prompt starts as a short ($288$-character) instruction and the updater rewrites it across iterations. The rewrite is grounded in the named complaints each critic emits the previous round; new clauses correspond to specific failure modes the critics flagged. Below are the verbatim iteration-$0$ and iteration-$2$ prompts for <code>full_attrforge</code>, seed $17$, customer-support.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 14: Prompt evolution from iteration $0$ ($288$ characters, the seed prompt) to iteration $2$ ($1\,477$ characters). Newly-added clauses are paraphrased in the right column; the verbatim iteration-$2$ prompt is in <code>experiments/main_run_002_seed17/full_attrforge/.../iter_002/prompt.txt</code>. Note the "Forbidden phrasings" block inserted by the Mode Hunter and the diversity / brevity / variation clauses added in response to the Pack Discriminator and Diversity Auditor complaints.</caption>
+<thead>
+<tr>
+  <th>Iter</th>
+  <th>What the prompt becomes (paraphrased)</th>
+  <th>Critic that drove the change</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>$0$</td><td>"Generate realistic customer support messages that match the requested intent and style. Output a JSON object with sample id, text, and attribute values." ($288$ chars, the seed prompt)</td><td>(seed)</td></tr>
+<tr><td>$1$</td><td>+ "Include a mix of difficulty, ambiguity, and noise levels; cover account, technical, refund, and inquiry scenarios; balance formal and informal styles; capture emotional states and urgency."</td><td>Diversity Auditor (missing-modes complaint)</td></tr>
+<tr><td>$1$</td><td>+ "Avoid overly polished language and repetitive structures."</td><td>Realism Discriminator (over-polished cue)</td></tr>
+<tr><td>$2$</td><td>+ "Forbidden phrasings: 'hey, i changed my emil and cant log in', 'I genuinely just want my money back', 'I hope you can help me', 'so, like, i was just wondering', 'could really use some clarity here'..."</td><td>Mode Hunter (banned-phrasings library; see B.3)</td></tr>
+<tr><td>$2$</td><td>+ "Encourage variety to minimize near-duplicates and enhance diversity; mix fragmented, concise, and verbose expressions."</td><td>Pack Discriminator + Diversity Auditor</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3><span class="subsection-num">B.3</span>Mode Hunter library growth across iterations</h3>
+
+<p>
+  The Mode Hunter accumulates verified banned phrasings across iterations. Verification is deterministic: a candidate is added only if it appears in $\geq 1$ synthetic sample and $0$ real samples. The library grew from $4$ entries at iteration $0$ to $12$ entries at iteration $2$ for <code>full_attrforge</code>, seed $17$.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 15: Mode Hunter library growth across the three iterations of one <code>full_attrforge</code> run (customer-support, seed $17$). Each iteration adds the four newest verified banned phrasings; older entries persist (immune-memory property, Appendix A.3). The "rationale" column is the Mode Hunter LLM's named-cue explanation, used by the updater to insert the forbidden-phrasings block of the next prompt (Table 14).</caption>
+<thead>
+<tr>
+  <th>Iter</th>
+  <th>Library</th>
+  <th>New finding (verbatim)</th>
+  <th>Hunter's rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr><td rowspan="2">$0$</td><td rowspan="2">$4$ entries</td><td>"hey, i changed my emil and cant log in. help!"</td><td>Informal language with misspelling of "email" not seen in real batch</td></tr>
+<tr><td>"I genuinely just want my money back"</td><td>Incomplete sentence structure + informal tone distinctive of synth</td></tr>
+<tr><td rowspan="2">$1$</td><td rowspan="2">$8$ entries</td><td>"so, like, i was just wondering"</td><td>Informal hedging phrase unique to synthetic batch</td></tr>
+<tr><td>"I feel completely ignored and it's unacceptable."</td><td>Expressed frustration not present in real batch</td></tr>
+<tr><td rowspan="2">$2$</td><td rowspan="2">$12$ entries</td><td>"I've been waiting for my package forever"</td><td>Specific phrasing about waiting for a package not in real batch</td></tr>
+<tr><td>"I was charged for my subscription but also received a refund"</td><td>Unique compound subscription-and-refund framing</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3><span class="subsection-num">B.4</span>Coverage Hole exemplars</h3>
+
+<p>
+  The Coverage Hole Finder fits a TF-IDF + logistic regression density-ratio classifier on the union of real and synthetic samples, then surfaces the top-$K$ real exemplars the classifier most confidently labels real (i.e., those the synthetic batch fails to cover). These exemplars are inserted into the next generator prompt as positive few-shot anchors. Below: the top-$3$ Coverage Hole exemplars at iteration $2$ for <code>full_attrforge</code>, seed $17$ (classifier AUROC $\approx 0.99$, $p_{\text{real}}$ rounded). All three are technical / API-oriented messages from the real customer-support seed set that the synthetic batch under-represented.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 16: Top-$3$ Coverage Hole exemplars at iteration $2$ (<code>full_attrforge</code>, seed $17$, customer-support). $p_{\text{real}}$ is the density-ratio classifier's predicted probability that the sample is real; values near $1$ mean the sample is in a region the synthetic batch has not covered.</caption>
+<thead>
+<tr>
+  <th class="num">$p_{\text{real}}$</th>
+  <th>Real sample (uncovered by synthetic batch)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="num">$0.65$</td><td>"Hi team, quick one, does the API have a rate limit on the search endpoint?"</td></tr>
+<tr><td class="num">$0.65$</td><td>"app keeps crashing on android 14 every time i open the camera tab. tried reinstalling"</td></tr>
+<tr><td class="num">$0.64$</td><td>"is the pro plan billed monthly or yearly?"</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ============================================================ -->
 <h2 id="sec-references"><span class="section-num">13</span>References</h2>
 
 <ol class="references">
