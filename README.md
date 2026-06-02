@@ -8,6 +8,8 @@
 
 **Multi-Objective Prompt Debugging for Realistic, Diverse, and Attribute-Controlled Synthetic Data Generation**
 
+[![Paper](https://img.shields.io/badge/paper-HTML-blue.svg)](https://apartsinprojects.github.io/PromptForge/)
+[![DOCX](https://img.shields.io/badge/paper-DOCX-blue.svg)](https://apartsinprojects.github.io/PromptForge/attrforge.docx)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: research preview](https://img.shields.io/badge/status-research%20preview-orange.svg)](#)
@@ -16,7 +18,9 @@
 *An open-source framework that reframes synthetic data generation as iterative,*
 *critic-guided prompt optimization.*
 
-[Overview](#overview) · [Method](#method) · [Quickstart](#quickstart) · [Architecture](#architecture) · [Research questions](#research-questions) · [Citation](#citation)
+**Paper:** [Adversarial Prompt Debugging for LLM Synthetic Data Generation](https://apartsinprojects.github.io/PromptForge/) (Apartsin & Aperstein) - HTML with KaTeX math, or [download .docx](https://apartsinprojects.github.io/PromptForge/attrforge.docx)
+
+[Paper](https://apartsinprojects.github.io/PromptForge/) · [Overview](#overview) · [Method](#method) · [Quickstart](#quickstart) · [Architecture](#architecture) · [Research questions](#research-questions) · [Citation](#citation)
 
 </div>
 
