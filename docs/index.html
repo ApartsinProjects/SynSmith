@@ -55,7 +55,7 @@
     <strong>What we find.</strong> Iteration injects a measurable $2\times$ semantic-diversity gain over non-iterated baselines, measured by the Vendi score <a class="cite" href="#ref-vendi">[40]</a> on the sentence-transformer Gram matrix ($19.3 \pm 1.8$ for the seven-critic loop versus $10.1 \pm 0.8$ for naive prompting; one-sample $t$ versus the non-iterated mean of $10.0$ gives $p < 0.001$ at $N = 10$ seeds). A Scendi <a class="cite" href="#ref-scendi">[37]</a> / conditional-Vendi <a class="cite" href="#ref-condvendi">[44]</a> Schur-complement decomposition attributes $\approx 102\%$ of the $9.16$-point gain to intrinsic-model diversity (the critic-iteration loop unlocks model capacity), with a $-2\%$ prompt-driven residual. The seven-critic loop wins on all four lexical-diversity metrics (distinct-$1$, $2$, $3$ and self-BLEU-$4$) among iterated conditions, and its synthetic batches are at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit (pack accuracy $0.53$ vs the real-vs-real null reference of $0.56$). The empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition ($\sigma = 0.056$ versus $\sigma = 0.092$) and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.95\times$ variance reduction). On a Banking77 cross-domain replication with a 10-class card-and-payment intent subset, augmentation with the seven-critic loop's batch lifts macro F1 at the scarce-real extreme ($n_{\text{real}} = 10$) from $0.726 \pm 0.052$ (real-only) to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). Augmentation on the customer-support task matches the real-only macro F1 ceiling ($0.893$) at $n_{\text{real}} \geq 20$ for every iterated condition.
   </p>
   <p>
-    <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions on the customer-support task.
+    <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions on the customer-support task; and (iv) <strong>a reusable open-source Python framework</strong> for synthetic text data generation and evaluation: pluggable critic protocol with $14$ shipped critic implementations across the seven roles, eight named baselines plus six leave-one-out ablations, three example datasets at different difficulty regimes (customer-support, Banking77, TREC), multi-backend LLM support (OpenAI / Anthropic / offline echo, plus multi-vendor via OpenRouter), an OpenAI Batch-API harness that halves the cost of full sweeps, a cross-condition ensemble public API, and a diversity-metric library (Vendi, Scendi, distinct-$n$, self-BLEU, MMD, manifold-entropy). The framework is the deliverable a practitioner takes home; the seven-critic loop above is the configuration that produced the empirical results, not the only configuration the framework supports (Section 11).
   </p>
 </section>
 
@@ -80,7 +80,7 @@
 </p>
 
 <p>
-  Our contributions are five. First, a multi-objective prompt-debugging framework with structured feedback, length-budgeted rewrites, and a per-critic ablation flag (Section 4). Second, four GAN-inspired mode-collapse adversaries adapted to the prompt-debugging setting (Section 5). Third, a post-hoc adversary audit protocol that runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations (Section 8). Fourth, the main empirical contribution: cross-condition classifier ensembling. Logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition and a $+0.233$ paired lift on worst-class F1 (paired-t $p = 0.066$, Wilcoxon $p = 0.125$) over the seven-critic loop alone (Section 7.3). Combined with a measurable $2\times$ semantic-diversity gain from iteration (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, Section 7.2), the seven-critic loop's value is to produce decision-boundary diversity that classifier ensembling extracts as stability. Fifth, an open-source implementation with a multi-classifier downstream evaluator that supports OpenAI, Anthropic, and offline backends.
+  Our contributions are five. First, a multi-objective prompt-debugging framework with structured feedback, length-budgeted rewrites, and a per-critic ablation flag (Section 4). Second, four GAN-inspired mode-collapse adversaries adapted to the prompt-debugging setting (Section 5). Third, a post-hoc adversary audit protocol that runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations (Section 8). Fourth, the main empirical contribution: cross-condition classifier ensembling. Logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition and a $+0.233$ paired lift on worst-class F1 (paired-t $p = 0.066$, Wilcoxon $p = 0.125$) over the seven-critic loop alone (Section 7.3). Combined with a measurable $2\times$ semantic-diversity gain from iteration (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, Section 7.2), the seven-critic loop's value is to produce decision-boundary diversity that classifier ensembling extracts as stability. Fifth, a <em>reusable open-source Python framework</em> (Section 11) intended as the practitioner-facing deliverable: a pluggable critic protocol, fourteen shipped critic implementations, eight named baselines plus six leave-one-out ablations, three example datasets across difficulty regimes (customer-support, Banking77, TREC question-types), multi-backend LLM support including a cost-halving OpenAI Batch harness and multi-vendor judging via OpenRouter, a cross-condition ensemble public API, and a diversity-metric library spanning Vendi, Scendi, distinct-$n$, self-BLEU, MMD, and manifold-entropy.
 </p>
 
 
@@ -662,10 +662,119 @@ $$
 </ul>
 
 <!-- ============================================================ -->
-<h2 id="sec-conclusion"><span class="section-num">11</span>Conclusion</h2>
+<h2 id="sec-framework"><span class="section-num">11</span>Framework and reusable artifacts</h2>
 
 <p>
-  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). On a customer-support intent classification task with live <code>gpt-4o-mini</code> and a Banking77 cross-domain replication, the seven-critic loop produces synthetic data with the highest lexical diversity (distinct-$n$, self-BLEU-4) and the highest semantic diversity (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, a $2\times$ gain) among iterated conditions, and the synthetic samples remain at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit. The decisive empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the top ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.65\times$ lower seed variance than any solo condition and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.74\times$ variance reduction). The Banking77 cross-domain replication confirms the scarce-real win: at $n_{\text{real}} = 10$ the seven-critic loop's batch lifts macro F1 from $0.726 \pm 0.052$ to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference that retires the tautological "n/a" entries of single-critic ablation tables. Code and artifacts are open source.
+  The empirical contribution above is the seven-critic configuration on customer-support intent classification at $N = 10$ seeds. The deliverable a practitioner takes home is the framework itself: a pluggable Python package for synthetic text data generation and evaluation that this paper's seven-critic loop is one named configuration of, not the only one. This section is the framework user's brief.
+</p>
+
+<h3><span class="subsection-num">11.1</span>Public API and three-line usage</h3>
+
+<p>
+  Install with one command (<code>pip install -e ".[openai]"</code> or <code>.[anthropic]</code> or <code>.[all]</code>) and instantiate the loop in three lines:
+</p>
+
+<pre><code>from attrforge import AttrForge
+
+forge = AttrForge.from_config("examples/customer_support/config.yaml")
+result = forge.run(iterations=3)
+</code></pre>
+
+<p>
+  <code>result.iterations</code> carries the per-iteration synthetic batch, prompt version, and structured-feedback bundle from every critic; <code>result.metric_history</code> carries per-round scalar metrics (attribute match rate, discriminator accuracy, pack accuracy, mode-seeking ratio, banned-phrasing library size, coverage-classifier AUROC, near-duplicate rate, combination coverage). Every artifact (prompts, targets, samples, verdicts, reports) is persisted under <code>runs/&lt;id&gt;/iter_NNN/</code> so a run can be re-analyzed without re-running.
+</p>
+
+<h3><span class="subsection-num">11.2</span>Pluggable critic protocol with fourteen shipped implementations</h3>
+
+<p>
+  Every critic implements the same protocol: <code>name</code> attribute plus <code>evaluate(batch, real, attrs) &rarr; StructuredFeedback</code>. The updater renders every critic's structured complaints into a single prompt-rewrite template, so a new critic plugs in without changes to the loop or the prompt-update logic. Fourteen critic implementations ship with the framework:
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 12: The fourteen critic implementations shipped with the framework. The "Adding your own critic" walkthrough in <code>CONTRIBUTING.md</code> covers the 5-step pattern: pick a failure mode, implement the protocol, wire into the ablation table, register with the loop, write a unit test.</caption>
+<thead>
+<tr>
+  <th>Role</th>
+  <th>Implementation</th>
+  <th>Determinism</th>
+  <th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Attribute verifier</td><td><code>Verifier</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
+<tr><td>Realism discriminator (single)</td><td><code>RealismDiscriminator</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
+<tr><td>Realism discriminator (3-judge debate)</td><td><code>RealismDebate</code></td><td>3 LLM judges via OpenRouter + KS-stopping</td><td>Section 11.5</td></tr>
+<tr><td>Diversity auditor (det. + LLM)</td><td><code>DiversityAuditor</code></td><td>mixed</td><td>Section 4.3</td></tr>
+<tr><td>Pack discriminator (PacGAN)</td><td><code>PackDiscriminator</code></td><td>LLM judge</td><td>Section 5.1</td></tr>
+<tr><td>Mode-seeking (MSGAN)</td><td><code>ModeSeeking</code></td><td>deterministic</td><td>Section 5.2</td></tr>
+<tr><td>Mode hunter (ban-list)</td><td><code>ModeHunter</code></td><td>LLM judge + det. verify</td><td>Section 5.3</td></tr>
+<tr><td>Coverage hole finder (density ratio)</td><td><code>CoverageHoleFinder</code></td><td>deterministic</td><td>Section 5.4</td></tr>
+<tr><td>Manifold-entropy</td><td><code>ManifoldEntropy</code></td><td>deterministic</td><td>Section 11.3</td></tr>
+<tr><td>Downstream evaluator (sentence-transformer + LR)</td><td><code>DownstreamEvaluator</code></td><td>deterministic</td><td>Section 6.4</td></tr>
+<tr><td>Vendi diversity metric</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>Scendi (Schur-complement) decomposition</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>Distinct-$n$ / self-BLEU</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>MMD with three feature spaces</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3><span class="subsection-num">11.3</span>Eight baselines, six ablations, three example datasets</h3>
+
+<p>
+  Eight named baseline configurations are shipped under the <code>--conditions</code> flag of the experiment runner: <code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, <code>attribute_only</code>, <code>full_classic</code> (three baseline critics), <code>full_attrforge</code> (the seven-critic loop). Six leave-one-out ablations enumerate each adversary's contribution: <code>no_pack</code>, <code>no_mode_seeking</code>, <code>no_mode_hunter</code>, <code>no_coverage_hole</code>, plus the two scout-derived variants <code>full_attrforge_vs</code> (Verbalized Sampling generator) and <code>full_attrforge_3judge</code> (multi-vendor debate realism critic). Three example datasets span the difficulty spectrum:
+</p>
+
+<ul>
+  <li><strong>customer-support</strong> intent classification: $5$ classes, $40$ real examples, $10$-item held-out test. The saturated regime where direct macro F1 ties at the ceiling.</li>
+  <li><strong>Banking77 cards-and-payments</strong>: $10$ classes drawn from the Banking77 benchmark <a class="cite" href="#ref-banking77">[41]</a>, $300$ real-train, $400$ held-out test. The harder benchmark where scarce-real augmentation gains are largest.</li>
+  <li><strong>TREC question-type</strong>: $6$ coarse-grained question-type classes (ABBR, DESC, ENTY, HUM, LOC, NUM), $60$ real seed examples, $89$ held-out test. The non-intent-classification family.</li>
+</ul>
+
+<p>
+  Adding a fourth dataset is a three-file addition: <code>examples/&lt;dataset&gt;/{schema.yaml, config.yaml, real_examples.jsonl}</code> matching the layout of the three above. The runner picks it up automatically.
+</p>
+
+<h3><span class="subsection-num">11.4</span>Cross-condition ensemble as a public API, not a script</h3>
+
+<p>
+  The cross-condition classifier ensembling of Section 7.3 is exposed as a typed public API so external users can apply the technique without reading the paper's analysis scripts:
+</p>
+
+<pre><code>from attrforge.eval import CrossConditionEnsemble, CrossConditionEnsembleConfig
+
+ens = CrossConditionEnsemble(CrossConditionEnsembleConfig(backend="sentence-transformer"))
+ens.fit_per_condition(
+    condition_batches={"baseline": [...], "method_v2": [...]},
+    real_train=real_train_samples,
+    real_test=real_test_samples,
+)
+pair_result = ens.ensemble_pair("baseline", "method_v2")
+print(pair_result.macro_f1, pair_result.worst_class_f1)
+</code></pre>
+
+<p>
+  <code>EnsembleResult</code> is a typed Pydantic model carrying macro, worst-class, per-class F1, confusion matrix, and the underlying probability matrices so any downstream analysis (paired-t, bootstrap CI, leave-one-out) is one numpy call away.
+</p>
+
+<h3><span class="subsection-num">11.5</span>Backends, batching, multi-vendor</h3>
+
+<p>
+  LLM calls go through a backend-agnostic client. OpenAI, Anthropic, and an offline echo backend ship in-tree; the offline backend lets the entire pipeline (including the test suite) run with no API key, which is what the $45$-test CI uses. <strong>OpenAI Batch API</strong> is wired through <code>attrforge.llm_batch.BatchClient</code>: a paper-scale sweep (10 seeds $\times$ 7 conditions $\times$ 3 iterations $\times$ 16 samples $\times$ 7 critics $\approx 11\,000$ LLM calls) submits as one batch.jsonl, completes within a 24-hour SLA, and costs about $50\%$ of the real-time API equivalent. <strong>Multi-vendor LLM-as-judge</strong> is exposed via OpenRouter: the <code>full_attrforge_3judge</code> baseline swaps the single-judge realism discriminator for a three-judge debate (<code>openai/gpt-4o-mini</code> + <code>anthropic/claude-3-haiku</code> + <code>google/gemini-flash-1.5</code>) with Kolmogorov-Smirnov adaptive stopping, addressing the single-vendor judge-bias confound named in Section 9.2.
+</p>
+
+<h3><span class="subsection-num">11.6</span>Testing, contribution, and licensing</h3>
+
+<p>
+  The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern (failure mode, protocol, ablation flag, loop registration, unit test) plus contributions for new datasets, new backends, and new aggregation scripts. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+</p>
+
+<!-- ============================================================ -->
+<h2 id="sec-conclusion"><span class="section-num">12</span>Conclusion</h2>
+
+<p>
+  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). On a customer-support intent classification task with live <code>gpt-4o-mini</code> and a Banking77 cross-domain replication, the seven-critic loop produces synthetic data with the highest lexical diversity (distinct-$n$, self-BLEU-4) and the highest semantic diversity (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, a $2\times$ gain) among iterated conditions, and the synthetic samples remain at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit. The decisive empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the top ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.65\times$ lower seed variance than any solo condition and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.74\times$ variance reduction). The Banking77 cross-domain replication confirms the scarce-real win: at $n_{\text{real}} = 10$ the seven-critic loop's batch lifts macro F1 from $0.726 \pm 0.052$ to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference that retires the tautological "n/a" entries of single-critic ablation tables.
 </p>
 
 <p>
@@ -673,7 +782,7 @@ $$
 </p>
 
 <p>
-  Code is open-source under MIT at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+  <em>What the practitioner takes home.</em> The seven-critic loop above is one configuration of a more general framework (Section 11): a pluggable Python library for synthetic text data generation and evaluation, with fourteen shipped critic implementations across the seven roles, eight named baselines and six leave-one-out ablations, three example datasets at different difficulty regimes (customer-support, Banking77, TREC question-types), multi-backend LLM support (OpenAI / Anthropic / offline echo, plus multi-vendor judging via OpenRouter), an OpenAI Batch-API harness that halves the cost of paper-scale sweeps, a cross-condition ensemble public API typed for direct downstream use, and a diversity-metric library spanning Vendi, Scendi (Schur-complement decomposition), distinct-$n$, self-BLEU, MMD, and manifold-entropy. Adding a new critic, baseline, dataset, or backend is a single-file change; the structured-feedback contract handles the wiring. The framework is MIT-licensed at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>; a three-line usage example, a $14$-row critic table, and an "Adding a new critic" walkthrough are in Section 11.
 </p>
 
 <!-- ============================================================ -->
@@ -702,7 +811,7 @@ $$
 </p>
 
 <!-- ============================================================ -->
-<h2 id="sec-references"><span class="section-num">12</span>References</h2>
+<h2 id="sec-references"><span class="section-num">13</span>References</h2>
 
 <ol class="references">
   <li id="ref-pacgan">Lin, Z., Khetan, A., Fanti, G., &amp; Oh, S. <em>PacGAN: The power of two samples in generative adversarial networks.</em> NeurIPS, 2018. <a href="https://proceedings.neurips.cc/paper/2018/hash/288cc0ff022877bd3df94bc9360b9c5d-Abstract.html">[NeurIPS]</a></li>
