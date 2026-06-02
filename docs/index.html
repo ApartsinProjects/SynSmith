@@ -90,10 +90,53 @@
 
 <h3><span class="subsection-num">2.1</span>Synthetic data generation with LLMs</h3>
 <p>
-  LLM-based data augmentation strategies range from zero-shot generation prompts to multi-step pipelines that combine retrieval, filtering, and self-correction. Self-Instruct <a class="cite" href="#ref-self-instruct">[5]</a> and Unnatural Instructions <a class="cite" href="#ref-honovich">[4]</a> bootstrap instruction-tuning corpora through LLM self-generation. InPars <a class="cite" href="#ref-inpars">[10]</a>, SuperGen <a class="cite" href="#ref-supergen">[11]</a>, and ProGen <a class="cite" href="#ref-progen">[12]</a> use LLMs to synthesize training data for downstream classifiers and rerankers. West et al. (Symbolic Knowledge Distillation) <a class="cite" href="#ref-westsymbolic">[13]</a> use a large LLM to distill structured knowledge into a smaller model. Three concurrent (2025) lines are direct neighbors: PACE / Synthline <a class="cite" href="#ref-pace">[42]</a> combines multi-sample prompting with an actor-critic prompt-editing loop and reports F1 gains of $6$ to $43.8$ percentage points on Requirements Engineering classification, while naming the "diversity-as-metric vs utility-as-goal" tension that a single-objective optimizer faces; our seven-critic decomposition addresses the same tension by separating attribute fidelity, realism, and diversity into independent named feedback channels. Genetic Prompt <a class="cite" href="#ref-genprompt">[43]</a> treats class-conditional attributes as gene sequences and uses the LLM to simulate crossover and mutation; the search direction is opposite to ours (genetic recombination vs critic-driven removal). CoT-Self-Instruct <a class="cite" href="#ref-cotselfinstr">[46]</a> applies Answer-Consistency and Rejecting-Instruction-Preferences filters in the reasoning domain, and is the closest high-profile analog of our per-iteration critic-as-filter architecture.
+  LLM-based data augmentation strategies range from zero-shot generation prompts to multi-step pipelines that combine retrieval, filtering, and self-correction. Self-Instruct <a class="cite" href="#ref-self-instruct">[5]</a> and Unnatural Instructions <a class="cite" href="#ref-honovich">[4]</a> bootstrap instruction-tuning corpora through LLM self-generation. InPars <a class="cite" href="#ref-inpars">[10]</a>, SuperGen <a class="cite" href="#ref-supergen">[11]</a>, and ProGen <a class="cite" href="#ref-progen">[12]</a> use LLMs to synthesize training data for downstream classifiers and rerankers. West et al. (Symbolic Knowledge Distillation) <a class="cite" href="#ref-westsymbolic">[13]</a> use a large LLM to distill structured knowledge into a smaller model.
 </p>
 <p>
+  The sharpest single comparison point is AttrPrompt <a class="cite" href="#ref-attrprompt">[49]</a>, which conditions one-shot LLM generation on diverse attribute vectors and reports diversity and downstream-accuracy gains over class-conditional prompting on NYT, Amazon, Reddit, and arXiv. AttrPrompt establishes attribute-conditioned generation as a principle but is a single-shot generator with no iterative critic loop; the four GAN-style adversaries that drive AttrForge (Pack Discriminator, Mode-Seeking, Mode Hunter, Coverage Hole Finder) have no analogue in AttrPrompt. WANLI <a class="cite" href="#ref-wanli">[50]</a> pairs dataset cartography with GPT-3 generation and human relabeling, demonstrating that distribution-aware sampling produces more challenging synthetic NLI than uniform sampling; the "real-distribution anchor" idea is shared, but WANLI requires a human relabel step that AttrForge replaces with an LLM Verifier whose attribute_match is gated by the class label only (Section 4).
+</p>
+<p>
+  Iterative-feedback synth generators are the next-closest family. S3 <a class="cite" href="#ref-s3">[51]</a> trains a small classifier on the synthetic batch, extrapolates its errors on a gold validation slice, and re-prompts the LLM with those errors as targets; ProGen <a class="cite" href="#ref-progen">[12]</a> uses noise-tolerant influence functions on a similar small-model loop. TarGEN <a class="cite" href="#ref-targen">[52]</a> adds a self-correction module for label noise after multi-step prompting. ARISE <a class="cite" href="#ref-arise">[53]</a> iterates rule induction over syntactic n-grams and bootstrapped filtering. PACE / Synthline <a class="cite" href="#ref-pace">[42]</a> combines multi-sample prompting with an actor-critic prompt-editing loop and reports F1 gains of $6$ to $43.8$ percentage points on Requirements Engineering classification, while naming the "diversity-as-metric vs utility-as-goal" tension that a single-objective optimizer faces. Genetic Prompt <a class="cite" href="#ref-genprompt">[43]</a> treats class-conditional attributes as gene sequences and uses the LLM to simulate crossover and mutation. CoT-Self-Instruct <a class="cite" href="#ref-cotselfinstr">[46]</a> applies Answer-Consistency and Rejecting-Instruction-Preferences filters in the reasoning domain. Self-Refine <a class="cite" href="#ref-selfrefine">[54]</a> and Reflexion <a class="cite" href="#ref-reflexion">[55]</a> generalize iterative critique-refine loops to general agent tasks but operate on single outputs, not data distributions, and use a single critic role.
+</p>
+<p>
+  All of these methods optimize one signal at a time. S3 and ProGen optimize for downstream validation accuracy; TarGEN for label correctness; ARISE for rule satisfaction; PACE for lexical diversity; AttrPrompt for attribute coverage at generation time. AttrForge runs a multi-critic stack in which seven critics (three baseline plus four GAN-style adversaries) each emit named, falsifiable complaints, and the prompt updater is asked to satisfy them jointly. The critic-coverage matrix below makes the structural difference explicit:
+</p>
+
+<figure>
+  <table class="critic-coverage">
+    <thead>
+      <tr>
+        <th>Critic role</th>
+        <th>AttrForge</th>
+        <th>AttrPrompt</th>
+        <th>S3</th>
+        <th>ProGen</th>
+        <th>TarGEN</th>
+        <th>ARISE</th>
+        <th>PACE</th>
+        <th>Reflexion / Self-Refine</th>
+        <th>DSPy / TextGrad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Attribute Verifier (fidelity)</td><td>&#10003;</td><td>implicit</td><td>&ndash;</td><td>&ndash;</td><td>self-correct on labels</td><td>rule-check</td><td>&ndash;</td><td>free-form</td><td>metric</td></tr>
+      <tr><td><strong>Realism Discriminator (dist-match)</strong></td><td><strong>&#10003;</strong></td><td>&ndash;</td><td>implicit via error gradient</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td>Diversity Auditor (attribute coverage)</td><td>&#10003;</td><td>attribute design</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>implicit</td><td>&#10003;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td><strong>Pack Discriminator (mode collapse)</strong></td><td><strong>&#10003;</strong></td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td><strong>Mode-Seeking (gen variance / attr distance)</strong></td><td><strong>&#10003;</strong></td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td><strong>Mode Hunter (banned-pattern accumulation)</strong></td><td><strong>&#10003;</strong></td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td>Coverage Hole Finder (real-dist gaps)</td><td>&#10003;</td><td>&ndash;</td><td>implicit (small-model errors)</td><td>influence-function exemplar pick</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
+      <tr><td>Prompt Updater</td><td>&#10003;</td><td>&ndash; (one-shot)</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr>
+    </tbody>
+  </table>
+  <figcaption><strong>Table 0: Critic-coverage matrix.</strong> AttrForge is the only entry with all four GAN-style adversaries (Realism Discriminator, Pack Discriminator, Mode-Seeking, Mode Hunter) and the only one that combines them with a Coverage Hole Finder and a multi-critic Updater. AttrPrompt establishes attribute conditioning but is a one-shot generator; S3, ProGen, TarGEN, ARISE, and PACE all run iterative loops but on a single objective. Reflexion, Self-Refine, DSPy, and TextGrad optimize single outputs / prompts, not data distributions.</figcaption>
+</figure>
+
+<p>
   PerFine <a class="cite" href="#ref-perfine">[45]</a> is the closest 2025 analog of our "named complaints, not scalar rewards" feedback contract: it emits structured complaints along four named dimensions (tone, vocabulary, sentence structure, topicality) and uses a cross-iteration knockout. PerFine reports $+7.8$ to $+13.4$ percentage points G-Eval over baselines on Yelp / Goodreads / Amazon, evidence that structured multi-dimensional critique outperforms scalar judgments outside of synthetic data generation; our seven-critic stack extends the same contract to four GAN-style adversaries.
+</p>
+<p>
+  AttrForge's positioning, in one sentence: <em>the first attribute-conditioned synthetic-data framework with a multi-critic adversarial loop in which every critic is anchored to the real-seed distribution</em> (via empirical-anchor calibration of the Verifier, domain-canonical veto of the Mode Hunter, and distribution-aware judging of the Realism Discriminator), evaluated across four task families (sentiment, fine-grained intent, question-type, NLI) that no single competitor's headline tables cover.
 </p>
 
 <h3><span class="subsection-num">2.2</span>Prompt optimization via search and rewrite</h3>
@@ -974,6 +1017,13 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
   <li id="ref-cotselfinstr">Yu, P., et al. <em>CoT-Self-Instruct: Synthesizing high-quality data from chain-of-thought seeds with answer consistency and instruction-preference filtering.</em> arXiv:2507.23751, 2025. <a href="https://arxiv.org/abs/2507.23751">[arXiv]</a></li>
   <li id="ref-synque">Chen, A., &amp; Zhong, V. <em>SynQuE: Estimating synthetic dataset quality without annotations.</em> arXiv:2511.03928, 2025. <a href="https://arxiv.org/abs/2511.03928">[arXiv]</a></li>
   <li id="ref-qdc">Havrilla, A., et al. <em>Surveying quality, diversity, and complexity in synthetic data.</em> arXiv:2412.02980, 2024. <a href="https://arxiv.org/abs/2412.02980">[arXiv]</a></li>
+  <li id="ref-attrprompt">Yu, Y., Zhuang, Y., Zhang, J., Meng, Y., Ratner, A., Krishna, R., Shen, J., &amp; Zhang, C. <em>Large language model as attributed training data generator: A tale of diversity and bias.</em> NeurIPS, 2023. <a href="https://arxiv.org/abs/2306.15895">[arXiv:2306.15895]</a></li>
+  <li id="ref-s3">Wang, R., Zhou, H., &amp; Sachan, M. <em>Let's synthesize step by step: Iterative dataset synthesis with large language models by extrapolating errors from small models.</em> Findings of EMNLP, 2023. <a href="https://arxiv.org/abs/2310.13671">[arXiv:2310.13671]</a></li>
+  <li id="ref-targen">Gupta, H., Scaria, K., Anantheswaran, U., Verma, S., Parmar, M., Sawant, S. A., Mishra, S., &amp; Baral, C. <em>TarGEN: Targeted data generation with large language models.</em> arXiv:2310.17876, 2023. <a href="https://arxiv.org/abs/2310.17876">[arXiv:2310.17876]</a></li>
+  <li id="ref-arise">Yaswanth, B. P. S., Khare, S., et al. <em>ARISE: Iterative rule induction and synthetic data generation for text classification.</em> Findings of NAACL, 2025. <a href="https://arxiv.org/abs/2502.05923">[arXiv:2502.05923]</a></li>
+  <li id="ref-wanli">Liu, A., Swayamdipta, S., Smith, N. A., &amp; Choi, Y. <em>WANLI: Worker and AI collaboration for natural language inference dataset creation.</em> Findings of EMNLP, 2022. <a href="https://arxiv.org/abs/2201.05955">[arXiv:2201.05955]</a></li>
+  <li id="ref-reflexion">Shinn, N., Cassano, F., Berman, E., Gopinath, A., Narasimhan, K., &amp; Yao, S. <em>Reflexion: Language agents with verbal reinforcement learning.</em> NeurIPS, 2023. <a href="https://arxiv.org/abs/2303.11366">[arXiv:2303.11366]</a></li>
+  <li id="ref-selfrefine">Madaan, A., Tandon, N., Gupta, P., Hallinan, S., Gao, L., Wiegreffe, S., et al. <em>Self-refine: Iterative refinement with self-feedback.</em> NeurIPS, 2023. <a href="https://arxiv.org/abs/2303.17651">[arXiv:2303.17651]</a></li>
 </ol>
 
 <footer class="paper-footer">
