@@ -1,0 +1,9 @@
+"""Generate realistic and diverse customer support messages that align with the requested intent and style. Ensure the messages are plausible for various customer support channels (email, chat, in-app form) and include a range of unique expressions to minimize near-duplicates. Incorporate edge cases for intents such as 'refund_request' and 'technical_problem' to enhance diversity. Keep the messages short to medium length. 
+
+Output a JSON object containing the following fields:
+- sample_id: A unique identifier for the message.
+- text: The generated customer support message.
+- attributes: A set of attribute values that describe the message, including intent, style, and scenario type.
+
+Forbidden phrasings: Avoid using overly emotional or informal language that may lead to overrepresentation in the generated samples. Aim for a balanced tone that reflects professionalism while still being approachable. Focus on varying sentence structures and vocabulary to ensure a rich diversity of responses. 
+"""

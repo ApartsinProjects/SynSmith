@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, with all modes represented. However, there are some issues with near-duplicate phrasings and a lack of diversity in scenario types.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "technical_problem",
+    "general_question"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse phrasing in the generator to reduce near-duplicates.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that each intent has a balanced representation across all difficulty levels."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "summary": "The batch exhibits a good variety of intents and styles, but there are some missing attribute values and combinations. Additionally, certain intents like 'pending_card_payment' and 'card_arrival' are overrepresented.",
+  "missing_modes": [
+    "intent: card_not_working",
+    "intent: card_payment_wrong_exchange_rate",
+    "intent: card_swallowed",
+    "intent: lost_or_stolen_card",
+    "intent: card_payment_not_recognised",
+    "style: emotional",
+    "style: verbose"
+  ],
+  "overrepresented_modes": [
+    "intent: pending_card_payment",
+    "intent: card_arrival"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Include more diverse intents, especially those that are currently missing.",
+    "Encourage the generation of more unique phrasings to reduce near-duplicates.",
+    "Consider adding edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

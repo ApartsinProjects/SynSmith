@@ -1,0 +1,24 @@
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common customer concern."}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"Simple, direct question typical of customer service inquiries."}
+{"sample_id":"target_00021","prediction":"synthetic","confidence":0.7,"reason":"Overly structured and lacks natural conversational flow."}
+{"sample_id":"R277","prediction":"real","confidence":0.85,"reason":"Authentic customer issue with a specific context."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Realistic scenario with a clear request for assistance."}
+{"sample_id":"R058","prediction":"real","confidence":0.9,"reason":"Common concern about hidden fees, phrased naturally."}
+{"sample_id":"R070","prediction":"real","confidence":0.9,"reason":"Direct and relatable issue regarding unexpected charges."}
+{"sample_id":"R105","prediction":"real","confidence":0.9,"reason":"Specific complaint about unauthorized payment, realistic."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Typical inquiry about account fees, phrased naturally."}
+{"sample_id":"R212","prediction":"real","confidence":0.9,"reason":"Straightforward request for information about a card."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Common customer issue regarding card delivery."}
+{"sample_id":"R087","prediction":"real","confidence":0.85,"reason":"Natural phrasing of a question about transaction details."}
+{"sample_id":"R139","prediction":"real","confidence":0.85,"reason":"Specific issue with exchange rates, realistic context."}
+{"sample_id":"R229","prediction":"real","confidence":0.9,"reason":"Common issue of a missing card, phrased authentically."}
+{"sample_id":"R231","prediction":"real","confidence":0.9,"reason":"Detailed and realistic scenario about card theft."}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.6,"reason":"Casual language and mixed topics create an unnatural flow."}
+{"sample_id":"R165","prediction":"real","confidence":0.85,"reason":"Authentic issue regarding a card getting stuck."}
+{"sample_id":"R225","prediction":"real","confidence":0.9,"reason":"Direct and clear request for help with a missing card."}
+{"sample_id":"R068","prediction":"real","confidence":0.85,"reason":"Common inquiry about fees, phrased naturally."}
+{"sample_id":"R211","prediction":"real","confidence":0.8,"reason":"Realistic scenario with a request for account assistance."}
+{"sample_id":"R111","prediction":"real","confidence":0.8,"reason":"Authentic concern about unauthorized charges."}
+{"sample_id":"R060","prediction":"real","confidence":0.8,"reason":"Simple statement about a fee, typical of customer inquiries."}
+{"sample_id":"R083","prediction":"real","confidence":0.8,"reason":"Common issue regarding additional charges, phrased clearly."}
+{"sample_id":"R103","prediction":"real","confidence":0.85,"reason":"Natural phrasing of a concern about a strange payment."}

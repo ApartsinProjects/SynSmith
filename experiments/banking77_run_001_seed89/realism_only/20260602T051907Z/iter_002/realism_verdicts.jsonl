@@ -1,0 +1,24 @@
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Natural language with a common issue; lacks over-polished grammar."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Casual tone and specific complaint; feels authentic."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Specific technical issue with a browser; realistic detail."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Genuine inquiry about future options; conversational tone."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct complaint about a refund; straightforward language."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Frustration expressed over delayed support; realistic scenario."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Specific issue with checkout; includes browser version."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Describes a common app issue; lacks formal structure."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Common issue with password reset; realistic detail."}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"Specific technical issue with CSV import; feels authentic."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct complaint about order; straightforward language."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"Overly formal and structured; lacks real-world noise."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct complaint about damaged item; realistic urgency."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.75,"reason":"Formal tone and structure; lacks personal touch."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Common shipping complaint; realistic detail."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.75,"reason":"Overly formal and structured; lacks personal touch."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue with two-factor authentication; realistic."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"Frustration expressed over service; feels authentic."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Overly detailed and structured; lacks real-world noise."}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.65,"reason":"Casual tone but feels scripted; lacks spontaneity."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.7,"reason":"Generic complaint; lacks personal detail."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.65,"reason":"Simple query but feels scripted; lacks spontaneity."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.65,"reason":"Generic request; lacks personal detail."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.7,"reason":"Formal inquiry; lacks personal touch and urgency."}

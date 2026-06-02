@@ -1,0 +1,25 @@
+{
+  "summary": "The batch demonstrates a high coverage of attribute values, with only a few missing modes in the intent category. There are instances of near-duplicate phrasings and overrepresented emotional styles.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "pending_card_payment"
+  ],
+  "overrepresented_modes": [
+    "emotional",
+    "fragmented"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse intents, particularly focusing on 'card_payment_fee_charged' and 'pending_card_payment'.",
+    "Reduce the frequency of emotional and fragmented styles to promote a wider variety of expression.",
+    "Introduce more edge cases or rare scenarios to enhance the diversity of the dataset."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{"sample_id":"R088","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; reflects a genuine concern."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.8,"reason":"Overly simplistic and lacks context; feels like a generic prompt."}
+{"sample_id":"R032","prediction":"real","confidence":0.85,"reason":"Direct and relatable question; common issue with cards."}
+{"sample_id":"R219","prediction":"real","confidence":0.9,"reason":"Clear and urgent request; typical of real user scenarios."}
+{"sample_id":"R076","prediction":"real","confidence":0.9,"reason":"Common inquiry about fees; natural language."}
+{"sample_id":"R029","prediction":"real","confidence":0.85,"reason":"Straightforward and relatable issue; typical user experience."}
+{"sample_id":"R167","prediction":"real","confidence":0.9,"reason":"Describes a common problem with ATMs; realistic phrasing."}
+{"sample_id":"R101","prediction":"real","confidence":0.9,"reason":"Authentic expression of confusion over a charge."}
+{"sample_id":"R153","prediction":"real","confidence":0.85,"reason":"Polite request for assistance; typical of customer service inquiries."}
+{"sample_id":"R261","prediction":"real","confidence":0.8,"reason":"Common issue with top-ups; phrasing is natural."}
+{"sample_id":"R149","prediction":"real","confidence":0.9,"reason":"Describes a common ATM issue; realistic language."}
+{"sample_id":"R178","prediction":"real","confidence":0.85,"reason":"Common concern about card declines; relatable."}
+{"sample_id":"R280","prediction":"synthetic","confidence":0.7,"reason":"Lacks specificity and feels like a generic question."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Authentic expression of confusion over a charge."}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"Common inquiry about card processing time; natural."}
+{"sample_id":"R099","prediction":"real","confidence":0.9,"reason":"Describes a common issue with payments; realistic."}
+{"sample_id":"R285","prediction":"synthetic","confidence":0.75,"reason":"Feels slightly formulaic; lacks personal touch."}
+{"sample_id":"R052","prediction":"real","confidence":0.85,"reason":"Natural phrasing; reflects a common user issue."}
+{"sample_id":"R114","prediction":"real","confidence":0.9,"reason":"Authentic concern about a purchase; relatable."}
+{"sample_id":"R086","prediction":"real","confidence":0.85,"reason":"Common inquiry about fees; natural language."}
+{"sample_id":"R171","prediction":"synthetic","confidence":0.7,"reason":"Unusual phrasing; lacks natural flow."}
+{"sample_id":"R125","prediction":"real","confidence":0.8,"reason":"Describes a specific issue with exchange rates; realistic."}
+{"sample_id":"target_00016","prediction":"real","confidence":0.9,"reason":"Describes a common ATM issue; realistic phrasing."}
+{"sample_id":"R163","prediction":"real","confidence":0.85,"reason":"Common question about ATM issues; natural language."}

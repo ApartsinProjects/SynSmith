@@ -1,0 +1,11 @@
+"""Generate realistic banking customer-support messages that align with the specified intent and style. Each message should be contextually rich and reflect a natural conversational tone, suitable for various customer support channels (email, chat, in-app form). Ensure a mix of styles, including formal, concise, and emotional, while addressing diverse scenarios like transaction issues or general inquiries. Avoid redundancy in phrasing by varying sentence structure and vocabulary. 
+
+Output a JSON object with the following fields:
+- sample_id: Unique identifier for the message
+- text: The generated customer support message
+- attributes: A JSON object containing the following attribute values:
+  - intent: The specific customer query or issue (e.g., card_swallowed, lost_or_stolen_card)
+  - style: The tone of the message (e.g., formal, concise, emotional, fragmented)
+  - scenario: The context of the message (e.g., transaction_issue, general_inquiry)
+
+Forbidden phrasings: Avoid using overly vague language, generic templates, or unnatural phrasing. Aim for a personal touch in each message to enhance realism and engagement. Ensure a balanced representation of intents and styles to foster diversity in the generated outputs."""

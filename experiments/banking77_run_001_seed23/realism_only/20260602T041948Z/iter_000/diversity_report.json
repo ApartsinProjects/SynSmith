@@ -1,0 +1,29 @@
+{
+  "summary": "The batch exhibits a good variety of intents and styles, but there are some missing attribute values and combinations, particularly in the intent category. Additionally, there are near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "intent: card_swallowed",
+    "intent: declined_card_payment",
+    "style: fragmented",
+    "style: concise",
+    "scenario_type: card_handling"
+  ],
+  "overrepresented_modes": [
+    "intent: card_payment_wrong_exchange_rate",
+    "intent: card_not_working",
+    "style: informal"
+  ],
+  "near_duplicate_rate": 0.2,
+  "recommendations": [
+    "Encourage the generation of samples that include the missing intents and styles.",
+    "Diversify the phrasing in the samples to reduce near-duplicates and shallow paraphrases.",
+    "Introduce edge cases or rare scenarios to enhance the overall diversity of the dataset."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

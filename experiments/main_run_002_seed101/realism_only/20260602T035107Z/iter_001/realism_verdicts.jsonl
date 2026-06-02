@@ -1,0 +1,24 @@
+{"sample_id":"target_00022","prediction":"real","confidence":0.9,"reason":"Natural language with specific context and a request for help; lacks over-polished grammar."}
+{"sample_id":"R007","prediction":"real","confidence":0.85,"reason":"Casual language and specific issue description; contains real-world noise."}
+{"sample_id":"target_00026","prediction":"real","confidence":0.8,"reason":"Specific issue with a request for assistance; conversational tone."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct and informal language; reflects a genuine customer complaint."}
+{"sample_id":"target_00031","prediction":"real","confidence":0.85,"reason":"Simple request for a refund; lacks overly formal structure."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Informal inquiry about product options; straightforward and relatable."}
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Direct issue with a personal account; conversational and relatable."}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"Specific technical issue described in a casual tone; realistic."}
+{"sample_id":"target_00024","prediction":"real","confidence":0.8,"reason":"Clear request for a refund with context; lacks overly formal language."}
+{"sample_id":"target_00027","prediction":"real","confidence":0.9,"reason":"Detailed personal experience with emotional context; feels authentic."}
+{"sample_id":"R028","prediction":"real","confidence":0.8,"reason":"Simple question about product tiers; straightforward and relatable."}
+{"sample_id":"target_00025","prediction":"real","confidence":0.85,"reason":"Casual request for help with account access; conversational tone."}
+{"sample_id":"R027","prediction":"real","confidence":0.9,"reason":"Direct inquiry about discounts; informal and relatable."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Specific issue with password reset; casual language."}
+{"sample_id":"target_00017","prediction":"real","confidence":0.9,"reason":"Expresses frustration with a request for help; feels authentic."}
+{"sample_id":"target_00019","prediction":"real","confidence":0.85,"reason":"Describes a specific issue with a personal touch; conversational."}
+{"sample_id":"target_00020","prediction":"real","confidence":0.8,"reason":"Describes a technical issue in a relatable manner; lacks formality."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Direct complaint about a product; informal and straightforward."}
+{"sample_id":"target_00032","prediction":"real","confidence":0.85,"reason":"Expresses frustration with a request for help; conversational tone."}
+{"sample_id":"R015","prediction":"real","confidence":0.8,"reason":"Describes a specific account issue; casual and relatable."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Casual complaint about shipping delay; straightforward."}
+{"sample_id":"R020","prediction":"real","confidence":0.9,"reason":"Expresses frustration with customer service; informal and relatable."}
+{"sample_id":"R011","prediction":"real","confidence":0.85,"reason":"Describes a technical issue in a straightforward manner; realistic."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"Direct complaint about service delay; conversational tone."}

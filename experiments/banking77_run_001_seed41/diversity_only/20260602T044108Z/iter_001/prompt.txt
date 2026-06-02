@@ -1,0 +1,15 @@
+"""Generate realistic banking customer-support messages that align with the requested intent and style. Ensure the examples are plausible for various customer support channels (email, chat, in-app form) and vary in length from short to medium. Include diverse phrasing to minimize duplication and avoid overrepresentation of informal or verbose styles. Specifically, cover the missing intent 'card_payment_fee_charged' and provide a range of styles, including formal and concise options. 
+
+Output a JSON object containing the sample id, the text, and the attribute values. 
+
+Forbidden phrasings: Avoid using any previously flagged phrases or structures that may lead to near-duplicate outputs.
+
+Example intents to consider: 
+- pending_card_payment
+- card_payment_wrong_exchange_rate
+- card_payment_fee_charged
+- transaction_dispute
+
+Aim for a balanced representation of intents and styles while ensuring that each message feels unique and authentic. Focus on clarity and relevance to the banking context, while maintaining a professional tone. 
+
+Remember to amplify variations in phrasing and structure to enhance the diversity of the generated messages. Aim for a realistic portrayal of customer inquiries and support responses."

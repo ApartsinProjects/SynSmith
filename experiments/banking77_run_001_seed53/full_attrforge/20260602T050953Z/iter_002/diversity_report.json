@@ -1,0 +1,28 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a high coverage of attribute values, with a notable absence of certain intent modes. There are instances of missing details and contradictions in the noise category, indicating potential areas for improvement in sample generation.",
+  "missing_modes": [
+    "card_arrival (low ambiguity, clean noise)",
+    "card_payment_fee_charged (high ambiguity, clean noise)",
+    "card_payment_not_recognised (high ambiguity, clean noise)",
+    "lost_or_stolen_card (any difficulty, any noise)",
+    "card_payment_wrong_exchange_rate (low ambiguity, clean noise)"
+  ],
+  "overrepresented_modes": [
+    "declined_card_payment (multiple instances with varying styles and difficulties)",
+    "top_up_failed (two instances with medium and high ambiguity)"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for missing intents, especially those with low ambiguity and clean noise.",
+    "Diversify the scenarios for 'declined_card_payment' and 'top_up_failed' to reduce overrepresentation.",
+    "Ensure that samples include a wider range of difficulties and ambiguities for each intent."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

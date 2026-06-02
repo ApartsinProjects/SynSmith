@@ -1,0 +1,24 @@
+{"sample_id":"R097","prediction":"real","confidence":0.9,"reason":"Natural phrasing and specific context suggest a genuine user concern."}
+{"sample_id":"R160","prediction":"real","confidence":0.9,"reason":"Direct and relatable question about a common issue with ATMs."}
+{"sample_id":"R070","prediction":"real","confidence":0.85,"reason":"Simple and straightforward complaint about unexpected charges."}
+{"sample_id":"R135","prediction":"real","confidence":0.8,"reason":"Specific complaint about exchange rates indicates a real user experience."}
+{"sample_id":"R168","prediction":"real","confidence":0.9,"reason":"Common issue with ATMs, phrased in a natural way."}
+{"sample_id":"R257","prediction":"real","confidence":0.85,"reason":"Describes a typical user experience with pending payments."}
+{"sample_id":"R077","prediction":"real","confidence":0.8,"reason":"Direct inquiry about unexpected charges, typical of real user concerns."}
+{"sample_id":"R227","prediction":"real","confidence":0.9,"reason":"Common question regarding stolen cards, phrased naturally."}
+{"sample_id":"R288","prediction":"real","confidence":0.8,"reason":"Describes a specific issue with an app, typical of real user feedback."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Overly detailed and emotional language, feels scripted and polished."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Simple and direct question about card status, typical of real user inquiries."}
+{"sample_id":"R251","prediction":"real","confidence":0.85,"reason":"Common concern about pending payments, phrased naturally."}
+{"sample_id":"R032","prediction":"real","confidence":0.9,"reason":"Direct and relatable question about card functionality."}
+{"sample_id":"R064","prediction":"real","confidence":0.8,"reason":"User expresses confusion about fees, typical of real user experiences."}
+{"sample_id":"R121","prediction":"real","confidence":0.85,"reason":"Specific complaint about exchange rates, indicates real user concern."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.65,"reason":"Lacks real-world noise and feels overly structured."}
+{"sample_id":"R215","prediction":"real","confidence":0.9,"reason":"Common issue with lost or stolen cards, phrased naturally."}
+{"sample_id":"R280","prediction":"real","confidence":0.8,"reason":"Direct question about a common issue with top-ups."}
+{"sample_id":"R236","prediction":"real","confidence":0.85,"reason":"Describes a typical user experience with pending items."}
+{"sample_id":"R174","prediction":"real","confidence":0.9,"reason":"Simple and direct statement about card decline, typical of real user feedback."}
+{"sample_id":"R144","prediction":"real","confidence":0.85,"reason":"Specific inquiry about exchange rates, indicates real user concern."}
+{"sample_id":"R265","prediction":"real","confidence":0.8,"reason":"Direct statement about a common issue with top-ups."}
+{"sample_id":"R164","prediction":"real","confidence":0.9,"reason":"Common issue with ATMs, phrased in a natural way."}
+{"sample_id":"R181","prediction":"real","confidence":0.85,"reason":"Direct inquiry about card decline, typical of real user concerns."}

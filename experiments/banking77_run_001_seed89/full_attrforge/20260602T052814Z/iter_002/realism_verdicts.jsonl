@@ -1,0 +1,24 @@
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Natural language with personal context, typical of user issues."}
+{"sample_id":"R022","prediction":"real","confidence":0.9,"reason":"Casual tone and specific complaint suggest a real user experience."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Technical issue described in a straightforward manner, typical of real user feedback."}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"Specific inquiry about future options, indicative of genuine user concern."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct request for refund with a clear context, typical of real complaints."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"Frustration expressed in a personal tone, common in real user interactions."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Describes a specific technical issue with a browser, typical of real user feedback."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Describes a common app issue in a straightforward manner, indicative of real user experience."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Common issue with password reset, expressed in a natural tone."}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"Specific technical issue with a clear question, typical of real user inquiries."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct complaint about an order issue, expressed in a natural tone."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"Overly formal and polished language, lacks personal touch."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct and urgent request for a refund, typical of real user complaints."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.75,"reason":"Formal structure and generic inquiry, lacks personal context."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"Specific complaint about shipping delay, expressed in a natural tone."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.8,"reason":"Formal language and structure, lacks the urgency typical of real complaints."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Describes a common issue with urgency, typical of real user experiences."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Expresses frustration and a request to cancel, typical of real user feedback."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Overly detailed and formal, lacks the spontaneity of real user interactions."}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.7,"reason":"Casual tone but overly structured, lacks the urgency of a real complaint."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.75,"reason":"Generic complaint about fees, lacks personal context."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.7,"reason":"Simple statement lacking detail, feels generic."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"Generic phrasing and lack of detail suggest a synthetic origin."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.75,"reason":"Formal inquiry about outages, lacks personal context and urgency."}

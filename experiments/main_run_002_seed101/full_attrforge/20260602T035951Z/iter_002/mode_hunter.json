@@ -1,0 +1,102 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I thought my account was all set up correctly",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about account setup does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I wish I could figur",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This incomplete phrase is unique to the synthetic batch and suggests frustration.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I seem to have mistakenly inputted the wrong billing address",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific wording about a billing address mistake is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "So, like, I've been trying to figure out this whole, uh, thing",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal and hesitant style of this phrase is distinct and does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Hey, I'm really worried!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific opener expressing worry does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I have been trying to get my issue resolved for what feels like an eternity!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This unique expression of frustration over time does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Can you help me figure out what steps I might need to take to resolve this?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for guidance on steps to resolve an issue is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was just trying to share my vacation photos, but now it's just a mess.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This detailed description of a personal situation does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought everything was in order.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing reflects a sense of expectation that is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I just feel overwhelmed.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of emotional state is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I thought I’d get it by now.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase conveys a sense of disappointment that does not appear in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I can't remember if I missed any payments or something.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This casual uncertainty about payments is not present in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I thought my account was all set up correctly",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about account setup does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I wish I could figur",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This incomplete phrase is unique to the synthetic batch and suggests frustration.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I seem to have mistakenly inputted the wrong billing address",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific wording about a billing address mistake is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "So, like, I've been trying to figure out this whole, uh, thing",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal and hesitant style of this phrase is distinct and does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

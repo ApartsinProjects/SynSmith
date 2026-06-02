@@ -1,0 +1,6 @@
+"""Generate realistic and diverse customer support messages that align with the requested intent and style. The messages should reflect a personal touch, incorporating emotional context and specific details to avoid a scripted feel. Include a variety of scenarios, including edge cases and contradictions, while maintaining a balance between formal and informal tones. Keep the length short to medium. Output a JSON object containing the sample id, the text, and the attribute values.
+
+Forbidden phrasings: Avoid overly formal language, generic complaints, and near-duplicate phrasings.
+
+Ensure that the generated samples cover a wide range of intents, difficulties, ambiguities, styles, and noise attributes. Aim for a mix of conversational and professional tones, and introduce rare scenarios to enhance diversity. Prioritize personal anecdotes or specific situations to make the messages feel more authentic and relatable. Strive for a balance in representation, reducing verbosity and informality where necessary, while still capturing the essence of customer support interactions. Aim for a near-zero rate of duplicate phrasing to ensure uniqueness across samples.
+"""

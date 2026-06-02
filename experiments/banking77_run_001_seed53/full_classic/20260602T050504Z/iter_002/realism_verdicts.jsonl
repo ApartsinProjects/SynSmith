@@ -1,0 +1,24 @@
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Casual language and specific issue indicate a real user experience."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and structured; lacks personal touch."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Direct and informal language typical of user complaints."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.8,"reason":"Polished grammar and formal structure suggest LLM generation."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.75,"reason":"Predictable structure and overly detailed; lacks real-world noise."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Concise and direct complaint typical of user feedback."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"Formal tone and structured request suggest LLM generation."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.65,"reason":"Generic vocabulary and structure; lacks personal context."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.8,"reason":"Overly formal and structured; lacks the spontaneity of real complaints."}
+{"sample_id":"R026","prediction":"real","confidence":0.85,"reason":"Informal language and specific inquiry typical of user questions."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Technical issue described in a straightforward manner."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct complaint with a clear request for action."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Frustrated tone and informal language suggest a real user."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue with urgency indicates a real user experience."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Technical inquiry with a straightforward question."}
+{"sample_id":"R028","prediction":"real","confidence":0.8,"reason":"Direct question about product features typical of user inquiries."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.7,"reason":"Polished language and structure suggest LLM generation."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.75,"reason":"Generic phrasing and overly structured complaint."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with a clear user context."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct complaint with urgency and specific request."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Informal tone and specific complaint about shipping."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Technical issue described in a straightforward manner."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Direct complaint with a clear request for action."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Casual language and specific request typical of user feedback."}

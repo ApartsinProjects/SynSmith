@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Why is the exchange rate for my payment incorrect?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8974121066534735
+    },
+    {
+      "text": "Why is my card payment still listed as pending?",
+      "label": "pending_card_payment",
+      "p_real": 0.8823653499702417
+    },
+    {
+      "text": "Why is my card payment still a pending transaction?",
+      "label": "pending_card_payment",
+      "p_real": 0.8813473023611277
+    },
+    {
+      "text": "What do I do if my card is not working?",
+      "label": "card_not_working",
+      "p_real": 0.8803818849749229
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

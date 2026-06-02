@@ -1,0 +1,24 @@
+{"sample_id":"R198","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context of a payment issue, typical of real user inquiries."}
+{"sample_id":"R282","prediction":"real","confidence":0.85,"reason":"Informal language and a common issue, indicative of a real user experience."}
+{"sample_id":"R243","prediction":"real","confidence":0.9,"reason":"Direct question about payment delay, reflects genuine concern."}
+{"sample_id":"R074","prediction":"real","confidence":0.8,"reason":"Realistic question about fees, phrasing is typical of user confusion."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue with card issuance, common in real user scenarios."}
+{"sample_id":"R154","prediction":"real","confidence":0.85,"reason":"Describes a specific ATM issue, realistic and relatable."}
+{"sample_id":"R045","prediction":"real","confidence":0.8,"reason":"Practical question about card rejection, typical of user inquiries."}
+{"sample_id":"R121","prediction":"real","confidence":0.8,"reason":"Specific issue with exchange rates, reflects real user concerns."}
+{"sample_id":"R103","prediction":"real","confidence":0.85,"reason":"Describes confusion over a payment, common in real user experiences."}
+{"sample_id":"R155","prediction":"real","confidence":0.9,"reason":"Direct question about ATM card retention, realistic scenario."}
+{"sample_id":"R133","prediction":"real","confidence":0.85,"reason":"User confusion over exchange rates, typical of real inquiries."}
+{"sample_id":"R101","prediction":"real","confidence":0.9,"reason":"Common issue of unrecognized payments, phrasing is natural."}
+{"sample_id":"R021","prediction":"real","confidence":0.8,"reason":"Inquiry about tracking a card, realistic and relatable."}
+{"sample_id":"R081","prediction":"real","confidence":0.75,"reason":"Informal language and a common issue, indicative of real user experience."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.6,"reason":"Overly casual phrasing and structure, lacks the nuance of real user frustration."}
+{"sample_id":"R034","prediction":"real","confidence":0.85,"reason":"Specific issue with card functionality, typical of real user inquiries."}
+{"sample_id":"R240","prediction":"real","confidence":0.8,"reason":"Common question about transaction timing, phrasing is natural."}
+{"sample_id":"R112","prediction":"real","confidence":0.85,"reason":"Describes a common concern about unrecognized payments."}
+{"sample_id":"R097","prediction":"real","confidence":0.9,"reason":"Specific issue with vendor recognition, realistic user concern."}
+{"sample_id":"R173","prediction":"real","confidence":0.85,"reason":"Describes a common ATM issue, phrasing is typical of real experiences."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Inquiry about card tracking, realistic and relatable."}
+{"sample_id":"R195","prediction":"real","confidence":0.85,"reason":"Common issue of card decline, phrasing is natural."}
+{"sample_id":"R114","prediction":"real","confidence":0.9,"reason":"Describes confusion over a purchase, typical of real user experiences."}
+{"sample_id":"R065","prediction":"real","confidence":0.8,"reason":"Common question about fees, phrasing is typical of user inquiries."}

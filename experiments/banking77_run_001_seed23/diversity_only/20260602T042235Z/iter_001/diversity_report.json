@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, ambiguities, styles, noises, and scenario types, but there are some missing intent values and potential near-duplicates. The overall diversity is commendable, but attention to rare cases is needed.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "card_payment_wrong_exchange_rate",
+    "top_up_failed"
+  ],
+  "overrepresented_modes": [
+    "lost_or_stolen_card",
+    "card_payment_not_recognised"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for the missing intents to ensure full coverage.",
+    "Review the existing samples for near-duplicates and aim for more distinct phrasing.",
+    "Include more edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

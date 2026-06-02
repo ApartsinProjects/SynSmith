@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "requests for refunds or assistance",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of phrases like 'i seem to have been' and 'could you assist with'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'but' to introduce complications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inclusion of excessive detail in problem descriptions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of technical issues with apps",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints about service delays",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and to-the-point structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific technical issues mentioned",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with the issue followed by a request)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues with excessive context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of 'but' to introduce complications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "patterns of expressing frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with brief sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific product or service references",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise expressions of dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and lowercase",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more detailed explanations of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of phrases like 'not sure why' or 'unsure about how to proceed'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating the problem followed by an emotional response",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific product details (color, size) in complaints",
+      "n_pairs_observed": 1
+    }
+  ]
+}

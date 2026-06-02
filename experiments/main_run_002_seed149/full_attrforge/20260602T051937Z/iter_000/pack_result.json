@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "use of exclamation marks for emphasis",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "requests for refunds or cancellations",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "expressing disappointment or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of personal feelings (e.g., 'upset', 'disappointed')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific details without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "common complaint structure (issue followed by request for help)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with direct requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for beginnings of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of 'need' for urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "common structure of stating an issue followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at the service provider",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "personal anecdotes or specific examples of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of 'i don't understand' or 'i'm really upset'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct statements of issues without emotional elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical terms and specific details (e.g., 'error 404', 'safari 17')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, straightforward sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints about service or product",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of first-person perspective",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific references to technical issues or order details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration with technology",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specificity in describing issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of transitional phrases like 'especially when' and 'i mean'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "technical issues described with specific details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed at the end of statements",
+      "n_pairs_observed": 1
+    }
+  ]
+}

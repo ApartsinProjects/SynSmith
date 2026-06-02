@@ -1,0 +1,24 @@
+{"sample_id":"R127","prediction":"synthetic","confidence":0.8,"reason":"Over-polished grammar and vague context."}
+{"sample_id":"R211","prediction":"real","confidence":0.9,"reason":"Natural language with personal context and minor grammatical errors."}
+{"sample_id":"R069","prediction":"real","confidence":0.85,"reason":"Authentic concern with specific details about fees."}
+{"sample_id":"R109","prediction":"real","confidence":0.9,"reason":"Realistic inquiry about unrecognized charges."}
+{"sample_id":"R249","prediction":"real","confidence":0.8,"reason":"Specific question about a pending payment, natural phrasing."}
+{"sample_id":"R243","prediction":"synthetic","confidence":0.7,"reason":"Generic question lacking personal context."}
+{"sample_id":"R122","prediction":"real","confidence":0.85,"reason":"Specific inquiry about currency exchange charges."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Concise and realistic statement about unrecognized charges."}
+{"sample_id":"R279","prediction":"real","confidence":0.9,"reason":"Urgent and personal tone, realistic scenario."}
+{"sample_id":"R088","prediction":"real","confidence":0.85,"reason":"Specific concern about unauthorized payments."}
+{"sample_id":"R059","prediction":"synthetic","confidence":0.6,"reason":"Overly formal structure, lacks personal touch."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"Direct question about card status, natural phrasing."}
+{"sample_id":"R207","prediction":"real","confidence":0.95,"reason":"Urgent and personal request regarding a stolen card."}
+{"sample_id":"R272","prediction":"synthetic","confidence":0.5,"reason":"Vague question lacking detail."}
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Personal inquiry about card issues, realistic tone."}
+{"sample_id":"R141","prediction":"synthetic","confidence":0.6,"reason":"Generic statement about exchange rates."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Simple and realistic statement about card functionality."}
+{"sample_id":"R105","prediction":"real","confidence":0.9,"reason":"Specific concern about unauthorized payment."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Natural expression of frustration about card delivery."}
+{"sample_id":"R130","prediction":"synthetic","confidence":0.5,"reason":"Lacks personal context, overly formal."}
+{"sample_id":"R242","prediction":"real","confidence":0.85,"reason":"Specific inquiry about transaction times."}
+{"sample_id":"target_00047","prediction":"real","confidence":0.9,"reason":"Natural expression of confusion about account balance."}
+{"sample_id":"R267","prediction":"synthetic","confidence":0.6,"reason":"Vague statement lacking detail."}
+{"sample_id":"R136","prediction":"synthetic","confidence":0.5,"reason":"Generic statement about exchange rates."}

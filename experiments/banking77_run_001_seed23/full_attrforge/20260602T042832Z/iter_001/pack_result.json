@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "questions about fees or charges",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with a focus on specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct inquiries regarding account problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'why'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and exclamations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures regarding card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of formal language and structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct statements about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of emotional expression or personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "consistent sentence length and complexity",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "hey, i think i lost my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't find it anywhere",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what should i do?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can’t believe it!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "is that normal?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried to pay through my account but the payment is not going through.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "the atm sucked my card in.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i have a payment in my statement that is off.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "today i used my card at a restaurant and it was declined.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u', 'hey')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or concern about payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at customer service",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "narrative elements describing personal experiences (e.g., losing a card, pending payments)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card status or issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'card' in various contexts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with 'i' or 'can you'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at the service provider",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "descriptive scenarios involving transactions or account issues",
+      "n_pairs_observed": 1
+    }
+  ]
+}

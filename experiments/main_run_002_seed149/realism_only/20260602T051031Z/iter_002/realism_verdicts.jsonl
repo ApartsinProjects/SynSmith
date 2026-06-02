@@ -1,0 +1,24 @@
+{"sample_id":"target_00041","prediction":"real","confidence":0.9,"reason":"Natural expression of concern and personal stress, informal language."}
+{"sample_id":"target_00036","prediction":"real","confidence":0.85,"reason":"Casual language, use of slang ('idk'), and informal punctuation."}
+{"sample_id":"R013","prediction":"real","confidence":0.8,"reason":"Direct request with specific context, informal tone."}
+{"sample_id":"R022","prediction":"real","confidence":0.75,"reason":"Concise complaint with a clear issue, informal language."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Strong emotional expression and a clear request."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"Professional inquiry with specific context."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Incongruity between account issue and unrelated comment about the weather."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.65,"reason":"Overly formal and vague language, lacks specific details."}
+{"sample_id":"R005","prediction":"real","confidence":0.85,"reason":"Direct complaint with a clear request for action."}
+{"sample_id":"R020","prediction":"real","confidence":0.9,"reason":"Strong emotional expression and urgency in the complaint."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.6,"reason":"Overly polite and formal language, lacks urgency."}
+{"sample_id":"R021","prediction":"real","confidence":0.8,"reason":"Clear expression of frustration with a specific timeline."}
+{"sample_id":"R000","prediction":"real","confidence":0.85,"reason":"Direct and specific request with order details."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Casual language and clear request for a refund."}
+{"sample_id":"target_00033","prediction":"real","confidence":0.8,"reason":"Natural expression of a common issue with account access."}
+{"sample_id":"R029","prediction":"real","confidence":0.75,"reason":"Straightforward inquiry about service details."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Professional inquiry with specific technical context."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Specific issue with a clear request for assistance."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.5,"reason":"Overly detailed and formal language, lacks natural frustration."}
+{"sample_id":"R028","prediction":"real","confidence":0.7,"reason":"Simple inquiry with a clear focus on service details."}
+{"sample_id":"R011","prediction":"real","confidence":0.8,"reason":"Specific technical issue described in a straightforward manner."}
+{"sample_id":"target_00039","prediction":"real","confidence":0.85,"reason":"Emotional expression of disappointment, relatable context."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Direct complaint with a clear request for a refund."}
+{"sample_id":"target_00047","prediction":"real","confidence":0.75,"reason":"Casual language and straightforward question."}

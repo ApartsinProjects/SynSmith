@@ -1,0 +1,72 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Like,",
+      "n_synthetic_occurrences": 2,
+      "rationale": "The use of 'Like,' as a filler word is present in several synthetic samples but absent in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I just can't believe",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of disbelief is unique to the synthetic batch and does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Not sure if that affects anything, but can y",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is found in the synthetic samples and is not present in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’m really upset about",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This emotional expression is repeated in the synthetic samples and does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Can you help?",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This request for assistance is a common phrase in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I expected so much more from your service",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of disappointment is unique to the synthetic samples and not found in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Like,",
+      "n_synthetic_occurrences": 2,
+      "rationale": "The use of 'Like,' as a filler word is present in several synthetic samples but absent in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I just can't believe",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of disbelief is unique to the synthetic batch and does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Not sure if that affects anything, but can y",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is found in the synthetic samples and is not present in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "The batch exhibits a complete coverage of all attribute values, but there are some issues with missing attribute combinations and near-duplicate phrasings. Additionally, certain scenarios could benefit from more diverse representations.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "medium difficulty",
+    "low ambiguity"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse emotional styles to reduce overrepresentation.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that the generator includes a wider range of phrasings to avoid near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

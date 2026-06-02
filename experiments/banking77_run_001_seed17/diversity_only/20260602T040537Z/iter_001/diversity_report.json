@@ -1,0 +1,27 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attributes, but there are some missing intent values and potential near-duplicates. The diversity in phrasing could be improved to avoid redundancy.",
+  "missing_modes": [
+    "card_arrival",
+    "lost_or_stolen_card",
+    "card_payment_fee_charged"
+  ],
+  "overrepresented_modes": [
+    "top_up_failed",
+    "card_swallowed",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for missing intents such as 'card_arrival' and 'lost_or_stolen_card'.",
+    "Vary the phrasing and structure of similar intents to reduce redundancy.",
+    "Introduce more edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

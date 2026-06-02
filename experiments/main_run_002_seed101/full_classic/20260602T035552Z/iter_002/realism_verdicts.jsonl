@@ -1,0 +1,24 @@
+{"sample_id":"R127","prediction":"synthetic","confidence":0.8,"reason":"Overly simplistic and lacks detail; the phrase 'wing amount' is unusual."}
+{"sample_id":"R211","prediction":"real","confidence":0.9,"reason":"Natural language with a personal touch; includes specific context about card usage."}
+{"sample_id":"R069","prediction":"real","confidence":0.85,"reason":"Authentic concern about unexpected fees; conversational tone."}
+{"sample_id":"R109","prediction":"real","confidence":0.9,"reason":"Genuine inquiry about unrecognized charges; reflects real-world confusion."}
+{"sample_id":"R249","prediction":"real","confidence":0.8,"reason":"Realistic concern about pending payments; conversational structure."}
+{"sample_id":"R243","prediction":"synthetic","confidence":0.7,"reason":"Very generic and lacks specific context; feels formulaic."}
+{"sample_id":"R122","prediction":"real","confidence":0.85,"reason":"Specific question about currency exchange; reflects real-world concern."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Direct and straightforward; reflects a common issue with statements."}
+{"sample_id":"R279","prediction":"real","confidence":0.9,"reason":"Urgent tone and specific request; reflects a real-world scenario."}
+{"sample_id":"R088","prediction":"real","confidence":0.85,"reason":"Personalized inquiry about unrecognized payments; conversational."}
+{"sample_id":"R059","prediction":"synthetic","confidence":0.6,"reason":"Lacks depth and specificity; feels more like a template."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"Specific question about card tracking; realistic and relatable."}
+{"sample_id":"R207","prediction":"real","confidence":0.95,"reason":"Urgent and specific request about a stolen card; very realistic."}
+{"sample_id":"R272","prediction":"synthetic","confidence":0.5,"reason":"Vague and lacks personal context; feels generic."}
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Detailed inquiry about card rejections; reflects real concern."}
+{"sample_id":"R141","prediction":"synthetic","confidence":0.6,"reason":"Generic statement about an error; lacks personal touch."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Common issue with card functionality; realistic phrasing."}
+{"sample_id":"R105","prediction":"real","confidence":0.9,"reason":"Specific concern about an unauthorized payment; relatable."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Genuine concern about a delayed card; realistic and urgent."}
+{"sample_id":"R130","prediction":"synthetic","confidence":0.5,"reason":"Lacks specificity and feels more like a template question."}
+{"sample_id":"R242","prediction":"real","confidence":0.85,"reason":"Specific inquiry about transaction times; realistic context."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.4,"reason":"Overly casual and lacks depth; feels like a generic prompt."}
+{"sample_id":"R267","prediction":"real","confidence":0.8,"reason":"Concise and realistic statement about a failed transaction."}
+{"sample_id":"R136","prediction":"real","confidence":0.85,"reason":"Specific concern about exchange rates; reflects real-world issues."}

@@ -1,0 +1,24 @@
+{"sample_id":"target_00002","prediction":"real","confidence":0.9,"reason":"Casual language and personal context suggest authenticity."}
+{"sample_id":"target_00015","prediction":"real","confidence":0.85,"reason":"Informal tone and abbreviations indicate a genuine user message."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.8,"reason":"Formal structure and lack of personal touch suggest it is generated."}
+{"sample_id":"R000","prediction":"synthetic","confidence":0.75,"reason":"Overly formal and structured, lacking personal context."}
+{"sample_id":"R021","prediction":"synthetic","confidence":0.7,"reason":"Direct and concise, but lacks emotional nuance."}
+{"sample_id":"target_00012","prediction":"real","confidence":0.9,"reason":"Conversational tone and specific details indicate a real user."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.75,"reason":"Lacks personal context and emotional engagement."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.8,"reason":"Technical inquiry with no personal touch suggests generation."}
+{"sample_id":"R009","prediction":"synthetic","confidence":0.8,"reason":"Technical language and structure indicate a generated response."}
+{"sample_id":"R025","prediction":"synthetic","confidence":0.75,"reason":"Generic question lacking personal context."}
+{"sample_id":"target_00011","prediction":"real","confidence":0.85,"reason":"Polite and detailed inquiry suggests a real user."}
+{"sample_id":"R015","prediction":"synthetic","confidence":0.7,"reason":"Direct and lacks emotional nuance, suggesting generation."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.75,"reason":"Straightforward complaint without personal context."}
+{"sample_id":"target_00007","prediction":"real","confidence":0.9,"reason":"Casual tone and personal details indicate authenticity."}
+{"sample_id":"target_00005","prediction":"real","confidence":0.85,"reason":"Conversational style and specific context suggest a real user."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.7,"reason":"Direct complaint lacking personal context."}
+{"sample_id":"target_00009","prediction":"real","confidence":0.9,"reason":"Emotional concern and personal context indicate authenticity."}
+{"sample_id":"R012","prediction":"synthetic","confidence":0.75,"reason":"Technical issue presented in a straightforward manner."}
+{"sample_id":"R020","prediction":"synthetic","confidence":0.7,"reason":"Frustration expressed but lacks personal detail."}
+{"sample_id":"target_00006","prediction":"real","confidence":0.85,"reason":"Detailed explanation of a personal issue suggests authenticity."}
+{"sample_id":"target_00013","prediction":"synthetic","confidence":0.8,"reason":"Overly formal and structured, lacking personal touch."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.75,"reason":"Generic inquiry lacking personal context."}
+{"sample_id":"target_00016","prediction":"real","confidence":0.9,"reason":"Emotional expression and personal context indicate authenticity."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.75,"reason":"Direct complaint with no personal context suggests generation."}

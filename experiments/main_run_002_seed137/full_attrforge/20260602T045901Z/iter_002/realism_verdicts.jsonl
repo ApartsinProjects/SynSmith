@@ -1,0 +1,24 @@
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Casual language and specific issue indicate a real user experience."}
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Direct and personal issue with a common service, typical of real user complaints."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and lacks specific details that would be typical in real user complaints."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.8,"reason":"Verbose and structured in a way that feels scripted, lacking real-world noise."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Concise and straightforward request typical of real customer service interactions."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"Emotional language and personal experience suggest a real user complaint."}
+{"sample_id":"target_00033","prediction":"synthetic","confidence":0.6,"reason":"Generic phrasing and structure, lacks the urgency and specificity of real complaints."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"Overly detailed and structured, feels more like a prompt than a real inquiry."}
+{"sample_id":"target_00036","prediction":"synthetic","confidence":0.75,"reason":"The narrative style and added detail about the cat feel contrived."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct and clear request typical of real customer service issues."}
+{"sample_id":"target_00041","prediction":"synthetic","confidence":0.8,"reason":"Structured and detailed, lacks the urgency and emotional weight of real complaints."}
+{"sample_id":"R015","prediction":"real","confidence":0.85,"reason":"Direct and specific issue with a common service, typical of real user experiences."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Common issue with a straightforward request, indicative of real user interaction."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"Specific inquiry about service status, typical of real user concerns."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Emotional language and frustration suggest a real user experience."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Direct and urgent issue typical of real user complaints."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Clear and concise request typical of real customer service interactions."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.7,"reason":"Casual phrasing but lacks the urgency and specificity of real inquiries."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Frustration and specific complaint suggest a real user experience."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.75,"reason":"Structured and overly detailed, feels scripted rather than spontaneous."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.7,"reason":"Formal and generic phrasing lacks the personal touch of real inquiries."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Specific technical inquiry typical of real user concerns."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Direct and urgent request typical of real customer service issues."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.75,"reason":"Overly dramatic and structured, lacks the authenticity of real user experiences."}

@@ -1,0 +1,24 @@
+{"sample_id":"R029","prediction":"real","confidence":0.9,"reason":"Natural phrasing, straightforward question about billing."}
+{"sample_id":"R028","prediction":"real","confidence":0.85,"reason":"Casual tone, specific inquiry about product tiers."}
+{"sample_id":"R013","prediction":"real","confidence":0.9,"reason":"Realistic scenario with urgency and specific details."}
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"Common user issue with a clear request for help."}
+{"sample_id":"R005","prediction":"real","confidence":0.95,"reason":"Direct complaint with a request for action, realistic context."}
+{"sample_id":"target_00031","prediction":"synthetic","confidence":0.7,"reason":"Overly polished grammar, lacks real-world noise."}
+{"sample_id":"target_00029","prediction":"synthetic","confidence":0.6,"reason":"Vague phrasing and filler words suggest artificial generation."}
+{"sample_id":"R024","prediction":"real","confidence":0.85,"reason":"Technical inquiry with a specific focus, realistic context."}
+{"sample_id":"target_00017","prediction":"synthetic","confidence":0.65,"reason":"Generic phrasing and lack of specific details."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Clear complaint with a specific request, realistic scenario."}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"Technical issue described with specific details."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Urgent request for refund or replacement, realistic context."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Specific technical issue with a clear description."}
+{"sample_id":"target_00028","prediction":"synthetic","confidence":0.5,"reason":"Informal language and spelling errors suggest artificial generation."}
+{"sample_id":"target_00022","prediction":"real","confidence":0.85,"reason":"Direct complaint with a clear request, realistic context."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Specific inquiry about future product options."}
+{"sample_id":"target_00018","prediction":"synthetic","confidence":0.6,"reason":"Confused phrasing and informal language suggest artificial generation."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"Urgent request for account recovery, realistic context."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Frustrated customer complaint with specific details."}
+{"sample_id":"target_00019","prediction":"synthetic","confidence":0.5,"reason":"Unusual combination of issues and informal language."}
+{"sample_id":"target_00032","prediction":"synthetic","confidence":0.7,"reason":"Generic phrasing and lack of specific details."}
+{"sample_id":"target_00024","prediction":"synthetic","confidence":0.6,"reason":"Overly emotional language and vague context suggest artificial generation."}
+{"sample_id":"target_00030","prediction":"synthetic","confidence":0.5,"reason":"Informal language and spelling suggest artificial generation."}
+{"sample_id":"R007","prediction":"real","confidence":0.85,"reason":"Technical issue described with specific details."}

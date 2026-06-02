@@ -1,0 +1,12 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style. Ensure the messages are plausible for a customer support channel (email, chat, in-app form) and vary in structure and phrasing to avoid repetition. Incorporate a diverse range of intents, including underrepresented scenarios like 'card_payment_fee_charged', 'card_not_working', and 'pending_card_payment'. Keep the messages short to medium length, with some containing conversational elements and emotional expressions. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- 'I noticed a charge on my statement'
+- 'I attempted to top up my card'
+- "I'm so anxious!"
+- 'Can you help me with this? Thanks!'
+- 'I’ve checked my account'
+- "Can you check what's going on?"
+- 'I feel confused about the rate!'
+
+Ensure the generated messages reflect a variety of emotional tones, including urgency and confusion, with some containing minor errors or informal language to enhance realism. Aim for diversity in expressions and scenarios to cover a broader range of customer experiences. The output should balance difficulty and ambiguity while maintaining clarity of intent. Avoid overly simplistic or generic responses to ensure a rich dataset for training. Introduce formal styles and emotional depth to enhance the dataset's diversity and realism."""""

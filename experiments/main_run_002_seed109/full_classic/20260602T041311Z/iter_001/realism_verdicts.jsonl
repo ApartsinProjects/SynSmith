@@ -1,0 +1,24 @@
+{"sample_id":"R139","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; lacks over-polished grammar."}
+{"sample_id":"R161","prediction":"real","confidence":0.95,"reason":"Casual tone and urgency; reflects a common real-world scenario."}
+{"sample_id":"R085","prediction":"real","confidence":0.9,"reason":"Direct question with relatable context; feels authentic."}
+{"sample_id":"R248","prediction":"real","confidence":0.85,"reason":"Simple and straightforward inquiry; lacks complexity."}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"Personalized inquiry; reflects a common concern."}
+{"sample_id":"R080","prediction":"real","confidence":0.85,"reason":"Common issue phrased in a relatable manner."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Specific question about tracking; feels genuine."}
+{"sample_id":"R101","prediction":"real","confidence":0.9,"reason":"Direct and clear expression of confusion; realistic."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Natural concern about fees; phrasing is typical."}
+{"sample_id":"R222","prediction":"real","confidence":0.9,"reason":"Direct and urgent request; feels authentic."}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and formal; lacks real-world noise."}
+{"sample_id":"R221","prediction":"real","confidence":0.9,"reason":"Casual and urgent tone; reflects a common issue."}
+{"sample_id":"R109","prediction":"real","confidence":0.85,"reason":"Realistic concern about charges; phrasing is typical."}
+{"sample_id":"R093","prediction":"synthetic","confidence":0.6,"reason":"Unclear phrasing; lacks context and realism."}
+{"sample_id":"R067","prediction":"real","confidence":0.8,"reason":"Common question about fees; phrasing is relatable."}
+{"sample_id":"R158","prediction":"real","confidence":0.85,"reason":"Direct and clear issue; feels authentic."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.5,"reason":"Poor grammar and structure; lacks clarity."}
+{"sample_id":"R159","prediction":"real","confidence":0.85,"reason":"Direct inquiry about a common issue; feels genuine."}
+{"sample_id":"R175","prediction":"real","confidence":0.8,"reason":"Common concern about card decline; phrasing is typical."}
+{"sample_id":"R212","prediction":"real","confidence":0.85,"reason":"Specific inquiry about card status; feels authentic."}
+{"sample_id":"R279","prediction":"real","confidence":0.9,"reason":"Urgent and relatable request; reflects real-world urgency."}
+{"sample_id":"R216","prediction":"real","confidence":0.85,"reason":"Direct question about reporting theft; feels genuine."}
+{"sample_id":"R118","prediction":"real","confidence":0.8,"reason":"Common issue with exchange rates; phrasing is typical."}
+{"sample_id":"R046","prediction":"real","confidence":0.85,"reason":"Direct and relatable question about card decline."}

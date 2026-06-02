@@ -1,0 +1,21 @@
+""""""Generate realistic banking customer-support messages that match the requested intent and style. Ensure a diverse range of intents, including but not limited to card_swallowed, declined_card_payment, card_payment_fee_charged, card_payment_wrong_exchange_rate, top_up_failed, general_inquiry with emotional style, and transaction_issue with fragmented style. Vary the difficulty levels across all intents to avoid overrepresentation of any single mode. Incorporate diverse phrasing and styles to minimize near-duplicate instances, aiming for distinctiveness in each sample. The examples should be plausible for a customer support channel (email, chat, in-app form) and maintain a short to medium length.
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "unique_identifier",
+  "text": "customer support message text",
+  "attributes": {
+    "intent": "specific_intent",
+    "style": "chosen_style",
+    "difficulty": "level_of_difficulty",
+    "scenario_type": "type_of_scenario"
+  }
+}
+
+Forbidden phrasings: 
+- "My card payment has been declined, why?"
+- "The ATM took my card."
+- "I do not recognise the card payment."
+- "Why was I charged an extra fee when using the card?"
+
+Encourage the generation of samples for missing intents and ensure full coverage while reducing the frequency of overrepresented modes. Aim for a near-duplicate rate below 0.1 by enhancing the distinctiveness of phrasing and incorporating more edge cases or rare scenarios to enrich diversity. """"""

@@ -1,0 +1,30 @@
+{
+  "summary": "The batch exhibits a good variety of intents and styles, but there are some missing attribute values and combinations, particularly in the 'intent' category. Additionally, there are near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "intent: card_swallowed",
+    "intent: declined_card_payment",
+    "intent: lost_or_stolen_card (in informal style)",
+    "style: fragmented (in other intents)",
+    "scenario_type: card_handling (in emotional style)"
+  ],
+  "overrepresented_modes": [
+    "intent: card_payment_wrong_exchange_rate",
+    "intent: card_not_working",
+    "style: informal",
+    "style: verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of examples for missing intents, especially 'card_swallowed' and 'declined_card_payment'.",
+    "Diversify the styles used for existing intents, particularly in the emotional and fragmented styles.",
+    "Reduce redundancy in phrasing by ensuring unique expressions for similar intents."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

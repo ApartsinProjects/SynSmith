@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents, difficulties, ambiguities, styles, and scenario types. However, there is a notable absence of certain noise types and some modes are overrepresented.",
+  "missing_modes": [
+    "typos",
+    "missing_details",
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "irrelevant_details",
+    "clean"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with missing details to enhance diversity.",
+    "Introduce more scenarios with contradictions to balance the noise types.",
+    "Reduce the frequency of samples with irrelevant details to avoid overrepresentation."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

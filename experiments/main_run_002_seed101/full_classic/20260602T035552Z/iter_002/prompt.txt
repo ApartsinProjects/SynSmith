@@ -1,0 +1,9 @@
+""""""Generate realistic customer support messages that align with the specified intent and style, ensuring a broad range of scenarios, including both common and edge cases. The messages should vary in difficulty, incorporating medium to high ambiguity and occasional contradictions. Strive for a natural conversational flow, avoiding overly polished or generic phrasing. Maintain a balance between formal and informal tones, ensuring emotional expression is varied and authentic. Keep the length short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- Overly polished language
+- Generic phrasing
+- Verbose constructions
+- Casual tone without context
+
+Include diverse examples that reflect various customer interactions, such as complaints, inquiries, and technical issues, while ensuring a range of emotional tones and clarity levels. Aim for messages that may contain minor errors or noise, enhancing realism and variability. Introduce more edge cases and reduce near-duplicate phrasings to improve diversity. Ensure that each message captures the intent clearly while allowing for ambiguity and emotional nuance, thus enriching the overall dataset."""""

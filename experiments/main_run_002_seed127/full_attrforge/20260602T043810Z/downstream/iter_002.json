@@ -1,0 +1,66 @@
+{
+  "accuracy": 0.3,
+  "macro_f1": 0.22222222222222224,
+  "per_class_f1": {
+    "account_issue": 0.4444444444444445,
+    "complaint": 0.0,
+    "general_question": 0.0,
+    "refund_request": 0.6666666666666666,
+    "technical_problem": 0.0
+  },
+  "per_class_support": {
+    "account_issue": 2,
+    "complaint": 2,
+    "general_question": 2,
+    "refund_request": 2,
+    "technical_problem": 2
+  },
+  "confusion": {
+    "account_issue": {
+      "account_issue": 2,
+      "complaint": 0,
+      "general_question": 0,
+      "refund_request": 0,
+      "technical_problem": 0
+    },
+    "complaint": {
+      "account_issue": 1,
+      "complaint": 0,
+      "general_question": 1,
+      "refund_request": 0,
+      "technical_problem": 0
+    },
+    "general_question": {
+      "account_issue": 2,
+      "complaint": 0,
+      "general_question": 0,
+      "refund_request": 0,
+      "technical_problem": 0
+    },
+    "refund_request": {
+      "account_issue": 1,
+      "complaint": 0,
+      "general_question": 0,
+      "refund_request": 1,
+      "technical_problem": 0
+    },
+    "technical_problem": {
+      "account_issue": 1,
+      "complaint": 0,
+      "general_question": 1,
+      "refund_request": 0,
+      "technical_problem": 0
+    }
+  },
+  "n_train": 16,
+  "n_test": 10,
+  "label_set": [
+    "account_issue",
+    "complaint",
+    "general_question",
+    "refund_request",
+    "technical_problem"
+  ],
+  "notes": "",
+  "iteration": 2
+}

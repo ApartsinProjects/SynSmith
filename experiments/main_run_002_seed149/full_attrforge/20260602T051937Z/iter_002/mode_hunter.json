@@ -1,0 +1,96 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I seem to have been charged for a product I didn't receive",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about being charged for a non-received product does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I updated my username but can't log in now",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure regarding username updates and login issues is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was promised a different product than what I received",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific complaint about receiving a different product is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I've tried resetting my password multiple times",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This repetitive mention of multiple password reset attempts is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I feel let down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase expressing disappointment does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this is happening!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This dramatic expression of disbelief is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was really looking forward to wearing it!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of anticipation is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey, so like,",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal opener is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Can you check that for me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request phrasing does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I think I might've forgotten the password.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing is a unique way of expressing uncertainty about password recall.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "not sure what's happening.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of confusion is not found in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I seem to have been charged for a product I didn't receive",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about being charged for a non-received product does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I updated my username but can't log in now",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure regarding username updates and login issues is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was promised a different product than what I received",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific complaint about receiving a different product is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I've tried resetting my password multiple times",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This repetitive mention of multiple password reset attempts is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

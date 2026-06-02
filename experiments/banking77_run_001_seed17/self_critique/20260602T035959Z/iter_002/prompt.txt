@@ -1,0 +1,16 @@
+""""""Generate realistic banking customer-support messages that match the requested intent and style. Ensure a diverse range of intents, including 'lost_or_stolen_card', 'declined_card_payment', 'card_payment_fee_charged', and 'general_inquiry', while reducing the prevalence of overrepresented intents like 'top_up_failed'. Incorporate a variety of styles, balancing formal and informal options, to enhance uniqueness and reduce redundancy in phrasing. The messages should be plausible for a customer support channel (email, chat, in-app form) and vary in length from short to medium. 
+
+Encourage the generation of complex scenarios that combine multiple intents or attributes, reflecting real customer interactions.
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "<unique_identifier>",
+  "text": "<customer_support_message>",
+  "attributes": {
+    "intent": "<specific_intent>",
+    "style": "<style_type>",
+    "scenario_type": "<type_of_interaction>"
+  }
+}
+
+Forbidden phrasings: ["I’m sorry, but", "Unfortunately", "Please let us know if you need further assistance."]""""""

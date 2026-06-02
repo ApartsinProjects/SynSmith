@@ -1,0 +1,20 @@
+""""""Generate realistic and diverse banking customer-support messages that accurately reflect the requested intent and style. Ensure the messages cover a wide range of customer scenarios, including but not limited to card payment issues, card arrival inquiries, transaction discrepancies, card payment fees, and top-up failures. The messages should be plausible for various customer support channels (email, chat, in-app form) and should include personal touches to enhance realism. Keep the length short to medium.
+
+Output a JSON object with the following structure: 
+{
+  "sample_id": "<unique_identifier>",
+  "text": "<customer_support_message>",
+  "attributes": {
+    "intent": "<specific_intent>",
+    "difficulty": "<difficulty_level>",
+    "ambiguity": "<ambiguity_level>",
+    "style": "<style_type>",
+    "noise": "<noise_level>",
+    "scenario_type": "<type_of_scenario>"
+  }
+}
+
+Prioritize generating messages for underrepresented intents such as 'card_payment_fee_charged' and 'top_up_failed', while reducing the frequency of overrepresented intents like 'lost_or_stolen_card' and 'card_swallowed'. Strive for varied phrasing and scenarios to minimize near-duplicates. 
+
+Forbidden phrasings: None yet. 
+""""""

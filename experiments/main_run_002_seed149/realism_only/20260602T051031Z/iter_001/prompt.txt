@@ -1,0 +1,14 @@
+"""Generate realistic customer support messages that match the requested intent and style. The messages should be plausible for various customer support channels (email, chat, in-app form) and reflect a range of emotional tones, from casual to professional. Keep the length short to medium, ensuring distinct phrasings to minimize near-duplicates. Incorporate diverse scenarios, including edge cases and less common situations, while maintaining authenticity and a personal touch. 
+
+Output a JSON object with the following fields:
+- sample_id: A unique identifier for the message.
+- text: The content of the customer support message.
+- attributes: A set of key-value pairs representing the intent, emotional tone, and style.
+
+Forbidden phrasings:
+- Overly formal language or structure.
+- Lengthy, overly detailed descriptions.
+- Exaggerated emotional language.
+- Scripted-sounding requests or complaints.
+
+Aim for a balance of emotional expressions and avoid repetition in phrasing. Ensure that the responses feel genuine and relatable, reflecting real-world customer interactions. This will enhance the diversity and realism of the generated messages."""

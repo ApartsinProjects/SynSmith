@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "direct statements of issues without much elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon or specific error codes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on the problem at hand",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct statements of frustration or issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "consistent structure of stating a problem followed by a brief description of the context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with a focus on specific technical issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures that emphasize problems with apps or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'i was really surprised' or 'so, funny thing happened'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy explanations with emotional undertones",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and filler phrases like 'what's going on?' and 'can someone help me figure this out?'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a straightforward manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "technical issues described with specific details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase letters at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i noticed a",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i don't recognize",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "explain what it is",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "help me figure out",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried [action], but it didn't go through",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you check what's wrong?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it's really frustrating because [reason]",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "please advise on how to proceed with [action]",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'hey' as an opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of surprise or concern regarding payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on personal experiences with payments",
+      "n_pairs_observed": 1
+    }
+  ]
+}

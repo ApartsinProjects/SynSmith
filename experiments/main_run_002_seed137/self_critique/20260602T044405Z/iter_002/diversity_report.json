@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good variety of intents and difficulties, but there are notable gaps in style representation and noise types. Additionally, there are some near-duplicate phrasings that could be addressed.",
+  "missing_modes": [
+    "verbose",
+    "fragmented"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "irrelevant_details"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more verbose and fragmented styles to enhance diversity.",
+    "Introduce more examples with noise types like contradiction and missing_details to balance the representation.",
+    "Review and refine near-duplicate phrasings to ensure unique expressions across similar intents."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

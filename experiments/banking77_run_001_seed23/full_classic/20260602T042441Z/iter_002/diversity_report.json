@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good variety of intents and difficulties, but there are notable gaps in the representation of certain styles and noise types. Additionally, some intents are underrepresented, and there are instances of near-duplicate phrasing.",
+  "missing_modes": [
+    "intent: lost_or_stolen_card, card_payment_fee_charged, card_payment_not_recognised",
+    "style: concise",
+    "noise: clean, typos"
+  ],
+  "overrepresented_modes": [
+    "intent: pending_card_payment, card_not_working",
+    "style: informal, verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of concise style responses to balance the variety.",
+    "Include more examples of clean noise and typos to enhance diversity.",
+    "Ensure all intents are represented more evenly, particularly the less common ones."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

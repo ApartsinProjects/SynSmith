@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of intents, difficulties, ambiguities, styles, and scenario types. However, there are some missing noise attributes and a notable presence of near-duplicate phrasings.",
+  "missing_modes": [
+    "contradiction",
+    "clean"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with the 'contradiction' noise attribute to enhance diversity.",
+    "Reduce the frequency of 'informal' and 'verbose' styles to balance the representation of styles.",
+    "Introduce more edge cases and rare scenarios to broaden the range of situations covered."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

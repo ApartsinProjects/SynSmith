@@ -1,0 +1,131 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "lack of detailed context or emotional expression",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "expressions of stress or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of phrases like 'i made a payment' or 'it just won't work'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help that include personal feelings or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i lost track of my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you look at my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "why can't i use my card?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my credit card for was not approved",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried to [action] but [issue]",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i lost my card!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what's going on?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "help!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "opening with a greeting or casual phrase",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or requests for updates",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with variations in details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of phrases like 'look into this' or 'take a look'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "there is a payment i don't recognize",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "there is a card payment that i'm not recognizing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of expressing confusion about payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple, direct language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions that are elaborated with additional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with variations in wording",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'payment' and 'card'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    }
+  ]
+}

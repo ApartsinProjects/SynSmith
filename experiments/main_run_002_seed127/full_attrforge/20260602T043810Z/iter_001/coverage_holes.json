@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.8954726790967127
+    },
+    {
+      "text": "Why is my card payment still a pending transaction?",
+      "label": "pending_card_payment",
+      "p_real": 0.8951828728462038
+    },
+    {
+      "text": "Why is the exchange rate for my payment incorrect?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8929060142709756
+    },
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.8892077622374671
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

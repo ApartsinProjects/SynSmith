@@ -1,0 +1,24 @@
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common question about card tracking."}
+{"sample_id":"R107","prediction":"real","confidence":0.85,"reason":"Authentic concern about unrecognized payments, informal tone."}
+{"sample_id":"R092","prediction":"real","confidence":0.8,"reason":"Simple and direct, typical user inquiry."}
+{"sample_id":"R109","prediction":"real","confidence":0.9,"reason":"Detailed and specific, reflects real user frustration."}
+{"sample_id":"R190","prediction":"real","confidence":0.8,"reason":"Casual language, expresses a common issue with payments."}
+{"sample_id":"R281","prediction":"real","confidence":0.75,"reason":"Realistic question about account functionality."}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"Common user experience, informal tone."}
+{"sample_id":"R158","prediction":"real","confidence":0.9,"reason":"Authentic scenario involving ATM issues."}
+{"sample_id":"R245","prediction":"real","confidence":0.8,"reason":"Standard inquiry about payment processing time."}
+{"sample_id":"R136","prediction":"real","confidence":0.75,"reason":"User expresses concern about exchange rates, realistic."}
+{"sample_id":"R105","prediction":"real","confidence":0.85,"reason":"Common issue with payment apps, natural phrasing."}
+{"sample_id":"R062","prediction":"real","confidence":0.8,"reason":"Detailed inquiry about fees, reflects user confusion."}
+{"sample_id":"R142","prediction":"real","confidence":0.75,"reason":"Realistic concern about exchange rates, informal."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.6,"reason":"Overly formal and abrupt phrasing, lacks natural flow."}
+{"sample_id":"R065","prediction":"real","confidence":0.85,"reason":"Common question about fees, straightforward."}
+{"sample_id":"R104","prediction":"real","confidence":0.8,"reason":"User expresses concern about unauthorized payments."}
+{"sample_id":"R269","prediction":"real","confidence":0.75,"reason":"Realistic issue with app functionality."}
+{"sample_id":"R209","prediction":"real","confidence":0.9,"reason":"Authentic scenario involving theft and card cancellation."}
+{"sample_id":"R122","prediction":"real","confidence":0.8,"reason":"Common inquiry about currency exchange fees."}
+{"sample_id":"R041","prediction":"real","confidence":0.85,"reason":"Typical user issue with physical cards."}
+{"sample_id":"R235","prediction":"real","confidence":0.8,"reason":"Common issue with payment processing, natural phrasing."}
+{"sample_id":"R103","prediction":"real","confidence":0.85,"reason":"User expresses confusion about a payment, realistic."}
+{"sample_id":"R155","prediction":"real","confidence":0.9,"reason":"Common scenario involving ATM issues."}
+{"sample_id":"R273","prediction":"real","confidence":0.75,"reason":"Realistic concern about account top-up functionality."}

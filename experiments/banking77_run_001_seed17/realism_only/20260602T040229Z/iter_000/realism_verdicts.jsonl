@@ -1,0 +1,24 @@
+{"sample_id":"R088","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; reflects a common customer issue."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.8,"reason":"Overly vague and lacks context; feels like a generic prompt."}
+{"sample_id":"R032","prediction":"real","confidence":0.85,"reason":"Direct and relatable question; typical customer concern."}
+{"sample_id":"R219","prediction":"real","confidence":0.9,"reason":"Clear and specific request; common scenario for card issues."}
+{"sample_id":"R076","prediction":"real","confidence":0.9,"reason":"Straightforward question; reflects a common customer inquiry."}
+{"sample_id":"R029","prediction":"real","confidence":0.85,"reason":"Natural language; typical issue faced by users."}
+{"sample_id":"R167","prediction":"real","confidence":0.9,"reason":"Specific situation described; realistic customer experience."}
+{"sample_id":"R101","prediction":"real","confidence":0.9,"reason":"Common issue with clear expression; relatable to users."}
+{"sample_id":"R153","prediction":"real","confidence":0.85,"reason":"Polite request; reflects a typical customer service interaction."}
+{"sample_id":"R261","prediction":"real","confidence":0.8,"reason":"Specific problem stated; realistic customer concern."}
+{"sample_id":"R149","prediction":"real","confidence":0.9,"reason":"Direct and clear description of a common issue."}
+{"sample_id":"R178","prediction":"real","confidence":0.85,"reason":"Common question regarding card usage; relatable."}
+{"sample_id":"R280","prediction":"synthetic","confidence":0.7,"reason":"Lacks natural phrasing; feels more like a template."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Specific issue with clear language; typical for users."}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"Natural phrasing; reflects a common inquiry."}
+{"sample_id":"R099","prediction":"real","confidence":0.9,"reason":"Specific and relatable issue; common for card users."}
+{"sample_id":"R285","prediction":"synthetic","confidence":0.75,"reason":"Somewhat generic structure; lacks personal touch."}
+{"sample_id":"R052","prediction":"real","confidence":0.85,"reason":"Clear and relatable question; typical customer concern."}
+{"sample_id":"R114","prediction":"real","confidence":0.85,"reason":"Specific issue with clear context; realistic."}
+{"sample_id":"R086","prediction":"real","confidence":0.85,"reason":"Common question regarding fees; relatable."}
+{"sample_id":"R171","prediction":"synthetic","confidence":0.7,"reason":"Unusual phrasing; lacks natural flow."}
+{"sample_id":"R125","prediction":"real","confidence":0.8,"reason":"Specific issue with clear context; realistic."}
+{"sample_id":"target_00016","prediction":"real","confidence":0.9,"reason":"Natural phrasing; reflects a common customer issue."}
+{"sample_id":"R163","prediction":"real","confidence":0.85,"reason":"Direct question about a common problem; relatable."}

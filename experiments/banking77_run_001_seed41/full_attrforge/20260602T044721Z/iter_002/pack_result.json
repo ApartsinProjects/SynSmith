@@ -1,0 +1,159 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of informal language and conversational tone (e.g., 'what's up with that?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with 'i tried' or 'i made')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing around payment issues (e.g., 'payment just got declined', 'payment but it wasn't recognized')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual openings (e.g., 'hey, i tried...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal pronouns and emotional language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i don't know what's wrong with my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it is still listed as pending",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how long does it take for a purchase",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "please help.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone (e.g., 'what’s up with that?', 'just hanging around')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a casual manner (e.g., 'can you check the details?', 'can you check it out?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of phrases like 'just stuck in limbo' and 'not sure how this happened?' which indicate a casual, narrative style",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i believe my",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how can i",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what can be done about this?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you look at my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i don't recognize at all",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i misplaced my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing (e.g., 'smth', 'what's up with that?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers (e.g., 'hey', 'i'm a bit confused')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone and use of abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' or 'i'm a bit confused'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning about card status or charges",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone and informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was wondering why",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my card was",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "payment with my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "definitely did not make",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "maximum how many days",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "topped up my account but",
+      "n_pairs_observed": 1
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.6697095646675135
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6677719110417302
+    },
+    {
+      "text": "I've been a customer for years and this is by far the worst experience. Cancel my plan.",
+      "label": "complaint",
+      "p_real": 0.6587799562822035
+    },
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6563420057307958
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

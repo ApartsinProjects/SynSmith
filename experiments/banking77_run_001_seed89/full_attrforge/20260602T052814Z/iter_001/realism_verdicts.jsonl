@@ -1,0 +1,24 @@
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward request indicate a genuine customer complaint."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Direct and specific issue with a clear request, typical of real customer interactions."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Natural phrasing and a common issue with password resets suggest authenticity."}
+{"sample_id":"target_00028","prediction":"synthetic","confidence":0.7,"reason":"Overly formal structure and generic vocabulary make it sound less authentic."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Specific issue with a personal account, typical of real user experiences."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Casual language and a specific technical issue indicate a genuine user complaint."}
+{"sample_id":"target_00030","prediction":"real","confidence":0.8,"reason":"Conversational tone and a relatable situation suggest authenticity."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"Urgent and personal issue with account security, typical of real customer interactions."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct complaint about an order with a clear request for a refund indicates authenticity."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"Specific complaint about a damaged item with a request for resolution suggests a real user."}
+{"sample_id":"R015","prediction":"real","confidence":0.85,"reason":"Specific issue with account management, typical of real customer inquiries."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Clear issue with a specific order number indicates a genuine customer complaint."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.6,"reason":"Formal language and technical jargon make it sound less like a real customer."}
+{"sample_id":"R022","prediction":"real","confidence":0.8,"reason":"Direct complaint about a service issue, typical of real user experiences."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Emotional language and a strong complaint suggest a genuine customer experience."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.65,"reason":"Formal structure and lack of personal touch make it sound less authentic."}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"Specific technical issue with a clear request for information indicates authenticity."}
+{"sample_id":"R029","prediction":"real","confidence":0.8,"reason":"Simple and direct question about billing, typical of real customer inquiries."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Clear complaint about subscription management, typical of real user experiences."}
+{"sample_id":"R008","prediction":"real","confidence":0.85,"reason":"Specific technical issue with a clear request for help indicates authenticity."}
+{"sample_id":"target_00019","prediction":"real","confidence":0.8,"reason":"Casual language and a relatable issue suggest a genuine customer complaint."}
+{"sample_id":"target_00027","prediction":"real","confidence":0.85,"reason":"Specific complaint about a fee with a request for clarification indicates authenticity."}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"Direct question about discounts, typical of real customer inquiries."}
+{"sample_id":"target_00032","prediction":"real","confidence":0.75,"reason":"Conversational tone and a relatable issue suggest authenticity."}

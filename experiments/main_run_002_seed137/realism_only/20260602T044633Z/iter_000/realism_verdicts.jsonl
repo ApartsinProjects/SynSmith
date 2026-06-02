@@ -1,0 +1,24 @@
+{"sample_id":"target_00008","prediction":"real","confidence":0.9,"reason":"Natural conversational tone, specific issue with a personal account."}
+{"sample_id":"R122","prediction":"synthetic","confidence":0.7,"reason":"Overly formal structure, lacks personal touch."}
+{"sample_id":"R155","prediction":"real","confidence":0.85,"reason":"Direct and relatable question about a common issue."}
+{"sample_id":"target_00004","prediction":"real","confidence":0.9,"reason":"Personalized issue with a login, natural phrasing."}
+{"sample_id":"R171","prediction":"synthetic","confidence":0.6,"reason":"Unusual phrasing and lack of clarity."}
+{"sample_id":"R110","prediction":"synthetic","confidence":0.65,"reason":"Generic vocabulary and vague description."}
+{"sample_id":"R086","prediction":"real","confidence":0.8,"reason":"Common concern with a clear question."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Specific inquiry about a personal situation."}
+{"sample_id":"R157","prediction":"real","confidence":0.9,"reason":"Direct and relatable issue with an ATM."}
+{"sample_id":"R106","prediction":"real","confidence":0.8,"reason":"Personal account issue with a clear statement."}
+{"sample_id":"R063","prediction":"real","confidence":0.85,"reason":"Specific question about a charge, relatable context."}
+{"sample_id":"R145","prediction":"real","confidence":0.8,"reason":"Direct inquiry about a common ATM issue."}
+{"sample_id":"R277","prediction":"real","confidence":0.75,"reason":"Common issue with a straightforward question."}
+{"sample_id":"R221","prediction":"real","confidence":0.9,"reason":"Simple and direct request for help."}
+{"sample_id":"R253","prediction":"synthetic","confidence":0.7,"reason":"Lacks personal context, feels generic."}
+{"sample_id":"R112","prediction":"real","confidence":0.85,"reason":"Clear and relevant question about account security."}
+{"sample_id":"R091","prediction":"real","confidence":0.9,"reason":"Detailed concern about account security, natural phrasing."}
+{"sample_id":"R180","prediction":"synthetic","confidence":0.6,"reason":"Overly formal and structured, lacks personal touch."}
+{"sample_id":"R124","prediction":"synthetic","confidence":0.65,"reason":"Generic phrasing, lacks personal context."}
+{"sample_id":"R222","prediction":"real","confidence":0.9,"reason":"Direct and clear inquiry about a lost card."}
+{"sample_id":"R162","prediction":"real","confidence":0.8,"reason":"Specific issue with a bank machine, relatable."}
+{"sample_id":"R017","prediction":"real","confidence":0.85,"reason":"Common issue with a straightforward question."}
+{"sample_id":"R075","prediction":"synthetic","confidence":0.6,"reason":"Vague and generic question, lacks personal context."}
+{"sample_id":"R283","prediction":"real","confidence":0.75,"reason":"Common issue with a straightforward inquiry."}

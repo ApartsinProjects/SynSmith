@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates good coverage across most attributes, but there are some missing styles and noise types. Additionally, there are near-duplicate phrasings that could be addressed for improved diversity.",
+  "missing_modes": [
+    "verbose",
+    "fragmented"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "irrelevant_details"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more verbose and fragmented styles to enhance diversity.",
+    "Reduce the use of informal style and irrelevant details to create a more balanced representation.",
+    "Implement stricter checks for near-duplicate phrasings to ensure unique expressions."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds or replacements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations and acronyms",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed context or explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions about app functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific mention of device or software versions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and concise requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific issues or complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with a straightforward approach",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions or requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on technical problems or account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inquiries about account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing regarding payments and transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite opener with a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "explanation of a problem followed by a request for clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of phrases like 'i thought' and 'can you explain/clarify'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy, complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for action (e.g., refund, cancellation)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frustration expressed in a clear manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of timeframes to emphasize delays (e.g., '24h', '4 days')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "common customer service issues addressed",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "greeting followed by a problem statement",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed explanation of the issue",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or assistance",
+      "n_pairs_observed": 1
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 4
+    },
+    {
+      "pattern": "repeated use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or need for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed to the audience or support team",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations in sentence length and complexity",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler phrases like 'i was just wondering' or 'it would be great to know'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or regret",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone in some samples contrasted with informal tone in others",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or replacements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and to-the-point language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations like 'asap'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a personal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal expressions of dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specificity in describing issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal opening and closing phrases",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of account access issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration with service",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greetings (e.g., 'hey', 'hey there!', 'hi team')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of technical issues (e.g., 'i can’t log in', 'app just crashes', 'unable to access my account')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance (e.g., 'help?', 'can you assist me?', 'need help recovering it')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences in some samples (e.g., sample 3 and 4)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    }
+  ]
+}

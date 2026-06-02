@@ -1,0 +1,28 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents and scenarios, but there are missing attribute values and combinations, particularly in the 'style' category. Additionally, there is a notable presence of near-duplicate phrasings.",
+  "missing_modes": [
+    "formal style for card_swallowed intent",
+    "emotional style for card_payment_fee_charged intent",
+    "verbose style for card_payment_wrong_exchange_rate intent",
+    "hard difficulty for card_arrival intent"
+  ],
+  "overrepresented_modes": [
+    "informal style",
+    "easy difficulty",
+    "high ambiguity"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with formal and emotional styles to enhance diversity.",
+    "Ensure that all intents are represented across all styles and difficulties to avoid overrepresentation.",
+    "Introduce more edge cases or rare scenarios to enrich the dataset."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

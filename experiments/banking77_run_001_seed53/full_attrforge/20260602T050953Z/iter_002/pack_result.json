@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "long, detailed explanations of frustrations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of personal anecdotes or scenarios",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at the service provider",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed context or emotional expression",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations and informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise requests for action or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hi' or 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward sentence structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific references to issues with transactions or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of emotional depth",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'need help' or 'want to speak to'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and concise problem statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon and abbreviations (e.g., mfa, api)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with a problem followed by a request for assistance)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "brief and to-the-point communication style",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or experiences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of transitional phrases like 'but' and 'and'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational tone and informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or confusion about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of personal pronouns like 'i' and 'my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions like 'worried', 'shocked', and 'stressful'",
+      "n_pairs_observed": 1
+    }
+  ]
+}

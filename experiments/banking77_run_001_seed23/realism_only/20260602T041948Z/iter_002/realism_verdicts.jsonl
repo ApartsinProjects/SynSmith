@@ -1,0 +1,24 @@
+{"sample_id":"R187","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward issue indicate a real user experience."}
+{"sample_id":"R255","prediction":"real","confidence":0.85,"reason":"The phrasing is natural and reflects a common concern about pending payments."}
+{"sample_id":"R210","prediction":"real","confidence":0.9,"reason":"The urgency and emotional tone suggest a genuine user distress."}
+{"sample_id":"R287","prediction":"real","confidence":0.8,"reason":"The informal tone and specific context indicate a real user issue."}
+{"sample_id":"R284","prediction":"synthetic","confidence":0.7,"reason":"Overly polished grammar and structured request suggest it may be generated."}
+{"sample_id":"R060","prediction":"real","confidence":0.8,"reason":"Simple and direct language reflects a typical user complaint."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.75,"reason":"The structure is overly detailed and formal for a casual inquiry."}
+{"sample_id":"R098","prediction":"real","confidence":0.8,"reason":"The phrasing is casual and reflects a common user concern."}
+{"sample_id":"R197","prediction":"real","confidence":0.85,"reason":"The question is straightforward and reflects a typical user experience."}
+{"sample_id":"R154","prediction":"real","confidence":0.9,"reason":"The situation described is common and phrased in a natural way."}
+{"sample_id":"R097","prediction":"real","confidence":0.8,"reason":"The concern about an unrecognized payment is typical for users."}
+{"sample_id":"R134","prediction":"real","confidence":0.8,"reason":"The complaint about charges is common and phrased naturally."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"The language is overly elaborate and structured for a casual inquiry."}
+{"sample_id":"R091","prediction":"real","confidence":0.85,"reason":"The urgency and specific request indicate a real user issue."}
+{"sample_id":"R016","prediction":"real","confidence":0.8,"reason":"The phrasing is casual and reflects a common user concern."}
+{"sample_id":"R038","prediction":"real","confidence":0.9,"reason":"The question is straightforward and reflects a typical user experience."}
+{"sample_id":"R174","prediction":"real","confidence":0.9,"reason":"The statement is simple and reflects a common issue."}
+{"sample_id":"R201","prediction":"real","confidence":0.85,"reason":"The description of repeated declines is a common user experience."}
+{"sample_id":"R070","prediction":"real","confidence":0.8,"reason":"The concern about unexpected charges is typical for users."}
+{"sample_id":"R219","prediction":"real","confidence":0.9,"reason":"The urgency and clarity of the request indicate a real user issue."}
+{"sample_id":"R185","prediction":"real","confidence":0.8,"reason":"The phrasing is simple and reflects a common user complaint."}
+{"sample_id":"R253","prediction":"real","confidence":0.85,"reason":"The question about pending payments is straightforward and common."}
+{"sample_id":"R208","prediction":"real","confidence":0.8,"reason":"The inquiry about a lost card is typical and phrased naturally."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.7,"reason":"The language is slightly more formal and structured than typical user inquiries."}

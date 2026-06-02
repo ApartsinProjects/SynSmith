@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.8839131469622094
+    },
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.881366938533068
+    },
+    {
+      "text": "The ATM took my card.",
+      "label": "card_swallowed",
+      "p_real": 0.8811211616355215
+    },
+    {
+      "text": "I do not recognise the card payment.",
+      "label": "card_payment_not_recognised",
+      "p_real": 0.8769945989804973
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

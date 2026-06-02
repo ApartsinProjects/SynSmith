@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good variety of attributes, but the intent categories 'card_swallowed', 'lost_or_stolen_card', and 'declined_card_payment' are underrepresented. There are also several instances of near-duplicate phrasings, particularly in the 'pending_card_payment' and 'card_arrival' intents.",
+  "missing_modes": [
+    "card_swallowed",
+    "lost_or_stolen_card",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "overrepresented_modes": [
+    "pending_card_payment",
+    "card_arrival",
+    "card_payment_fee_charged"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples for underrepresented intents like 'card_swallowed' and 'lost_or_stolen_card'.",
+    "Vary the phrasing more significantly to reduce near-duplicates, especially for similar intents."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

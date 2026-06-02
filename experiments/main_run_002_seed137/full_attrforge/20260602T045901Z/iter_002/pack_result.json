@@ -1,0 +1,155 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "direct requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise, straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "issues related to account management or technical problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was told my issue would be resolved",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i thought i had cancelled my subscription",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can someone please update me?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it's really stressing me out!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "very disappointing.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'do you have...?', 'i was charged...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of short, fragmented sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated focus on specific issues (e.g., refunds, discounts)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of capitalization in some samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request for action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration with app issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requesting help or support",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'stressing me out'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of personal stress or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal complaint structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about product or service details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise problem statement followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct mention of timeframes and expectations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific technical issues described in a straightforward manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and exclamations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions directed at the audience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of personal anecdotes or situations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of requests for help or information",
+      "n_pairs_observed": 1
+    }
+  ]
+}

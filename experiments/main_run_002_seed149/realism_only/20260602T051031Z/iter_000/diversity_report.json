@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are instances of near-duplicate phrasings and some overrepresented styles. The diversity of scenarios is adequate, yet the emotional style appears frequently.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "formal"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied emotional expressions to reduce the overrepresentation of the emotional style.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that phrasings are distinct to minimize near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

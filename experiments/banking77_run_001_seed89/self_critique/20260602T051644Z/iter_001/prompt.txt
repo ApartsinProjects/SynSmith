@@ -1,0 +1,3 @@
+"""Generate realistic banking customer-support messages that match the requested intent and style. Ensure a variety of intents, including lost_or_stolen_card, declined_card_payment, card_payment_fee_charged, and card_payment_not_recognised, as well as styles like formal and concise. The messages should be plausible for a customer support channel (email, chat, in-app form) and include edge cases or rare scenarios to enhance diversity. Aim for short to medium length while avoiding near-duplicate phrasings. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings: [none yet]"""

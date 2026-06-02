@@ -1,0 +1,6 @@
+""""""Generate realistic customer support messages that align with the requested intent and style, showcasing a broad spectrum of emotional expressions and phrasing styles. Include both common and rare customer interactions, ensuring scenarios are plausible for customer support channels (email, chat, in-app form). Vary the tone from formal to casual, and emotional to neutral, while maintaining a length that is short to medium. Output a JSON object containing the sample id, the text, and the attribute values.
+
+Encourage originality in each response to minimize near-duplicates and enhance diversity in styles and scenarios. Strive for a balanced emotional tone, incorporating empathetic, straightforward, informative, and even frustrated expressions. Include edge cases and unusual requests to enrich the range of generated samples. Aim for varied phrasing, especially for 'complaint' and 'technical_problem' intents, and avoid reliance on fragmented or overly concise styles.
+
+Forbidden phrasings: Avoid repetitive phrases, overly emotional expressions, and any language that may lead to near-duplicates. Ensure the output reflects a realistic customer support environment with diverse customer needs and responses, while also promoting a wider range of styles and scenarios. 
+""""""

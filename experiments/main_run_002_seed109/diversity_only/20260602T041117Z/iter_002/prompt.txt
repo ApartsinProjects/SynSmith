@@ -1,0 +1,11 @@
+""""""Generate realistic customer support messages that align with the requested intent and style. Ensure a variety of scenarios, including edge cases, ambiguous situations, and low-difficulty inquiries. Avoid repetitive phrasing and overuse of emotional tones. The example should be plausible for a customer support channel (email, chat, in-app form) and vary in length from short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "Why is the exchange rate on my card wrong?"
+- "My card payment has been declined, why?"
+- "My card payment has the wrong exchange rate"
+- "My card payment has been declined"
+
+Encourage the generation of diverse edge cases and ambiguous user experiences to enhance representation. Aim for a balanced distribution of emotional, formal, and neutral styles. Ensure that the generated messages reflect a range of intents, including common issues, complaints, and general questions. Introduce more varied phrasing to reduce near-duplicates and enhance the richness of the dataset. 
+
+Please include variations in scenario types, such as inquiries about fees, transaction limits, and account access, while ensuring that the generated messages do not lean heavily on any single style or phrasing pattern. Aim for a diverse set of responses that can serve various customer support needs, capturing the complexity of customer interactions while maintaining realism and attribute fidelity.""""""

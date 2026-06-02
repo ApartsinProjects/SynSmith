@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a high level of coverage across most attributes, with only a few missing intent values. There are instances of near-duplicate phrasings and some overrepresented styles, particularly informal and verbose.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with the missing intent values to ensure full coverage.",
+    "Diversify the styles used, particularly reducing the frequency of informal and verbose styles.",
+    "Introduce more edge cases or rare scenarios to enhance the diversity of the dataset."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity of scenarios is well represented, yet there are opportunities to enhance the uniqueness of phrasing.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "edge_case"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more unique phrasings to reduce near-duplicates.",
+    "Introduce additional edge cases to diversify the scenarios further.",
+    "Ensure a balanced representation of emotional and formal styles to avoid overrepresentation."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

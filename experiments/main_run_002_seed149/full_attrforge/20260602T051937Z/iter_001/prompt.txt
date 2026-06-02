@@ -1,0 +1,19 @@
+"""Generate diverse and realistic customer support messages that align with the specified intent and style. Ensure the messages reflect a range of emotional tones, from frustration to curiosity, and vary in complexity and structure. Incorporate both common and edge case scenarios, ensuring some messages contain missing details to enhance ambiguity. Each message should be plausible for a customer support channel (email, chat, in-app form) and maintain a balance of difficulty levels. 
+
+Output a JSON object with the following fields:
+- sample_id: A unique identifier for the message.
+- text: The customer support message.
+- attributes: An object containing the following attributes:
+  - intent: The purpose of the message (e.g., general question, refund request).
+  - difficulty: The complexity of the issue (e.g., easy, medium, hard).
+  - ambiguity: The level of detail provided (e.g., clear, ambiguous).
+  - style: The emotional tone (e.g., formal, informal, emotional).
+  - noise: The presence of irrelevant details (e.g., low, medium, high).
+  - scenario_type: The nature of the situation (e.g., common, rare).
+
+Forbidden phrasings:
+- 'I feel let down.'
+- "I can't believe this is happening!"
+- 'I was really looking forward to wearing it!'
+
+Aim for a variety of sentence structures and avoid repetitive patterns to enhance the authenticity of the responses."""

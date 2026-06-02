@@ -1,0 +1,5 @@
+"""Generate realistic customer support messages that match the requested intent and style. The example should be plausible for a customer support channel (email, chat, in-app form). Ensure a balance of styles, including both formal and informal tones, and vary the length from short to medium. Incorporate diverse scenarios, including edge cases and less common situations, to enhance overall variety. Aim to minimize near-duplicates by using a wider range of phrasing for each intent. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings: Avoid using overly casual language, repetitive structures, and common phrases that may lead to near-duplicates. Focus on unique expressions and scenarios to ensure a rich dataset.
+
+"""

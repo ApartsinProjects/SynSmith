@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.925,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repetitive questioning style",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of informal greetings like 'hey there!'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of anxiety or urgency regarding card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of phrases like 'i’ve been waiting for' and 'i just can't remember'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual conversational tone with personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone and informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or uncertainty",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' or 'i believe'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or stress about financial issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of similar sentence structures regarding card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and exclamations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing in expressing confusion or concern about payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions to express urgency or need for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and conversational tone (e.g., 'like an hour', 'what’s up with that?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamatory phrases (e.g., 'but it keeps failing!', 'i thought it was active, but no luck.')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of personal anecdotes or context (e.g., 'i have a family event planned soon', 'i also kind of need it for a big purchase today')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise vocabulary",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing regarding card payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of conversational elements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific issues without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy explanations with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of disbelief or surprise",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inquiries about specific transactions or fees",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a request for clarification",
+      "n_pairs_observed": 1
+    }
+  ]
+}

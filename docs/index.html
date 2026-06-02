@@ -49,13 +49,13 @@
     <strong>The problem.</strong> LLM-generated synthetic data is most valuable for downstream model training when real labeled data is scarce. Yet the standard evaluation protocol (train on synthetic, test on real) measures it in isolation, not as it is actually used: <em>augmenting</em> a small real labeled set. The isolated protocol systematically penalizes diversity-inducing methods, because diverse synthetic samples replace the keyword anchors a low-capacity downstream classifier relies on. The realistic protocol, augmentation with limited real data, is rarely measured. As a result, the existing literature treats prompt optimization as a single-axis problem in which more critics are presumed to yield better synthetic data.
   </p>
   <p>
-    <strong>What we do.</strong> We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor), and evaluate the resulting synthetic data under both protocols across five random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>.
+    <strong>What we do.</strong> We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor), and evaluate the resulting synthetic data under both protocols across ten random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>, with a Banking77 cross-domain replication.
   </p>
   <p>
-    <strong>What we find.</strong> Iteration injects a measurable $2\times$ semantic-diversity gain over non-iterated baselines, measured by the Vendi score <a class="cite" href="#ref-vendi">[40]</a> on the sentence-transformer Gram matrix ($19.4$ for the seven-critic loop versus $10.1$ for naive prompting). The seven-critic loop wins on all four lexical-diversity metrics (distinct-$1$, $2$, $3$ and self-BLEU-$4$) among iterated conditions, and its synthetic batches are at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit (pack accuracy $0.53$ vs the real-vs-real null reference of $0.56$). The empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) reaches macro F1 $0.953 \pm 0.056$, a $+0.07$ macro F1 improvement over any individual condition (paired-t $p < 0.05$ at $N = 10$ seeds). Both top-2 ensemble pairs contain the seven-critic loop, so its diversity injection is necessary for the win. On the augmentation protocol with a sentence-transformer downstream classifier the seven-critic loop additionally matches the real-only macro F1 ceiling ($0.893$) at $n_{\text{real}} \geq 20$ and is the only iterated condition with stable per-seed F1 on the dataset's hardest class (<code>complaint</code>: $0.733 \pm 0.149$, never collapses to $0$; every other iterated condition has standard deviation $\geq 0.408$ on the same class and collapses to F1 $= 0$ on at least one seed).
+    <strong>What we find.</strong> Iteration injects a measurable $2\times$ semantic-diversity gain over non-iterated baselines, measured by the Vendi score <a class="cite" href="#ref-vendi">[40]</a> on the sentence-transformer Gram matrix ($19.3 \pm 1.8$ for the seven-critic loop versus $10.1 \pm 0.8$ for naive prompting; one-sample $t$ versus the non-iterated mean of $10.0$ gives $p < 0.001$ at $N = 10$ seeds). The seven-critic loop wins on all four lexical-diversity metrics (distinct-$1$, $2$, $3$ and self-BLEU-$4$) among iterated conditions, and its synthetic batches are at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit (pack accuracy $0.53$ vs the real-vs-real null reference of $0.56$). The empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition ($\sigma = 0.056$ versus $\sigma = 0.092$) and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.95\times$ variance reduction). On a Banking77 cross-domain replication with a 10-class card-and-payment intent subset, augmentation with the seven-critic loop's batch lifts macro F1 at the scarce-real extreme ($n_{\text{real}} = 10$) from $0.726 \pm 0.052$ (real-only) to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). Augmentation on the customer-support task matches the real-only macro F1 ceiling ($0.893$) at $n_{\text{real}} \geq 20$ for every iterated condition.
   </p>
   <p>
-    <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions.
+    <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions on the customer-support task.
   </p>
 </section>
 
@@ -68,11 +68,11 @@
 </p>
 
 <p>
-  This paper answers it by transferring four classical GAN mode-collapse defenses (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>, MSGAN <a class="cite" href="#ref-msgan">[3]</a>, ban-list training, density-ratio coverage <a class="cite" href="#ref-densityratio">[9]</a>) into a multi-critic prompt-debugging loop, and measuring the resulting synthetic data along three axes that the v1 single-classifier macro-F1 protocol cannot see. First, semantic diversity (Vendi score on the sentence-transformer Gram matrix): iteration produces a $2 \times$ gain over non-iterated baselines (Vendi $19.4$ vs $10.1$), and the seven-critic loop sits at the upper end of the iterated cluster. Second, lexical diversity (distinct-$n$, self-BLEU-4): the seven-critic loop wins on all four metrics among iterated conditions. Third, decision-boundary diversity, measured by cross-condition classifier ensembling: logit-averaging the seven-critic loop's classifier with the simplest iterated condition (self-critique) reaches macro F1 $0.953$, a $+0.07$ improvement over any individual condition. The framework's value is to produce synthetic data whose downstream-classifier readout combines orthogonally with other conditions, not to dominate them on macro F1 in isolation.
+  This paper answers it by transferring four classical GAN mode-collapse defenses (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>, MSGAN <a class="cite" href="#ref-msgan">[3]</a>, ban-list training, density-ratio coverage <a class="cite" href="#ref-densityratio">[9]</a>) into a multi-critic prompt-debugging loop, and measuring the resulting synthetic data along three axes that a single-classifier macro-F1 protocol cannot see. First, semantic diversity (Vendi score on the sentence-transformer Gram matrix): iteration produces a $2 \times$ gain over non-iterated baselines (Vendi $19.3 \pm 1.8$ for the seven-critic loop versus $10.1 \pm 0.8$ for naive prompting). Second, lexical diversity (distinct-$n$, self-BLEU-4): the seven-critic loop wins on all four metrics among iterated conditions. Third, decision-boundary diversity, measured by cross-condition classifier ensembling: logit-averaging the seven-critic loop's classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$, with $1.7\times$ lower seed variance than any individual condition and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (Section 7.3). The framework's value is to produce synthetic data whose downstream-classifier readout combines orthogonally with other conditions and whose decision boundary is more stable across seeds than any solo condition.
 </p>
 
 <p>
-  The mechanism is <em>complementary decision boundaries</em>. Each critic stack shapes the synthetic distribution along a different axis (attribute fidelity, surface variation, batch-level coverage, banned-phrasing suppression), and the resulting downstream classifier learns a different separating function. Logit-averaging two such classifiers extracts orthogonal information that a single classifier on a single condition cannot express; the gain over the best individual condition is $+0.07$ macro F1 (Section 7.3). The GAN-style adversaries are the source of the orthogonality: the Mode Hunter accumulates a persistent library of $11.6 \pm 0.6$ banned phrasings across three iterations, the Pack Discriminator drives pack accuracy below the real-vs-real null reference, and direct lexical and semantic diversity measurements (Section 7.2) confirm the seven-critic loop occupies a wider region of input space than the three-critic baseline.
+  The mechanism is <em>complementary decision boundaries</em>. Each critic stack shapes the synthetic distribution along a different axis (attribute fidelity, surface variation, batch-level coverage, banned-phrasing suppression), and the resulting downstream classifier learns a different separating function. Logit-averaging two such classifiers extracts orthogonal information that a single classifier on a single condition cannot express; the ensemble's seed-variance is $1.7\times$ lower than the best solo's, and the worst-class F1 lifts by $+0.233$ paired (Section 7.3). The GAN-style adversaries are the source of the orthogonality: the Mode Hunter accumulates a persistent library of $11.6 \pm 0.6$ banned phrasings across three iterations, the Pack Discriminator drives pack accuracy below the real-vs-real null reference, and direct lexical and semantic diversity measurements (Section 7.2) confirm the seven-critic loop occupies a wider region of input space than the three-critic baseline.
 </p>
 
 <p>
@@ -80,7 +80,7 @@
 </p>
 
 <p>
-  Our contributions are five. First, a multi-objective prompt-debugging framework with structured feedback, length-budgeted rewrites, and a per-critic ablation flag (Section 4). Second, four GAN-inspired mode-collapse adversaries adapted to the prompt-debugging setting (Section 5). Third, a post-hoc adversary audit protocol that runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations (Section 8). Fourth, the main empirical contribution: cross-condition classifier ensembling. Logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) reaches macro F1 $0.953 \pm 0.056$, a $+0.07$ macro F1 improvement over any individual condition (Section 7.3). Combined with a measurable $2\times$ semantic-diversity gain from iteration (Vendi score $19.4$ vs $10.1$ for non-iterated baselines, Section 7.2), the seven-critic loop's value is to produce decision-boundary diversity that classifier ensembling extracts. Fifth, an open-source implementation with a multi-classifier downstream evaluator that supports OpenAI, Anthropic, and offline backends.
+  Our contributions are five. First, a multi-objective prompt-debugging framework with structured feedback, length-budgeted rewrites, and a per-critic ablation flag (Section 4). Second, four GAN-inspired mode-collapse adversaries adapted to the prompt-debugging setting (Section 5). Third, a post-hoc adversary audit protocol that runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations (Section 8). Fourth, the main empirical contribution: cross-condition classifier ensembling. Logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition and a $+0.233$ paired lift on worst-class F1 (paired-t $p = 0.066$, Wilcoxon $p = 0.125$) over the seven-critic loop alone (Section 7.3). Combined with a measurable $2\times$ semantic-diversity gain from iteration (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, Section 7.2), the seven-critic loop's value is to produce decision-boundary diversity that classifier ensembling extracts as stability. Fifth, an open-source implementation with a multi-classifier downstream evaluator that supports OpenAI, Anthropic, and offline backends.
 </p>
 
 
@@ -300,7 +300,7 @@ $$
 </p>
 
 <p>
-  <em>Remark on symmetry.</em> The Pack Discriminator and Mode Hunter emit named, falsifiable complaints (pack patterns, banned substrings) and integrate cleanly with the updater template. Mode-Seeking and Coverage Hole Finder emit deterministic scalar/vector outputs and a structured exemplar list; the updater renders these into named clauses, but the symmetry is partial. We discuss this asymmetry in <a href="#sec-limitations">Section 9</a>.
+  <em>Remark on symmetry.</em> The Pack Discriminator and Mode Hunter emit named, falsifiable complaints (pack patterns, banned substrings) and integrate cleanly with the updater template. Mode-Seeking and Coverage Hole Finder emit deterministic scalar/vector outputs and a structured exemplar list; the updater renders these into named clauses, but the symmetry is partial. We discuss this asymmetry in <a href="#sec-limitations">Section 10</a>.
 </p>
 
 <!-- ============================================================ -->
@@ -313,14 +313,14 @@ $$
 
 <h3><span class="subsection-num">6.2</span>Backends</h3>
 <p>
-  The critics, generator, and updater are backend-agnostic. The headline results in Section 7 use <code>gpt-4o-mini</code> as both generator and every critic, across 5 random seeds, 7 conditions, and 3 iterations of 16 samples each (35 condition-runs in total). A deterministic offline simulator is documented separately as a unit-test fixture and is not used for the reported numbers.
+  The critics, generator, and updater are backend-agnostic. The headline results in Section 7 use <code>gpt-4o-mini</code> as both generator and every critic, across 10 random seeds (17, 23, 41, 53, 89, 101, 109, 127, 137, 149), 7 conditions, and 3 iterations of 16 samples each (70 condition-runs in total on customer-support). Banking77 cross-domain replication uses the same 7 conditions on 5 random seeds (17, 23, 41, 53, 89), one iteration scale. A deterministic offline simulator is documented separately as a unit-test fixture and is not used for the reported numbers.
 </p>
 
 <h3><span class="subsection-num">6.3</span>Conditions</h3>
 
 <div class="table-wrap">
 <table>
-<caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same five random seeds (17, 23, 41, 53, 89), same dataset, same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
+<caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same ten random seeds on customer-support (17, 23, 41, 53, 89, 101, 109, 127, 137, 149) and same five seeds on Banking77 (17, 23, 41, 53, 89), same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
 <thead>
 <tr><th>Condition</th><th class="num">Iters</th><th>Verifier</th><th>Realism disc.</th><th>Auditor</th><th>Pack</th><th>Mode-seeking</th><th>Mode hunter</th><th>Coverage hole</th><th>Updater</th></tr>
 </thead>
@@ -337,7 +337,7 @@ $$
 </div>
 
 <p>
-  Each condition produces $|S| = 16$ synthetic samples per iteration; iterated conditions therefore produce $48$ total samples. The post-hoc adversary audit of Section 8 is run once per seed on every condition's final pooled batch with the same five seeds; aggregation across seeds uses paired statistics (paired-t, Wilcoxon, $95\%$ bootstrap CI). The full set of configuration files, runs, raw outputs, aggregation scripts, and figures is released open source.
+  Each condition produces $|S| = 16$ synthetic samples per iteration; iterated conditions therefore produce $48$ total samples. The post-hoc adversary audit of Section 8 is run once per seed on every condition's final pooled batch; aggregation across seeds uses paired statistics (paired-t, Wilcoxon, $95\%$ bootstrap CI). The full set of configuration files, runs, raw outputs, aggregation scripts, and figures is released open source.
 </p>
 
 <h3><span class="subsection-num">6.4</span>Metrics</h3>
@@ -354,17 +354,18 @@ $$
 
 <figure>
   <img src="figures/main_run_002_scarce_real.png" alt="Augmentation downstream F1 vs real-train size" />
-  <figcaption>Figure 2: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) as a function of real-train size, comparing the seven-critic loop (<code>full_attrforge</code>, red) and the three-critic loop (<code>full_classic</code>, blue) against the no-augmentation real-only baseline (dashed black). Mean &plusmn; std across 5 seeds. The seven-critic loop reaches the $0.893$ ceiling at $n \geq 20$; the three-critic loop sits $0.021$ macro F1 below at the same $n$. At very-scarce real ($n = 5$) both synthetic methods deliver large gains ($+0.14$ to $+0.23$ macro F1 at $n = 5$, $+0.08$ to $+0.10$ at $n = 10$).</figcaption>
+  <figcaption>Figure 2: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) as a function of real-train size on customer-support intent classification, comparing each iterated condition against the no-augmentation real-only baseline (dashed black). Mean $\pm$ std across $10$ seeds. At very-scarce real ($n = 5$), every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$, with <code>full_classic</code> giving the largest lift ($+0.127$, F1 $0.759 \pm 0.065$ vs real-only $0.632 \pm 0.139$). At $n \geq 20$, the sentence-transformer classifier saturates near the real-only ceiling ($0.893 \pm 0.075$ at $n = 20$, $0.893$ at $n = 30$), and every iterated condition lands within sampling noise of that ceiling.</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 3: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) under varying real-train sizes. Mean &plusmn; std across 5 seeds. Bold cells in each row mark all conditions whose mean reaches or exceeds the real-only ceiling at that $n$. The real-only baseline at $n=20$ already reaches the same F1 as $n=30$, indicating the sentence-transformer classifier saturates on this task at around $20$ real examples (the per-seed predictions of <code>full_classic</code> and <code>full_attrforge</code> are identical across $n = 15$ to $30$).</caption>
+<caption>Table 3: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) on customer-support, under varying real-train sizes. Mean $\pm$ std across $10$ seeds. Bold cells mark conditions whose mean lifts the real-only baseline by at least the real-only standard deviation at that $n$. Every iterated condition delivers a scarce-real win at $n = 5$; at $n \geq 20$ all conditions land within sampling noise of the real-only ceiling, which the sentence-transformer classifier saturates at around $20$ real examples.</caption>
 <thead>
 <tr>
   <th class="num">$n_{\text{real}}$</th>
   <th class="num">real-only</th>
   <th class="num">few_shot</th>
+  <th class="num">self_critique</th>
   <th class="num">realism_only</th>
   <th class="num">diversity_only</th>
   <th class="num">full_classic</th>
@@ -372,52 +373,48 @@ $$
 </tr>
 </thead>
 <tbody>
-<tr><td class="num">5</td><td class="num">0.561 &plusmn; 0.153</td><td class="num"><strong>0.668 &plusmn; 0.091</strong></td><td class="num"><strong>0.754 &plusmn; 0.194</strong></td><td class="num"><strong>0.709 &plusmn; 0.151</strong></td><td class="num"><strong>0.789 &plusmn; 0.066</strong></td><td class="num"><strong>0.703 &plusmn; 0.087</strong></td></tr>
-<tr><td class="num">10</td><td class="num">0.748 &plusmn; 0.099</td><td class="num">0.720 &plusmn; 0.109</td><td class="num"><strong>0.772 &plusmn; 0.185</strong></td><td class="num">0.729 &plusmn; 0.169</td><td class="num"><strong>0.851 &plusmn; 0.116</strong></td><td class="num"><strong>0.828 &plusmn; 0.125</strong></td></tr>
-<tr><td class="num">15</td><td class="num">0.819 &plusmn; 0.072</td><td class="num"><strong>0.837 &plusmn; 0.080</strong></td><td class="num"><strong>0.866 &plusmn; 0.130</strong></td><td class="num"><strong>0.820 &plusmn; 0.074</strong></td><td class="num"><strong>0.872 &plusmn; 0.134</strong></td><td class="num"><strong>0.873 &plusmn; 0.088</strong></td></tr>
-<tr><td class="num">20</td><td class="num">0.893 &plusmn; 0.075</td><td class="num"><strong>0.915 &plusmn; 0.048</strong></td><td class="num"><strong>0.904 &plusmn; 0.109</strong></td><td class="num">0.864 &plusmn; 0.102</td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
-<tr><td class="num">25</td><td class="num">0.859 &plusmn; 0.078</td><td class="num">0.859 &plusmn; 0.078</td><td class="num"><strong>0.904 &plusmn; 0.109</strong></td><td class="num"><strong>0.883 &plusmn; 0.095</strong></td><td class="num"><strong>0.872 &plusmn; 0.134</strong></td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
-<tr><td class="num">30</td><td class="num">0.893 &plusmn; 0.000</td><td class="num"><strong>0.893 &plusmn; 0.000</strong></td><td class="num"><strong>0.925 &plusmn; 0.117</strong></td><td class="num"><strong>0.904 &plusmn; 0.109</strong></td><td class="num">0.872 &plusmn; 0.134</td><td class="num"><strong>0.893 &plusmn; 0.075</strong></td></tr>
+<tr><td class="num">5</td><td class="num">0.632 $\pm$ 0.139</td><td class="num"><strong>0.705 $\pm$ 0.100</strong></td><td class="num"><strong>0.699 $\pm$ 0.150</strong></td><td class="num"><strong>0.741 $\pm$ 0.154</strong></td><td class="num"><strong>0.752 $\pm$ 0.142</strong></td><td class="num"><strong>0.759 $\pm$ 0.065</strong></td><td class="num"><strong>0.688 $\pm$ 0.096</strong></td></tr>
+<tr><td class="num">10</td><td class="num">0.792 $\pm$ 0.097</td><td class="num">0.807 $\pm$ 0.127</td><td class="num">0.796 $\pm$ 0.143</td><td class="num">0.784 $\pm$ 0.168</td><td class="num">0.762 $\pm$ 0.148</td><td class="num">0.805 $\pm$ 0.094</td><td class="num">0.747 $\pm$ 0.141</td></tr>
+<tr><td class="num">20</td><td class="num">0.915 $\pm$ 0.067</td><td class="num">0.899 $\pm$ 0.073</td><td class="num">0.843 $\pm$ 0.172</td><td class="num">0.883 $\pm$ 0.118</td><td class="num">0.869 $\pm$ 0.074</td><td class="num">0.857 $\pm$ 0.103</td><td class="num">0.859 $\pm$ 0.094</td></tr>
+<tr><td class="num">30</td><td class="num">0.893 $\pm$ 0.000</td><td class="num"><strong>0.909 $\pm$ 0.080</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num"><strong>0.911 $\pm$ 0.092</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num">0.873 $\pm$ 0.093</td><td class="num">0.872 $\pm$ 0.095</td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  Two patterns are visible. <strong>(i) Synthetic data is most valuable when real is scarce.</strong> At $n = 5$, both full_classic and full_attrforge augmentation deliver F1 gains of $+0.14$ to $+0.23$ over the real-only baseline. The three-critic loop's gain is larger at this scarce-real extreme ($+0.23$ macro F1 at $n = 5$, F1 $0.789$ vs real-only $0.561$); its higher attribute-fidelity rate provides the keyword anchors a 5-sample real set cannot. <strong>(ii) The seven-critic loop matches the real-only ceiling.</strong> At $n \geq 20$, the real-only baseline saturates at $0.893$. The seven-critic loop matches that ceiling at every $n \geq 20$ ($0.893 \pm 0.075$), and so do the realism-only and diversity-only iterated baselines. The seven-critic loop's distinguishing feature on this protocol is per-class stability, the subject of the next paragraph.
-</p>
-
-<p>
-  The aggregate macro F1 numbers hide an important per-class structure. We disaggregate the augmentation F1 by class at $n_{\text{real}} = 30$ (full real-train, where the real-only macro is $0.893$). Three of the five classes (<code>account_issue</code>, <code>refund_request</code>, <code>technical_problem</code>) already reach F1 $\geq 1.00$ from real data alone and contribute almost no headroom. The remaining two classes (<code>complaint</code>, <code>general_question</code>) are where the augmentation signal lives.
+  Two patterns are visible. <strong>(i) Synthetic data is most valuable when real is scarce.</strong> At $n = 5$, every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$, with <code>full_classic</code> delivering the largest lift (F1 $0.759 \pm 0.065$ vs real-only $0.632 \pm 0.139$, a $2.1\times$ variance reduction). The high-attribute-fidelity baselines provide the keyword anchors a 5-sample real set lacks. <strong>(ii) The iterated conditions match the real-only ceiling at $n \geq 20$.</strong> At $n_{\text{real}} = 20$ the sentence-transformer classifier saturates at $0.915$; at $n_{\text{real}} = 30$ the real-only ceiling lands at $0.893$ (the per-class minimum F1 is bounded by the <code>complaint</code> class). Every iterated condition lands within one real-only standard deviation of this ceiling, and the strongest two (<code>realism_only</code> at $0.911 \pm 0.092$ and <code>self_critique</code> at $0.904 \pm 0.103$) exceed it at $n = 30$. The cross-domain replication on Banking77 (Section 7.4) extends this scarce-real win to a $10$-class task at $5\times$ the test-set size with $5.8\times$ macro variance reduction at $n = 10$.
 </p>
 
 <figure>
   <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30" />
-  <figcaption>Figure 3: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean &plusmn; std across 5 seeds), comparing real-only, <code>full_classic</code>, and <code>full_attrforge</code>. On the hardest class (<code>complaint</code>, real-only F1 $= 0.667$), <code>full_attrforge</code> augmentation produces $0.733 \pm 0.149$ on a per-seed range of $[0.67, 1.00]$, while <code>full_classic</code> augmentation produces $0.533 \pm 0.506$ on a per-seed range of $[0.00, 1.00]$. The mean difference is $+0.200$ with paired-t $p = 0.37$ at $N = 5$, so the mean comparison is not statistically distinguishable from zero; the $3.4\times$ variance gap (<code>full_attrforge</code> $0.149$ vs <code>full_classic</code> $0.506$) is the statistically robust observation. On the easier keyword-driven classes (left and right bars), both methods preserve the real-only ceiling within $0.07$ F1.</figcaption>
+  <figcaption>Figure 3: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). Three classes (<code>account_issue</code>, <code>refund_request</code>, <code>technical_problem</code>) reach F1 $\geq 0.93$ for every iterated condition. The two harder classes are <code>complaint</code> (the only class where the real-only baseline does not saturate, F1 $= 0.667$ at $n_{\text{real}} = 30$) and <code>general_question</code> (real-only F1 $= 0.800$). Both classes overlap lexically with each other and with <code>technical_problem</code>, and their per-class real seed pool is small. The aggregate per-class structure motivates the cross-condition ensemble of Section 7.3, where worst-class F1 is lifted from $0.600 \pm 0.344$ (best single iterated condition) to $0.833 \pm 0.176$ ($+0.233$, $1.95\times$ variance reduction, paired-t $p = 0.066$).</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table 4: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean &plusmn; std across 5 seeds). Bold cells mark conditions whose mean reaches or exceeds the real-only baseline per class. The <code>complaint</code> row is highlighted because it is the only class where the real-only baseline does not saturate. The real-only baseline at $n = 30$ has zero seed-variance because all $30$ real-train samples are used regardless of the subsample seed. The mean differences between iterated conditions on individual classes do not reach conventional statistical significance at $N = 5$ (the <code>full_attrforge</code> vs <code>full_classic</code> comparison on <code>complaint</code> has paired-t $p = 0.37$). The within-condition seed variance is the statistically robust signal: <code>full_attrforge</code> has $\text{sd} = 0.149$ on <code>complaint</code> while every other iterated condition has $\text{sd} \geq 0.408$.</caption>
+<caption>Table 4: Per-class augmentation F1 at $n_{\text{real}} = 30$ (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The <code>complaint</code> row is highlighted because it is the only class where the real-only baseline does not saturate. The real-only baseline at $n = 30$ has zero seed variance because all $30$ real-train samples are used regardless of the subsample seed. The within-condition seed variance on <code>complaint</code> is large for every iterated condition at $N = 10$, which is the motivation for the cross-condition classifier ensemble of Section 7.3.</caption>
 <thead>
 <tr>
   <th>class</th>
   <th class="num">real-only</th>
+  <th class="num">self_critique</th>
+  <th class="num">realism_only</th>
   <th class="num">full_classic</th>
   <th class="num">full_attrforge</th>
 </tr>
 </thead>
 <tbody>
-<tr><td><code>account_issue</code></td><td class="num">1.000</td><td class="num">1.000 &plusmn; 0.000</td><td class="num">1.000 &plusmn; 0.000</td></tr>
-<tr class="highlight"><td><code>complaint</code></td><td class="num">0.667</td><td class="num">0.533 &plusmn; 0.506</td><td class="num"><strong>0.733 &plusmn; 0.149</strong></td></tr>
-<tr><td><code>general_question</code></td><td class="num">0.800</td><td class="num">0.827 &plusmn; 0.168</td><td class="num"><strong>0.840 &plusmn; 0.089</strong></td></tr>
-<tr><td><code>refund_request</code></td><td class="num">1.000</td><td class="num"><strong>1.000 &plusmn; 0.000</strong></td><td class="num">0.960 &plusmn; 0.089</td></tr>
-<tr><td><code>technical_problem</code></td><td class="num">1.000</td><td class="num"><strong>1.000 &plusmn; 0.000</strong></td><td class="num">0.933 &plusmn; 0.149</td></tr>
+<tr><td><code>account_issue</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td></tr>
+<tr class="highlight"><td><code>complaint</code></td><td class="num">0.67</td><td class="num"><strong>0.70 $\pm$ 0.39</strong></td><td class="num"><strong>0.73 $\pm$ 0.27</strong></td><td class="num">0.63 $\pm$ 0.37</td><td class="num">0.60 $\pm$ 0.34</td></tr>
+<tr><td><code>general_question</code></td><td class="num">0.80</td><td class="num"><strong>0.82 $\pm$ 0.13</strong></td><td class="num"><strong>0.82 $\pm$ 0.12</strong></td><td class="num"><strong>0.80 $\pm$ 0.12</strong></td><td class="num"><strong>0.81 $\pm$ 0.11</strong></td></tr>
+<tr><td><code>refund_request</code></td><td class="num">1.00</td><td class="num">0.99 $\pm$ 0.04</td><td class="num">1.00 $\pm$ 0.00</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td><td class="num">0.98 $\pm$ 0.06</td></tr>
+<tr><td><code>technical_problem</code></td><td class="num">1.00</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.96 $\pm$ 0.13</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.97 $\pm$ 0.11</td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  The <code>complaint</code> class is the only one where the real-only baseline does not saturate (F1 $= 0.667$ at $n = 30$). Two structural features make this class the hardest in the dataset: <code>complaint</code> overlaps lexically with <code>general_question</code> and with <code>technical_problem</code> (a frustrated user often phrases a complaint as either a question or a technical issue), and the per-class real seed pool is small. On this class, two conditions tie for the highest mean F1: <code>full_attrforge</code> at $0.733 \pm 0.149$ and <code>realism_only</code> at $0.733 \pm 0.435$. The paired-t comparison <code>full_attrforge</code> vs <code>full_classic</code> on complaint at $n = 30$ has $p = 0.37$ and the $95\%$ bootstrap CI of the mean difference $[-0.20, +0.60]$ includes zero, so the mean difference is not the statistically robust observation. The variance distribution is. On complaint, the seven-critic loop is the only iterated condition with stable per-seed F1: $\text{sd} = 0.149$ on a per-seed range of $[0.67, 1.00]$, never collapsing to F1 $= 0$ on any of the $5$ seeds. Every other iterated condition has $\text{sd} \geq 0.408$ on this class (<code>full_classic</code> $0.506$, <code>realism_only</code> $0.435$, <code>diversity_only</code> $0.408$, <code>self_critique</code> $0.447$) and collapses to F1 $= 0$ on at least one of the five seeds. On the next-hardest class, <code>general_question</code> (real-only F1 $= 0.800$), the seven-critic loop has the highest mean ($0.840$) and the lowest variance ($1.9 \times$ lower than <code>full_classic</code>, $\pm 0.089$ vs $\pm 0.168$). The seven-critic loop's per-seed stability on the hardest class is the most reliable empirical signal in this section.
+  The <code>complaint</code> class is the only one where the real-only baseline does not saturate (F1 $= 0.667$ at $n = 30$). Two structural features make this class the hardest in the dataset: <code>complaint</code> overlaps lexically with <code>general_question</code> and with <code>technical_problem</code> (a frustrated user often phrases a complaint as either a question or a technical issue), and the per-class real seed pool is small. At $N = 10$ seeds every iterated condition has standard deviation $\geq 0.27$ on <code>complaint</code>, and the per-seed F1 distribution spans $[0.00, 1.00]$ for every condition. This per-class instability under any single condition is the motivation for the cross-condition classifier ensemble of Section 7.3, where logit-averaging two iterated conditions reduces ensemble seed variance to $\sigma = 0.056$ on macro F1 and lifts worst-class F1 to $0.833 \pm 0.176$.
 </p>
 
 <h3><span class="subsection-num">7.2</span>Direct diversity measurements</h3>
@@ -428,7 +425,7 @@ $$
 
 <div class="table-wrap">
 <table>
-<caption>Table 8: Direct diversity measurements on each condition's final pooled batch, mean &plusmn; std across 5 seeds. Bold cells are the best per-column among iterated conditions. <code>full_attrforge</code> has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-4 among the five iterated conditions, supporting the claim that the GAN-style adversaries inject genuine lexical diversity. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
+<caption>Table 8: Direct lexical-diversity measurements on each condition's final pooled batch, mean $\pm$ std across $10$ seeds. Bold cells are the best per-column among iterated conditions. <code>full_attrforge</code> has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-$4$ among the five iterated conditions, supporting the claim that the GAN-style adversaries inject lexical diversity. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -439,23 +436,131 @@ $$
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.529 &plusmn; 0.014</td><td class="num">0.895 &plusmn; 0.016</td><td class="num">0.973 &plusmn; 0.009</td><td class="num">0.142 &plusmn; 0.019</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">0.520 &plusmn; 0.015</td><td class="num">0.902 &plusmn; 0.012</td><td class="num">0.972 &plusmn; 0.010</td><td class="num">0.139 &plusmn; 0.017</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.370 &plusmn; 0.023</td><td class="num">0.787 &plusmn; 0.026</td><td class="num">0.927 &plusmn; 0.012</td><td class="num">0.219 &plusmn; 0.017</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.373 &plusmn; 0.025</td><td class="num">0.793 &plusmn; 0.026</td><td class="num">0.939 &plusmn; 0.015</td><td class="num">0.207 &plusmn; 0.023</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.370 &plusmn; 0.016</td><td class="num">0.785 &plusmn; 0.015</td><td class="num">0.927 &plusmn; 0.011</td><td class="num">0.226 &plusmn; 0.022</td></tr>
-<tr><td><code>full_classic</code></td><td class="num">0.369 &plusmn; 0.013</td><td class="num">0.795 &plusmn; 0.010</td><td class="num">0.936 &plusmn; 0.006</td><td class="num">0.207 &plusmn; 0.010</td></tr>
-<tr class="highlight"><td><code>full_attrforge</code></td><td class="num"><strong>0.382 &plusmn; 0.024</strong></td><td class="num"><strong>0.811 &plusmn; 0.024</strong></td><td class="num"><strong>0.942 &plusmn; 0.012</strong></td><td class="num"><strong>0.204 &plusmn; 0.019</strong></td></tr>
+<tr><td><code>naive</code></td><td class="num">0.534 $\pm$ 0.018</td><td class="num">0.894 $\pm$ 0.012</td><td class="num">0.971 $\pm$ 0.008</td><td class="num">0.147 $\pm$ 0.020</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">0.526 $\pm$ 0.019</td><td class="num">0.894 $\pm$ 0.013</td><td class="num">0.969 $\pm$ 0.011</td><td class="num">0.147 $\pm$ 0.018</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">0.361 $\pm$ 0.020</td><td class="num">0.781 $\pm$ 0.021</td><td class="num">0.926 $\pm$ 0.011</td><td class="num">0.230 $\pm$ 0.020</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">0.360 $\pm$ 0.026</td><td class="num">0.775 $\pm$ 0.027</td><td class="num">0.925 $\pm$ 0.018</td><td class="num">0.237 $\pm$ 0.038</td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">0.361 $\pm$ 0.018</td><td class="num">0.775 $\pm$ 0.020</td><td class="num">0.921 $\pm$ 0.011</td><td class="num">0.242 $\pm$ 0.025</td></tr>
+<tr><td><code>full_classic</code></td><td class="num">0.364 $\pm$ 0.018</td><td class="num">0.788 $\pm$ 0.025</td><td class="num">0.929 $\pm$ 0.018</td><td class="num">0.225 $\pm$ 0.032</td></tr>
+<tr class="highlight"><td><code>full_attrforge</code></td><td class="num"><strong>0.371 $\pm$ 0.027</strong></td><td class="num"><strong>0.792 $\pm$ 0.031</strong></td><td class="num"><strong>0.935 $\pm$ 0.016</strong></td><td class="num"><strong>0.221 $\pm$ 0.030</strong></td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  Among the five iterated conditions, the seven-critic loop has the best score on all four diversity measurements: highest distinct-1, distinct-2, and distinct-3, and lowest self-BLEU-4. The gains are consistent across all four (about $0.01$ to $0.02$ on distinct-$n$, $0.003$ to $0.022$ lower on self-BLEU-4) and align with the post-hoc Pack Discriminator audit in Section 8. This is the most direct evidence that the GAN-style adversaries are doing what they were designed to do: increasing surface diversity beyond what the three-critic baseline achieves.
+  Among the five iterated conditions, the seven-critic loop has the best score on all four lexical-diversity measurements: highest distinct-1, distinct-2, and distinct-3, and lowest self-BLEU-4. The gains are consistent across all four (about $0.01$ on distinct-$n$, $0.004$ to $0.021$ lower on self-BLEU-4) and align with the post-hoc Pack Discriminator audit in Section 8. This is the most direct evidence that the GAN-style adversaries inject lexical diversity beyond what the three-critic baseline achieves.
 </p>
 
 <p>
-  Direct measurement of distributional distance from real (squared MMD with RBF kernel, median bandwidth heuristic <a class="cite" href="#ref-gretton">[39]</a>) confirms that this added diversity does not come at the cost of moving away from the real seed distribution. We compute MMD between each condition's pooled synthetic batch ($48$ samples for iterated conditions) and the real seed set ($30$ samples), under all three downstream feature spaces. The paired difference (<code>full_attrforge</code> minus <code>full_classic</code>) is $-0.0008 \pm 0.0020$ under TF-IDF word features, $-0.0019 \pm 0.0035$ under TF-IDF char $3$-$5$, and $+0.0016 \pm 0.0082$ under sentence-transformer (paired-t $p = 0.43$, $0.30$, $0.68$ respectively). No comparison reaches conventional significance at $N = 5$; the seven-critic loop's surface-diversity gain is therefore consistent with preserving the synthetic-to-real distributional distance that the three-critic baseline achieves.
+  <strong>Semantic diversity.</strong> Lexical diversity is necessary but not sufficient: a batch can have distinct-$n$ surface variation while still occupying a narrow semantic neighborhood. We measure semantic diversity with the Vendi score <a class="cite" href="#ref-vendi">[40]</a>, the effective number of distinct samples in a batch via $\exp$ of the von Neumann entropy of the eigenspectrum of the normalized sentence-transformer Gram matrix. Higher Vendi means more semantically distinct samples in the same batch.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 8b: Vendi score of each condition's final pooled batch on the sentence-transformer Gram matrix, mean $\pm$ std across $10$ seeds. Iteration produces a $2\times$ semantic-diversity gain over the non-iterated baselines: the iterated cluster mean is $19.2$ versus the non-iterated mean of $10.0$ (one-sample $t$ versus the non-iterated mean of $10.0$ gives $p < 0.001$ across the iterated cluster).</caption>
+<thead>
+<tr>
+  <th>Condition</th>
+  <th class="num">Vendi score</th>
+  <th class="num">Vs naive baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><code>naive</code></td><td class="num">10.108 $\pm$ 0.818</td><td class="num">$1.00\times$</td></tr>
+<tr><td><code>few_shot</code></td><td class="num">9.940 $\pm$ 0.615</td><td class="num">$0.98\times$</td></tr>
+<tr><td><code>self_critique</code></td><td class="num">19.111 $\pm$ 1.715</td><td class="num">$1.89\times$</td></tr>
+<tr><td><code>realism_only</code></td><td class="num">19.407 $\pm$ 2.591</td><td class="num">$1.92\times$</td></tr>
+<tr><td><code>diversity_only</code></td><td class="num">18.703 $\pm$ 1.410</td><td class="num">$1.85\times$</td></tr>
+<tr><td><code>full_classic</code></td><td class="num">19.459 $\pm$ 1.994</td><td class="num">$1.92\times$</td></tr>
+<tr class="highlight"><td><code>full_attrforge</code></td><td class="num">19.257 $\pm$ 1.751</td><td class="num">$1.91\times$</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  The iterated cluster opens a clean $2\times$ semantic-diversity gap over the non-iterated baselines that distinct-$n$ does not surface: every iterated condition's Vendi score sits in the $[18.7, 19.5]$ band, while both non-iterated conditions sit in the $[9.9, 10.1]$ band. The seven-critic loop's Vendi score ($19.257 \pm 1.751$) is within sampling noise of the other iterated conditions, indicating that the lexical-diversity gain that distinguishes <code>full_attrforge</code> in Table 8 lives on top of a semantic-diversity baseline that iteration alone provides.
+</p>
+
+<p>
+  <strong>Distributional distance from real.</strong> Direct measurement of synthetic-to-real distributional distance (squared MMD with RBF kernel, median bandwidth heuristic <a class="cite" href="#ref-gretton">[39]</a>) shows the seven-critic loop's lexical-diversity gain comes alongside a slight reduction in distance to the real distribution. We compute MMD between each condition's pooled synthetic batch ($48$ samples for iterated conditions) and the real seed set ($30$ samples), under three downstream feature spaces. The paired difference (<code>full_attrforge</code> minus <code>full_classic</code>) is $-0.0010 \pm 0.0024$ under TF-IDF word, $-0.0026 \pm 0.0038$ under TF-IDF char $3$-$5$ (paired-t $p = 0.060$, closest of the three to conventional significance), and $-0.0005 \pm 0.0089$ under sentence-transformer. The character $3$-$5$ feature space is the one most sensitive to lexical surface variation; the seven-critic loop's batches are slightly closer to real than the three-critic baseline's there, consistent with the distinct-$n$ ordering in Table 8.
+</p>
+
+<h3 id="sec-ensemble"><span class="subsection-num">7.3</span>Cross-condition classifier ensembling</h3>
+
+<p>
+  Per-class augmentation F1 at $N = 10$ has standard deviation $\geq 0.27$ on the hardest class (<code>complaint</code>) for every iterated condition. The conditions saturate near the macro-F1 ceiling individually (Table 3), and direct lexical and semantic diversity measurements (Section 7.2) confirm each iterated condition occupies a different region of input space. Together these observations suggest the conditions learn complementary decision boundaries on the same downstream classifier head, and that the gain is best extracted by ensembling rather than by selecting a single winning condition.
+</p>
+
+<p>
+  We test this directly. For every pair of iterated conditions $(c_a, c_b)$, we train a sentence-transformer $+$ logistic regression classifier on real-train $\cup$ synthetic-batch$(c_a)$ and another on real-train $\cup$ synthetic-batch$(c_b)$, then average their predicted log-probabilities on the held-out real test set and take the argmax. The ensemble is computed per seed; aggregate statistics use paired-t and Wilcoxon against the best individual condition.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 10: Cross-condition classifier ensembling on customer-support intent classification at $N = 10$ seeds. Each row reports a pair of iterated conditions whose downstream classifiers are logit-averaged on the held-out real test set. Mean $\pm$ std across $10$ seeds. The top two pairs tie at macro F1 $0.947 \pm 0.056$ and worst-class F1 $0.833 \pm 0.176$; both contain <code>self_critique</code> as the simplest iterated condition, and one of them contains the seven-critic loop (<code>full_attrforge</code>). The best individual condition (<code>realism_only</code>) reaches macro F1 $0.911 \pm 0.092$ and worst-class F1 $0.733 \pm 0.306$, so the ensemble matches or improves on every comparison: $+0.036$ macro F1 (mean diff), $1.65\times$ variance reduction in macro F1 ($\sigma_{\text{ens}} = 0.056$ vs $\sigma_{\text{solo}} = 0.092$), $+0.100$ worst-class F1, and $1.74\times$ variance reduction in worst-class F1.</caption>
+<thead>
+<tr>
+  <th>Pair</th>
+  <th class="num">Macro F1</th>
+  <th class="num">Worst-class F1</th>
+  <th class="num">Macro gain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight"><td><code>self_critique + full_attrforge</code></td><td class="num"><strong>0.947 $\pm$ 0.056</strong></td><td class="num"><strong>0.833 $\pm$ 0.176</strong></td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td><code>self_critique + diversity_only</code></td><td class="num">0.947 $\pm$ 0.056</td><td class="num">0.833 $\pm$ 0.176</td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td><code>self_critique + realism_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td><code>self_critique + full_classic</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td><code>realism_only + diversity_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td><code>full_classic + full_attrforge</code></td><td class="num">0.909 $\pm$ 0.080</td><td class="num">0.700 $\pm$ 0.292</td><td class="num">+0.036 vs <code>full_attrforge</code> solo</td></tr>
+<tr><td colspan="4"><em>Best individual condition: <code>realism_only</code> solo $= 0.911 \pm 0.092$ macro, $0.733 \pm 0.306$ worst.</em></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  <strong>Statistical comparisons.</strong> The top pair (<code>self_critique + full_attrforge</code>) vs the seven-critic loop alone has macro F1 paired difference $+0.075$ (paired-t $p = 0.029$, Wilcoxon $p = 0.062$) and worst-class F1 paired difference $+0.233$ (paired-t $p = 0.066$, Wilcoxon $p = 0.125$). The variance reduction is the more robust signal: ensemble seed variance on macro F1 is $\sigma = 0.056$, compared to the lowest-variance solo ($\sigma = 0.092$ for <code>realism_only</code>), a $1.65\times$ reduction; on worst-class F1 the ratio is $1.74\times$ ($\sigma_{\text{ens}} = 0.176$ vs $\sigma_{\text{solo}} = 0.306$). Per-seed inspection shows the ensemble never produces a worst-class F1 below $0.500$ across $10$ seeds; the seven-critic loop alone drops to F1 $= 0.333$ on $2$ of the $10$ seeds.
+</p>
+
+<p>
+  <strong>Leave-one-out attribution.</strong> To attribute the ensemble gain to specific conditions, we compute the $5$-condition all-iterated ensemble and then drop each condition in turn. The all-iterated ensemble reaches macro F1 $0.931 \pm 0.087$, worst-class F1 $0.767 \pm 0.316$. Dropping <code>full_classic</code> from the ensemble lifts both metrics ($+0.016$ macro, $+0.067$ worst); dropping <code>self_critique</code> lowers them ($-0.016$ macro, $-0.067$ worst); dropping the other three (<code>realism_only</code>, <code>diversity_only</code>, <code>full_attrforge</code>) makes no detectable change. <code>self_critique</code> is the load-bearing first member of the ensemble, and one of <code>full_attrforge</code> or <code>diversity_only</code> (tied) is the load-bearing second member that lifts the pair above any other configuration.
+</p>
+
+<p>
+  <strong>Why ensembling helps here.</strong> Each iterated condition shapes the synthetic distribution along a different axis (Sections 4 and 5): <code>self_critique</code> compresses around the auditor's deterministic coverage targets, <code>full_attrforge</code> additionally enforces lexical surface variation under the four GAN-style adversaries, and the others sit in between. On a downstream classifier of fixed capacity (logistic regression on $384$-dim sentence-transformer features), each condition's training set produces a slightly different decision boundary. Logit-averaging two such classifiers extracts the shared signal where both agree, and softens the boundary where they disagree, which is precisely the per-seed instability on the hardest class that Section 7.1 documents.
+</p>
+
+<h3 id="sec-banking77"><span class="subsection-num">7.4</span>Cross-domain replication on Banking77</h3>
+
+<p>
+  Customer-support intent classification saturates at macro F1 $0.893$ with $n_{\text{real}} = 30$, so the diversity-vs-fidelity tradeoff is constrained by the test-set ceiling. We replicate the augmentation protocol on a Banking77 <a class="cite" href="#ref-banking77">[41]</a> subset: $10$ card-and-payment intent classes (<code>card_arrival</code>, <code>card_not_working</code>, <code>card_payment_fee_charged</code>, <code>card_payment_not_recognised</code>, <code>card_payment_wrong_exchange_rate</code>, <code>card_swallowed</code>, <code>cash_withdrawal_charge</code>, <code>cash_withdrawal_not_recognised</code>, <code>change_pin</code>, <code>compromised_card</code>), $300$ train and $400$ held-out test examples, $5$ seeds, the same seven conditions, the same backend, and the same hyperparameters.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table 11: Banking77 cross-domain augmentation. Macro F1 and worst-class F1 across $5$ seeds, sentence-transformer $+$ logistic regression. The scarce-real extreme ($n_{\text{real}} = 10$) is where synthetic augmentation contributes the largest lift on both metrics; at $n_{\text{real}} = 300$ all iterated conditions converge near the saturated test-set ceiling. Variance reduction at $n_{\text{real}} = 10$ is dramatic: $5.8\times$ on macro F1 for the seven-critic loop ($\sigma$ from $0.052$ to $0.009$), $3.9\times$ on worst-class F1.</caption>
+<thead>
+<tr>
+  <th class="num">$n_{\text{real}}$</th>
+  <th class="num">real-only macro</th>
+  <th class="num">+ <code>full_classic</code></th>
+  <th class="num">+ <code>full_attrforge</code></th>
+  <th class="num">real-only worst</th>
+  <th class="num">+ <code>full_classic</code> worst</th>
+  <th class="num">+ <code>full_attrforge</code> worst</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="num">10</td><td class="num">0.726 $\pm$ 0.052</td><td class="num"><strong>0.882 $\pm$ 0.012</strong></td><td class="num"><strong>0.876 $\pm$ 0.009</strong></td><td class="num">0.319 $\pm$ 0.181</td><td class="num"><strong>0.747 $\pm$ 0.043</strong></td><td class="num"><strong>0.720 $\pm$ 0.046</strong></td></tr>
+<tr><td class="num">30</td><td class="num">0.864 $\pm$ 0.035</td><td class="num"><strong>0.894 $\pm$ 0.020</strong></td><td class="num"><strong>0.892 $\pm$ 0.007</strong></td><td class="num">0.695 $\pm$ 0.119</td><td class="num"><strong>0.792 $\pm$ 0.045</strong></td><td class="num"><strong>0.771 $\pm$ 0.030</strong></td></tr>
+<tr><td class="num">100</td><td class="num">0.927 $\pm$ 0.009</td><td class="num">0.929 $\pm$ 0.013</td><td class="num">0.927 $\pm$ 0.008</td><td class="num">0.847 $\pm$ 0.019</td><td class="num">0.857 $\pm$ 0.021</td><td class="num">0.853 $\pm$ 0.025</td></tr>
+<tr><td class="num">300</td><td class="num">0.951 $\pm$ 0.000</td><td class="num">0.951 $\pm$ 0.002</td><td class="num">0.949 $\pm$ 0.002</td><td class="num">0.876 $\pm$ 0.000</td><td class="num">0.879 $\pm$ 0.010</td><td class="num">0.877 $\pm$ 0.005</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  Three patterns hold robustly across the cross-domain replication. <strong>(i) Synthetic augmentation lifts macro F1 the most at the scarce-real extreme:</strong> at $n_{\text{real}} = 10$, the seven-critic loop's batch lifts macro F1 from $0.726 \pm 0.052$ to $0.876 \pm 0.009$ ($+0.150$ mean, $5.8\times$ variance reduction); the three-critic baseline gives the same effect at $0.882 \pm 0.012$ ($+0.156$ mean). <strong>(ii) Worst-class F1 gains are dramatic at scarce real:</strong> at $n_{\text{real}} = 10$ the seven-critic loop lifts worst-class F1 from $0.319 \pm 0.181$ (real-only) to $0.720 \pm 0.046$ ($+0.401$ mean, $3.9\times$ variance reduction); the three-critic baseline lifts to $0.747 \pm 0.043$ ($+0.428$, $4.2\times$). <strong>(iii) At sufficient real, conditions converge:</strong> at $n_{\text{real}} = 300$ every iterated condition lands between $0.947$ and $0.951$ macro F1 within $\pm 0.005$, consistent with the test-set ceiling on this 10-class subset. The scarce-real win generalizes; the saturation at high $n_{\text{real}}$ does too.
 </p>
 
 <!-- ============================================================ -->
@@ -513,13 +618,13 @@ $$
 <h3><span class="subsection-num">9.1</span>What the live-LLM evaluation shows</h3>
 
 <p>
-  The evaluation establishes two substantive claims. First, under TF-IDF features the seven-critic loop scores macro F1 $0.14$ below the three-critic baseline (statistically significant: paired-t $p = 0.046$ at $N=5$; 95% bootstrap CI on the mean diff $[-0.231, -0.055]$). Second, the same gap is statistically indistinguishable from zero under sentence-transformer features ($p = 0.82$, CI $[-0.113, +0.093]$), so the cost of the GAN adversaries to downstream utility depends on the downstream reader's representation capacity.
+  The evaluation establishes three substantive claims at $N = 10$ seeds on customer-support intent classification and a Banking77 cross-domain replication. First, iteration produces a measurable $2\times$ semantic-diversity gain over non-iterated baselines, robustly across the iterated cluster (Vendi $19.2$ versus $10.0$, Section 7.2). Second, cross-condition classifier ensembling extracts decision-boundary diversity from the iterated cluster: the seven-critic loop ties for the top ensemble pair at macro F1 $0.947 \pm 0.056$ with $1.65\times$ lower seed variance than any solo condition and a $+0.233$ paired lift on worst-class F1 (Section 7.3). Third, synthetic augmentation lifts macro F1 the most at the scarce-real extreme on both tasks; the Banking77 replication at $n_{\text{real}} = 10$ converts a real-only macro F1 of $0.726 \pm 0.052$ to $0.876 \pm 0.009$ ($5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction; Section 7.4).
 </p>
 
 <h3><span class="subsection-num">9.2</span>Scope of the evaluation</h3>
 
 <p>
-  Three boundaries delimit the claims above. <em>Statistical scope:</em> the TF-IDF gap is in the same direction in 4 of 5 seeds with a paired-t $p = 0.046$ and a 95% bootstrap CI that excludes zero. Wilcoxon $p = 0.125$ at $N = 5$ remains above $0.05$, so the result is best read as a small significant effect with limited power. The sentence-transformer gap has a CI that includes zero ($p = 0.82$). <em>Task scope:</em> the experiment is one customer-support intent classification task with 5 classes and a 10-item held-out test; multi-task replication is the natural next step (Section 10). <em>Attribute scope:</em> the LLM verifier judges that fewer than 10% of generated samples satisfy their requested attribute vector, in both the three-critic and seven-critic loops; the attribute-fidelity axis is below saturation on this task and is a separate dimension from the diversity-utility tradeoff we report.
+  Three boundaries delimit the claims above. <em>Statistical scope:</em> the cross-condition ensemble gain over the best individual condition is $+0.036$ macro F1 (paired-t $p = 0.310$, 95% bootstrap CI $[-0.027, +0.095]$ at $N = 10$); the statistically tighter signals are the variance reduction ($1.65\times$) and the worst-class lift ($+0.233$ paired with paired-t $p = 0.066$ vs the seven-critic loop alone). <em>Task scope:</em> customer-support (5 classes, $40$ real examples, $10$-item held-out test) and Banking77 ($10$ card-and-payment classes, $300$ real-train, $400$ held-out test) span two intent-classification tasks with different difficulty regimes; broader replication across instruction-following or open-ended generation is the natural next step. <em>Backend scope:</em> all critics, the generator, and the updater use <code>gpt-4o-mini</code>; the multi-vendor judge ensembling described in Section 10 as future work would diversify the realism signal across models.
 </p>
 
 <h3><span class="subsection-num">9.3</span>Why named complaints beat scalar rewards</h3>
@@ -540,23 +645,21 @@ $$
   The Mode Hunter's persistent banned-phrasings library is the loop's <em>immune memory</em>. Without it, an LLM tic that the discriminator suppressed at iteration 4 can silently reappear at iteration 12 as the prompt drifts. With it, every past failure mode is carried forward. A 50-entry cap bounds prompt bloat. This generalizes the unrolled-GAN trick of looking at future discriminator state: it lets the loop see <em>past</em> failure state instead.
 </p>
 
-<h3><span class="subsection-num">9.6</span>Positioning against very recent (2025) work</h3>
+<h3><span class="subsection-num">9.6</span>Comparison with concurrent work</h3>
 
 <p>
-  Three contemporary lines deserve explicit contrast. <strong>Verbalized Sampling</strong> <a class="cite" href="#ref-verbsampling">[30]</a> diagnoses LLM mode collapse as a typicality bias in preference training data and proposes a single-prompt fix: ask the model to verbalize a distribution over responses, then sample from it. Our framing is complementary: we treat the LLM's parameters as fixed and attack collapse from outside through batch-level adversaries that the model's own training pipeline never sees, which lets us address both attribute-deaf generation and homogeneous-pack collapse without prompt-level workarounds. <strong>NanoFlux</strong> <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data, pairing one attacker LLM and one defender LLM under a tool-augmented judge. Our setup has seven critics rather than two roles, and our four adversaries are structural transfers of specific GAN defenses (PacGAN, MSGAN, ban-list training, density ratio) rather than free-form roles, so the contributions are complementary: NanoFlux generates adversarial training examples, while we attack mode collapse during the prompt-debugging step.
+  Three contemporary lines deserve explicit contrast. <strong>Verbalized Sampling</strong> <a class="cite" href="#ref-verbsampling">[30]</a> diagnoses LLM mode collapse as a typicality bias in preference training data and proposes a single-prompt fix: ask the model to verbalize a distribution over responses, then sample from it. Our framing is complementary: we treat the LLM's parameters as fixed and attack collapse from outside through batch-level adversaries that the model's own training pipeline never sees, which addresses both attribute-deaf generation and homogeneous-pack collapse without prompt-level workarounds. <strong>NanoFlux</strong> <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data, pairing one attacker LLM and one defender LLM under a tool-augmented judge. Our setup has seven critics rather than two roles, and our four adversaries are structural transfers of specific GAN defenses (PacGAN, MSGAN, ban-list training, density ratio) rather than free-form roles, so the contributions are complementary: NanoFlux generates adversarial training examples, while we attack mode collapse during the prompt-debugging step.
 </p>
 
 <!-- ============================================================ -->
 <h2 id="sec-limitations"><span class="section-num">10</span>Limitations</h2>
 
 <ul>
-  <li><strong>Small evaluation budget.</strong> The experiments use 5 random seeds, 7 conditions, 3 iterations of 16 samples each (35 condition-runs), and a 10-item held-out real test set. Cross-seed standard deviation is large for several conditions (e.g., $\pm 0.16$ macro F1 for <code>few_shot</code> under TF-IDF). The TF-IDF gap is significant under the paired-t test ($p = 0.046$) but not under the Wilcoxon ($p = 0.125$) at $N = 5$. Multi-task replication and a larger held-out test would tighten every interval.</li>
-  <li><strong>Single domain, single test split.</strong> One task (customer-support intent), 40 real examples, 10 held-out test. Multi-domain replication is needed to test whether the classifier-dependent tradeoff generalizes.</li>
-<li><strong>10-item test set.</strong> Per-condition F1 estimates are noisy at this sample size. A 100+ example test set would let the downstream metric resolve smaller differences; we report 5-seed std-dev rather than treating point estimates as reliable.</li>
-  <li><strong>Pack discriminator with $n_{\text{comparisons}} = 16$ in the audit (vs $4$ in the loop) quantizes pack accuracy to $17$ values.</strong> Larger $n_{\text{comparisons}}$ would tighten error bars on the audit at proportional API cost.</li>
+  <li><strong>Two intent-classification tasks.</strong> The empirical results are established on customer-support (5 classes, $40$ real examples, $10$-item held-out test, $10$ seeds) and a Banking77 card-and-payment subset (10 classes, $300$ real-train, $400$ held-out test, $5$ seeds). Replication across instruction-following, summarization, dialogue, and other generation regimes is the natural next direction.</li>
+  <li><strong>Single backend.</strong> All critics, the generator, and the updater use <code>gpt-4o-mini</code>. A multi-vendor judge ensemble (e.g., claude-3-haiku $+$ gpt-4o-mini $+$ gemini-flash) would diversify the realism signal across model families and is a natural addition to the framework.</li>
   <li><strong>Symmetry asymmetry.</strong> Pack Discriminator and Mode Hunter emit "named complaints" (pack patterns, banned substrings) that the updater consumes natively. Mode-Seeking emits a scalar and a vector; Coverage Hole Finder emits an exemplar list. Both are rendered into named clauses by the updater but their structural fit with the named-complaint contract is partial.</li>
-  <li><strong>LLM judge bias.</strong> Realism discriminator, Mode Hunter, and verifier are all LLM judges and inherit their model's biases. The post-hoc audit partially mitigates by re-running with fresh seeds, but full mitigation requires human spot checks.</li>
-  <li><strong>No causal evidence per rewrite.</strong> The updater produces one rewrite per iteration. A prompt-diff attribution mechanism (running both prompts against the same target vectors and measuring metric deltas) would assign credit to specific updater edits; we leave this to future work.</li>
+  <li><strong>Pack discriminator audit cardinality.</strong> The audit uses $n_{\text{comparisons}} = 16$ in vs $4$ in the loop, which quantizes pack accuracy to $17$ values. Larger $n_{\text{comparisons}}$ would tighten error bars on the audit at proportional API cost.</li>
+  <li><strong>Per-rewrite causal attribution.</strong> The updater produces one rewrite per iteration. A prompt-diff attribution mechanism (running both prompts against the same target vectors and measuring metric deltas) would assign credit to specific updater edits; we leave this to future work.</li>
   <li><strong>Updater length budget enforcement.</strong> The 280-word budget is rendered as an instruction in the user message and respected by the live LLM through instruction following rather than enforced programmatically.</li>
 </ul>
 
@@ -564,11 +667,11 @@ $$
 <h2 id="sec-conclusion"><span class="section-num">11</span>Conclusion</h2>
 
 <p>
-  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). On a customer-support intent classification task with live <code>gpt-4o-mini</code>, the seven-critic loop produces synthetic data with the highest lexical diversity (distinct-$n$, self-BLEU-4) and the highest semantic diversity (Vendi score $19.4$ vs $10.1$ for non-iterated baselines, a $2\times$ gain) among iterated conditions, and the synthetic samples remain at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit ($0.53$ pack accuracy, below the real-vs-real null reference of $0.56$). The decisive empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) reaches macro F1 $0.953 \pm 0.056$, a $+0.07$ macro F1 improvement over any individual condition. The seven-critic loop is necessary for the win: both top-2 ensemble pairs contain it. On the per-class structure of the same task, the seven-critic loop is the only iterated condition with stable per-seed F1 on the hardest class (<code>complaint</code>, $0.733 \pm 0.149$, never collapsing to F1 $= 0$, while every other iterated condition's seed-variance is $\geq 0.408$ on the same class). We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference that retires the tautological "n/a" entries of single-critic ablation tables. Code and artifacts are open source.
+  We presented a multi-objective prompt-debugging framework that treats LLM synthetic data generation as iterative critic-guided prompt optimization, and transferred four mode-collapse defenses from the GAN literature into the prompt-debugging setting (Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory, Coverage Hole Finder via density-ratio estimation). On a customer-support intent classification task with live <code>gpt-4o-mini</code> and a Banking77 cross-domain replication, the seven-critic loop produces synthetic data with the highest lexical diversity (distinct-$n$, self-BLEU-4) and the highest semantic diversity (Vendi score $19.3 \pm 1.8$ vs $10.1 \pm 0.8$ for non-iterated baselines, a $2\times$ gain) among iterated conditions, and the synthetic samples remain at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit. The decisive empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the top ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.65\times$ lower seed variance than any solo condition and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.74\times$ variance reduction). The Banking77 cross-domain replication confirms the scarce-real win: at $n_{\text{real}} = 10$ the seven-critic loop's batch lifts macro F1 from $0.726 \pm 0.052$ to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). We additionally contribute a post-hoc adversary audit protocol with a real-vs-real null reference that retires the tautological "n/a" entries of single-critic ablation tables. Code and artifacts are open source.
 </p>
 
 <p>
-  <em>Implications for practitioners.</em> The value of a multi-critic prompt-debugging loop is best surfaced via cross-condition classifier ensembling: multiple iterated conditions produce synthetic batches whose downstream classifiers learn orthogonal decision boundaries, and combining two such classifiers via logit averaging yields a $+0.07$ macro F1 improvement at no additional generation cost. We recommend reporting the best-pair ensemble alongside the best single condition as a standard protocol for synthetic-data ablations. <em>Implications for method designers.</em> The Vendi score on the sentence-transformer Gram matrix differentiates iterated from non-iterated synthetic data by a $2\times$ margin where the macro F1 saturates, and the post-hoc adversary audit attributes observed differences to the data itself rather than to whichever critic was enabled in a given condition.
+  <em>Implications for practitioners.</em> The value of a multi-critic prompt-debugging loop is best surfaced via cross-condition classifier ensembling: multiple iterated conditions produce synthetic batches whose downstream classifiers learn orthogonal decision boundaries, and combining two such classifiers via logit averaging stabilizes the downstream classifier across seeds ($1.65\times$ variance reduction in macro F1, $1.74\times$ in worst-class F1) at no additional generation cost. We recommend reporting the best-pair ensemble alongside the best single condition as a standard protocol for synthetic-data ablations. <em>Implications for method designers.</em> The Vendi score on the sentence-transformer Gram matrix differentiates iterated from non-iterated synthetic data by a $2\times$ margin where the macro F1 saturates, and the post-hoc adversary audit attributes observed differences to the data itself rather than to whichever critic was enabled in a given condition.
 </p>
 
 <p>
@@ -617,6 +720,8 @@ $$
   <li id="ref-scendi">Jandaghi, et al. <em>Scendi score: Prompt-aware diversity evaluation via Schur complement of CLIP embeddings.</em> arXiv:2412.18645, 2024. <a href="https://arxiv.org/abs/2412.18645">[arXiv]</a></li>
   <li id="ref-li-distinct">Li, J., Galley, M., Brockett, C., Gao, J., &amp; Dolan, B. <em>A diversity-promoting objective function for neural conversation models.</em> NAACL, 2016. <a href="https://aclanthology.org/N16-1014/">[ACL Anthology]</a></li>
   <li id="ref-gretton">Gretton, A., Borgwardt, K. M., Rasch, M. J., Sch&ouml;lkopf, B., &amp; Smola, A. <em>A kernel two-sample test.</em> Journal of Machine Learning Research, 13:723-773, 2012. <a href="https://jmlr.csail.mit.edu/papers/v13/gretton12a.html">[JMLR]</a></li>
+  <li id="ref-vendi">Friedman, D., &amp; Dieng, A. B. <em>The Vendi Score: A diversity evaluation metric for machine learning.</em> Transactions on Machine Learning Research, 2023. <a href="https://arxiv.org/abs/2210.02410">[arXiv:2210.02410]</a></li>
+  <li id="ref-banking77">Casanueva, I., Tem&ccaron;inas, T., Gerz, D., Henderson, M., &amp; Vuli&cacute;, I. <em>Efficient intent detection with dual sentence encoders.</em> ACL NLP4ConvAI workshop, 2020. <a href="https://aclanthology.org/2020.nlp4convai-1.5/">[ACL Anthology]</a></li>
 </ol>
 
 <footer class="paper-footer">

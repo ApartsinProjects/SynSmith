@@ -1,0 +1,24 @@
+{"sample_id":"R115","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common issue with payments."}
+{"sample_id":"R011","prediction":"real","confidence":0.85,"reason":"Specific inquiry about tracking, realistic context."}
+{"sample_id":"R089","prediction":"real","confidence":0.9,"reason":"Common concern about unauthorized payments."}
+{"sample_id":"R228","prediction":"real","confidence":0.9,"reason":"Urgent tone and realistic scenario of a stolen card."}
+{"sample_id":"R250","prediction":"real","confidence":0.85,"reason":"Typical user experience with pending payments."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and structured, lacks real-world noise."}
+{"sample_id":"R287","prediction":"real","confidence":0.8,"reason":"Common issue with account top-ups."}
+{"sample_id":"R090","prediction":"real","confidence":0.9,"reason":"Natural expression of confusion over a purchase."}
+{"sample_id":"R289","prediction":"real","confidence":0.8,"reason":"Detailed request with urgency, realistic context."}
+{"sample_id":"R147","prediction":"real","confidence":0.85,"reason":"Direct question about a common issue."}
+{"sample_id":"R223","prediction":"real","confidence":0.9,"reason":"Strong emotional response typical of a stolen card situation."}
+{"sample_id":"R266","prediction":"real","confidence":0.8,"reason":"Direct inquiry about a common issue."}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.6,"reason":"Overly verbose and structured, lacks natural flow."}
+{"sample_id":"R024","prediction":"real","confidence":0.85,"reason":"Specific question about tracking a bank card."}
+{"sample_id":"R248","prediction":"real","confidence":0.8,"reason":"Common inquiry about transaction timing."}
+{"sample_id":"R247","prediction":"real","confidence":0.85,"reason":"Detailed description of a common issue."}
+{"sample_id":"R206","prediction":"real","confidence":0.9,"reason":"Direct and clear request about a stolen card."}
+{"sample_id":"R108","prediction":"real","confidence":0.8,"reason":"Natural expression of confusion over a payment."}
+{"sample_id":"R179","prediction":"real","confidence":0.8,"reason":"Simple and direct statement about a payment issue."}
+{"sample_id":"R221","prediction":"real","confidence":0.85,"reason":"Urgent and straightforward request about a lost card."}
+{"sample_id":"R203","prediction":"real","confidence":0.9,"reason":"Clear and direct question about deactivating a stolen card."}
+{"sample_id":"R072","prediction":"real","confidence":0.8,"reason":"Common issue with unexpected fees."}
+{"sample_id":"R237","prediction":"real","confidence":0.85,"reason":"Detailed inquiry about pending payments."}
+{"sample_id":"R215","prediction":"real","confidence":0.9,"reason":"Direct statement about a lost or stolen card."}

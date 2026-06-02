@@ -1,0 +1,168 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\banking77_run_001_seed23\\realism_only\\20260602T041948Z",
+  "n_iterations": 3,
+  "final_prompt_version": 2,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 1.0,
+      "synthetic_detection_rate": 1.0,
+      "near_duplicate_rate": 0.2,
+      "combination_coverage": 0.3333333333333333,
+      "entropy/intent": 0.8228530285021216,
+      "entropy/difficulty": 0.8868595071429147,
+      "entropy/ambiguity": 0.9755307720176264,
+      "entropy/style": 0.9671320180863539,
+      "entropy/noise": 0.9822177815287606,
+      "entropy/scenario_type": 0.9850568223215079,
+      "coverage/intent": 0.7,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 1.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.875,
+      "synthetic_detection_rate": 0.0,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.4,
+      "entropy/intent": 0.7691426363230477,
+      "entropy/difficulty": 0.9320201587042913,
+      "entropy/ambiguity": 0.8957541375001009,
+      "entropy/style": 0.8892952760645765,
+      "entropy/noise": 0.9592101522724051,
+      "entropy/scenario_type": 0.9755307720176264,
+      "coverage/intent": 0.7,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 2.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.9583333333333334,
+      "synthetic_detection_rate": 1.0,
+      "near_duplicate_rate": 0.25,
+      "combination_coverage": 0.4,
+      "entropy/intent": 0.7994270153880654,
+      "entropy/difficulty": 0.9965119062478287,
+      "entropy/ambiguity": 0.946394630357186,
+      "entropy/style": 0.8156631257730544,
+      "entropy/noise": 0.7103568254243086,
+      "entropy/scenario_type": 0.9965119062478287,
+      "coverage/intent": 0.7,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 0.8333333333333334,
+      "coverage/noise": 0.8,
+      "coverage/scenario_type": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic banking customer-support messages that match the requested intent\nand style. The example should be plausible for a customer support channel\n(email, chat, in-app form). Keep it short to medium length. Output a JSON\nobject with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-02T04:19:48.104093+00:00"
+    },
+    {
+      "version": 1,
+      "iteration": 1,
+      "prompt": "\"\"\"Generate realistic banking customer-support messages that match the requested intent and style, ensuring a mix of common and edge-case scenarios. The messages should reflect real-world communication, incorporating natural language variations and occasional noise. Include a diverse range of intents, especially those that are currently underrepresented, such as 'card_swallowed' and 'declined_card_payment.' Aim for both concise and fragmented styles, alongside informal and formal tones. \n\nOutput a JSON object with the following structure:\n{\n  \"sample_id\": \"unique_identifier\",\n  \"text\": \"customer_support_message\",\n  \"attributes\": {\n    \"intent\": \"specific_intent\",\n    \"style\": \"chosen_style\",\n    \"scenario_type\": \"relevant_scenario\"\n  }\n}\n\nEnsure to minimize near-duplicate phrasings and encourage creativity in language use. The goal is to provide a rich dataset that captures a wide array of customer interactions while maintaining authenticity. \n\nForbidden phrasings: Avoid overly polished or structured language that lacks real-world noise. Aim for a balance of formality and informality in your responses.\"",
+      "motivation": "The batch exhibits a good variety of intents and styles, but there are some missing attribute values and combinations, particularly in the intent category. Additionally, there are near-duplicate phrasings that could be improved for diversity.",
+      "feedback_summary": {
+        "iteration": 0,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 1,
+        "near_duplicate_rate": 0.2,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "intent: card_swallowed",
+          "intent: declined_card_payment",
+          "style: fragmented",
+          "style: concise",
+          "scenario_type: card_handling"
+        ],
+        "overrepresented_modes": [
+          "intent: card_payment_wrong_exchange_rate",
+          "intent: card_not_working",
+          "style: informal"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 1.0,
+          "synthetic_detection_rate": 1.0,
+          "near_duplicate_rate": 0.2,
+          "combination_coverage": 0.3333333333333333,
+          "entropy/intent": 0.8228530285021216,
+          "entropy/difficulty": 0.8868595071429147,
+          "entropy/ambiguity": 0.9755307720176264,
+          "entropy/style": 0.9671320180863539,
+          "entropy/noise": 0.9822177815287606,
+          "entropy/scenario_type": 0.9850568223215079,
+          "coverage/intent": 0.7,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 1.0,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:20:47.011503+00:00"
+    },
+    {
+      "version": 2,
+      "iteration": 2,
+      "prompt": "\"\"\"\"\"\"Generate realistic banking customer-support messages that align with the requested intent and style, ensuring a diverse range of scenarios, including both common and edge cases. Incorporate natural language variations and real-world noise to enhance authenticity. Specifically include underrepresented intents such as 'card_payment_fee_charged,' 'card_payment_wrong_exchange_rate,' and 'top_up_failed,' while balancing overrepresented intents like 'lost_or_stolen_card' and 'card_not_working.' \n\nOutput a JSON object with the following structure:\n{\n  \"sample_id\": \"unique_identifier\",\n  \"text\": \"customer_support_message\",\n  \"attributes\": {\n    \"intent\": \"specific_intent\",\n    \"style\": \"chosen_style\",\n    \"scenario_type\": \"relevant_scenario\"\n  }\n}\n\nEncourage creativity in language use and minimize near-duplicate phrasings to enhance diversity. Aim for a mix of concise, fragmented, formal, and informal styles that reflect genuine customer interactions. \n\nForbidden phrasings: Avoid overly polished or structured language, awkward phrasing, and repetitive expressions. Ensure a balance of formality and informality while capturing the essence of real-world communication.\"\"\"\"\"",
+      "motivation": "The batch demonstrates a good coverage of attributes, but there are some missing intent values and a few near-duplicate phrasings. The diversity in styles and scenarios is well represented.",
+      "feedback_summary": {
+        "iteration": 1,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 3,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "card_payment_fee_charged",
+          "card_payment_wrong_exchange_rate",
+          "top_up_failed"
+        ],
+        "overrepresented_modes": [
+          "lost_or_stolen_card",
+          "card_not_working"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 0.875,
+          "synthetic_detection_rate": 0.0,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.4,
+          "entropy/intent": 0.7691426363230477,
+          "entropy/difficulty": 0.9320201587042913,
+          "entropy/ambiguity": 0.8957541375001009,
+          "entropy/style": 0.8892952760645765,
+          "entropy/noise": 0.9592101522724051,
+          "entropy/scenario_type": 0.9755307720176264,
+          "coverage/intent": 0.7,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 1.0,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:21:44.833791+00:00"
+    }
+  ]
+}

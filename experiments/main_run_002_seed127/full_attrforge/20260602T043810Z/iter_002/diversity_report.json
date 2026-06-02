@@ -1,0 +1,22 @@
+{
+  "summary": "The batch demonstrates a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity of scenarios is well-represented, yet there are opportunities to include more edge cases.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal style",
+    "account_issue intent"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more unique phrasings to reduce near-duplicates.",
+    "Include more edge cases and rare scenarios to enhance diversity.",
+    "Ensure a balanced representation of intents, especially for less frequent ones like 'refund_request' and 'technical_problem'."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

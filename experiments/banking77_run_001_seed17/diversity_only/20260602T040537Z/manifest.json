@@ -1,0 +1,183 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\banking77_run_001_seed17\\diversity_only\\20260602T040537Z",
+  "n_iterations": 3,
+  "final_prompt_version": 2,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.25,
+      "combination_coverage": 0.4666666666666667,
+      "entropy/intent": 0.837055764846063,
+      "entropy/difficulty": 0.9965119062478287,
+      "entropy/ambiguity": 0.9755307720176264,
+      "entropy/style": 0.8616051493362594,
+      "entropy/noise": 0.9822177815287606,
+      "entropy/scenario_type": 0.8957541375001009,
+      "coverage/intent": 0.8,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 0.8333333333333334,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0,
+      "mode_seeking_ratio": 0.21485381944983065,
+      "text_distance_mean": 0.9338872934736079,
+      "coverage_classifier_auroc": 1.0
+    },
+    {
+      "iteration": 1.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.43333333333333335,
+      "entropy/intent": 0.8136297517320067,
+      "entropy/difficulty": 0.8868595071429147,
+      "entropy/ambiguity": 0.9497012164384108,
+      "entropy/style": 0.9488801212514659,
+      "entropy/noise": 0.9592101522724051,
+      "entropy/scenario_type": 0.9497012164384108,
+      "coverage/intent": 0.7,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0,
+      "mode_seeking_ratio": 0.21299808503618234,
+      "text_distance_mean": 0.9203638516625965,
+      "coverage_classifier_auroc": 1.0
+    },
+    {
+      "iteration": 2.0,
+      "attribute_match_rate": 0.0,
+      "discriminator_accuracy": 0.5,
+      "synthetic_detection_rate": 0.5,
+      "near_duplicate_rate": 0.25,
+      "combination_coverage": 0.43333333333333335,
+      "entropy/intent": 0.7760010022740091,
+      "entropy/difficulty": 0.9850568223215079,
+      "entropy/ambiguity": 0.9850568223215079,
+      "entropy/style": 0.9099617502405772,
+      "entropy/noise": 0.9487027337173605,
+      "entropy/scenario_type": 0.9497012164384108,
+      "coverage/intent": 0.7,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0,
+      "mode_seeking_ratio": 0.2157243205760525,
+      "text_distance_mean": 0.9262897630810578,
+      "coverage_classifier_auroc": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic banking customer-support messages that match the requested intent\nand style. The example should be plausible for a customer support channel\n(email, chat, in-app form). Keep it short to medium length. Output a JSON\nobject with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-02T04:05:37.828877+00:00"
+    },
+    {
+      "version": 1,
+      "iteration": 1,
+      "prompt": "\"\"\"Generate realistic banking customer-support messages that match the requested intent and style. Ensure a diverse range of intents, including but not limited to card_payment_fee_charged, lost_or_stolen_card, and top_up_failed. Incorporate both formal and concise styles alongside casual ones. Vary phrasings to minimize redundancy and enhance diversity. The example should be plausible for a customer support channel (email, chat, in-app form) and maintain a short to medium length. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- \"What do I do if my card is not working?\"\n- \"What do I do if my card is stolen?\"\n- \"Why is the exchange rate on my card wrong?\"\n- \"My card has been stolen what do I do?\" \n\"\"\"",
+      "motivation": "The batch exhibits a strong coverage of attributes, but there are missing intent values and some near-duplicate phrasings. The diversity in styles is somewhat limited, with a notable absence of formal and concise styles.",
+      "feedback_summary": {
+        "iteration": 0,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 0,
+        "near_duplicate_rate": 0.25,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": 0.21485381944983065,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "card_payment_fee_charged",
+          "lost_or_stolen_card",
+          "top_up_failed",
+          "formal style",
+          "concise style"
+        ],
+        "overrepresented_modes": [
+          "card_swallowed",
+          "declined_card_payment"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 0.5,
+          "synthetic_detection_rate": 0.5,
+          "near_duplicate_rate": 0.25,
+          "combination_coverage": 0.4666666666666667,
+          "entropy/intent": 0.837055764846063,
+          "entropy/difficulty": 0.9965119062478287,
+          "entropy/ambiguity": 0.9755307720176264,
+          "entropy/style": 0.8616051493362594,
+          "entropy/noise": 0.9822177815287606,
+          "entropy/scenario_type": 0.8957541375001009,
+          "coverage/intent": 0.8,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 0.8333333333333334,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0,
+          "mode_seeking_ratio": 0.21485381944983065,
+          "text_distance_mean": 0.9338872934736079,
+          "coverage_classifier_auroc": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:06:18.414974+00:00"
+    },
+    {
+      "version": 2,
+      "iteration": 2,
+      "prompt": "\"\"\"\"\"\"Generate realistic banking customer-support messages that align with the requested intent and style. Ensure a diverse range of intents, including but not limited to card_payment_fee_charged, lost_or_stolen_card, card_arrival, and top_up_failed. Incorporate both formal and concise styles alongside casual ones. Vary phrasing and structure to minimize redundancy and enhance diversity. Include plausible scenarios for a customer support channel (email, chat, in-app form) and maintain a short to medium length. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- \"What do I do if my card is not working?\"\n- \"What do I do if my card is stolen?\"\n- \"My card has been stolen what do I do?\"\n- \"Why is the exchange rate on my card wrong?\"\n- \"What should I do about my card payment being declined?\"\n- \"I need help with my card payment issue.\"\n\nEncourage the generation of samples for missing intents such as 'card_arrival' and 'lost_or_stolen_card', and introduce more edge cases or rare scenarios to enhance diversity. Aim for varied phrasing and structure to reduce redundancy and ensure a broad representation of intents.",
+      "motivation": "The batch of synthetic samples demonstrates a good coverage of attributes, but there are some missing intent values and potential near-duplicates. The diversity in phrasing could be improved to avoid redundancy.",
+      "feedback_summary": {
+        "iteration": 1,
+        "n_attribute_failures": 0,
+        "n_realism_artifacts": 0,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": 0.21299808503618234,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "card_arrival",
+          "lost_or_stolen_card",
+          "card_payment_fee_charged"
+        ],
+        "overrepresented_modes": [
+          "top_up_failed",
+          "card_swallowed",
+          "card_payment_wrong_exchange_rate"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.0,
+          "discriminator_accuracy": 0.5,
+          "synthetic_detection_rate": 0.5,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.43333333333333335,
+          "entropy/intent": 0.8136297517320067,
+          "entropy/difficulty": 0.8868595071429147,
+          "entropy/ambiguity": 0.9497012164384108,
+          "entropy/style": 0.9488801212514659,
+          "entropy/noise": 0.9592101522724051,
+          "entropy/scenario_type": 0.9497012164384108,
+          "coverage/intent": 0.7,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 1.0,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0,
+          "mode_seeking_ratio": 0.21299808503618234,
+          "text_distance_mean": 0.9203638516625965,
+          "coverage_classifier_auroc": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:07:18.483238+00:00"
+    }
+  ]
+}

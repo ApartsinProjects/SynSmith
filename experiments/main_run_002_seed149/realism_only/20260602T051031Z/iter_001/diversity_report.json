@@ -1,0 +1,22 @@
+{
+  "summary": "The batch exhibits a good coverage of attribute values, but there are some near-duplicate phrasings and a few missing edge cases. The diversity in scenarios is commendable, yet certain combinations could be explored further.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "fragmented",
+    "concise"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied phrasing in the generator to reduce near-duplicates.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Consider adding examples that combine different styles and noise types for richer outputs."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

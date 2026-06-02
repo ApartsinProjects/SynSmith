@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good coverage of attribute values, but there are some missing intents and potential near-duplicates. The diversity is generally maintained, though certain intents are underrepresented.",
+  "missing_modes": [
+    "card_not_working",
+    "lost_or_stolen_card"
+  ],
+  "overrepresented_modes": [
+    "top_up_failed",
+    "card_swallowed"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for the missing intents, particularly 'card_not_working' and 'lost_or_stolen_card'.",
+    "Diversify the scenarios to include more unique situations to reduce the overrepresentation of certain intents.",
+    "Implement stricter checks for near-duplicate phrasings to enhance the diversity of the generated samples."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

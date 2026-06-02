@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, but there are some missing combinations and potential overrepresentation of certain styles and intents. Additionally, there are near-duplicate phrasings that could be addressed.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "refund_request"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse phrasing and scenarios to reduce near-duplicates.",
+    "Introduce additional edge cases for intents like 'complaint' and 'general_question' to enhance diversity.",
+    "Ensure a more balanced representation of styles, particularly by including more formal and emotional styles."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

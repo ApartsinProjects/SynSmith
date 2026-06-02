@@ -1,0 +1,24 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, but there are some issues with missing attribute combinations and near-duplicate phrasings. Additionally, certain edge cases and rare scenarios are underrepresented.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "general_question",
+    "easy difficulty",
+    "low ambiguity",
+    "clean noise"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse scenarios, especially for edge cases and rare intents.",
+    "Introduce more variations in phrasing to reduce near-duplicate instances.",
+    "Ensure that all combinations of attributes, particularly those involving 'hard' difficulty and 'complaint' intent, are represented."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

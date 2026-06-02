@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "i am experiencing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i'm really confused about",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "difficulties with",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you check this for me?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler phrases like 'i don't know why'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations on common issues with accounts or payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'can you' or 'why is it'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues with payment or cards",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in phrasing problems with financial transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'why' as a question opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'my card' as a repeated subject",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what do i do if",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exchange rate",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "incorrect",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i would like to request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i recently tried to use",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you check my account?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you fix it?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it's like the app was designed",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about transactions or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in asking for help or information",
+      "n_pairs_observed": 1
+    }
+  ]
+}

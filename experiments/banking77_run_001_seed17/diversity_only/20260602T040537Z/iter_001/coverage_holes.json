@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "What do I do if my card is not working?",
+      "label": "card_not_working",
+      "p_real": 0.9018679839070934
+    },
+    {
+      "text": "What do I do if my card is stolen?",
+      "label": "lost_or_stolen_card",
+      "p_real": 0.8973500068077023
+    },
+    {
+      "text": "My card has been stolen what do I do?",
+      "label": "lost_or_stolen_card",
+      "p_real": 0.8944020261700684
+    },
+    {
+      "text": "Why is my card payment still listed as pending?",
+      "label": "pending_card_payment",
+      "p_real": 0.884616684261399
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

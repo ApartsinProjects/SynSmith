@@ -1,0 +1,96 @@
+{
+  "new_findings": [
+    {
+      "pattern": "What’s up with that?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is used in multiple synthetic samples but does not appear in any real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was expecting my new card to arrive by now",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase reflects a specific expectation that is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you assist?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This concise request for help is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I just want to confirm the transaction details.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for confirmation is not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I think my payment still not go through",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This grammatical structure is unique to the synthetic batch and not found in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this! I made a payment, but it's not showing up anywhere.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The exclamatory opener and the specific context of a payment not showing up is not present in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I think my card got stuck in the ATM",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing about a card getting stuck in an ATM is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I noticed a payment I didn’t authorize.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about unauthorized payments does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I just attempted to make a payment, but my card was unexpectedly declined.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure of expressing a recent payment attempt and decline is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I tried topping up my card but it didn't work.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about topping up a card is not found in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Can you please check what went wrong?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This request for assistance with a specific issue is not present in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "What’s up with that?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is used in multiple synthetic samples but does not appear in any real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was expecting my new card to arrive by now",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase reflects a specific expectation that is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you assist?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This concise request for help is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I just want to confirm the transaction details.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for confirmation is not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

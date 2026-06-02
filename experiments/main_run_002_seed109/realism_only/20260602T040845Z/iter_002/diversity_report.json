@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity in phrasing could be improved to reduce redundancy.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "hard difficulty",
+    "edge_case scenario"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied emotional expressions in the samples.",
+    "Introduce more scenarios that are classified as rare to enhance diversity.",
+    "Reduce the frequency of 'hard' difficulty samples to balance the difficulty levels."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

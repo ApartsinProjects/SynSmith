@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "i thought",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of imperative verbs",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed context or personal experience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "so, i was checking",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can someone explain",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i want to get",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i've been trying to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about account status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of exchange rates",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of elaboration or detail",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of expressing issues with a card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple sentence constructions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar vocabulary related to card issues (e.g., 'card', 'declined', 'lost', 'update')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long, convoluted sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler words like 'like', 'uh', and 'um'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of conversational language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complexity in structure with tangential thoughts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning style",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i just got",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it's making it really challenging",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "for some reason",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "which is confusing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, urgent questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory phrases",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'card' and 'what do i do' phrasing",
+      "n_pairs_observed": 1
+    }
+  ]
+}

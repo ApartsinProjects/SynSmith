@@ -1,0 +1,29 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents and styles, but there are some missing attribute values and combinations, particularly in the intent category. Additionally, there are near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "intent: card_payment_fee_charged, card_payment_wrong_exchange_rate, lost_or_stolen_card",
+    "difficulty: hard",
+    "ambiguity: low",
+    "style: emotional",
+    "noise: clean",
+    "scenario_type: transaction_issue"
+  ],
+  "overrepresented_modes": [
+    "intent: card_arrival, lost_or_stolen_card",
+    "style: fragmented, informal"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples that include the missing intents and scenarios.",
+    "Reduce the frequency of similar phrasing by diversifying the language used in the samples.",
+    "Ensure that all difficulty levels are represented across different intents."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

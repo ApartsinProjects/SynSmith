@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a strong coverage of attributes, but there are missing intent values and some styles are underrepresented. Additionally, there are several near-duplicate phrasings present.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "lost_or_stolen_card",
+    "top_up_failed"
+  ],
+  "overrepresented_modes": [
+    "card_swallowed",
+    "declined_card_payment"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples for missing intent values such as 'card_payment_fee_charged', 'lost_or_stolen_card', and 'top_up_failed'.",
+    "Diversify the styles used in the samples to include more formal and concise options.",
+    "Reduce redundancy by ensuring unique phrasing in samples, especially for similar intents."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

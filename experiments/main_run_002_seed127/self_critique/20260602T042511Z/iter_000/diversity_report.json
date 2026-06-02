@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are some near-duplicate phrasings and a few shallow paraphrases. The diversity is generally good, but attention should be paid to the variety of scenarios and the uniqueness of expressions.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "complaint (4 occurrences)",
+    "general_question (4 occurrences)",
+    "account_issue (3 occurrences)"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied expressions for common intents like 'complaint' and 'general_question'.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that paraphrasing is deeper to avoid near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

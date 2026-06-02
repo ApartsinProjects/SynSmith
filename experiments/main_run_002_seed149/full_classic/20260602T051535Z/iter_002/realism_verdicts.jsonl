@@ -1,0 +1,24 @@
+{"sample_id":"target_00041","prediction":"real","confidence":0.9,"reason":"Natural language with personal concern, informal tone, and specific request."}
+{"sample_id":"target_00036","prediction":"real","confidence":0.85,"reason":"Casual language, informal structure, and genuine frustration."}
+{"sample_id":"R013","prediction":"real","confidence":0.8,"reason":"Direct request with specific context, typical of user support queries."}
+{"sample_id":"R022","prediction":"real","confidence":0.75,"reason":"Concise complaint about a service issue, common in customer interactions."}
+{"sample_id":"R023","prediction":"real","confidence":0.8,"reason":"Strong emotional expression and clear request, typical of customer complaints."}
+{"sample_id":"R026","prediction":"real","confidence":0.7,"reason":"Professional tone with a specific inquiry, typical of business communication."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.6,"reason":"Unusual combination of account access issue and irrelevant question about favorite color."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.65,"reason":"Overly formal and complex language for a typical support request."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct and clear request for a refund, typical of customer service interactions."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Frustrated tone and clear demand for escalation, common in customer complaints."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and formal language, lacks the typical urgency of a real complaint."}
+{"sample_id":"R021","prediction":"real","confidence":0.8,"reason":"Clear expression of dissatisfaction and a specific timeframe, typical of customer service issues."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Straightforward request with specific order details, typical of customer inquiries."}
+{"sample_id":"R003","prediction":"real","confidence":0.85,"reason":"Casual language and clear request for a refund, typical of customer complaints."}
+{"sample_id":"target_00033","prediction":"real","confidence":0.9,"reason":"Direct request for help with a common issue, natural language."}
+{"sample_id":"R029","prediction":"real","confidence":0.75,"reason":"Simple inquiry about service details, typical of customer questions."}
+{"sample_id":"R024","prediction":"real","confidence":0.8,"reason":"Professional inquiry about technical details, common in business contexts."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Specific issue with a common problem, typical of customer support requests."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.6,"reason":"Overly verbose and formal, lacks the urgency and directness of real complaints."}
+{"sample_id":"R028","prediction":"real","confidence":0.75,"reason":"Simple and straightforward inquiry about service tiers, typical of customer questions."}
+{"sample_id":"R011","prediction":"real","confidence":0.8,"reason":"Specific technical issue described clearly, typical of user support requests."}
+{"sample_id":"target_00039","prediction":"real","confidence":0.85,"reason":"Emotional expression and clear request for clarification, typical of customer complaints."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Direct and clear demand for a refund, typical of customer service interactions."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.65,"reason":"Casual tone but lacks specificity and urgency, feels overly polished."}

@@ -1,0 +1,22 @@
+{
+  "summary": "The batch exhibits a high coverage of attribute values, with only a few missing combinations. There are instances of near-duplicate phrasings and some overrepresented modes, particularly in emotional and fragmented styles.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "fragmented"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse emotional expressions to reduce overrepresentation of emotional style.",
+    "Introduce more scenarios involving edge cases, such as rare card issues or unique transaction problems.",
+    "Ensure a wider variety of intents are represented, particularly those that are less common."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

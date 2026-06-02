@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of intents and difficulties, but there are some missing attribute values and combinations, particularly in the style category. Additionally, there are near-duplicate phrasings that could be diversified.",
+  "missing_modes": [
+    "formal style",
+    "emotional style",
+    "fragmented style"
+  ],
+  "overrepresented_modes": [
+    "verbose style",
+    "concise style"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more samples with formal and emotional styles to enhance diversity.",
+    "Introduce more unique phrasing to reduce near-duplicates and shallow paraphrases."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

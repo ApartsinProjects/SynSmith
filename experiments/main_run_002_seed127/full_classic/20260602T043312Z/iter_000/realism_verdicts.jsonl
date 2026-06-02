@@ -1,0 +1,24 @@
+{"sample_id":"R078","prediction":"real","confidence":0.9,"reason":"Natural language with specific context and personal experience."}
+{"sample_id":"R275","prediction":"synthetic","confidence":0.7,"reason":"Vague and lacks detail; feels overly simplified."}
+{"sample_id":"R126","prediction":"real","confidence":0.85,"reason":"Specific complaint about a transaction, realistic phrasing."}
+{"sample_id":"R279","prediction":"real","confidence":0.9,"reason":"Urgent tone and personal context make it feel authentic."}
+{"sample_id":"R228","prediction":"real","confidence":0.8,"reason":"Direct and urgent request, typical of real user concerns."}
+{"sample_id":"R188","prediction":"synthetic","confidence":0.6,"reason":"Lacks detail and context; feels generic."}
+{"sample_id":"R073","prediction":"real","confidence":0.85,"reason":"Specific question about charges, realistic phrasing."}
+{"sample_id":"R136","prediction":"synthetic","confidence":0.65,"reason":"Overly simplistic and lacks personal context."}
+{"sample_id":"R226","prediction":"real","confidence":0.8,"reason":"Direct and urgent request, typical of real user concerns."}
+{"sample_id":"R255","prediction":"real","confidence":0.75,"reason":"Specific issue with a payment, realistic phrasing."}
+{"sample_id":"R004","prediction":"real","confidence":0.8,"reason":"Clear and direct inquiry about a service."}
+{"sample_id":"R287","prediction":"real","confidence":0.85,"reason":"Specific issue with a transaction, realistic phrasing."}
+{"sample_id":"target_00011","prediction":"synthetic","confidence":0.7,"reason":"Overly dramatic and lacks specific context."}
+{"sample_id":"R230","prediction":"real","confidence":0.9,"reason":"Casual language and urgency suggest authenticity."}
+{"sample_id":"R241","prediction":"synthetic","confidence":0.6,"reason":"Repetitive structure and lacks personal detail."}
+{"sample_id":"R111","prediction":"real","confidence":0.85,"reason":"Specific complaint about unauthorized charges."}
+{"sample_id":"R274","prediction":"real","confidence":0.8,"reason":"Specific issue with a transaction, realistic phrasing."}
+{"sample_id":"R041","prediction":"real","confidence":0.75,"reason":"General complaint about a service, realistic phrasing."}
+{"sample_id":"R094","prediction":"real","confidence":0.8,"reason":"Specific inquiry about a statement, realistic phrasing."}
+{"sample_id":"R202","prediction":"real","confidence":0.85,"reason":"Direct question about a common issue, realistic phrasing."}
+{"sample_id":"R237","prediction":"real","confidence":0.8,"reason":"Specific inquiry about a transaction status."}
+{"sample_id":"R008","prediction":"real","confidence":0.75,"reason":"Clear request for assistance, realistic phrasing."}
+{"sample_id":"R138","prediction":"synthetic","confidence":0.65,"reason":"Overly dramatic and lacks personal context."}
+{"sample_id":"R270","prediction":"synthetic","confidence":0.6,"reason":"Unusual phrasing and lacks personal detail."}

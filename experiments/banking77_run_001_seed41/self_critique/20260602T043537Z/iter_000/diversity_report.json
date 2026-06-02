@@ -1,0 +1,24 @@
+{
+  "summary": "The batch demonstrates a good variety of intents and styles, but there are some missing intents and potential near-duplicates. The coverage for the 'intent' attribute is slightly lacking, particularly for 'pending_card_payment' and 'card_payment_fee_charged'.",
+  "missing_modes": [
+    "pending_card_payment"
+  ],
+  "overrepresented_modes": [
+    "card_payment_not_recognised",
+    "lost_or_stolen_card"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for missing intents such as 'pending_card_payment'.",
+    "Diversify the scenarios to include more edge cases or rare situations.",
+    "Reduce the similarity in phrasing to avoid near-duplicates."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

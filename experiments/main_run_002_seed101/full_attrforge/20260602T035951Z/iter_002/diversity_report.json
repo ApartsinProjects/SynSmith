@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of intents, difficulties, ambiguities, and styles, but there are some missing noise modes and potential near-duplicate phrasings. The noise attribute is underrepresented, particularly in the 'clean' and 'irrelevant_details' categories.",
+  "missing_modes": [
+    "clean",
+    "irrelevant_details"
+  ],
+  "overrepresented_modes": [
+    "contradiction",
+    "typos"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with 'clean' noise to balance the dataset.",
+    "Introduce more scenarios with 'irrelevant_details' to diversify the noise attribute.",
+    "Review and refine the phrasing of samples to reduce near-duplicates and shallow paraphrases."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

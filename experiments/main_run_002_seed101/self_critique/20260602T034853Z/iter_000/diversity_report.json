@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, and styles, but there are notable gaps in noise types and some missing combinations of attributes. Additionally, there are instances of near-duplicate phrasings that could be addressed.",
+  "missing_modes": [
+    "missing_details",
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with missing details and contradictions to enhance diversity.",
+    "Reduce the frequency of informal and verbose styles to balance the representation of different styles.",
+    "Introduce more edge cases and rare scenarios to ensure a broader range of situations is covered."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{"sample_id":"target_00041","prediction":"real","confidence":0.9,"reason":"Natural language with personal concern, informal tone."}
+{"sample_id":"target_00036","prediction":"real","confidence":0.85,"reason":"Casual phrasing and specific issue, typical of user complaints."}
+{"sample_id":"R013","prediction":"real","confidence":0.8,"reason":"Direct request with specific context, informal language."}
+{"sample_id":"R022","prediction":"real","confidence":0.75,"reason":"Concise complaint, informal tone, lacks overly polished structure."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Strong emotional expression, typical of customer frustration."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"Specific inquiry about outages, casual language."}
+{"sample_id":"target_00038","prediction":"real","confidence":0.85,"reason":"Personal account issue, informal tone."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.7,"reason":"Overly formal and structured language, lacks personal touch."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct complaint with clear request, informal tone."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"Emotional expression and urgency, typical of customer complaints."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.6,"reason":"Overly detailed and formal, lacks real-world noise."}
+{"sample_id":"R021","prediction":"real","confidence":0.8,"reason":"Frustration expressed in a straightforward manner."}
+{"sample_id":"R000","prediction":"real","confidence":0.85,"reason":"Direct request with specific details, informal tone."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Casual language and direct request, typical of customer service."}
+{"sample_id":"target_00033","prediction":"real","confidence":0.9,"reason":"Common user issue expressed in a straightforward manner."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.65,"reason":"Generic question, lacks personal context."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.7,"reason":"Formal structure and language, lacks personal touch."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Specific issue with a personal touch, informal tone."}
+{"sample_id":"target_00043","prediction":"real","confidence":0.9,"reason":"Detailed personal complaint, informal language."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.6,"reason":"Generic inquiry, lacks personal context."}
+{"sample_id":"R011","prediction":"real","confidence":0.8,"reason":"Specific technical issue, informal tone."}
+{"sample_id":"target_00039","prediction":"real","confidence":0.85,"reason":"Personal complaint with emotional undertone."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Strong emotional expression, typical of customer dissatisfaction."}
+{"sample_id":"target_00047","prediction":"real","confidence":0.85,"reason":"Casual inquiry, typical of user interactions."}

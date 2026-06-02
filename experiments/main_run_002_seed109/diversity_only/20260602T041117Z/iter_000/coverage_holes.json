@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Why is the exchange rate on my card wrong?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8931871942301044
+    },
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.8832959901005119
+    },
+    {
+      "text": "My card payment has the wrong exchange rate",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8829752358212546
+    },
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.8816898580953006
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

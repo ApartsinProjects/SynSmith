@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a high level of diversity across most attributes, but there are some missing intent values and potential near-duplicates in phrasing. The intent 'card_payment_fee_charged' is notably underrepresented.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "top_up_failed"
+  ],
+  "overrepresented_modes": [
+    "lost_or_stolen_card",
+    "card_payment_not_recognised",
+    "card_swallowed"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for the missing intents, particularly 'card_payment_fee_charged' and 'top_up_failed'.",
+    "Vary the phrasing and scenarios to reduce the near-duplicate rate, especially for intents that are overrepresented."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

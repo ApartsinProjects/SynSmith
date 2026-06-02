@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are some near-duplicate phrasings and a few missing edge cases. The diversity is generally good, but some scenarios could be more varied.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "concise",
+    "common"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied phrasing to reduce near-duplicates.",
+    "Include more edge cases to enhance diversity in scenarios.",
+    "Introduce additional informal and emotional styles to balance representation."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

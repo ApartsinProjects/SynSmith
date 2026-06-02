@@ -1,0 +1,151 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "questions about card issues",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repeated use of personal anecdotes or specific situations (e.g., issues with apps, account access)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with 'i' or 'my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration and requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with 'i' or 'there is')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and filler words",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specificity in product or service details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i noticed that",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i don't know why",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i've been trying to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i'm having a really weird issue with",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you check that?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you check if",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with 'why' or 'there are'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on financial transactions and discrepancies",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration with a specific issue",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or experiences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'frustrating' or similar emotional descriptors",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with a focus on specific problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of straightforward language without much emotional expression",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures, often starting with 'what' or 'my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'i need a refund for my order')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of phrases like 'over a week' and 'not sure what to do next'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and casual language",
+      "n_pairs_observed": 1
+    }
+  ]
+}

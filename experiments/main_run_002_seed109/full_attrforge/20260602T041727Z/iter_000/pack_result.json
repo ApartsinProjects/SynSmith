@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "use of exclamatory sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "expressions of disappointment or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of personal pronouns (i, my)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'i’m really upset about...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about service expectations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'top-up' and 'app' terminology",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in asking for help or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of dissatisfaction or upset",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in expressing disappointment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar vocabulary related to service expectations and fairness",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'how can i' or 'what are the steps to'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct inquiries about specific problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive politeness or formalities in openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long-winded explanations or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions or exclamations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inconsistent spelling or grammatical errors",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated expressions of disappointment or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greetings like 'hey' or 'i’m really upset'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with personal feelings or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greetings and expressions of emotion (e.g., 'hey!', 'i’m really upset')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of questions to express dissatisfaction or request assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations in formality, from casual to formal inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of personal experience or opinion (e.g., 'i really liked', 'it didn’t meet my expectations')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how can i...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how come...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i lost track of...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how long to take...",
+      "n_pairs_observed": 1
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{"sample_id":"R264","prediction":"real","confidence":0.9,"reason":"Natural phrasing and specific issue; lacks over-polished grammar."}
+{"sample_id":"R202","prediction":"real","confidence":0.85,"reason":"Direct question with a common concern; feels authentic."}
+{"sample_id":"R283","prediction":"real","confidence":0.8,"reason":"Casual tone and straightforward expression of confusion."}
+{"sample_id":"R064","prediction":"real","confidence":0.9,"reason":"Personal experience shared; specific complaint about fees."}
+{"sample_id":"R094","prediction":"real","confidence":0.85,"reason":"Genuine confusion about a transaction; conversational style."}
+{"sample_id":"R170","prediction":"real","confidence":0.9,"reason":"Common real-world scenario; phrasing is natural."}
+{"sample_id":"R277","prediction":"real","confidence":0.8,"reason":"Simple and relatable issue; lacks formal structure."}
+{"sample_id":"R214","prediction":"real","confidence":0.75,"reason":"Brief and to the point; reflects a common concern."}
+{"sample_id":"R233","prediction":"real","confidence":0.85,"reason":"Specific inquiry about a transaction; feels authentic."}
+{"sample_id":"R229","prediction":"real","confidence":0.9,"reason":"Direct and relatable issue; phrasing is natural."}
+{"sample_id":"R043","prediction":"real","confidence":0.8,"reason":"Common question; lacks overly formal language."}
+{"sample_id":"R205","prediction":"real","confidence":0.85,"reason":"Straightforward request; conversational tone."}
+{"sample_id":"R079","prediction":"real","confidence":0.8,"reason":"Casual inquiry about fees; feels genuine."}
+{"sample_id":"R088","prediction":"real","confidence":0.85,"reason":"Specific issue with payments; conversational style."}
+{"sample_id":"R151","prediction":"real","confidence":0.9,"reason":"Common experience with ATMs; phrasing is natural."}
+{"sample_id":"R146","prediction":"real","confidence":0.85,"reason":"Practical question about a common issue; feels authentic."}
+{"sample_id":"R255","prediction":"real","confidence":0.8,"reason":"Specific inquiry about a transaction; lacks formal structure."}
+{"sample_id":"R241","prediction":"real","confidence":0.75,"reason":"Common concern about pending payments; phrasing is natural."}
+{"sample_id":"R147","prediction":"real","confidence":0.8,"reason":"Direct question about a common issue; feels genuine."}
+{"sample_id":"R080","prediction":"real","confidence":0.75,"reason":"Simple statement about fees; lacks overly polished language."}
+{"sample_id":"R244","prediction":"real","confidence":0.8,"reason":"Specific inquiry about pending payments; conversational tone."}
+{"sample_id":"R195","prediction":"real","confidence":0.85,"reason":"Common experience with card usage; phrasing is natural."}
+{"sample_id":"R115","prediction":"real","confidence":0.8,"reason":"Direct expression of confusion; feels authentic."}
+{"sample_id":"R068","prediction":"real","confidence":0.85,"reason":"Specific question about fees; conversational style."}

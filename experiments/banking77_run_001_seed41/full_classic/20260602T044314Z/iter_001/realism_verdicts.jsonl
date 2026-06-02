@@ -1,0 +1,24 @@
+{"sample_id":"R105","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common issue with payment apps."}
+{"sample_id":"R066","prediction":"real","confidence":0.85,"reason":"Conversational tone, personal experience, and specific query."}
+{"sample_id":"R129","prediction":"real","confidence":0.8,"reason":"Specific complaint about exchange rate, realistic context."}
+{"sample_id":"R148","prediction":"real","confidence":0.9,"reason":"Direct question about a common ATM issue."}
+{"sample_id":"R216","prediction":"real","confidence":0.9,"reason":"Clear, specific inquiry about reporting a stolen card."}
+{"sample_id":"R273","prediction":"real","confidence":0.8,"reason":"Common issue with top-ups, straightforward language."}
+{"sample_id":"R222","prediction":"real","confidence":0.85,"reason":"Direct question about lost card, realistic context."}
+{"sample_id":"R048","prediction":"real","confidence":0.8,"reason":"Common concern about card damage, natural phrasing."}
+{"sample_id":"R159","prediction":"real","confidence":0.9,"reason":"Specific issue with ATM, realistic and urgent tone."}
+{"sample_id":"R263","prediction":"synthetic","confidence":0.6,"reason":"Overly formal and structured, lacks personal touch."}
+{"sample_id":"R091","prediction":"real","confidence":0.9,"reason":"Urgent request regarding unrecognized payments, realistic."}
+{"sample_id":"R268","prediction":"synthetic","confidence":0.65,"reason":"Awkward phrasing, lacks natural flow."}
+{"sample_id":"R101","prediction":"real","confidence":0.85,"reason":"Simple and direct statement about unrecognized payment."}
+{"sample_id":"target_00029","prediction":"real","confidence":0.9,"reason":"Personal narrative about theft, emotional tone."}
+{"sample_id":"R173","prediction":"real","confidence":0.8,"reason":"Common ATM issue, natural expression of frustration."}
+{"sample_id":"R058","prediction":"real","confidence":0.85,"reason":"Common concern about hidden fees, realistic inquiry."}
+{"sample_id":"R276","prediction":"real","confidence":0.8,"reason":"Direct question about top-up denial, realistic context."}
+{"sample_id":"R097","prediction":"real","confidence":0.85,"reason":"Specific concern about unrecognized vendor, realistic."}
+{"sample_id":"target_00027","prediction":"real","confidence":0.9,"reason":"Emotional expression about card issues, relatable."}
+{"sample_id":"R210","prediction":"real","confidence":0.9,"reason":"Urgent and emotional plea about lost card."}
+{"sample_id":"R136","prediction":"synthetic","confidence":0.6,"reason":"Generic complaint about exchange rate, lacks depth."}
+{"sample_id":"R265","prediction":"synthetic","confidence":0.55,"reason":"Vague statement, lacks personal context."}
+{"sample_id":"R176","prediction":"real","confidence":0.8,"reason":"Common issue with card functionality, straightforward."}
+{"sample_id":"R100","prediction":"real","confidence":0.85,"reason":"Specific concern about unrecognized purchase, realistic."}

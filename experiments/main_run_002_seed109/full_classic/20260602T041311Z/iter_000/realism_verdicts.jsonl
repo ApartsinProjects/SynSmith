@@ -1,0 +1,24 @@
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; typical customer inquiry."}
+{"sample_id":"R037","prediction":"real","confidence":0.85,"reason":"Simple, direct question; lacks overly polished language."}
+{"sample_id":"R046","prediction":"real","confidence":0.9,"reason":"Common customer issue; phrasing feels authentic."}
+{"sample_id":"R142","prediction":"real","confidence":0.8,"reason":"Specific issue with exchange rate; realistic customer concern."}
+{"sample_id":"R108","prediction":"real","confidence":0.85,"reason":"Authentic expression of confusion about an account issue."}
+{"sample_id":"R202","prediction":"real","confidence":0.9,"reason":"Common complaint; phrasing is straightforward and relatable."}
+{"sample_id":"R049","prediction":"real","confidence":0.8,"reason":"Realistic description of a problem; lacks formal structure."}
+{"sample_id":"R188","prediction":"real","confidence":0.75,"reason":"Casual phrasing; typical customer frustration."}
+{"sample_id":"R176","prediction":"real","confidence":0.8,"reason":"Direct and simple; reflects a common issue."}
+{"sample_id":"R096","prediction":"real","confidence":0.85,"reason":"Authentic concern about a charge; phrasing is natural."}
+{"sample_id":"R098","prediction":"real","confidence":0.7,"reason":"Some awkward phrasing, but still a plausible customer issue."}
+{"sample_id":"R132","prediction":"real","confidence":0.75,"reason":"Concise and relevant; reflects a common issue."}
+{"sample_id":"R213","prediction":"real","confidence":0.9,"reason":"Common scenario; phrasing feels authentic."}
+{"sample_id":"R141","prediction":"real","confidence":0.8,"reason":"Specific issue; realistic customer concern."}
+{"sample_id":"R071","prediction":"real","confidence":0.85,"reason":"Direct inquiry about fees; phrasing is natural."}
+{"sample_id":"R008","prediction":"real","confidence":0.8,"reason":"Common request for assistance; phrasing is straightforward."}
+{"sample_id":"R032","prediction":"real","confidence":0.85,"reason":"Simple, relatable question; lacks formal structure."}
+{"sample_id":"R055","prediction":"real","confidence":0.8,"reason":"Authentic expression of frustration; typical customer issue."}
+{"sample_id":"R248","prediction":"real","confidence":0.75,"reason":"Common inquiry about transaction status; phrasing is natural."}
+{"sample_id":"target_00016","prediction":"synthetic","confidence":0.6,"reason":"Overly complex structure and phrasing; feels scripted."}
+{"sample_id":"R214","prediction":"real","confidence":0.7,"reason":"Somewhat vague but plausible; lacks detail."}
+{"sample_id":"R128","prediction":"synthetic","confidence":0.65,"reason":"Formal structure and specific request; feels less authentic."}
+{"sample_id":"R165","prediction":"real","confidence":0.8,"reason":"Realistic scenario; phrasing is relatable."}
+{"sample_id":"R023","prediction":"real","confidence":0.75,"reason":"Casual language; typical customer inquiry."}

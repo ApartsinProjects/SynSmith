@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a high coverage of attributes, but there are some missing intents and potential near-duplicate phrasings. The diversity could be improved by including more edge cases and varying the emotional tone.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "top_up_failed"
+  ],
+  "overrepresented_modes": [
+    "lost_or_stolen_card",
+    "card_payment_not_recognised"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Include more examples for the missing intents such as 'card_payment_fee_charged' and 'top_up_failed'.",
+    "Encourage the generation of more varied emotional tones to capture a wider range of user sentiments.",
+    "Introduce edge cases that involve unusual scenarios or less common issues related to card usage."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{"sample_id":"R084","prediction":"real","confidence":0.9,"reason":"Natural phrasing, minor grammatical issues, reflects a common real-world scenario."}
+{"sample_id":"R017","prediction":"real","confidence":0.95,"reason":"Conversational tone, relatable frustration, typical user inquiry."}
+{"sample_id":"R120","prediction":"real","confidence":0.9,"reason":"Specific issue with currency exchange, realistic context."}
+{"sample_id":"R034","prediction":"real","confidence":0.85,"reason":"Common user experience, straightforward question."}
+{"sample_id":"target_00027","prediction":"real","confidence":0.9,"reason":"Detailed personal experience, emotional tone, realistic frustration."}
+{"sample_id":"R260","prediction":"real","confidence":0.8,"reason":"Direct question about payment, typical user concern."}
+{"sample_id":"R072","prediction":"real","confidence":0.85,"reason":"Describes a common issue with card fees, natural language."}
+{"sample_id":"R240","prediction":"real","confidence":0.8,"reason":"Specific inquiry about transaction timing, realistic."}
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Polite request for help, common user issue."}
+{"sample_id":"R108","prediction":"real","confidence":0.85,"reason":"Describes a specific problem, natural phrasing."}
+{"sample_id":"R022","prediction":"synthetic","confidence":0.7,"reason":"Awkward phrasing, lacks context, grammatical issues."}
+{"sample_id":"R107","prediction":"real","confidence":0.8,"reason":"Describes a common concern, straightforward language."}
+{"sample_id":"R197","prediction":"real","confidence":0.85,"reason":"Common issue with card decline, natural expression."}
+{"sample_id":"R058","prediction":"real","confidence":0.8,"reason":"Direct question about fees, relatable concern."}
+{"sample_id":"R159","prediction":"real","confidence":0.9,"reason":"Specific scenario with ATM, realistic inquiry."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Common question about fees, natural language."}
+{"sample_id":"R281","prediction":"synthetic","confidence":0.6,"reason":"Unusual phrasing, lacks real-world context."}
+{"sample_id":"R229","prediction":"real","confidence":0.9,"reason":"Common issue of lost cards, natural expression."}
+{"sample_id":"R238","prediction":"real","confidence":0.85,"reason":"Specific question about payment status, realistic."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.65,"reason":"Awkward phrasing, grammatical issues."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct inquiry about card status, natural tone."}
+{"sample_id":"R253","prediction":"real","confidence":0.8,"reason":"Common question about payment status, straightforward."}
+{"sample_id":"R177","prediction":"real","confidence":0.85,"reason":"Describes a common issue, natural language."}
+{"sample_id":"R038","prediction":"real","confidence":0.85,"reason":"Common user experience, straightforward question."}

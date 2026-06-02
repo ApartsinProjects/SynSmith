@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "What do I do if my card is not working?",
+      "label": "card_not_working",
+      "p_real": 0.9033130281992939
+    },
+    {
+      "text": "What do I do if the ATM took my card?",
+      "label": "card_swallowed",
+      "p_real": 0.8997002862616545
+    },
+    {
+      "text": "Why is there a fee for using my card?",
+      "label": "card_payment_fee_charged",
+      "p_real": 0.8993898281923952
+    },
+    {
+      "text": "What do I do if my card is stolen?",
+      "label": "lost_or_stolen_card",
+      "p_real": 0.8959636722592842
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

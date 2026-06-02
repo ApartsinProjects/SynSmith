@@ -1,0 +1,24 @@
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common question about card tracking."}
+{"sample_id":"R107","prediction":"real","confidence":0.85,"reason":"Authentic concern about unrecognized payments, typical of user inquiries."}
+{"sample_id":"R092","prediction":"real","confidence":0.8,"reason":"Straightforward expression of confusion over a payment, realistic user behavior."}
+{"sample_id":"R109","prediction":"real","confidence":0.9,"reason":"Detailed inquiry about charges, reflects genuine user frustration."}
+{"sample_id":"R190","prediction":"real","confidence":0.8,"reason":"Realistic complaint about payment declines, common user experience."}
+{"sample_id":"R281","prediction":"real","confidence":0.75,"reason":"User frustration over top-up issues, relatable and realistic."}
+{"sample_id":"R025","prediction":"real","confidence":0.9,"reason":"Common user statement about waiting for a card, natural language."}
+{"sample_id":"R158","prediction":"real","confidence":0.85,"reason":"Authentic concern about ATM issues, typical user scenario."}
+{"sample_id":"R245","prediction":"real","confidence":0.8,"reason":"Standard inquiry about payment processing time, realistic."}
+{"sample_id":"R136","prediction":"real","confidence":0.75,"reason":"User questioning exchange rates, common financial inquiry."}
+{"sample_id":"R105","prediction":"real","confidence":0.85,"reason":"Genuine concern about unauthorized payments, realistic."}
+{"sample_id":"R062","prediction":"real","confidence":0.8,"reason":"Detailed inquiry about fees, reflects real user confusion."}
+{"sample_id":"R142","prediction":"real","confidence":0.75,"reason":"User questioning exchange rate errors, typical financial concern."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.6,"reason":"Overly abrupt and lacks natural phrasing, feels artificial."}
+{"sample_id":"R065","prediction":"real","confidence":0.8,"reason":"Common question about extra fees, realistic user concern."}
+{"sample_id":"R104","prediction":"real","confidence":0.85,"reason":"User expressing concern about unauthorized payments, realistic."}
+{"sample_id":"R269","prediction":"real","confidence":0.8,"reason":"Typical user issue with app processing, relatable."}
+{"sample_id":"R209","prediction":"real","confidence":0.9,"reason":"Realistic scenario of card theft, common user request."}
+{"sample_id":"R122","prediction":"real","confidence":0.75,"reason":"User questioning charges, typical financial inquiry."}
+{"sample_id":"R041","prediction":"real","confidence":0.8,"reason":"Common issue with physical cards, realistic user experience."}
+{"sample_id":"R235","prediction":"real","confidence":0.85,"reason":"User expressing frustration with payment issues, relatable."}
+{"sample_id":"R103","prediction":"real","confidence":0.8,"reason":"User confusion over strange payments, realistic inquiry."}
+{"sample_id":"R155","prediction":"real","confidence":0.85,"reason":"Common user concern about ATM card retention, realistic."}
+{"sample_id":"R273","prediction":"real","confidence":0.8,"reason":"User reporting a top-up issue, typical user behavior."}

@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a high coverage of attribute values, with only a few missing modes in the 'intent' category. There are instances of near-duplicate phrasings and some overrepresented styles, particularly 'informal' and 'formal'.",
+  "missing_modes": [
+    "card_not_working",
+    "pending_card_payment",
+    "card_payment_fee_charged"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "formal"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for missing intents such as 'card_not_working', 'pending_card_payment', and 'card_payment_fee_charged'.",
+    "Diversify the styles used in the samples to reduce the overrepresentation of 'informal' and 'formal'.",
+    "Implement stricter checks to minimize near-duplicate phrasings and shallow paraphrases."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

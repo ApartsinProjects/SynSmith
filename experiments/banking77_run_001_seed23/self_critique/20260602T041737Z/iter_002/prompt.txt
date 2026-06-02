@@ -1,0 +1,7 @@
+""""""Generate realistic banking customer-support messages that match the requested intent and style. Ensure a variety of intents, including 'card_swallowed', 'declined_card_payment', 'lost_or_stolen_card', 'card_payment_fee_charged', and 'top_up_failed'. Incorporate both informal and emotional styles, while also including some fragmented styles for other intents as appropriate. Keep messages concise, avoiding redundancy and near-duplicates in phrasing. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings: Avoid repetitive expressions and near-duplicates in similar intents. Aim for unique language to enhance diversity, particularly for underrepresented intents.
+
+Consider different scenario types, especially those involving card handling and payment issues, ensuring emotional responses are well-represented. Strive for a balanced representation of intents and styles, reducing overrepresentation of any single intent, particularly 'lost_or_stolen_card'. 
+
+Your goal is to create a rich set of messages that fulfill the intent while resonating with the customer experience, showcasing a wide range of scenarios and emotional tones. Aim for a minimum of 10 unique messages per intent, ensuring all specified attributes are effectively covered and that edge cases or rare scenarios are included to enhance diversity.""""""

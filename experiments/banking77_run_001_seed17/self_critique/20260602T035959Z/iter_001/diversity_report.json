@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good variety of intents and styles, but there are some missing attribute values and combinations. Additionally, there are instances of near-duplicate phrasings and overrepresented modes that could be addressed for improved diversity.",
+  "missing_modes": [
+    "intent: lost_or_stolen_card",
+    "intent: declined_card_payment",
+    "intent: card_payment_fee_charged",
+    "scenario_type: general_inquiry"
+  ],
+  "overrepresented_modes": [
+    "intent: top_up_failed",
+    "style: informal"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse intents, especially those that are currently underrepresented.",
+    "Reduce the frequency of informal style to balance the overall tone of the samples.",
+    "Introduce more complex scenarios that combine multiple intents or attributes."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

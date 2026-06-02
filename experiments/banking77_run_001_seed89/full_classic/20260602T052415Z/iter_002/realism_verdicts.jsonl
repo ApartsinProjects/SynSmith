@@ -1,0 +1,24 @@
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Natural language with a specific issue; lacks over-polished grammar."}
+{"sample_id":"R022","prediction":"real","confidence":0.85,"reason":"Casual tone and specific complaint; feels authentic."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Technical issue described in a straightforward manner; realistic detail."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"Specific inquiry about future options; lacks generic phrasing."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct complaint with a clear request; feels genuine."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Frustration expressed in a relatable way; realistic context."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Describes a specific technical problem; lacks generic language."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Specific issue with a clear description; feels authentic."}
+{"sample_id":"R014","prediction":"real","confidence":0.85,"reason":"Common issue with a personal touch; realistic phrasing."}
+{"sample_id":"R009","prediction":"real","confidence":0.8,"reason":"Technical issue with a specific detail; feels genuine."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Specific complaint about an order; lacks generic structure."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.6,"reason":"Overly polished and structured; lacks real-world noise."}
+{"sample_id":"R002","prediction":"real","confidence":0.85,"reason":"Direct complaint with urgency; feels authentic."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.65,"reason":"Generic inquiry; lacks personal touch and detail."}
+{"sample_id":"R018","prediction":"real","confidence":0.85,"reason":"Specific complaint about shipping; realistic tone."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.7,"reason":"Formal structure and language; feels less authentic."}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"Specific issue described in a relatable manner."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"Expresses frustration with a clear request; feels genuine."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.6,"reason":"Overly detailed and structured; lacks natural flow."}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.55,"reason":"Casual language but feels scripted; lacks authenticity."}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.65,"reason":"Generic complaint; lacks personal detail."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.5,"reason":"Very brief and lacks detail; feels less authentic."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.55,"reason":"Vague and lacks specificity; feels scripted."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.6,"reason":"Formal inquiry; lacks personal touch and detail."}

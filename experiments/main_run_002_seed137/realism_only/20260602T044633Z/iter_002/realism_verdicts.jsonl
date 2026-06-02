@@ -1,0 +1,24 @@
+{"sample_id":"R261","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context of a common issue."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"Direct question with realistic context."}
+{"sample_id":"R187","prediction":"real","confidence":0.9,"reason":"Common issue phrased in a straightforward manner."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"Simple inquiry about a specific event."}
+{"sample_id":"R113","prediction":"real","confidence":0.9,"reason":"Realistic concern about a bank statement."}
+{"sample_id":"R073","prediction":"real","confidence":0.9,"reason":"Common customer query with natural language."}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.8,"reason":"Overly polished and structured, lacks real-world noise."}
+{"sample_id":"R045","prediction":"real","confidence":0.9,"reason":"Practical question reflecting a common scenario."}
+{"sample_id":"R186","prediction":"real","confidence":0.9,"reason":"Detailed and specific issue with a realistic tone."}
+{"sample_id":"R239","prediction":"real","confidence":0.9,"reason":"Straightforward question about payment status."}
+{"sample_id":"R220","prediction":"real","confidence":0.9,"reason":"Urgent request with a realistic context."}
+{"sample_id":"R159","prediction":"real","confidence":0.9,"reason":"Common ATM issue phrased naturally."}
+{"sample_id":"R198","prediction":"real","confidence":0.9,"reason":"Frustration expressed in a relatable manner."}
+{"sample_id":"R093","prediction":"synthetic","confidence":0.7,"reason":"Unclear phrasing and lack of context."}
+{"sample_id":"R213","prediction":"real","confidence":0.9,"reason":"Direct and common issue regarding lost cards."}
+{"sample_id":"R253","prediction":"real","confidence":0.9,"reason":"Specific question about payment status."}
+{"sample_id":"R176","prediction":"real","confidence":0.9,"reason":"Common issue with a straightforward expression."}
+{"sample_id":"R089","prediction":"real","confidence":0.9,"reason":"Natural expression of confusion over a payment."}
+{"sample_id":"R124","prediction":"real","confidence":0.9,"reason":"Specific complaint about exchange rates."}
+{"sample_id":"R132","prediction":"real","confidence":0.9,"reason":"Simple and direct inquiry about exchange rates."}
+{"sample_id":"R268","prediction":"synthetic","confidence":0.8,"reason":"Overly complex phrasing and lack of clarity."}
+{"sample_id":"R249","prediction":"real","confidence":0.9,"reason":"Common concern about payment delays."}
+{"sample_id":"R057","prediction":"real","confidence":0.9,"reason":"Direct question about card functionality."}
+{"sample_id":"R286","prediction":"real","confidence":0.9,"reason":"Natural expression of a failed transaction."}

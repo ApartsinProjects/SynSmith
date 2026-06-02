@@ -1,0 +1,29 @@
+{
+  "summary": "The batch exhibits a good variety of intents and difficulties, but there are missing modes in the style and noise attributes. Additionally, there are several near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "formal style",
+    "emotional style",
+    "clean noise",
+    "typos noise",
+    "contradiction noise"
+  ],
+  "overrepresented_modes": [
+    "high ambiguity",
+    "medium difficulty",
+    "verbose style"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more diverse phrasing and styles in the generator prompt.",
+    "Include edge cases for intents and scenarios to enhance coverage.",
+    "Ensure a balance of noise types to avoid overrepresentation of certain modes."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

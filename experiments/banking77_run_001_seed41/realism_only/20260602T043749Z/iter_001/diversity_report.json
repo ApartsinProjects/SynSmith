@@ -1,0 +1,24 @@
+{
+  "summary": "The batch exhibits a strong coverage of intents and difficulties, but there are some missing attribute values in the style category and a few underrepresented intents. Additionally, there are instances of near-duplicate phrasings.",
+  "missing_modes": [
+    "formal",
+    "emotional"
+  ],
+  "overrepresented_modes": [
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more formal and emotional styles to enhance diversity.",
+    "Introduce more edge cases or rare scenarios to cover all intents more comprehensively.",
+    "Review and refine the phrasing of generated samples to minimize near-duplicates."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

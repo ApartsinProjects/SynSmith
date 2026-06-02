@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "i attempted to make a",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of conversational openings like 'hi there' and 'i'm pretty sure'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions and requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of losing or having issues with cards",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of reporting issues to customer support",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card status or issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of capitalization at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues with cards or payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions regarding fees or delays",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamatory or capitalized phrases for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on specific problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i noticed a charge on my statement",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i attempted to make a purchase, but my card was declined",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please assist me in resolving this issue?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was just checking my statements and noticed",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please help me?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' or 'i think'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of uncertainty or stress regarding card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with a focus on personal experiences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please assist me",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was just checking",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "not sure what went wrong",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone (e.g., 'what's up?', 'hey, so', 'i think i lost my card')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of expressing a problem followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler phrases (e.g., 'maybe i just misplaced it at home or something')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my card was declined",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you provide any information regarding this situation?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what should i do?",
+      "n_pairs_observed": 1
+    }
+  ]
+}

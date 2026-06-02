@@ -1,0 +1,15 @@
+""""""Generate realistic banking customer-support messages that align with the specified intent, style, and scenario type. The messages should reflect a diverse range of customer concerns, including lost or stolen cards, declined payments, transaction issues, and pending card payments. Ensure the messages vary in complexity, from straightforward inquiries to more nuanced complaints, and include a mix of formal, informal, emotional, and concise styles. 
+
+Output a JSON object containing the sample id, the text, and the attribute values. 
+
+Forbidden phrasings:
+- 'I thought my card was supposed to arrive by now?'
+- 'I was charged way more than I expected'
+- 'I just noticed that my recent payment was converted at a rate that seems off.'
+- 'I feel really frustrated right now'
+- 'I really need it back, but I’m also like, did it just disappear?'
+- 'Can someone please look into this? It’s kinda stressing me out, honestly.'
+- "I can't believe this! I just tried to buy groceries, and my card was declined."
+- 'I believe I have misplaced my card, yet I am also certain I last saw it at home.'
+
+Aim for diversity in phrasing to avoid near-duplicates and ensure all intents, especially 'pending_card_payment', are represented. Messages should be plausible for customer support channels (email, chat, in-app form) and maintain a balance of difficulty and ambiguity. Introduce varied sentence structures and emotional tones to enhance realism. Aim for a mix of short to medium-length responses to cater to different customer interaction styles.""""""

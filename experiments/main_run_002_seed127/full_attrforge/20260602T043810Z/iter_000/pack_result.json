@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of complete sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of asking for information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' or 'i thought'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inclusion of personal anecdotes or side notes (e.g., 'my cat is really hungry right now')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations in tone from casual to formal within the same pack",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning format regarding issues (e.g., payment, access, refunds)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of card payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding card functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions about payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and abrupt sentence structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of 'my card' and 'payment'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of elaboration or context in responses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about app functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inquiries about payment discrepancies",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and grammatical errors",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my app keeps crashing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "help?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i have a problem with my app",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't log into my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "please help!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language and phrases like 'can you please' and 'could you please'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inclusion of personal anecdotes or unrelated details (e.g., mentioning a cat)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning format",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'my app keeps crashing'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or disappointment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamation marks for emphasis",
+      "n_pairs_observed": 1
+    }
+  ]
+}

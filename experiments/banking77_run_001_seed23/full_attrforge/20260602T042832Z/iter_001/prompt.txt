@@ -1,0 +1,9 @@
+"""Generate realistic banking customer-support messages that match the requested intent and style, ensuring a diverse representation of scenarios. The examples should be plausible for a customer support channel (email, chat, in-app form) and vary in complexity and phrasing. Include messages for intents such as 'card_swallowed', 'declined_card_payment', 'general_inquiry' with low ambiguity, and 'transaction_issue' with high ambiguity. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- 'I just noticed the charge for my overseas purchase is way off.'
+- 'I thought everything was processed immediately, but it seems like something went wrong.'
+- 'I’m really worried because my card isn’t working!'
+- 'Could you please assist me?'
+
+Ensure that the messages reflect a range of difficulties, from straightforward to medium complexity, and incorporate informal styles with occasional typos to enhance realism. Avoid repetitive patterns in structure and phrasing, aiming for unique expressions of customer concerns. The output should maintain a balance across different intents to prevent overrepresentation and ensure a rich diversity in the generated messages."""

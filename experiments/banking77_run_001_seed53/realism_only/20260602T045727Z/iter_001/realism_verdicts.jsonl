@@ -1,0 +1,23 @@
+{"sample_id":"R027","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward question indicate a genuine user inquiry."}
+{"sample_id":"R029","prediction":"real","confidence":0.9,"reason":"Direct and concise question about billing, typical of real customer interactions."}
+{"sample_id":"R023","prediction":"real","confidence":0.95,"reason":"Emotional expression and specific complaint suggest a real customer experience."}
+{"sample_id":"target_00029","prediction":"synthetic","confidence":0.8,"reason":"Overly detailed and structured narrative lacks the typical noise of real-life situations."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Clear request for a refund with specific order details indicates a real customer issue."}
+{"sample_id":"R008","prediction":"real","confidence":0.85,"reason":"Technical issue described in a straightforward manner, typical of real user reports."}
+{"sample_id":"target_00023","prediction":"synthetic","confidence":0.75,"reason":"Polished language and structured request feel less authentic, more like a scripted response."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"Direct technical inquiry about API functionality, typical of real developer questions."}
+{"sample_id":"target_00031","prediction":"synthetic","confidence":0.7,"reason":"Generic phrasing and structure suggest a less authentic user experience."}
+{"sample_id":"R001","prediction":"real","confidence":0.85,"reason":"Direct complaint about billing with a clear request for resolution indicates a real user."}
+{"sample_id":"R028","prediction":"real","confidence":0.8,"reason":"Simple question about product tiers, typical of real customer inquiries."}
+{"sample_id":"target_00028","prediction":"synthetic","confidence":0.75,"reason":"Polished language and lack of emotional nuance suggest a generated response."}
+{"sample_id":"target_00018","prediction":"synthetic","confidence":0.7,"reason":"Formal structure and overly polite language feel scripted rather than authentic."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"Frustration expressed over shipping delay is typical of real customer complaints."}
+{"sample_id":"R021","prediction":"real","confidence":0.85,"reason":"Direct complaint about service delay, indicative of a real user experience."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Clear and direct request for a refund based on dissatisfaction, typical of real complaints."}
+{"sample_id":"target_00020","prediction":"synthetic","confidence":0.75,"reason":"Generic phrasing and lack of specific details suggest a less authentic interaction."}
+{"sample_id":"R007","prediction":"real","confidence":0.85,"reason":"Technical issue described in a straightforward manner, typical of real user reports."}
+{"sample_id":"target_00019","prediction":"synthetic","confidence":0.7,"reason":"Polished language and structured narrative feel less authentic, more like a scripted response."}
+{"sample_id":"target_00022","prediction":"synthetic","confidence":0.7,"reason":"Overly formal and structured language suggests a generated response."}
+{"sample_id":"R011","prediction":"real","confidence":0.85,"reason":"Specific technical issue with a clear description indicates a real user experience."}
+{"sample_id":"target_00021","prediction":"synthetic","confidence":0.7,"reason":"Polished language and structured request feel less authentic, more like a scripted response."}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"Specific technical issue described in a straightforward manner, typical of real user reports."}

@@ -1,0 +1,24 @@
+{"sample_id":"R264","prediction":"real","confidence":0.9,"reason":"Natural phrasing and specific request indicate a real user experience."}
+{"sample_id":"R202","prediction":"real","confidence":0.85,"reason":"Direct question with a common issue, typical of real user inquiries."}
+{"sample_id":"R283","prediction":"real","confidence":0.8,"reason":"Casual language and a straightforward statement suggest a real user."}
+{"sample_id":"R064","prediction":"real","confidence":0.9,"reason":"Emotional response to unexpected fees indicates a real user experience."}
+{"sample_id":"R094","prediction":"real","confidence":0.85,"reason":"Specific concern about a transaction, typical of real user behavior."}
+{"sample_id":"R170","prediction":"real","confidence":0.9,"reason":"Describes a common ATM issue in a natural way."}
+{"sample_id":"R277","prediction":"real","confidence":0.8,"reason":"Casual phrasing and a common issue suggest a real user."}
+{"sample_id":"R214","prediction":"real","confidence":0.75,"reason":"Simple statement about losing a card, typical of real user concerns."}
+{"sample_id":"R233","prediction":"real","confidence":0.85,"reason":"Specific question about a pending transaction, indicative of real user behavior."}
+{"sample_id":"R229","prediction":"real","confidence":0.8,"reason":"Direct statement about a missing card, typical of real user inquiries."}
+{"sample_id":"R043","prediction":"real","confidence":0.8,"reason":"Common question about card usage, indicative of real user concerns."}
+{"sample_id":"R205","prediction":"real","confidence":0.75,"reason":"Straightforward request for information, typical of real user behavior."}
+{"sample_id":"R079","prediction":"real","confidence":0.7,"reason":"Question about charges, common in user inquiries."}
+{"sample_id":"R088","prediction":"real","confidence":0.85,"reason":"Describes confusion over transactions, typical of real user experiences."}
+{"sample_id":"R151","prediction":"real","confidence":0.9,"reason":"Describes a common ATM issue in a natural way."}
+{"sample_id":"R146","prediction":"real","confidence":0.8,"reason":"Specific question about recovering a card, indicative of real user behavior."}
+{"sample_id":"R255","prediction":"real","confidence":0.75,"reason":"Describes a pending payment, typical of real user concerns."}
+{"sample_id":"R241","prediction":"real","confidence":0.7,"reason":"Frustration over pending payment, indicative of real user experience."}
+{"sample_id":"R147","prediction":"real","confidence":0.8,"reason":"Direct question about next steps, typical of real user inquiries."}
+{"sample_id":"R080","prediction":"real","confidence":0.75,"reason":"Simple statement about fees, typical of real user concerns."}
+{"sample_id":"R244","prediction":"real","confidence":0.85,"reason":"Common question about pending payments, indicative of real user behavior."}
+{"sample_id":"R195","prediction":"real","confidence":0.8,"reason":"Describes a common issue with card usage, typical of real user experiences."}
+{"sample_id":"R115","prediction":"real","confidence":0.75,"reason":"Simple statement about unrecognized payment, typical of real user concerns."}
+{"sample_id":"R068","prediction":"real","confidence":0.8,"reason":"Question about unexpected fees, common in user inquiries."}

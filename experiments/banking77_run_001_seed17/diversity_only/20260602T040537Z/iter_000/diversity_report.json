@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a strong coverage of attributes, but there are missing intent values and some near-duplicate phrasings. The diversity in styles is somewhat limited, with a notable absence of formal and concise styles.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "lost_or_stolen_card",
+    "top_up_failed",
+    "formal style",
+    "concise style"
+  ],
+  "overrepresented_modes": [
+    "card_swallowed",
+    "declined_card_payment"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Incorporate more diverse intents, especially those that are currently missing.",
+    "Encourage the generation of more formal and concise styles.",
+    "Reduce redundancy by varying phrasings for similar intents."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "The batch of synthetic samples covers all attribute values, but there are some missing combinations and potential near-duplicates. The diversity of phrasing could be improved.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "easy",
+    "medium ambiguity"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse phrasing and styles, especially for 'hard' difficulty and 'formal' style.",
+    "Introduce more edge cases or rare scenarios to enhance diversity.",
+    "Ensure that all combinations of attributes are represented, particularly for less common intents."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

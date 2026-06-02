@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.9006068788430179
+    },
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.9004003917581841
+    },
+    {
+      "text": "Why is the exchange rate on my card wrong?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8990828336457637
+    },
+    {
+      "text": "Why is there a fee for using my card?",
+      "label": "card_payment_fee_charged",
+      "p_real": 0.8964390617044808
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

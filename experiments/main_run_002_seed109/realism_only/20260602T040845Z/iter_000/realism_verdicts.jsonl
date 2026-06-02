@@ -1,0 +1,24 @@
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Natural language with a personal touch, slight informal tone."}
+{"sample_id":"R037","prediction":"real","confidence":0.85,"reason":"Simple and direct question, typical of real user inquiries."}
+{"sample_id":"R046","prediction":"real","confidence":0.9,"reason":"Common scenario phrased in a straightforward manner."}
+{"sample_id":"R142","prediction":"real","confidence":0.8,"reason":"Specific issue mentioned, typical of real user concerns."}
+{"sample_id":"R108","prediction":"real","confidence":0.85,"reason":"Casual phrasing and a relatable issue."}
+{"sample_id":"R202","prediction":"real","confidence":0.9,"reason":"Direct question reflecting a common problem."}
+{"sample_id":"R049","prediction":"real","confidence":0.85,"reason":"Describes a relatable experience with a card."}
+{"sample_id":"R188","prediction":"real","confidence":0.8,"reason":"Concise and straightforward, typical of user queries."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Simple statement about a common issue."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Common concern about account charges."}
+{"sample_id":"R098","prediction":"real","confidence":0.75,"reason":"Slightly awkward phrasing but still relatable."}
+{"sample_id":"R132","prediction":"real","confidence":0.8,"reason":"Direct statement about a specific issue."}
+{"sample_id":"R213","prediction":"real","confidence":0.9,"reason":"Common scenario with a clear request for help."}
+{"sample_id":"R141","prediction":"real","confidence":0.8,"reason":"Specific issue mentioned, typical of real user concerns."}
+{"sample_id":"R071","prediction":"real","confidence":0.85,"reason":"Direct question about a common issue."}
+{"sample_id":"R008","prediction":"real","confidence":0.8,"reason":"Casual phrasing and a relatable issue."}
+{"sample_id":"R032","prediction":"real","confidence":0.85,"reason":"Common phrasing for a user issue."}
+{"sample_id":"R055","prediction":"real","confidence":0.8,"reason":"Simple and relatable statement."}
+{"sample_id":"R248","prediction":"real","confidence":0.75,"reason":"Common question about transaction status."}
+{"sample_id":"target_00016","prediction":"real","confidence":0.9,"reason":"Specific issue with a subscription, relatable."}
+{"sample_id":"R214","prediction":"real","confidence":0.7,"reason":"Slightly vague but still a common concern."}
+{"sample_id":"R128","prediction":"real","confidence":0.75,"reason":"Specific inquiry about exchange rates."}
+{"sample_id":"R165","prediction":"real","confidence":0.8,"reason":"Describes a relatable experience with a card."}
+{"sample_id":"R023","prediction":"real","confidence":0.7,"reason":"Informal phrasing, but slightly awkward."}

@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a strong coverage of intents, difficulties, ambiguities, and noise types, but lacks diversity in the style attribute, particularly in the 'formal' and 'verbose' styles. There are also several instances of near-duplicate phrasings and shallow paraphrases.",
+  "missing_modes": [
+    "informal",
+    "emotional"
+  ],
+  "overrepresented_modes": [
+    "fragmented",
+    "concise"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more informal and emotional styles to enhance diversity.",
+    "Introduce more varied phrasings to reduce near-duplicates and shallow paraphrases.",
+    "Ensure that edge cases are represented with unique scenarios to avoid redundancy."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

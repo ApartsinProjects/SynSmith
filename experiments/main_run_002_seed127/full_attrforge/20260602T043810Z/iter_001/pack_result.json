@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "i am experiencing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i recently noticed",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it would be appreciated if you could",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "which appears to be",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "significantly lower than",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "persistent failure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "missing crucial elements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions that include additional context or details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by additional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' or 'i was just wondering'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning style with informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion about processes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and filler phrases like 'you know?' and 'i mean'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for information or action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive focus on account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of elaboration or detail",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated questioning structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamatory statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on financial transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone (e.g., 'hey', 'i mean', 'you know')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of themes related to account access and technical issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration and urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions that are open-ended and exploratory in nature",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions about account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements of problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in requests for help",
+      "n_pairs_observed": 1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+""""""Generate realistic customer support messages that align with the requested intent and style, ensuring a wide variety of unique phrasings and scenarios. The examples should be suitable for a customer support channel (email, chat, in-app form) and should encompass a broad emotional spectrum and diverse styles, avoiding overrepresentation of any single mode. Incorporate edge cases and rare scenarios to enhance diversity and authenticity. Aim for messages that are short to medium in length, with varied sentence structures.
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "<unique_identifier>",
+  "text": "<customer_support_message>",
+  "attributes": {
+    "intent": "<intent_value>",
+    "style": "<style_value>",
+    "difficulty": "<difficulty_value>",
+    "ambiguity": "<ambiguity_value>",
+    "noise": "<noise_value>",
+    "scenario_type": "<scenario_type_value>"
+  }
+}
+
+Forbidden phrasings:
+- "I want my money back"
+- "Is the pro plan billed monthly or yearly?"
+- "Does the API have a rate limit?"
+- "What's the difference between the pro and business tier?"
+
+Ensure that the generated messages reflect a wide range of customer inquiries and responses, with a focus on authenticity, varied expression, and structural diversity. Aim to reduce near-duplicate instances while balancing emotional tones and verbosity."""""

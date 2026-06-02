@@ -1,0 +1,24 @@
+{"sample_id":"R187","prediction":"real","confidence":0.9,"reason":"Natural language with common phrasing; lacks over-polished grammar."}
+{"sample_id":"R255","prediction":"real","confidence":0.85,"reason":"Straightforward statement; realistic context and vocabulary."}
+{"sample_id":"R210","prediction":"real","confidence":0.95,"reason":"Emotional urgency and informal tone suggest a real person."}
+{"sample_id":"R287","prediction":"real","confidence":0.9,"reason":"Casual language and relatable situation; feels authentic."}
+{"sample_id":"R284","prediction":"synthetic","confidence":0.7,"reason":"Overly polished and structured; lacks real-world noise."}
+{"sample_id":"R060","prediction":"real","confidence":0.8,"reason":"Simple and direct; common issue with realistic phrasing."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.65,"reason":"Conversational but slightly formulaic; lacks personal touch."}
+{"sample_id":"R098","prediction":"synthetic","confidence":0.6,"reason":"Repetitive phrasing and awkward structure; feels generated."}
+{"sample_id":"R197","prediction":"real","confidence":0.85,"reason":"Common concern expressed in a natural way."}
+{"sample_id":"R154","prediction":"real","confidence":0.9,"reason":"Realistic scenario with straightforward language."}
+{"sample_id":"R097","prediction":"real","confidence":0.8,"reason":"Authentic concern about a transaction; natural phrasing."}
+{"sample_id":"R134","prediction":"real","confidence":0.75,"reason":"Specific complaint; realistic context."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.7,"reason":"Casual tone but overly structured; feels generated."}
+{"sample_id":"R091","prediction":"real","confidence":0.9,"reason":"Urgent request with realistic context; natural language."}
+{"sample_id":"R016","prediction":"real","confidence":0.85,"reason":"Common issue expressed in a straightforward manner."}
+{"sample_id":"R038","prediction":"real","confidence":0.8,"reason":"Simple question; realistic phrasing."}
+{"sample_id":"R174","prediction":"real","confidence":0.9,"reason":"Direct and common issue; feels authentic."}
+{"sample_id":"R201","prediction":"real","confidence":0.85,"reason":"Common complaint; natural language."}
+{"sample_id":"R070","prediction":"real","confidence":0.8,"reason":"Realistic concern about unexpected charges."}
+{"sample_id":"R219","prediction":"real","confidence":0.9,"reason":"Urgent and serious issue; natural phrasing."}
+{"sample_id":"R185","prediction":"synthetic","confidence":0.6,"reason":"Vague and lacks detail; feels generated."}
+{"sample_id":"R253","prediction":"real","confidence":0.75,"reason":"Common question about payment status; realistic."}
+{"sample_id":"R208","prediction":"real","confidence":0.8,"reason":"Natural phrasing; common concern."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.65,"reason":"Casual but lacks depth; feels formulaic."}

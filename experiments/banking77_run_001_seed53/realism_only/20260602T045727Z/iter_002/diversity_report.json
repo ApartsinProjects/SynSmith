@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a high coverage of attribute values, but there are some missing intent modes and potential near-duplicates in phrasing. The diversity could be improved by including more edge cases and varying the emotional tone.",
+  "missing_modes": [
+    "lost_or_stolen_card",
+    "card_payment_fee_charged",
+    "card_arrival"
+  ],
+  "overrepresented_modes": [
+    "declined_card_payment",
+    "pending_card_payment"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Incorporate scenarios involving lost or stolen cards to enhance coverage.",
+    "Vary the emotional tone across samples to capture a broader range of user sentiments.",
+    "Ensure that edge cases, such as unusual transaction amounts or rare card issues, are represented."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

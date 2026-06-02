@@ -1,0 +1,165 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\banking77_run_001_seed41\\full_classic\\20260602T044314Z",
+  "n_iterations": 3,
+  "final_prompt_version": 2,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.1875,
+      "discriminator_accuracy": 0.875,
+      "synthetic_detection_rate": 0.0,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.4666666666666667,
+      "entropy/intent": 0.8746845143040606,
+      "entropy/difficulty": 0.9497012164384108,
+      "entropy/ambiguity": 0.9320201587042913,
+      "entropy/style": 0.9099617502405772,
+      "entropy/noise": 0.9690222556651344,
+      "entropy/scenario_type": 0.9965119062478287,
+      "coverage/intent": 0.8,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 1.0,
+      "attribute_match_rate": 0.125,
+      "discriminator_accuracy": 0.75,
+      "synthetic_detection_rate": 0.0,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.43333333333333335,
+      "entropy/intent": 0.8512585011900043,
+      "entropy/difficulty": 0.946394630357186,
+      "entropy/ambiguity": 0.9755307720176264,
+      "entropy/style": 0.8122368321121995,
+      "entropy/noise": 0.9415787376332126,
+      "entropy/scenario_type": 0.9755307720176264,
+      "coverage/intent": 0.8,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 0.8333333333333334,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    },
+    {
+      "iteration": 2.0,
+      "attribute_match_rate": 0.0625,
+      "discriminator_accuracy": 0.9583333333333334,
+      "synthetic_detection_rate": 0.0,
+      "near_duplicate_rate": 0.15,
+      "combination_coverage": 0.5,
+      "entropy/intent": 0.8746845143040606,
+      "entropy/difficulty": 0.8957541375001009,
+      "entropy/ambiguity": 0.9497012164384108,
+      "entropy/style": 0.8226867783253707,
+      "entropy/noise": 0.9283832117695864,
+      "entropy/scenario_type": 0.9497012164384108,
+      "coverage/intent": 0.8,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 0.8333333333333334,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic banking customer-support messages that match the requested intent\nand style. The example should be plausible for a customer support channel\n(email, chat, in-app form). Keep it short to medium length. Output a JSON\nobject with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-02T04:43:14.163446+00:00"
+    },
+    {
+      "version": 1,
+      "iteration": 1,
+      "prompt": "\"\"\"Generate realistic banking customer-support messages that align with the specified intent and style. Ensure the messages are plausible for a customer support channel (email, chat, in-app form) and vary in structure to avoid repetition. Include a mix of intents, particularly those missing such as 'card_not_working', 'pending_card_payment', and 'card_payment_fee_charged'. Aim for a balance of styles, reducing overrepresentation of 'informal' and 'formal' tones. Keep the length short to medium, and incorporate specific details relevant to the scenario. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- Avoid overly formal structures and vague statements.\n- Do not use generic phrases or awkward phrasing.\n\nAttributes to ensure:\n- Intent: Clearly indicate the specific issue (e.g., card not working, pending payment).\n- Style: Vary between formal, informal, and neutral tones.\n- Difficulty: Maintain a medium level of complexity, avoiding overly simplistic or easy requests.\n- Ambiguity: Introduce a medium level of ambiguity where appropriate.\n- Noise: Incorporate slight contradictions or typos to reflect realistic customer interactions.\n- Scenario Type: Ensure a diverse range of scenarios, including general inquiries and specific issues.\n\n\"\"\"",
+      "motivation": "The batch of synthetic samples demonstrates a high coverage of attribute values, with only a few missing modes in the 'intent' category. There are instances of near-duplicate phrasings and some overrepresented styles, particularly 'informal' and 'formal'.",
+      "feedback_summary": {
+        "iteration": 0,
+        "n_attribute_failures": 13,
+        "n_realism_artifacts": 3,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "card_not_working",
+          "pending_card_payment",
+          "card_payment_fee_charged"
+        ],
+        "overrepresented_modes": [
+          "informal",
+          "formal"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.1875,
+          "discriminator_accuracy": 0.875,
+          "synthetic_detection_rate": 0.0,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.4666666666666667,
+          "entropy/intent": 0.8746845143040606,
+          "entropy/difficulty": 0.9497012164384108,
+          "entropy/ambiguity": 0.9320201587042913,
+          "entropy/style": 0.9099617502405772,
+          "entropy/noise": 0.9690222556651344,
+          "entropy/scenario_type": 0.9965119062478287,
+          "coverage/intent": 0.8,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 1.0,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:44:38.146005+00:00"
+    },
+    {
+      "version": 2,
+      "iteration": 2,
+      "prompt": "\"\"\"\"\"\"Generate realistic banking customer-support messages that align with the specified intent and style. Ensure the messages are plausible for a customer support channel (email, chat, in-app form) and vary in structure to avoid repetition. Include a diverse mix of intents, particularly those less represented such as 'card_not_working', 'pending_card_payment', and 'card_payment_fee_charged'. Strive for a balance of styles, incorporating formal, informal, neutral, and fragmented tones while reducing verbosity and emotional expressions. Keep the length short to medium, and incorporate specific details relevant to the scenario. Output a JSON object with the sample id, the text, and the attribute values.\n\nForbidden phrasings:\n- Avoid overly formal structures and vague statements.\n- Do not use generic phrases or awkward phrasing.\n- Refrain from repetitive sentence structures.\n\nAttributes to ensure:\n- Intent: Clearly indicate the specific issue (e.g., card not working, pending payment).\n- Style: Vary between formal, informal, neutral, and fragmented tones.\n- Difficulty: Maintain a medium level of complexity, introducing slight challenges.\n- Ambiguity: Introduce a medium level of ambiguity where appropriate.\n- Noise: Incorporate slight contradictions or typos to reflect realistic customer interactions.\n- Scenario Type: Ensure a diverse range of scenarios, including general inquiries and specific issues, with some edge cases.\n\n\"\"\"\"\"\"",
+      "motivation": "The batch demonstrates a good variety of intents and scenarios, but there are some missing attribute values and combinations, particularly in the 'style' category. Additionally, there are near-duplicate phrasings present.",
+      "feedback_summary": {
+        "iteration": 1,
+        "n_attribute_failures": 14,
+        "n_realism_artifacts": 4,
+        "near_duplicate_rate": 0.15,
+        "pack_accuracy": null,
+        "mode_seeking_ratio": null,
+        "n_banned_phrasings": 0,
+        "missing_modes": [
+          "formal",
+          "informal",
+          "fragmented"
+        ],
+        "overrepresented_modes": [
+          "verbose",
+          "emotional"
+        ],
+        "metrics": {
+          "attribute_match_rate": 0.125,
+          "discriminator_accuracy": 0.75,
+          "synthetic_detection_rate": 0.0,
+          "near_duplicate_rate": 0.15,
+          "combination_coverage": 0.43333333333333335,
+          "entropy/intent": 0.8512585011900043,
+          "entropy/difficulty": 0.946394630357186,
+          "entropy/ambiguity": 0.9755307720176264,
+          "entropy/style": 0.8122368321121995,
+          "entropy/noise": 0.9415787376332126,
+          "entropy/scenario_type": 0.9755307720176264,
+          "coverage/intent": 0.8,
+          "coverage/difficulty": 1.0,
+          "coverage/ambiguity": 1.0,
+          "coverage/style": 0.8333333333333334,
+          "coverage/noise": 1.0,
+          "coverage/scenario_type": 1.0
+        }
+      },
+      "timestamp": "2026-06-02T04:46:06.147696+00:00"
+    }
+  ]
+}

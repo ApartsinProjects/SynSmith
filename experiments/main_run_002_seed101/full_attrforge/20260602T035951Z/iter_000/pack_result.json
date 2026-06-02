@@ -1,0 +1,139 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "lack of personal anecdotes or emotional context",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "exclamatory tone expressing worry or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account access or order status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and typos",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what do i do' or 'how do i'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise, direct inquiries about specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on account and transaction problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "dear customer support, i am writing to formally request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i seem to be having some issues with my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i have been using your service for quite some time now",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i must say that i am quite unhappy",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "help!!!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of short, abrupt sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in reporting issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar vocabulary related to card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of urgency or anxiety",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of asking for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "combination of unrelated questions or topics in a single message",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise, direct questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific issues related to payment or account status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward sentence structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of 'i want' or 'i' at the beginning of multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of emotional depth or elaboration in the complaints",
+      "n_pairs_observed": 1
+    }
+  ]
+}

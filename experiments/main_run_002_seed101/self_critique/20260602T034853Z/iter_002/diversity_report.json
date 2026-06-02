@@ -1,0 +1,26 @@
+{
+  "summary": "The batch demonstrates a good variety of intents, difficulties, and styles, but there are notable gaps in noise types and some overrepresentation of certain combinations. Additionally, there are instances of near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "missing_details",
+    "irrelevant_details",
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "high ambiguity",
+    "edge_case scenario"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse noise types, especially focusing on 'clean' and 'irrelevant_details'.",
+    "Introduce more edge cases and rare scenarios to enhance the overall diversity of the dataset.",
+    "Reduce the frequency of high ambiguity and edge case combinations to balance the dataset."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

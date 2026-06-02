@@ -1,0 +1,24 @@
+{"sample_id":"R264","prediction":"real","confidence":0.9,"reason":"Natural phrasing and specific issue; lacks over-polished grammar."}
+{"sample_id":"R202","prediction":"real","confidence":0.85,"reason":"Direct and concise question; typical of user inquiries."}
+{"sample_id":"R283","prediction":"real","confidence":0.8,"reason":"Casual language and personal experience; feels authentic."}
+{"sample_id":"R064","prediction":"real","confidence":0.9,"reason":"Expresses confusion about fees; realistic user concern."}
+{"sample_id":"R094","prediction":"real","confidence":0.85,"reason":"Genuine confusion about a transaction; relatable."}
+{"sample_id":"R170","prediction":"real","confidence":0.9,"reason":"Describes a specific incident; realistic user experience."}
+{"sample_id":"R277","prediction":"real","confidence":0.8,"reason":"Casual tone and straightforward issue; typical user language."}
+{"sample_id":"R214","prediction":"real","confidence":0.75,"reason":"Simple statement of loss; lacks complexity."}
+{"sample_id":"R233","prediction":"real","confidence":0.85,"reason":"Common user concern about pending transactions."}
+{"sample_id":"R229","prediction":"real","confidence":0.9,"reason":"Direct statement of loss; realistic phrasing."}
+{"sample_id":"R043","prediction":"real","confidence":0.8,"reason":"Simple and direct question; typical of user inquiries."}
+{"sample_id":"R205","prediction":"real","confidence":0.85,"reason":"Specific request for information; realistic context."}
+{"sample_id":"R079","prediction":"real","confidence":0.8,"reason":"Casual inquiry about fees; relatable user concern."}
+{"sample_id":"R088","prediction":"real","confidence":0.85,"reason":"Describes confusion about transactions; feels authentic."}
+{"sample_id":"R151","prediction":"real","confidence":0.9,"reason":"Describes a specific incident; realistic user experience."}
+{"sample_id":"R146","prediction":"real","confidence":0.85,"reason":"Asks for steps in a specific situation; realistic."}
+{"sample_id":"R255","prediction":"real","confidence":0.8,"reason":"Describes a specific transaction issue; relatable."}
+{"sample_id":"R241","prediction":"real","confidence":0.75,"reason":"Expresses frustration with pending payment; realistic."}
+{"sample_id":"R147","prediction":"real","confidence":0.8,"reason":"Asks for advice in a specific situation; feels authentic."}
+{"sample_id":"R080","prediction":"real","confidence":0.75,"reason":"Describes a common issue with fees; relatable."}
+{"sample_id":"R244","prediction":"real","confidence":0.85,"reason":"Common user concern about pending transactions."}
+{"sample_id":"R195","prediction":"real","confidence":0.8,"reason":"Expresses confusion about a declined payment; realistic."}
+{"sample_id":"R115","prediction":"real","confidence":0.85,"reason":"Describes confusion about a transaction; relatable."}
+{"sample_id":"R068","prediction":"real","confidence":0.8,"reason":"Asks about fees in a straightforward manner; typical."}

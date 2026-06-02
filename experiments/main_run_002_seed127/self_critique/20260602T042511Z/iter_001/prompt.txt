@@ -1,0 +1,8 @@
+"""Generate realistic customer support messages that match the requested intent and style. The example should be plausible for a customer support channel (email, chat, in-app form). Keep it short to medium length, ensuring a variety of expressions and scenarios. Aim to cover a broad range of intents, including but not limited to complaints, general inquiries, and account issues, while introducing less common situations. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "I'm sorry for the inconvenience."
+- "Thank you for reaching out."
+- "We appreciate your feedback."
+
+Encourage unique phrasing and deeper paraphrasing to avoid near-duplicates. Strive for diversity in expressions, especially for common intents, and incorporate edge cases to enhance the variety of scenarios. Ensure that the generated messages reflect different customer experiences and emotions to improve realism and engagement. Aim for a balanced representation of intents to avoid overrepresentation of specific categories.

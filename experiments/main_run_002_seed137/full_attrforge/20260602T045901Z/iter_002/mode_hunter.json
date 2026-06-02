@@ -1,0 +1,102 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I seem to be facing an unusual issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is overly formal and does not appear in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was curious about whether you guys offer any discounts",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal 'you guys' and the structure of the inquiry are not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I thought I had cancelled my subscription",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing suggests a level of uncertainty that is not present in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I received the wrong item and I honestly just want my money back",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The combination of 'honestly just want' is a unique expression not seen in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "like what’s happening?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is unique to the synthetic batch and expresses confusion.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "this is just so frustrating",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This emotional expression is not found in the real batch and emphasizes user frustration.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can’t believe this!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This exclamatory opener is distinctive to the synthetic batch, conveying disbelief.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "my bill is super high this month!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing regarding billing is not present in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought I ordered",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing indicates confusion about an order that is not present in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I mean, can I send it back?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal questioning structure is unique to the synthetic batch and not found in real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I regret to inform you that",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal opening is not used in the real samples, which tend to be more direct.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I was just wondering if there might be any future plans for",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This speculative phrasing about future plans is not present in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I seem to be facing an unusual issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is overly formal and does not appear in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was curious about whether you guys offer any discounts",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal 'you guys' and the structure of the inquiry are not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I thought I had cancelled my subscription",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing suggests a level of uncertainty that is not present in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I received the wrong item and I honestly just want my money back",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The combination of 'honestly just want' is a unique expression not seen in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good variety of intents and difficulties, but there are missing modes in the style attribute and some near-duplicate phrasings. Additionally, certain intents like 'lost_or_stolen_card' and 'card_payment_fee_charged' are absent.",
+  "missing_modes": [
+    "formal style",
+    "emotional style",
+    "verbose style"
+  ],
+  "overrepresented_modes": [
+    "informal style",
+    "concise style"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with the missing styles to enhance diversity.",
+    "Ensure that all intents, especially the rare ones, are represented in future batches.",
+    "Review generated samples for near-duplicate phrasings and encourage more varied expressions."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

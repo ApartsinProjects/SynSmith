@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a comprehensive coverage of the attribute schema, but there are instances of near-duplicate phrasings and some missing edge cases. Overall, the diversity is satisfactory but could benefit from more unique expressions.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "edge_case"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more varied emotional expressions to reduce redundancy.",
+    "Introduce additional edge cases to enhance diversity in scenarios.",
+    "Ensure that the phrasing of requests is more distinct to minimize near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

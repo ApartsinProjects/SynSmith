@@ -37,15 +37,24 @@ went wrong.
 
 **AttrForge** treats synthetic data generation as a closed-loop optimization
 problem. A generator LLM produces samples conditioned on explicit target
-attribute vectors. Three LLM critics, an *attribute verifier*, a *realism
-discriminator*, and a *diversity auditor*, score the batch along independent
-axes. A prompt updater consumes their structured feedback and rewrites the
-generator prompt for the next round.
+attribute vectors. Seven LLM critics, three baseline (attribute verifier,
+realism discriminator, diversity auditor) and four GAN-style adversaries
+(Pack Discriminator, Mode-Seeking, Mode Hunter with persistent memory,
+Coverage Hole Finder via density-ratio estimation), score the batch along
+independent axes. A prompt updater consumes their structured feedback and
+rewrites the generator prompt for the next round.
 
 The result is a GAN-style process in which the optimized variable is the
-prompt rather than the weights, with three simultaneous objectives:
+prompt rather than the weights, with four simultaneous objectives:
 
-> **attribute fidelity · realism · diversity**
+> **attribute fidelity · realism · diversity · batch-level coverage**
+
+The framework ships two example datasets, customer-support intent
+classification (5 classes, 40 real examples) and Banking77 cards-and-payments
+(10 classes, 300 real-train, 400 held-out test). The released artifacts
+include all per-seed runs, raw critic outputs, aggregation scripts, and the
+cross-condition classifier ensemble harness that reaches macro F1
+$0.947 \pm 0.056$ on customer-support at $N = 10$ seeds.
 
 ---
 
@@ -80,14 +89,20 @@ named failures rather than free-form self-critique.
 
 ### Why three critics
 
-| Critic                  | Question it answers                                | Failure mode it prevents                                     |
-| ----------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
-| Attribute Verifier      | Does the text actually reflect the requested vector? | Metadata-only labels: the right attribute string with mismatched text |
-| Realism Discriminator   | Can a judge separate synthetic from real?          | Over-polished, template-y, telltale LLM phrasing             |
-| Diversity Auditor       | Does the batch cover the attribute space?          | Mode collapse, shallow paraphrases, missing rare/edge cases  |
+| Critic                  | Question it answers                                | Failure mode it prevents                                     | Class            |
+| ----------------------- | -------------------------------------------------- | ------------------------------------------------------------ | ---------------- |
+| Attribute Verifier      | Does the text reflect the requested vector?        | Metadata-only labels: the right attribute string with mismatched text | baseline |
+| Realism Discriminator   | Can a judge separate synthetic from real?          | Over-polished, template-y, telltale LLM phrasing             | baseline         |
+| Diversity Auditor       | Does the batch cover the attribute space?          | Mode collapse, shallow paraphrases, missing rare/edge cases  | baseline         |
+| Pack Discriminator      | Can a judge separate k-sample packs of real vs synthetic? | Batch-level homogeneity invisible to per-sample realism judges | PacGAN analog    |
+| Mode-Seeking            | Does attribute variation produce surface variation? | Attribute-deaf generation: same text for different attribute vectors | MSGAN analog     |
+| Mode Hunter             | Which LLM tics appear in synth but not real?       | Recurring banned phrasings, opener tics, structural templates | ban-list training |
+| Coverage Hole Finder    | Which real examples does the synthetic batch fail to cover? | Distributional coverage holes the discriminator alone misses | density-ratio coverage |
 
-Removing any one critic should produce a measurably degraded distribution along
-its axis; this is the central ablation the framework is designed to test.
+Removing any one critic produces a measurably degraded distribution along its
+axis; the seven-critic loop is referenced in the paper as `full_attrforge` and
+is the default configuration when `attrforge run` is invoked without an
+ablation flag.
 
 ---
 
@@ -96,8 +111,8 @@ its axis; this is the central ablation the framework is designed to test.
 ### Install
 
 ```bash
-git clone https://github.com/yourusername/attrforge.git
-cd attrforge
+git clone https://github.com/ApartsinProjects/PromptForge.git
+cd PromptForge
 pip install -e ".[openai]"        # or .[anthropic], or .[all]
 ```
 
@@ -114,8 +129,31 @@ attrforge run examples/customer_support/config.echo.yaml
 
 ```bash
 export OPENAI_API_KEY=sk-...
-attrforge run examples/customer_support/config.yaml --iterations 5
+attrforge run examples/customer_support/config.yaml --iterations 3
 attrforge inspect runs/<run_id>
+```
+
+### Run the seven-condition paper experiment (customer-support or Banking77)
+
+```bash
+# Customer-support, 10 seeds, 7 conditions, 3 iterations, 16 samples/iter
+python scripts/run_experiments.py \
+  --config examples/customer_support/config.yaml \
+  --conditions naive few_shot self_critique realism_only diversity_only full_classic full_attrforge \
+  --seeds 17 23 41 53 89 101 109 127 137 149 \
+  --iterations 3 --samples-per-iteration 16 \
+  --run-id main_run_002
+
+# Banking77 cards-and-payments, 5 seeds
+python scripts/run_experiments.py \
+  --config examples/banking77/config.yaml \
+  --conditions naive few_shot self_critique realism_only diversity_only full_classic full_attrforge \
+  --seeds 17 23 41 53 89 \
+  --iterations 3 --samples-per-iteration 16 \
+  --run-id banking77_run_001
+
+# Cross-condition classifier ensembling (the headline analysis)
+python scripts/ensemble_deep.py --base main_run_002
 ```
 
 ### Programmatic API
@@ -124,15 +162,42 @@ attrforge inspect runs/<run_id>
 from attrforge import AttrForge
 
 forge = AttrForge.from_config("examples/customer_support/config.yaml")
-result = forge.run(iterations=5)
+result = forge.run(iterations=3)
 
 print(result.final_prompt)
 print(result.metric_history[-1])
 # {'attribute_match_rate': 0.92,
 #  'discriminator_accuracy': 0.58,
+#  'pack_accuracy': 0.53,
+#  'mode_seeking_ratio': 0.18,
+#  'hunter_library_size': 11,
+#  'coverage_auroc': 0.99,
 #  'near_duplicate_rate': 0.04,
 #  'combination_coverage': 0.83, ...}
 ```
+
+### Adding your own critic
+
+Every critic implements the same protocol (`name`, `evaluate(batch, real, attrs) -> StructuredFeedback`). To
+add a fifth GAN-style adversary or a domain-specific verifier:
+
+```python
+# attrforge/critics/my_critic.py
+from attrforge.schema import Critic, StructuredFeedback, NamedComplaint
+
+class MyCritic(Critic):
+    name = "my_critic"
+    def evaluate(self, batch, real, attrs):
+        return StructuredFeedback(
+            critic=self.name,
+            metrics={"my_score": 0.42},
+            complaints=[NamedComplaint(tag="opener-tic", reason="every sample opens 'Hi team'")],
+        )
+```
+
+Then wire it into `attrforge/baselines.py` and add a flag in the ablation table.
+The updater template will render its complaints alongside the existing critics
+automatically; no change to the loop or the prompt-update logic is required.
 
 ---
 
@@ -228,14 +293,15 @@ realism-only, and human prompt refinement.
 
 ## Baselines included
 
-| Baseline                | Switch                            | Description                                              |
-| ----------------------- | --------------------------------- | -------------------------------------------------------- |
-| Naive prompting         | `iterations: 1`                   | One manually written prompt, no critic loop              |
-| Few-shot prompting      | `generator.num_few_shot: 5`       | Larger few-shot, no iterative refinement                 |
-| Self-critique           | disable verifier and auditor      | Only realism feedback, no attribute or diversity control |
-| Diversity-only          | disable verifier and discriminator | Coverage-guided refinement only                          |
-| Realism-only            | disable verifier and auditor      | Discriminator-guided refinement only                     |
-| Full AttrForge          | default                           | All three critics, prompt updater on                     |
+| Baseline                | `--conditions` flag       | Description                                              |
+| ----------------------- | ------------------------- | -------------------------------------------------------- |
+| Naive prompting         | `naive`                   | One manually written prompt, no critic loop              |
+| Few-shot prompting      | `few_shot`                | 8-exemplar few-shot, no iterative refinement             |
+| Self-critique           | `self_critique`           | Only the deterministic diversity-auditor; no LLM judges  |
+| Diversity-only          | `diversity_only`          | Coverage-guided refinement, no realism / verifier critics |
+| Realism-only            | `realism_only`            | Realism discriminator + auditor; no verifier / GAN adversaries |
+| Full classic (3-critic) | `full_classic`            | Verifier + realism + auditor (3 baseline critics)         |
+| Full AttrForge (7-critic) | `full_attrforge`        | All 7 critics: 3 baseline + 4 GAN-style adversaries (default) |
 
 Every baseline runs through the same harness and writes the same artifacts, so
 results are directly comparable.
@@ -253,15 +319,32 @@ attrforge/
 ├── critics/
 │   ├── verifier.py      per-sample attribute audit
 │   ├── discriminator.py mixed-batch real-vs-synthetic judge
-│   └── auditor.py       batch-level coverage and near-duplicate audit
+│   ├── auditor.py       batch-level coverage and near-duplicate audit
+│   ├── pack.py          Pack Discriminator (PacGAN analog)
+│   ├── mode_seeking.py  attribute-distance / text-distance ratio (MSGAN)
+│   ├── mode_hunter.py   persistent banned-phrasings library
+│   └── coverage_hole.py density-ratio-based coverage finder
 ├── updater.py           prompt rewriter and versioned history
+├── baselines.py         ablation builders for every named baseline
 ├── loop.py              orchestrator, persistence, run manifests
 ├── metrics.py           per-iteration scalar metrics
 ├── prompts/templates.py canonical prompt strings for every component
-└── cli.py               `attrforge run | inspect | schema`
+├── eval/downstream.py   sentence-transformer + LR downstream evaluator
+└── cli.py               attrforge run | inspect | schema
 examples/
-└── customer_support/    schema, 15 real seed examples, two configs
-tests/                   schema, planner, end-to-end offline loop
+├── customer_support/    5-class intent, 40 real seeds (30 train + 10 test)
+└── banking77/           10-class card/payment subset, 300 train + 400 test
+scripts/
+├── run_experiments.py        per-condition runs across seeds
+├── ensemble_deep.py          cross-condition logit-average ensemble
+├── augmentation_eval.py      real + synthetic downstream eval
+├── per_class_aug_eval.py     per-class F1 augmentation analysis
+├── scarce_real_eval.py       n_real sweep for augmentation
+├── reaudit_fixed.py          Vendi + MS-emb + 5-fold AUROC re-audit
+├── diversity_metrics.py      distinct-n + self-BLEU-4
+├── mmd_per_feature_space.py  MMD with TF-IDF word/char + sentence-transformer
+└── worst_class_eval.py       worst-class F1 sweep
+tests/                        schema, planner, end-to-end offline loop
 ```
 
 ---
@@ -288,12 +371,18 @@ tests/                   schema, planner, end-to-end offline loop
 
 ## Roadmap
 
+- [x] Downstream classifier harness (sentence-transformer + LR; multi-classifier ablation)
+- [x] Embedding-based diversity floor (sentence-transformer Gram-matrix Vendi score)
+- [x] Banking77 cross-domain replication (10-class card/payment subset)
+- [x] Cross-condition classifier ensembling
+- [x] Post-hoc adversary audit with real-vs-real null reference
 - [ ] Pareto frontier across (fidelity, realism, diversity) instead of joint optimization
 - [ ] Human-in-the-loop adjudication for verifier and discriminator
-- [ ] Embedding-based diversity floor (sentence-transformers integration is wired but disabled by default)
-- [ ] Multi-language generation
-- [ ] Per-attribute calibration with held-out judges
-- [ ] Downstream classifier harness (RQ4 protocol)
+- [ ] Multi-vendor judge ensembling (claude-haiku + gpt-4o-mini + gemini-flash)
+- [ ] Verbalized Sampling + retrieval-augmented persona generator (see scout report)
+- [ ] Calibrated 3-judge debate Realism Critic with KS-stopping
+- [ ] Scendi-score diversity decomposition
+- [ ] Per-rewrite causal attribution via prompt-diff
 
 ---
 
@@ -302,12 +391,13 @@ tests/                   schema, planner, end-to-end offline loop
 If you use AttrForge in academic work, please cite:
 
 ```bibtex
-@misc{attrforge2026,
-  title  = {AttrForge: Multi-Objective Prompt Debugging for Realistic,
-            Diverse, and Attribute-Controlled Synthetic Data Generation},
-  author = {AttrForge Contributors},
+@misc{apartsin2026attrforge,
+  title  = {Adversarial Prompt Debugging for LLM Synthetic Data Generation},
+  author = {Apartsin, Alexander and Aperstein, Yehudit},
   year   = {2026},
-  note   = {Research preview, \url{https://github.com/yourusername/attrforge}}
+  url    = {https://github.com/ApartsinProjects/PromptForge},
+  note   = {Holon Institute of Technology and Afeka College of Engineering, Israel.
+            Paper: \url{https://apartsinprojects.github.io/PromptForge/}.}
 }
 ```
 

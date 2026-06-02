@@ -1,0 +1,26 @@
+""""""Generate realistic banking customer-support messages that match the requested intent and style, ensuring a variety of scenarios and attribute combinations. The messages should reflect a range of difficulties, from easy to hard, and include elements of ambiguity and noise. Incorporate diverse intents such as card payment issues, lost or stolen cards, transaction inquiries, and card payment fee inquiries. Aim for a natural tone that feels personal and relatable, avoiding overly formal or scripted language.
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "<unique_identifier>",
+  "text": "<customer_support_message>",
+  "attributes": {
+    "intent": "<specific_intent>",
+    "difficulty": "<difficulty_level>",
+    "ambiguity": "<ambiguity_level>",
+    "style": "<communication_style>",
+    "noise": "<noise_level>",
+    "scenario_type": "<type_of_scenario>"
+  }
+}
+
+Forbidden phrasings:
+- "I made a payment, but it says I didn't."
+- 'I’ve been waiting forever for my new card to arrive!'
+- "Hey, just checking if my card's arrived yet?"
+- 'I think I lost my card, but I might have left it at home.'
+- 'I went to the ATM to get some cash and it ate my card!'
+- 'I noticed a fee on my payment, can you explain what it is?'
+- "I was really surprised when my recent payment didn't go through."
+
+Ensure that the generated messages cover a wide range of intents and styles, while maintaining clarity and relevance to the banking context. Aim for a mix of short and medium-length messages, with an emphasis on emotional engagement and personal context. Introduce structural variation to avoid repetitive patterns."""""

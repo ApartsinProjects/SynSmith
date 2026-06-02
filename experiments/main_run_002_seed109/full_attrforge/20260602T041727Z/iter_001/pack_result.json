@@ -1,0 +1,127 @@
+{
+  "pack_accuracy": 0.25,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "questions about card issues",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on transactional issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions about account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about card and payment functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of 'why' or 'my' at the beginning",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar vocabulary related to card payments and charges",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concern about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emphasis on urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of capital letters for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated questioning structure (e.g., 'why am i being charged...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding fees and charges",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of formal language and structure across samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'hey' as an opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or situations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of uncertainty or frustration",
+      "n_pairs_observed": 1
+    }
+  ]
+}

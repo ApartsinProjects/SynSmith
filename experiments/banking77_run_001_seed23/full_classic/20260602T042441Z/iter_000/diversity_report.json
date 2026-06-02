@@ -1,0 +1,21 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of attributes, but there are some missing intent values and potential near-duplicate phrasings. The coverage for intent is slightly below the ideal threshold, indicating room for improvement.",
+  "missing_modes": [
+    "intent: card_swallowed",
+    "intent: declined_card_payment"
+  ],
+  "overrepresented_modes": [],
+  "near_duplicate_rate": 0.1,
+  "recommendations": [
+    "Include more diverse intent values, particularly 'card_swallowed' and 'declined_card_payment', to enhance coverage.",
+    "Ensure that the generated samples avoid near-duplicate phrasings by varying sentence structure and vocabulary."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

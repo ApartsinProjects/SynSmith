@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, but there are some issues with near-duplicate phrasings and a lack of edge cases. The diversity in scenarios is commendable, yet certain combinations could benefit from more representation.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "fragmented",
+    "concise"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more varied phrasings and styles, particularly for the 'complaint' and 'technical_problem' intents.",
+    "Include more edge cases and rare scenarios to enhance diversity.",
+    "Reduce the reliance on fragmented and concise styles by promoting a wider range of styles in the samples."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

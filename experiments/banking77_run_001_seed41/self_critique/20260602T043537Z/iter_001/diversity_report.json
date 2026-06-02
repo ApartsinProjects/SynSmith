@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents and scenarios, but there are some missing attribute values and combinations, particularly in the style attribute. Additionally, there are near-duplicate phrasings and overrepresented modes that could be addressed.",
+  "missing_modes": [
+    "formal style",
+    "emotional style",
+    "fragmented style"
+  ],
+  "overrepresented_modes": [
+    "verbose style",
+    "concise style"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse phrasing and styles in the generator prompt.",
+    "Ensure that all styles are represented equally in the samples.",
+    "Introduce more edge cases or rare scenarios to enrich the dataset."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

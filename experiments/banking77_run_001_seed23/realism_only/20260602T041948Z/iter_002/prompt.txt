@@ -1,0 +1,16 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style, ensuring a diverse range of scenarios, including both common and edge cases. Incorporate natural language variations and real-world noise to enhance authenticity. Specifically include underrepresented intents such as 'card_payment_fee_charged,' 'card_payment_wrong_exchange_rate,' and 'top_up_failed,' while balancing overrepresented intents like 'lost_or_stolen_card' and 'card_not_working.' 
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "unique_identifier",
+  "text": "customer_support_message",
+  "attributes": {
+    "intent": "specific_intent",
+    "style": "chosen_style",
+    "scenario_type": "relevant_scenario"
+  }
+}
+
+Encourage creativity in language use and minimize near-duplicate phrasings to enhance diversity. Aim for a mix of concise, fragmented, formal, and informal styles that reflect genuine customer interactions. 
+
+Forbidden phrasings: Avoid overly polished or structured language, awkward phrasing, and repetitive expressions. Ensure a balance of formality and informality while capturing the essence of real-world communication."""""

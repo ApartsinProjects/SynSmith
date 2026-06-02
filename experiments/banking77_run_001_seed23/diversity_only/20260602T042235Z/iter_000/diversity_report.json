@@ -1,0 +1,27 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a strong coverage of attributes, with a notable absence of certain intents and some overrepresentation of specific styles. There are also instances of near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "card_swallowed",
+    "declined_card_payment",
+    "general_inquiry with emotional style",
+    "transaction_issue with fragmented style"
+  ],
+  "overrepresented_modes": [
+    "informal style",
+    "medium difficulty"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples that include the missing intents to ensure full coverage.",
+    "Vary the difficulty levels more evenly across intents to avoid overrepresentation of medium difficulty.",
+    "Introduce more diverse phrasing and styles to reduce near-duplicate instances."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

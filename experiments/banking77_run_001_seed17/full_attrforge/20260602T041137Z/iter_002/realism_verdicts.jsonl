@@ -1,0 +1,24 @@
+{"sample_id":"R178","prediction":"real","confidence":0.9,"reason":"Natural phrasing, common issue."}
+{"sample_id":"R256","prediction":"real","confidence":0.9,"reason":"Specific context, realistic concern."}
+{"sample_id":"R221","prediction":"real","confidence":0.85,"reason":"Casual language, typical user query."}
+{"sample_id":"R281","prediction":"real","confidence":0.8,"reason":"Direct question, relatable scenario."}
+{"sample_id":"target_00033","prediction":"synthetic","confidence":0.7,"reason":"Overly structured, lacks personal touch."}
+{"sample_id":"R173","prediction":"real","confidence":0.9,"reason":"Common issue, informal tone."}
+{"sample_id":"R184","prediction":"real","confidence":0.85,"reason":"Direct and relatable question."}
+{"sample_id":"R238","prediction":"real","confidence":0.85,"reason":"Specific inquiry, natural phrasing."}
+{"sample_id":"R123","prediction":"real","confidence":0.8,"reason":"Specific issue, realistic context."}
+{"sample_id":"R089","prediction":"real","confidence":0.9,"reason":"Common concern, straightforward language."}
+{"sample_id":"R045","prediction":"real","confidence":0.85,"reason":"Practical question, natural tone."}
+{"sample_id":"R116","prediction":"real","confidence":0.8,"reason":"Specific issue, clear context."}
+{"sample_id":"R249","prediction":"real","confidence":0.8,"reason":"Detailed inquiry, realistic scenario."}
+{"sample_id":"R175","prediction":"real","confidence":0.85,"reason":"Casual language, relatable concern."}
+{"sample_id":"R069","prediction":"real","confidence":0.9,"reason":"Common issue, straightforward question."}
+{"sample_id":"R188","prediction":"real","confidence":0.85,"reason":"Direct question, realistic phrasing."}
+{"sample_id":"R215","prediction":"real","confidence":0.9,"reason":"Common issue, natural language."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Common concern, straightforward."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.6,"reason":"Unusual phrasing, lacks context."}
+{"sample_id":"R062","prediction":"synthetic","confidence":0.7,"reason":"Overly formal structure, lacks personal touch."}
+{"sample_id":"R146","prediction":"real","confidence":0.85,"reason":"Specific issue, realistic context."}
+{"sample_id":"R170","prediction":"real","confidence":0.9,"reason":"Common issue, natural phrasing."}
+{"sample_id":"R161","prediction":"real","confidence":0.9,"reason":"Casual language, relatable scenario."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Common issue, straightforward question."}

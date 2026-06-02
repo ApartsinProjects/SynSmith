@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Why is my card payment still a pending transaction?",
+      "label": "pending_card_payment",
+      "p_real": 0.892922495771445
+    },
+    {
+      "text": "The ATM took my card.",
+      "label": "card_swallowed",
+      "p_real": 0.8880762837952505
+    },
+    {
+      "text": "Why is my card payment still listed as pending?",
+      "label": "pending_card_payment",
+      "p_real": 0.8880506666282988
+    },
+    {
+      "text": "What do I do if the ATM took my card?",
+      "label": "card_swallowed",
+      "p_real": 0.8857744678549156
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

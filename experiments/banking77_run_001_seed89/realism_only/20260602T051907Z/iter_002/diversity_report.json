@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a comprehensive coverage of the attribute schema with no missing values or combinations. However, there are instances of near-duplicate phrasings and some overrepresented styles.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "emotional"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more variation in phrasing and style to reduce near-duplicates.",
+    "Introduce additional scenarios or intents that are less common to enhance diversity.",
+    "Consider balancing the representation of styles, particularly reducing the frequency of informal and emotional styles."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

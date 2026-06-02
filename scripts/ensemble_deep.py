@@ -69,10 +69,30 @@ def macro_worst(y_true, y_pred, labels):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", required=True)
+    ap.add_argument("--real-train", type=Path, default=None,
+                    help="Path to real_train.jsonl. Defaults to experiments/_splits/<base-stem>.split_train.jsonl if --base contains a non-default dataset stem (e.g. banking77), else experiments/_splits/real_train.jsonl.")
+    ap.add_argument("--real-test", type=Path, default=None,
+                    help="Path to real_test.jsonl. Same default-resolution rules as --real-train.")
     args = ap.parse_args()
 
-    real_train = [RealExample.model_validate(r) for r in load_jsonl(REPO / "experiments/_splits/real_train.jsonl")]
-    real_test = [RealExample.model_validate(r) for r in load_jsonl(REPO / "experiments/_splits/real_test.jsonl")]
+    # Auto-resolve real_train / real_test from --base if not given explicitly.
+    splits_root = REPO / "experiments/_splits"
+    if args.real_train is None:
+        if "banking77" in args.base.lower():
+            args.real_train = splits_root / "banking77_real_train.jsonl"
+        else:
+            args.real_train = splits_root / "real_train.jsonl"
+    if args.real_test is None:
+        if "banking77" in args.base.lower():
+            args.real_test = splits_root / "banking77_real_test.jsonl"
+        else:
+            args.real_test = splits_root / "real_test.jsonl"
+
+    print(f"Using real_train: {args.real_train}")
+    print(f"Using real_test:  {args.real_test}")
+
+    real_train = [RealExample.model_validate(r) for r in load_jsonl(args.real_train)]
+    real_test = [RealExample.model_validate(r) for r in load_jsonl(args.real_test)]
     real_train_texts = [r.text for r in real_train]
     real_train_labels = np.array([r.label for r in real_train])
     test_texts = [r.text for r in real_test]

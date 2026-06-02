@@ -1,0 +1,167 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "i attempted to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "the transaction was unsuccessful",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please help me?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what was the issue with",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i don't think that my",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "hello!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i randomly got charged",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "extra fees for card payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what do i do if'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal phrasing and lack of complete sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of 'why did' and 'how can'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "provide me with some information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i just attempted to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i am writing to inform you that",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please advise",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "unexpectedly declined",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "pending balance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'how' or 'when'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct inquiries about issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of asking for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures with minimal variation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct statements without emotional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing regarding payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of personal anecdotes or detailed context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greeting or opener in multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and slang (e.g., 'what’s up with that?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about transaction issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for explanations or next steps",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of similar transaction problems (e.g., card declined, payment not showing up)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal opening phrases like 'i would like to bring to your attention'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy, complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for guidance or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'transaction' and 'exchange rate'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'dear customer support' as a salutation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue with a transaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of straightforward language without emotional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding exchange rates and payments",
+      "n_pairs_observed": 1
+    }
+  ]
+}

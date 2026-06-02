@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good variety of intents and scenarios, but there are some missing attribute values and combinations, particularly in the style category. Additionally, there are near-duplicate phrasings that could be addressed.",
+  "missing_modes": [
+    "formal style",
+    "concise style",
+    "transaction_issue scenario with emotional style",
+    "general_inquiry scenario with fragmented style"
+  ],
+  "overrepresented_modes": [
+    "card_swallowed intent",
+    "declined_card_payment intent"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more formal and concise styles.",
+    "Diversify the intents to include more edge cases like 'lost_or_stolen_card' in various styles.",
+    "Reduce redundancy in phrasing by varying sentence structure and vocabulary."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

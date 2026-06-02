@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.8900705363651406
+    },
+    {
+      "text": "What do I do if the ATM took my card?",
+      "label": "card_swallowed",
+      "p_real": 0.889035498307824
+    },
+    {
+      "text": "Why was I charged an extra fee when using the card?",
+      "label": "card_payment_fee_charged",
+      "p_real": 0.8839445320462552
+    },
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.8831462856623764
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

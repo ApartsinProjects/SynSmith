@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "questions about card issues",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "repeated use of 'my card' as a subject",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures starting with 'i' or 'my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about payment status or issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "vague references to problems without specific details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with a focus on recent transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing around fees and payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language in openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of stating a problem followed by a request for clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding unexpected fees or card malfunctions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what do i do' or 'why has my'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations like 'didnt'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in inquiries about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive focus on card-related problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about card status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'top-up' terminology",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with 'i've been trying to...' and 'i have the funds, why can i not...'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing around transaction problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive questioning structure (e.g., 'what happened?', 'what's up with that?')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific references to tracking and delays",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card status",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct inquiries",
+      "n_pairs_observed": 1
+    }
+  ]
+}

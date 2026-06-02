@@ -1,0 +1,96 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, my card just isn’t going through at all!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is casual and expresses frustration about a card issue, which is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was going through my recent transactions",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicates a personal review of transactions, which is not present in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I’ve been trying to top-up my card for like an hour",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal tone and specific time duration are unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "It seems like it’s taking longer than usual",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of concern about delays is not found in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I just noticed the charge for my overseas purchase is way off.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about noticing a charge for an overseas purchase does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought everything was processed immediately, but it seems like something went wrong.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This sentence structure expressing confusion about processing times is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’m really worried because my card isn’t working!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The expression of worry about a non-functioning card is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you please assist me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This polite request for assistance appears multiple times in the synthetic batch but is absent in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't seem to find it anywhere.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is unique to the synthetic batch and expresses a sense of confusion about the card's location.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I’m super stressed out right now!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This emotional expression is not found in the real batch and conveys urgency and frustration.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I was really shocked to see my payment converted at such a bad rate!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of shock regarding payment conversion is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Hey, my card just isn’t going through at all!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is casual and expresses frustration about a card issue, which is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I was going through my recent transactions",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicates a personal review of transactions, which is not present in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I’ve been trying to top-up my card for like an hour",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The informal tone and specific time duration are unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "It seems like it’s taking longer than usual",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of concern about delays is not found in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

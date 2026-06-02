@@ -1,0 +1,27 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents, difficulties, ambiguities, and styles, but there is a notable underrepresentation of noise types, particularly 'missing_details' and 'contradiction'. Additionally, there are several near-duplicate phrasings that could be improved for diversity.",
+  "missing_modes": [
+    "missing_details",
+    "typos",
+    "irrelevant_details",
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "irrelevant_details",
+    "typos"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with 'missing_details' noise to enhance diversity.",
+    "Reduce the use of similar phrasing in emotional and informal styles to minimize near-duplicates.",
+    "Incorporate more edge cases and rare scenarios to broaden the range of examples."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

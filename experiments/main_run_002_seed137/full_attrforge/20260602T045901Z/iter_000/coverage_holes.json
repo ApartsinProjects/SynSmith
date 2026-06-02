@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6498058702321845
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6485877870622335
+    },
+    {
+      "text": "what's the difference between the pro and business tier exactly",
+      "label": "general_question",
+      "p_real": 0.642230112314043
+    },
+    {
+      "text": "search results page loads but the filters don't apply. firefox latest, cleared cache, same thing.",
+      "label": "technical_problem",
+      "p_real": 0.6354129982287781
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6493490424220687
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.64093415560292
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6392389391548237
+    },
+    {
+      "text": "subscription auto-renewed after I cancelled. please refund and confirm cancellation.",
+      "label": "refund_request",
+      "p_real": 0.6345921074089826
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

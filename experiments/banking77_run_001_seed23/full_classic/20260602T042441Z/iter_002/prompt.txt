@@ -1,0 +1,10 @@
+""""""Generate realistic banking customer-support messages that match the requested intent and style. Ensure the messages reflect a wide range of common customer scenarios, including card issues, payment declines, transaction inquiries, and underrepresented intents like 'card_payment_fee_charged' and 'top_up_failed'. Incorporate a variety of intents to enhance coverage and introduce edge cases for richer diversity. 
+
+The messages should include realistic noise, such as typos, informal language, and fragmented sentences, to mimic authentic customer interactions. Keep the length short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- Avoid overly polished or structured language that lacks real-world noise.
+- Do not use near-duplicate phrasings; vary sentence structure and vocabulary.
+- Ensure messages do not contain contradictions regarding the intent.
+
+Each message should clearly indicate the specific intent, maintain an appropriate level of difficulty, and include some ambiguity to reflect real customer inquiries. Aim for a diverse representation of scenarios and intents to create a rich dataset for training. The output should be plausible for a customer support channel (email, chat, in-app form).""""""

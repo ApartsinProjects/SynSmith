@@ -1,0 +1,18 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style. The examples should be plausible for a customer support channel (email, chat, in-app form). Ensure a wide range of intents, including card payment issues, refund requests, and general inquiries. Keep the messages short to medium length, and vary the phrasing to minimize near-duplicates. Output a JSON object with the sample id, the text, and the attribute values.
+
+Include examples for the following intents:
+- card_payment_fee_charged
+- card_payment_wrong_exchange_rate
+- pending_card_payment
+- top_up_failed
+
+Avoid over-representing informal styles and intents like card_arrival and lost_or_stolen_card. Aim for diverse scenarios, including emotional and verbose styles, as well as edge cases or rare situations to enrich the dataset.
+
+Forbidden phrasings:
+- "Hi team, quick one - does the API have a rate limit on the search endpoint?"
+- "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing."
+- "is the pro plan billed monthly or yearly?"
+- "ordered 2 items, only got 1. want a refund on the missing one, not a reship."
+- "I’m having trouble with my payment; can someone help?"
+
+Ensure that the generated messages reflect a balance of styles and intents, with a focus on realism and attribute fidelity."""""

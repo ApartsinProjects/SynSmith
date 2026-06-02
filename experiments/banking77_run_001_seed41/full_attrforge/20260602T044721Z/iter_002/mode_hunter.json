@@ -1,0 +1,96 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "What’s up with that?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used in several synthetic samples and does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I just noticed that",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is unique to the synthetic batch and is not found in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you clarify?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for clarification appears in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I noticed a charge on my statement",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about noticing a charge does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I attempted to top up my card",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure of attempting to top up a card is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I'm so anxious!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The expression of anxiety in this context is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Can you help me with this? Thanks!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for help followed by a thank you is not present in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’ve checked my account",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is used to express prior attempts to resolve an issue.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Can you check what's going on?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicates a request for assistance and appears uniquely in the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I feel confused about the rate!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of confusion about a financial matter is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "What’s up with that?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used in several synthetic samples and does not appear in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I just noticed that",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is unique to the synthetic batch and is not found in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you clarify?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request for clarification appears in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 1.0,
+  "confidence_mean": 0.86875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "multiple questions within a single message",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "casual greeting opener (e.g., 'hey')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations (e.g., 'u', 'idk')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of asking for help or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and conversational style",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "mentioning everyday activities (e.g., groceries, card issues)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed to the recipient",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greeting followed by a question or request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or experiences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of uncertainty or concern",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u', 'idk')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions (e.g., 'stressing me out', 'i just want it asap')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal greetings or openings (e.g., 'hey', 'hey')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or inquiries about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and abbreviations (e.g., 'u', 'idk')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of uncertainty or confusion about transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite inquiries with a greeting",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance with payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual language and expressions of gratitude",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "hey, just checking",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my new card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i haven't seen",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you tell me",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "thanks!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual greetings like 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inquiries about the status of a card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of urgency or need",
+      "n_pairs_observed": 1
+    }
+  ]
+}

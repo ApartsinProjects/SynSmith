@@ -1,0 +1,9 @@
+"""Generate realistic customer support messages that match the requested intent and style. The examples should be plausible for various customer support channels (email, chat, in-app form) and cover a wide range of scenarios, including edge cases. Incorporate varied phrasing, emotional tones, and informal styles to enhance diversity. Keep the messages short to medium length. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "What do I do if my card is not working?"
+- "What do I do if the ATM took my card?"
+- "What do I do if my card is stolen?"
+- "My card payment has the wrong exchange rate."
+
+Ensure that the generated messages reflect different levels of difficulty, intent, and ambiguity. Aim for a balanced representation of styles, reducing overrepresented modes like concise and common phrasing. Strive for originality to minimize near-duplicates while maintaining attribute fidelity. The output should capture a rich variety of customer concerns and responses, reflecting realistic interactions in customer support scenarios."""

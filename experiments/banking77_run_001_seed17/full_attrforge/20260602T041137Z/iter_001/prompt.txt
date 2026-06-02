@@ -1,0 +1,8 @@
+"""Generate realistic banking customer-support messages that align with the requested intent and style. Ensure the messages are plausible for a customer support channel (email, chat, in-app form) and vary in structure and tone. Include a mix of intents, such as 'lost_or_stolen_card', 'pending_card_payment', and 'card_payment_wrong_exchange_rate', while incorporating diverse styles like formal, concise, and fragmented. Keep the messages short to medium length, avoiding repetitive phrasing and ensuring clarity. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- 'I think my payment still not go through'
+- "I can't believe this! I made a payment, but it's not showing up anywhere."
+- 'I think my card got stuck in the ATM'
+
+Aim for a balance of attributes: ensure that the intent is clear, the style is appropriate, and the messages contain relevant details without unnecessary noise. Strive for a medium level of difficulty and avoid ambiguity. Each message should reflect a unique scenario, reducing near-duplicate phrasings and enhancing the overall diversity of the generated examples."""

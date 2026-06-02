@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I think my payment still not go through",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This grammatical structure is unique to the synthetic batch and not found in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this! I made a payment, but it's not showing up anywhere.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The exclamatory opener and the specific context of a payment not showing up is not present in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I think my card got stuck in the ATM",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing about a card getting stuck in an ATM is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I think my payment still not go through",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This grammatical structure is unique to the synthetic batch and not found in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this! I made a payment, but it's not showing up anywhere.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The exclamatory opener and the specific context of a payment not showing up is not present in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I think my card got stuck in the ATM",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing about a card getting stuck in an ATM is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

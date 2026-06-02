@@ -1,0 +1,24 @@
+{"sample_id":"R183","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context of a customer inquiry."}
+{"sample_id":"R037","prediction":"real","confidence":0.85,"reason":"Simple, direct question typical of customer service inquiries."}
+{"sample_id":"R046","prediction":"real","confidence":0.9,"reason":"Realistic scenario with a specific context."}
+{"sample_id":"R142","prediction":"real","confidence":0.8,"reason":"Specific issue related to a common financial transaction."}
+{"sample_id":"R108","prediction":"real","confidence":0.85,"reason":"Common customer complaint about unauthorized charges."}
+{"sample_id":"R202","prediction":"real","confidence":0.9,"reason":"Direct and relatable question about card issues."}
+{"sample_id":"R049","prediction":"real","confidence":0.85,"reason":"Natural expression of confusion about card functionality."}
+{"sample_id":"R188","prediction":"real","confidence":0.8,"reason":"Concise and straightforward inquiry about card decline."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Common phrasing for a customer issue."}
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Typical customer concern regarding account statements."}
+{"sample_id":"R098","prediction":"real","confidence":0.75,"reason":"Slightly awkward phrasing but still plausible."}
+{"sample_id":"R132","prediction":"real","confidence":0.8,"reason":"Direct complaint about a specific financial issue."}
+{"sample_id":"R213","prediction":"real","confidence":0.9,"reason":"Common scenario of losing a card."}
+{"sample_id":"R141","prediction":"real","confidence":0.8,"reason":"Specific issue with a financial transaction."}
+{"sample_id":"R071","prediction":"real","confidence":0.85,"reason":"Typical customer inquiry about fees."}
+{"sample_id":"R008","prediction":"real","confidence":0.8,"reason":"Natural request for assistance."}
+{"sample_id":"R032","prediction":"real","confidence":0.85,"reason":"Common phrasing for a card issue."}
+{"sample_id":"R055","prediction":"real","confidence":0.8,"reason":"Direct expression of a problem with a card."}
+{"sample_id":"R248","prediction":"real","confidence":0.75,"reason":"Common question about transaction timing."}
+{"sample_id":"target_00016","prediction":"synthetic","confidence":0.6,"reason":"Overly polished and structured, lacks real-world noise."}
+{"sample_id":"R214","prediction":"real","confidence":0.7,"reason":"Natural expression of losing track of a card."}
+{"sample_id":"R128","prediction":"synthetic","confidence":0.65,"reason":"Unnatural phrasing and overly formal structure."}
+{"sample_id":"R165","prediction":"real","confidence":0.8,"reason":"Realistic scenario involving a card issue."}
+{"sample_id":"R023","prediction":"synthetic","confidence":0.55,"reason":"Awkward phrasing and informal structure suggest synthetic origin."}

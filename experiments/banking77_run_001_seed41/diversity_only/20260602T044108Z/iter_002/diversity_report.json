@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a strong representation of intents and difficulties, but there are missing values in the style attribute and some intents are overrepresented. Additionally, there are near-duplicate phrasings that could be diversified.",
+  "missing_modes": [
+    "formal style",
+    "verbose style"
+  ],
+  "overrepresented_modes": [
+    "card_payment_wrong_exchange_rate",
+    "card_swallowed"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of examples with formal and verbose styles to enhance diversity.",
+    "Reduce the frequency of similar intents like 'card_payment_wrong_exchange_rate' and 'card_swallowed' to ensure a more balanced representation.",
+    "Introduce more edge cases or rare scenarios to enrich the dataset."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

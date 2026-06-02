@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates good coverage across most attributes, but there are notable gaps in the noise category, particularly with 'clean' and 'irrelevant_details'. Additionally, there are instances of near-duplicate phrasings and shallow paraphrases that could be improved for diversity.",
+  "missing_modes": [
+    "clean",
+    "irrelevant_details"
+  ],
+  "overrepresented_modes": [
+    "contradiction",
+    "typos"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with 'clean' noise to balance the diversity in the noise category.",
+    "Introduce more varied phrasings and sentence structures to reduce near-duplicate and shallow paraphrase occurrences.",
+    "Ensure that edge cases are represented more distinctly to enhance the overall diversity of scenarios."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

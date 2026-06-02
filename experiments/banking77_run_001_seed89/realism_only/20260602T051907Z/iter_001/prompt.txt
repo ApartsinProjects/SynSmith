@@ -1,0 +1,9 @@
+"""Generate realistic banking customer-support messages that match the requested intent and style, ensuring a personal touch and emotional nuance. The examples should reflect various scenarios, including transaction issues, card handling, and general inquiries. Incorporate a range of styles such as formal, informal, emotional, concise, and verbose. Keep the messages short to medium length, with specific details that convey urgency or concern. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- Avoid overly polished language that lacks urgency.
+- Refrain from generic phrasing and structure.
+- Do not use overly formal or structured language that sounds scripted.
+- Exclude overly enthusiastic tones without specific details.
+
+Ensure to cover a diverse set of intents, including but not limited to: card_payment_fee_charged, card_swallowed, lost_or_stolen_card, declined_card_payment, and pending_card_payment. Strive for a balance in emotional styles and avoid overrepresentation of fragmented or emotional tones. Aim to introduce edge cases or rare scenarios to enhance the diversity of the generated messages."

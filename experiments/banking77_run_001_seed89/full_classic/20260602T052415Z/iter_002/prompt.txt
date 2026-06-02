@@ -1,0 +1,9 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style, incorporating a wide range of emotional tones and varying levels of detail. The examples should be plausible for different customer support channels (email, chat, in-app form) and encompass a diverse set of scenarios, including edge cases and unique transaction issues. Ensure messages reflect varying difficulty and ambiguity, with some being fragmented and others more elaborate. Output a JSON object with the sample id, the text, and the attribute values, including intent, style, difficulty, and noise.
+
+Encourage the generation of messages that include intents such as 'card_payment_fee_charged', 'card_swallowed', 'lost_or_stolen_card', 'pending_card_payment', and introduce less common intents like 'exchange_rate_discrepancy' and 'transaction_limit_exceeded'. Aim for varied phrasing to minimize near-duplicates and ensure the language feels authentic and spontaneous, avoiding overly polished or formal structures.
+
+Incorporate a wider variety of emotional expressions, including frustration, confusion, and relief, while reducing the overrepresentation of emotional and fragmented styles. Introduce scenarios that reflect rare card issues or unique transaction problems to enhance diversity.
+
+Forbidden phrasings: None yet.
+
+""""""

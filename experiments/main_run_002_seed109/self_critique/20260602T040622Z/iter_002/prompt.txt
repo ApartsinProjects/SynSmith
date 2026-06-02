@@ -1,0 +1,8 @@
+""""""Generate realistic customer support messages that align with the requested intent and style. Ensure a diverse range of phrasings and tones, emphasizing formal and emotional styles to balance the current overrepresentation of informal and concise tones. Introduce edge cases and rare scenarios to enhance diversity, aiming for a mix of straightforward and complex situations. The message should be plausible for a customer support channel (email, chat, in-app form) and vary in length from short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "I'm sorry to hear that"
+- "Thank you for reaching out"
+- "We appreciate your patience"
+
+Ensure that all combinations of attributes are represented, particularly for less common intents and styles, to maintain a rich diversity in the generated samples. Aim for a balanced representation of formal, neutral, and casual tones, and strive to reduce near-duplicate instances by varying phrasing significantly. This will help create a comprehensive dataset that reflects a wide range of customer interactions while minimizing redundancy and enhancing realism. Include scenarios that reflect both common and uncommon customer issues to broaden the dataset's applicability. """"""

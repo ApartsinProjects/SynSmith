@@ -1,0 +1,24 @@
+{"sample_id":"R237","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context-specific inquiry about payment status."}
+{"sample_id":"R266","prediction":"real","confidence":0.85,"reason":"Concise and straightforward question reflecting a common issue."}
+{"sample_id":"R265","prediction":"real","confidence":0.8,"reason":"Direct and informal expression of a problem, typical of user queries."}
+{"sample_id":"R148","prediction":"real","confidence":0.9,"reason":"Realistic scenario with emotional undertones, typical of user experiences."}
+{"sample_id":"R156","prediction":"real","confidence":0.9,"reason":"Authentic expression of urgency and concern regarding a lost card."}
+{"sample_id":"R199","prediction":"real","confidence":0.85,"reason":"Common issue phrased in a relatable manner."}
+{"sample_id":"R040","prediction":"real","confidence":0.8,"reason":"Specific inquiry about security settings, typical of user concerns."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.6,"reason":"Slightly awkward phrasing ('and up date') and overly formal structure."}
+{"sample_id":"R081","prediction":"real","confidence":0.75,"reason":"Casual tone and relatable question about unexpected charges."}
+{"sample_id":"R033","prediction":"real","confidence":0.85,"reason":"Urgent plea for help, typical of real user frustrations."}
+{"sample_id":"R086","prediction":"real","confidence":0.8,"reason":"Common inquiry about fees, phrased in a straightforward manner."}
+{"sample_id":"R015","prediction":"real","confidence":0.85,"reason":"Direct question about tracking delivery, typical of user concerns."}
+{"sample_id":"R280","prediction":"synthetic","confidence":0.65,"reason":"Lacks specificity and has a generic structure."}
+{"sample_id":"R264","prediction":"real","confidence":0.8,"reason":"Detailed description of a problem, typical of user inquiries."}
+{"sample_id":"R166","prediction":"real","confidence":0.85,"reason":"Common scenario with a clear question about ATM issues."}
+{"sample_id":"R094","prediction":"real","confidence":0.9,"reason":"Authentic concern about unrecognized charges, typical of user experiences."}
+{"sample_id":"R258","prediction":"real","confidence":0.85,"reason":"Specific inquiry about payment status, phrased naturally."}
+{"sample_id":"R124","prediction":"real","confidence":0.8,"reason":"Realistic scenario involving currency exchange issues."}
+{"sample_id":"R044","prediction":"real","confidence":0.85,"reason":"Common user frustration expressed in a relatable manner."}
+{"sample_id":"R185","prediction":"synthetic","confidence":0.5,"reason":"Vague and overly simplistic statement lacking detail."}
+{"sample_id":"R106","prediction":"real","confidence":0.9,"reason":"Specific concern about unauthorized transactions, typical of real user issues."}
+{"sample_id":"R139","prediction":"real","confidence":0.85,"reason":"Common issue with exchange rates, phrased in a relatable way."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Urgent inquiry about card delivery, typical of user frustrations."}
+{"sample_id":"R257","prediction":"real","confidence":0.85,"reason":"Natural phrasing of a common issue regarding payment status."}

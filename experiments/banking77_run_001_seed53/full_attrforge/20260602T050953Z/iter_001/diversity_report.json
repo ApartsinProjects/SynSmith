@@ -1,0 +1,24 @@
+{
+  "summary": "The batch exhibits a strong coverage of attributes, with only one intent missing. There are instances of near-duplicate phrasings and some overrepresented styles, particularly informal and emotional tones.",
+  "missing_modes": [
+    "card_payment_fee_charged"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "emotional"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of examples for the missing intent 'card_payment_fee_charged'.",
+    "Diversify the styles used, particularly reducing the frequency of informal and emotional tones.",
+    "Ensure a broader range of scenarios is covered, especially focusing on edge cases."
+  ],
+  "coverage": {
+    "intent": 0.8,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

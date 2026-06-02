@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Why is my card not working anymore?",
+      "label": "card_not_working",
+      "p_real": 0.8727878237068364
+    },
+    {
+      "text": "Why is there a fee for using my card?",
+      "label": "card_payment_fee_charged",
+      "p_real": 0.8668120676911721
+    },
+    {
+      "text": "Why has my top-up not worked?",
+      "label": "top_up_failed",
+      "p_real": 0.8663906947284931
+    },
+    {
+      "text": "Why am I charged an extra fee on my card?",
+      "label": "card_payment_fee_charged",
+      "p_real": 0.861990769655493
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

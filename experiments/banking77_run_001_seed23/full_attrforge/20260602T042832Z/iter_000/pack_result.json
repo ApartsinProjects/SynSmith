@@ -1,0 +1,139 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "i tried to",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "i am experiencing issues with my card",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "can you help me",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "my card isn't working",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repeated use of 'i tried to' as an opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or stress about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on personal experiences with card problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple, direct statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise phrasing with minimal elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures across samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was charged a different amount",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of worry or confusion about card functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was charged",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i need to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i believe my",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i didn't do a payment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i just checked my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i' to start sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific problems with accounts or cards",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you help?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what happened?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "but it didn't go through",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "but it should be fine",
+      "n_pairs_observed": 1
+    }
+  ]
+}

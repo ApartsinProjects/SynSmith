@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of the attribute schema, with all modes represented. However, there are some issues with missing attribute combinations and near-duplicate phrasings.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "emotional",
+    "common"
+  ],
+  "near_duplicate_rate": 0.2,
+  "recommendations": [
+    "Encourage more variety in the emotional style to reduce overrepresentation.",
+    "Introduce more edge cases and rare scenarios to enhance diversity.",
+    "Ensure that each intent has a balanced representation across all styles and difficulties."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

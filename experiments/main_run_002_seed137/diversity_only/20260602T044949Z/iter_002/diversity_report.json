@@ -1,0 +1,25 @@
+{
+  "summary": "The batch demonstrates good coverage of the intent, difficulty, ambiguity, and scenario_type attributes, but there are notable gaps in the style and noise attributes. Additionally, there are several near-duplicate phrasings that could be addressed for improved diversity.",
+  "missing_modes": [
+    "verbose",
+    "fragmented"
+  ],
+  "overrepresented_modes": [
+    "informal",
+    "irrelevant_details"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more verbose and fragmented styles to enhance diversity.",
+    "Reduce the use of informal style and irrelevant details by specifying a balance in the generator prompt.",
+    "Introduce more edge cases and rare scenarios to ensure a broader range of examples."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

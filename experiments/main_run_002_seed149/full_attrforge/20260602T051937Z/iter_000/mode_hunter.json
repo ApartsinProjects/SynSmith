@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I feel let down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase expressing disappointment does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this is happening!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This dramatic expression of disbelief is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was really looking forward to wearing it!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of anticipation is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I feel let down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase expressing disappointment does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this is happening!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This dramatic expression of disbelief is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was really looking forward to wearing it!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of anticipation is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

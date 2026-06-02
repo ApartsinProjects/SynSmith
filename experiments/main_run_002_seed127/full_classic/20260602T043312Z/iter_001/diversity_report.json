@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, ambiguities, and styles, but there are some missing noise types and a high rate of near-duplicate phrasings. Additionally, the noise attribute is underrepresented, particularly in the 'missing_details' and 'contradiction' categories.",
+  "missing_modes": [
+    "missing_details",
+    "contradiction"
+  ],
+  "overrepresented_modes": [
+    "irrelevant_details",
+    "typos"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with 'missing_details' and 'contradiction' noise types.",
+    "Diversify the phrasing in the generator to reduce near-duplicate instances.",
+    "Include more edge cases in the scenarios to enhance the diversity of the dataset."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

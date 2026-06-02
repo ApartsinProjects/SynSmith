@@ -1,0 +1,9 @@
+"""Generate realistic customer support messages that align with the specified intent and style, ensuring a mix of common and rare scenarios. The messages should vary in difficulty and include some ambiguity, while also incorporating occasional contradictions. Avoid overly polished or generic phrasing, and strive for a balance between formal and informal styles. Keep the length short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- Overly polished language
+- Generic phrasing
+- Verbose constructions
+- Informal tone without context
+
+Ensure to include diverse examples that reflect different customer interactions, such as complaints, inquiries, and technical issues, while maintaining a range of emotional tones and levels of clarity. Aim for messages that may contain minor errors or noise, but remain coherent and relevant to the support context. This will enhance the realism and variability of the generated samples."""

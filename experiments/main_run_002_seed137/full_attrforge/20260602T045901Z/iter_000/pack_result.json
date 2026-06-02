@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.8625,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "requests for help",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "concise statements with direct requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations and acronyms (e.g., 'asap', 'mfa')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "common structure of stating an issue followed by a request for action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of technical terms related to apps and subscriptions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions about services or features",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific issues or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance with specific app issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "mention of technical problems (e.g., crashing, locked out)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of concise, direct language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with the issue followed by a request for help)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific references to app features (e.g., mfa, two factor codes, camera tab)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration about a service or product",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u', 'frustraited', 'unacceptible')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory sentences to convey strong emotions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "personal anecdotes related to customer service issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated phrases like 'i’m really frustrated!'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory statements expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions seeking help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'keeps crashing' structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions like 'i can't believe' and 'i am so frustrated'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "mention of urgency or time constraints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamation marks for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u' for 'you')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion about a service",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    }
+  ]
+}

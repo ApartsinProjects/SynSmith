@@ -1,0 +1,24 @@
+{"sample_id":"R139","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; reflects a common real-world issue."}
+{"sample_id":"R161","prediction":"real","confidence":0.95,"reason":"Casual tone and relatable situation; lacks over-polished grammar."}
+{"sample_id":"R085","prediction":"real","confidence":0.9,"reason":"Direct question about a common issue; feels authentic."}
+{"sample_id":"R248","prediction":"real","confidence":0.85,"reason":"Simple, straightforward inquiry; typical of customer concerns."}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"Personalized question about card delivery; realistic."}
+{"sample_id":"R080","prediction":"real","confidence":0.85,"reason":"Common issue with card payments; phrasing is natural."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"Specific inquiry about tracking; feels genuine."}
+{"sample_id":"R101","prediction":"real","confidence":0.9,"reason":"Authentic expression of confusion over charges."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Realistic concern about account fees; phrasing is casual."}
+{"sample_id":"R222","prediction":"real","confidence":0.9,"reason":"Direct and simple request for assistance; feels authentic."}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.7,"reason":"Overly detailed and polished; lacks the spontaneity of real complaints."}
+{"sample_id":"R221","prediction":"real","confidence":0.8,"reason":"Casual and urgent tone; reflects a common issue."}
+{"sample_id":"R109","prediction":"real","confidence":0.85,"reason":"Common concern about unrecognized charges; phrasing is natural."}
+{"sample_id":"R093","prediction":"synthetic","confidence":0.6,"reason":"Unclear phrasing; lacks context and feels less authentic."}
+{"sample_id":"R067","prediction":"real","confidence":0.8,"reason":"Common question about fees; phrasing is straightforward."}
+{"sample_id":"R158","prediction":"real","confidence":0.85,"reason":"Natural expression of frustration; typical customer experience."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.5,"reason":"Unusual phrasing; lacks clarity and feels artificial."}
+{"sample_id":"R159","prediction":"real","confidence":0.85,"reason":"Direct inquiry about a common issue; phrasing is relatable."}
+{"sample_id":"R175","prediction":"real","confidence":0.8,"reason":"Common concern about card decline; phrasing is natural."}
+{"sample_id":"R212","prediction":"real","confidence":0.85,"reason":"Specific inquiry about card status; feels authentic."}
+{"sample_id":"R279","prediction":"real","confidence":0.9,"reason":"Urgent request for assistance; reflects a real-world scenario."}
+{"sample_id":"R216","prediction":"real","confidence":0.85,"reason":"Realistic concern about reporting a stolen card; phrasing is natural."}
+{"sample_id":"R118","prediction":"real","confidence":0.8,"reason":"Common issue with exchange rates; phrasing is straightforward."}
+{"sample_id":"R046","prediction":"real","confidence":0.85,"reason":"Natural inquiry about a declined payment; feels authentic."}

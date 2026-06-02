@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attributes, but there are missing intent values and some near-duplicate phrasings. The diversity could be improved by including more edge cases and varying the intents further.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "overrepresented_modes": [],
+  "near_duplicate_rate": 0.1875,
+  "recommendations": [
+    "Incorporate more diverse intents, especially those that are currently missing.",
+    "Encourage the generation of unique phrasings to reduce near-duplicate instances.",
+    "Include edge cases and rare scenarios to enhance the overall diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

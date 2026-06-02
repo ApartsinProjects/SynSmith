@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "expressions of frustration or disappointment",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language and rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by an emotional response",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of phrases like 'something goes wrong'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about charges or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hello there' or 'i thought'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for updates or clarifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone and structure in requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of anxiety or concern about orders",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of phrases like 'i would like to request' or 'can you please tell me'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal complaint structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of phrases like 'i’ve been experiencing issues'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i' as a frequent opener",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i need assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was charged",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i topped up my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what do i do if",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational language with informal tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what do i do if'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple, direct inquiries about specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure of asking for help or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for help or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, concise sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in describing problems with the card",
+      "n_pairs_observed": 1
+    }
+  ]
+}

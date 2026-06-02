@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good range of intents and difficulties, but there are missing attribute values for 'style' and 'scenario_type' in some entries. Additionally, there are overrepresented styles and some near-duplicate phrasings.",
+  "missing_modes": [
+    "intent: card_payment_fee_charged, card_swallowed, lost_or_stolen_card, declined_card_payment, pending_card_payment",
+    "style: formal, informal, emotional, concise, verbose",
+    "scenario_type: transaction_issue, card_handling, general_inquiry"
+  ],
+  "overrepresented_modes": [
+    "style: fragmented, emotional",
+    "intent: top_up_failed, card_payment_not_recognised"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with missing intents and styles to ensure full coverage.",
+    "Diversify the emotional and fragmented styles to reduce overrepresentation.",
+    "Introduce more edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

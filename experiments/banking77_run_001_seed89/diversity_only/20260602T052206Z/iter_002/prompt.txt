@@ -1,0 +1,19 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style. Ensure a diverse range of intents, including general questions, complaints, refund requests, and specific scenarios like 'card_payment_fee_charged' and 'pending_card_payment.' Incorporate various styles such as formal, concise, casual, and neutral to enhance attribute fidelity while reducing overrepresented emotional and fragmented expressions. The messages should be plausible for a customer support channel (email, chat, in-app form) and vary in length from short to medium. Avoid near-duplicate phrasings and encourage unique expressions.
+
+Output a JSON object with the following structure:
+{
+  "sample_id": "unique_identifier",
+  "text": "customer_support_message",
+  "attributes": {
+    "intent": "specific_intent",
+    "style": "chosen_style",
+    "difficulty": "difficulty_level",
+    "scenario_type": "type_of_scenario"
+  }
+}
+
+Forbidden phrasings: 
+- "top_up_failed"
+- "card_payment_wrong_exchange_rate"
+
+Focus on generating messages that reflect real customer concerns and inquiries, such as billing questions, service complaints, or refund requests. Aim for a balanced representation of intents and styles to ensure a rich and varied dataset. Introduce more edge cases or rare scenarios to enhance diversity, and review for realism and contextual appropriateness in language use, avoiding repetitive structures and ensuring each message is engaging.""""""

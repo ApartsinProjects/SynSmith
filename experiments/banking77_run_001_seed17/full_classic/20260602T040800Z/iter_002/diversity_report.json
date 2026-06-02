@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good variety of intents and styles, but there are missing intents and some near-duplicate phrasings. Additionally, the representation of certain intents is lower than others, indicating a need for more diverse examples.",
+  "missing_modes": [
+    "card_swallowed",
+    "lost_or_stolen_card",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "overrepresented_modes": [
+    "pending_card_payment",
+    "card_arrival",
+    "card_payment_fee_charged"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Include more examples for the missing intents, especially 'card_swallowed' and 'lost_or_stolen_card'.",
+    "Vary the phrasing in examples to reduce near-duplicates and ensure a wider range of expressions.",
+    "Encourage the generation of edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

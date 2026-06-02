@@ -1,0 +1,72 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, so like,",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal opener is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Can you check that for me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request phrasing does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I think I might've forgotten the password.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing is a unique way of expressing uncertainty about password recall.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "not sure what's happening.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of confusion is not found in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I feel let down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase expressing disappointment does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can't believe this is happening!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This dramatic expression of disbelief is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I was really looking forward to wearing it!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of anticipation is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey, so like,",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal opener is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Can you check that for me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request phrasing does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I think I might've forgotten the password.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing is a unique way of expressing uncertainty about password recall.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "not sure what's happening.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of confusion is not found in the real batch.",
+      "introduced_at_iteration": 1
+    }
+  ]
+}

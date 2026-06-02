@@ -1,0 +1,24 @@
+{"sample_id":"R178","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward question indicate a real user inquiry."}
+{"sample_id":"R256","prediction":"real","confidence":0.9,"reason":"Natural phrasing and specific context suggest a genuine user experience."}
+{"sample_id":"R221","prediction":"real","confidence":0.85,"reason":"Informal tone and brevity are typical of real user messages."}
+{"sample_id":"R281","prediction":"real","confidence":0.8,"reason":"Direct question with a personal touch indicates a real user issue."}
+{"sample_id":"target_00033","prediction":"synthetic","confidence":0.7,"reason":"Overly polished structure and phrasing suggest LLM generation."}
+{"sample_id":"R173","prediction":"real","confidence":0.9,"reason":"Simple and direct language typical of a real user complaint."}
+{"sample_id":"R184","prediction":"real","confidence":0.85,"reason":"Concise and relatable question indicates a real user scenario."}
+{"sample_id":"R238","prediction":"real","confidence":0.8,"reason":"Natural phrasing and context suggest a genuine inquiry."}
+{"sample_id":"R123","prediction":"real","confidence":0.8,"reason":"Specific issue with a personal touch indicates a real user experience."}
+{"sample_id":"R089","prediction":"real","confidence":0.85,"reason":"Direct and relatable concern typical of real user messages."}
+{"sample_id":"R045","prediction":"real","confidence":0.9,"reason":"Practical question with a straightforward approach suggests a real user."}
+{"sample_id":"R116","prediction":"real","confidence":0.8,"reason":"Specific context and natural language indicate a real user issue."}
+{"sample_id":"R249","prediction":"real","confidence":0.85,"reason":"Detailed inquiry with a personal touch suggests a real user."}
+{"sample_id":"R175","prediction":"real","confidence":0.9,"reason":"Casual language and a direct question indicate a real user inquiry."}
+{"sample_id":"R069","prediction":"real","confidence":0.85,"reason":"Specific complaint with a personal touch suggests a real user."}
+{"sample_id":"R188","prediction":"real","confidence":0.9,"reason":"Simple and direct language typical of a real user complaint."}
+{"sample_id":"R215","prediction":"real","confidence":0.9,"reason":"Concise and relatable issue indicates a real user scenario."}
+{"sample_id":"R096","prediction":"real","confidence":0.85,"reason":"Direct concern with a personal touch suggests a real user."}
+{"sample_id":"R030","prediction":"synthetic","confidence":0.6,"reason":"Unusual phrasing and lack of context suggest LLM generation."}
+{"sample_id":"R062","prediction":"synthetic","confidence":0.7,"reason":"Overly complex structure and generic vocabulary indicate LLM generation."}
+{"sample_id":"R146","prediction":"real","confidence":0.85,"reason":"Specific and practical question indicates a real user issue."}
+{"sample_id":"R170","prediction":"real","confidence":0.9,"reason":"Direct and relatable concern typical of real user messages."}
+{"sample_id":"R161","prediction":"real","confidence":0.9,"reason":"Casual language and a straightforward issue indicate a real user inquiry."}
+{"sample_id":"R176","prediction":"real","confidence":0.85,"reason":"Simple and direct language typical of a real user complaint."}

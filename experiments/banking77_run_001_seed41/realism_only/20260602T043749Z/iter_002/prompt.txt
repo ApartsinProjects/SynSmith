@@ -1,0 +1,8 @@
+""""""Generate realistic banking customer-support messages that align with the requested intent and style. Ensure the messages are plausible for various customer support channels (email, chat, in-app form) and vary in tone, including formal, casual, emotional, and concise. Incorporate a wide range of scenarios, including less common intents like 'card_payment_fee_charged' and 'card_payment_wrong_exchange_rate.' Aim for short to medium-length responses that avoid overly simplistic or vague phrasing. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings: 
+- "and up date"
+- "I hope this helps"
+- "Thank you for your patience"
+
+Encourage the use of personal context and specific details to enhance authenticity. Strive for a diverse representation of styles to reduce redundancy, including more formal and emotional tones. Introduce edge cases and rare scenarios to broaden the coverage of intent values. Aim for a balance between informal and formal tones while maintaining clarity and realism in all generated messages. Review phrasing to minimize near-duplicates and ensure each message feels unique and contextually appropriate.""""""

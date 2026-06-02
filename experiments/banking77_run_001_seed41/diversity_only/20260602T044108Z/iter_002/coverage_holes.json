@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "What do I do if my card is stolen?",
+      "label": "lost_or_stolen_card",
+      "p_real": 0.8636993567183707
+    },
+    {
+      "text": "Why has my top-up not worked?",
+      "label": "top_up_failed",
+      "p_real": 0.8547758034530717
+    },
+    {
+      "text": "My top up didn't go through",
+      "label": "top_up_failed",
+      "p_real": 0.8540206871031698
+    },
+    {
+      "text": "Why is the exchange rate for my payment incorrect?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8536723374001979
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

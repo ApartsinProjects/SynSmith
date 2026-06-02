@@ -1,0 +1,24 @@
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Casual language and a common phrasing suggest a real user inquiry."}
+{"sample_id":"R221","prediction":"real","confidence":0.95,"reason":"Short, direct, and informal; typical of a real user expressing urgency."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Natural phrasing and a common concern about card delivery."}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"Polite inquiry about timing, typical of a real user."}
+{"sample_id":"R285","prediction":"real","confidence":0.9,"reason":"Specific issue with a credit card, indicative of a real user experience."}
+{"sample_id":"R132","prediction":"real","confidence":0.85,"reason":"Specific complaint about exchange rates, common in real user interactions."}
+{"sample_id":"R278","prediction":"real","confidence":0.9,"reason":"Direct and straightforward complaint, typical of real user frustration."}
+{"sample_id":"R267","prediction":"real","confidence":0.9,"reason":"Casual language and a common issue suggest a real user."}
+{"sample_id":"R135","prediction":"real","confidence":0.85,"reason":"Specific complaint about a purchase, indicative of a real user."}
+{"sample_id":"R013","prediction":"synthetic","confidence":0.7,"reason":"Overly formal structure and phrasing; lacks natural conversational flow."}
+{"sample_id":"R198","prediction":"real","confidence":0.9,"reason":"Natural phrasing and a common issue with payments suggest a real user."}
+{"sample_id":"R038","prediction":"real","confidence":0.85,"reason":"Common phrasing for a user experiencing card issues."}
+{"sample_id":"R104","prediction":"real","confidence":0.8,"reason":"Detailed concern about unauthorized charges, typical of real user inquiries."}
+{"sample_id":"R214","prediction":"real","confidence":0.9,"reason":"Simple and direct expression of a common issue."}
+{"sample_id":"R060","prediction":"real","confidence":0.85,"reason":"Common user experience regarding fees, phrased naturally."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Natural inquiry about fees, typical of real user concerns."}
+{"sample_id":"R245","prediction":"real","confidence":0.9,"reason":"Common question about payment processing times, phrased naturally."}
+{"sample_id":"R217","prediction":"real","confidence":0.9,"reason":"Direct and serious concern about card misuse, typical of real user experiences."}
+{"sample_id":"R077","prediction":"real","confidence":0.85,"reason":"Natural phrasing and a common concern about unexpected charges."}
+{"sample_id":"R123","prediction":"real","confidence":0.85,"reason":"Specific complaint about a purchase, indicative of a real user."}
+{"sample_id":"R022","prediction":"synthetic","confidence":0.6,"reason":"Awkward phrasing and grammatical issues suggest a lack of naturalness."}
+{"sample_id":"R270","prediction":"synthetic","confidence":0.65,"reason":"Overly formal structure and awkward phrasing indicate a synthetic origin."}
+{"sample_id":"R046","prediction":"real","confidence":0.9,"reason":"Common user experience with card declines, phrased naturally."}
+{"sample_id":"R181","prediction":"real","confidence":0.9,"reason":"Direct and common inquiry about payment issues, typical of real users."}

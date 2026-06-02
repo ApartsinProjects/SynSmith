@@ -1,0 +1,24 @@
+{"sample_id":"target_00002","prediction":"real","confidence":0.9,"reason":"Casual tone, informal language, and specific inquiry about card perks suggest a genuine customer interaction."}
+{"sample_id":"target_00015","prediction":"real","confidence":0.85,"reason":"Informal language and a specific issue with a charge indicate a real customer concern."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.7,"reason":"Formal structure and lack of personal touch make it feel more like a scripted inquiry."}
+{"sample_id":"R000","prediction":"synthetic","confidence":0.75,"reason":"Overly formal and structured, lacking the natural flow of a real customer complaint."}
+{"sample_id":"R021","prediction":"synthetic","confidence":0.8,"reason":"The tone is abrupt and lacks personal context, suggesting a generated response."}
+{"sample_id":"target_00012","prediction":"real","confidence":0.9,"reason":"Casual language and specific details about a grocery store transaction indicate a real customer experience."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.7,"reason":"Lacks personal context and has a formal tone, suggesting it may be generated."}
+{"sample_id":"R024","prediction":"synthetic","confidence":0.8,"reason":"Formal inquiry about API details lacks personal touch, indicating a synthetic origin."}
+{"sample_id":"R009","prediction":"synthetic","confidence":0.75,"reason":"Technical language and structured format suggest a generated query rather than a real user issue."}
+{"sample_id":"R025","prediction":"synthetic","confidence":0.7,"reason":"Generic question about future options lacks personal context, indicating a synthetic nature."}
+{"sample_id":"target_00011","prediction":"real","confidence":0.85,"reason":"Detailed description of a payment issue with a personal touch suggests a real customer inquiry."}
+{"sample_id":"R015","prediction":"synthetic","confidence":0.75,"reason":"Formal tone and lack of emotional context suggest a generated response."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.8,"reason":"The structure is too formal and lacks the emotional nuance of a real complaint."}
+{"sample_id":"target_00007","prediction":"real","confidence":0.9,"reason":"Casual language and personal details about moving address indicate a genuine customer inquiry."}
+{"sample_id":"target_00005","prediction":"real","confidence":0.85,"reason":"Informal tone and specific questions about card issues suggest a real customer experience."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.75,"reason":"Direct and blunt language lacks the nuance of a real complaint, suggesting it may be generated."}
+{"sample_id":"target_00009","prediction":"real","confidence":0.9,"reason":"Casual language and a personal situation about losing a card indicate a real customer inquiry."}
+{"sample_id":"R012","prediction":"synthetic","confidence":0.7,"reason":"Formal structure and lack of emotional context suggest a generated response."}
+{"sample_id":"R020","prediction":"synthetic","confidence":0.8,"reason":"The tone is overly aggressive and lacks personal context, indicating a synthetic origin."}
+{"sample_id":"target_00006","prediction":"real","confidence":0.85,"reason":"Detailed description of a declined transaction with a personal touch suggests a real customer experience."}
+{"sample_id":"target_00013","prediction":"real","confidence":0.9,"reason":"Formal yet personal inquiry about a pending payment indicates a genuine customer concern."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.75,"reason":"Lacks personal context and has a formal tone, suggesting it may be generated."}
+{"sample_id":"target_00016","prediction":"real","confidence":0.9,"reason":"Emotional language and specific details about waiting for a card indicate a real customer inquiry."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.8,"reason":"Formal structure and lack of personal context suggest a generated response."}

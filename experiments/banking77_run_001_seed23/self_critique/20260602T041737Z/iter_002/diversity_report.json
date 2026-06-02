@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good variety of intents and difficulties, but there are notable gaps in certain styles and noise types. Additionally, there are several near-duplicate phrasings that could be addressed for improved diversity.",
+  "missing_modes": [
+    "formal style is underrepresented, particularly in scenarios involving card handling",
+    "the 'clean' noise type is absent, indicating a lack of straightforward inquiries",
+    "the 'hard' difficulty level is not represented in the 'card_arrival' intent"
+  ],
+  "overrepresented_modes": [
+    "high ambiguity across multiple intents",
+    "fragmented style is frequently used, particularly in pending card payment scenarios"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with a formal style for card handling scenarios.",
+    "Include more inquiries that are clean and straightforward to balance the noise types.",
+    "Ensure that the 'card_arrival' intent includes examples with hard difficulty to cover all difficulty levels."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "My card payment has been declined",
+      "label": "declined_card_payment",
+      "p_real": 0.8889112268086792
+    },
+    {
+      "text": "My card payment has been declined, why?",
+      "label": "declined_card_payment",
+      "p_real": 0.8878864226622589
+    },
+    {
+      "text": "Please help, the atm swallowed my card, what do I do?",
+      "label": "card_swallowed",
+      "p_real": 0.8863546838483908
+    },
+    {
+      "text": "My card has been stolen what do I do?",
+      "label": "lost_or_stolen_card",
+      "p_real": 0.8833920200195725
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

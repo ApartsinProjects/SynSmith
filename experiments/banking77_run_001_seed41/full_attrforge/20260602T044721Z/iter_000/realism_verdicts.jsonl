@@ -1,0 +1,24 @@
+{"sample_id":"R237","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context-specific inquiry about payment status."}
+{"sample_id":"R266","prediction":"real","confidence":0.85,"reason":"Concise and straightforward question, typical of user inquiries."}
+{"sample_id":"R265","prediction":"synthetic","confidence":0.7,"reason":"Overly simplistic and lacks detail; feels generic."}
+{"sample_id":"R148","prediction":"real","confidence":0.9,"reason":"Specific scenario with emotional context, typical of real user experiences."}
+{"sample_id":"R156","prediction":"real","confidence":0.9,"reason":"Direct and urgent phrasing, indicative of a real situation."}
+{"sample_id":"R199","prediction":"real","confidence":0.85,"reason":"Common issue phrased in a natural way."}
+{"sample_id":"R040","prediction":"real","confidence":0.8,"reason":"Specific inquiry about security settings, realistic user concern."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.65,"reason":"Grammatical error ('up date' instead of 'update') and lacks natural flow."}
+{"sample_id":"R081","prediction":"real","confidence":0.9,"reason":"Realistic user confusion about charges, phrased in a relatable manner."}
+{"sample_id":"R033","prediction":"real","confidence":0.9,"reason":"Urgent plea for help, typical of real user frustration."}
+{"sample_id":"R086","prediction":"real","confidence":0.85,"reason":"Common question about fees, phrased naturally."}
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"Specific inquiry about tracking, realistic user concern."}
+{"sample_id":"R280","prediction":"synthetic","confidence":0.6,"reason":"Lacks detail and specificity; feels generic."}
+{"sample_id":"R264","prediction":"real","confidence":0.8,"reason":"Detailed description of an issue, typical of real user inquiries."}
+{"sample_id":"R166","prediction":"real","confidence":0.85,"reason":"Specific scenario with urgency, indicative of real user experience."}
+{"sample_id":"R094","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context of confusion about a payment."}
+{"sample_id":"R258","prediction":"real","confidence":0.85,"reason":"Specific question about payment status, phrased naturally."}
+{"sample_id":"R124","prediction":"real","confidence":0.9,"reason":"Specific issue with exchange rates, realistic user concern."}
+{"sample_id":"R044","prediction":"real","confidence":0.85,"reason":"Describes ongoing issue with card usage, typical of real user experiences."}
+{"sample_id":"R185","prediction":"synthetic","confidence":0.5,"reason":"Very vague and lacks detail; feels generic."}
+{"sample_id":"R106","prediction":"real","confidence":0.9,"reason":"Specific claim of unauthorized payment, realistic user concern."}
+{"sample_id":"R139","prediction":"real","confidence":0.85,"reason":"Specific inquiry about exchange rates, realistic user experience."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Natural phrasing of a common issue regarding card delivery."}
+{"sample_id":"R257","prediction":"real","confidence":0.85,"reason":"Describes a common issue with pending payments, phrased naturally."}

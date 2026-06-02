@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attributes, but there are some missing combinations and potential near-duplicates. The diversity in scenarios is well represented, yet there are opportunities to introduce more edge cases.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "edge_case"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Introduce more rare and edge case scenarios to enhance diversity.",
+    "Ensure a balance between informal and formal styles to avoid overrepresentation.",
+    "Include more examples of technical problems and complaints to diversify intents."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

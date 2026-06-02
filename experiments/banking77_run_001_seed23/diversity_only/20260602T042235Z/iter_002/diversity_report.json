@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good variety of intents and difficulties, but there are missing attribute values in the 'style' and 'noise' categories. Additionally, some intents are overrepresented, and there are near-duplicate phrasings present.",
+  "missing_modes": [
+    "The 'style' attribute is missing 'concise' and 'informal' modes.",
+    "The 'noise' attribute is missing 'typos' and 'contradiction' modes."
+  ],
+  "overrepresented_modes": [
+    "The 'card_not_working' intent appears multiple times.",
+    "The 'pending_card_payment' intent is also frequently represented."
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Ensure all styles and noise types are represented in future samples.",
+    "Diversify the intents used to avoid overrepresentation.",
+    "Introduce more varied phrasing to reduce near-duplicate instances."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

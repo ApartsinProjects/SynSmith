@@ -1,0 +1,24 @@
+{"sample_id":"R096","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context; typical customer inquiry."}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"Conversational tone; common request for assistance."}
+{"sample_id":"target_00021","prediction":"synthetic","confidence":0.7,"reason":"Overly formal structure; lacks personal touch."}
+{"sample_id":"R277","prediction":"real","confidence":0.85,"reason":"Authentic customer frustration; realistic scenario."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct and relatable inquiry; typical customer concern."}
+{"sample_id":"R058","prediction":"real","confidence":0.9,"reason":"Common issue with billing; natural language."}
+{"sample_id":"R070","prediction":"real","confidence":0.9,"reason":"Clear and straightforward complaint; realistic."}
+{"sample_id":"R105","prediction":"real","confidence":0.9,"reason":"Specific issue with a personal touch; realistic."}
+{"sample_id":"R061","prediction":"real","confidence":0.85,"reason":"Typical customer inquiry about fees; natural."}
+{"sample_id":"R212","prediction":"real","confidence":0.9,"reason":"Direct question about service; realistic."}
+{"sample_id":"R006","prediction":"real","confidence":0.9,"reason":"Common customer issue; natural phrasing."}
+{"sample_id":"R087","prediction":"real","confidence":0.85,"reason":"Authentic inquiry about transaction; relatable."}
+{"sample_id":"R139","prediction":"real","confidence":0.85,"reason":"Specific issue with exchange rates; realistic."}
+{"sample_id":"R229","prediction":"real","confidence":0.9,"reason":"Common issue; natural expression of concern."}
+{"sample_id":"R231","prediction":"real","confidence":0.9,"reason":"Detailed and realistic scenario; authentic."}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.8,"reason":"Inclusion of unrelated content (cat video); lacks focus."}
+{"sample_id":"R165","prediction":"real","confidence":0.85,"reason":"Realistic scenario; common issue with ATMs."}
+{"sample_id":"R225","prediction":"real","confidence":0.9,"reason":"Direct and urgent request; typical customer concern."}
+{"sample_id":"R068","prediction":"real","confidence":0.85,"reason":"Common inquiry about fees; natural language."}
+{"sample_id":"R211","prediction":"real","confidence":0.8,"reason":"Authentic customer confusion; realistic phrasing."}
+{"sample_id":"R111","prediction":"real","confidence":0.8,"reason":"Detailed inquiry about charges; realistic."}
+{"sample_id":"R060","prediction":"real","confidence":0.85,"reason":"Simple and relatable issue; natural expression."}
+{"sample_id":"R083","prediction":"real","confidence":0.85,"reason":"Common complaint about charges; straightforward."}
+{"sample_id":"R103","prediction":"real","confidence":0.85,"reason":"Authentic concern about payment; realistic."}

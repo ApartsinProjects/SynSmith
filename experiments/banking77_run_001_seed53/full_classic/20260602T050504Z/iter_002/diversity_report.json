@@ -1,0 +1,26 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a high coverage of attribute values, but there are some missing intent values and a few near-duplicate phrasings. Additionally, certain scenarios are overrepresented, particularly related to declined card payments.",
+  "missing_modes": [
+    "card_arrival",
+    "lost_or_stolen_card",
+    "card_payment_fee_charged"
+  ],
+  "overrepresented_modes": [
+    "declined_card_payment",
+    "top_up_failed"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Ensure to include a wider variety of intents, especially those that are currently missing.",
+    "Reduce the frequency of similar scenarios to enhance diversity.",
+    "Encourage the generation of more unique phrasing to avoid near-duplicates."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a comprehensive coverage of the attribute schema, with all modes represented. However, there are instances of near-duplicate phrasings and some missing edge cases.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "account_issue"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more diverse phrasing to reduce near-duplicates.",
+    "Include more edge cases in the scenarios to enhance diversity.",
+    "Consider balancing the representation of styles, particularly reducing the frequency of informal style."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

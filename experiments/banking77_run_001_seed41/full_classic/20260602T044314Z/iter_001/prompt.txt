@@ -1,0 +1,15 @@
+"""Generate realistic banking customer-support messages that align with the specified intent and style. Ensure the messages are plausible for a customer support channel (email, chat, in-app form) and vary in structure to avoid repetition. Include a mix of intents, particularly those missing such as 'card_not_working', 'pending_card_payment', and 'card_payment_fee_charged'. Aim for a balance of styles, reducing overrepresentation of 'informal' and 'formal' tones. Keep the length short to medium, and incorporate specific details relevant to the scenario. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- Avoid overly formal structures and vague statements.
+- Do not use generic phrases or awkward phrasing.
+
+Attributes to ensure:
+- Intent: Clearly indicate the specific issue (e.g., card not working, pending payment).
+- Style: Vary between formal, informal, and neutral tones.
+- Difficulty: Maintain a medium level of complexity, avoiding overly simplistic or easy requests.
+- Ambiguity: Introduce a medium level of ambiguity where appropriate.
+- Noise: Incorporate slight contradictions or typos to reflect realistic customer interactions.
+- Scenario Type: Ensure a diverse range of scenarios, including general inquiries and specific issues.
+
+"""

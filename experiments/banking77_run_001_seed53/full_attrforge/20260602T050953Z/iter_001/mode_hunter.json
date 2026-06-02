@@ -1,0 +1,78 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I think I might have lost my debit card",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about losing a debit card does not appear in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I went to the ATM to get some cash and it ate my card!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This unique description of an ATM malfunction is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I noticed a fee on my payment, can you explain what it is?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This inquiry about a fee is distinct and does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I was really surprised when my recent payment didn't go through.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of surprise regarding a payment issue is not present in the real samples.",
+      "introduced_at_iteration": 1
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I made a payment, but it says I didn't.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about a payment discrepancy is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I’ve been waiting forever for my new card to arrive!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The expression of extreme impatience regarding a card delivery is not found in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Hey, just checking if my card's arrived yet?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This casual inquiry about card arrival is distinctive to the synthetic samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I think I lost my card, but I might have left it at home.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific uncertainty about the card's location is not present in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I think I might have lost my debit card",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about losing a debit card does not appear in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I went to the ATM to get some cash and it ate my card!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This unique description of an ATM malfunction is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I noticed a fee on my payment, can you explain what it is?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This inquiry about a fee is distinct and does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I was really surprised when my recent payment didn't go through.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of surprise regarding a payment issue is not present in the real samples.",
+      "introduced_at_iteration": 1
+    }
+  ]
+}

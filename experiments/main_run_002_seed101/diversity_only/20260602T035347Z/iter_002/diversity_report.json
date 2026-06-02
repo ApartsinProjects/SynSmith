@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good variety of intents, difficulties, and styles, but there are notable gaps in noise types and some near-duplicate phrasings. The noise category is underrepresented, particularly in 'clean' and 'irrelevant_details'.",
+  "missing_modes": [
+    "clean",
+    "irrelevant_details"
+  ],
+  "overrepresented_modes": [
+    "contradiction",
+    "missing_details"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples with 'clean' noise to balance the diversity.",
+    "Introduce more scenarios with 'irrelevant_details' noise to enhance variability.",
+    "Ensure that the generator creates more unique phrasings to reduce near-duplicates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

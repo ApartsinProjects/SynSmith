@@ -1,0 +1,25 @@
+{
+  "summary": "The batch of synthetic samples demonstrates good coverage across most attributes, but there are some missing noise types and a notable presence of near-duplicate phrasings. The diversity could be improved by including more edge cases and varying the noise types.",
+  "missing_modes": [
+    "contradiction",
+    "clean"
+  ],
+  "overrepresented_modes": [
+    "verbose",
+    "informal"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples with 'contradiction' and 'clean' noise types to enhance diversity.",
+    "Reduce the frequency of verbose and informal styles to balance the representation of different styles.",
+    "Include more edge cases and unique scenarios to enrich the dataset."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}

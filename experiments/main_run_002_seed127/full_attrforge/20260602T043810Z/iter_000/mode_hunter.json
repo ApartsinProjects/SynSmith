@@ -1,0 +1,54 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I am really upset!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific emotional expression does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Can you help?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used in a context that is not found in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought I paid for my subscription",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing regarding subscription payment is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you please clarify",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request for clarification is not present in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I am really upset!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific emotional expression does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Can you help?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase is used in a context that is not found in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought I paid for my subscription",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing regarding subscription payment is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "Could you please clarify",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request for clarification is not present in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+"""Generate realistic banking customer-support messages that match the requested intent and style. Ensure a diverse range of intents, including but not limited to card_payment_fee_charged, lost_or_stolen_card, and top_up_failed. Incorporate both formal and concise styles alongside casual ones. Vary phrasings to minimize redundancy and enhance diversity. The example should be plausible for a customer support channel (email, chat, in-app form) and maintain a short to medium length. Output a JSON object with the sample id, the text, and the attribute values.
+
+Forbidden phrasings:
+- "What do I do if my card is not working?"
+- "What do I do if my card is stolen?"
+- "Why is the exchange rate on my card wrong?"
+- "My card has been stolen what do I do?" 
+"""

@@ -1,0 +1,22 @@
+{
+  "summary": "The batch exhibits a good coverage of attribute values, but there are some missing combinations and potential near-duplicates. The diversity in scenarios is commendable, yet certain styles and intents could benefit from more varied phrasing.",
+  "missing_modes": [],
+  "overrepresented_modes": [
+    "informal",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage more unique phrasing in informal and verbose styles to reduce redundancy.",
+    "Introduce additional edge cases for technical problems and complaints to enhance diversity.",
+    "Consider adding more scenarios with high ambiguity and difficult intents to challenge the model."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

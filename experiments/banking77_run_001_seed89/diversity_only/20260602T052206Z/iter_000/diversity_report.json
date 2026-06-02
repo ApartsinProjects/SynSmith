@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a good range of intents and difficulties, but there are missing attribute values for style and some intents are overrepresented. Additionally, there are near-duplicate phrasings and shallow paraphrases present.",
+  "missing_modes": [
+    "formal",
+    "verbose"
+  ],
+  "overrepresented_modes": [
+    "top_up_failed",
+    "card_payment_wrong_exchange_rate"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Ensure to include all styles, especially formal and verbose, in future samples.",
+    "Diversify the intents to reduce the overrepresentation of 'top_up_failed' and 'card_payment_wrong_exchange_rate'.",
+    "Review the text for near-duplicate phrasings and encourage more varied expressions."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "summary": "The batch of synthetic samples demonstrates a good coverage of attributes, but there are some missing intent values and potential near-duplicate phrasings. The intent 'card_payment_fee_charged' and 'top_up_failed' are underrepresented, while 'lost_or_stolen_card' appears frequently.",
+  "missing_modes": [
+    "card_payment_fee_charged",
+    "top_up_failed"
+  ],
+  "overrepresented_modes": [
+    "lost_or_stolen_card"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of samples for underrepresented intents such as 'card_payment_fee_charged' and 'top_up_failed'.",
+    "Review samples for near-duplicate phrasings and ensure a wider variety of expressions.",
+    "Consider adding edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

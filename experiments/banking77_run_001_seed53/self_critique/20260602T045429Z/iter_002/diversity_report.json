@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a high coverage of attribute values, with only a few missing intent modes. There are instances of near-duplicate phrasings and some overrepresented styles, particularly emotional and verbose.",
+  "missing_modes": [
+    "card_not_working",
+    "lost_or_stolen_card"
+  ],
+  "overrepresented_modes": [
+    "emotional",
+    "verbose"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Encourage the generation of more diverse intents, particularly focusing on 'card_not_working' and 'lost_or_stolen_card'.",
+    "Reduce the frequency of emotional and verbose styles to promote a wider variety of expression.",
+    "Incorporate more edge cases or rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 0.9,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

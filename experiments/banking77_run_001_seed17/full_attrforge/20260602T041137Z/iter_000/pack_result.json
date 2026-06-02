@@ -1,0 +1,155 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "questions about payment status",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or updates",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific details about transactions or payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of vague terms like 'error' and 'amount' without specific details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a similar structure, often starting with 'what do i do if' or 'how can i'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive sentence structures that lack emotional depth or variation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of the word 'card' in various contexts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'hey' and 'hello'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "multiple issues presented in a single sample",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or concern",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamatory phrases",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'i think', 'i tried', 'i attempted', and 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of problems with specific examples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of phrases related to card issues and payment problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i think",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you help?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i attempted to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "but",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "despite having",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can u help?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "atm swallowed my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about card payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple, direct language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing regarding card issues (e.g., 'declined', 'pending')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of themes related to payment issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of the word 'charged' or 'payment'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 1
+    }
+  ]
+}

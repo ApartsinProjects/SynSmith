@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good coverage of attributes, but there are missing intent values and some near-duplicate phrasings. The representation of certain intents is skewed, indicating a need for more diverse examples.",
+  "missing_modes": [
+    "card_swallowed",
+    "declined_card_payment",
+    "general_inquiry with low ambiguity",
+    "transaction_issue with high ambiguity"
+  ],
+  "overrepresented_modes": [
+    "card_payment_fee_charged",
+    "card_not_working"
+  ],
+  "near_duplicate_rate": 0.15,
+  "recommendations": [
+    "Include examples for missing intents such as 'card_swallowed' and 'declined_card_payment'.",
+    "Ensure a balanced representation of intents across different scenarios to avoid overrepresentation.",
+    "Vary the phrasing in examples to reduce near-duplicates and shallow paraphrases."
+  ],
+  "coverage": {
+    "intent": 0.7,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

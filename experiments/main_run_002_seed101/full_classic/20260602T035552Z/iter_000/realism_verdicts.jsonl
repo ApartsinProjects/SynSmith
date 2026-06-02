@@ -1,0 +1,24 @@
+{"sample_id":"R251","prediction":"real","confidence":0.9,"reason":"Natural phrasing and context of a common issue."}
+{"sample_id":"R123","prediction":"real","confidence":0.85,"reason":"Specificity in the context of a transaction."}
+{"sample_id":"R097","prediction":"real","confidence":0.9,"reason":"Authentic concern about an unrecognized payment."}
+{"sample_id":"R199","prediction":"real","confidence":0.8,"reason":"Common issue with card usage, phrased naturally."}
+{"sample_id":"R149","prediction":"real","confidence":0.9,"reason":"Direct and relatable experience with an ATM."}
+{"sample_id":"R077","prediction":"real","confidence":0.85,"reason":"Realistic inquiry about unexpected charges."}
+{"sample_id":"R029","prediction":"real","confidence":0.8,"reason":"Simple and relatable issue with a card."}
+{"sample_id":"R153","prediction":"real","confidence":0.85,"reason":"Polite request for assistance, common in customer service."}
+{"sample_id":"R125","prediction":"real","confidence":0.8,"reason":"Similar to R123, specific and relatable."}
+{"sample_id":"R284","prediction":"real","confidence":0.9,"reason":"Detailed account of a recent experience, realistic."}
+{"sample_id":"R258","prediction":"real","confidence":0.8,"reason":"Common question about payment processing."}
+{"sample_id":"R044","prediction":"real","confidence":0.85,"reason":"Describes a persistent issue with a card."}
+{"sample_id":"R164","prediction":"real","confidence":0.9,"reason":"Urgent and relatable situation with an ATM."}
+{"sample_id":"R054","prediction":"real","confidence":0.8,"reason":"Practical inquiry about troubleshooting."}
+{"sample_id":"R047","prediction":"real","confidence":0.85,"reason":"Casual tone and relatable issue."}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"Common concern about card delivery."}
+{"sample_id":"R177","prediction":"real","confidence":0.8,"reason":"Simple and direct statement about a card issue."}
+{"sample_id":"R095","prediction":"real","confidence":0.75,"reason":"Concern about an unauthorized payment, phrased awkwardly."}
+{"sample_id":"R169","prediction":"real","confidence":0.9,"reason":"Common ATM issue, phrased naturally."}
+{"sample_id":"R192","prediction":"real","confidence":0.8,"reason":"Direct statement about a card not working."}
+{"sample_id":"target_00015","prediction":"synthetic","confidence":0.6,"reason":"Overly polished and generic phrasing."}
+{"sample_id":"R139","prediction":"real","confidence":0.85,"reason":"Specific inquiry about an exchange rate issue."}
+{"sample_id":"R019","prediction":"real","confidence":0.8,"reason":"Simple and relatable concern about card delivery."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.65,"reason":"Overly emotional and generic phrasing."}
