@@ -48,6 +48,79 @@ class Generator:
         self.config = config or GeneratorConfig()
         self._rng = random.Random(self.config.seed)
 
+    def batch_generate(
+        self,
+        targets: list[AttributeVector],
+        *,
+        prompt: str,
+        prompt_version: int,
+        iteration: int,
+        batch_client: "BatchLLMClient",  # noqa: F821  # forward ref
+    ) -> list[SyntheticSample]:
+        """Run the generator via OpenAI Batch API: buffer N calls, flush once.
+
+        Mirrors generate() output but with ~50% the cost. Verbalized
+        sampling is NOT supported in this path (its sampling logic
+        requires the synchronous response stream). Use the standard
+        generate() when verbalized_sampling=True.
+        """
+        from attrforge.llm import parse_json
+        if self.config.verbalized_sampling:
+            raise NotImplementedError(
+                "batch_generate does not yet support verbalized_sampling; "
+                "fall back to generate() for VS conditions."
+            )
+        schema_str = yaml.safe_dump(self.schema.attributes, sort_keys=False)
+        # Step 1: buffer N requests
+        deferreds = []
+        for target in targets:
+            few_shot = self._format_few_shot()
+            user_msg = GENERATOR_USER_TEMPLATE.format(
+                generator_prompt=prompt,
+                task_description=self.schema.task_description or "(none)",
+                domain=self.schema.domain,
+                attribute_schema=schema_str,
+                few_shot_real_examples=few_shot,
+                target_attribute_vector=json.dumps(target.values, indent=2),
+                sample_id=target.sample_id,
+            )
+            d = batch_client.chat(
+                GENERATOR_SYSTEM,
+                [{"role": "user", "content": user_msg}],
+                temperature=self.config.temperature,
+                max_tokens=self.config.max_tokens,
+            )
+            deferreds.append((target, d))
+        # Step 2: flush as one batch
+        batch_client.flush()
+        # Step 3: parse and coerce
+        out: list[SyntheticSample] = []
+        for target, d in deferreds:
+            try:
+                obj = parse_json(d.text())
+            except Exception:
+                # Fall back to single real-time retry on parse failure -
+                # cheaper than failing the whole batch.
+                obj = json_chat(
+                    self.client,
+                    GENERATOR_SYSTEM,
+                    [{"role": "user", "content": GENERATOR_USER_TEMPLATE.format(
+                        generator_prompt=prompt,
+                        task_description=self.schema.task_description or "(none)",
+                        domain=self.schema.domain,
+                        attribute_schema=schema_str,
+                        few_shot_real_examples=self._format_few_shot(),
+                        target_attribute_vector=json.dumps(target.values, indent=2),
+                        sample_id=target.sample_id,
+                    )}],
+                    temperature=self.config.temperature,
+                    max_tokens=self.config.max_tokens,
+                    retries=1,
+                )
+            sample = self._coerce(obj, target, prompt_version, iteration)
+            out.append(sample)
+        return out
+
     def generate(
         self,
         targets: list[AttributeVector],

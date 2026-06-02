@@ -338,3 +338,112 @@ def fetch_batch_results(
     client = BatchClient(cfg)
     client._wait_for_batch(batch_id)
     return client._download_results(batch_id)
+
+
+# ---- LLMClient-compatible wrapper ---------------------------------------
+
+
+class _DeferredResponse:
+    """Placeholder returned by BatchLLMClient.chat() before flush().
+
+    Resolves to the actual string content after BatchLLMClient.flush() runs.
+    Behaves like a string after resolution; raises if accessed before.
+    """
+
+    __slots__ = ("custom_id", "_resolved", "_text", "_error")
+
+    def __init__(self, custom_id: str) -> None:
+        self.custom_id = custom_id
+        self._resolved = False
+        self._text = ""
+        self._error: str | None = None
+
+    def resolve(self, text: str, error: str | None) -> None:
+        self._resolved = True
+        self._text = text
+        self._error = error
+
+    def text(self) -> str:
+        if not self._resolved:
+            raise RuntimeError(
+                f"Deferred batch response {self.custom_id!r} accessed before flush()."
+            )
+        if self._error:
+            raise RuntimeError(
+                f"Batch request {self.custom_id!r} failed: {self._error}"
+            )
+        return self._text
+
+
+class BatchLLMClient:
+    """LLMClient-compatible wrapper that buffers chat() calls for Batch API submission.
+
+    Drop-in replacement for the real-time LLMClient in code paths that
+    can tolerate a flush-then-collect pattern. Typical use:
+
+        batch_client = BatchLLMClient(model="gpt-4o-mini")
+        deferreds = [batch_client.chat(system, msgs) for _ in items]
+        batch_client.flush()
+        for d, item in zip(deferreds, items):
+            text = d.text()
+            ...
+
+    Each call to chat() returns a _DeferredResponse whose .text() is
+    populated by flush(). The .chat() signature deliberately matches
+    LLMClient.chat() so callers can swap clients with minimal change.
+    """
+
+    def __init__(
+        self,
+        model: str = "gpt-4o-mini",
+        api_key_env: str = "OPENAI_API_KEY",
+        config: BatchConfig | None = None,
+    ) -> None:
+        cfg = config or BatchConfig(model=model)
+        self.batch = BatchClient(cfg)
+        self.model = model
+        self.api_key_env = api_key_env
+        self._deferreds: list[_DeferredResponse] = []
+
+    # Match LLMClient.chat signature so the existing critics can use this.
+    def chat(
+        self,
+        system: str,
+        messages: list[dict[str, str]],
+        *,
+        temperature: float = 0.0,
+        max_tokens: int = 600,
+        response_format: dict | None = None,
+    ) -> _DeferredResponse:
+        full_messages = [{"role": "system", "content": system}] + messages
+        cid = self.batch.chat_completion(
+            messages=full_messages,
+            model=self.model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            response_format=response_format,
+        )
+        d = _DeferredResponse(cid)
+        self._deferreds.append(d)
+        return d
+
+    def flush(self) -> int:
+        """Submit buffered requests, resolve all outstanding _DeferredResponse objects.
+
+        Returns the number of resolved deferreds. Safe to call when the
+        buffer is empty (returns 0). Failed individual requests resolve
+        with .error set, so .text() raises only when actually accessed.
+        """
+        if not self._deferreds:
+            return 0
+        results = self.batch.flush()
+        n = 0
+        for d in self._deferreds:
+            resp = results.get(d.custom_id)
+            if resp is None:
+                d.resolve("", f"missing custom_id {d.custom_id!r} in batch results")
+            else:
+                d.resolve(resp.content, resp.error)
+            n += 1
+        self._deferreds.clear()
+        return n

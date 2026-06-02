@@ -181,6 +181,13 @@ def main() -> None:
     ap.add_argument("--seeds", type=int, nargs="+", default=None,
                     help="One or more seeds. When >1 seed is supplied, the run-id is "
                          "suffixed with _seed<n> and each condition runs once per seed.")
+    ap.add_argument("--batch-api", action="store_true",
+                    help="Route generator and verifier LLM calls through OpenAI Batch API "
+                         "(roughly half the cost of real-time, 24h SLA but typically "
+                         "minutes for small batches). Other critics remain real-time. "
+                         "Requires the openai>=1.0 client and OPENAI_API_KEY env var.")
+    ap.add_argument("--batch-model", type=str, default="gpt-4o-mini",
+                    help="Model name used by the Batch API. Default gpt-4o-mini.")
     args = ap.parse_args()
 
     configure_logging("WARNING")
@@ -220,6 +227,10 @@ def main() -> None:
         seed_cfg.generator.seed = seed
         seed_cfg.discriminator.seed = seed
         seed_cfg.pack_discriminator.seed = seed
+        # CLI overrides for Batch-API
+        if args.batch_api:
+            seed_cfg.use_batch_api = True
+            seed_cfg.batch_model = args.batch_model
         run_id = base_run_id if len(seeds) == 1 else f"{base_run_id}_seed{seed}"
         run_root = REPO / "experiments" / run_id
         run_root.mkdir(parents=True, exist_ok=True)

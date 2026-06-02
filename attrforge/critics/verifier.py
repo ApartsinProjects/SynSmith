@@ -73,6 +73,64 @@ class AttributeVerifier:
                     if v is not None:
                         self._anchors_by_attr[k][str(v)].append(ex.text)
 
+    def batch_verify(
+        self,
+        samples: list[SyntheticSample],
+        *,
+        batch_client: "BatchLLMClient",  # noqa: F821
+    ) -> list[AttributeVerdict]:
+        """Verify N samples via OpenAI Batch API: buffer, flush once, parse.
+
+        Mirrors verify() output but ~50% the cost on N>=2 samples.
+        Empirical anchors are still injected per call.
+        """
+        from attrforge.llm import parse_json
+        schema_str = yaml.safe_dump(self.schema.attributes, sort_keys=False)
+        # Step 1: buffer
+        deferreds = []
+        for sample in samples:
+            anchor_block = self._format_anchors(sample.requested_attributes)
+            user_msg = VERIFIER_USER_TEMPLATE.format(
+                attribute_schema=schema_str,
+                sample_id=sample.sample_id,
+                requested_attributes=json.dumps(sample.requested_attributes),
+                text=sample.text,
+                real_anchor_block=anchor_block,
+            )
+            d = batch_client.chat(
+                VERIFIER_SYSTEM,
+                [{"role": "user", "content": user_msg}],
+                temperature=0.0,
+                max_tokens=400,
+            )
+            deferreds.append((sample, d))
+        # Step 2: flush
+        batch_client.flush()
+        # Step 3: parse + coerce; fall back to real-time on parse error.
+        verdicts: list[AttributeVerdict] = []
+        for sample, d in deferreds:
+            try:
+                obj = parse_json(d.text())
+            except Exception:
+                # Fall back: synchronous repair retry
+                anchor_block = self._format_anchors(sample.requested_attributes)
+                obj = json_chat(
+                    self.client,
+                    VERIFIER_SYSTEM,
+                    [{"role": "user", "content": VERIFIER_USER_TEMPLATE.format(
+                        attribute_schema=schema_str,
+                        sample_id=sample.sample_id,
+                        requested_attributes=json.dumps(sample.requested_attributes),
+                        text=sample.text,
+                        real_anchor_block=anchor_block,
+                    )}],
+                    temperature=0.0,
+                    max_tokens=400,
+                    retries=1,
+                )
+            verdicts.append(self._coerce(obj, sample))
+        return verdicts
+
     def verify(self, samples: list[SyntheticSample]) -> list[AttributeVerdict]:
         schema_str = yaml.safe_dump(self.schema.attributes, sort_keys=False)
         verdicts: list[AttributeVerdict] = []

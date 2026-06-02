@@ -152,6 +152,12 @@ class AttrForgeConfig:
     enable_mode_hunter: bool = True
     enable_coverage_hole: bool = True
     enable_updater: bool = True
+    # When True, generator and verifier calls go through OpenAI Batch API
+    # (~50% the cost of real-time). Other critics (Discriminator, Auditor,
+    # Pack, Mode Hunter, Updater) remain real-time because they are 1 call
+    # each per iter and don't benefit from batching. See attrforge.llm_batch.
+    use_batch_api: bool = False
+    batch_model: str = "gpt-4o-mini"
     label: str = "full_attrforge"
 
     @classmethod
@@ -202,6 +208,8 @@ class AttrForgeConfig:
             enable_coverage_hole=raw.get("enable_coverage_hole", True),
             enable_updater=raw.get("enable_updater", True),
             label=raw.get("label", "full_attrforge"),
+            use_batch_api=raw.get("use_batch_api", False),
+            batch_model=raw.get("batch_model", "gpt-4o-mini"),
         )
 
 
@@ -338,15 +346,36 @@ class AttrForge:
         )
         write_jsonl(iter_dir / "targets.jsonl", [t.as_dict() for t in targets])
 
-        samples = self.generator.generate(
-            targets, prompt=prompt, prompt_version=prompt_version, iteration=t
-        )
+        if self.config.use_batch_api and not self.config.generator.verbalized_sampling:
+            from attrforge.llm_batch import BatchLLMClient, BatchConfig
+            gen_batch = BatchLLMClient(
+                model=self.config.batch_model,
+                config=BatchConfig(model=self.config.batch_model),
+            )
+            samples = self.generator.batch_generate(
+                targets, prompt=prompt, prompt_version=prompt_version,
+                iteration=t, batch_client=gen_batch,
+            )
+        else:
+            samples = self.generator.generate(
+                targets, prompt=prompt, prompt_version=prompt_version, iteration=t
+            )
         write_jsonl(iter_dir / "samples.jsonl", samples)
         self._all_samples.extend(samples)
 
         # 1. attribute verifier
         if self.verifier is not None:
-            attribute_verdicts = self.verifier.verify(samples)
+            if self.config.use_batch_api:
+                from attrforge.llm_batch import BatchLLMClient, BatchConfig
+                ver_batch = BatchLLMClient(
+                    model=self.config.batch_model,
+                    config=BatchConfig(model=self.config.batch_model),
+                )
+                attribute_verdicts = self.verifier.batch_verify(
+                    samples, batch_client=ver_batch,
+                )
+            else:
+                attribute_verdicts = self.verifier.verify(samples)
         else:
             attribute_verdicts = []
         write_jsonl(iter_dir / "attribute_verdicts.jsonl", attribute_verdicts)
