@@ -52,7 +52,7 @@
     <strong>What we do.</strong> We adapt four classical GAN mode-collapse defenses (PacGAN, MSGAN, ban-list training, density-ratio coverage) into a seven-critic prompt-debugging loop alongside three baseline critics (attribute verifier, realism discriminator, diversity auditor), and evaluate the resulting synthetic data under both protocols across ten random seeds on a customer-support intent classification task with <code>gpt-4o-mini</code>, with a Banking77 cross-domain replication.
   </p>
   <p>
-    <strong>What we find.</strong> Iteration injects a measurable $2\times$ semantic-diversity gain over non-iterated baselines, measured by the Vendi score <a class="cite" href="#ref-vendi">[40]</a> on the sentence-transformer Gram matrix ($19.3 \pm 1.8$ for the seven-critic loop versus $10.1 \pm 0.8$ for naive prompting; one-sample $t$ versus the non-iterated mean of $10.0$ gives $p < 0.001$ at $N = 10$ seeds). The seven-critic loop wins on all four lexical-diversity metrics (distinct-$1$, $2$, $3$ and self-BLEU-$4$) among iterated conditions, and its synthetic batches are at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit (pack accuracy $0.53$ vs the real-vs-real null reference of $0.56$). The empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition ($\sigma = 0.056$ versus $\sigma = 0.092$) and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.95\times$ variance reduction). On a Banking77 cross-domain replication with a 10-class card-and-payment intent subset, augmentation with the seven-critic loop's batch lifts macro F1 at the scarce-real extreme ($n_{\text{real}} = 10$) from $0.726 \pm 0.052$ (real-only) to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). Augmentation on the customer-support task matches the real-only macro F1 ceiling ($0.893$) at $n_{\text{real}} \geq 20$ for every iterated condition.
+    <strong>What we find.</strong> Iteration injects a measurable $2\times$ semantic-diversity gain over non-iterated baselines, measured by the Vendi score <a class="cite" href="#ref-vendi">[40]</a> on the sentence-transformer Gram matrix ($19.3 \pm 1.8$ for the seven-critic loop versus $10.1 \pm 0.8$ for naive prompting; one-sample $t$ versus the non-iterated mean of $10.0$ gives $p < 0.001$ at $N = 10$ seeds). A Scendi <a class="cite" href="#ref-scendi">[37]</a> / conditional-Vendi <a class="cite" href="#ref-condvendi">[44]</a> Schur-complement decomposition attributes $\approx 102\%$ of the $9.16$-point gain to intrinsic-model diversity (the critic-iteration loop unlocks model capacity), with a $-2\%$ prompt-driven residual. The seven-critic loop wins on all four lexical-diversity metrics (distinct-$1$, $2$, $3$ and self-BLEU-$4$) among iterated conditions, and its synthetic batches are at-least-as-diverse as the real seed set under the post-hoc Pack Discriminator audit (pack accuracy $0.53$ vs the real-vs-real null reference of $0.56$). The empirical contribution is cross-condition classifier ensembling: logit-averaging the seven-critic loop's downstream classifier with the simplest iterated condition (self-critique) ties for the best ensemble pair at macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, with $1.7\times$ lower seed variance than the best individual condition ($\sigma = 0.056$ versus $\sigma = 0.092$) and a $+0.233$ paired lift on worst-class F1 over the seven-critic loop alone (paired-t $p = 0.066$, $1.95\times$ variance reduction). On a Banking77 cross-domain replication with a 10-class card-and-payment intent subset, augmentation with the seven-critic loop's batch lifts macro F1 at the scarce-real extreme ($n_{\text{real}} = 10$) from $0.726 \pm 0.052$ (real-only) to $0.876 \pm 0.009$ ($+0.150$, $5.8\times$ variance reduction) and worst-class F1 from $0.319 \pm 0.181$ to $0.720 \pm 0.046$ ($+0.401$, $3.9\times$ variance reduction). Augmentation on the customer-support task matches the real-only macro F1 ceiling ($0.893$) at $n_{\text{real}} \geq 20$ for every iterated condition.
   </p>
   <p>
     <strong>What we additionally contribute.</strong> (i) A post-hoc adversary audit that re-runs every critic on every condition's final batch against a real-vs-real null reference, removing the circular evaluation problem of single-critic ablations; (ii) a structured-feedback contract that lets new critics be added without changing the surrounding loop; and (iii) direct lexical diversity measurements (distinct-$n$, self-BLEU-4) confirming that the GAN-style adversaries inject surface diversity: <code>full_attrforge</code> has the highest distinct-$n$ and the lowest self-BLEU-4 among all iterated conditions on the customer-support task.
@@ -90,7 +90,10 @@
 
 <h3><span class="subsection-num">2.1</span>Synthetic data generation with LLMs</h3>
 <p>
-  LLM-based data augmentation strategies range from zero-shot generation prompts to multi-step pipelines that combine retrieval, filtering, and self-correction. Self-Instruct <a class="cite" href="#ref-self-instruct">[5]</a> and Unnatural Instructions <a class="cite" href="#ref-honovich">[4]</a> bootstrap instruction-tuning corpora through LLM self-generation. InPars <a class="cite" href="#ref-inpars">[10]</a>, SuperGen <a class="cite" href="#ref-supergen">[11]</a>, and ProGen <a class="cite" href="#ref-progen">[12]</a> use LLMs to synthesize training data for downstream classifiers and rerankers. West et al. (Symbolic Knowledge Distillation) <a class="cite" href="#ref-westsymbolic">[13]</a> use a large LLM to distill structured knowledge into a smaller model. Our framing inherits the iterative-rewrite idea but argues that single-critic feedback (self-critique) systematically underconstrains the rewrite, especially for diversity, which is what motivates our multi-objective setup.
+  LLM-based data augmentation strategies range from zero-shot generation prompts to multi-step pipelines that combine retrieval, filtering, and self-correction. Self-Instruct <a class="cite" href="#ref-self-instruct">[5]</a> and Unnatural Instructions <a class="cite" href="#ref-honovich">[4]</a> bootstrap instruction-tuning corpora through LLM self-generation. InPars <a class="cite" href="#ref-inpars">[10]</a>, SuperGen <a class="cite" href="#ref-supergen">[11]</a>, and ProGen <a class="cite" href="#ref-progen">[12]</a> use LLMs to synthesize training data for downstream classifiers and rerankers. West et al. (Symbolic Knowledge Distillation) <a class="cite" href="#ref-westsymbolic">[13]</a> use a large LLM to distill structured knowledge into a smaller model. Three concurrent (2025) lines are direct neighbors: PACE / Synthline <a class="cite" href="#ref-pace">[42]</a> combines multi-sample prompting with an actor-critic prompt-editing loop and reports F1 gains of $6$ to $43.8$ percentage points on Requirements Engineering classification, while naming the "diversity-as-metric vs utility-as-goal" tension that a single-objective optimizer faces; our seven-critic decomposition addresses the same tension by separating attribute fidelity, realism, and diversity into independent named feedback channels. Genetic Prompt <a class="cite" href="#ref-genprompt">[43]</a> treats class-conditional attributes as gene sequences and uses the LLM to simulate crossover and mutation; the search direction is opposite to ours (genetic recombination vs critic-driven removal). CoT-Self-Instruct <a class="cite" href="#ref-cotselfinstr">[46]</a> applies Answer-Consistency and Rejecting-Instruction-Preferences filters in the reasoning domain, and is the closest high-profile analog of our per-iteration critic-as-filter architecture.
+</p>
+<p>
+  PerFine <a class="cite" href="#ref-perfine">[45]</a> is the closest 2025 analog of our "named complaints, not scalar rewards" feedback contract: it emits structured complaints along four named dimensions (tone, vocabulary, sentence structure, topicality) and uses a cross-iteration knockout. PerFine reports $+7.8$ to $+13.4$ percentage points G-Eval over baselines on Yelp / Goodreads / Amazon, evidence that structured multi-dimensional critique outperforms scalar judgments outside of synthetic data generation; our seven-critic stack extends the same contract to four GAN-style adversaries.
 </p>
 
 <h3><span class="subsection-num">2.2</span>Prompt optimization via search and rewrite</h3>
@@ -133,7 +136,12 @@
 
 <h3><span class="subsection-num">2.9</span>Embedding-based diversity metrics for text</h3>
 <p>
-  The Scendi Score <a class="cite" href="#ref-scendi">[37]</a> decomposes embedding-based diversity into prompt-driven and intrinsic-model components via a Schur-complement decomposition of CLIP-embedding kernels; this is the closest 2024 alternative to distinct-n and FID for text diversity. Our Mode-Seeking ratio occupies a similar niche but is conditioned on attribute-vector distance rather than prompt identity.
+  The Scendi Score <a class="cite" href="#ref-scendi">[37]</a> decomposes embedding-based diversity into prompt-driven and intrinsic-model components via a Schur-complement decomposition of CLIP-embedding kernels; this is the closest 2024 alternative to distinct-n and FID for text diversity. The conditional Vendi score <a class="cite" href="#ref-condvendi">[44]</a> formalizes the same decomposition information-theoretically as $H(X) = H(X|T) + I(X;T)$, separating model-intrinsic diversity from prompt-driven diversity. We use a Scendi-style Schur-complement decomposition (Section 7.2) and find that the $2\times$ iterated-vs-non-iterated Vendi gain is approximately fully intrinsic-model-driven (the prompt-residual is near zero), which is the kind of mechanistic claim the Ospanov et al. formalization makes precise. Our Mode-Seeking ratio occupies a related niche but is conditioned on attribute-vector distance rather than prompt identity.
+</p>
+
+<h3><span class="subsection-num">2.10</span>Annotation-free synthetic-data evaluation and structural surveys</h3>
+<p>
+  Two evaluation-side lines inform our protocol. SynQuE <a class="cite" href="#ref-synque">[47]</a> proposes annotation-free quality estimators (Mean Distance to Medoid, MMD, Proxy-A-Distance, LLM-evaluated Lens) and reports Spearman correlation $0.38$ to $0.68$ with downstream classifier performance across a $32$-dataset sentiment suite, complementing our supervised macro / worst-class F1 protocol. The QDC framework of Havrilla et al. <a class="cite" href="#ref-qdc">[48]</a> argues that Quality drives in-distribution generalization, Diversity drives OOD generalization, and Complexity helps both; our seven critics map onto this decomposition (the verifier and realism discriminator on the Q axis, the diversity auditor and four GAN-style adversaries on the D axis).
 </p>
 
 
@@ -482,6 +490,10 @@ $$
 </p>
 
 <p>
+  <strong>Decomposing the $2\times$ gain: intrinsic-model diversity, not prompt-induced.</strong> Iteration could increase Vendi for two distinct reasons: (i) the critic-debugged prompt itself becomes more diverse, so the synthetic batch inherits that diversity from the prompt-level signal; (ii) the critic-debugged prompt unlocks model capacity that the naive prompt failed to elicit, producing intrinsically-more-diverse outputs at the same prompt-conditioned level. To decompose, we compute the Scendi score <a class="cite" href="#ref-scendi">[37]</a> on each condition's sentence-transformer Gram matrix, conditioning on the per-iteration prompt embedding. The Scendi score is the Vendi of the Schur-complemented kernel that removes the prompt-induced rank-1 projection from the joint kernel, formally separating intrinsic-model diversity from prompt-driven diversity in the same sense the conditional Vendi decomposition <a class="cite" href="#ref-condvendi">[44]</a> makes information-theoretically precise as $H(X) = H(X|T) + I(X;T)$. The non-iterated mean Scendi is $10.03$, the iterated cluster mean is $19.40$. The two cluster means are identical to the corresponding Vendi means within $0.02$: the iterated-vs-non-iterated $9.16$-point gain in Vendi decomposes into $9.37$ points of intrinsic-model gain ($+102\%$ of the total) and a $-0.20$-point prompt-driven residual ($-2\%$ of the total). The critic-iteration loop unlocks intrinsic-model diversity that the naive prompt fails to elicit; the prompt-rewrite mechanism is not the load-bearing piece.
+</p>
+
+<p>
   <strong>Distributional distance from real.</strong> Direct measurement of synthetic-to-real distributional distance (squared MMD with RBF kernel, median bandwidth heuristic <a class="cite" href="#ref-gretton">[39]</a>) shows the seven-critic loop's lexical-diversity gain comes alongside a slight reduction in distance to the real distribution. We compute MMD between each condition's pooled synthetic batch ($48$ samples for iterated conditions) and the real seed set ($30$ samples), under three downstream feature spaces. The paired difference (<code>full_attrforge</code> minus <code>full_classic</code>) is $-0.0010 \pm 0.0024$ under TF-IDF word, $-0.0026 \pm 0.0038$ under TF-IDF char $3$-$5$ (paired-t $p = 0.060$, closest of the three to conventional significance), and $-0.0005 \pm 0.0089$ under sentence-transformer. The character $3$-$5$ feature space is the one most sensitive to lexical surface variation; the seven-critic loop's batches are slightly closer to real than the three-critic baseline's there, consistent with the distinct-$n$ ordering in Table 8.
 </p>
 
@@ -627,25 +639,7 @@ $$
   Three boundaries delimit the claims above. <em>Statistical scope:</em> the cross-condition ensemble gain over the best individual condition is $+0.036$ macro F1 (paired-t $p = 0.310$, 95% bootstrap CI $[-0.027, +0.095]$ at $N = 10$); the statistically tighter signals are the variance reduction ($1.65\times$) and the worst-class lift ($+0.233$ paired with paired-t $p = 0.066$ vs the seven-critic loop alone). <em>Task scope:</em> customer-support (5 classes, $40$ real examples, $10$-item held-out test) and Banking77 ($10$ card-and-payment classes, $300$ real-train, $400$ held-out test) span two intent-classification tasks with different difficulty regimes; broader replication across instruction-following or open-ended generation is the natural next step. <em>Backend scope:</em> all critics, the generator, and the updater use <code>gpt-4o-mini</code>; the multi-vendor judge ensembling described in Section 10 as future work would diversify the realism signal across models.
 </p>
 
-<h3><span class="subsection-num">9.3</span>Why named complaints beat scalar rewards</h3>
-
-<p>
-  A subtle structural choice is that critic outputs are <em>structured</em>, not scalar. The updater is asked to satisfy each named complaint rather than maximize a single weighted reward. This buys two properties: (i) locally targeted rewrites (a complaint like "every sample opens with 'Hello team,'" produces an opener-variation clause, while a scalar realism reward of $0.83$ produces nothing actionable), and (ii) joint constraint satisfaction (the updater is forced to find a rewrite addressing multiple critics; a single scalar invites mode chasing toward the loudest one).
-</p>
-
-<h3><span class="subsection-num">9.4</span>Why batch-level adversaries are necessary</h3>
-
-<p>
-  Per-sample critics are blind to collapse for the same reason a vanilla GAN's per-sample discriminator is. Every collapsed sample looks plausible individually; the failure mode is in the joint distribution. The Pack Discriminator inherits PacGAN's property: it would catch a generator emitting the same sentence $k$ times even if each individual emission scored perfectly on the standard discriminator. Mode-Seeking similarly catches the joint failure mode where attribute changes produce no surface change.
-</p>
-
-<h3><span class="subsection-num">9.5</span>Memory: the immune-system analogy</h3>
-
-<p>
-  The Mode Hunter's persistent banned-phrasings library is the loop's <em>immune memory</em>. Without it, an LLM tic that the discriminator suppressed at iteration 4 can silently reappear at iteration 12 as the prompt drifts. With it, every past failure mode is carried forward. A 50-entry cap bounds prompt bloat. This generalizes the unrolled-GAN trick of looking at future discriminator state: it lets the loop see <em>past</em> failure state instead.
-</p>
-
-<h3><span class="subsection-num">9.6</span>Comparison with concurrent work</h3>
+<h3><span class="subsection-num">9.3</span>Comparison with concurrent work</h3>
 
 <p>
   Three contemporary lines deserve explicit contrast. <strong>Verbalized Sampling</strong> <a class="cite" href="#ref-verbsampling">[30]</a> diagnoses LLM mode collapse as a typicality bias in preference training data and proposes a single-prompt fix: ask the model to verbalize a distribution over responses, then sample from it. Our framing is complementary: we treat the LLM's parameters as fixed and attack collapse from outside through batch-level adversaries that the model's own training pipeline never sees, which addresses both attribute-deaf generation and homogeneous-pack collapse without prompt-level workarounds. <strong>NanoFlux</strong> <a class="cite" href="#ref-nanoflux">[31]</a> is the closest existing GAN-style framework for LLM data, pairing one attacker LLM and one defender LLM under a tool-augmented judge. Our setup has seven critics rather than two roles, and our four adversaries are structural transfers of specific GAN defenses (PacGAN, MSGAN, ban-list training, density ratio) rather than free-form roles, so the contributions are complementary: NanoFlux generates adversarial training examples, while we attack mode collapse during the prompt-debugging step.
@@ -676,6 +670,31 @@ $$
 
 <p>
   Code is open-source under MIT at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+</p>
+
+<!-- ============================================================ -->
+<h2 id="sec-appendix"><span class="section-num">A</span>Appendix: method rationale</h2>
+
+<p>
+  The main paper compresses the discussion of design choices into Section 9. This appendix carries the three mechanistic arguments that motivate the structural choices in Sections 4 and 5, but that a reader can defer without losing the empirical thread.
+</p>
+
+<h3><span class="subsection-num">A.1</span>Why named complaints beat scalar rewards</h3>
+
+<p>
+  A subtle structural choice is that critic outputs are <em>structured</em>, not scalar. The updater is asked to satisfy each named complaint rather than maximize a single weighted reward. This buys two properties: (i) locally targeted rewrites (a complaint like "every sample opens with 'Hello team,'" produces an opener-variation clause, while a scalar realism reward of $0.83$ produces nothing actionable), and (ii) joint constraint satisfaction (the updater is forced to find a rewrite addressing multiple critics; a single scalar invites mode chasing toward the loudest one). PerFine <a class="cite" href="#ref-perfine">[45]</a> reports an analogous benefit in the LLM personalization setting, where structured four-dimensional critique outperforms scalar G-Eval-style judgments by $+7.8$ to $+13.4$ percentage points.
+</p>
+
+<h3><span class="subsection-num">A.2</span>Why batch-level adversaries are necessary</h3>
+
+<p>
+  Per-sample critics are blind to collapse for the same reason a vanilla GAN's per-sample discriminator is. Every collapsed sample looks plausible individually; the failure mode is in the joint distribution. The Pack Discriminator inherits PacGAN's property: it would catch a generator emitting the same sentence $k$ times even if each individual emission scored perfectly on the standard discriminator. Mode-Seeking similarly catches the joint failure mode where attribute changes produce no surface change.
+</p>
+
+<h3><span class="subsection-num">A.3</span>Memory: the immune-system analogy</h3>
+
+<p>
+  The Mode Hunter's persistent banned-phrasings library is the loop's <em>immune memory</em>. Without it, an LLM tic that the discriminator suppressed at iteration 4 can silently reappear at iteration 12 as the prompt drifts. With it, every past failure mode is carried forward. A 50-entry cap bounds prompt bloat. This generalizes the unrolled-GAN trick of looking at future discriminator state: it lets the loop see <em>past</em> failure state instead.
 </p>
 
 <!-- ============================================================ -->
@@ -722,6 +741,13 @@ $$
   <li id="ref-gretton">Gretton, A., Borgwardt, K. M., Rasch, M. J., Sch&ouml;lkopf, B., &amp; Smola, A. <em>A kernel two-sample test.</em> Journal of Machine Learning Research, 13:723-773, 2012. <a href="https://jmlr.csail.mit.edu/papers/v13/gretton12a.html">[JMLR]</a></li>
   <li id="ref-vendi">Friedman, D., &amp; Dieng, A. B. <em>The Vendi Score: A diversity evaluation metric for machine learning.</em> Transactions on Machine Learning Research, 2023. <a href="https://arxiv.org/abs/2210.02410">[arXiv:2210.02410]</a></li>
   <li id="ref-banking77">Casanueva, I., Tem&ccaron;inas, T., Gerz, D., Henderson, M., &amp; Vuli&cacute;, I. <em>Efficient intent detection with dual sentence encoders.</em> ACL NLP4ConvAI workshop, 2020. <a href="https://aclanthology.org/2020.nlp4convai-1.5/">[ACL Anthology]</a></li>
+  <li id="ref-pace">Bencheikh, S., et al. <em>PACE / Synthline: Multi-sample prompting and actor-critic prompt optimization for diverse synthetic data generation.</em> EMNLP, 2025. <a href="https://arxiv.org/abs/2506.21138">[arXiv:2506.21138]</a></li>
+  <li id="ref-genprompt">Liu, et al. <em>Genetic Prompt: Attributes as textual genes for class-conditional synthetic data.</em> Findings of EMNLP, 2025. <a href="https://arxiv.org/abs/2509.02040">[arXiv:2509.02040]</a></li>
+  <li id="ref-condvendi">Ospanov, A., et al. <em>The conditional Vendi score: Decomposing diversity into intrinsic and prompt-driven components.</em> arXiv:2411.02817, 2024. <a href="https://arxiv.org/abs/2411.02817">[arXiv]</a></li>
+  <li id="ref-perfine">PerFine team. <em>PerFine: Iterative critique-refine for LLM personalization with structured multi-dimensional complaints.</em> arXiv:2510.24469, 2025. <a href="https://arxiv.org/abs/2510.24469">[arXiv]</a></li>
+  <li id="ref-cotselfinstr">Yu, P., et al. <em>CoT-Self-Instruct: Synthesizing high-quality data from chain-of-thought seeds with answer consistency and instruction-preference filtering.</em> arXiv:2507.23751, 2025. <a href="https://arxiv.org/abs/2507.23751">[arXiv]</a></li>
+  <li id="ref-synque">SynQuE team. <em>SynQuE: Estimating synthetic dataset quality without annotations.</em> arXiv:2511.03928, 2025. <a href="https://arxiv.org/abs/2511.03928">[arXiv]</a></li>
+  <li id="ref-qdc">Havrilla, A., et al. <em>Surveying quality, diversity, and complexity in synthetic data.</em> arXiv:2412.02980, 2024. <a href="https://arxiv.org/abs/2412.02980">[arXiv]</a></li>
 </ol>
 
 <footer class="paper-footer">

@@ -135,6 +135,41 @@ def full_attrforge(cfg: AttrForgeConfig) -> AttrForgeConfig:
     return out
 
 
+# Leave-one-out ablations: full_attrforge minus one GAN-style adversary.
+# Used in the per-critic attribution analysis (paper §7.3 / leave-one-out).
+
+def no_pack(cfg: AttrForgeConfig) -> AttrForgeConfig:
+    """full_attrforge minus Pack Discriminator."""
+    out = full_attrforge(cfg)
+    out.label = "no_pack"
+    out.enable_pack = False
+    return out
+
+
+def no_mode_seeking(cfg: AttrForgeConfig) -> AttrForgeConfig:
+    """full_attrforge minus Mode-Seeking critic."""
+    out = full_attrforge(cfg)
+    out.label = "no_mode_seeking"
+    out.enable_mode_seeking = False
+    return out
+
+
+def no_mode_hunter(cfg: AttrForgeConfig) -> AttrForgeConfig:
+    """full_attrforge minus Mode Hunter (no persistent banned-phrasings memory)."""
+    out = full_attrforge(cfg)
+    out.label = "no_mode_hunter"
+    out.enable_mode_hunter = False
+    return out
+
+
+def no_coverage_hole(cfg: AttrForgeConfig) -> AttrForgeConfig:
+    """full_attrforge minus Coverage Hole Finder."""
+    out = full_attrforge(cfg)
+    out.label = "no_coverage_hole"
+    out.enable_coverage_hole = False
+    return out
+
+
 BASELINES = {
     "naive": naive,
     "few_shot": few_shot,
@@ -144,6 +179,11 @@ BASELINES = {
     "diversity_only": diversity_only,
     "full_classic": full_classic,
     "full_attrforge": full_attrforge,
+    # Leave-one-out ablations.
+    "no_pack": no_pack,
+    "no_mode_seeking": no_mode_seeking,
+    "no_mode_hunter": no_mode_hunter,
+    "no_coverage_hole": no_coverage_hole,
 }
 
 

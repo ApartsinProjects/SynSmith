@@ -175,8 +175,11 @@ def main():
                 "text_dist_mean": ms["text_dist_mean"],
             })
 
+    # Conditions in canonical paper order; the leave-one-out ablations are
+    # appended so reaudit_fixed runs on loo_run_001 as well as main_run_002.
     conds = ["naive", "few_shot", "self_critique", "realism_only",
-             "diversity_only", "full_classic", "full_attrforge"]
+             "diversity_only", "full_classic", "full_attrforge",
+             "no_pack", "no_mode_seeking", "no_mode_hunter", "no_coverage_hole"]
 
     print(f"\n=== Re-audit with FIXED metrics (mean +/- std over seeds) ===")
     print(f"{'condition':<18} {'ms (emb)':<14} {'cov AUROC (cv)':<14} {'Vendi score':<14} {'pair-text-dist':<14}")
