@@ -369,6 +369,10 @@ $$
 
 <h3><span class="subsection-num">6.3</span>Conditions</h3>
 
+<p>
+  Condition labels (<code>full_attrforge</code>, <code>full_classic</code>, <code>naive</code>, <code>few_shot</code>, the six <code>no_X</code> leave-one-out variants) are stable identifiers used in the open-source CLI flag <code>--conditions</code>; they predate the SynSmith framework name and are retained for cross-experiment comparability of the released artefacts. <code>full_attrforge</code> denotes the seven-critic configuration that is the paper's main subject.
+</p>
+
 <div class="table-wrap">
 <table>
 <caption>Table 2: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same ten random seeds on customer-support (17, 23, 41, 53, 89, 101, 109, 127, 137, 149) and same five seeds on Banking77 (17, 23, 41, 53, 89), same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
@@ -809,7 +813,7 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 <h3><span class="subsection-num">11.6</span>Testing, contribution, and licensing</h3>
 
 <p>
-  The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern (failure mode, protocol, ablation flag, loop registration, unit test) plus contributions for new datasets, new backends, and new aggregation scripts. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+  The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern (failure mode, protocol, ablation flag, loop registration, unit test) plus contributions for new datasets, new backends, and new aggregation scripts. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
 </p>
 
 <!-- ============================================================ -->
@@ -820,11 +824,15 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </p>
 
 <p>
+  <em>What the GAN-style adversaries contribute.</em> Even though the ensemble win is attributable to iteration plus the structured-critic feedback contract rather than to the four GAN-style adversaries specifically, the adversaries have a measurable, distinct contribution: <code>full_attrforge</code> holds the highest distinct-$n$ and the lowest self-BLEU-$4$ among iterated conditions (Table 8), and the Mode Hunter accumulates a persistent banned-phrasings library of $11.6 \pm 0.6$ entries across three iterations (Appendix B.3) that is unavailable to any single-critic baseline. The post-hoc audit (Section 8) scopes the empirical support to two of the four adversaries (Pack Discriminator and Mode Hunter); Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments.
+</p>
+
+<p>
   <em>Implications for practitioners.</em> The value of a multi-critic prompt-debugging loop is best surfaced via cross-condition classifier ensembling: multiple iterated conditions produce synthetic batches whose downstream classifiers learn orthogonal decision boundaries, and combining two such classifiers via logit averaging stabilizes the downstream classifier across seeds ($1.65\times$ variance reduction in macro F1, $1.74\times$ in worst-class F1) at no additional generation cost. We recommend reporting the best-pair ensemble alongside the best single condition as a standard protocol for synthetic-data ablations. <em>Implications for method designers.</em> The Vendi score on the sentence-transformer Gram matrix differentiates iterated from non-iterated synthetic data by a $2\times$ margin where the macro F1 saturates, and the post-hoc adversary audit attributes observed differences to the data itself rather than to whichever critic was enabled in a given condition.
 </p>
 
 <p>
-  <em>What the practitioner takes home.</em> The seven-critic loop above is one configuration of a more general framework (Section 11): a pluggable Python library for synthetic text data generation and evaluation, with fourteen shipped critic implementations across the seven roles, eight named baselines and six leave-one-out ablations, three example datasets at different difficulty regimes (customer-support, Banking77, TREC question-types), multi-backend LLM support (OpenAI / Anthropic / offline echo, plus multi-vendor judging via OpenRouter), an OpenAI Batch-API harness that halves the cost of paper-scale sweeps, a cross-condition ensemble public API typed for direct downstream use, and a diversity-metric library spanning Vendi, Scendi (Schur-complement decomposition), distinct-$n$, self-BLEU, MMD, and manifold-entropy. Adding a new critic, baseline, dataset, or backend is a single-file change; the structured-feedback contract handles the wiring. The framework is MIT-licensed at <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>; a three-line usage example, a $14$-row critic table, and an "Adding a new critic" walkthrough are in Section 11.
+  <em>What the practitioner takes home.</em> The seven-critic loop above is one configuration of a more general framework (Section 11): a pluggable Python library for synthetic text data generation and evaluation, with fourteen shipped critic implementations across the seven roles, eight named baselines and six leave-one-out ablations, three example datasets at different difficulty regimes (customer-support, Banking77, TREC question-types), multi-backend LLM support (OpenAI / Anthropic / offline echo, plus multi-vendor judging via OpenRouter), an OpenAI Batch-API harness that halves the cost of paper-scale sweeps, a cross-condition ensemble public API typed for direct downstream use, and a diversity-metric library spanning Vendi, Scendi (Schur-complement decomposition), distinct-$n$, self-BLEU, MMD, and manifold-entropy. Adding a new critic, baseline, dataset, or backend is a single-file change; the structured-feedback contract handles the wiring. The framework is MIT-licensed at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>; a three-line usage example, a $14$-row critic table, and an "Adding a new critic" walkthrough are in Section 11.
 </p>
 
 <!-- ============================================================ -->
@@ -1027,7 +1035,7 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </ol>
 
 <footer class="paper-footer">
-  Code: <a href="https://github.com/ApartsinProjects/PromptForge">github.com/ApartsinProjects/PromptForge</a>.
+  Code: <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
   Word version: <a href="synsmith.docx">synsmith.docx</a>.
 </footer>
 
