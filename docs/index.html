@@ -249,14 +249,14 @@ $$
 </div>
 
 <p>
-  The structured contract is what makes batch-level adversaries integrate cleanly into the same template as per-sample critics: every critic's output is a list of named items that the updater is asked to address one-by-one.
+  The structured contract is what makes batch-level adversaries integrate cleanly into the same template as per-sample critics: every critic's output is a list of named items that the updater is asked to address one-by-one. Appendix A.1 expands on why structured complaints beat scalar rewards as feedback to a prompt updater, with a parallel evidence point from PerFine <a class="cite" href="#ref-perfine">[45]</a>.
 </p>
 
 <!-- ============================================================ -->
 <h2 id="sec-adversaries"><span class="section-num">5</span>GAN-style mode-collapse adversaries</h2>
 
 <p>
-  The three baseline critics solve the per-sample realism problem (each sample looks plausible) and the per-batch coverage problem (every attribute value is observed), but they leave open two failure modes well-known from the GAN literature: <em>plausible homogeneity</em> (every sample looks real individually; together they look like a fan of LLM regenerations) and <em>attribute-deaf generation</em> (the generator emits roughly the same text regardless of the requested attribute vector, while metadata correctly reflects it). We address both via a 2 &times; 2 grid: Pack Discriminator and Mode-Seeking target plausible homogeneity and attribute-deafness respectively; Mode Hunter and Coverage Hole Finder add cross-iteration memory and exemplar grounding.
+  The three baseline critics solve the per-sample realism problem (each sample looks plausible) and the per-batch coverage problem (every attribute value is observed), but they leave open two failure modes well-known from the GAN literature: <em>plausible homogeneity</em> (every sample looks real individually; together they look like a fan of LLM regenerations) and <em>attribute-deaf generation</em> (the generator emits roughly the same text regardless of the requested attribute vector, while metadata correctly reflects it). We address both via a 2 &times; 2 grid: Pack Discriminator and Mode-Seeking target plausible homogeneity and attribute-deafness respectively; Mode Hunter and Coverage Hole Finder add cross-iteration memory and exemplar grounding. Appendix A.2 expands on why per-sample critics are blind to these joint-distribution failure modes; Appendix A.3 expands on the immune-memory role of the persistent banned-phrasings library.
 </p>
 
 <h3 id="sec-pack"><span class="subsection-num">5.1</span>Pack Discriminator (PacGAN analog)</h3>
