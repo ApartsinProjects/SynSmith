@@ -33,12 +33,21 @@ from attrforge.schema import RealExample, load_jsonl  # noqa: E402
 
 
 def split_real(
-    path: Path, n_test: int, seed: int
+    path: Path, n_test: int, seed: int, splits_prefix: str = ""
 ) -> tuple[list[RealExample], list[RealExample], Path, Path]:
     """Stratified split: hold out n_test/labels per class for the downstream test set.
 
     Persists both splits to ``experiments/_splits/`` so every condition
-    sees the *same* test set.
+    sees the *same* test set. The output filenames are derived from the
+    INPUT real_examples_path's stem so that running on multiple datasets
+    (e.g. customer_support + banking77) does not silently overwrite each
+    other's split files. Concretely, if input is
+    ``experiments/_splits/banking77_real_train.jsonl``, the output is
+    ``experiments/_splits/banking77_real_train.split_train.jsonl`` and
+    ``...split_test.jsonl``. If input is the legacy
+    ``examples/customer_support/real_examples.jsonl``, the output retains
+    the v1 names ``real_train.jsonl`` / ``real_test.jsonl`` so existing
+    analyses keep working.
     """
     rows = [RealExample.model_validate(r) for r in load_jsonl(path)]
     by_label: dict[str, list[RealExample]] = {}
@@ -56,8 +65,16 @@ def split_real(
 
     out_dir = REPO / "experiments" / "_splits"
     out_dir.mkdir(parents=True, exist_ok=True)
-    train_path = out_dir / "real_train.jsonl"
-    test_path = out_dir / "real_test.jsonl"
+    # Preserve v1 names for the original customer-support layout. For any
+    # other input file, derive split filenames from the input stem so the
+    # canonical real_train.jsonl/real_test.jsonl never get clobbered.
+    input_stem = Path(path).stem
+    if input_stem == "real_examples":
+        train_path = out_dir / "real_train.jsonl"
+        test_path = out_dir / "real_test.jsonl"
+    else:
+        train_path = out_dir / f"{input_stem}.split_train.jsonl"
+        test_path = out_dir / f"{input_stem}.split_test.jsonl"
     train_path.write_text(
         "\n".join(r.model_dump_json() for r in train) + "\n", encoding="utf-8"
     )
