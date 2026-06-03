@@ -46,3 +46,6 @@ experiments/_smoke_*/
 *.log
 .claude/
 paper/_paper_*
+
+# html2doc Stage-1 intermediate (regenerated on every conversion)
+**/_mathml.html

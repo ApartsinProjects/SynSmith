@@ -208,6 +208,41 @@ def full_attrforge_vs(cfg: SynSmithConfig) -> SynSmithConfig:
     return out
 
 
+def no_pack_vs(cfg: SynSmithConfig) -> SynSmithConfig:
+    """no_pack + Verbalized Sampling. Task #69 candidate clear-winner config.
+
+    Per-datapoint root-cause analysis on customer-support item [7] showed
+    the Pack Discriminator suppressed delivery-style complaint phrasings,
+    turning 9/10 correct into 6/10 under the full stack. Removing Pack
+    frees the generator for the structural variation VS was designed to
+    add. Hypothesis: the combination beats both full_attrforge (with Pack)
+    and no_pack (without VS) on worst-class F1.
+    """
+    out = no_pack(cfg)
+    out.label = "no_pack_vs"
+    out.generator.verbalized_sampling = True
+    out.generator.vs_n_candidates = 5
+    out.generator.vs_sample_strategy = "weighted"
+    return out
+
+
+def full_attrforge_sibling(cfg: SynSmithConfig) -> SynSmithConfig:
+    """full_attrforge + Class-Discriminability check in Verifier. Task #73.
+
+    On fine-grained classification (Banking77's 10 sibling card-intents),
+    the standard Verifier confirms the requested attribute holds but does
+    not check the sample is DISTINGUISHABLE from sibling classes. The
+    sibling-rejection variant shows the Verifier real anchors from the
+    nearest sibling classes and requires REJECTION when the synth is
+    equally compatible with a sibling.
+    """
+    out = full_attrforge(cfg)
+    out.label = "full_attrforge_sibling"
+    # Wired via VerifierConfig.enable_sibling_rejection in loop.py builder.
+    out.verifier_sibling_rejection = True
+    return out
+
+
 BASELINES = {
     "naive": naive,
     "few_shot": few_shot,
@@ -224,6 +259,10 @@ BASELINES = {
     "no_coverage_hole": no_coverage_hole,
     # Verbalized-Sampling variant (scout D1.1).
     "full_attrforge_vs": full_attrforge_vs,
+    # Task #69: no_pack + VS (candidate clear-winner).
+    "no_pack_vs": no_pack_vs,
+    # Task #73: Class-Discriminability sibling-rejection Verifier.
+    "full_attrforge_sibling": full_attrforge_sibling,
     # 3-judge debate Realism Critic via OpenRouter (scout D3.1).
     "full_attrforge_3judge": full_attrforge_3judge,
 }

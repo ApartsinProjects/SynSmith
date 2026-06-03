@@ -1,0 +1,58 @@
+domain: trec_question_type
+task_description: 'Classify an English open-domain question into one of six coarse-grained
+
+  question-type categories from the TREC question-classification benchmark.
+
+  The classes are distinguished by the EXPECTED ANSWER TYPE, not by topic:
+
+  a question about a person (HUM) vs a location (LOC) vs a numeric quantity
+
+  (NUM) can share most of its surface vocabulary. The model must rely on
+
+  shallow surface markers (interrogatives, head nouns) and on the implicit
+
+  answer type the question demands, not on keyword matching.
+
+  '
+label_attribute: intent
+attributes:
+  intent:
+  - abbreviation
+  - description_and_abstract_concepts
+  - entities
+  - human_beings
+  - locations
+  - numeric_values
+  topic:
+  - design_city
+  - stand_ekg
+  - abbreviation_trinitrotoluene
+  - former_wwf
+  - books_list
+  - capital_african
+  - pay_spice
+  - good_exercises
+  difficulty:
+  - easy
+  - medium
+  - hard
+  ambiguity:
+  - low
+  - medium
+  - high
+  style:
+  - formal
+  - informal
+  - fragmented
+  - concise
+  - verbose
+  noise:
+  - clean
+  - typos
+  - missing_details
+  - irrelevant_details
+  scenario_type:
+  - factoid
+  - definition
+  - list
+  - comparison

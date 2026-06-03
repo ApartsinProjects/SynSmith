@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.66769685690536
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6626642535420676
+    },
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6562885081150853
+    },
+    {
+      "text": "do you have a student discount available? if yes how do I apply?",
+      "label": "general_question",
+      "p_real": 0.6549762955147629
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

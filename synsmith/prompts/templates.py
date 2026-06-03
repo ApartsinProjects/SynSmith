@@ -63,7 +63,16 @@ VERIFIER_SYSTEM = (
     "2. Compare your reading to the requested attributes. For each "
     "attribute, decide whether the text matches the request - or whether "
     "the request is wrong.\n"
-    "3. Return a structured verdict. Return JSON only."
+    "3. If a 'Sibling classes' block is present in the user message, "
+    "verify DISTINGUISHABILITY from every sibling class shown. A sample "
+    "that satisfies the requested attribute but is equally compatible "
+    "with one or more sibling classes (would plausibly be labeled as the "
+    "sibling by a blind annotator who sees only the text) must be "
+    "REJECTED by including the class attribute in failed_attributes, "
+    "with the reason naming the sibling it is ambiguous with. "
+    "Attribute fidelity alone is not sufficient when sibling-rejection "
+    "is active; class-discriminability is required.\n"
+    "4. Return a structured verdict. Return JSON only."
 )
 
 VERIFIER_USER_TEMPLATE = """Schema:
@@ -72,6 +81,8 @@ VERIFIER_USER_TEMPLATE = """Schema:
 Real-distribution empirical anchors (the attribute value labels MEAN what
 the real examples show; do NOT use a generic-English interpretation):
 {real_anchor_block}
+
+{sibling_anchor_block}
 
 Sample:
 sample_id: {sample_id}
@@ -86,14 +97,18 @@ not assume the request is correct):
 
 Read the text first. Identify what attributes a blind annotator would
 assign by COMPARING the text to the real-distribution anchors for each
-attribute value. THEN compare to the requested attributes. For each
-attribute, decide if the text matches. Output JSON:
+attribute value. If a 'Sibling classes' block was shown above, also
+verify the sample is DISTINGUISHABLE from every sibling class: a sample
+equally compatible with a sibling must be REJECTED by including the
+class attribute in failed_attributes. THEN compare to the requested
+attributes. For each attribute, decide if the text matches. Output JSON:
 {{
   "sample_id": "{sample_id}",
   "attribute_match": <true|false overall>,
   "failed_attributes": [<list of attribute names that fail>],
   "reason": "<one sentence; cite a specific feature of the text OR a
-             specific contrast with the real-distribution anchors>"
+             specific contrast with the real-distribution anchors OR
+             the sibling-class the sample is ambiguous with>"
 }}
 """
 

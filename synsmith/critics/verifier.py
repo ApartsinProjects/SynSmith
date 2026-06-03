@@ -42,6 +42,24 @@ class VerifierConfig:
     enable_real_anchors: bool = True
     """When False, falls back to schema-name-only verification (v2.9.2 behaviour)."""
 
+    enable_sibling_rejection: bool = False
+    """Show real anchors from SIBLING class values too and require the
+    verifier to REJECT samples equally compatible with a sibling class.
+
+    Targets the fine-grained Banking77 anti-pattern (Bug #4 in the
+    adversarial-critic checklist): synth for ``card_not_working`` that
+    overlaps ``card_swallowed`` and ``declined_card_payment`` semantically
+    passes attribute-fidelity but the downstream classifier cannot resolve
+    the distinction. With this on, the verifier sees per-sibling anchors
+    AND a system-prompt clause requiring rejection on ambiguous samples.
+    Task #73 in the registry.
+    """
+
+    k_sibling_anchors: int = 1
+    """How many real examples per SIBLING class value to show. 1 keeps the
+    prompt compact; raise to 2-3 for very fine-grained schemas where a
+    single exemplar may not span the sibling's surface variation."""
+
     seed: int | None = None
 
 
@@ -90,12 +108,14 @@ class AttributeVerifier:
         deferreds = []
         for sample in samples:
             anchor_block = self._format_anchors(sample.requested_attributes)
+            sibling_block = self._format_sibling_anchors(sample.requested_attributes)
             user_msg = VERIFIER_USER_TEMPLATE.format(
                 attribute_schema=schema_str,
                 sample_id=sample.sample_id,
                 requested_attributes=json.dumps(sample.requested_attributes),
                 text=sample.text,
                 real_anchor_block=anchor_block,
+                sibling_anchor_block=sibling_block,
             )
             d = batch_client.chat(
                 VERIFIER_SYSTEM,
@@ -114,6 +134,7 @@ class AttributeVerifier:
             except Exception:
                 # Fall back: synchronous repair retry
                 anchor_block = self._format_anchors(sample.requested_attributes)
+                sibling_block = self._format_sibling_anchors(sample.requested_attributes)
                 obj = json_chat(
                     self.client,
                     VERIFIER_SYSTEM,
@@ -123,6 +144,7 @@ class AttributeVerifier:
                         requested_attributes=json.dumps(sample.requested_attributes),
                         text=sample.text,
                         real_anchor_block=anchor_block,
+                        sibling_anchor_block=sibling_block,
                     )}],
                     temperature=0.0,
                     max_tokens=400,
@@ -136,12 +158,14 @@ class AttributeVerifier:
         verdicts: list[AttributeVerdict] = []
         for sample in samples:
             anchor_block = self._format_anchors(sample.requested_attributes)
+            sibling_block = self._format_sibling_anchors(sample.requested_attributes)
             user_msg = VERIFIER_USER_TEMPLATE.format(
                 attribute_schema=schema_str,
                 sample_id=sample.sample_id,
                 requested_attributes=json.dumps(sample.requested_attributes),
                 text=sample.text,
                 real_anchor_block=anchor_block,
+                sibling_anchor_block=sibling_block,
             )
             obj = json_chat(
                 self.client,
@@ -153,6 +177,52 @@ class AttributeVerifier:
             )
             verdicts.append(self._coerce(obj, sample))
         return verdicts
+
+    def _format_sibling_anchors(self, requested: dict) -> str:
+        """Render real anchors for the SIBLING values of the requested class.
+
+        Targets the fine-grained class-confusion bug (Banking77's 10 sibling
+        card-intents): when the schema's label_attribute has many values
+        with heavy vocabulary overlap, the standard Verifier confirms
+        attribute-fidelity but does not check distinguishability. Showing
+        per-sibling anchors lets the LLM judge 'this sample looks more like
+        card_swallowed than card_not_working' rather than 'yes, contains
+        the word card_not_working'. Returns an inert placeholder when the
+        feature is disabled.
+        """
+        if not self.config.enable_sibling_rejection:
+            return "(sibling-class anchoring disabled; verifier does not enforce sibling-rejection)"
+        if not self._anchors_by_attr:
+            return "(sibling-class anchoring requested but no real-distribution anchors are available)"
+        class_attr = self.schema.label_attribute
+        if not class_attr:
+            return "(no label attribute on this schema; sibling-rejection not applicable)"
+        requested_value = requested.get(class_attr)
+        if requested_value is None:
+            return "(no class value requested for this sample; sibling-rejection skipped)"
+        allowed = list(self.schema.values(class_attr) or [])
+        siblings = [v for v in allowed if v != requested_value]
+        if not siblings:
+            return "(single-class schema; no siblings to reject)"
+        by_value = self._anchors_by_attr.get(class_attr, {})
+        chunks: list[str] = [
+            f"Sibling classes of {class_attr}={requested_value!r} (the sample "
+            f"must NOT be equally compatible with these alternatives; if it "
+            f"is ambiguous between the requested class and any sibling below, "
+            f"REJECT it by including {class_attr!r} in failed_attributes):"
+        ]
+        k = max(1, int(self.config.k_sibling_anchors))
+        for sib in siblings:
+            pool = by_value.get(str(sib))
+            if not pool:
+                continue
+            picks = self._rng.sample(pool, min(k, len(pool)))
+            chunks.append(f"  {class_attr}={sib!r}:")
+            for p in picks:
+                chunks.append(f"    - {p[:240]}")
+        if len(chunks) == 1:
+            return "(sibling-class anchoring requested but no sibling anchors were available in the real seed)"
+        return "\n".join(chunks)
 
     def _format_anchors(self, requested: dict) -> str:
         """Render the real-distribution anchors for the requested attribute values.

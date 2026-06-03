@@ -1,0 +1,300 @@
+{"text":"My card hasn't arrived yet. What do I do?","label":"card_arrival","metadata":{}}
+{"text":"I don't have my card after 1 week. What are my next steps?","label":"card_arrival","metadata":{}}
+{"text":"why have i not got my new card?","label":"card_arrival","metadata":{}}
+{"text":"When did you send me my new card?","label":"card_arrival","metadata":{}}
+{"text":"How can I periodically check the delivery of the card you sent?","label":"card_arrival","metadata":{}}
+{"text":"maximum how many days get the courier?","label":"card_arrival","metadata":{}}
+{"text":"Can you help me track my card?","label":"card_arrival","metadata":{}}
+{"text":"My new card isn't here and it was issued a week ago.","label":"card_arrival","metadata":{}}
+{"text":"My card isn't here yet.","label":"card_arrival","metadata":{}}
+{"text":"I'm still waiting on my new card to be delivered!","label":"card_arrival","metadata":{}}
+{"text":"What is the expected delivery date of my card?","label":"card_arrival","metadata":{}}
+{"text":"Is my new bank card on the way and is there a way to track it?","label":"card_arrival","metadata":{}}
+{"text":"How can I track my card's delivery?","label":"card_arrival","metadata":{}}
+{"text":"I know I'm getting a new card but would like know when I can expect to receive it.","label":"card_arrival","metadata":{}}
+{"text":"How do I track the card you sent me?","label":"card_arrival","metadata":{}}
+{"text":"Where is my credit card that was to be mailed?","label":"card_arrival","metadata":{}}
+{"text":"how can i track card you sent","label":"card_arrival","metadata":{}}
+{"text":"Where is my new card if I haven't received it yet?","label":"card_arrival","metadata":{}}
+{"text":"Is there a reason my new card hasn't arrived?","label":"card_arrival","metadata":{}}
+{"text":"Am I able to track a card that has already been sent?","label":"card_arrival","metadata":{}}
+{"text":"Is a tracking number available for the card that was just sent?","label":"card_arrival","metadata":{}}
+{"text":"It's been two weeks and I haven't gotten my card, what do I do?","label":"card_arrival","metadata":{}}
+{"text":"Can I track the card that was just sent to me?","label":"card_arrival","metadata":{}}
+{"text":"How long will it take for me to get my card?","label":"card_arrival","metadata":{}}
+{"text":"How can I check on the status of my new card?","label":"card_arrival","metadata":{}}
+{"text":"Could you send me and up date on the arrival of my card?","label":"card_arrival","metadata":{}}
+{"text":"What's go on, where is my new card?","label":"card_arrival","metadata":{}}
+{"text":"Have you sent out my card yet?","label":"card_arrival","metadata":{}}
+{"text":"I'm still waiting for my card.","label":"card_arrival","metadata":{}}
+{"text":"Can the card was sen to me be tracked?","label":"card_arrival","metadata":{}}
+{"text":"I tried to purchase airline tickets online this morning and my card information isn't working. Is there something going on with my account?","label":"card_not_working","metadata":{}}
+{"text":"My card isn't working at all. What happened?","label":"card_not_working","metadata":{}}
+{"text":"What are ways to test why my card might not be working?","label":"card_not_working","metadata":{}}
+{"text":"My card no longer works.","label":"card_not_working","metadata":{}}
+{"text":"Today I used my card at a restaurant and it was declined. Why?","label":"card_not_working","metadata":{}}
+{"text":"How do I check security settings on my card?","label":"card_not_working","metadata":{}}
+{"text":"I am having problems with my physical card.","label":"card_not_working","metadata":{}}
+{"text":"My card won't physically work.","label":"card_not_working","metadata":{}}
+{"text":"Why is my card not working anymore?","label":"card_not_working","metadata":{}}
+{"text":"Is my card frozen?","label":"card_not_working","metadata":{}}
+{"text":"Why can't I use my card?","label":"card_not_working","metadata":{}}
+{"text":"HOW LONG TO TAKE THE TIME TO SOLVE","label":"card_not_working","metadata":{}}
+{"text":"What do I do if my card is not working?","label":"card_not_working","metadata":{}}
+{"text":"I need help with understanding why my card is not working.","label":"card_not_working","metadata":{}}
+{"text":"How come my card doesn't work anymore?","label":"card_not_working","metadata":{}}
+{"text":"I don't know what's wrong with my card, but it has not worked at multiple places today.","label":"card_not_working","metadata":{}}
+{"text":"How do I check security settings using the app?","label":"card_not_working","metadata":{}}
+{"text":"My card doesn't seem to work anymore","label":"card_not_working","metadata":{}}
+{"text":"Please help me!  My physical card isn't working right.","label":"card_not_working","metadata":{}}
+{"text":"I think my card is broken or something. I tried using it and it wouldn't go through, please help.","label":"card_not_working","metadata":{}}
+{"text":"I can't get the card itself to work.","label":"card_not_working","metadata":{}}
+{"text":"I haven't been able to complete any transactions on my card today. Do you know what's wrong?","label":"card_not_working","metadata":{}}
+{"text":"What do I do if i accidentally broke my card?","label":"card_not_working","metadata":{}}
+{"text":"My card stopped working after multiple transactions. Why?","label":"card_not_working","metadata":{}}
+{"text":"What do I do if the machine rejects my card?","label":"card_not_working","metadata":{}}
+{"text":"I wasn't able to use my card today when I went out for lunch. Wondering why that is?","label":"card_not_working","metadata":{}}
+{"text":"Why doesn't my card work for any transactions?","label":"card_not_working","metadata":{}}
+{"text":"What do I do if my card gets broken?","label":"card_not_working","metadata":{}}
+{"text":"How can I get my card to work?","label":"card_not_working","metadata":{}}
+{"text":"For a week now, I have tried to use my card and it is still not working.","label":"card_not_working","metadata":{}}
+{"text":"Why am I being charged fees on some transactions but not on others? What am I missing here? I cannot find where to see the fee structure on my account. Help!","label":"card_payment_fee_charged","metadata":{}}
+{"text":"i have used my card online before and wasn't charged, why am i charged now","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Do you have charges now when you pay with a card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why was there a fee for paying by card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why was I charged extra using my card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I have been charged a fee that I didn't know about. Why have you charged me extra for card payments?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why am I getting charged more for using my card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"A fee came along with me paying with card","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I paid with card and I was charged a fee","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I just saw a fee on my account. When do these get charged?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Can you explain why my payment was charged a fee?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I want to see what this fee is on my card payment.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why was I charged an extra fee when using the card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I have been charged a fee, I didn't know about this fee before! When do you charge extra for card payments?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Can you explain why I was charged extra when I used the card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why am I being charged a hidden fee?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I was charged an additional amount of money for making a purchase with my card","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why was a fee added to my bill when I used my card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why is there a fee when I thought there would be no fees?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why is there a fee for using my card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"I used my card and there was a fee","label":"card_payment_fee_charged","metadata":{}}
+{"text":"After I used my card I saw I was charged a fee for using it","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why do some of my payments have fees?  I don't understand.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Let me know when you charge extra for payments please. I just checked the app earlier when I saw that there was an additional fee on one of the payments that I wasn't warned about before.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Why am I charged an extra fee on my card?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Hello! I randomly got charged an extra fee today as i was shopping online and i have no idea why! Are there extra fees for card payments? Or am i missing something here?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"My card was charged more than expected.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"When using my card I was charged a fee for doing so, why?","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Please tell me why I was charged additionally when I used the card.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"Is there a place to check for fee for payments? I feel like I'm getting charged too much at times.","label":"card_payment_fee_charged","metadata":{}}
+{"text":"There are a couple payments with my card shown in the app that i really didn't make myself. What's happenning with this, does someone has access to my card?!","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There are charges on my card from the past few day I am pretty sure I didnt make, can you please freeze it for me? How do I get my money returned since it wasnt me?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a payment done with my card which i definitely did not do.Never seen that name before.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a payment with my card which i definitely did not make by me .Never seen that it before.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There are a couple payments with my card shown in the app that i really didn't make myself. What's going on with this, does someone has access to my card?!","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a card payment that I'm not recognizing.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There are some charges that I don't recognize.  It happened days ago.  Can I get these charges back?  Should I cancel my card?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There was a purchase on my card recently to a name that I don't recognize at all. What can be done about this? I need my money back.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I think there's a purchase at a store that I didn't go to.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I have a payment I didnt make on my account","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I didn't do a payment and I have it now.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I just checked my account on the App and there is a payment on there that I did not make.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I do not recognise the card payment.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"A payment shows up on the app that I never made.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There are a couple of payments with my card shown in the app that I really didn't make myself. What's going on with this?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I have an odd payment in my statement","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a strange payment on my card and I don't know what to do.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I just looked over my statement and I don't recognize the name of a card payment.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I need to freeze my card as soon as possible. I just checked my account and saw that there have been several payments that I don't recognize over the course of a few days. Can we investigate and get my money back?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"Someone might have access to my card!  There are some strange payments showing up on my account.  What do I do?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"If I see a payment in the app that I don't recognize, what should I do?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"Is there any way to know how the transaction got on my account?","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I looked at my statement and found a payment I and found a mistake.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a payment I don't recognize","label":"card_payment_not_recognised","metadata":{}}
+{"text":"There is a vendor name I don't recognize on a payment from my account. I don't think I made this payment.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I don't recognize a purchase that was made with my card.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I don't recognize a charge on my statement.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"A payment that I didn't make appears in my app.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I'm noticing a payment/purchase at a company that I don't recognise.","label":"card_payment_not_recognised","metadata":{}}
+{"text":"I have a payment in my statement that is off","label":"card_payment_not_recognised","metadata":{}}
+{"text":"My card payment has the wrong exchange rate","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I recently bought something abroad but the exchange rate is incorrect. Why?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"The exchange rate is bad. Are you sure this is the exchange rate?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I was charged the wing amount for an item.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I purchased something abroad and the incorrect exchange rate was applied.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I just saw the exchange rate you use, but it's so bad that I can't believe that it's the official interbank exchange rate! Is this truly the official interbank exchange rate?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"The exchange rate is incorrect on an item I recently purchased in a foreign country.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"The exchange rate was incorrect for an item I bought.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I believe you charged me too much to exchange my money","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"My exchange rate was wrong for an Item I bought!","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"There's an error in regards to the exchange rate for an item I bought.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"The exchange rate you're using is terrible - this can't be the official interbank exchange rate, can it?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"Why is the exchange rate on my card payment different than I expected?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I bough an item and the exchange rate was incorrect.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"After purchasing an item I noticed the exchange rate was incorrect.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"My exchange rate isn't correct.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I want to change the wrong exchange rate.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I bought an item and the exchange rate was wrong.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"Please check the exchange rate for my payment last Saturday. I believe I have been overcharged.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"The exchange rate was incorrect for this item I bought.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"Was I charged more than I should of been for a currency exchange?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I feel as though I have been over charged for the exchange rate on my payment on last Saturday.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I have been charged way to much so something is apparently wrong with my exchange. I changed Russian Ruble into UK pounds.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I noticed the currency exchange rate was incorrect after paying for something in a foreign country.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I purchased something abroad but the exchange rate is incorrect.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"Why is the exchange rate for my payment incorrect?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"What is your exchange rate between UK pounds and Russian rubles for my last transaction","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"I purchased something abroad, and the exchange rate that was applied was wrong.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"Why is the exchange rate on my card wrong?","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"There's an error with the rate that is charged.","label":"card_payment_wrong_exchange_rate","metadata":{}}
+{"text":"My card is stuck inside the ATM, what am I supposed to do?","label":"card_swallowed","metadata":{}}
+{"text":"The ATM took my card.","label":"card_swallowed","metadata":{}}
+{"text":"How do I get a new card as your machine swallowed mine!","label":"card_swallowed","metadata":{}}
+{"text":"What do I do if I can't get my card out of the ATM?","label":"card_swallowed","metadata":{}}
+{"text":"What are the steps I should take to recover my swallowed card?","label":"card_swallowed","metadata":{}}
+{"text":"What do I do?  The ATM took my card!","label":"card_swallowed","metadata":{}}
+{"text":"what do I need to do if the ATM kept my card?","label":"card_swallowed","metadata":{}}
+{"text":"I was getting cash and the card got stuck inside","label":"card_swallowed","metadata":{}}
+{"text":"Will you please help me get my card back?","label":"card_swallowed","metadata":{}}
+{"text":"What do I do if the ATM took my card?","label":"card_swallowed","metadata":{}}
+{"text":"What should I do if the atm eats my card?","label":"card_swallowed","metadata":{}}
+{"text":"An ATM swallowed my credit card!","label":"card_swallowed","metadata":{}}
+{"text":"The ATM sucked my card in.","label":"card_swallowed","metadata":{}}
+{"text":"What are the steps to get my card back that was kept by the ATM?","label":"card_swallowed","metadata":{}}
+{"text":"My card got stuck in an ATM.","label":"card_swallowed","metadata":{}}
+{"text":"Please help, the atm swallowed my card, what do I do?","label":"card_swallowed","metadata":{}}
+{"text":"how can the money machine keep my card what do i need to do?","label":"card_swallowed","metadata":{}}
+{"text":"The ATM didnt return my card!","label":"card_swallowed","metadata":{}}
+{"text":"What do I do after the ATM takes my card.","label":"card_swallowed","metadata":{}}
+{"text":"Please send a new card; the ATM ate mine.","label":"card_swallowed","metadata":{}}
+{"text":"Why did the ATM take my card and keep it?","label":"card_swallowed","metadata":{}}
+{"text":"How do I get my card back after the ATM swallowed it.","label":"card_swallowed","metadata":{}}
+{"text":"The bank machine didn't give my card back how do I get a new one fast?","label":"card_swallowed","metadata":{}}
+{"text":"I can't get my card out of the ATM","label":"card_swallowed","metadata":{}}
+{"text":"An ATM machine didn't give me back my card.","label":"card_swallowed","metadata":{}}
+{"text":"The ATM kept my card?","label":"card_swallowed","metadata":{}}
+{"text":"I cannot get my card out of the ATM.","label":"card_swallowed","metadata":{}}
+{"text":"The ATM did not give me my card back?","label":"card_swallowed","metadata":{}}
+{"text":"A Bank ATM did not give my card back. What do I do now?","label":"card_swallowed","metadata":{}}
+{"text":"Who do I talk to about the ATM swallowing my card?","label":"card_swallowed","metadata":{}}
+{"text":"is there a reason that my payment didnt go through","label":"declined_card_payment","metadata":{}}
+{"text":"Why was the payment on my card declined?","label":"declined_card_payment","metadata":{}}
+{"text":"I'm not sure why the card payment didn't work.","label":"declined_card_payment","metadata":{}}
+{"text":"Why won't you accept my payment? I keep trying with this card and it's not working.","label":"declined_card_payment","metadata":{}}
+{"text":"Why has my card declined","label":"declined_card_payment","metadata":{}}
+{"text":"My card did not work at store.","label":"declined_card_payment","metadata":{}}
+{"text":"I use this card all the time so why did it get declined at the store today?","label":"declined_card_payment","metadata":{}}
+{"text":"My card payment doesn't work.","label":"declined_card_payment","metadata":{}}
+{"text":"My card did not go through in a shop","label":"declined_card_payment","metadata":{}}
+{"text":"My card payment has been declined, why?","label":"declined_card_payment","metadata":{}}
+{"text":"my payment was rejected","label":"declined_card_payment","metadata":{}}
+{"text":"My card was not accepted in a shop","label":"declined_card_payment","metadata":{}}
+{"text":"Card payment was declined, do you know why?","label":"declined_card_payment","metadata":{}}
+{"text":"My card is not working at stores.","label":"declined_card_payment","metadata":{}}
+{"text":"Why are all my card payments being declined?","label":"declined_card_payment","metadata":{}}
+{"text":"Please help me in this, as i was unable to make any payment by my new card,  it was getting declined repeatedly. I am not very happy with this incident.","label":"declined_card_payment","metadata":{}}
+{"text":"I could not get my card to work at a shop.","label":"declined_card_payment","metadata":{}}
+{"text":"My card payment has been declined","label":"declined_card_payment","metadata":{}}
+{"text":"My card payment is being declined and I've tried several times.","label":"declined_card_payment","metadata":{}}
+{"text":"My card was declined","label":"declined_card_payment","metadata":{}}
+{"text":"My card payment won't work.","label":"declined_card_payment","metadata":{}}
+{"text":"Why do you keep declining my payment?I tried several times already with this card and it is just not working.","label":"declined_card_payment","metadata":{}}
+{"text":"I was just needing to know why my card got declined","label":"declined_card_payment","metadata":{}}
+{"text":"Can you please advise if there is something wrong with my card? I have had multiple rejections and do not know the reason. Thanks!","label":"declined_card_payment","metadata":{}}
+{"text":"I was just shopping online for some tickets and the payment was declined by you.  Why has this happened?  I am certain I have the right amount of funds in my account.","label":"declined_card_payment","metadata":{}}
+{"text":"Why was my card declined?","label":"declined_card_payment","metadata":{}}
+{"text":"I was wondering why my card was declined","label":"declined_card_payment","metadata":{}}
+{"text":"I am very upset that i went to use my new card today and it kept getting declined. Why is this happening and what do I do to not have it declined?","label":"declined_card_payment","metadata":{}}
+{"text":"For some reason my card payment hasn't worked. what can I do to look into that?","label":"declined_card_payment","metadata":{}}
+{"text":"I've tried several times to make a payment and every time my card is declined? Could my card be locked? I don't know what to do.","label":"declined_card_payment","metadata":{}}
+{"text":"My card has been stolen what do I do?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My bag got stolen with all my cards. Can you please cancel my card and send a new one?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"How do I report my card as lost or stolen?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"oh my god I lost my card! what should I do?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"Report stolen card","label":"lost_or_stolen_card","metadata":{}}
+{"text":"What's the phone number to freeze a card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My card was lost on vacation, I don't know where it is. Can you help me take care of this immediately?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"How do I deactivate a stolen card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My wallet was stolen, along with my cards. How do I put a freeze on my cards and order a new one?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"Who can I speak with regarding a lost card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"Can you tell me the status of my new card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"What can I do if I lost my card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I lost track of my card","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My card has been lost / stolen","label":"lost_or_stolen_card","metadata":{}}
+{"text":"Someone took my card without permission","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I think that my card has been stolen!","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My card has gone missing.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I've lost my card. What can I do about that?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I'm panicking!  I lost my card!  Help!","label":"lost_or_stolen_card","metadata":{}}
+{"text":"help, lost my card","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I want to block my card or deactivate it or something, it's been stolen and I don't want it misused. I want this handled right away.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I think that the card is stolen.  What are my next steps?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"What do I do if my card is stolen?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I left my card at a restaurant and now its missing.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"My card is missing.  Please help.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I need to report a stolen card","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I need to order a new card as my other one was stolen.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I misplaced my card and I dont know where the last place is where I used the card last. Can you look at my account and tell me the last place I used the card?","label":"lost_or_stolen_card","metadata":{}}
+{"text":"I seem to have lost my card.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"How can I report that my card was stolen? I made a police report first.","label":"lost_or_stolen_card","metadata":{}}
+{"text":"It says \"pending payment?\" Why is it saying this?","label":"pending_card_payment","metadata":{}}
+{"text":"I used my card to make a payment a while ago and its still pending, Why is it taking so long?","label":"pending_card_payment","metadata":{}}
+{"text":"I notice there's a pending payment on my card.","label":"pending_card_payment","metadata":{}}
+{"text":"My card payment has been pending for a long time now. Why is it taking so long to take. It should have already made it through.","label":"pending_card_payment","metadata":{}}
+{"text":"Why hasn't my card payment cleared yet?","label":"pending_card_payment","metadata":{}}
+{"text":"Why is my card payment still listed as pending?","label":"pending_card_payment","metadata":{}}
+{"text":"What's the pending length for credit transactions? I've had one in my pending category now for days and it won't move to processed.","label":"pending_card_payment","metadata":{}}
+{"text":"How long does it take for a purchase to go from pending to authorised?","label":"pending_card_payment","metadata":{}}
+{"text":"Why aren't my payment funds available to me?","label":"pending_card_payment","metadata":{}}
+{"text":"When will the transaction go through?","label":"pending_card_payment","metadata":{}}
+{"text":"Is there a problem that makes my payments show pending?","label":"pending_card_payment","metadata":{}}
+{"text":"Why haven't I gotten my payment yet?","label":"pending_card_payment","metadata":{}}
+{"text":"Why hasn't my payment gone through?","label":"pending_card_payment","metadata":{}}
+{"text":"There is a single payment on my card which shows as pending.","label":"pending_card_payment","metadata":{}}
+{"text":"I tried to pay through my account but the payment is not going through. What's going on?","label":"pending_card_payment","metadata":{}}
+{"text":"I noticed that there's a payment on my card that's pending.","label":"pending_card_payment","metadata":{}}
+{"text":"I have a card payment which shows as pending","label":"pending_card_payment","metadata":{}}
+{"text":"I bought something this morning and the payment is still pending","label":"pending_card_payment","metadata":{}}
+{"text":"I made a purchase earlier today but it is still listed as pending- when will it go through?","label":"pending_card_payment","metadata":{}}
+{"text":"What's taking so long for this payment to go through?","label":"pending_card_payment","metadata":{}}
+{"text":"After making a payment with my card it doesn't seem to have worked. It's just showing to be pending. When will this actually be going through?","label":"pending_card_payment","metadata":{}}
+{"text":"How long will it take for my payment to go through?","label":"pending_card_payment","metadata":{}}
+{"text":"I initiated a payment a while ago and it is still showing as \"pending\", how long will it take to clear?","label":"pending_card_payment","metadata":{}}
+{"text":"I purchases several items today. Why are they still showing pending?","label":"pending_card_payment","metadata":{}}
+{"text":"Why is my card payment still a pending transaction?","label":"pending_card_payment","metadata":{}}
+{"text":"How long does it take for my payment to process?","label":"pending_card_payment","metadata":{}}
+{"text":"Why would my payment still show as pending?","label":"pending_card_payment","metadata":{}}
+{"text":"I've made a card payment a couple of days ago now but it looks like the money is stuck. How long does it typically take for the payment to go through?","label":"pending_card_payment","metadata":{}}
+{"text":"What is the longest that a payment will show pending?  There is one showing that has been sitting there a few days.","label":"pending_card_payment","metadata":{}}
+{"text":"How many days does a regular transaction take to complete?  I see a pending payment that hasn't changed in the last several days.","label":"pending_card_payment","metadata":{}}
+{"text":"I tried to top up with my card but it's not working. I had just done this a couple days previously and it worked. Can you tell me what's going on here please?","label":"top_up_failed","metadata":{}}
+{"text":"I'm not sure if my pop-up went through.","label":"top_up_failed","metadata":{}}
+{"text":"I can't add any more money.","label":"top_up_failed","metadata":{}}
+{"text":"I need assistance finding out why I am unable to top-up my card, it keeps getting refused.  It is extremely imperative I get this resolved quickly.","label":"top_up_failed","metadata":{}}
+{"text":"I attempted to top-up with my card this morning, but the transaction was unsuccessful. I received the card two days ago and was successful using it previously. Could you please help me?","label":"top_up_failed","metadata":{}}
+{"text":"I am having problems with a top-up.","label":"top_up_failed","metadata":{}}
+{"text":"I tried to top up my account and it didn't work","label":"top_up_failed","metadata":{}}
+{"text":"Hi, My card is getting declined continuously when i am trying to top-up. Request you to look into this issue or tell me any other alternatives.","label":"top_up_failed","metadata":{}}
+{"text":"I believe my top up did not work.","label":"top_up_failed","metadata":{}}
+{"text":"I need to add more funds to my card today because it keeps being declined, and I need to use it immediately. Can you fix this or tell me alternatives?","label":"top_up_failed","metadata":{}}
+{"text":"My credit card for was not approved for a top-up transaction.  What happened?","label":"top_up_failed","metadata":{}}
+{"text":"Why did my credit card get declined for top up?","label":"top_up_failed","metadata":{}}
+{"text":"There has been a red flag on my top up.","label":"top_up_failed","metadata":{}}
+{"text":"I was trying to top up my account and it isn't working","label":"top_up_failed","metadata":{}}
+{"text":"Why has my top-up been denied?","label":"top_up_failed","metadata":{}}
+{"text":"Seems like my top-up has failed","label":"top_up_failed","metadata":{}}
+{"text":"My top up isnt working","label":"top_up_failed","metadata":{}}
+{"text":"I topped up my account but the app failed to process it.","label":"top_up_failed","metadata":{}}
+{"text":"I have the funds, why can I not use my top-up?","label":"top_up_failed","metadata":{}}
+{"text":"What was the issue with my topping up?","label":"top_up_failed","metadata":{}}
+{"text":"Why has my top-up not worked?","label":"top_up_failed","metadata":{}}
+{"text":"I topped up but the app denied it","label":"top_up_failed","metadata":{}}
+{"text":"Looks like my top up failed.","label":"top_up_failed","metadata":{}}
+{"text":"Top-up is not working","label":"top_up_failed","metadata":{}}
+{"text":"Why is it failing to top-up?","label":"top_up_failed","metadata":{}}
+{"text":"How can correct Top up with the app to work correctly?","label":"top_up_failed","metadata":{}}
+{"text":"I've been trying to transfer funds to top-up my card, but the transaction is not going through.  Is there something I'm doing wrong?","label":"top_up_failed","metadata":{}}
+{"text":"I don't think that my top-up worked.","label":"top_up_failed","metadata":{}}
+{"text":"My top up didn't go through","label":"top_up_failed","metadata":{}}
+{"text":"I really need to top-up my card today urgently but my card keeps getting declined!! Can you please resolve this problem or let me know if you have any alternatives","label":"top_up_failed","metadata":{}}

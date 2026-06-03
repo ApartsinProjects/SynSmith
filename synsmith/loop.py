@@ -158,6 +158,11 @@ class SynSmithConfig:
     # each per iter and don't benefit from batching. See synsmith.llm_batch.
     use_batch_api: bool = False
     batch_model: str = "gpt-4o-mini"
+    # Task #73: Class-Discriminability sibling-rejection in Verifier.
+    # When True, the Verifier user message includes a 'Sibling classes'
+    # block with real anchors from every other class, and the system
+    # prompt requires REJECTION of samples ambiguous between siblings.
+    verifier_sibling_rejection: bool = False
     # Fix B (v2.9.6): if True, after the per-iter verifier pass, count
     # accepted samples per class and re-generate extras for under-filled
     # classes so each class hits at least ceil(n/K) accepted samples per
@@ -219,6 +224,7 @@ class SynSmithConfig:
             batch_model=raw.get("batch_model", "gpt-4o-mini"),
             regen_on_rejection=raw.get("regen_on_rejection", True),
             regen_max_extra_frac=raw.get("regen_max_extra_frac", 0.5),
+            verifier_sibling_rejection=raw.get("verifier_sibling_rejection", False),
         )
 
 
@@ -266,7 +272,10 @@ class SynSmith:
                 ver_client,
                 self.schema,
                 real_examples=self.real_examples,
-                config=VerifierConfig(seed=config.seed),
+                config=VerifierConfig(
+                    seed=config.seed,
+                    enable_sibling_rejection=config.verifier_sibling_rejection,
+                ),
             )
             if config.enable_verifier else None
         )

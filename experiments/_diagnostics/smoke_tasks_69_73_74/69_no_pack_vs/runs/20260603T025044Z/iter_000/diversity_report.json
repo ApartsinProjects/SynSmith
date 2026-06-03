@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a good range of intents and styles, but there is notable redundancy in phrasing and structure, particularly among complaint and general question samples. Additionally, some attribute combinations, such as 'medium' difficulty with 'emotional' style, are underrepresented.",
+  "missing_modes": [
+    "plain English style for general questions",
+    "formal style for refund requests",
+    "emotional style for complaints",
+    "concise style for technical problems"
+  ],
+  "overrepresented_modes": [
+    "complaints expressed in a similar frustrated tone",
+    "verbose style in general questions",
+    "hard difficulty across multiple intents"
+  ],
+  "near_duplicate_rate": 0.3,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary for complaints and general questions.",
+    "Introduce examples that utilize less common combinations of attributes, especially for emotional styles and edge cases.",
+    "Include more scenarios that reflect plain English communication for clarity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 0.6666666666666666,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 0.8,
+    "scenario_type": 1.0
+  }
+}
