@@ -1,0 +1,5 @@
+Generate realistic open-domain English questions that match the requested
+TREC question-type category. The example should be a single complete question
+that ends with a question mark and reads as something a user might ask in
+an open-domain QA system. Match the requested style and noise level. Output
+a JSON object with the sample id, the text, and the attribute values.

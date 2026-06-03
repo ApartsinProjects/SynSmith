@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a good variety of intents and topics, but there is significant redundancy in phrasing and structure, particularly in the way questions are framed. Several texts utilize similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "Examples of numeric values in contexts other than military or industrial (e.g., historical or cultural contexts).",
+    "More informal or conversational styles for topics like human beings or locations."
+  ],
+  "overrepresented_modes": [
+    "Questions beginning with 'Can you' or 'What does' which creates a repetitive surface pattern.",
+    "Use of 'list' scenario type for multiple entries, particularly in topics like abbreviations and locations."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied question structures and styles, especially for the same intent or topic.",
+    "Include prompts that require the use of less common vocabulary or phrasing to enhance nuance.",
+    "Incorporate scenarios that blend multiple attributes to create more complex and diverse outputs."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "topic": 0.75,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

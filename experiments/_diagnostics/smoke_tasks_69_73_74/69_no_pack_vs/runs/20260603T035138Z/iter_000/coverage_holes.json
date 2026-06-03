@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.672212004827558
+    },
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6548461221566066
+    },
+    {
+      "text": "any chance of a self-hosted option in the future or is it cloud-only forever",
+      "label": "general_question",
+      "p_real": 0.6541408225995011
+    },
+    {
+      "text": "csv import keeps timing out at ~3000 rows. is there a row limit nobody documented?",
+      "label": "technical_problem",
+      "p_real": 0.6537778953320946
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

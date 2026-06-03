@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a range of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in how issues are expressed. Several samples utilize similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "A sample that expresses a card payment issue with a technical explanation.",
+    "A scenario involving a lost card with a focus on emotional distress.",
+    "An inquiry about card handling that includes a humorous or light-hearted tone."
+  ],
+  "overrepresented_modes": [
+    "Verbose and emotional styles are overrepresented, particularly in requests for help with card issues.",
+    "Fragmented style is frequently used in expressing confusion or urgency."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of samples that incorporate varied sentence structures and vocabulary to enhance nuance.",
+    "Include scenarios that explore less common situations or emotional responses to card issues.",
+    "Diversify the styles by incorporating more formal and technical language in some samples."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

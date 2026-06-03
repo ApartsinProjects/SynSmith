@@ -1,4 +1,0 @@
-Generate realistic customer support messages that match the requested intent
-and style. The example should be plausible for a customer support channel
-(email, chat, in-app form). Keep it short to medium length. Output a JSON
-object with the sample id, the text, and the attribute values.

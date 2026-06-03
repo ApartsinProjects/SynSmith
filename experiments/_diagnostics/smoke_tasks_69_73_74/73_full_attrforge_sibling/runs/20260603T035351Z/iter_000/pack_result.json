@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.25,
+  "confidence_mean": 0.88125,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "short, direct statements",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "how do i",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "my card",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what do i do?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i've made a card payment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "looks like the money is stuck",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for explanations regarding charges or fees",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion about card transactions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of conversational openers like 'can you explain' or 'i just noticed'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of specific issues with card payments",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a straightforward manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'my card' as a subject",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'how', 'why', 'will you please'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concerns about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language in inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i recently noticed",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you explain what happened?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i need help to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i checked my balance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "it would be great if you could",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'why' or 'could you'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about card issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with a focus on card-related problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct requests for information or updates",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'how' or 'why'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with a sense of urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamation marks to convey concern",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'why'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in phrasing (e.g., 'i was trying to...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated focus on issues with top-ups and payments",
+      "n_pairs_observed": 1
+    }
+  ]
+}

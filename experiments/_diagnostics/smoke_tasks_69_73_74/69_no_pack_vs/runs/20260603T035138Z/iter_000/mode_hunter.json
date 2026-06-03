@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Can you provide information on how those might impact things?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing for requesting information does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "So, like, I can’t seem to access my dashboard",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The use of 'So, like,' as an opener is distinctive to the synthetic samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I hope this gets sorted out soon.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of hope for resolution is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Can you provide information on how those might impact things?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing for requesting information does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "So, like, I can’t seem to access my dashboard",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The use of 'So, like,' as an opener is distinctive to the synthetic samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I hope this gets sorted out soon.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of hope for resolution is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good range of intents and styles, but there is significant redundancy in phrasing and structure, particularly in complaints and refund requests. Several samples also share similar emotional tones and sentence constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "A more formal request for a refund or complaint that includes specific details.",
+    "A technical problem description that includes a step-by-step account of the issue.",
+    "An emotional complaint that uses humor or sarcasm."
+  ],
+  "overrepresented_modes": [
+    "Complaints that express frustration in a similar emotional tone.",
+    "Refund requests that follow a concise structure with similar wording.",
+    "Technical problems described in a fragmented style."
+  ],
+  "near_duplicate_rate": 0.4,
+  "recommendations": [
+    "Encourage the generation of more varied emotional tones in complaints and refund requests.",
+    "Introduce more complex sentence structures and vocabulary to avoid redundancy.",
+    "Include scenarios that require detailed explanations or troubleshooting steps for technical problems."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 0.6666666666666666,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,8 @@
+{"sample_id": "target_00001", "intent": "abbreviation", "topic": "pay_spice", "difficulty": "easy", "ambiguity": "high", "style": "formal", "noise": "typos", "scenario_type": "definition"}
+{"sample_id": "target_00002", "intent": "numeric_values", "topic": "abbreviation_trinitrotoluene", "difficulty": "hard", "ambiguity": "high", "style": "verbose", "noise": "typos", "scenario_type": "list"}
+{"sample_id": "target_00003", "intent": "human_beings", "topic": "stand_ekg", "difficulty": "hard", "ambiguity": "high", "style": "formal", "noise": "missing_details", "scenario_type": "comparison"}
+{"sample_id": "target_00004", "intent": "description_and_abstract_concepts", "topic": "stand_ekg", "difficulty": "hard", "ambiguity": "medium", "style": "verbose", "noise": "typos", "scenario_type": "comparison"}
+{"sample_id": "target_00005", "intent": "numeric_values", "topic": "capital_african", "difficulty": "easy", "ambiguity": "medium", "style": "fragmented", "noise": "clean", "scenario_type": "list"}
+{"sample_id": "target_00006", "intent": "locations", "topic": "design_city", "difficulty": "medium", "ambiguity": "medium", "style": "verbose", "noise": "clean", "scenario_type": "comparison"}
+{"sample_id": "target_00007", "intent": "human_beings", "topic": "former_wwf", "difficulty": "easy", "ambiguity": "high", "style": "informal", "noise": "typos", "scenario_type": "list"}
+{"sample_id": "target_00008", "intent": "entities", "topic": "design_city", "difficulty": "medium", "ambiguity": "low", "style": "fragmented", "noise": "typos", "scenario_type": "definition"}

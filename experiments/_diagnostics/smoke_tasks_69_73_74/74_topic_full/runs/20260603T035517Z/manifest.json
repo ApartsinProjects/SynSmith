@@ -1,0 +1,46 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\_diagnostics\\smoke_tasks_69_73_74\\74_topic_full\\runs\\20260603T035517Z",
+  "n_iterations": 1,
+  "final_prompt_version": 0,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.4166666666666667,
+      "discriminator_accuracy": 0.4583333333333333,
+      "synthetic_detection_rate": 0.3333333333333333,
+      "near_duplicate_rate": 0.25,
+      "combination_coverage": 0.25,
+      "entropy/intent": 0.9513282751069652,
+      "entropy/topic": 0.8406850696247334,
+      "entropy/difficulty": 0.9808340377961401,
+      "entropy/ambiguity": 0.9808340377961401,
+      "entropy/style": 0.942631203937882,
+      "entropy/noise": 0.7091479170272448,
+      "entropy/scenario_type": 0.8647869792568111,
+      "coverage/intent": 1.0,
+      "coverage/topic": 0.75,
+      "coverage/difficulty": 1.0,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0,
+      "pack_accuracy": 0.6666666666666666,
+      "pack_confidence": 0.8833333333333333,
+      "mode_seeking_ratio": 0.18552010228060198,
+      "text_distance_mean": 0.9523428885812637,
+      "banned_phrasings_total": 0.0,
+      "banned_phrasings_new": 0.0,
+      "coverage_classifier_auroc": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic open-domain English questions that match the requested\nTREC question-type category. The example should be a single complete question\nthat ends with a question mark and reads as something a user might ask in\nan open-domain QA system. Match the requested style and noise level. Output\na JSON object with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-03T03:55:17.752704+00:00"
+    }
+  ]
+}

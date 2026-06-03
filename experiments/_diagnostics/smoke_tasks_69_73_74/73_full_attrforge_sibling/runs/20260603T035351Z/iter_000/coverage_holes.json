@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Why is the exchange rate on my card wrong?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.894897651959076
+    },
+    {
+      "text": "Why is my card not working anymore?",
+      "label": "card_not_working",
+      "p_real": 0.8892791300765048
+    },
+    {
+      "text": "Top-up is not working",
+      "label": "top_up_failed",
+      "p_real": 0.8818642622036367
+    },
+    {
+      "text": "Why is the exchange rate for my payment incorrect?",
+      "label": "card_payment_wrong_exchange_rate",
+      "p_real": 0.8796804728037139
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

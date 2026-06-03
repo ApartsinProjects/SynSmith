@@ -1,0 +1,24 @@
+{"sample_id":"R102","prediction":"real","confidence":0.9,"reason":"Direct inquiry about a payment issue; matches the register of customer service communication."}
+{"sample_id":"R263","prediction":"real","confidence":0.85,"reason":"Casual tone but still a relevant inquiry about payment status; fits customer service context."}
+{"sample_id":"R240","prediction":"real","confidence":0.8,"reason":"Simple question about payment status; aligns with customer service inquiries."}
+{"sample_id":"R222","prediction":"real","confidence":0.75,"reason":"Casual expression of confusion about card status; fits the customer service register."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Formal inquiry about card tracking; matches customer service communication."}
+{"sample_id":"R076","prediction":"real","confidence":0.85,"reason":"Clear statement of a payment issue; aligns with customer service inquiries."}
+{"sample_id":"target_00012","prediction":"synthetic","confidence":0.7,"reason":"Casual language and phrasing; does not match the more formal register of real samples."}
+{"sample_id":"R128","prediction":"real","confidence":0.8,"reason":"Formal complaint about exchange rate; fits customer service context."}
+{"sample_id":"R149","prediction":"real","confidence":0.75,"reason":"Concise statement about an error; aligns with customer service inquiries."}
+{"sample_id":"R204","prediction":"real","confidence":0.85,"reason":"Detailed inquiry about a declined payment; matches customer service communication."}
+{"sample_id":"R167","prediction":"real","confidence":0.8,"reason":"Direct statement about ATM issue; fits customer service context."}
+{"sample_id":"R099","prediction":"real","confidence":0.85,"reason":"Clear statement of an unauthorized payment; aligns with customer service inquiries."}
+{"sample_id":"R110","prediction":"real","confidence":0.9,"reason":"Formal inquiry about payment recognition; matches customer service communication."}
+{"sample_id":"R143","prediction":"real","confidence":0.8,"reason":"Formal complaint about exchange rate; fits customer service context."}
+{"sample_id":"R257","prediction":"real","confidence":0.85,"reason":"Inquiry about pending payment; aligns with customer service inquiries."}
+{"sample_id":"R171","prediction":"real","confidence":0.8,"reason":"Direct question about ATM issue; fits customer service context."}
+{"sample_id":"R160","prediction":"real","confidence":0.75,"reason":"Casual inquiry about ATM issue; still relevant to customer service."}
+{"sample_id":"R126","prediction":"real","confidence":0.8,"reason":"Formal complaint about exchange rate; fits customer service context."}
+{"sample_id":"R125","prediction":"real","confidence":0.7,"reason":"Strong opinion about exchange rate; still relevant to customer service."}
+{"sample_id":"R284","prediction":"real","confidence":0.85,"reason":"Direct inquiry about top-up denial; matches customer service communication."}
+{"sample_id":"R039","prediction":"real","confidence":0.9,"reason":"Simple question about card status; aligns with customer service inquiries."}
+{"sample_id":"R131","prediction":"real","confidence":0.75,"reason":"Strong opinion about exchange rate; fits customer service context."}
+{"sample_id":"R273","prediction":"real","confidence":0.8,"reason":"Formal request for assistance; matches customer service communication."}
+{"sample_id":"R112","prediction":"real","confidence":0.85,"reason":"Inquiry about a mistake on a statement; aligns with customer service inquiries."}

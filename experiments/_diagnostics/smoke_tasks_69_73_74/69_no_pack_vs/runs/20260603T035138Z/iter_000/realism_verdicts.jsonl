@@ -1,0 +1,23 @@
+{"sample_id":"R012","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured."}
+{"sample_id":"R014","prediction":"real","confidence":0.95,"reason":"formal inquiry; matches the professional register of real samples."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.85,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"R039","prediction":"synthetic","confidence":0.8,"reason":"informal tone; real samples exhibit a more professional style."}
+{"sample_id":"target_00006","prediction":"real","confidence":0.9,"reason":"formal concern; aligns with the professional tone of real samples."}
+{"sample_id":"target_00007","prediction":"synthetic","confidence":0.75,"reason":"emotional and casual language; real samples are more straightforward."}
+{"sample_id":"R000","prediction":"real","confidence":0.95,"reason":"clear and formal request; fits the professional register."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"concise and direct; matches the style of real samples."}
+{"sample_id":"R028","prediction":"real","confidence":0.85,"reason":"direct complaint; aligns with the professional tone."}
+{"sample_id":"target_00009","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more formal."}
+{"sample_id":"target_00005","prediction":"synthetic","confidence":0.7,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.75,"reason":"frustrated tone; real samples are more formal."}
+{"sample_id":"R036","prediction":"real","confidence":0.9,"reason":"technical inquiry; fits the professional register."}
+{"sample_id":"target_00001","prediction":"synthetic","confidence":0.8,"reason":"casual and emotional language; real samples are more straightforward."}
+{"sample_id":"R013","prediction":"real","confidence":0.85,"reason":"direct issue reporting; aligns with the professional tone."}
+{"sample_id":"R009","prediction":"real","confidence":0.95,"reason":"clear and concise question; matches the style of real samples."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"formal request; fits the professional register."}
+{"sample_id":"R031","prediction":"real","confidence":0.85,"reason":"technical issue reporting; aligns with the professional tone."}
+{"sample_id":"target_00008","prediction":"synthetic","confidence":0.75,"reason":"formal phrasing but lacks the directness of real samples."}
+{"sample_id":"R010","prediction":"real","confidence":0.9,"reason":"clear request for refund; matches the professional register."}
+{"sample_id":"R027","prediction":"real","confidence":0.85,"reason":"urgent request for help; aligns with the professional tone."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"technical issue reporting; fits the professional register."}
+{"sample_id":"R038","prediction":"synthetic","confidence":0.8,"reason":"informal and emotional tone; real samples are more formal."}

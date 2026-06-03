@@ -1,0 +1,24 @@
+schema_path: examples/trec/schema_topic.yaml
+real_examples_path: experiments/_splits/trec_real_train.jsonl
+domain: trec_question_type
+task_description: 'Classify an English open-domain question into one of six coarse-grained
+
+  TREC question-type categories. The classes are distinguished by the
+
+  expected answer type, not the topic.
+
+  '
+iterations: 1
+samples_per_iteration: 8
+initial_prompt: 'Generate realistic open-domain English questions that match the requested
+
+  TREC question-type category. The example should be a single complete question
+
+  that ends with a question mark and reads as something a user might ask in
+
+  an open-domain QA system. Match the requested style and noise level. Output
+
+  a JSON object with the sample id, the text, and the attribute values.
+
+  '
+seed: 17

@@ -1,0 +1,24 @@
+{"sample_id":"target_00005","prediction":"synthetic","confidence":0.9,"reason":"casual question; real samples are more technical or specific."}
+{"sample_id":"target_00008","prediction":"synthetic","confidence":0.95,"reason":"informal language and misspelling; real samples are more formal."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"specific inquiry about literature; aligns with real samples."}
+{"sample_id":"R017","prediction":"real","confidence":0.8,"reason":"technical question about biology; matches real distribution."}
+{"sample_id":"R002","prediction":"real","confidence":0.9,"reason":"specific scientific inquiry; consistent with real samples."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and specific."}
+{"sample_id":"R045","prediction":"real","confidence":0.75,"reason":"specific educational inquiry; aligns with real samples."}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"specific historical inquiry; matches real distribution."}
+{"sample_id":"target_00002","prediction":"real","confidence":0.9,"reason":"formal request for detailed information; aligns with real samples."}
+{"sample_id":"R050","prediction":"synthetic","confidence":0.7,"reason":"general inquiry; lacks specificity found in real samples."}
+{"sample_id":"R006","prediction":"real","confidence":0.85,"reason":"specific inquiry about a band; aligns with real samples."}
+{"sample_id":"target_00012","prediction":"real","confidence":0.9,"reason":"formal request for detailed information; aligns with real samples."}
+{"sample_id":"R044","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more formal and specific."}
+{"sample_id":"R054","prediction":"synthetic","confidence":0.7,"reason":"general inquiry; lacks specificity found in real samples."}
+{"sample_id":"R033","prediction":"synthetic","confidence":0.6,"reason":"casual question; real samples are more formal."}
+{"sample_id":"target_00003","prediction":"real","confidence":0.85,"reason":"formal inquiry about medical interpretations; aligns with real samples."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.65,"reason":"casual question; real samples are more formal."}
+{"sample_id":"R031","prediction":"synthetic","confidence":0.7,"reason":"casual tone; real samples are more formal and specific."}
+{"sample_id":"R001","prediction":"real","confidence":0.8,"reason":"specific scientific inquiry; aligns with real samples."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.6,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"R011","prediction":"synthetic","confidence":0.65,"reason":"casual question; real samples are more formal."}
+{"sample_id":"target_00010","prediction":"real","confidence":0.9,"reason":"formal request for detailed information; aligns with real samples."}
+{"sample_id":"R000","prediction":"real","confidence":0.85,"reason":"specific scientific inquiry; aligns with real samples."}
+{"sample_id":"R010","prediction":"real","confidence":0.8,"reason":"specific technical inquiry; matches real distribution."}

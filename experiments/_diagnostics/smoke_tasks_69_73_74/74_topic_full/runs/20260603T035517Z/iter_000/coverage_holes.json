@@ -1,0 +1,31 @@
+{
+  "holes": [
+    {
+      "text": "What was Michelangelo 's last name ?",
+      "label": "human_beings",
+      "p_real": 0.7004782452310576
+    },
+    {
+      "text": "How many people did Randy Craft kill ?",
+      "label": "numeric_values",
+      "p_real": 0.6971986911026512
+    },
+    {
+      "text": "How many consecutive baseball games did Lou Gehrig play ?",
+      "label": "numeric_values",
+      "p_real": 0.689252067325501
+    },
+    {
+      "text": "When did Amtrak begin operations ?",
+      "label": "numeric_values",
+      "p_real": 0.6876386172727513
+    },
+    {
+      "text": "What is AFS ?",
+      "label": "abbreviation",
+      "p_real": 0.6869638396540099
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

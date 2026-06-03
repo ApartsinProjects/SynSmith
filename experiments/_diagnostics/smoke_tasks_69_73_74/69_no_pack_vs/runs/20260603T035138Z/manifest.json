@@ -1,0 +1,42 @@
+{
+  "run_dir": "E:\\Projects\\PromptForge\\experiments\\_diagnostics\\smoke_tasks_69_73_74\\69_no_pack_vs\\runs\\20260603T035138Z",
+  "n_iterations": 1,
+  "final_prompt_version": 0,
+  "metric_history": [
+    {
+      "iteration": 0.0,
+      "attribute_match_rate": 0.9090909090909091,
+      "discriminator_accuracy": 0.782608695652174,
+      "synthetic_detection_rate": 0.8571428571428571,
+      "near_duplicate_rate": 0.4,
+      "combination_coverage": 0.4666666666666667,
+      "entropy/intent": 0.9905114616736054,
+      "entropy/difficulty": 0.5966452229439911,
+      "entropy/ambiguity": 0.9056185178648963,
+      "entropy/style": 0.960058249314534,
+      "entropy/noise": 0.9122066329329885,
+      "entropy/scenario_type": 0.9713067383178074,
+      "coverage/intent": 1.0,
+      "coverage/difficulty": 0.6666666666666666,
+      "coverage/ambiguity": 1.0,
+      "coverage/style": 1.0,
+      "coverage/noise": 1.0,
+      "coverage/scenario_type": 1.0,
+      "mode_seeking_ratio": 0.22992784681714576,
+      "text_distance_mean": 0.9668684448509571,
+      "banned_phrasings_total": 3.0,
+      "banned_phrasings_new": 3.0,
+      "coverage_classifier_auroc": 1.0
+    }
+  ],
+  "prompt_history": [
+    {
+      "version": 0,
+      "iteration": 0,
+      "prompt": "Generate realistic customer support messages that match the requested intent\nand style. The example should be plausible for a customer support channel\n(email, chat, in-app form). Keep it short to medium length. Output a JSON\nobject with the sample id, the text, and the attribute values.\n",
+      "motivation": "initial prompt",
+      "feedback_summary": {},
+      "timestamp": "2026-06-03T03:51:38.614725+00:00"
+    }
+  ]
+}

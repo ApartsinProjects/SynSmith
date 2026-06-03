@@ -1,0 +1,107 @@
+{
+  "pack_accuracy": 0.6666666666666666,
+  "confidence_mean": 0.8833333333333333,
+  "n_comparisons": 6,
+  "shared_patterns": [
+    {
+      "pattern": "can you provide a list of...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "how does the effectiveness of...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "which spicez were used...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "comprehensive list of...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon and complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions with complex structures and multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of varied vocabulary and specific terminology",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inclusion of historical or technical references",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more elaborate questions compared to pack a",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what is' or 'what does'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "simple factual inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, straightforward sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of common abbreviations or acronyms",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what are the capitals of african countries?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you provide a comprehensive list of...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "which spicez were used 2 pay for goods...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "what is a desing citty?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what', 'which', or 'how'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language or typos (e.g., 'spicez', '2 pay')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complexity in question structure, often combining multiple ideas",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "inconsistent capitalization and punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions starting with 'what is' or 'how many'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, factual inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific nouns and terms",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "consistent structure of question format",
+      "n_pairs_observed": 1
+    }
+  ]
+}
