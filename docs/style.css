@@ -110,13 +110,20 @@ header.paper-title .meta {
   letter-spacing: 0.01em;
 }
 
-/* ---------- Download badge: small, paper-style link ---------- */
+/* ---------- Download badges: small, paper-style links (1-col + 2-col) ---------- */
 
-.download-badge {
+.download-badges {
   position: fixed;
   top: 1rem;
   right: 1rem;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-end;
+}
+
+.download-badge {
   font-family: var(--font-body);
   font-size: 10pt;
   font-weight: 600;
@@ -140,9 +147,12 @@ header.paper-title .meta {
 }
 
 @media (max-width: 720px) {
-  .download-badge {
+  .download-badges {
     top: 0.5rem;
     right: 0.5rem;
+    gap: 0.3rem;
+  }
+  .download-badge {
     font-size: 9pt;
     padding: 0.3rem 0.6rem;
   }
