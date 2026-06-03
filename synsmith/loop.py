@@ -163,6 +163,13 @@ class SynSmithConfig:
     # block with real anchors from every other class, and the system
     # prompt requires REJECTION of samples ambiguous between siblings.
     verifier_sibling_rejection: bool = False
+    # Fix F7 (v2.10.1): hybrid Discriminator anchor = F1 stratified train +
+    # Coverage Hole top-K. When True (default), after iter_0 the Coverage
+    # Hole exemplars (the framework's own signal of "real samples most
+    # distinct from current synth") replace ``discriminator_f7_frac`` of
+    # the F1 anchor. Set False to restore the pure F1 anchor behaviour.
+    discriminator_f7_hybrid: bool = True
+    discriminator_f7_frac: float = 0.5
     # Fix B (v2.9.6): if True, after the per-iter verifier pass, count
     # accepted samples per class and re-generate extras for under-filled
     # classes so each class hits at least ceil(n/K) accepted samples per
@@ -225,6 +232,8 @@ class SynSmithConfig:
             regen_on_rejection=raw.get("regen_on_rejection", True),
             regen_max_extra_frac=raw.get("regen_max_extra_frac", 0.5),
             verifier_sibling_rejection=raw.get("verifier_sibling_rejection", False),
+            discriminator_f7_hybrid=raw.get("discriminator_f7_hybrid", True),
+            discriminator_f7_frac=raw.get("discriminator_f7_frac", 0.5),
         )
 
 
@@ -478,6 +487,22 @@ class SynSmith:
             (iter_dir / "coverage_holes.json").write_text(
                 hole_result.model_dump_json(indent=2), encoding="utf-8"
             )
+            # Fix F7: at iter_0, augment the Discriminator's anchor with the
+            # Coverage Hole top-K exemplars. The Discriminator then anchors on
+            # the real samples MOST DISTINCT from current synth, in addition to
+            # the F1 class-stratified train anchor. Iter_1+ judging uses this
+            # hybrid anchor; the hybrid is itself fixed once set.
+            if (
+                t == 0
+                and self.discriminator is not None
+                and hole_result.holes
+                and getattr(self.config, "discriminator_f7_hybrid", True)
+            ):
+                hole_texts = [h.text for h in hole_result.holes]
+                self.discriminator.ingest_coverage_hole_anchor(
+                    hole_texts,
+                    frac=getattr(self.config, "discriminator_f7_frac", 0.5),
+                )
 
         metrics = iteration_metrics(
             self.schema,

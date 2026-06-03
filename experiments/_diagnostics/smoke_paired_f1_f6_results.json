@@ -1,0 +1,30 @@
+{
+  "full_attrforge": {
+    "condition": "full_attrforge",
+    "elapsed_min": 6.903762352466583,
+    "macro_f1": 0.6866666666666666,
+    "accuracy": 0.7,
+    "per_class_f1": {
+      "account_issue": 0.8,
+      "complaint": 0.8,
+      "general_question": 0.6666666666666666,
+      "refund_request": 0.6666666666666666,
+      "technical_problem": 0.5
+    },
+    "n_synth": 84
+  },
+  "no_pack": {
+    "condition": "no_pack",
+    "elapsed_min": 6.947691416740417,
+    "macro_f1": 0.7933333333333332,
+    "accuracy": 0.8,
+    "per_class_f1": {
+      "account_issue": 0.5,
+      "complaint": 1.0,
+      "general_question": 0.8,
+      "refund_request": 1.0,
+      "technical_problem": 0.6666666666666666
+    },
+    "n_synth": 86
+  }
+}

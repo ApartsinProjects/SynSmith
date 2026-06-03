@@ -1,0 +1,66 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I am writing to formally request a refund",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request structure is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "This purchase has been a waste of money",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of dissatisfaction is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I had high expectations, but I feel let down",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific sentiment about expectations is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Could you kindly clarify the specific distinctions",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request for clarification does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I cannot access my account anymore.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing does not appear in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I have encountered a critical malfunction",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal phrasing is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I’m very unhappy with the experience.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of dissatisfaction is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I am writing to formally request a refund",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request structure is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "This purchase has been a waste of money",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of dissatisfaction is not found in the real batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I had high expectations, but I feel let down",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific sentiment about expectations is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

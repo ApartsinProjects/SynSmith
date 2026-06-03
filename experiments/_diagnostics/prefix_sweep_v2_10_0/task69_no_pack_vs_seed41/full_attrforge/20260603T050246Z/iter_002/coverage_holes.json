@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6388609923078975
+    },
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6377680906108901
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.631673469562669
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.6294701496033654
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

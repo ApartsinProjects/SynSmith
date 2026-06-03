@@ -1,0 +1,107 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "formal tone with detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i am' or 'i recently' as sentence openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in describing issues (e.g., 'i am experiencing an unusual...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of filler phrases like 'i was just wondering if you could help me'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions that are overly detailed or verbose",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct demands without polite phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of urgency in requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal abbreviations like 'u' and 'thx'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamation marks used for emphasis in multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language with filler words like 'like' and 'honestly'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of exclamatory sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or dissatisfaction with a conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences that convey frustration without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct, confrontational language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of rhetorical questions to express dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests and formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of uncertainty or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed explanations of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests with formal phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "explicitly asking for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i was just wondering' as an opener",
+      "n_pairs_observed": 1
+    }
+  ]
+}

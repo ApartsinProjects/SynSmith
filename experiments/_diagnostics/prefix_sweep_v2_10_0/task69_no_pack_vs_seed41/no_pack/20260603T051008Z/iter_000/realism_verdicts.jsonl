@@ -1,0 +1,24 @@
+{"sample_id":"target_00003","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured."}
+{"sample_id":"R007","prediction":"real","confidence":0.8,"reason":"formal technical language; matches the identified distribution."}
+{"sample_id":"R025","prediction":"real","confidence":0.8,"reason":"formal inquiry; aligns with the professional tone of real samples."}
+{"sample_id":"target_00001","prediction":"synthetic","confidence":0.85,"reason":"casual conversational style; real samples are more formal."}
+{"sample_id":"target_00021","prediction":"synthetic","confidence":0.9,"reason":"informal and emotional tone; real samples are more professional."}
+{"sample_id":"R008","prediction":"real","confidence":0.8,"reason":"technical issue reporting; consistent with real samples."}
+{"sample_id":"R029","prediction":"real","confidence":0.8,"reason":"formal inquiry; matches the professional tone of real samples."}
+{"sample_id":"R005","prediction":"real","confidence":0.8,"reason":"formal complaint; aligns with the identified distribution."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.75,"reason":"casual disappointment; real samples are more formal."}
+{"sample_id":"target_00013","prediction":"synthetic","confidence":0.9,"reason":"informal and conversational; real samples are more structured."}
+{"sample_id":"R012","prediction":"real","confidence":0.8,"reason":"formal request for assistance; consistent with real samples."}
+{"sample_id":"target_00012","prediction":"synthetic","confidence":0.85,"reason":"casual frustration; real samples are more formal."}
+{"sample_id":"target_00011","prediction":"synthetic","confidence":0.85,"reason":"informal tone; real samples are more professional."}
+{"sample_id":"target_00020","prediction":"synthetic","confidence":0.9,"reason":"emotional and casual language; real samples are more formal."}
+{"sample_id":"R023","prediction":"real","confidence":0.8,"reason":"formal complaint; aligns with the professional tone of real samples."}
+{"sample_id":"target_00010","prediction":"synthetic","confidence":0.8,"reason":"formal issue description; real samples are more concise."}
+{"sample_id":"R004","prediction":"real","confidence":0.8,"reason":"direct and formal request; matches the identified distribution."}
+{"sample_id":"target_00009","prediction":"synthetic","confidence":0.85,"reason":"casual inquiry; real samples are more formal."}
+{"sample_id":"R011","prediction":"real","confidence":0.8,"reason":"technical issue reporting; consistent with real samples."}
+{"sample_id":"R002","prediction":"real","confidence":0.8,"reason":"formal complaint; aligns with the professional tone of real samples."}
+{"sample_id":"R006","prediction":"real","confidence":0.8,"reason":"technical issue reporting; matches the identified distribution."}
+{"sample_id":"target_00005","prediction":"synthetic","confidence":0.9,"reason":"emotional and casual tone; real samples are more formal."}
+{"sample_id":"R013","prediction":"real","confidence":0.8,"reason":"formal request for assistance; consistent with real samples."}
+{"sample_id":"R026","prediction":"real","confidence":0.8,"reason":"formal inquiry; aligns with the professional tone of real samples."}

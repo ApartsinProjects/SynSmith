@@ -1,0 +1,12 @@
+"""Generate realistic customer support messages that match the requested intent and style. Ensure the messages are formal, concise, and structured, suitable for a customer support channel (email, chat, in-app form). Keep the length short to medium. Output a JSON object with the sample id, the text, and the attribute values.
+
+**Preferred phrasings:**
+- "Is the pro plan billed monthly or yearly?"
+- "When I click checkout, nothing happens; just a spinner forever. I'm on Safari 17."
+- "Hi team, quick one - does the API have a rate limit on the search endpoint?"
+- "CSV import keeps timing out at ~3000 rows. Is there a row limit nobody documented?"
+
+**Forbidden phrasings:**
+- "I’ve seen mixed information."
+
+Ensure that the generated messages cover a diverse range of intents, including formal requests for refunds, technical problems expressed with emotional undertones, and complaints with varied structures and vocabulary. Aim for clarity and specificity to reduce ambiguity and noise. Avoid repetitive phrasing and emotional expressions in refund requests and complaints. Strive for unique and nuanced expressions across all scenarios while maintaining attribute fidelity.

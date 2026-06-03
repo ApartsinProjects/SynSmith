@@ -1,0 +1,24 @@
+{"sample_id":"target_00013","prediction":"real","confidence":0.9,"reason":"Formal request for assistance; matches the real distribution's style."}
+{"sample_id":"R003","prediction":"synthetic","confidence":0.8,"reason":"Casual tone and informal structure; real samples are more formal."}
+{"sample_id":"target_00010","prediction":"real","confidence":0.85,"reason":"Formal inquiry about account recovery; aligns with real distribution."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.75,"reason":"Informal language and structure; real samples are more professional."}
+{"sample_id":"target_00001","prediction":"real","confidence":0.9,"reason":"Formal question about refund policy; consistent with real distribution."}
+{"sample_id":"R021","prediction":"synthetic","confidence":0.7,"reason":"Casual and frustrated tone; real samples are more formal."}
+{"sample_id":"target_00018","prediction":"real","confidence":0.85,"reason":"Formal request for return information; matches real distribution."}
+{"sample_id":"target_00014","prediction":"real","confidence":0.8,"reason":"Informal but still a clear request for help; somewhat aligns with real distribution."}
+{"sample_id":"target_00009","prediction":"real","confidence":0.85,"reason":"Formal request for assistance; aligns with real distribution."}
+{"sample_id":"R002","prediction":"synthetic","confidence":0.75,"reason":"Casual tone and structure; real samples are more formal."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.7,"reason":"Technical issue described informally; real samples are more professional."}
+{"sample_id":"target_00015","prediction":"real","confidence":0.8,"reason":"Formal description of an app issue; aligns with real distribution."}
+{"sample_id":"R015","prediction":"synthetic","confidence":0.75,"reason":"Casual tone and informal structure; real samples are more formal."}
+{"sample_id":"target_00019","prediction":"real","confidence":0.85,"reason":"Formal request for return assistance; matches real distribution."}
+{"sample_id":"R010","prediction":"synthetic","confidence":0.7,"reason":"Informal description of a technical issue; real samples are more formal."}
+{"sample_id":"R009","prediction":"synthetic","confidence":0.7,"reason":"Casual tone; real samples are more professional."}
+{"sample_id":"target_00012","prediction":"real","confidence":0.85,"reason":"Formal request for account assistance; aligns with real distribution."}
+{"sample_id":"target_00024","prediction":"real","confidence":0.8,"reason":"Informal but still a clear request for billing information; somewhat aligns with real distribution."}
+{"sample_id":"target_00011","prediction":"real","confidence":0.85,"reason":"Formal request for assistance with a purchase; matches real distribution."}
+{"sample_id":"target_00005","prediction":"real","confidence":0.9,"reason":"Formal inquiry about subscription tiers; aligns with real distribution."}
+{"sample_id":"target_00003","prediction":"real","confidence":0.8,"reason":"Informal but expresses frustration; somewhat aligns with real distribution."}
+{"sample_id":"target_00023","prediction":"real","confidence":0.85,"reason":"Formal request for account update assistance; matches real distribution."}
+{"sample_id":"R025","prediction":"synthetic","confidence":0.7,"reason":"Casual inquiry about future options; real samples are more formal."}
+{"sample_id":"target_00006","prediction":"real","confidence":0.85,"reason":"Formal request for assistance with an order issue; aligns with real distribution."}

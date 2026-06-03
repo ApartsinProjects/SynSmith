@@ -1,0 +1,24 @@
+{"sample_id":"R022","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured."}
+{"sample_id":"target_00032","prediction":"synthetic","confidence":0.85,"reason":"casual viewer voice; real samples are more professional."}
+{"sample_id":"R002","prediction":"real","confidence":0.95,"reason":"direct and concise complaint; matches real distribution."}
+{"sample_id":"R006","prediction":"real","confidence":0.95,"reason":"concise issue reporting; aligns with real samples."}
+{"sample_id":"R029","prediction":"real","confidence":0.9,"reason":"straightforward inquiry; matches real distribution."}
+{"sample_id":"R026","prediction":"real","confidence":0.9,"reason":"formal inquiry about outages; aligns with real samples."}
+{"sample_id":"target_00033","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.85,"reason":"emotional and casual language; real samples are more professional."}
+{"sample_id":"target_00034","prediction":"real","confidence":0.95,"reason":"formal request for assistance; matches real distribution."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"concise and professional inquiry; aligns with real samples."}
+{"sample_id":"target_00024","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"R020","prediction":"real","confidence":0.85,"reason":"direct complaint; aligns with real distribution."}
+{"sample_id":"target_00036","prediction":"synthetic","confidence":0.8,"reason":"emotional and casual language; real samples are more professional."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00027","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more professional."}
+{"sample_id":"R014","prediction":"real","confidence":0.95,"reason":"concise issue reporting; matches real distribution."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"direct complaint; aligns with real samples."}
+{"sample_id":"R028","prediction":"real","confidence":0.9,"reason":"clear inquiry; matches real distribution."}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"clear request for correction; aligns with real samples."}
+{"sample_id":"target_00039","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more professional."}
+{"sample_id":"target_00025","prediction":"real","confidence":0.95,"reason":"formal request for refund; matches real distribution."}
+{"sample_id":"target_00031","prediction":"real","confidence":0.9,"reason":"formal inquiry about trial period; aligns with real samples."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"direct complaint about shipping delay; matches real distribution."}

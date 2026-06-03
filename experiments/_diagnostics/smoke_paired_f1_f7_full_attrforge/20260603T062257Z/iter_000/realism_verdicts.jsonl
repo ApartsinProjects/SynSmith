@@ -1,0 +1,24 @@
+{"sample_id":"target_00003","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal inquiries."}
+{"sample_id":"target_00007","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal inquiries."}
+{"sample_id":"target_00009","prediction":"real","confidence":0.9,"reason":"formal request for clarification; matches the identified distribution."}
+{"sample_id":"R011","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more structured."}
+{"sample_id":"target_00018","prediction":"real","confidence":0.9,"reason":"formal request for procedure; aligns with the identified distribution."}
+{"sample_id":"target_00017","prediction":"synthetic","confidence":0.8,"reason":"casual tone and phrasing; real samples are more formal."}
+{"sample_id":"R002","prediction":"synthetic","confidence":0.7,"reason":"informal structure; real samples are more formal."}
+{"sample_id":"target_00020","prediction":"real","confidence":0.9,"reason":"formal request for assistance; matches the identified distribution."}
+{"sample_id":"R005","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more structured."}
+{"sample_id":"R014","prediction":"synthetic","confidence":0.6,"reason":"informal tone; real samples are more formal."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.7,"reason":"informal and direct; real samples are more formal."}
+{"sample_id":"target_00016","prediction":"synthetic","confidence":0.8,"reason":"casual expression of frustration; real samples are more formal."}
+{"sample_id":"target_00012","prediction":"real","confidence":0.9,"reason":"formal request for refund; aligns with the identified distribution."}
+{"sample_id":"target_00004","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00005","prediction":"real","confidence":0.8,"reason":"concise formal request; matches the identified distribution."}
+{"sample_id":"target_00021","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00002","prediction":"real","confidence":0.9,"reason":"formal inquiry about refund status; aligns with the identified distribution."}
+{"sample_id":"target_00001","prediction":"real","confidence":0.8,"reason":"formal inquiry about discounts; matches the identified distribution."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more structured."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.7,"reason":"informal tone; real samples are more formal."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more structured."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.6,"reason":"informal tone; real samples are more formal."}
+{"sample_id":"target_00010","prediction":"real","confidence":0.9,"reason":"formal request for guidance; aligns with the identified distribution."}
+{"sample_id":"target_00006","prediction":"synthetic","confidence":0.8,"reason":"casual tone and urgency; real samples are more formal."}

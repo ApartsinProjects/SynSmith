@@ -1,0 +1,107 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "formal tone with detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i am' at the beginning of multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of polite requests and formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of filler phrases like 'it seems like' or 'i feel like'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "overly detailed descriptions of issues that include unnecessary context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language with misspellings (e.g., 'freezez')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests without formalities",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of urgency in phrasing (e.g., 'asap', 'where is my package')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated complaints about service in a single message",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone with complete sentences and structured complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'i am' or 'i am writing to' as openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration in a detailed manner with emotional language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of informal language and misspellings (e.g., 'kno', 'freezez')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long, run-on sentences expressing frustration without clear punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated expressions of frustration and confusion in a single sample",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences that express frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct complaints without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of rhetorical questions to emphasize dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests and formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of detailed explanations for issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal request structure with complete sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language and phrases like 'please assist me'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed explanations of issues with multiple sentences",
+      "n_pairs_observed": 1
+    }
+  ]
+}

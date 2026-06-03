@@ -1,0 +1,24 @@
+{"sample_id":"R016","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00049","prediction":"real","confidence":0.95,"reason":"formal request for assistance; matches the professional tone of real samples"}
+{"sample_id":"R021","prediction":"synthetic","confidence":0.85,"reason":"casual and emotional language; real samples are more formal"}
+{"sample_id":"R026","prediction":"real","confidence":0.9,"reason":"professional inquiry about service; aligns with real samples' tone"}
+{"sample_id":"target_00054","prediction":"synthetic","confidence":0.8,"reason":"informal language; real samples are more structured and formal"}
+{"sample_id":"target_00057","prediction":"real","confidence":0.95,"reason":"formal request for a refund; matches the professional tone of real samples"}
+{"sample_id":"target_00052","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"technical issue report; aligns with the professional tone of real samples"}
+{"sample_id":"R023","prediction":"synthetic","confidence":0.75,"reason":"emotional language; real samples are more formal and structured"}
+{"sample_id":"R009","prediction":"real","confidence":0.85,"reason":"technical inquiry; matches the professional tone of real samples"}
+{"sample_id":"target_00048","prediction":"synthetic","confidence":0.7,"reason":"informal tone; real samples are more structured and formal"}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"formal request for a refund; aligns with the professional tone of real samples"}
+{"sample_id":"R027","prediction":"synthetic","confidence":0.75,"reason":"casual inquiry; real samples are more formal"}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"professional inquiry about service options; aligns with real samples' tone"}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.8,"reason":"informal language; real samples are more structured and formal"}
+{"sample_id":"target_00062","prediction":"real","confidence":0.9,"reason":"formal inquiry; matches the professional tone of real samples"}
+{"sample_id":"target_00066","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R006","prediction":"real","confidence":0.85,"reason":"technical issue report; aligns with the professional tone of real samples"}
+{"sample_id":"target_00068","prediction":"real","confidence":0.9,"reason":"technical issue report; matches the professional tone of real samples"}
+{"sample_id":"R022","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R012","prediction":"real","confidence":0.85,"reason":"formal request for account recovery; aligns with the professional tone of real samples"}
+{"sample_id":"R029","prediction":"real","confidence":0.9,"reason":"formal inquiry about billing; matches the professional tone of real samples"}
+{"sample_id":"R003","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00053","prediction":"real","confidence":0.95,"reason":"formal request for a refund; aligns with the professional tone of real samples"}

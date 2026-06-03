@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Forgot my password and the reset email never arrives. Already checked spam.",
+      "label": "account_issue",
+      "p_real": 0.6331492985886519
+    },
+    {
+      "text": "still no answer on ticket #4421 from last monday. anyone there??",
+      "label": "complaint",
+      "p_real": 0.6415618537540059
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6538367749198091
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.6567380257500103
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

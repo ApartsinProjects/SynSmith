@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity with varied intents and styles, but there is significant nuance-level redundancy, particularly in the phrasing of complaints and account issues. Many texts follow similar structures and use common expressions, leading to a lack of depth in the diversity of responses.",
+  "missing_modes": [
+    "More complex emotional expressions in complaints",
+    "Unique scenarios for technical problems",
+    "Diverse ways to request refunds beyond standard phrases"
+  ],
+  "overrepresented_modes": [
+    "Concise and informal styles in complaints",
+    "Fragmented style in general questions",
+    "Common phrases like 'I need help' or 'Can you assist me?'"
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the use of varied sentence structures and vocabulary in complaint scenarios.",
+    "Introduce more complex emotional expressions and unique situations for technical problems.",
+    "Incorporate diverse phrasing for refund requests to avoid repetitive templates."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

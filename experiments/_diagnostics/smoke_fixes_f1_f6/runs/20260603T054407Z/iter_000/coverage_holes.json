@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "I changed my email and now I can't receive verification codes on the new one",
+      "label": "account_issue",
+      "p_real": 0.6399966480392141
+    },
+    {
+      "text": "i paid for the upgrade but features are still locked",
+      "label": "complaint",
+      "p_real": 0.6302691525806513
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6569129865345446
+    },
+    {
+      "text": "the item arrived damaged. need a refund or replacement asap. photos attached.",
+      "label": "refund_request",
+      "p_real": 0.6416175352814101
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6446133714765769
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6387376818943313
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.6342455126258443
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.6330017877940887
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

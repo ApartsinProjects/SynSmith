@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6588483648763898
+    },
+    {
+      "text": "I want my money back. this product does not do what your ads claim.",
+      "label": "complaint",
+      "p_real": 0.6509487107207825
+    },
+    {
+      "text": "Are there any planned outages this weekend? Asking for our release schedule.",
+      "label": "general_question",
+      "p_real": 0.6546842383790372
+    },
+    {
+      "text": "transaction failed but money was deducted. screenshot attached.",
+      "label": "refund_request",
+      "p_real": 0.6516928394404616
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

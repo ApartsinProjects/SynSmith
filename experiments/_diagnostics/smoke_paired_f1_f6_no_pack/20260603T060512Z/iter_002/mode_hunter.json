@@ -1,0 +1,54 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I have reached out multiple times for assistance",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing indicates repeated attempts for help, which is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I feel misled by the marketing claims",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of feeling misled is unique to the synthetic batch and emphasizes disappointment.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I seem to be experiencing issues accessing it",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This construction of expressing issues is not present in real samples and indicates a technical problem.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’m really stressed out because",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The phrase 'I’m really stressed out because' is a distinct emotional expression not found in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I would like to ask if I need to provide my payment information again",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal request structure is not present in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I have reached out multiple times for assistance",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing indicates repeated attempts for help, which is not found in real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I feel misled by the marketing claims",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of feeling misled is unique to the synthetic batch and emphasizes disappointment.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I seem to be experiencing issues accessing it",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This construction of expressing issues is not present in real samples and indicates a technical problem.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

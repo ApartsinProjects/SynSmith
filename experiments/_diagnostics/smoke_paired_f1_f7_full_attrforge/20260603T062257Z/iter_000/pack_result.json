@@ -1,0 +1,95 @@
+{
+  "pack_accuracy": 0.875,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "formal tone with complete sentences and proper punctuation",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of polite requests and phrases like 'i would appreciate' or 'could you please'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of filler words like 'um' and 'like'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of personal feelings or frustrations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests with 'please' and 'could you'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase letters at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of emotional expression or emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests or formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion in a more elaborate manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language with excessive ellipses or question marks",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "long, convoluted sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of personal feelings or experiences in a casual tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of polite requests and clarifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions (e.g., 'i feel so frustrated!')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration with detailed explanations",
+      "n_pairs_observed": 1
+    }
+  ]
+}

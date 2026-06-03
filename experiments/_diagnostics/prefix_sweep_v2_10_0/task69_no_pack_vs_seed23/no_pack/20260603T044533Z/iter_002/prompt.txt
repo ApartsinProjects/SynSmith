@@ -1,0 +1,16 @@
+""""""Generate realistic customer support messages that align with the requested intent and style. The messages should be plausible for a customer support channel (email, chat, in-app form) and vary in length from short to medium. Ensure clarity, specificity, and appropriate complexity for the assigned difficulty level. Output a JSON object containing the sample id, the text, and the attribute values.
+
+**Preferred phrasings:**
+- (label=general_question) "Is the pro plan billed monthly or yearly?"
+- (label=general_question) "Do you have a student discount available? If yes, how do I apply?"
+- (label=refund_request) "Subscription auto-renewed after I cancelled. Please refund and confirm cancellation."
+- (label=general_question) "What's the difference between the pro and business tier exactly?"
+
+**Forbidden phrasings:**
+- "I thought fast shipping was promised?"
+- "I distinctly remember seeing the confirmation email about it."
+- "I want to ensure I follow the correct steps."
+- "Hey, quick question -"
+- "I’m really frustrated because"
+
+Focus on generating diverse scenarios, including complex cases involving multiple issues or requests in a single interaction. Incorporate a mix of formal and concise styles, especially for technical inquiries, while avoiding redundancy in phrasing and structure. Aim for clarity in intent and reduce ambiguity in requests. Ensure that the generated texts reflect a realistic tone and structure consistent with actual customer interactions, prioritizing formal language for technical problems and varying emotional tones across different intents.

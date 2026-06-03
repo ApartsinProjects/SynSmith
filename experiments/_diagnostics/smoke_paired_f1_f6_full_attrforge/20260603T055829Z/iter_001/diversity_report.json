@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly within the complaint and account issue intents, leading to a lack of nuanced diversity. Many texts follow similar patterns, especially in expressing frustration and seeking assistance.",
+  "missing_modes": [
+    "A formal complaint with detailed reasoning and structured arguments.",
+    "A technical problem description that includes specific error codes or messages.",
+    "A general question that explores hypothetical scenarios or comparisons."
+  ],
+  "overrepresented_modes": [
+    "Informal expressions of frustration in complaints.",
+    "Concise requests for assistance with account issues.",
+    "Fragmented sentences indicating confusion or urgency."
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in complaint and account issue texts.",
+    "Include examples of formal inquiries and detailed technical descriptions to enhance diversity.",
+    "Introduce edge cases that require creative problem-solving or unique scenarios."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

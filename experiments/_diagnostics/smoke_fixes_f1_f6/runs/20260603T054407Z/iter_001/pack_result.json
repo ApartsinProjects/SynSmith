@@ -1,0 +1,87 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 6
+    },
+    {
+      "pattern": "formal tone with complete sentences and proper punctuation",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, direct sentences with minimal elaboration",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "detailed explanations of issues with specific requests for resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or emotional appeal",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hi' or 'hey' at the beginning of inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of technical jargon without explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a straightforward manner without additional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion about technical issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance that include detailed context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language with multiple qualifiers (e.g., 'i would like', 'can you tell me')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive emotional expressions (e.g., 'i can't believe this is happening again!', 'i'm so frustrated')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues with additional context (e.g., 'here's a weird sticker on the box; not sure if it's relevant.')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations like 'asap' and 'guys'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of requests for refunds or replacements in a blunt manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for clarification or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed explanations of issues or concerns",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of formal language and structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific timeframes (e.g., 'within 24 hours')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "demanding language (e.g., 'i demand an explanation')",
+      "n_pairs_observed": 1
+    }
+  ]
+}

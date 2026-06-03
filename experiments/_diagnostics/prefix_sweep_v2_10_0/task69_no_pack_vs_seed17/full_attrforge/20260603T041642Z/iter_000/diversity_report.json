@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity with varied intents and styles; however, there is significant redundancy in phrasing and structure, particularly within the technical problem and complaint categories. Many samples utilize similar constructions, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "A more formal complaint style that includes detailed explanations.",
+    "Technical problems expressed in a more casual tone.",
+    "General questions that explore unique or uncommon scenarios."
+  ],
+  "overrepresented_modes": [
+    "Concise phrasing in refund requests and general questions.",
+    "Emotional expressions in complaints and account issues.",
+    "Fragmented styles in technical problems."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more unique sentence structures and vocabulary, especially for technical problems and complaints.",
+    "Introduce scenarios that require more complex reasoning or less common situations to enhance nuance.",
+    "Vary the emotional tone and complexity of requests to avoid repetitive patterns."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

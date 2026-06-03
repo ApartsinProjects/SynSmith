@@ -1,0 +1,60 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I really need to express my frustration here",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicating a need to express frustration is not found in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a pair of shoes, but they sent me the wrong color",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific complaint about receiving the wrong color is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I would like to request",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing is used to express requests in a formal manner, which is not found in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I’m trying to log in but",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure indicates a specific issue with logging in, which is not present in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I have been trying to understand",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase suggests a prolonged effort to comprehend a situation, which is not reflected in the real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I would like to express my dissatisfaction",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal expression of dissatisfaction is unique to the synthetic batch and not found in real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I really need to express my frustration here",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicating a need to express frustration is not found in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a pair of shoes, but they sent me the wrong color",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific complaint about receiving the wrong color is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

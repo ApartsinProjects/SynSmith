@@ -1,0 +1,24 @@
+{"sample_id":"target_00060","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more direct and concise."}
+{"sample_id":"R016","prediction":"synthetic","confidence":0.9,"reason":"informal language; real samples are more structured."}
+{"sample_id":"R009","prediction":"synthetic","confidence":0.8,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.9,"reason":"informal tone; real samples are more professional."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.9,"reason":"casual language; real samples are more formal."}
+{"sample_id":"target_00061","prediction":"synthetic","confidence":0.7,"reason":"casual phrasing; real samples are more direct."}
+{"sample_id":"R003","prediction":"synthetic","confidence":0.9,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"target_00050","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more formal."}
+{"sample_id":"target_00048","prediction":"real","confidence":0.85,"reason":"formal request for assistance; matches real samples."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.9,"reason":"informal tone; real samples are more professional."}
+{"sample_id":"R025","prediction":"synthetic","confidence":0.8,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"R022","prediction":"synthetic","confidence":0.9,"reason":"informal language; real samples are more structured."}
+{"sample_id":"target_00067","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00058","prediction":"real","confidence":0.9,"reason":"formal request for assistance; matches real samples."}
+{"sample_id":"target_00063","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more structured."}
+{"sample_id":"R005","prediction":"synthetic","confidence":0.9,"reason":"informal tone; real samples are more professional."}
+{"sample_id":"R010","prediction":"synthetic","confidence":0.9,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"target_00062","prediction":"real","confidence":0.85,"reason":"formal complaint; matches real samples."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.8,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.8,"reason":"casual language; real samples are more formal."}
+{"sample_id":"target_00049","prediction":"synthetic","confidence":0.8,"reason":"casual phrasing; real samples are more structured."}
+{"sample_id":"target_00064","prediction":"real","confidence":0.9,"reason":"formal request for clarification; matches real samples."}
+{"sample_id":"target_00054","prediction":"real","confidence":0.85,"reason":"formal complaint; matches real samples."}
+{"sample_id":"target_00065","prediction":"real","confidence":0.9,"reason":"formal request for refund; matches real samples."}

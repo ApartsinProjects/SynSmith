@@ -34,6 +34,14 @@ class CoverageHoleConfig:
     min_real: int = 5
     min_synth: int = 5
     ngram_range: tuple[int, int] = (1, 2)
+    stratify_by_label: bool = True
+    """Fix F6: when True, the top-K hole selection is stratified across
+    real-sample labels so every class gets at least one exemplar in the
+    output when its class has any uncovered real samples. Otherwise the
+    global top-K can be dominated by one or two classes and the under-
+    represented classes never surface coverage-hole exemplars to the
+    updater, perpetuating per-class undercoverage. Default-on; set False
+    for backward-compat with the v2.9.x ranking."""
 
 
 class CoverageHole(BaseModel):
@@ -86,7 +94,38 @@ class CoverageHoleFinder:
         # AUROC ~ how well the classifier separates real from synthetic.
         auroc = self._auroc(y, p_real_all)
 
-        order = np.argsort(-real_p)[: self.config.top_k]
+        if self.config.stratify_by_label:
+            # Fix F6: round-robin pick across labels, taking the highest
+            # p_real per class first, then the second-highest per class,
+            # until top_k is filled. Classes with no real examples are
+            # skipped. Classes with fewer examples than the round count
+            # contribute fewer picks (no padding).
+            order_by_label: dict[str, list[int]] = {}
+            for idx in np.argsort(-real_p):
+                lbl = real[int(idx)].label or "_"
+                order_by_label.setdefault(lbl, []).append(int(idx))
+            labels_sorted = sorted(order_by_label.keys())
+            picked: list[int] = []
+            seen: set[int] = set()
+            round_n = 0
+            while len(picked) < self.config.top_k:
+                progress = False
+                for lbl in labels_sorted:
+                    pool = order_by_label[lbl]
+                    if round_n < len(pool):
+                        idx = pool[round_n]
+                        if idx not in seen:
+                            picked.append(idx)
+                            seen.add(idx)
+                            progress = True
+                            if len(picked) >= self.config.top_k:
+                                break
+                if not progress:
+                    break
+                round_n += 1
+            order = picked
+        else:
+            order = list(np.argsort(-real_p)[: self.config.top_k])
         holes = [
             CoverageHole(
                 text=real[int(i)].text,

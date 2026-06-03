@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "I changed my email and now I can't receive verification codes on the new one",
+      "label": "account_issue",
+      "p_real": 0.6355378782276756
+    },
+    {
+      "text": "still no answer on ticket #4421 from last monday. anyone there??",
+      "label": "complaint",
+      "p_real": 0.6377726378961983
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6581920413554155
+    },
+    {
+      "text": "card was charged for the annual plan, I only meant monthly, can you fix this",
+      "label": "refund_request",
+      "p_real": 0.6425922625897833
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

@@ -1,0 +1,115 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "polite requests for clarification or assistance",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of informal language with minimal capitalization",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences with a lack of complete structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct, confrontational tone without polite requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of technical jargon or abbreviations without explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or impatience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language with lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct appeals for help or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences that lack elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of direct requests or commands",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of specific phrases like 'i want' or 'i tried to'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of formal language and complete sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive detail in describing issues or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase letters at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of filler phrases like 'really starting to lose my patience here'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions embedded within longer statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal capitalization",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct inquiries without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of simple sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of personal anecdotes or detailed context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or frustration regarding account issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of problems with specific features",
+      "n_pairs_observed": 1
+    }
+  ]
+}

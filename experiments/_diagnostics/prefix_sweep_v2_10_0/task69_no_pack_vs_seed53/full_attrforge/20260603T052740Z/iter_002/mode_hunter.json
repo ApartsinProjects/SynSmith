@@ -1,0 +1,24 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I thought it was both?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing suggests confusion about subscription options, which is not present in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I really hate how this whole thing has gone down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of frustration is uniquely phrased and does not appear in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought it was both?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing suggests confusion about subscription options, which is not present in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

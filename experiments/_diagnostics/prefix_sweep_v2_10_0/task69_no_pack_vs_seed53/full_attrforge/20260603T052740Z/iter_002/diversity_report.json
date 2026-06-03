@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in complaints and account issues, with many samples using similar constructions and vocabulary. There is a notable absence of diverse scenarios and nuanced expressions in the technical problem and refund request categories.",
+  "missing_modes": [
+    "More varied emotional expressions in complaints, such as humor or sarcasm.",
+    "Different ways to phrase refund requests, including more formal or indirect requests.",
+    "Unique scenarios for technical problems that involve different devices or contexts."
+  ],
+  "overrepresented_modes": [
+    "Complaints often start with 'I'm really disappointed' or 'I'm really frustrated'.",
+    "General questions frequently use the phrase 'quick question' or 'is it...'.",
+    "Account issues often mention 'unable to log in' or 'password is wrong'."
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the generation of more varied emotional tones in complaints, such as humor or sarcasm.",
+    "Introduce unique phrasing and sentence structures for refund requests to avoid repetitive templates.",
+    "Incorporate diverse scenarios for technical problems that include different devices, operating systems, or user contexts."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

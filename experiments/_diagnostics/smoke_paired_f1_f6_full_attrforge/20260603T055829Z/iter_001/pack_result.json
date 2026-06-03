@@ -1,0 +1,91 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "use of exclamation marks to express frustration",
+      "n_pairs_observed": 4
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for action (e.g., 'please initiate a refund')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamatory sentences expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct requests for help or support",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct questions as openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences that lack elaboration or context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of 'need' or 'can you' as openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "minimal use of punctuation beyond periods",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of informal language and abbreviations (e.g., 'cant', 'accnt')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance phrased in a detailed manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "personal anecdotes about frustration with the app",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of exclamation marks",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration that include personal feelings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of questions to engage the audience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'please' in requests for help",
+      "n_pairs_observed": 1
+    }
+  ]
+}

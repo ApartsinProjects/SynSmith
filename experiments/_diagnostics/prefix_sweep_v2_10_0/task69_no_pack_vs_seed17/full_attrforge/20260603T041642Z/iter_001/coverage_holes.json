@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6458244600532964
+    },
+    {
+      "text": "app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.",
+      "label": "technical_problem",
+      "p_real": 0.6372393925972387
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6370217712909394
+    },
+    {
+      "text": "I've been a customer for years and this is by far the worst experience. Cancel my plan.",
+      "label": "complaint",
+      "p_real": 0.6296226692160916
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

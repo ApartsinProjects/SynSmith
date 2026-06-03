@@ -1,0 +1,24 @@
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"target_00052","prediction":"synthetic","confidence":0.8,"reason":"More formal and structured than typical customer complaints."}
+{"sample_id":"target_00066","prediction":"synthetic","confidence":0.7,"reason":"Formal inquiry; real samples are more casual."}
+{"sample_id":"target_00060","prediction":"synthetic","confidence":0.7,"reason":"Formal tone; real samples are more casual."}
+{"sample_id":"target_00053","prediction":"synthetic","confidence":0.8,"reason":"More formal and structured than typical customer complaints."}
+{"sample_id":"R026","prediction":"real","confidence":0.9,"reason":"Casual inquiry; matches the informal tone of customer feedback."}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.8,"reason":"Formal and verbose; real samples are more casual."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"target_00061","prediction":"synthetic","confidence":0.7,"reason":"Formal inquiry; real samples are more casual."}
+{"sample_id":"target_00059","prediction":"synthetic","confidence":0.7,"reason":"Formal inquiry; real samples are more casual."}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"target_00057","prediction":"synthetic","confidence":0.8,"reason":"More formal and structured than typical customer complaints."}
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"target_00065","prediction":"synthetic","confidence":0.8,"reason":"Formal and verbose; real samples are more casual."}
+{"sample_id":"R010","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R027","prediction":"real","confidence":0.9,"reason":"Direct inquiry; matches the informal tone of customer feedback."}
+{"sample_id":"target_00049","prediction":"synthetic","confidence":0.8,"reason":"More formal and structured than typical customer complaints."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"Direct complaint; matches the informal tone of customer feedback."}

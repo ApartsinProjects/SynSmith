@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a good range of intents and scenarios, but there is significant redundancy in phrasing and structure, particularly in account issues and complaints. Emotional and informal styles are overrepresented, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "formal style for technical problems",
+    "concise style for complaints",
+    "verbose style for general questions",
+    "edge cases in refund requests"
+  ],
+  "overrepresented_modes": [
+    "informal style in complaints and account issues",
+    "emotional style in refund requests",
+    "high ambiguity in account issues"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more formal and concise responses, especially for technical problems and complaints.",
+    "Introduce more varied sentence structures and vocabulary to reduce redundancy in phrasing.",
+    "Include more edge cases and rare scenarios to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

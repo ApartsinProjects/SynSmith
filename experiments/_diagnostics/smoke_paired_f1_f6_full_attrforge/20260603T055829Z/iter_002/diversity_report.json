@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in refund requests and complaints, with many samples using similar templates. There is a notable absence of unique scenarios or diverse expressions within the same intent categories.",
+  "missing_modes": [
+    "Complex complaint scenarios that involve multiple issues",
+    "Technical problems with specific error codes or detailed descriptions",
+    "Refund requests that involve exchanges or partial refunds"
+  ],
+  "overrepresented_modes": [
+    "Refund requests that emphasize dissatisfaction with size or fit",
+    "Complaints about delays in response times with similar structures",
+    "Informal requests for student discounts using similar phrasing"
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary for refund requests and complaints.",
+    "Introduce scenarios that involve unique or complex issues to enhance nuance diversity.",
+    "Incorporate edge cases that require more detailed explanations or involve multiple intents in a single request."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

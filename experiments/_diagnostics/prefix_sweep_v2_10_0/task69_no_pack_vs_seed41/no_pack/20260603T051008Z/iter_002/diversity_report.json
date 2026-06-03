@@ -1,0 +1,29 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity in terms of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in account issues and complaints. Many texts follow similar patterns, leading to a lack of nuanced expression.",
+  "missing_modes": [
+    "Formal complaint about a technical issue",
+    "Informal refund request",
+    "Concise general question about account features",
+    "Emotional complaint about service delays"
+  ],
+  "overrepresented_modes": [
+    "Fragmented style in account issues",
+    "Emotional style in complaints",
+    "Concise style in complaints",
+    "Formal style in refund requests"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in the generator prompt.",
+    "Include examples that emphasize unique scenarios or emotional responses to enhance nuance.",
+    "Diversify the phrasing used in common intents to avoid repetitive patterns."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

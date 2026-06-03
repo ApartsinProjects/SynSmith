@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in complaints and account issues. Many texts follow similar patterns, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "A more formal tone for technical problems that avoids emotional language.",
+    "Complex scenarios involving multiple issues or requests in a single interaction."
+  ],
+  "overrepresented_modes": [
+    "Informal style in general questions and complaints.",
+    "Fragmented style in complaints and account issues."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in the generator prompt.",
+    "Include examples that combine multiple intents or issues in a single text.",
+    "Introduce more formal and varied emotional tones across different intents."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

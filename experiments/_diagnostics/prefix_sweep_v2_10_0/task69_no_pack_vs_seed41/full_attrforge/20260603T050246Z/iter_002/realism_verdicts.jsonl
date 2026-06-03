@@ -1,0 +1,24 @@
+{"sample_id":"R026","prediction":"real","confidence":0.9,"reason":"matches the informal inquiry style of real samples, typical of customer support requests."}
+{"sample_id":"target_00052","prediction":"real","confidence":0.85,"reason":"formal complaint about an order issue, aligns with the register of real samples."}
+{"sample_id":"target_00055","prediction":"synthetic","confidence":0.7,"reason":"casual phrasing ('couldn’t find info') contrasts with the more formal tone of real samples."}
+{"sample_id":"R016","prediction":"real","confidence":0.8,"reason":"informal but direct inquiry about a technical issue, consistent with real samples."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.75,"reason":"casual tone ('Can I get a refund for that?') contrasts with the more formal complaints in real samples."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"technical inquiry about a product feature, matches the style of real samples."}
+{"sample_id":"target_00065","prediction":"synthetic","confidence":0.8,"reason":"casual phrasing and multiple questions indicate a less formal register than real samples."}
+{"sample_id":"R000","prediction":"real","confidence":0.95,"reason":"direct and formal request for a refund, aligns with the register of real samples."}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"casual tone ('Can I get my money back?') contrasts with the more formal complaints in real samples."}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"strong customer complaint, matches the tone and style of real samples."}
+{"sample_id":"target_00063","prediction":"synthetic","confidence":0.75,"reason":"informal phrasing ('What's going on?') contrasts with the more formal inquiries in real samples."}
+{"sample_id":"R022","prediction":"real","confidence":0.8,"reason":"direct technical issue report, consistent with the style of real samples."}
+{"sample_id":"target_00057","prediction":"synthetic","confidence":0.7,"reason":"casual phrasing ('Can you tell me if...') contrasts with the more formal inquiries in real samples."}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"technical inquiry about product features, matches the style of real samples."}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"technical issue report, aligns with the register of real samples."}
+{"sample_id":"R006","prediction":"real","confidence":0.85,"reason":"informal but direct technical issue, consistent with real samples."}
+{"sample_id":"target_00048","prediction":"synthetic","confidence":0.8,"reason":"formal complaint style is more polished than the typical register of real samples."}
+{"sample_id":"target_00059","prediction":"synthetic","confidence":0.75,"reason":"overly detailed and formal complaint contrasts with the more straightforward style of real samples."}
+{"sample_id":"R012","prediction":"real","confidence":0.8,"reason":"direct request for assistance, matches the style of real samples."}
+{"sample_id":"R027","prediction":"real","confidence":0.85,"reason":"direct inquiry about discounts, aligns with the register of real samples."}
+{"sample_id":"R003","prediction":"real","confidence":0.9,"reason":"direct request for a refund, matches the style of real samples."}
+{"sample_id":"target_00051","prediction":"synthetic","confidence":0.75,"reason":"overly formal and detailed complaint contrasts with the more straightforward style of real samples."}
+{"sample_id":"target_00062","prediction":"synthetic","confidence":0.7,"reason":"casual complaint tone contrasts with the more formal complaints in real samples."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"direct request for a refund, aligns with the register of real samples."}

@@ -1,0 +1,24 @@
+{"sample_id":"R025","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and direct"}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.7,"reason":"casual viewer voice; real samples are professional complaints"}
+{"sample_id":"R014","prediction":"real","confidence":0.9,"reason":"concise and direct issue reporting; matches real distribution"}
+{"sample_id":"target_00029","prediction":"synthetic","confidence":0.6,"reason":"emotional language; real samples are more straightforward"}
+{"sample_id":"R028","prediction":"real","confidence":0.85,"reason":"direct inquiry about service tiers; matches real distribution"}
+{"sample_id":"R001","prediction":"real","confidence":0.9,"reason":"clear request for assistance; aligns with real samples"}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"specific technical issue; matches real distribution"}
+{"sample_id":"target_00037","prediction":"synthetic","confidence":0.5,"reason":"overly detailed and emotional; real samples are more concise"}
+{"sample_id":"R016","prediction":"real","confidence":0.9,"reason":"direct issue reporting; aligns with real distribution"}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"specific technical issue; matches real distribution"}
+{"sample_id":"target_00026","prediction":"synthetic","confidence":0.6,"reason":"casual tone; real samples are more formal"}
+{"sample_id":"R020","prediction":"real","confidence":0.8,"reason":"frustration expressed in a direct manner; aligns with real samples"}
+{"sample_id":"R013","prediction":"real","confidence":0.9,"reason":"specific request for assistance; matches real distribution"}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"clear request for refund; aligns with real samples"}
+{"sample_id":"target_00034","prediction":"synthetic","confidence":0.5,"reason":"overly formal and uncertain tone; real samples are more direct"}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.6,"reason":"casual phrasing; real samples are more formal"}
+{"sample_id":"target_00043","prediction":"synthetic","confidence":0.5,"reason":"emotional language; real samples are more straightforward"}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"concise inquiry about API; matches real distribution"}
+{"sample_id":"target_00045","prediction":"synthetic","confidence":0.6,"reason":"casual phrasing; real samples are more formal"}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.5,"reason":"casual tone; real samples are more formal"}
+{"sample_id":"R010","prediction":"real","confidence":0.85,"reason":"specific technical issue; matches real distribution"}
+{"sample_id":"target_00041","prediction":"synthetic","confidence":0.6,"reason":"casual tone; real samples are more formal"}
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"clear request for assistance; aligns with real samples"}
+{"sample_id":"R022","prediction":"real","confidence":0.9,"reason":"direct issue reporting; matches real distribution"}

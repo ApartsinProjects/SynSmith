@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I would like to formally request a refund",
+      "n_synthetic_occurrences": 2,
+      "rationale": "The formal tone and structure of this request is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I am writing to express my dissatisfaction regarding",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal opener is distinctive and not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I can't believe I have to deal with this again.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of frustration about repeated issues is not present in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I have reached out multiple times regarding my order issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This structure indicates repeated attempts to resolve an issue, highlighting frustration.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I would like to formally request a refund",
+      "n_synthetic_occurrences": 2,
+      "rationale": "The formal tone and structure of this request is unique to the synthetic batch.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I am writing to express my dissatisfaction regarding",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal opener is distinctive and not present in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

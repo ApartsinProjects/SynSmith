@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good range of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in refund requests and complaints. Many texts use similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "A more formal and detailed complaint scenario that includes specific examples of service failures.",
+    "A technical problem scenario that involves a unique or uncommon issue not typically reported.",
+    "A general question that explores a complex topic rather than simple inquiries."
+  ],
+  "overrepresented_modes": [
+    "Concise and informal styles in refund requests and complaints.",
+    "Fragmented styles in technical problems and general questions.",
+    "Common scenarios dominate the batch, with edge cases and rare scenarios being underrepresented."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary to reduce redundancy.",
+    "Include prompts that specifically ask for unique or uncommon scenarios to enhance diversity.",
+    "Incorporate examples that require more detailed explanations or complex problem-solving."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I hope you can address these concerns as this has been a dis",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This incomplete phrase indicates a specific style not found in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I am experiencing an unexpected error",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing describing an error experience is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I hope you take this feedback seriously",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase expresses a specific expectation for the company's response to feedback.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I hope you can address these concerns as this has been a dis",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This incomplete phrase indicates a specific style not found in real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

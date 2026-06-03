@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there is significant redundancy in phrasing and structure, particularly in complaints and refund requests. Many texts use similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "Formal complaints that include specific details about the issue and desired resolution.",
+    "Technical problems described with a focus on user experience rather than just the issue.",
+    "General questions that explore multiple aspects of a service or product."
+  ],
+  "overrepresented_modes": [
+    "Informal complaints that express frustration in a similar emotional tone.",
+    "Refund requests that follow a straightforward template of stating the issue and asking for resolution.",
+    "Technical problems described in a fragmented style, often with typos."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary for complaints and refund requests.",
+    "Introduce scenarios that require more detailed explanations or multi-part questions to enhance complexity.",
+    "Include examples of formal communication styles that are less emotional and more factual."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

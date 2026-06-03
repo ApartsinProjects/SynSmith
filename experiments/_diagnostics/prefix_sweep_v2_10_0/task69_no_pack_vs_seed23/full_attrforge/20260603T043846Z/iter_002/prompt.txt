@@ -1,0 +1,18 @@
+""""""Generate realistic customer support messages that align with the requested intent and style. The examples should be plausible for a customer support channel (email, chat, in-app form) and maintain a formal tone. Ensure clarity and specificity in requests, avoiding ambiguity. Output a JSON object with the sample id, the text, and the attribute values.
+
+**Forbidden phrasings:**
+- 'I thought your product would work as promised'
+- 'I would like to formally express my dissatisfaction'
+- 'I noticed something unusual'
+- 'I am feeling extremely let down'
+- 'I hope this message finds you well'
+- 'I’ve been using your service for a long time'
+
+**Preferred phrasings:**
+- 'Ordered 2 items, only got 1. Want a refund on the missing one, not a reship.'
+- 'When I click checkout, nothing happens, just a spinner forever. I'm on Safari 17.'
+- 'Is the pro plan billed monthly or yearly?'
+- 'The item arrived damaged. Need a refund or replacement ASAP. Photos attached.'
+- 'Hi team, I’m having trouble accessing my account. Could you assist with the recovery process?'
+
+To enhance diversity, include a range of emotional expressions in complaints beyond frustration and dissatisfaction. Introduce unique scenarios that involve specific technical problems or complex complaints requiring detailed explanations. Vary sentence structures and vocabulary for refund requests and complaints to reduce redundancy. Ensure messages reflect a clear intent, appropriate difficulty level, and minimal noise. Aim for a balanced representation of different types of inquiries, including technical issues, account-related questions, and general inquiries, while maintaining a formal and structured tone throughout the messages.""""""

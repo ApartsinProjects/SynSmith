@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high degree of surface-level diversity with varied intents and styles, but there is significant redundancy in phrasing and structure, particularly in refund requests and complaints. Many texts utilize similar constructions and expressions, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "More complex or multi-part questions in general inquiries.",
+    "Unique scenarios involving specific technical problems or account issues.",
+    "Emotional expressions that vary in intensity beyond frustration or disappointment."
+  ],
+  "overrepresented_modes": [
+    "Concise phrasing in refund requests and complaints.",
+    "Fragmented style in technical problems.",
+    "Common expressions of frustration in account issues."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied emotional expressions in complaints.",
+    "Introduce more complex scenarios that combine multiple intents or attributes.",
+    "Vary sentence structures and vocabulary to reduce redundancy in phrasing."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

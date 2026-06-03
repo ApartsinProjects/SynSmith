@@ -1,0 +1,151 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "direct requests for refunds",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "concise and to-the-point phrasing",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "concise problem statements followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in reporting issues (e.g., app crashing, account problems)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and straightforward phrasing without much elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey' or 'dear customer support'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or urgency in multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures in requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific mention of issues with products or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional language such as 'really upset' or 'totally ridiculous'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific mentions of app issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical details (e.g., 'android 14')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't log in.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i'm experiencing a significant issue with the application",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i've tried clearing the cache and even reinstalling the app",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i'm really frustrated!",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "this is unacceptable.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific details like order numbers or timeframes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal pleasantries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone in complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal pronouns and emotional language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or replacements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and to-the-point language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations (e.g., 'asap', 'mfa')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'need a refund or replacement')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of personal anecdotes or emotional expressions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual language and informal tone (e.g., 'hey', 'like', 'haha')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a conversational manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal anecdotes or context (e.g., 'super old', 'from 2010')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "multiple questions or requests in a single message",
+      "n_pairs_observed": 1
+    }
+  ]
+}

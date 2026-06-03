@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity in terms of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in informal and emotional styles. Many texts share similar constructions and expressions, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "Formal complaint with detailed reasoning",
+    "Technical problem with specific error codes",
+    "General question about service features in a concise manner"
+  ],
+  "overrepresented_modes": [
+    "Informal style with conversational phrases",
+    "Emotional expressions of frustration in refund requests",
+    "General questions framed as casual inquiries"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more formal and structured responses, especially for complaints and technical issues.",
+    "Introduce prompts that require the use of specific technical terms or detailed descriptions to enhance the richness of technical problem texts.",
+    "Vary the emotional expressions in refund requests to include a broader range of sentiments beyond frustration."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

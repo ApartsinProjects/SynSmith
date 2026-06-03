@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6378972518984484
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.6327812405687495
+    },
+    {
+      "text": "I want my money back. this product does not do what your ads claim.",
+      "label": "complaint",
+      "p_real": 0.630551946680963
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.6251267410398886
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

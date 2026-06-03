@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in technical problems and complaints. Many samples use similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "Formal requests for refunds or technical issues",
+    "Complex complaints that involve multiple issues",
+    "Detailed general questions that require in-depth responses"
+  ],
+  "overrepresented_modes": [
+    "Informal phrasing in technical problems and complaints",
+    "Concise requests for refunds",
+    "Fragmented styles in account issues"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more formal and complex sentence structures, especially for refund requests and technical issues.",
+    "Introduce more varied vocabulary and sentence patterns to reduce redundancy in phrasing.",
+    "Include scenarios that involve multiple issues or require detailed explanations to enhance nuance."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

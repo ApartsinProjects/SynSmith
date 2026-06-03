@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good range of intents and styles, but there are notable patterns in phrasing and structure, particularly among account issues and complaints. Several samples share similar constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "Formal complaint with detailed context",
+    "Emotional refund request emphasizing urgency",
+    "Technical problem with a unique scenario"
+  ],
+  "overrepresented_modes": [
+    "Informal phrasing in account issues",
+    "Concise style in technical problems",
+    "Emotional expressions in complaints"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in requests, especially for common intents like account issues and complaints.",
+    "Introduce scenarios that involve complex interactions or unique user experiences to enhance nuance.",
+    "Diversify emotional expressions and formalities in refund requests to avoid repetitive patterns."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "new_findings": [],
+  "banned_library": [
+    {
+      "pattern": "I really hate how this whole thing has gone down.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This expression of frustration is uniquely phrased and does not appear in real samples.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

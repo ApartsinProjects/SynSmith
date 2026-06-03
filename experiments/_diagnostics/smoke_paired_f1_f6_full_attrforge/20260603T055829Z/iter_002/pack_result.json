@@ -1,0 +1,107 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request for help",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "long, detailed explanations of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of complete sentences with formal structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests with formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of disappointment or dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for quick resolution or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency in a more elaborate manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of short, fragmented sentences without clear punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or account changes without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal context or detail provided",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of informal language and abbreviations (e.g., 'cant', 'pwd', 'asap')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of direct, conversational tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, informal greetings (e.g., 'hi', 'hey')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of punctuation in some sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal abbreviations like 'plz' and 'asap'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of exclamation marks for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance without formalities",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive detail in describing issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone with complete sentences and proper punctuation",
+      "n_pairs_observed": 1
+    }
+  ]
+}

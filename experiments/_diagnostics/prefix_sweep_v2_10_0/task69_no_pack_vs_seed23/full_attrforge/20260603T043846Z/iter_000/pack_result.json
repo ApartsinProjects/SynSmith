@@ -1,0 +1,151 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "formal expressions of dissatisfaction",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "questions starting with 'is' or 'does'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon related to services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "consistent structure of asking for clarification or details",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'plz', 'like')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration and disappointment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about refunds and qualifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "casual tone and conversational style",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and lack of capitalization",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests without pleasantries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i’m having trouble accessing my account",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i want a refund",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you help?",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frustration expressed with exclamation marks",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and conversational tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account status or functionality",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of 'can you help?' or similar phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of 'tried everything' or 'i mean, i tried'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarification or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lengthy, complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite language with phrases like 'could you please' and 'thank you'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of transitional phrases like 'i mean' and 'can you please'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' as the subject",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and straightforward language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'need a refund or replacement')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific details (e.g., '2-day shipping', 'wrong size')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    }
+  ]
+}

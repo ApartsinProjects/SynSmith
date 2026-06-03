@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good range of intents and difficulty levels, but there is significant redundancy in phrasing and structure, particularly in refund requests and account issues. The informal style is overrepresented, and many texts share similar sentence constructions.",
+  "missing_modes": [
+    "formal and concise refund requests",
+    "emotional complaints",
+    "verbose general questions"
+  ],
+  "overrepresented_modes": [
+    "informal style in refund requests and general questions",
+    "fragmented style in general questions",
+    "easy difficulty level across multiple intents"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in refund requests and account issues.",
+    "Include more examples of formal and emotional styles to balance the informal tone.",
+    "Introduce edge cases that involve complex scenarios or unique situations to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

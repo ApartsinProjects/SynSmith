@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high degree of surface-level diversity in terms of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in complaints and technical problems. Many texts follow similar emotional expressions and complaint formats, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "Formal complaint structure with detailed evidence",
+    "Concise technical queries without emotional language",
+    "Emotional appeals that include personal anecdotes"
+  ],
+  "overrepresented_modes": [
+    "Emotional expressions of frustration in technical problems",
+    "Informal complaints using similar phrases like 'I can't believe this is happening again!'",
+    "Concise requests for assistance without elaboration"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied emotional expressions and complaint structures.",
+    "Introduce more formal and structured queries for technical issues.",
+    "Include diverse scenarios that require unique phrasing and context, especially for edge cases."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

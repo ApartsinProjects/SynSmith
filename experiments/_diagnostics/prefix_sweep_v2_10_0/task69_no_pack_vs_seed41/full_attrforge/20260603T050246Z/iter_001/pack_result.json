@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.86875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "expressions of frustration or dissatisfaction",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific scenarios mentioned (e.g., damaged item, incorrect last name)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language and expressions of disappointment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time frames (e.g., 'last week', 'two weeks later')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal tone and structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and abrupt requests for action (e.g., 'cancel my plan', 'need a refund or replacement asap')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase letters at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and fragmented sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints about service issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time frames (e.g., '24h', '4 days')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in opening phrases (e.g., 'i've been a customer', 'when i click')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise problem description followed by a request for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct statements without elaborate context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a specific detail",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with casual phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations (e.g., 'csv', 'api')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., 'is there a...?', 'keeps...')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration about an unresolved issue",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "asking for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of personal pronouns like 'i' and 'you'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive use of phrases like 'it's been too long' or 'this situation is quite frustrating'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specificity in describing issues",
+      "n_pairs_observed": 1
+    }
+  ]
+}

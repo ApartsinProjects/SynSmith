@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "questions starting with 'are' or 'is'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues with services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or confirmations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in reporting issues with apps",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise, direct questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "issues related to account management",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "technical problems with specific software or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't believe this.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i want to escalate this issue now.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please provide information regarding...",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i've restarted it twice, still no luck.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "want refund for missing one.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific technical issues mentioned",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "greeting followed by a description of an issue",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual language and phrases like 'i was just wondering'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or concern",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by an emotional response",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for help or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific error codes or technical issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for information or action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "greetings or polite opening phrases like 'hello' or 'hello support team'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or concern about issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific details about the issue (e.g., order mix-up, incomplete profile information)",
+      "n_pairs_observed": 1
+    }
+  ]
+}

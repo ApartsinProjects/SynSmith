@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity in terms of intent and style, but there are significant issues with nuance redundancy, particularly in phrasing and sentence structure. Many texts reuse similar constructions, leading to a lack of true diversity in expression.",
+  "missing_modes": [
+    "A more formal complaint structure that includes specific details about the issue.",
+    "Technical problems that involve more complex scenarios or solutions.",
+    "General questions that explore less common topics or inquiries."
+  ],
+  "overrepresented_modes": [
+    "Concise requests for refunds that follow a similar structure.",
+    "Informal complaints that express frustration in a casual tone.",
+    "Fragmented questions that indicate confusion but follow a similar pattern."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary to avoid redundancy.",
+    "Introduce prompts that require users to describe their issues in unique ways or with specific details.",
+    "Include scenarios that explore less common situations or edge cases to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there is a notable redundancy in phrasing and structure, particularly in the account issue and complaint categories. Many samples follow similar patterns, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "Formal complaint submissions with detailed accounts of issues",
+    "Technical problem reports with specific error codes or messages",
+    "Refund requests that include detailed order information or timelines"
+  ],
+  "overrepresented_modes": [
+    "Informal requests for refunds and general questions",
+    "Concise statements regarding account issues",
+    "Emotional expressions of dissatisfaction"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary, especially for common intents like account issues and complaints.",
+    "Include prompts for edge cases or rare scenarios that require more detailed explanations or unique situations.",
+    "Diversify the emotional tone and complexity of responses to avoid repetitive phrasing."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

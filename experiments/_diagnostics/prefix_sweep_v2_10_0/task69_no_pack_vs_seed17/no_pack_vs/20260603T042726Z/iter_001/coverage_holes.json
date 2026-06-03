@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.627289104582497
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6247060547461152
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.6194431751722382
+    },
+    {
+      "text": "I want my money back. this product does not do what your ads claim.",
+      "label": "complaint",
+      "p_real": 0.6191190551722198
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

@@ -1,0 +1,24 @@
+{"sample_id":"R015","prediction":"real","confidence":0.9,"reason":"Direct inquiry about account issue; matches the professional support request style."}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"Technical inquiry about CSV import; aligns with professional support communication."}
+{"sample_id":"target_00020","prediction":"synthetic","confidence":0.8,"reason":"Casual tone and phrasing; real samples are more formal."}
+{"sample_id":"R024","prediction":"real","confidence":0.9,"reason":"Concise professional inquiry about API; matches the identified distribution."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"Formal request for refund; aligns with professional customer service communication."}
+{"sample_id":"target_00012","prediction":"synthetic","confidence":0.7,"reason":"Formal complaint but overly verbose; real samples are more concise."}
+{"sample_id":"R005","prediction":"real","confidence":0.9,"reason":"Direct request for refund; matches the professional tone of real samples."}
+{"sample_id":"target_00017","prediction":"synthetic","confidence":0.8,"reason":"Emotional and casual language; real samples are more straightforward."}
+{"sample_id":"R027","prediction":"real","confidence":0.9,"reason":"Simple inquiry about discounts; fits the professional support style."}
+{"sample_id":"target_00019","prediction":"synthetic","confidence":0.7,"reason":"Formal tone but casual phrasing; real samples are more direct."}
+{"sample_id":"R028","prediction":"real","confidence":0.9,"reason":"Concise inquiry about product tiers; aligns with professional communication."}
+{"sample_id":"target_00008","prediction":"synthetic","confidence":0.8,"reason":"Casual language and verbosity; real samples are more succinct."}
+{"sample_id":"R017","prediction":"real","confidence":0.9,"reason":"Direct request for assistance; matches the professional tone."}
+{"sample_id":"R019","prediction":"real","confidence":0.9,"reason":"Direct complaint about product; aligns with professional customer service style."}
+{"sample_id":"R018","prediction":"real","confidence":0.9,"reason":"Direct inquiry about shipping delay; fits the professional support context."}
+{"sample_id":"R025","prediction":"real","confidence":0.9,"reason":"Inquiry about product options; matches the professional tone."}
+{"sample_id":"target_00007","prediction":"synthetic","confidence":0.8,"reason":"Casual language and informal phrasing; real samples are more formal."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"Formal complaint about service delay; aligns with professional communication."}
+{"sample_id":"target_00011","prediction":"synthetic","confidence":0.7,"reason":"Formal complaint but overly detailed and emotional; real samples are more concise."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"Direct request for account recovery; matches the professional support style."}
+{"sample_id":"target_00002","prediction":"synthetic","confidence":0.8,"reason":"Casual language and informal phrasing; real samples are more formal."}
+{"sample_id":"target_00014","prediction":"synthetic","confidence":0.8,"reason":"Casual tone and informal language; real samples are more professional."}
+{"sample_id":"R020","prediction":"real","confidence":0.9,"reason":"Direct complaint about service; aligns with professional customer service communication."}
+{"sample_id":"target_00006","prediction":"synthetic","confidence":0.8,"reason":"Casual language and informal phrasing; real samples are more formal."}

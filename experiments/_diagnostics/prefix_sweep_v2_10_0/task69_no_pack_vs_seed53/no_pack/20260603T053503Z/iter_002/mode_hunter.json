@@ -1,0 +1,60 @@
+{
+  "new_findings": [
+    {
+      "pattern": "hi, um, do u guys have like,",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal phrasing and structure is not present in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a laptop with a 2TB SSD, but they sent me one with only 1TB.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The detailed complaint about a specific product discrepancy is not found in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’ve seen mixed information.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicating confusion about information is not found in real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I hope this message finds you well.",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This formal greeting is not commonly found in real customer inquiries.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I would like to formally request a refund",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The phrase 'formally request' is overly formal and not typical in real complaints.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I am experiencing a persistent issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrasing is structured and formal, which is less common in real user reports.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I am really frustrated with the constant errors",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The specific structure and wording of this expression of frustration is not found in real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "hi, um, do u guys have like,",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This informal phrasing and structure is not present in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I ordered a laptop with a 2TB SSD, but they sent me one with only 1TB.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The detailed complaint about a specific product discrepancy is not found in the real samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

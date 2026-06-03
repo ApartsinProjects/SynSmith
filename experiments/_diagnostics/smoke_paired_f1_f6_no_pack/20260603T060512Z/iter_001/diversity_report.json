@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in refund requests and complaints, with many samples using similar constructions. There is a lack of nuanced scenarios and diverse expressions across the different intents.",
+  "missing_modes": [
+    "A formal complaint with a detailed account of previous interactions.",
+    "A technical problem description that includes specific error messages.",
+    "A refund request that includes a request for compensation or apology.",
+    "An emotional appeal that expresses disappointment in a more elaborate manner."
+  ],
+  "overrepresented_modes": [
+    "Concise complaints about wrong items or refunds.",
+    "Informal inquiries about technical issues with vague details.",
+    "Fragmented expressions of frustration with account access."
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary for refund requests and complaints.",
+    "Include scenarios that require more detailed explanations or emotional depth.",
+    "Introduce edge cases that involve unique situations or uncommon technical problems."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.644625155534587
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.6382424966831985
+    },
+    {
+      "text": "I want my money back. this product does not do what your ads claim.",
+      "label": "complaint",
+      "p_real": 0.6279842273052696
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6262058565553001
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

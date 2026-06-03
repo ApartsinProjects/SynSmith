@@ -1,0 +1,36 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I have been trying to log into my account for",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific phrasing about logging into an account appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I thought it was my device, but my friend has the same issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This particular explanation about a shared issue with a friend is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I was really looking forward to",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase indicating anticipation is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I have been trying to log into my account for",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific phrasing about logging into an account appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "I thought it was my device, but my friend has the same issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This particular explanation about a shared issue with a friend is unique to the synthetic batch.",
+      "introduced_at_iteration": 1
+    }
+  ]
+}

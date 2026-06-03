@@ -1,0 +1,139 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "repeated structure of stating an issue followed by a request",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "informal tone and phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations (e.g., 'asap')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests and formal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or disappointment",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request for resolution",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of urgency in requests (e.g., 'need a refund or replacement asap')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite requests for information or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of qualifiers like 'maybe' and 'quite' to express uncertainty or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of customer support and refund issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of problems with technology or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about subscription plans",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with introductory phrases",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey' and 'just wondering'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated inquiries about billing cycles",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise statements about issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time frames (e.g., '2 days', '6 days')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating the problem followed by a request or question",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or concern",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal language and personal anecdotes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for clarity or next steps",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of rhetorical questions",
+      "n_pairs_observed": 1
+    }
+  ]
+}

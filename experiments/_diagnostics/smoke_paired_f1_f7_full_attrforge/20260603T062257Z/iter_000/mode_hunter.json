@@ -1,0 +1,18 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I feel so frustrated!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This emotional expression is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I feel so frustrated!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This emotional expression is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

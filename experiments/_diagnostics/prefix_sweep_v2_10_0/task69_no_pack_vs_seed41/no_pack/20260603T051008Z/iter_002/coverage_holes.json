@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6323903787212188
+    },
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6300549605269187
+    },
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.6264240651334074
+    },
+    {
+      "text": "I changed my email and now I can't receive verification codes on the new one",
+      "label": "account_issue",
+      "p_real": 0.6255971209377129
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

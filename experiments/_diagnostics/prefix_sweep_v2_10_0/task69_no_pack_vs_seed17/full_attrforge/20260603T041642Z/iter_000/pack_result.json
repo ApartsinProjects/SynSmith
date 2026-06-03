@@ -1,0 +1,135 @@
+{
+  "pack_accuracy": 0.75,
+  "confidence_mean": 0.89375,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 3
+    },
+    {
+      "pattern": "polite requests for assistance",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of greetings and sign-offs",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated phrases like 'i am experiencing' and 'can you assist me'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite opening phrases like 'hello, i hope you are doing well.'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of disappointment or requests for clarification",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated mention of app issues and requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints or requests",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal punctuation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in expressing dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or confusion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specificity in describing issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'i' as a subject",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of expressing frustration with app issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'plz')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar phrasing around logging in and app crashes",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emphasis on personal feelings (e.g., 'i'm really upset')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints about service or product",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds or corrections",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a demand",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetition of personal experience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamation marks for emphasis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more detailed explanations of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of phrases like 'can you assist me with this problem?'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating the issue followed by a request for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar vocabulary related to software issues and account problems",
+      "n_pairs_observed": 1
+    }
+  ]
+}

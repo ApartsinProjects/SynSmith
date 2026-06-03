@@ -1,0 +1,147 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.8875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "short, fragmented sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "i am experiencing an issue where",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "can you tell me if",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i tried to change my email, but",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i think my account's been hacked because",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific order details mentioned",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "issues with subscriptions or orders",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or cancellations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and to-the-point phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations and acronyms (e.g., mfa)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures (e.g., starting with a complaint followed by a request)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frustration expressed in multiple samples",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account access or billing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of exclamatory sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and casual phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for refunds or discounts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of capitalization in sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account features or services",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal complaint structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds or resolutions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific software or product references",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise descriptions of issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures with a focus on specific problems",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for refunds or clarifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with conversational phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct questions or requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time references (e.g., '2-day shipping', '6 days')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "common issues related to account management and service problems",
+      "n_pairs_observed": 1
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in complaints and technical problems, with many samples using similar constructions and vocabulary. There is a noticeable lack of nuanced scenarios and diverse expressions across the intents.",
+  "missing_modes": [
+    "More varied emotional expressions in complaints and refund requests.",
+    "Unique phrasing for technical problems that avoids common templates.",
+    "Diverse scenarios that reflect less typical user experiences."
+  ],
+  "overrepresented_modes": [
+    "Concise and informal styles in technical problems and account issues.",
+    "Fragmented style in general questions and complaints.",
+    "Emotional expressions in refund requests and complaints."
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the generation of more unique sentence structures and vocabulary for each intent.",
+    "Introduce prompts that specifically ask for diverse emotional tones and detailed scenarios.",
+    "Incorporate edge cases and rare situations more frequently to enhance diversity."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

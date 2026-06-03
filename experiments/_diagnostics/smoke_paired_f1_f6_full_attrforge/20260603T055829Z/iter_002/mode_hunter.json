@@ -1,0 +1,30 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I would like to inquire if you offer any discounts specifically for students",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal inquiry about student discounts is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I am writing to request a refund for my recent purchase.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal opener for a refund request is not present in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I hope this message finds you well.",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This polite opener is a stylistic choice that does not appear in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I would like to inquire if you offer any discounts specifically for students",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal inquiry about student discounts is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

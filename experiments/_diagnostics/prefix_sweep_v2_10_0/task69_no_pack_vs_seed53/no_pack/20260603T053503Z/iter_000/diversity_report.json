@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there are noticeable patterns in phrasing and structure, particularly in refund requests and complaints. Several texts also share similar emotional tones and informal styles, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "formal and concise requests for refunds",
+    "technical problems described with emotional undertones",
+    "complaints expressed in a fragmented style"
+  ],
+  "overrepresented_modes": [
+    "informal emotional expressions in refund requests",
+    "complaints using a similar structure of dissatisfaction",
+    "general questions framed in a casual tone"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more formal and concise texts, especially for refund requests.",
+    "Introduce more varied emotional expressions in technical problem descriptions.",
+    "Diversify the structure of complaints to include more unique phrasing and vocabulary."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

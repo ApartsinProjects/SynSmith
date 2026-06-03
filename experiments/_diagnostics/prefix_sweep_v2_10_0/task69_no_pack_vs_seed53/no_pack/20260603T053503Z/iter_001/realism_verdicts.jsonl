@@ -1,0 +1,24 @@
+{"sample_id":"target_00041","prediction":"real","confidence":0.9,"reason":"Formal complaint style; matches the register of customer service communication."}
+{"sample_id":"R000","prediction":"synthetic","confidence":0.8,"reason":"Casual tone; real samples are more formal and detailed."}
+{"sample_id":"R023","prediction":"synthetic","confidence":0.85,"reason":"Casual and abrupt; real samples are more structured."}
+{"sample_id":"R022","prediction":"synthetic","confidence":0.9,"reason":"Informal language; real samples use more formal phrasing."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.9,"reason":"Casual and incomplete; real samples are more detailed and formal."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.85,"reason":"Direct and informal; real samples are more nuanced."}
+{"sample_id":"R008","prediction":"real","confidence":0.8,"reason":"Technical issue report; matches the register of customer service communication."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.75,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"target_00044","prediction":"real","confidence":0.9,"reason":"Formal inquiry about software issues; matches the register of customer service communication."}
+{"sample_id":"R013","prediction":"synthetic","confidence":0.8,"reason":"Casual tone; real samples are more formal and detailed."}
+{"sample_id":"target_00026","prediction":"real","confidence":0.85,"reason":"Formal issue report; matches the register of customer service communication."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.8,"reason":"Casual and abrupt; real samples are more structured."}
+{"sample_id":"target_00037","prediction":"real","confidence":0.85,"reason":"Detailed frustration report; matches the register of customer service communication."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.75,"reason":"Informal question; real samples are more formal."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.75,"reason":"Casual inquiry; real samples are more formal."}
+{"sample_id":"target_00031","prediction":"real","confidence":0.9,"reason":"Formal request for assistance; matches the register of customer service communication."}
+{"sample_id":"target_00028","prediction":"real","confidence":0.85,"reason":"Formal refund request; matches the register of customer service communication."}
+{"sample_id":"target_00036","prediction":"real","confidence":0.85,"reason":"Formal complaint about errors; matches the register of customer service communication."}
+{"sample_id":"target_00029","prediction":"real","confidence":0.9,"reason":"Detailed issue report; matches the register of customer service communication."}
+{"sample_id":"target_00042","prediction":"synthetic","confidence":0.8,"reason":"Casual and emotional tone; real samples are more formal."}
+{"sample_id":"R027","prediction":"synthetic","confidence":0.75,"reason":"Informal inquiry; real samples are more formal."}
+{"sample_id":"target_00035","prediction":"real","confidence":0.85,"reason":"Formal request for assistance; matches the register of customer service communication."}
+{"sample_id":"target_00033","prediction":"synthetic","confidence":0.8,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.75,"reason":"Informal tone; real samples are more formal."}

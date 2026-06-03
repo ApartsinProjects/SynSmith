@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6472482973691744
+    },
+    {
+      "text": "i paid for the upgrade but features are still locked",
+      "label": "complaint",
+      "p_real": 0.6439941431316576
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.664771817817204
+    },
+    {
+      "text": "pls refund my last order, never got it and tracking still says label printed.",
+      "label": "refund_request",
+      "p_real": 0.6463809522155686
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in refund requests and account issues, with many samples using similar templates. Additionally, there is a lack of nuanced scenarios, particularly in the 'rare' and 'edge_case' categories.",
+  "missing_modes": [
+    "A refund request that includes a specific time frame for the issue.",
+    "A technical problem that describes a unique or uncommon device or software interaction.",
+    "A complaint that includes a specific resolution request or expectation."
+  ],
+  "overrepresented_modes": [
+    "Refund requests that follow a similar structure of stating dissatisfaction followed by a request for help.",
+    "Account issues that describe inability to log in or access accounts with similar phrasing.",
+    "General questions that are framed as simple inquiries without depth."
+  ],
+  "near_duplicate_rate": 0.35,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary, especially for refund requests and account issues.",
+    "Include prompts that ask for unique scenarios or specific details to enhance the richness of the responses.",
+    "Introduce more emotional or personal elements in complaints to differentiate them further."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I'm really frustrated!",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific expression of frustration is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought I",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This phrase structure indicating a misunderstanding or expectation is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but not in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I'm really frustrated!",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This specific expression of frustration is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I thought I",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This phrase structure indicating a misunderstanding or expectation is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

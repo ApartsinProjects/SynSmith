@@ -1,0 +1,24 @@
+{"sample_id":"target_00064","prediction":"real","confidence":0.9,"reason":"Formal inquiry; matches professional support communication."}
+{"sample_id":"target_00044","prediction":"synthetic","confidence":0.7,"reason":"Casual tone; real samples are more formal."}
+{"sample_id":"target_00050","prediction":"synthetic","confidence":0.8,"reason":"Informal language; real samples are more structured."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.85,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"target_00059","prediction":"synthetic","confidence":0.75,"reason":"Casual question; real samples are more formal."}
+{"sample_id":"target_00046","prediction":"real","confidence":0.85,"reason":"Formal request for refund; matches professional support communication."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.9,"reason":"Informal tone; real samples are more structured."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.8,"reason":"Casual language; real samples are more formal."}
+{"sample_id":"target_00045","prediction":"real","confidence":0.8,"reason":"Formal request for assistance; matches professional support communication."}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.9,"reason":"Casual language and filler words; real samples are more formal."}
+{"sample_id":"target_00048","prediction":"real","confidence":0.85,"reason":"Formal complaint about product quality; matches professional support communication."}
+{"sample_id":"target_00052","prediction":"real","confidence":0.9,"reason":"Formal expression of frustration; matches professional support communication."}
+{"sample_id":"target_00062","prediction":"real","confidence":0.95,"reason":"Formal request for assistance; matches professional support communication."}
+{"sample_id":"R013","prediction":"synthetic","confidence":0.8,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"target_00060","prediction":"real","confidence":0.85,"reason":"Formal complaint about product; matches professional support communication."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.9,"reason":"Casual tone; real samples are more formal."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.85,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.8,"reason":"Informal language; real samples are more structured."}
+{"sample_id":"target_00058","prediction":"real","confidence":0.85,"reason":"Formal request for update; matches professional support communication."}
+{"sample_id":"R011","prediction":"synthetic","confidence":0.75,"reason":"Casual phrasing; real samples are more formal."}
+{"sample_id":"target_00053","prediction":"real","confidence":0.9,"reason":"Formal request for account recovery; matches professional support communication."}
+{"sample_id":"target_00054","prediction":"real","confidence":0.8,"reason":"Formal inquiry about API; matches professional support communication."}
+{"sample_id":"target_00049","prediction":"synthetic","confidence":0.85,"reason":"Casual tone; real samples are more formal."}
+{"sample_id":"target_00051","prediction":"synthetic","confidence":0.8,"reason":"Casual language; real samples are more formal."}

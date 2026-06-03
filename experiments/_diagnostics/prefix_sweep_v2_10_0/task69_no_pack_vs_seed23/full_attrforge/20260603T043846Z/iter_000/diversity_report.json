@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity in terms of intent and style, but there is significant redundancy in phrasing and structure, particularly in refund requests and complaints. Many texts follow similar patterns, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "More varied emotional expressions in complaints beyond frustration and dissatisfaction.",
+    "Different ways to express confusion or uncertainty in general questions.",
+    "Unique scenarios that involve specific technical problems not covered in common issues."
+  ],
+  "overrepresented_modes": [
+    "Refund requests often use similar constructions, such as 'I would like to request a refund' or 'Can you let me know if there's any way to process this refund request?'",
+    "Complaints frequently express frustration in a similar manner, often using phrases like 'this is unacceptable' or 'I am really frustrated.'",
+    "General questions often start with 'Could you please' or 'Can you help me with...'"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary for refund requests and complaints.",
+    "Introduce scenarios that involve unique or less common technical problems to enhance diversity.",
+    "Incorporate a wider range of emotional tones and expressions in the texts, especially for complaints."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

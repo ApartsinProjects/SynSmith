@@ -1,0 +1,24 @@
+{"sample_id":"R016","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.7,"reason":"casual phrasing; real samples are more direct and issue-focused"}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"direct complaint; matches the tone of real samples"}
+{"sample_id":"R026","prediction":"real","confidence":0.85,"reason":"professional inquiry; aligns with real samples' focus on service"}
+{"sample_id":"target_00052","prediction":"synthetic","confidence":0.75,"reason":"casual expression of disappointment; real samples are more formal"}
+{"sample_id":"target_00055","prediction":"synthetic","confidence":0.7,"reason":"informal request for help; real samples are more structured"}
+{"sample_id":"target_00050","prediction":"real","confidence":0.8,"reason":"formal request for assistance; aligns with real samples"}
+{"sample_id":"R008","prediction":"real","confidence":0.9,"reason":"technical issue report; matches the style of real samples"}
+{"sample_id":"R023","prediction":"real","confidence":0.85,"reason":"strong customer complaint; consistent with real samples"}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"specific technical issue; aligns with real samples"}
+{"sample_id":"target_00046","prediction":"synthetic","confidence":0.7,"reason":"casual request for refund; real samples are more formal"}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"clear request for refund; matches real samples' tone"}
+{"sample_id":"R027","prediction":"real","confidence":0.8,"reason":"inquiry about discounts; aligns with real samples"}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"specific feature inquiry; matches real samples"}
+{"sample_id":"target_00054","prediction":"synthetic","confidence":0.75,"reason":"informal complaint; real samples are more formal"}
+{"sample_id":"target_00060","prediction":"synthetic","confidence":0.7,"reason":"casual troubleshooting request; real samples are more structured"}
+{"sample_id":"target_00064","prediction":"synthetic","confidence":0.7,"reason":"informal expression of frustration; real samples are more formal"}
+{"sample_id":"R006","prediction":"real","confidence":0.85,"reason":"technical issue report; aligns with real samples"}
+{"sample_id":"target_00066","prediction":"synthetic","confidence":0.75,"reason":"casual expression of frustration; real samples are more formal"}
+{"sample_id":"R022","prediction":"real","confidence":0.8,"reason":"specific issue with service; matches real samples"}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"urgent request for help; aligns with real samples"}
+{"sample_id":"R029","prediction":"real","confidence":0.85,"reason":"clear inquiry about billing; matches real samples"}
+{"sample_id":"R003","prediction":"synthetic","confidence":0.7,"reason":"informal request for refund; real samples are more formal"}
+{"sample_id":"target_00051","prediction":"synthetic","confidence":0.7,"reason":"casual complaint about app; real samples are more formal"}

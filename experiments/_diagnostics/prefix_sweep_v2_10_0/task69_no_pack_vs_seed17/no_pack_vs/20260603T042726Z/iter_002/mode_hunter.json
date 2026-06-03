@@ -1,0 +1,54 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I would appreciate it if you could",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal phrasing is not present in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you inform me about",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request structure does not appear in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I have been encountering issues regularly!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The exclamation mark and the phrasing are distinctive to the synthetic samples.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I noticed I was billed double",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing about billing issues does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I want to return my shoes, they were not as advertised!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This unique structure and content regarding a return request is not found in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I would appreciate it if you could",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal phrasing is not present in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "Can you inform me about",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific request structure does not appear in the real samples.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I have been encountering issues regularly!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The exclamation mark and the phrasing are distinctive to the synthetic samples.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

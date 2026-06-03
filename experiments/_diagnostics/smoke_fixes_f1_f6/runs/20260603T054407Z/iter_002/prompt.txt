@@ -1,0 +1,18 @@
+""""""Generate realistic customer support messages that match the requested intent and style. The example should be plausible for a customer support channel (email, chat, in-app form). Keep it concise and structured, ensuring a formal tone with detailed explanations. Output a JSON object with the sample id, the text, and the attribute values.
+
+**Preferred phrasings:**
+- Two factor codes never come through, I've been locked out for 2 days now.
+- I want my money back. This product does not do what your ads claim.
+- Hi team, quick one - does the API have a rate limit on the search endpoint?
+- Got the wrong size, want my money back, not a store credit, thanks.
+
+**Forbidden phrasings:**
+- "I can't believe I have to deal with this again."
+- "I have reached out multiple times regarding my order issue."
+
+Ensure that the generated messages cover a variety of scenarios, including:
+- A formal complaint structure with detailed evidence of service failures.
+- Concise technical queries without emotional language, addressing unique issues.
+- Emotional appeals that include personal anecdotes to enhance relatability.
+
+Focus on reducing redundancy in phrasing and sentence structure. Encourage varied sentence constructions and vocabulary to enhance diversity. Strive for clarity and specificity in all messages to align with the target distribution's characteristics while avoiding excessive filler phrases and emotional verbosity. Aim for a structured approach that captures the nuances of customer inquiries and complaints.

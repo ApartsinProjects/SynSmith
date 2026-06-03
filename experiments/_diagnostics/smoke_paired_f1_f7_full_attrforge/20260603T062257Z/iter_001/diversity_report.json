@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a good variety of intents and scenarios, but there is notable redundancy in phrasing and structure, particularly in complaints and account issues. Several texts utilize similar emotional expressions and sentence constructions, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "formal style for refund requests",
+    "concise style for technical problems",
+    "emotional style for general questions"
+  ],
+  "overrepresented_modes": [
+    "emotional style in complaints",
+    "informal style in account issues and technical problems",
+    "fragmented style in technical problems"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied emotional expressions and sentence structures, especially in complaints and account issues.",
+    "Introduce more formal and concise styles in refund requests and technical problems to enhance diversity.",
+    "Incorporate edge cases and rare scenarios that challenge typical phrasing and responses."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 0.8333333333333334,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

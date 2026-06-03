@@ -1,0 +1,40 @@
+{"text":"Hi, I was charged twice for my subscription this month, can you refund the duplicate? Order #99431.","label":"refund_request","metadata":{"source":"email"}}
+{"text":"app keeps crashing on android 14 every time i open the camera tab. tried reinstall. nothing.","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"Forgot my password and the reset email never arrives. Already checked spam.","label":"account_issue","metadata":{"source":"chat"}}
+{"text":"this is ridiculous. third time this week. nobody answers. i want to speak to a manager.","label":"complaint","metadata":{"source":"chat"}}
+{"text":"Do you guys ship to Norway? Trying to figure out if it's worth signing up.","label":"general_question","metadata":{"source":"email"}}
+{"text":"transaction failed but money was deducted. screenshot attached.","label":"refund_request","metadata":{"source":"form"}}
+{"text":"When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"two factor codes never come through, I've been locked out for 2 days now","label":"account_issue","metadata":{"source":"email"}}
+{"text":"ordered Tuesday, said 2-day shipping, it's been 6 days, where is my package","label":"complaint","metadata":{"source":"email"}}
+{"text":"is the pro plan billed monthly or yearly?","label":"general_question","metadata":{"source":"chat"}}
+{"text":"got the wrong size, want my money back not a store credit thanks","label":"refund_request","metadata":{"source":"email"}}
+{"text":"the export to PDF button is greyed out for me, other team members can use it fine","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"deleted my account by mistake yesterday is there any way to undo that","label":"account_issue","metadata":{"source":"email"}}
+{"text":"i paid for the upgrade but features are still locked","label":"complaint","metadata":{"source":"chat"}}
+{"text":"Hi team, quick one - does the API have a rate limit on the search endpoint?","label":"general_question","metadata":{"source":"email"}}
+{"text":"pls refund my last order, never got it and tracking still says label printed.","label":"refund_request","metadata":{"source":"chat"}}
+{"text":"Getting a 502 every time I try to upload anything bigger than ~5MB. Logs attached.","label":"technical_problem","metadata":{"source":"form"}}
+{"text":"can't log in. says wrong password but I just reset it 5 min ago","label":"account_issue","metadata":{"source":"chat"}}
+{"text":"I've been a customer for years and this is by far the worst experience. Cancel my plan.","label":"complaint","metadata":{"source":"email"}}
+{"text":"do you have a student discount available? if yes how do I apply?","label":"general_question","metadata":{"source":"email"}}
+{"text":"card was charged for the annual plan, I only meant monthly, can you fix this","label":"refund_request","metadata":{"source":"chat"}}
+{"text":"search results page loads but the filters don't apply. firefox latest, cleared cache, same thing.","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"phone number on my account is wrong but the edit field is disabled. how do I update it","label":"account_issue","metadata":{"source":"form"}}
+{"text":"your support told me 24h, it's been 4 days. unacceptable.","label":"complaint","metadata":{"source":"email"}}
+{"text":"what's the difference between the pro and business tier exactly","label":"general_question","metadata":{"source":"chat"}}
+{"text":"the item arrived damaged. need a refund or replacement asap. photos attached.","label":"refund_request","metadata":{"source":"email"}}
+{"text":"android app won't open since the last update. just a white screen then it closes","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"my email got hijacked and someone changed the password on my account. need help recovering it","label":"account_issue","metadata":{"source":"email"}}
+{"text":"I want my money back. this product does not do what your ads claim.","label":"complaint","metadata":{"source":"email"}}
+{"text":"hey, can two people share one account or do we need separate seats","label":"general_question","metadata":{"source":"chat"}}
+{"text":"subscription auto-renewed after I cancelled. please refund and confirm cancellation.","label":"refund_request","metadata":{"source":"email"}}
+{"text":"sync isn't working between desktop and mobile, the new items aren't showing up","label":"technical_problem","metadata":{"source":"chat"}}
+{"text":"I changed my email and now I can't receive verification codes on the new one","label":"account_issue","metadata":{"source":"form"}}
+{"text":"still no answer on ticket #4421 from last monday. anyone there??","label":"complaint","metadata":{"source":"chat"}}
+{"text":"Are there any planned outages this weekend? Asking for our release schedule.","label":"general_question","metadata":{"source":"email"}}
+{"text":"ordered 2 items, only got 1. want a refund on the missing one, not a reship.","label":"refund_request","metadata":{"source":"chat"}}
+{"text":"csv import keeps timing out at ~3000 rows. is there a row limit nobody documented?","label":"technical_problem","metadata":{"source":"form"}}
+{"text":"MFA app got wiped when I switched phones, can you disable mfa so I can re-add it?","label":"account_issue","metadata":{"source":"email"}}
+{"text":"honestly your new pricing is a joke. why would anyone pay this","label":"complaint","metadata":{"source":"chat"}}
+{"text":"any chance of a self-hosted option in the future or is it cloud-only forever","label":"general_question","metadata":{"source":"email"}}

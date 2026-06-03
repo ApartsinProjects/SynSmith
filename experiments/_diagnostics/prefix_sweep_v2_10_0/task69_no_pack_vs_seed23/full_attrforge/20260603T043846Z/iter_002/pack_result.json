@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.25,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "informal tone",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "long-winded explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "polite inquiries with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated use of 'could you please' or 'i am particularly interested'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures with multiple ideas",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of 'i have been attempting' or 'i’m really curious'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or action",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar structure in phrasing (e.g., 'need a refund', 'can you disable')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of 'do you' and 'is there' openers",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for beginnings of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific problems or complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and language (e.g., 'thanks', 'plz')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct complaints about service or product issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, concise sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific technical issues (e.g., 'filters don't apply', 'verification codes')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct requests for assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of detailed context or emotional expression",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures focusing on specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal request structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed explanations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific terminology",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "emotional expressions with emojis",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complaint about service or experience",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "request for cancellation or refund",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct and concise language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structure with a focus on issues",
+      "n_pairs_observed": 1
+    }
+  ]
+}

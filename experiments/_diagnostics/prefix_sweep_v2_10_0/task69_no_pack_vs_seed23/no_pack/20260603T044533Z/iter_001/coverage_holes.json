@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6404751406348741
+    },
+    {
+      "text": "do you have a student discount available? if yes how do I apply?",
+      "label": "general_question",
+      "p_real": 0.6392828253779506
+    },
+    {
+      "text": "subscription auto-renewed after I cancelled. please refund and confirm cancellation.",
+      "label": "refund_request",
+      "p_real": 0.6323388879766296
+    },
+    {
+      "text": "what's the difference between the pro and business tier exactly",
+      "label": "general_question",
+      "p_real": 0.6322836176685748
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

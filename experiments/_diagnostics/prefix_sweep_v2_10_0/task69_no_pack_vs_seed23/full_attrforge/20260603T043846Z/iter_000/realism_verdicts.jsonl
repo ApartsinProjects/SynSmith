@@ -1,0 +1,24 @@
+{"sample_id":"target_00012","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured."}
+{"sample_id":"target_00001","prediction":"synthetic","confidence":0.9,"reason":"casual language and uncertainty; real samples are more direct and formal."}
+{"sample_id":"target_00013","prediction":"real","confidence":0.85,"reason":"polite request; aligns with formal customer support inquiries."}
+{"sample_id":"target_00011","prediction":"real","confidence":0.9,"reason":"formal tone and structure; consistent with professional communication."}
+{"sample_id":"target_00003","prediction":"synthetic","confidence":0.85,"reason":"informal language and frustration; real samples are more formal."}
+{"sample_id":"R003","prediction":"synthetic","confidence":0.8,"reason":"informal and abrupt; real samples are more structured."}
+{"sample_id":"R015","prediction":"real","confidence":0.75,"reason":"direct inquiry about account issue; aligns with real samples."}
+{"sample_id":"R002","prediction":"real","confidence":0.85,"reason":"clear request for refund; matches formal complaint style."}
+{"sample_id":"R007","prediction":"real","confidence":0.8,"reason":"technical issue description; consistent with real samples."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"formal complaint about service delay; aligns with real samples."}
+{"sample_id":"target_00019","prediction":"synthetic","confidence":0.8,"reason":"informal tone and phrasing; real samples are more formal."}
+{"sample_id":"target_00010","prediction":"real","confidence":0.85,"reason":"formal request for policy clarification; aligns with real samples."}
+{"sample_id":"R010","prediction":"real","confidence":0.8,"reason":"technical issue description; matches formal complaint style."}
+{"sample_id":"R004","prediction":"real","confidence":0.85,"reason":"clear request for refund; aligns with formal complaint style."}
+{"sample_id":"R009","prediction":"real","confidence":0.75,"reason":"technical inquiry; consistent with real samples."}
+{"sample_id":"target_00007","prediction":"synthetic","confidence":0.9,"reason":"emotional and informal tone; real samples are more formal."}
+{"sample_id":"target_00018","prediction":"synthetic","confidence":0.85,"reason":"informal phrasing; real samples are more structured."}
+{"sample_id":"target_00014","prediction":"real","confidence":0.85,"reason":"formal request for assistance; aligns with real samples."}
+{"sample_id":"target_00015","prediction":"synthetic","confidence":0.9,"reason":"informal language and abbreviation; real samples are more formal."}
+{"sample_id":"R025","prediction":"real","confidence":0.75,"reason":"inquiry about product options; aligns with formal communication."}
+{"sample_id":"target_00022","prediction":"synthetic","confidence":0.85,"reason":"informal tone and uncertainty; real samples are more formal."}
+{"sample_id":"target_00017","prediction":"real","confidence":0.85,"reason":"formal request for technical assistance; aligns with real samples."}
+{"sample_id":"target_00005","prediction":"real","confidence":0.9,"reason":"formal request for clarification; matches real samples."}
+{"sample_id":"target_00006","prediction":"real","confidence":0.9,"reason":"formal expression of dissatisfaction; aligns with real samples."}

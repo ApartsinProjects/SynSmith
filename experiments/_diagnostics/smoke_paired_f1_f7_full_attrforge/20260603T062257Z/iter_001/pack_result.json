@@ -1,0 +1,103 @@
+{
+  "pack_accuracy": 0.625,
+  "confidence_mean": 0.9,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "long, complex sentences with multiple clauses",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "use of formal language and complete sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "polite requests for assistance or clarification",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "formal tone with polite inquiries",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of deep concern or frustration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "specific mention of timeframes (e.g., 'two days', 'three days')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing dissatisfaction with a detailed explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite requests with 'could you please' or 'i was wondering if'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentences with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of confusion or uncertainty about functionality ('very confusing', 'sometimes it seems like')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct complaints about specific issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical jargon without explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of first-person perspective in a problem context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing dissatisfaction with a rationale or explanation requested",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "complex sentence structures with multiple clauses",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal abbreviations (e.g., 'pls', 'quick one')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, abrupt sentences with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests without elaboration or explanation",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressive emotional language (e.g., 'i can't believe', 'outrageous', 'really disappointing')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "detailed descriptions of issues with context (e.g., mentioning updates, specific behaviors of the app)",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences with minimal context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent use of informal language and lowercase beginnings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of expressing a problem followed by a direct request",
+      "n_pairs_observed": 1
+    }
+  ]
+}

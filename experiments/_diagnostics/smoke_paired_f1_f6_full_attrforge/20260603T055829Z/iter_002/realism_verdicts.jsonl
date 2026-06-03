@@ -1,0 +1,24 @@
+{"sample_id":"R002","prediction":"synthetic","confidence":0.9,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00065","prediction":"real","confidence":0.95,"reason":"formal complaint style; matches the identified distribution."}
+{"sample_id":"target_00063","prediction":"real","confidence":0.95,"reason":"formal complaint style; matches the identified distribution."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.85,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R005","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00050","prediction":"real","confidence":0.9,"reason":"formal inquiry style; matches the identified distribution."}
+{"sample_id":"target_00057","prediction":"real","confidence":0.85,"reason":"formal inquiry style; matches the identified distribution."}
+{"sample_id":"target_00051","prediction":"real","confidence":0.9,"reason":"formal inquiry style; matches the identified distribution."}
+{"sample_id":"target_00047","prediction":"real","confidence":0.95,"reason":"formal complaint style; matches the identified distribution."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00059","prediction":"synthetic","confidence":0.75,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00064","prediction":"real","confidence":0.95,"reason":"formal complaint style; matches the identified distribution."}
+{"sample_id":"target_00048","prediction":"real","confidence":0.9,"reason":"formal complaint style; matches the identified distribution."}
+{"sample_id":"target_00055","prediction":"real","confidence":0.9,"reason":"formal inquiry style; matches the identified distribution."}
+{"sample_id":"target_00049","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R007","prediction":"synthetic","confidence":0.85,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00053","prediction":"synthetic","confidence":0.75,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R013","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.85,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R026","prediction":"synthetic","confidence":0.85,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.75,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}
+{"sample_id":"R011","prediction":"synthetic","confidence":0.8,"reason":"casual viewer voice; real samples are more formal and detailed."}

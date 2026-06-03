@@ -1,0 +1,24 @@
+{"sample_id":"target_00049","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and detailed."}
+{"sample_id":"target_00057","prediction":"real","confidence":0.9,"reason":"formal complaint structure; aligns with identified distribution."}
+{"sample_id":"R014","prediction":"synthetic","confidence":0.7,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"R023","prediction":"synthetic","confidence":0.7,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"target_00052","prediction":"real","confidence":0.85,"reason":"expresses dissatisfaction formally; matches real distribution."}
+{"sample_id":"target_00054","prediction":"synthetic","confidence":0.6,"reason":"simple query; lacks the formality of real samples."}
+{"sample_id":"R001","prediction":"synthetic","confidence":0.75,"reason":"informal and direct; real samples are more detailed."}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.7,"reason":"casual language; real samples are more formal."}
+{"sample_id":"R006","prediction":"synthetic","confidence":0.8,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"R028","prediction":"synthetic","confidence":0.65,"reason":"casual inquiry; real samples are more formal."}
+{"sample_id":"target_00061","prediction":"real","confidence":0.9,"reason":"formal complaint with details; aligns with real distribution."}
+{"sample_id":"target_00059","prediction":"real","confidence":0.85,"reason":"formal inquiry; matches identified distribution."}
+{"sample_id":"R000","prediction":"synthetic","confidence":0.75,"reason":"informal request; real samples are more formal."}
+{"sample_id":"R004","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more structured."}
+{"sample_id":"R029","prediction":"synthetic","confidence":0.7,"reason":"informal question; lacks formality of real samples."}
+{"sample_id":"target_00063","prediction":"real","confidence":0.9,"reason":"formal expression of dissatisfaction; aligns with real distribution."}
+{"sample_id":"R027","prediction":"synthetic","confidence":0.7,"reason":"informal inquiry; real samples are more formal."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more structured."}
+{"sample_id":"target_00055","prediction":"synthetic","confidence":0.6,"reason":"casual expression of frustration; real samples are more formal."}
+{"sample_id":"target_00062","prediction":"real","confidence":0.85,"reason":"formal request for assistance; matches identified distribution."}
+{"sample_id":"target_00044","prediction":"real","confidence":0.9,"reason":"formal complaint about a damaged item; aligns with real distribution."}
+{"sample_id":"R017","prediction":"synthetic","confidence":0.7,"reason":"informal tone; real samples are more structured."}
+{"sample_id":"R002","prediction":"synthetic","confidence":0.75,"reason":"casual phrasing; real samples are more formal."}
+{"sample_id":"R015","prediction":"synthetic","confidence":0.7,"reason":"informal request; real samples are more detailed."}

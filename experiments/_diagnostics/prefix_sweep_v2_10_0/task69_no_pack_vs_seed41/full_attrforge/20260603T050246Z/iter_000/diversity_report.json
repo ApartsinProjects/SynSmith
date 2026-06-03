@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a high level of surface diversity with a variety of intents and styles, but there are notable patterns in phrasing and structure that lead to nuance-level redundancy, particularly in emotional and informal styles. Several texts also reuse similar constructions, especially in account issues and complaints.",
+  "missing_modes": [
+    "formal complaint with detailed reasoning",
+    "concise technical problem description",
+    "emotional refund request with personal impact",
+    "informal general question with humor"
+  ],
+  "overrepresented_modes": [
+    "informal emotional expressions in complaints",
+    "fragmented questions about account issues",
+    "concise statements for refunds"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary for emotional and informal styles.",
+    "Introduce specific scenarios that require unique phrasing, such as unusual technical problems or complex refund situations.",
+    "Incorporate edge cases that challenge the user to articulate their issues in less common ways."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

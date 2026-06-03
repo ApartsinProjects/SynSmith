@@ -33,8 +33,20 @@ PACK_SYSTEM = (
     "pack comes from a single language model that produced variations on a "
     "theme. Decide which pack is the LLM pack. Look for repeated openers, "
     "repeated structures, repeated rhythms, vocabulary plateaus, and "
-    "stylistic tics that appear across multiple samples in the same pack. "
-    "Return JSON only."
+    "stylistic tics that appear across multiple samples in the same pack.\n\n"
+    "CRITICAL (Fix F2 / real-distribution gate): the shared_patterns field "
+    "must list ONLY patterns that distinguish the LLM pack FROM the real "
+    "pack. If a pattern appears in BOTH packs (e.g. 'short, direct sentences' "
+    "when both packs contain short direct sentences; 'informal tone with "
+    "minimal punctuation' when both packs are informal customer-support "
+    "texts; 'use of question marks' when both packs are inquiries), DO NOT "
+    "report it as a shared_pattern. That pattern characterises the target "
+    "distribution, not a synthesis artefact, and the updater would interpret "
+    "it as 'avoid the target register'.\n\n"
+    "Before listing each candidate pattern, check it against the real pack: "
+    "if the real pack samples ALSO exhibit the pattern, drop it. Only report "
+    "patterns that are systematically present in the LLM pack and "
+    "systematically absent (or rare) in the real pack. Return JSON only."
 )
 
 PACK_USER_TEMPLATE = """Pack A ({n_a} samples):
@@ -47,8 +59,14 @@ Output JSON:
 {{
   "llm_pack": "A" or "B",
   "confidence": 0.0 to 1.0,
-  "shared_patterns": ["<concrete phrase or structural pattern observed across multiple samples in the LLM pack>", ...]
+  "shared_patterns": ["<concrete phrase or structural pattern that appears in the LLM pack but NOT in the real pack>", ...]
 }}
+
+Reminder: shared_patterns are LLM-pack-EXCLUSIVE patterns. If a pattern is
+present in both the LLM pack and the real pack (i.e. it characterises the
+target distribution rather than an LLM artefact), do NOT list it. The
+updater will treat any listed pattern as something to suppress, so listing
+target-distribution patterns would corrupt the loop.
 """
 
 

@@ -1,0 +1,26 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there are notable redundancies in phrasing and structure, particularly in complaints and refund requests. Additionally, some scenarios are underrepresented, and certain styles are overused.",
+  "missing_modes": [
+    "A more formal complaint style that includes specific details about the issue.",
+    "A concise technical problem description that avoids fragmented sentences.",
+    "An emotional refund request that expresses frustration without being verbose."
+  ],
+  "overrepresented_modes": [
+    "Concise and fragmented styles in technical problems and general questions.",
+    "High ambiguity in refund requests and complaints, often using similar expressions."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage more varied sentence structures and vocabulary in refund requests and complaints.",
+    "Introduce scenarios that involve more complex account issues or technical problems.",
+    "Include examples of emotional expressions in refund requests that are not overly verbose."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

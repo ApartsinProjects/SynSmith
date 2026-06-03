@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a variety of intents and styles, but there is significant redundancy in phrasing and sentence structure, particularly in refund requests and account issues. Many texts follow similar patterns, leading to a lack of nuanced diversity.",
+  "missing_modes": [
+    "More complex emotional expressions in complaints.",
+    "Diverse scenarios for technical problems beyond common issues.",
+    "Unique phrasing for general questions that avoid typical templates."
+  ],
+  "overrepresented_modes": [
+    "Concise and informal styles dominate general questions.",
+    "Refund requests often use similar constructions, such as 'I would like to request a refund'.",
+    "Account issues frequently express frustration in similar ways."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary for refund requests and account issues.",
+    "Introduce more complex emotional tones in complaints to capture a wider range of customer sentiments.",
+    "Ensure that general questions explore a broader array of phrasing and context to avoid template-like responses."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{"sample_id":"R020","prediction":"synthetic","confidence":0.9,"reason":"casual viewer voice; real samples are professional customer service inquiries"}
+{"sample_id":"target_00056","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00052","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R017","prediction":"real","confidence":0.95,"reason":"concise and direct; matches the professional inquiry style"}
+{"sample_id":"target_00065","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00051","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R023","prediction":"real","confidence":0.95,"reason":"direct complaint; matches the professional inquiry style"}
+{"sample_id":"target_00053","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R026","prediction":"real","confidence":0.9,"reason":"professional inquiry; matches the formal style of real samples"}
+{"sample_id":"R011","prediction":"real","confidence":0.9,"reason":"technical issue report; matches the professional inquiry style"}
+{"sample_id":"target_00060","prediction":"real","confidence":0.9,"reason":"formal request for assistance; matches the professional inquiry style"}
+{"sample_id":"target_00045","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00057","prediction":"real","confidence":0.85,"reason":"formal request for assistance; matches the professional inquiry style"}
+{"sample_id":"R025","prediction":"real","confidence":0.85,"reason":"technical inquiry; matches the professional inquiry style"}
+{"sample_id":"target_00048","prediction":"synthetic","confidence":0.9,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R009","prediction":"real","confidence":0.9,"reason":"technical issue report; matches the professional inquiry style"}
+{"sample_id":"R007","prediction":"real","confidence":0.9,"reason":"technical issue report; matches the professional inquiry style"}
+{"sample_id":"target_00058","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"target_00063","prediction":"real","confidence":0.9,"reason":"formal request for assistance; matches the professional inquiry style"}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R027","prediction":"real","confidence":0.85,"reason":"direct inquiry; matches the professional inquiry style"}
+{"sample_id":"target_00066","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"direct complaint; matches the professional inquiry style"}
+{"sample_id":"target_00047","prediction":"synthetic","confidence":0.85,"reason":"casual tone; real samples are more formal and structured"}

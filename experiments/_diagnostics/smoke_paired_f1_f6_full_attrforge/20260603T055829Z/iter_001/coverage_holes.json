@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "Forgot my password and the reset email never arrives. Already checked spam.",
+      "label": "account_issue",
+      "p_real": 0.6383947953550368
+    },
+    {
+      "text": "your support told me 24h, it's been 4 days. unacceptable.",
+      "label": "complaint",
+      "p_real": 0.6432521775219942
+    },
+    {
+      "text": "do you have a student discount available? if yes how do I apply?",
+      "label": "general_question",
+      "p_real": 0.65099977315412
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.6367765921080022
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

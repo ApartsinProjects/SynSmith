@@ -1,0 +1,143 @@
+{
+  "pack_accuracy": 0.375,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "concise sentences with minimal elaboration",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "repeated structure of stating a problem followed by a request for help",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "direct requests for refunds or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, blunt sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone with minimal elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions posed in a straightforward manner",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and casual phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive structure in question format",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase for beginnings of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for action (e.g., 'cancel my plan', 'please refund and confirm cancellation')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and to-the-point statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations (e.g., 'u' for 'you')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frustration expressed in a straightforward manner without excessive detail",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct complaints",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal language and abbreviations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of casual language and abbreviations (e.g., 'u', 'hey')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more conversational sentences with additional context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "frequent expressions of frustration or urgency",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "excessive use of exclamatory sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "longer, more complex sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration or dissatisfaction",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "personal anecdotes or references to friends",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repetitive phrasing around issues with subscriptions and orders",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hey' or 'hey there!'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressing frustration or urgency in a dramatic tone",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account access or refunds",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of asking for help or assistance",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "exclamation marks to convey emotion",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise questions or statements",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests for help",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "similar sentence structures",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of technical terms related to apps and accounts",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of emotional expression",
+      "n_pairs_observed": 1
+    }
+  ]
+}

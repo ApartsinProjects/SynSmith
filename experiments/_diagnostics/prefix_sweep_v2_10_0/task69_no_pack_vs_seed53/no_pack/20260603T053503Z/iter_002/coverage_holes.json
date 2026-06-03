@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6302519632049085
+    },
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6288966748026044
+    },
+    {
+      "text": "csv import keeps timing out at ~3000 rows. is there a row limit nobody documented?",
+      "label": "technical_problem",
+      "p_real": 0.6196079208630766
+    },
+    {
+      "text": "card was charged for the annual plan, I only meant monthly, can you fix this",
+      "label": "refund_request",
+      "p_real": 0.6184880852530729
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

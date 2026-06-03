@@ -1,0 +1,30 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I’m really unhappy with the service; I think it’s below standard!!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of dissatisfaction with service quality is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I need to see something important related to my kids’ school",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase reflects a personal context that is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’m really unhappy with the service; I think it’s below standard!!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of dissatisfaction with service quality is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I need to see something important related to my kids’ school",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase reflects a personal context that is not found in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

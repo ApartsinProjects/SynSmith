@@ -1,0 +1,25 @@
+{
+  "summary": "The batch exhibits a high degree of surface-level diversity across intents and styles, but there is significant redundancy in phrasing and structure, particularly in refund requests and technical problems. Many samples utilize similar constructions and vocabulary, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "A more varied emotional tone in complaints beyond frustration, such as disappointment or urgency.",
+    "Different scenarios for account issues that involve security concerns or account recovery processes."
+  ],
+  "overrepresented_modes": [
+    "Concise and fragmented styles are heavily used, especially in technical problems and complaints.",
+    "Refund requests often follow a similar structure, focusing on the missing item without much variation in expression."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more diverse sentence structures and vocabulary, particularly for refund requests and technical problems.",
+    "Introduce scenarios that explore less common issues, such as account recovery or security breaches, to enhance the richness of account-related texts.",
+    "Vary the emotional tones in complaints to include a broader range of feelings beyond frustration."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

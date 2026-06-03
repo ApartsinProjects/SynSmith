@@ -1,0 +1,155 @@
+{
+  "pack_accuracy": 0.5,
+  "confidence_mean": 0.875,
+  "n_comparisons": 8,
+  "shared_patterns": [
+    {
+      "pattern": "requests for assistance or clarification",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "short, abrupt sentences",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "expressions of frustration or urgency",
+      "n_pairs_observed": 2
+    },
+    {
+      "pattern": "dear customer support/support team",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i am currently facing an issue with",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "could you please",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i noticed that i was charged",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i am unable to",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i have not received",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of informal greetings like 'hi' or 'hey'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "questions about account issues or features",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and direct phrasing",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations like 'mfa' and 'api'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "lack of formal greetings or closings",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct requests without elaboration",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of lowercase letters at the beginning of sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for updates or clarifications",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of polite language and formal structure",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct address to a support team",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "variations of asking for refunds or cancellations",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "short, direct sentences",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "informal tone and lack of capitalization",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "requests for assistance or information",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of abbreviations like 'asap'",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "focus on specific issues without detailed context",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "direct address to a team or support",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "concise and informal language",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of rhetorical questions",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "hey, quick question.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i can't log in to my account.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "just wanted to know if there are any scheduled downtimes.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "i was informed by your customer service that the issue would be resolved.",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "expressions of frustration regarding delays or issues",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "formal and informal tones mixed within the same pack",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "use of specific time frames (e.g., 'last week', 'over a week')",
+      "n_pairs_observed": 1
+    },
+    {
+      "pattern": "repeated structure of stating an issue followed by a request for help",
+      "n_pairs_observed": 1
+    }
+  ]
+}

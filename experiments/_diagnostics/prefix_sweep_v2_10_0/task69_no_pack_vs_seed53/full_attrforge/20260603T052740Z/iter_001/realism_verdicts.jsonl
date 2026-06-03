@@ -1,0 +1,23 @@
+{"sample_id":"target_00031","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal and direct."}
+{"sample_id":"target_00038","prediction":"synthetic","confidence":0.9,"reason":"informal language and abbreviations; real samples are more structured."}
+{"sample_id":"R018","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more formal."}
+{"sample_id":"R008","prediction":"real","confidence":0.85,"reason":"technical language and structured request; matches real samples."}
+{"sample_id":"target_00035","prediction":"synthetic","confidence":0.75,"reason":"casual expression of frustration; real samples are more concise."}
+{"sample_id":"R000","prediction":"real","confidence":0.9,"reason":"clear and direct request; aligns with real samples."}
+{"sample_id":"R013","prediction":"real","confidence":0.85,"reason":"technical issue described clearly; matches real samples."}
+{"sample_id":"R012","prediction":"real","confidence":0.9,"reason":"direct and urgent request; aligns with real samples."}
+{"sample_id":"target_00030","prediction":"synthetic","confidence":0.8,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00040","prediction":"synthetic","confidence":0.75,"reason":"informal expression of frustration; real samples are more structured."}
+{"sample_id":"R001","prediction":"real","confidence":0.85,"reason":"clear and direct request; aligns with real samples."}
+{"sample_id":"R004","prediction":"real","confidence":0.9,"reason":"concise and direct request; matches real samples."}
+{"sample_id":"target_00022","prediction":"real","confidence":0.9,"reason":"formal tone and structured request; aligns with real samples."}
+{"sample_id":"target_00025","prediction":"synthetic","confidence":0.7,"reason":"informal phrasing; real samples are more formal."}
+{"sample_id":"R019","prediction":"synthetic","confidence":0.8,"reason":"informal and emotional tone; real samples are more structured."}
+{"sample_id":"R028","prediction":"real","confidence":0.85,"reason":"clear inquiry; aligns with real samples."}
+{"sample_id":"R023","prediction":"real","confidence":0.9,"reason":"formal complaint; matches real samples."}
+{"sample_id":"target_00024","prediction":"real","confidence":0.85,"reason":"formal request for refund; aligns with real samples."}
+{"sample_id":"target_00027","prediction":"synthetic","confidence":0.75,"reason":"casual tone; real samples are more formal."}
+{"sample_id":"target_00029","prediction":"synthetic","confidence":0.8,"reason":"informal language and errors; real samples are more polished."}
+{"sample_id":"R027","prediction":"real","confidence":0.85,"reason":"clear inquiry; aligns with real samples."}
+{"sample_id":"R021","prediction":"real","confidence":0.9,"reason":"formal complaint about service delay; matches real samples."}
+{"sample_id":"R011","prediction":"real","confidence":0.85,"reason":"technical issue described clearly; aligns with real samples."}

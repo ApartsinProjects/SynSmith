@@ -1,0 +1,42 @@
+{
+  "new_findings": [
+    {
+      "pattern": "I’m really upset because",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing expressing frustration does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I am experiencing an unusual issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal expression of experiencing an issue is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can’t believe how long it’s taking",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of disbelief regarding time taken for resolution is not found in real samples.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’m really upset because",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific phrasing expressing frustration does not appear in the real samples.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I am experiencing an unusual issue",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal expression of experiencing an issue is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I can’t believe how long it’s taking",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of disbelief regarding time taken for resolution is not found in real samples.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

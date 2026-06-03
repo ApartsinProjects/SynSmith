@@ -1,0 +1,28 @@
+{
+  "summary": "The batch exhibits a high level of redundancy in phrasing and structure, particularly in the complaint and refund request categories, with many samples using similar constructions and expressions. There is also a lack of nuanced scenarios, particularly in the technical problem and account issue intents.",
+  "missing_modes": [
+    "formal complaint structure",
+    "technical problem with specific error messages",
+    "emotional appeal in refund requests",
+    "complex account issues involving multiple factors"
+  ],
+  "overrepresented_modes": [
+    "informal language in general questions",
+    "fragmented style in refund requests",
+    "concise complaints with minimal detail"
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more varied sentence structures and vocabulary, especially for refund requests and complaints.",
+    "Include prompts for more complex scenarios that involve multiple issues or detailed technical problems.",
+    "Diversify the emotional tone in refund requests to include more varied expressions of frustration or urgency."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

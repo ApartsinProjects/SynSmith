@@ -1,0 +1,54 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Could you please assist me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This polite request structure is unique to the synthetic samples and not found in the real ones.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I thought this was going to be great, but",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of disappointment is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "I’m really unhappy with the service; I think it’s below standard!!",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of dissatisfaction with service quality is unique to the synthetic batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I need to see something important related to my kids’ school",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This phrase reflects a personal context that is not found in the real batch.",
+      "introduced_at_iteration": 0
+    },
+    {
+      "pattern": "I regret to inform you that",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This formal opening is not found in any real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "So, um, I should've gotten",
+      "n_synthetic_occurrences": 1,
+      "rationale": "The use of 'So, um,' as an opener is informal and not seen in real samples.",
+      "introduced_at_iteration": 1
+    },
+    {
+      "pattern": "Could you please assist me?",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This polite request structure is unique to the synthetic samples and not found in the real ones.",
+      "introduced_at_iteration": 2
+    },
+    {
+      "pattern": "I thought this was going to be great, but",
+      "n_synthetic_occurrences": 1,
+      "rationale": "This specific expression of disappointment is not present in the real batch.",
+      "introduced_at_iteration": 2
+    }
+  ]
+}

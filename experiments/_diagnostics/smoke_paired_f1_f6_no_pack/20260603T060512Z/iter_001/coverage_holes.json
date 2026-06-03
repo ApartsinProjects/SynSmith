@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.636477094997112
+    },
+    {
+      "text": "I want my money back. this product does not do what your ads claim.",
+      "label": "complaint",
+      "p_real": 0.630874203503054
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6516766702841087
+    },
+    {
+      "text": "got the wrong size, want my money back not a store credit thanks",
+      "label": "refund_request",
+      "p_real": 0.64290430955792
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

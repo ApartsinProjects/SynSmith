@@ -1,0 +1,18 @@
+{
+  "new_findings": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ],
+  "banned_library": [
+    {
+      "pattern": "Hey, so",
+      "n_synthetic_occurrences": 2,
+      "rationale": "This informal opener appears multiple times in the synthetic batch but is absent in the real batch.",
+      "introduced_at_iteration": 0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "summary": "The batch exhibits a high degree of surface diversity in terms of intent and style, but there is significant redundancy in phrasing and sentence structure, particularly among complaint and refund requests. Many texts utilize similar constructions, leading to a lack of nuanced expression.",
+  "missing_modes": [
+    "More varied emotional expressions in complaints, such as frustration or disappointment, beyond just 'unacceptable' or 'ridiculous'.",
+    "Different ways to express confusion or requests for clarification that do not rely on common phrases."
+  ],
+  "overrepresented_modes": [
+    "The phrase 'Can you help?' appears frequently across various intents, particularly in complaints and account issues.",
+    "Common constructions like 'I need help with...' or 'I'm not sure...' are overused, especially in technical problems and account issues."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more unique sentence structures and vocabulary to express similar intents, especially in refund requests and complaints.",
+    "Introduce prompts that require the use of varied emotional tones and expressions to enhance the richness of the texts."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "summary": "The batch exhibits a high degree of surface-level diversity in terms of intent and style, but there is significant redundancy in phrasing and sentence structure, particularly in complaints and refund requests. Many texts utilize similar constructions and expressions, leading to a lack of nuanced variation.",
+  "missing_modes": [
+    "A more varied range of emotional expressions in complaints and refund requests.",
+    "Different ways to express technical problems beyond common phrases.",
+    "More formal inquiries in general questions."
+  ],
+  "overrepresented_modes": [
+    "Concise and emotional styles in complaints and refund requests.",
+    "Fragmented style in general questions and refund requests.",
+    "Common phrases like 'I can't believe' and 'I would like to request' are frequently reused."
+  ],
+  "near_duplicate_rate": 0.25,
+  "recommendations": [
+    "Encourage the generation of more unique sentence structures and vocabulary for each intent, especially for complaints and refund requests.",
+    "Introduce prompts that require the use of less common expressions or idioms to enhance emotional depth.",
+    "Diversify the scenarios by including more edge cases and rare situations that require creative problem-solving."
+  ],
+  "coverage": {
+    "intent": 1.0,
+    "difficulty": 1.0,
+    "ambiguity": 1.0,
+    "style": 1.0,
+    "noise": 1.0,
+    "scenario_type": 1.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6294137133984021
+    },
+    {
+      "text": "ordered Tuesday, said 2-day shipping, it's been 6 days, where is my package",
+      "label": "complaint",
+      "p_real": 0.624288886857371
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6441799797755041
+    },
+    {
+      "text": "transaction failed but money was deducted. screenshot attached.",
+      "label": "refund_request",
+      "p_real": 0.6380069449291143
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}

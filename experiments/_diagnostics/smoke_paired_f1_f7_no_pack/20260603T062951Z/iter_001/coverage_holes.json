@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "I changed my email and now I can't receive verification codes on the new one",
+      "label": "account_issue",
+      "p_real": 0.6205713131080243
+    },
+    {
+      "text": "honestly your new pricing is a joke. why would anyone pay this",
+      "label": "complaint",
+      "p_real": 0.6303750874245873
+    },
+    {
+      "text": "Hi team, quick one - does the API have a rate limit on the search endpoint?",
+      "label": "general_question",
+      "p_real": 0.6396891686458622
+    },
+    {
+      "text": "ordered 2 items, only got 1. want a refund on the missing one, not a reship.",
+      "label": "refund_request",
+      "p_real": 0.6386864994737164
+    }
+  ],
+  "classifier_auroc": 0.9982954545454545,
+  "notes": ""
+}

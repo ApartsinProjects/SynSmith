@@ -1,0 +1,26 @@
+{
+  "holes": [
+    {
+      "text": "two factor codes never come through, I've been locked out for 2 days now",
+      "label": "account_issue",
+      "p_real": 0.6379503956333958
+    },
+    {
+      "text": "is the pro plan billed monthly or yearly?",
+      "label": "general_question",
+      "p_real": 0.6339371697097318
+    },
+    {
+      "text": "csv import keeps timing out at ~3000 rows. is there a row limit nobody documented?",
+      "label": "technical_problem",
+      "p_real": 0.6314520779077496
+    },
+    {
+      "text": "When I click checkout nothing happens, just a spinner forever. I'm on Safari 17.",
+      "label": "technical_problem",
+      "p_real": 0.6297657128472394
+    }
+  ],
+  "classifier_auroc": 1.0,
+  "notes": ""
+}
