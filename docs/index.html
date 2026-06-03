@@ -96,8 +96,9 @@
   All of these methods optimize one signal at a time. S3 and ProGen optimize for downstream validation accuracy; TarGEN for label correctness; ARISE for rule satisfaction; PACE for lexical diversity; AttrPrompt for attribute coverage at generation time. SynSmith runs a multi-critic stack in which seven critics (three baseline plus four GAN-style adversaries) each emit named, falsifiable complaints, and the prompt updater is asked to satisfy them jointly. The critic-coverage matrix below makes the structural difference explicit:
 </p>
 
-<figure>
-  <table class="critic-coverage">
+<div class="table-wrap">
+  <table class="critic-coverage critic-coverage-table">
+    <caption><strong>Table 0: Critic-coverage matrix.</strong> SynSmith is the only entry with all four GAN-style adversaries (Realism Discriminator, Pack Discriminator, Mode-Seeking, Mode Hunter) and the only one that combines them with a Coverage Hole Finder and a multi-critic Updater. AttrPrompt establishes attribute conditioning but is a one-shot generator; S3, ProGen, TarGEN, ARISE, and PACE all run iterative loops but on a single objective. Reflexion, Self-Refine, DSPy, and TextGrad optimize single outputs / prompts, not data distributions.</caption>
     <thead>
       <tr>
         <th>Critic role</th>
@@ -123,8 +124,7 @@
       <tr><td>Prompt Updater</td><td>&#10003;</td><td>&ndash; (one-shot)</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr>
     </tbody>
   </table>
-  <figcaption><strong>Table 0: Critic-coverage matrix.</strong> SynSmith is the only entry with all four GAN-style adversaries (Realism Discriminator, Pack Discriminator, Mode-Seeking, Mode Hunter) and the only one that combines them with a Coverage Hole Finder and a multi-critic Updater. AttrPrompt establishes attribute conditioning but is a one-shot generator; S3, ProGen, TarGEN, ARISE, and PACE all run iterative loops but on a single objective. Reflexion, Self-Refine, DSPy, and TextGrad optimize single outputs / prompts, not data distributions.</figcaption>
-</figure>
+</div>
 
 <p>
   PerFine <a class="cite" href="#ref-perfine">[45]</a> is the closest 2025 analog of our "named complaints, not scalar rewards" feedback contract: it emits structured complaints along four named dimensions (tone, vocabulary, sentence structure, topicality) and uses a cross-iteration knockout. PerFine reports $+7.8$ to $+13.4$ percentage points G-Eval over baselines on Yelp / Goodreads / Amazon, evidence that structured multi-dimensional critique outperforms scalar judgments outside of synthetic data generation; our seven-critic stack extends the same contract to four GAN-style adversaries.
