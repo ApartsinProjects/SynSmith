@@ -738,7 +738,7 @@ $$
 
 <ul>
   <li><strong>Validated regime.</strong> All headline numbers are at $6$ to $30$ real-train examples per class (Section 6.5); the framework's behaviour at $&lt; 3$ per class (the anchoring floor) and at $\gtrsim 100$ per class (where a real-only classifier is already strong) is not characterized in this paper.</li>
-  <li><strong>Two intent-classification tasks.</strong> The empirical results are established on customer-support (5 classes, $40$ real examples, $10$-item held-out test, $10$ seeds) and a Banking77 card-and-payment subset (10 classes, $300$ real-train, $400$ held-out test, $5$ seeds). Replication across instruction-following, summarization, dialogue, and other generation regimes is the natural next direction.</li>
+  <li><strong>Classification scope.</strong> The empirical results are established on single-label classification (customer-support, Banking77, SST-2, TREC). NLI and other classification tasks fit the released artifact unchanged; sequence labeling (NER, POS) and open-ended generation (summarization, translation, paraphrase, dialogue) require task-specific Verifier and evaluator components. The extension paths are sketched in Section 11.7.</li>
   <li><strong>Single backend.</strong> All critics, the generator, and the updater use <code>gpt-4o-mini</code>. A multi-vendor judge ensemble (e.g., claude-3-haiku $+$ gpt-4o-mini $+$ gemini-flash) would diversify the realism signal across model families and is a natural addition to the framework.</li>
   <li><strong>Symmetry asymmetry.</strong> Pack Discriminator and Mode Hunter emit "named complaints" (pack patterns, banned substrings) that the updater consumes natively. Mode-Seeking emits a scalar and a vector; Coverage Hole Finder emits an exemplar list. Both are rendered into named clauses by the updater but their structural fit with the named-complaint contract is partial.</li>
   <li><strong>Pack discriminator audit cardinality.</strong> The audit uses $n_{\text{comparisons}} = 16$ in vs $4$ in the loop, which quantizes pack accuracy to $17$ values. Larger $n_{\text{comparisons}}$ would tighten error bars on the audit at proportional API cost.</li>
@@ -853,6 +853,28 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 
 <p>
   The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern (failure mode, protocol, ablation flag, loop registration, unit test) plus contributions for new datasets, new backends, and new aggregation scripts. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
+</p>
+
+<h3 id="sec-beyond-classification"><span class="subsection-num">11.7</span>Beyond classification</h3>
+
+<p>
+  The empirical results are established on single-label classification: four benchmarks (SST-2, Banking77, TREC, customer-support intent) where the schema names one categorical <code>label_attribute</code>, the Verifier enforces class-primary fidelity, and the downstream evaluator trains a sentence-transformer plus logistic-regression classifier on the synthetic batch. The released artifact is shaped around that regime. The seven-critic loop, the structured-feedback contract, the four GAN-style adversaries, and the post-hoc audit are not themselves classification-specific; they operate on a text batch and on a real seed of comparable texts, irrespective of whether the downstream task is classification, regression, sequence labeling, or open-ended generation. Three extension paths are visible from the present implementation.
+</p>
+
+<p>
+  <em>Drop-in tasks (no code change).</em> Natural language inference (entailment / contradiction / neutral), multi-class topic classification on novel taxonomies, dialect identification, and any other single-label classification task fit the existing schema and evaluator. The schema lists the class values, the planner balances per class, and the loop runs unchanged. Multi-label classification fits with a small refactor (planner and class-primary Verifier need to treat the label as a set rather than a scalar).
+</p>
+
+<p>
+  <em>Sequence labeling (NER, POS, slot-filling, chunking).</em> The schema needs a per-token or per-span label rather than a single class. The Verifier becomes a span-aware checker (does the entity span exist in the text and match the requested type?) and the downstream evaluator becomes span-F1 via seqeval. Coverage Hole Finder generalises to span-level density estimation. The four GAN-style adversaries are span-agnostic and transfer unchanged. The structural-feedback contract is unaffected.
+</p>
+
+<p>
+  <em>Open-ended generation (summarization, translation, paraphrase, dialogue, code synthesis).</em> The largest extension: there is no discrete class to verify. The Verifier's role becomes <em>constraint-checking</em> (does the summary preserve the key facts? does the translation respect the requested register? does the code parse and run on the test cases?), and the downstream evaluator becomes reference-based (BLEU, ROUGE, COMET) or judge-based (an LLM scoring the output against rubric criteria). Cross-condition ensembling switches from logit-averaging to self-consistency voting or output reranking. The four GAN-style adversaries, the post-hoc audit, and the structured-feedback contract carry over without redesign.
+</p>
+
+<p>
+  In each case the loop architecture is the constant and the task-specific surfaces (schema, Verifier role, evaluator, ensemble combiner) are the variables. The contribution this paper validates is the loop architecture and the cross-condition evaluation lens; transfer to non-classification tasks is left to follow-up work, with the engineering paths above offered as a roadmap.
 </p>
 
 <!-- ============================================================ -->
