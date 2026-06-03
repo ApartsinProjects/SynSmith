@@ -411,74 +411,10 @@ $$
 <!-- ============================================================ -->
 <h2 id="sec-results"><span class="section-num">7</span>Results</h2>
 
-<h3><span class="subsection-num">7.1</span>Augmentation: reaching the real-only ceiling</h3>
+<h3 id="sec-aug-pointer"><span class="subsection-num">7.1</span>Augmentation: reaching the real-only ceiling</h3>
 
 <p>
-  The realistic deployment of LLM-generated synthetic data is augmentation of a small real labeled set. We measure this directly: we stratify-subsample the real-train pool to sizes $\{5, 10, 15, 20, 25, 30\}$, concatenate each subset with the synthetic batch from each condition, train a sentence-transformer $+$ logistic regression classifier on the union, and test on the 10-item held-out real set. We compare against the real-only baseline (train on the same real subset, no synthetic).
-</p>
-
-<figure>
-  <img src="figures/main_run_002_scarce_real.png" alt="Augmentation downstream F1 vs real-train size" />
-  <figcaption>Figure 2: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) as a function of real-train size on customer-support intent classification, comparing each iterated condition against the no-augmentation real-only baseline (dashed black). Mean $\pm$ std across $10$ seeds. At very-scarce real ($n = 5$), every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$, with <code>full_classic</code> giving the largest lift ($+0.127$, F1 $0.759 \pm 0.065$ vs real-only $0.632 \pm 0.139$). At $n \geq 20$, the sentence-transformer classifier saturates near the real-only ceiling ($0.893 \pm 0.075$ at $n = 20$, $0.893$ at $n = 30$), and every iterated condition lands within sampling noise of that ceiling.</figcaption>
-</figure>
-
-<div class="table-wrap">
-<table>
-<caption>Table 3: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) on customer-support, under varying real-train sizes. Mean $\pm$ std across $10$ seeds. Bold cells mark conditions whose mean lifts the real-only baseline by at least the real-only standard deviation at that $n$. Every iterated condition delivers a scarce-real win at $n = 5$; at $n \geq 20$ all conditions land within sampling noise of the real-only ceiling, which the sentence-transformer classifier saturates at around $20$ real examples.</caption>
-<thead>
-<tr>
-  <th class="num">$n_{\text{real}}$</th>
-  <th class="num">real-only</th>
-  <th class="num">few_shot</th>
-  <th class="num">self_critique</th>
-  <th class="num">realism_only</th>
-  <th class="num">diversity_only</th>
-  <th class="num">full_classic</th>
-  <th class="num">full_attrforge</th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="num">5</td><td class="num">0.632 $\pm$ 0.139</td><td class="num"><strong>0.705 $\pm$ 0.100</strong></td><td class="num"><strong>0.699 $\pm$ 0.150</strong></td><td class="num"><strong>0.741 $\pm$ 0.154</strong></td><td class="num"><strong>0.752 $\pm$ 0.142</strong></td><td class="num"><strong>0.759 $\pm$ 0.065</strong></td><td class="num"><strong>0.688 $\pm$ 0.096</strong></td></tr>
-<tr><td class="num">10</td><td class="num">0.792 $\pm$ 0.097</td><td class="num">0.807 $\pm$ 0.127</td><td class="num">0.796 $\pm$ 0.143</td><td class="num">0.784 $\pm$ 0.168</td><td class="num">0.762 $\pm$ 0.148</td><td class="num">0.805 $\pm$ 0.094</td><td class="num">0.747 $\pm$ 0.141</td></tr>
-<tr><td class="num">20</td><td class="num">0.915 $\pm$ 0.067</td><td class="num">0.899 $\pm$ 0.073</td><td class="num">0.843 $\pm$ 0.172</td><td class="num">0.883 $\pm$ 0.118</td><td class="num">0.869 $\pm$ 0.074</td><td class="num">0.857 $\pm$ 0.103</td><td class="num">0.859 $\pm$ 0.094</td></tr>
-<tr><td class="num">30</td><td class="num">0.893 $\pm$ 0.000</td><td class="num"><strong>0.909 $\pm$ 0.080</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num"><strong>0.911 $\pm$ 0.092</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num">0.873 $\pm$ 0.093</td><td class="num">0.872 $\pm$ 0.095</td></tr>
-</tbody>
-</table>
-</div>
-
-<p>
-  Two patterns are visible. <strong>(i) Synthetic data is most valuable when real is scarce.</strong> At $n = 5$, every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$, with <code>full_classic</code> delivering the largest lift (F1 $0.759 \pm 0.065$ vs real-only $0.632 \pm 0.139$, a $2.1\times$ variance reduction). The high-attribute-fidelity baselines provide the keyword anchors a 5-sample real set lacks. <strong>(ii) Solo conditions saturate near the real-only ceiling at $n \geq 20$ without differentiating each other.</strong> At $n_{\text{real}} = 20$ the sentence-transformer classifier saturates at $0.915$; at $n_{\text{real}} = 30$ the real-only ceiling lands at $0.893$. Every iterated condition lands within one real-only standard deviation of this ceiling: <code>realism_only</code> ($0.911$), <code>self_critique</code> ($0.904$), <code>diversity_only</code> ($0.904$), and <code>few_shot</code> ($0.909$) match or slightly exceed the ceiling, while <code>full_classic</code> ($0.873$) and <code>full_attrforge</code> ($0.872$) sit one standard deviation below it. The solo-classifier paths do not differentiate the seven-critic loop from the three-critic baseline on customer-support; the differentiation appears at the cross-condition ensemble level (Section 7.3), where logit-averaging two iterated conditions lifts macro F1 to $0.947 \pm 0.056$ with BCa CI $[+0.009, +0.141]$ over <code>full_classic</code> solo. The cross-domain replication on Banking77 (Section 7.4) extends the scarce-real win to a $10$-class task at $5\times$ the test-set size with $\geq 4\times$ macro variance reduction at $n = 10$.
-</p>
-
-<figure>
-  <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30: ensemble wins on every class" />
-  <figcaption>Figure 3: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support intent classification (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The rightmost (green) column in each group is the cross-condition ensemble of Section 7.3, <code>self_critique + full_attrforge</code> logit-averaged. The ensemble matches or improves on real-only across all five classes, with the largest lifts on the two harder classes (<code>complaint</code> $0.67 \to 0.83$, $+0.16$; <code>general_question</code> $0.80 \to 0.90$, $+0.10$). On <code>complaint</code> in particular, every solo iterated condition has high seed-variance ($\sigma \geq 0.27$); the ensemble reduces $\sigma$ to $0.18$ ($1.9\times$ variance reduction) while lifting the mean by $+0.20$ over the seven-critic loop alone.</figcaption>
-</figure>
-
-<div class="table-wrap">
-<table>
-<caption>Table 4: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support (sentence-transformer $+$ logistic regression, mean $\pm$ std across $10$ seeds). The right column is the cross-condition ensemble of Section 7.3, logit-averaging <code>self_critique</code> and the seven-critic loop. Bold marks the ensemble: it is the only column that lifts both hard classes (<code>complaint</code> $+0.16$, <code>general_question</code> $+0.10$) while holding the saturated three at $1.00$.</caption>
-<thead>
-<tr>
-  <th>class</th>
-  <th class="num">real-only</th>
-  <th class="num"><code>full_classic</code> (solo)</th>
-  <th class="num"><code>full_attrforge</code> (solo)</th>
-  <th class="num">ENS (<code>sc + af</code>)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td><code>account_issue</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
-<tr class="highlight"><td><code>complaint</code></td><td class="num">0.67</td><td class="num">0.63 $\pm$ 0.37</td><td class="num">0.60 $\pm$ 0.34</td><td class="num"><strong>0.83 $\pm$ 0.18</strong></td></tr>
-<tr><td><code>general_question</code></td><td class="num">0.80</td><td class="num">0.80 $\pm$ 0.12</td><td class="num">0.81 $\pm$ 0.11</td><td class="num"><strong>0.90 $\pm$ 0.11</strong></td></tr>
-<tr><td><code>refund_request</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">0.98 $\pm$ 0.06</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
-<tr><td><code>technical_problem</code></td><td class="num">1.00</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.97 $\pm$ 0.11</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
-</tbody>
-</table>
-</div>
-
-<p>
-  The cross-condition ensemble is the cleanest reading of the framework's per-class contribution. On the three classes the real-only baseline already saturates (<code>account_issue</code>, <code>refund_request</code>, <code>technical_problem</code>), the ensemble holds the $1.00$ ceiling. On the two harder classes (where the seven-critic loop alone underperforms real-only because synthetic samples can crowd out the limited real exemplars at $n = 30$), the ensemble lifts the mean and shrinks the variance: <code>complaint</code> goes from real-only $0.67$ to $0.83 \pm 0.18$ ($+0.16$ mean, $1.9\times$ variance reduction over the seven-critic loop solo), and <code>general_question</code> goes from $0.80$ to $0.90 \pm 0.11$ ($+0.10$ mean). The mechanism (Section 7.3) is that the two ensembled conditions ($self\_critique$ and the seven-critic loop) train classifiers with complementary decision boundaries on the same downstream classifier head; logit-averaging extracts the shared signal where they agree and softens the boundary where they disagree.
+  The augmentation regime (concatenating a small real-train pool with the synthetic batch and training the downstream classifier on the union) and its per-class breakdown on customer-support intent classification are reported in <a href="#sec-appendix-augmentation">Appendix D</a>. The two findings the body builds on are: synthetic augmentation is most valuable at the scarce-real extreme ($n_{\text{real}} = 5$ shows lifts of $+0.05$ to $+0.13$ macro F1), and the per-class ensemble result of Section 7.3 holds the saturated classes at $1.00$ while lifting the hard ones (<code>complaint</code> $0.67 \to 0.83$, <code>general_question</code> $0.80 \to 0.90$).
 </p>
 
 <h3><span class="subsection-num">7.2</span>Direct diversity measurements</h3>
@@ -622,41 +558,10 @@ $$
   The customer-support solo numbers above show all four leave-one-out variants matching or beating SynSmith solo, which is the empirical opening for cross-condition ensembling: each GAN-style adversary moves the synthetic distribution along a different axis, no single solo configuration dominates, and the headline downstream result (Table 10, macro F1 $0.947 \pm 0.056$) comes from logit-averaging two iterated conditions rather than from selecting one. The post-hoc adversary audit (Section 8) corroborates the per-component attribution: Pack Discriminator and Mode Hunter pass the real-vs-real null reference and contribute distinct per-class lift on the failure modes they were designed to attack (Pack on in-batch register repetition, Mode Hunter on opener phrasings), while Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The Banking77 cross-task headline (Section 7.5, $0.876 \pm 0.012$, $5.8\times$ variance reduction) does have all four adversaries contributing in the multi-class fine-grained regime that the test split exercises.
 </p>
 
-<h3 id="sec-banking77"><span class="subsection-num">7.4</span>Cross-domain replication on Banking77</h3>
+<h3 id="sec-banking77"><span class="subsection-num">7.4</span>Cross-domain replication on Banking77 (augmentation regime)</h3>
 
 <p>
-  Customer-support intent classification saturates at macro F1 $0.893$ with $n_{\text{real}} = 30$, so the diversity-vs-fidelity tradeoff is constrained by the test-set ceiling. We replicate the augmentation protocol on a Banking77 <a class="cite" href="#ref-banking77">[41]</a> subset: $10$ card-and-payment intent classes (<code>card_arrival</code>, <code>card_not_working</code>, <code>card_payment_fee_charged</code>, <code>card_payment_not_recognised</code>, <code>card_payment_wrong_exchange_rate</code>, <code>card_swallowed</code>, <code>cash_withdrawal_charge</code>, <code>cash_withdrawal_not_recognised</code>, <code>change_pin</code>, <code>compromised_card</code>), $300$ train and $400$ held-out test examples, $5$ seeds, the same seven conditions, the same backend, and the same hyperparameters.
-</p>
-
-<div class="table-wrap">
-<table>
-<caption>Table 11: Banking77 cross-domain augmentation. Macro F1 and worst-class F1 across $5$ seeds, sentence-transformer $+$ logistic regression. The scarce-real extreme ($n_{\text{real}} = 10$) is where synthetic augmentation contributes the largest lift on both metrics; at $n_{\text{real}} = 300$ all iterated conditions converge near the saturated test-set ceiling. Variance reduction at $n_{\text{real}} = 10$ is dramatic: $5.8\times$ on macro F1 for the seven-critic loop ($\sigma$ from $0.052$ to $0.009$), $3.9\times$ on worst-class F1.</caption>
-<thead>
-<tr>
-  <th class="num">$n_{\text{real}}$</th>
-  <th class="num">real-only macro</th>
-  <th class="num">+ <code>full_classic</code></th>
-  <th class="num">+ <code>full_attrforge</code></th>
-  <th class="num">real-only worst</th>
-  <th class="num">+ <code>full_classic</code> worst</th>
-  <th class="num">+ <code>full_attrforge</code> worst</th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="num">10</td><td class="num">0.726 $\pm$ 0.052</td><td class="num"><strong>0.882 $\pm$ 0.012</strong></td><td class="num"><strong>0.876 $\pm$ 0.009</strong></td><td class="num">0.319 $\pm$ 0.181</td><td class="num"><strong>0.747 $\pm$ 0.043</strong></td><td class="num"><strong>0.720 $\pm$ 0.046</strong></td></tr>
-<tr><td class="num">30</td><td class="num">0.864 $\pm$ 0.035</td><td class="num"><strong>0.894 $\pm$ 0.020</strong></td><td class="num"><strong>0.892 $\pm$ 0.007</strong></td><td class="num">0.695 $\pm$ 0.119</td><td class="num"><strong>0.792 $\pm$ 0.045</strong></td><td class="num"><strong>0.771 $\pm$ 0.030</strong></td></tr>
-<tr><td class="num">100</td><td class="num">0.927 $\pm$ 0.009</td><td class="num">0.929 $\pm$ 0.013</td><td class="num">0.927 $\pm$ 0.008</td><td class="num">0.847 $\pm$ 0.019</td><td class="num">0.857 $\pm$ 0.021</td><td class="num">0.853 $\pm$ 0.025</td></tr>
-<tr><td class="num">300</td><td class="num">0.951 $\pm$ 0.000</td><td class="num">0.951 $\pm$ 0.002</td><td class="num">0.949 $\pm$ 0.002</td><td class="num">0.876 $\pm$ 0.000</td><td class="num">0.879 $\pm$ 0.010</td><td class="num">0.877 $\pm$ 0.005</td></tr>
-</tbody>
-</table>
-</div>
-
-<p>
-  Three patterns hold robustly across the cross-domain replication. <strong>(i) Synthetic augmentation lifts macro F1 the most at the scarce-real extreme:</strong> at $n_{\text{real}} = 10$, every iterated condition lifts macro F1 from $0.726 \pm 0.052$ to $\approx 0.88$ ($+0.15$, $\geq 4\times$ variance reduction). <strong>(ii) The seven-critic loop and the three-critic baseline are statistically indistinguishable on Banking77.</strong> At $n_{\text{real}} = 10$ <code>full_classic</code> macro F1 is $0.882 \pm 0.012$ and <code>full_attrforge</code> is $0.876 \pm 0.009$ (paired difference $-0.005 \pm 0.015$, sign-flip $p = 0.46$); on worst-class the difference is $-0.027 \pm 0.077$, $p = 0.47$. The same direction holds at $n = 30$, $100$, and $300$ but the differences are within sampling noise on every row. The empirical reading is that Banking77's $10$-class card-and-payment intent structure does not differentiate the four GAN-style adversaries; the augmentation gain comes from iteration with any structured-critic stack, not from the additional adversaries specifically. <strong>(iii) Worst-class F1 gains are dramatic at scarce real:</strong> at $n_{\text{real}} = 10$ the iterated conditions lift worst-class F1 from $0.319 \pm 0.181$ (real-only) to $\geq 0.72$ ($+0.40$, $\geq 4\times$ variance reduction). <strong>(iv) At sufficient real, conditions converge:</strong> at $n_{\text{real}} = 300$ every iterated condition lands between $0.947$ and $0.951$ macro F1 within $\pm 0.005$, consistent with the test-set ceiling on this 10-class subset.
-</p>
-
-<p>
-  <strong>Cross-domain replication of the intrinsic-model diversity decomposition.</strong> The Scendi decomposition of Section 7.2 holds on Banking77 with a larger intrinsic share. Non-iterated Vendi mean is $7.64$ (lower than customer-support because the $10$ Banking77 classes share a tighter vocabulary band); iterated Vendi mean is $11.81$, a $+4.0$-point gain. The corresponding Scendi values are $7.64$ and $12.85$, decomposing the gain as $5.21$ points of intrinsic-model diversity ($+131\%$ of the total) and a $-1.22$-point prompt-driven residual ($-31\%$). The seven-critic loop has the largest prompt residual (<code>full_attrforge</code> $V - S = -1.897$), meaning the critic-debugged prompt suppresses prompt-level diversity by the most while the resulting synthetic batch is still the most semantically diverse: the loop trades prompt-template variety for unlocked model capacity on this benchmark.
+  We replicate the augmentation protocol on a $10$-class Banking77 <a class="cite" href="#ref-banking77">[41]</a> card-and-payment subset; full details in <a href="#sec-appendix-banking77-aug">Appendix E</a>. The two headline findings are: at the scarce-real extreme ($n_{\text{real}} = 10$), every iterated condition lifts macro F1 from real-only $0.726 \pm 0.052$ to $\approx 0.88$ ($+0.15$, $\geq 4\times$ variance reduction) and lifts worst-class F1 from $0.319 \pm 0.181$ to $\geq 0.72$ ($+0.40$, $\geq 4\times$ variance reduction); and the seven-critic loop and the three-critic baseline are statistically indistinguishable on this dataset, which is what motivates the cross-condition ensembling result of Section 7.3 (where the differentiation appears in the ensemble, not solo).
 </p>
 
 <h3 id="sec-multitask"><span class="subsection-num">7.5</span>Synth-only cross-task headline (SST-2 / Banking77 / TREC)</h3>
@@ -790,90 +695,8 @@ result = forge.run(iterations=3)
   <code>result.iterations</code> carries the per-iteration synthetic batch, prompt version, and structured-feedback bundle from every critic; <code>result.metric_history</code> carries per-round scalar metrics (attribute match rate, discriminator accuracy, pack accuracy, mode-seeking ratio, banned-phrasing library size, coverage-classifier AUROC, near-duplicate rate, combination coverage). Every artifact (prompts, targets, samples, verdicts, reports) is persisted under <code>runs/&lt;id&gt;/iter_NNN/</code> so a run can be re-analyzed without re-running.
 </p>
 
-<h3><span class="subsection-num">11.2</span>Pluggable critic protocol with fourteen shipped implementations</h3>
-
 <p>
-  Every critic implements the same protocol: <code>name</code> attribute plus <code>evaluate(batch, real, attrs) &rarr; StructuredFeedback</code>. The updater renders every critic's structured complaints into a single prompt-rewrite template, so a new critic plugs in without changes to the loop or the prompt-update logic. Fourteen critic implementations ship with the framework:
-</p>
-
-<div class="table-wrap">
-<table>
-<caption>Table 12: The fourteen critic implementations shipped with the framework. The "Adding your own critic" walkthrough in <code>CONTRIBUTING.md</code> covers the 5-step pattern: pick a failure mode, implement the protocol, wire into the ablation table, register with the loop, write a unit test.</caption>
-<thead>
-<tr>
-  <th>Role</th>
-  <th>Implementation</th>
-  <th>Determinism</th>
-  <th>Reference</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Attribute verifier</td><td><code>Verifier</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
-<tr><td>Realism discriminator (single)</td><td><code>RealismDiscriminator</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
-<tr><td>Realism discriminator (3-judge debate)</td><td><code>RealismDebate</code></td><td>3 LLM judges via OpenRouter + KS-stopping</td><td>Section 11.5</td></tr>
-<tr><td>Diversity auditor (det. + LLM)</td><td><code>DiversityAuditor</code></td><td>mixed</td><td>Section 4.3</td></tr>
-<tr><td>Pack discriminator (PacGAN)</td><td><code>PackDiscriminator</code></td><td>LLM judge</td><td>Section 5.1</td></tr>
-<tr><td>Mode-seeking (MSGAN)</td><td><code>ModeSeeking</code></td><td>deterministic</td><td>Section 5.2</td></tr>
-<tr><td>Mode hunter (ban-list)</td><td><code>ModeHunter</code></td><td>LLM judge + det. verify</td><td>Section 5.3</td></tr>
-<tr><td>Coverage hole finder (density ratio)</td><td><code>CoverageHoleFinder</code></td><td>deterministic</td><td>Section 5.4</td></tr>
-<tr><td>Manifold-entropy</td><td><code>ManifoldEntropy</code></td><td>deterministic</td><td>Section 11.3</td></tr>
-<tr><td>Downstream evaluator (sentence-transformer + LR)</td><td><code>DownstreamEvaluator</code></td><td>deterministic</td><td>Section 6.4</td></tr>
-<tr><td>Vendi diversity metric</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
-<tr><td>Scendi (Schur-complement) decomposition</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
-<tr><td>Distinct-$n$ / self-BLEU</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
-<tr><td>MMD with three feature spaces</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
-</tbody>
-</table>
-</div>
-
-<h3><span class="subsection-num">11.3</span>Eight baselines, six ablations, three example datasets</h3>
-
-<p>
-  Eight named baseline configurations are shipped under the <code>--conditions</code> flag of the experiment runner: <code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, <code>attribute_only</code>, <code>full_classic</code> (three baseline critics), <code>full_attrforge</code> (the seven-critic loop). Six leave-one-out ablations enumerate each adversary's contribution: <code>no_pack</code>, <code>no_mode_seeking</code>, <code>no_mode_hunter</code>, <code>no_coverage_hole</code>, plus the two scout-derived variants <code>full_attrforge_vs</code> (Verbalized Sampling generator) and <code>full_attrforge_3judge</code> (multi-vendor debate realism critic). Three example datasets span the difficulty spectrum:
-</p>
-
-<ul>
-  <li><strong>customer-support</strong> intent classification: $5$ classes, $40$ real examples, $10$-item held-out test. The saturated regime where direct macro F1 ties at the ceiling.</li>
-  <li><strong>Banking77 cards-and-payments</strong>: $10$ classes drawn from the Banking77 benchmark <a class="cite" href="#ref-banking77">[41]</a>, $300$ real-train, $400$ held-out test. The harder benchmark where scarce-real augmentation gains are largest.</li>
-  <li><strong>TREC question-type</strong>: $6$ coarse-grained question-type classes (ABBR, DESC, ENTY, HUM, LOC, NUM), $60$ real seed examples, $89$ held-out test. The non-intent-classification family.</li>
-</ul>
-
-<p>
-  Adding a fourth dataset is a three-file addition: <code>examples/&lt;dataset&gt;/{schema.yaml, config.yaml, real_examples.jsonl}</code> matching the layout of the three above. The runner picks it up automatically.
-</p>
-
-<h3><span class="subsection-num">11.4</span>Cross-condition ensemble as a public API, not a script</h3>
-
-<p>
-  The cross-condition classifier ensembling of Section 7.3 is exposed as a typed public API so external users can apply the technique without reading the paper's analysis scripts:
-</p>
-
-<pre><code>from synsmith.eval import CrossConditionEnsemble, CrossConditionEnsembleConfig
-
-ens = CrossConditionEnsemble(CrossConditionEnsembleConfig(backend="sentence-transformer"))
-ens.fit_per_condition(
-    condition_batches={"baseline": [...], "method_v2": [...]},
-    real_train=real_train_samples,
-    real_test=real_test_samples,
-)
-pair_result = ens.ensemble_pair("baseline", "method_v2")
-print(pair_result.macro_f1, pair_result.worst_class_f1)
-</code></pre>
-
-<p>
-  <code>EnsembleResult</code> is a typed Pydantic model carrying macro, worst-class, per-class F1, confusion matrix, and the underlying probability matrices so any downstream analysis (paired-t, bootstrap CI, leave-one-out) is one numpy call away.
-</p>
-
-<h3><span class="subsection-num">11.5</span>Backends, batching, multi-vendor</h3>
-
-<p>
-  LLM calls go through a backend-agnostic client. OpenAI, Anthropic, and an offline echo backend ship in-tree; the offline backend lets the entire pipeline (including the test suite) run with no API key, which is what the $45$-test CI uses. <strong>OpenAI Batch API</strong> is wired through <code>synsmith.llm_batch.BatchClient</code>: a paper-scale sweep (10 seeds $\times$ 7 conditions $\times$ 3 iterations $\times$ 16 samples $\times$ 7 critics $\approx 11\,000$ LLM calls) submits as one batch.jsonl, completes within a 24-hour SLA, and costs about $50\%$ of the real-time API equivalent. <strong>Multi-vendor LLM-as-judge</strong> is exposed via OpenRouter: the <code>full_attrforge_3judge</code> baseline swaps the single-judge realism discriminator for a three-judge debate (<code>openai/gpt-4o-mini</code> + <code>anthropic/claude-3-haiku</code> + <code>google/gemini-flash-1.5</code>) with Kolmogorov-Smirnov adaptive stopping, addressing the single-vendor judge-bias confound named in Section 9.2.
-</p>
-
-<h3><span class="subsection-num">11.6</span>Testing, contribution, and licensing</h3>
-
-<p>
-  The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern (failure mode, protocol, ablation flag, loop registration, unit test) plus contributions for new datasets, new backends, and new aggregation scripts. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
+  The framework's reference material (fourteen shipped critic implementations, eight named baselines and six leave-one-out ablation conditions, three example datasets, the cross-condition ensemble public API, backends, the OpenAI Batch API harness, multi-vendor LLM-as-judge wiring, the $45$-test CI, contribution patterns, and licensing) is in <a href="#sec-appendix-framework-reference">Appendix C</a>. Adding a new critic is a single-file change; the structured-feedback contract handles the wiring. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
 </p>
 
 <h3 id="sec-beyond-classification"><span class="subsection-num">11.7</span>Beyond classification</h3>
@@ -1127,6 +950,193 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
   <li id="ref-reflexion">Shinn, N., Cassano, F., Berman, E., Gopinath, A., Narasimhan, K., &amp; Yao, S. <em>Reflexion: Language agents with verbal reinforcement learning.</em> NeurIPS, 2023. <a href="https://arxiv.org/abs/2303.11366">[arXiv:2303.11366]</a></li>
   <li id="ref-selfrefine">Madaan, A., Tandon, N., Gupta, P., Hallinan, S., Gao, L., Wiegreffe, S., et al. <em>Self-refine: Iterative refinement with self-feedback.</em> NeurIPS, 2023. <a href="https://arxiv.org/abs/2303.17651">[arXiv:2303.17651]</a></li>
 </ol>
+
+
+<!-- ============================================================ -->
+<h2 id="sec-appendix-framework-reference"><span class="section-num">C</span>Appendix: Framework reference</h2>
+
+<h3><span class="subsection-num">C.1</span>Pluggable critic protocol with fourteen shipped implementations</h3>
+
+<p>
+  Every critic implements the same protocol: <code>name</code> attribute plus <code>evaluate(batch, real, attrs) &rarr; StructuredFeedback</code>. The updater renders every critic's structured complaints into a single prompt-rewrite template, so a new critic plugs in without changes to the loop or the prompt-update logic. Fourteen critic implementations ship with the framework:
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table C1: The fourteen critic implementations shipped with the framework. The "Adding your own critic" walkthrough in <code>CONTRIBUTING.md</code> covers the 5-step pattern: pick a failure mode, implement the protocol, wire into the ablation table, register with the loop, write a unit test.</caption>
+<thead>
+<tr><th>Role</th><th>Implementation</th><th>Determinism</th><th>Reference</th></tr>
+</thead>
+<tbody>
+<tr><td>Attribute verifier</td><td><code>Verifier</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
+<tr><td>Realism discriminator (single)</td><td><code>RealismDiscriminator</code></td><td>LLM judge</td><td>Section 4.3</td></tr>
+<tr><td>Realism discriminator (3-judge debate)</td><td><code>RealismDebate</code></td><td>3 LLM judges via OpenRouter + KS-stopping</td><td>Appendix C.4</td></tr>
+<tr><td>Diversity auditor (det. + LLM)</td><td><code>DiversityAuditor</code></td><td>mixed</td><td>Section 4.3</td></tr>
+<tr><td>Pack discriminator (PacGAN)</td><td><code>PackDiscriminator</code></td><td>LLM judge</td><td>Section 5.1</td></tr>
+<tr><td>Mode-seeking (MSGAN)</td><td><code>ModeSeeking</code></td><td>deterministic</td><td>Section 5.2</td></tr>
+<tr><td>Mode hunter (ban-list)</td><td><code>ModeHunter</code></td><td>LLM judge + det. verify</td><td>Section 5.3</td></tr>
+<tr><td>Coverage hole finder (density ratio)</td><td><code>CoverageHoleFinder</code></td><td>deterministic</td><td>Section 5.4</td></tr>
+<tr><td>Manifold-entropy</td><td><code>ManifoldEntropy</code></td><td>deterministic</td><td>Appendix C.2</td></tr>
+<tr><td>Downstream evaluator (sentence-transformer + LR)</td><td><code>DownstreamEvaluator</code></td><td>deterministic</td><td>Section 6.4</td></tr>
+<tr><td>Vendi diversity metric</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>Scendi (Schur-complement) decomposition</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>Distinct-$n$ / self-BLEU</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+<tr><td>MMD with three feature spaces</td><td>library function</td><td>deterministic</td><td>Section 7.2</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3><span class="subsection-num">C.2</span>Named baseline configurations, ablations, and example datasets</h3>
+
+<p>
+  Eight named baseline configurations are shipped under the <code>--conditions</code> flag of the experiment runner: <code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, <code>attribute_only</code>, <code>full_classic</code> (three baseline critics), <code>full_attrforge</code> (SynSmith, the seven-critic loop). Leave-one-out ablation conditions enumerate each adversary's contribution: <code>no_pack</code>, <code>no_mode_seeking</code>, <code>no_mode_hunter</code>, <code>no_coverage_hole</code>, plus the two scout-derived variants <code>full_attrforge_vs</code> (Verbalized Sampling generator) and <code>full_attrforge_3judge</code> (multi-vendor debate realism critic). Three example datasets:
+</p>
+
+<ul>
+  <li><strong>customer-support</strong> intent classification: $5$ classes, $40$ real examples, $10$-item held-out test.</li>
+  <li><strong>Banking77 cards-and-payments</strong>: $10$ classes drawn from the Banking77 benchmark <a class="cite" href="#ref-banking77">[41]</a>, $300$ real-train, $400$ held-out test.</li>
+  <li><strong>TREC question-type</strong>: $6$ coarse-grained question-type classes, $60$ real seed, $89$ held-out test.</li>
+</ul>
+
+<p>
+  Adding a fourth dataset is a three-file addition: <code>examples/&lt;dataset&gt;/{schema.yaml, config.yaml, real_examples.jsonl}</code> matching the layout of the three above.
+</p>
+
+<h3><span class="subsection-num">C.3</span>Cross-condition ensemble as a public API</h3>
+
+<p>
+  The cross-condition classifier ensembling of Section 7.3 is exposed as a typed public API:
+</p>
+
+<pre><code>from synsmith.eval import CrossConditionEnsemble, CrossConditionEnsembleConfig
+
+ens = CrossConditionEnsemble(CrossConditionEnsembleConfig(backend="sentence-transformer"))
+ens.fit_per_condition(
+    condition_batches={"baseline": [...], "method_v2": [...]},
+    real_train=real_train_samples,
+    real_test=real_test_samples,
+)
+pair_result = ens.ensemble_pair("baseline", "method_v2")
+print(pair_result.macro_f1, pair_result.worst_class_f1)
+</code></pre>
+
+<p>
+  <code>EnsembleResult</code> is a typed Pydantic model carrying macro, worst-class, per-class F1, confusion matrix, and the underlying probability matrices so any downstream analysis (paired-t, bootstrap CI, leave-one-out) is one numpy call away.
+</p>
+
+<h3><span class="subsection-num">C.4</span>Backends, batching, multi-vendor</h3>
+
+<p>
+  LLM calls go through a backend-agnostic client. OpenAI, Anthropic, and an offline echo backend ship in-tree; the offline backend lets the entire pipeline (including the test suite) run with no API key. <strong>OpenAI Batch API</strong> is wired through <code>synsmith.llm_batch.BatchClient</code>: a paper-scale sweep submits as one batch.jsonl, completes within a 24-hour SLA, and costs about $50\%$ of the real-time API equivalent. <strong>Multi-vendor LLM-as-judge</strong> is exposed via OpenRouter: the <code>full_attrforge_3judge</code> baseline swaps the single-judge realism discriminator for a three-judge debate (<code>openai/gpt-4o-mini</code> + <code>anthropic/claude-3-haiku</code> + <code>google/gemini-flash-1.5</code>) with Kolmogorov-Smirnov adaptive stopping, addressing the single-vendor judge-bias confound named in Section 9.2.
+</p>
+
+<h3><span class="subsection-num">C.5</span>Testing, contribution, and licensing</h3>
+
+<p>
+  The test suite has $45$ tests covering the loop end-to-end (with the offline backend, no API key required), every critic's deterministic helpers, the cross-condition ensemble API surface, the OpenAI Batch harness (mock-based), and the 3-judge debate KS-stopping logic. CI runs on every commit. The <code>CONTRIBUTING.md</code> walkthrough covers the canonical "add a new critic" pattern. The MIT-licensed repository is at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
+</p>
+
+
+<!-- ============================================================ -->
+<h2 id="sec-appendix-augmentation"><span class="section-num">D</span>Appendix: Augmentation regime details (customer-support)</h2>
+
+<p>
+  The realistic deployment of LLM-generated synthetic data is augmentation of a small real labeled set. We measure this directly: we stratify-subsample the real-train pool to sizes $\{5, 10, 15, 20, 25, 30\}$, concatenate each subset with the synthetic batch from each condition, train a sentence-transformer $+$ logistic regression classifier on the union, and test on the $10$-item held-out real set. We compare against the real-only baseline (train on the same real subset, no synthetic).
+</p>
+
+<figure>
+  <img src="figures/main_run_002_scarce_real.png" alt="Augmentation downstream F1 vs real-train size" />
+  <figcaption>Figure D1: Augmentation downstream macro F1 (sentence-transformer $+$ logistic regression) as a function of real-train size on customer-support intent classification, comparing each iterated condition against the no-augmentation real-only baseline (dashed black). Mean $\pm$ std across $10$ seeds. At very-scarce real ($n = 5$), every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$, with <code>full_classic</code> giving the largest lift ($+0.127$, F1 $0.759 \pm 0.065$ vs real-only $0.632 \pm 0.139$). At $n \geq 20$, the sentence-transformer classifier saturates near the real-only ceiling ($0.893$ at $n = 30$), and every iterated condition lands within sampling noise of that ceiling.</figcaption>
+</figure>
+
+<div class="table-wrap">
+<table>
+<caption>Table D1: Augmentation downstream macro F1 on customer-support, under varying real-train sizes. Mean $\pm$ std across $10$ seeds. Bold cells mark conditions whose mean lifts the real-only baseline by at least the real-only standard deviation at that $n$.</caption>
+<thead>
+<tr>
+  <th class="num">$n_{\text{real}}$</th>
+  <th class="num">real-only</th>
+  <th class="num">few_shot</th>
+  <th class="num">self_critique</th>
+  <th class="num">realism_only</th>
+  <th class="num">diversity_only</th>
+  <th class="num">full_classic</th>
+  <th class="num">SynSmith</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="num">5</td><td class="num">0.632 $\pm$ 0.139</td><td class="num"><strong>0.705 $\pm$ 0.100</strong></td><td class="num"><strong>0.699 $\pm$ 0.150</strong></td><td class="num"><strong>0.741 $\pm$ 0.154</strong></td><td class="num"><strong>0.752 $\pm$ 0.142</strong></td><td class="num"><strong>0.759 $\pm$ 0.065</strong></td><td class="num"><strong>0.688 $\pm$ 0.096</strong></td></tr>
+<tr><td class="num">10</td><td class="num">0.792 $\pm$ 0.097</td><td class="num">0.807 $\pm$ 0.127</td><td class="num">0.796 $\pm$ 0.143</td><td class="num">0.784 $\pm$ 0.168</td><td class="num">0.762 $\pm$ 0.148</td><td class="num">0.805 $\pm$ 0.094</td><td class="num">0.747 $\pm$ 0.141</td></tr>
+<tr><td class="num">20</td><td class="num">0.915 $\pm$ 0.067</td><td class="num">0.899 $\pm$ 0.073</td><td class="num">0.843 $\pm$ 0.172</td><td class="num">0.883 $\pm$ 0.118</td><td class="num">0.869 $\pm$ 0.074</td><td class="num">0.857 $\pm$ 0.103</td><td class="num">0.859 $\pm$ 0.094</td></tr>
+<tr><td class="num">30</td><td class="num">0.893 $\pm$ 0.000</td><td class="num"><strong>0.909 $\pm$ 0.080</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num"><strong>0.911 $\pm$ 0.092</strong></td><td class="num"><strong>0.904 $\pm$ 0.103</strong></td><td class="num">0.873 $\pm$ 0.093</td><td class="num">0.872 $\pm$ 0.095</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  Two patterns are visible. <strong>(i) Synthetic data is most valuable when real is scarce.</strong> At $n = 5$, every iterated synthetic condition lifts macro F1 over real-only by $+0.05$ to $+0.13$. <strong>(ii) Solo conditions saturate near the real-only ceiling at $n \geq 20$ without differentiating each other.</strong> At $n_{\text{real}} = 30$ the real-only ceiling lands at $0.893$ and every iterated condition lands within one real-only standard deviation. The solo-classifier paths do not differentiate SynSmith from the three-critic baseline on customer-support; the differentiation appears at the cross-condition ensemble level (Section 7.3).
+</p>
+
+<figure>
+  <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30" />
+  <figcaption>Figure D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support intent classification ($10$ seeds). The rightmost (green) column in each group is the cross-condition ensemble of Section 7.3, <code>self_critique</code> $+$ SynSmith logit-averaged. The ensemble matches or improves on real-only across all five classes, with the largest lifts on the two harder classes (<code>complaint</code> $0.67 \to 0.83$, $+0.16$; <code>general_question</code> $0.80 \to 0.90$, $+0.10$).</figcaption>
+</figure>
+
+<div class="table-wrap">
+<table>
+<caption>Table D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support. The right column is the cross-condition ensemble, logit-averaging <code>self_critique</code> and SynSmith.</caption>
+<thead>
+<tr><th>class</th><th class="num">real-only</th><th class="num"><code>full_classic</code> (solo)</th><th class="num">SynSmith (solo)</th><th class="num">ENS</th></tr>
+</thead>
+<tbody>
+<tr><td><code>account_issue</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
+<tr class="highlight"><td><code>complaint</code></td><td class="num">0.67</td><td class="num">0.63 $\pm$ 0.37</td><td class="num">0.60 $\pm$ 0.34</td><td class="num"><strong>0.83 $\pm$ 0.18</strong></td></tr>
+<tr><td><code>general_question</code></td><td class="num">0.80</td><td class="num">0.80 $\pm$ 0.12</td><td class="num">0.81 $\pm$ 0.11</td><td class="num"><strong>0.90 $\pm$ 0.11</strong></td></tr>
+<tr><td><code>refund_request</code></td><td class="num">1.00</td><td class="num">1.00 $\pm$ 0.00</td><td class="num">0.98 $\pm$ 0.06</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
+<tr><td><code>technical_problem</code></td><td class="num">1.00</td><td class="num">0.93 $\pm$ 0.14</td><td class="num">0.97 $\pm$ 0.11</td><td class="num"><strong>1.00 $\pm$ 0.00</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- ============================================================ -->
+<h2 id="sec-appendix-banking77-aug"><span class="section-num">E</span>Appendix: Banking77 cross-domain augmentation details</h2>
+
+<p>
+  Customer-support intent classification saturates at macro F1 $0.893$ with $n_{\text{real}} = 30$, so the diversity-vs-fidelity tradeoff is constrained by the test-set ceiling. We replicate the augmentation protocol on a Banking77 <a class="cite" href="#ref-banking77">[41]</a> subset: $10$ card-and-payment intent classes, $300$ train and $400$ held-out test, $5$ seeds, same seven conditions, same backend.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table E1: Banking77 cross-domain augmentation. Macro F1 and worst-class F1 across $5$ seeds.</caption>
+<thead>
+<tr>
+  <th class="num">$n_{\text{real}}$</th>
+  <th class="num">real-only macro</th>
+  <th class="num">+ <code>full_classic</code></th>
+  <th class="num">+ SynSmith</th>
+  <th class="num">real-only worst</th>
+  <th class="num">+ <code>full_classic</code> worst</th>
+  <th class="num">+ SynSmith worst</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="num">10</td><td class="num">0.726 $\pm$ 0.052</td><td class="num"><strong>0.882 $\pm$ 0.012</strong></td><td class="num"><strong>0.876 $\pm$ 0.009</strong></td><td class="num">0.319 $\pm$ 0.181</td><td class="num"><strong>0.747 $\pm$ 0.043</strong></td><td class="num"><strong>0.720 $\pm$ 0.046</strong></td></tr>
+<tr><td class="num">30</td><td class="num">0.864 $\pm$ 0.035</td><td class="num"><strong>0.894 $\pm$ 0.020</strong></td><td class="num"><strong>0.892 $\pm$ 0.007</strong></td><td class="num">0.695 $\pm$ 0.119</td><td class="num"><strong>0.792 $\pm$ 0.045</strong></td><td class="num"><strong>0.771 $\pm$ 0.030</strong></td></tr>
+<tr><td class="num">100</td><td class="num">0.927 $\pm$ 0.009</td><td class="num">0.929 $\pm$ 0.013</td><td class="num">0.927 $\pm$ 0.008</td><td class="num">0.847 $\pm$ 0.019</td><td class="num">0.857 $\pm$ 0.021</td><td class="num">0.853 $\pm$ 0.025</td></tr>
+<tr><td class="num">300</td><td class="num">0.951 $\pm$ 0.000</td><td class="num">0.951 $\pm$ 0.002</td><td class="num">0.949 $\pm$ 0.002</td><td class="num">0.876 $\pm$ 0.000</td><td class="num">0.879 $\pm$ 0.010</td><td class="num">0.877 $\pm$ 0.005</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  Three patterns hold across the cross-domain replication. <strong>(i) Synthetic augmentation lifts macro F1 the most at the scarce-real extreme:</strong> at $n_{\text{real}} = 10$, every iterated condition lifts macro F1 from $0.726 \pm 0.052$ to $\approx 0.88$ ($+0.15$, $\geq 4\times$ variance reduction). <strong>(ii) The seven-critic loop and the three-critic baseline are statistically indistinguishable on Banking77.</strong> At $n_{\text{real}} = 10$ <code>full_classic</code> macro F1 is $0.882 \pm 0.012$ and SynSmith is $0.876 \pm 0.009$ (paired difference $-0.005 \pm 0.015$, sign-flip $p = 0.46$). The augmentation gain comes from iteration with any structured-critic stack at the solo-classifier level; the differentiation appears in the cross-condition ensemble (Section 7.3). <strong>(iii) Worst-class F1 gains are dramatic at scarce real:</strong> at $n_{\text{real}} = 10$ the iterated conditions lift worst-class F1 from $0.319 \pm 0.181$ to $\geq 0.72$ ($+0.40$, $\geq 4\times$ variance reduction).
+</p>
+
+<p>
+  <strong>Cross-domain replication of the intrinsic-model diversity decomposition.</strong> The Scendi decomposition of Section 7.2 holds on Banking77 with a larger intrinsic share. Non-iterated Vendi mean is $7.64$ (lower than customer-support because the $10$ Banking77 classes share a tighter vocabulary band); iterated Vendi mean is $11.81$, a $+4.0$-point gain. The corresponding Scendi values are $7.64$ and $12.85$, decomposing the gain as $5.21$ points of intrinsic-model diversity ($+131\%$ of the total) and a $-1.22$-point prompt-driven residual ($-31\%$).
+</p>
+
 
 <footer class="paper-footer">
   Code: <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
