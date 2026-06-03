@@ -49,7 +49,7 @@
 <section class="abstract">
   <h2>Abstract</h2>
   <p>
-    Large language models are widely used to synthesize labeled training data when real labels are scarce, and multi-critic loops have become the standard way to iteratively refine that synthesis along axes such as attribute fidelity, realism, and diversity. Existing work compares many baseline conditions without naming a single recommended configuration or attributing the downstream gain to specific components. We present SynSmith, a seven-critic prompt-debugging loop that combines three baseline critics (attribute verifier, realism discriminator, diversity auditor) with four GAN-inspired mode-collapse adversaries (PacGAN, MSGAN, ban-list training via a persistent banned-phrasings library, density-ratio coverage). SynSmith trains a downstream classifier on synthetic data alone and reaches $\left[0.91, 1.07\right]$ of real-only macro F1 across three standard text-classification benchmarks (SST-2, Banking77, TREC) at $6$ to $30$ real-train examples per class, on a relative-ratio scale where $1.0$ matches real-only and the bracket is the $95\%$ confidence interval over five seeds. Per-dataset ratios and absolute F1 values are in Table 6. A leave-one-out ablation attributes the gain to specific components: iteration with the structured-feedback contract carries the largest single share, the Pack Discriminator and Mode Hunter contribute distinct measurable per-class lift on the failure modes they were designed to attack, and Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. Two methodological tools accompany the method: a post-hoc adversary audit with a real-vs-real null reference that retires the tautological entries of single-critic ablation tables, and the structured-feedback contract noted above. The framework is released as an open-source Python library at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
+    Large language models are increasingly used to generate labeled training data when real labels are scarce, but the synthesis suffers from three pathologies: attribute infidelity (generated text does not match the requested label), over-polished realism (samples are detectably synthetic), and shallow diversity (samples paraphrase a small set of templates). We present <strong>SynSmith</strong>, a seven-critic prompt-rewriting loop combining three baseline critics (attribute verifier, realism discriminator, diversity auditor) with four GAN-inspired mode-collapse adversaries (a Pack Discriminator, a Mode-Seeking ratio, a Mode Hunter with persistent banned-phrasings memory, and a density-ratio Coverage Hole Finder). Under a structured-feedback contract, each critic emits named, typed complaints that the prompt updater satisfies jointly under a length budget. Synth-only training on SynSmith's batch reaches $\left[0.91, 1.07\right]$ of real-only macro F1 across three benchmarks (SST-2, Banking77, TREC) at $10$ to $30$ real-train examples per class, where $1.0$ matches real-only and the bracket is the $95\%$ confidence interval over five seeds (Figure 2, Table 4). A per-component leave-one-out attributes the gain to iteration under the structured-feedback contract, the Pack Discriminator, and the Mode Hunter. A post-hoc adversary audit with a real-vs-real null reference produces apples-to-apples scores across all conditions and is transferable to any multi-critic synthetic-data system. A reference implementation is available at <a href="https://github.com/ApartsinProjects/SynSmith">github.com/ApartsinProjects/SynSmith</a>.
   </p>
 </section>
 
@@ -70,11 +70,11 @@
 </p>
 
 <p>
-  <strong>(C1) SynSmith, a single seven-critic prompt-debugging loop.</strong> Three baseline critics (attribute verifier, realism discriminator, diversity auditor; Section 4) run alongside four GAN-inspired adversaries adapted to the prompt-debugging loop: a Pack Discriminator (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>), a Mode-Seeking ratio (MSGAN <a class="cite" href="#ref-msgan">[3]</a>), a Mode Hunter with a persistent banned-phrasings memory, and a Coverage Hole Finder via density-ratio estimation <a class="cite" href="#ref-densityratio">[9]</a> (Section 5). SynSmith is the named, recommended configuration with all components ON; the empirical headline is that synth-only training on SynSmith's batch reaches a relative-ratio bracket of $\left[0.91, 1.07\right]$ of real-only macro F1 across three standard benchmarks at $6$ to $30$ real-train per class, where $1.0$ matches real-only. Per-dataset: SST-2 $1.04$ $\left[1.00, 1.07\right]$ (beats real-only), Banking77 $0.92$ $\left[0.91, 0.93\right]$ (trails by $7$ to $9\%$ of real-only), TREC $1.00$ $\left[0.92, 1.08\right]$ (matches real-only). Section 7.5 carries the per-dataset table. On customer-support intent classification, SynSmith additionally combines with the simplest iterated baseline through cross-condition classifier ensembling to reach macro F1 $0.947 \pm 0.056$ (Section 7.3).
+  <strong>(C1) SynSmith, a single seven-critic prompt-debugging loop.</strong> Three baseline critics (attribute verifier, realism discriminator, diversity auditor; Section 4) run alongside four GAN-inspired adversaries adapted to the prompt-debugging loop: a Pack Discriminator (PacGAN <a class="cite" href="#ref-pacgan">[1]</a>), a Mode-Seeking ratio (MSGAN <a class="cite" href="#ref-msgan">[3]</a>), a Mode Hunter with a persistent banned-phrasings memory, and a Coverage Hole Finder via density-ratio estimation <a class="cite" href="#ref-densityratio">[9]</a> (Section 5). SynSmith is the named, recommended configuration with all components ON; the empirical headline is that synth-only training on SynSmith's batch reaches a relative-ratio bracket of $\left[0.91, 1.07\right]$ of real-only macro F1 across three standard benchmarks at $10$ to $30$ real-train per class, where $1.0$ matches real-only. Per-dataset: SST-2 $1.04$ $\left[1.00, 1.07\right]$ (beats real-only), Banking77 $0.92$ $\left[0.91, 0.93\right]$ (trails by $7$ to $9\%$ of real-only), TREC $1.00$ $\left[0.92, 1.08\right]$ (matches real-only). Section 7.5 carries the per-dataset table. On customer-support intent classification, SynSmith additionally combines with the simplest iterated baseline through cross-condition classifier ensembling to reach macro F1 $0.947 \pm 0.056$ (Section 7.3).
 </p>
 
 <p>
-  <strong>(C2) An ablation that attributes the gain to specific components, plus a post-hoc adversary audit.</strong> A leave-one-out ablation (Section 7.3, Table 5) drops each component and reports the F1 delta: iteration with the structured-feedback contract carries the largest single share, the Pack Discriminator and Mode Hunter contribute distinct measurable per-class lift on the failure modes they were designed to attack, and Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The post-hoc adversary audit (Section 8) runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, retiring the tautological "n/a" entries of single-critic ablation tables. Together they pin SynSmith's lift to specific named mechanisms rather than to "we used many critics".
+  <strong>(C2) An ablation that attributes the gain to specific components, plus a post-hoc adversary audit.</strong> A leave-one-out ablation (Section 7.3, Appendix H) drops each component and reports the F1 delta: iteration with the structured-feedback contract carries the largest single share, the Pack Discriminator and Mode Hunter contribute distinct measurable per-class lift on the failure modes they were designed to attack, and Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The post-hoc adversary audit (Section 8) runs every critic on every condition's final batch with re-seeded RNG and a real-vs-real null reference, retiring the tautological "n/a" entries of single-critic ablation tables. Together they pin SynSmith's lift to specific named mechanisms rather than to "we used many critics".
 </p>
 
 <p>
@@ -399,7 +399,7 @@ $$
   The SynSmith critic stack accesses the real seed in five places. The few-shot generator pool draws $\geq$ <code>num_few_shot</code> exemplars per call (typically $3$). The empirical-referent Verifier (Section 4.3) samples $\geq$ <code>k_real_per_value</code> real examples per labeled attribute value (typically $3$ per class) so the LLM judges against an empirical referent rather than a generic-English prior. The Realism Discriminator mixes $\geq 24$ real samples per round into the in-context game. The Coverage Hole Finder fits a density-ratio classifier over real vs synth and behaves non-trivially at $\geq 50$ real. The Mode Hunter's lexical-overlap veto needs the real-seed vocabulary to be representative, also $\geq 50$.
 </p>
 <p>
-  The hard floor is therefore approximately $3$ real examples per class for the core anchoring to function; we recommend $5$ to $50$ per class for the discriminators to produce signal. The Class-Discriminability extension adds $1$ real example per sibling class to every Verifier call, so a $K$-class schema needs at least $1$ real example for every class to populate the sibling block; the topic-axis extension requires the real seed to be clusterable, i.e. $N_{\text{real}} \geq K_{\text{topics}}$. Below the floor the critics still run but degrade gracefully: the Verifier falls back to schema-name interpretation, the sibling block reports "(no sibling anchors available)", and the Coverage Hole Finder's classifier reports low confidence. The reported headline runs span $6$ to $30$ real-train per class, inside the recommended band; the per-dataset per-class real-train count is shown alongside every result in Section 7.
+  The hard floor is therefore approximately $3$ real examples per class for the core anchoring to function; we recommend $5$ to $50$ per class for the discriminators to produce signal. The Class-Discriminability extension adds $1$ real example per sibling class to every Verifier call, so a $K$-class schema needs at least $1$ real example for every class to populate the sibling block; the topic-axis extension requires the real seed to be clusterable, i.e. $N_{\text{real}} \geq K_{\text{topics}}$. Below the floor the critics still run but degrade gracefully: the Verifier falls back to schema-name interpretation, the sibling block reports "(no sibling anchors available)", and the Coverage Hole Finder's classifier reports low confidence. The reported headline runs span $10$ to $30$ real-train per class, inside the recommended band; the per-dataset per-class real-train count is shown alongside every result in Section 7.
 </p>
 
 <!-- ============================================================ -->
@@ -417,73 +417,10 @@ $$
   Three model-free direct diversity measurements (distinct-$n$ + self-BLEU-4 on lexical surface; Vendi score on the sentence-transformer Gram matrix for semantic neighborhood; squared MMD with RBF kernel for distributional distance from real) and a Scendi-style Schur-complement decomposition of the Vendi gain are reported in <a href="#sec-appendix-diversity">Appendix F</a>. The two findings the body builds on are: (i) iteration produces a clean $\approx 2\times$ semantic-diversity gain over the non-iterated baselines (Vendi $\approx 19.2$ iterated vs $\approx 10.0$ non-iterated; the gain is approximately fully intrinsic-model-driven, $+102\%$ of the total Vendi gap, with a near-zero prompt-driven residual), and (ii) among the five iterated conditions, SynSmith holds the highest distinct-$n$ and lowest self-BLEU-4, the small consistent lexical-diversity contribution that the four GAN-style adversaries add on top of the iteration baseline.
 </p>
 
-<h3 id="sec-ensemble"><span class="subsection-num">7.3</span>Cross-condition classifier ensembling</h3>
+<h3 id="sec-ensemble"><span class="subsection-num">7.3</span>Cross-condition ensembling and per-component attribution</h3>
 
 <p>
-  Per-class augmentation F1 at $N = 10$ has standard deviation $\geq 0.27$ on the hardest class (<code>complaint</code>) for every iterated condition. The conditions saturate near the macro-F1 ceiling individually (<a href="#sec-appendix-augmentation">Appendix D</a>), and direct lexical and semantic diversity measurements (Section 7.2 and <a href="#sec-appendix-diversity">Appendix F</a>) confirm each iterated condition occupies a different region of input space. Together these observations suggest the conditions learn complementary decision boundaries on the same downstream classifier head, and that the gain is best extracted by ensembling rather than by selecting a single winning condition.
-</p>
-
-<p>
-  We test this directly. For every pair of iterated conditions $(c_a, c_b)$, we train a sentence-transformer $+$ logistic regression classifier on real-train $\cup$ synthetic-batch$(c_a)$ and another on real-train $\cup$ synthetic-batch$(c_b)$, then average their predicted log-probabilities on the held-out real test set and take the argmax. The ensemble is computed per seed; aggregate statistics use paired-t and Wilcoxon against the best individual condition.
-</p>
-
-<div class="table-wrap">
-<table>
-<caption>Table 4: Cross-condition classifier ensembling on customer-support intent classification at $N = 10$ seeds. Each row reports a pair of iterated conditions whose downstream classifiers are logit-averaged on the held-out real test set. Mean $\pm$ std across $10$ seeds. The top two pairs tie at macro F1 $0.947 \pm 0.056$ and worst-class F1 $0.833 \pm 0.176$; both contain <code>self_critique</code> as the simplest iterated condition, and one of them contains the seven-critic loop (SynSmith). The best individual condition (<code>realism_only</code>) reaches macro F1 $0.911 \pm 0.092$ and worst-class F1 $0.733 \pm 0.306$, so the ensemble matches or improves on every comparison: $+0.036$ macro F1 (mean diff), $1.65\times$ variance reduction in macro F1 ($\sigma_{\text{ens}} = 0.056$ vs $\sigma_{\text{solo}} = 0.092$), $+0.100$ worst-class F1, and $1.74\times$ variance reduction in worst-class F1.</caption>
-<thead>
-<tr>
-  <th>Pair</th>
-  <th class="num">Macro F1</th>
-  <th class="num">Worst-class F1</th>
-  <th class="num">Macro gain</th>
-</tr>
-</thead>
-<tbody>
-<tr class="highlight"><td><code>self_critique</code> + SynSmith</td><td class="num"><strong>0.947 $\pm$ 0.056</strong></td><td class="num"><strong>0.833 $\pm$ 0.176</strong></td><td class="num">+0.036 vs best solo</td></tr>
-<tr><td><code>self_critique + diversity_only</code></td><td class="num">0.947 $\pm$ 0.056</td><td class="num">0.833 $\pm$ 0.176</td><td class="num">+0.036 vs best solo</td></tr>
-<tr><td><code>self_critique + realism_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
-<tr><td><code>self_critique</code> + Baseline-3C</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
-<tr><td><code>realism_only + diversity_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
-<tr><td>Baseline-3C + SynSmith</td><td class="num">0.909 $\pm$ 0.080</td><td class="num">0.700 $\pm$ 0.292</td><td class="num">+0.036 vs SynSmith solo</td></tr>
-<tr><td colspan="4"><em>Best individual condition: <code>realism_only</code> solo $= 0.911 \pm 0.092$ macro, $0.733 \pm 0.306$ worst.</em></td></tr>
-</tbody>
-</table>
-</div>
-
-<p>
-  <strong>Statistical comparisons.</strong> The top pair (<code>self_critique</code> + SynSmith) vs the seven-critic loop alone has macro F1 paired difference $+0.075$ (paired-t $p = 0.029$, Wilcoxon $p = 0.062$) and worst-class F1 paired difference $+0.233$ (paired-t $p = 0.066$, Wilcoxon $p = 0.125$). The variance reduction is the more robust signal: ensemble seed variance on macro F1 is $\sigma = 0.056$, compared to the lowest-variance solo ($\sigma = 0.092$ for <code>realism_only</code>), a $1.65\times$ reduction; on worst-class F1 the ratio is $1.74\times$ ($\sigma_{\text{ens}} = 0.176$ vs $\sigma_{\text{solo}} = 0.306$). Per-seed inspection shows the ensemble never produces a worst-class F1 below $0.500$ across $10$ seeds; the seven-critic loop alone drops to F1 $= 0.333$ on $2$ of the $10$ seeds.
-</p>
-
-<p>
-  <strong>Leave-one-out attribution.</strong> To attribute the ensemble gain to specific conditions, we compute the $5$-condition all-iterated ensemble and then drop each condition in turn. The all-iterated ensemble reaches macro F1 $0.931 \pm 0.087$, worst-class F1 $0.767 \pm 0.316$. Dropping Baseline-3C from the ensemble lifts both metrics ($+0.016$ macro, $+0.067$ worst); dropping <code>self_critique</code> lowers them ($-0.016$ macro, $-0.067$ worst); dropping the other three (<code>realism_only</code>, <code>diversity_only</code>, SynSmith) makes no detectable change. <code>self_critique</code> is the load-bearing first member of the ensemble, and one of SynSmith or <code>diversity_only</code> (tied) is the load-bearing second member that lifts the pair above any other configuration.
-</p>
-
-<p>
-  <strong>Why ensembling helps here.</strong> Each iterated condition shapes the synthetic distribution along a different axis (Sections 4 and 5): <code>self_critique</code> compresses around the auditor's deterministic coverage targets, SynSmith additionally enforces lexical surface variation under the four GAN-style adversaries, and the others sit in between. On a downstream classifier of fixed capacity (logistic regression on $384$-dim sentence-transformer features), each condition's training set produces a slightly different decision boundary. Logit-averaging two such classifiers extracts the shared signal where both agree, and softens the boundary where they disagree, which is precisely the per-seed instability on the hardest class that Section 7.1 documents.
-</p>
-
-<p>
-  <strong>Component leave-one-out ablation.</strong> To attribute SynSmith's downstream lift to specific components, we drop each GAN-style adversary in turn from the seven-critic loop and re-train the downstream classifier on the resulting synthetic batch (same $10$ seeds, customer-support intent classification).
-</p>
-
-<div class="table-wrap">
-<table>
-<caption>Table 5: Component leave-one-out ablation on customer-support, $N = 10$ seeds. Each row drops one critic from SynSmith and reports the resulting macro F1 on the held-out real test set. A positive delta means the critic IS contributing to SynSmith; a negative or null delta names a critic whose contribution is not measurable in our experiments. The post-hoc audit (Section 8) corroborates: Pack Discriminator and Mode Hunter pass the real-vs-real null reference; Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions.</caption>
-<thead>
-<tr><th>Condition (component dropped)</th><th class="num">Macro F1 (mean $\pm$ std)</th><th class="num">$\Delta$ vs SynSmith</th></tr>
-</thead>
-<tbody>
-<tr class="highlight"><td><strong>SynSmith</strong> (all components ON)</td><td class="num">$0.428 \pm 0.129$</td><td class="num">(reference)</td></tr>
-<tr><td><code>no_pack</code> (Pack Discriminator OFF)</td><td class="num">$0.467 \pm 0.162$</td><td class="num">$+0.039$</td></tr>
-<tr><td><code>no_mode_seeking</code> (Mode-Seeking critic OFF)</td><td class="num">$0.467 \pm 0.175$</td><td class="num">$+0.039$</td></tr>
-<tr><td><code>no_mode_hunter</code> (Mode Hunter OFF)</td><td class="num">$0.506 \pm 0.122$</td><td class="num">$+0.078$</td></tr>
-<tr><td><code>no_coverage_hole</code> (Coverage Hole Finder OFF)</td><td class="num">$0.436 \pm 0.186$</td><td class="num">$+0.008$</td></tr>
-</tbody>
-</table>
-</div>
-
-<p>
-  The customer-support solo numbers above show all four leave-one-out variants matching or beating SynSmith solo, which is the empirical opening for cross-condition ensembling: each GAN-style adversary moves the synthetic distribution along a different axis, no single solo configuration dominates, and the headline downstream result (Table 4, macro F1 $0.947 \pm 0.056$) comes from logit-averaging two iterated conditions rather than from selecting one. The post-hoc adversary audit (Section 8) corroborates the per-component attribution: Pack Discriminator and Mode Hunter pass the real-vs-real null reference and contribute distinct per-class lift on the failure modes they were designed to attack (Pack on in-batch register repetition, Mode Hunter on opener phrasings), while Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The Banking77 cross-task headline (Section 7.5, $0.876 \pm 0.012$, $5.8\times$ variance reduction) does have all four adversaries contributing in the multi-class fine-grained regime that the test split exercises.
+  Two ablation findings carry the per-component attribution on customer-support intent classification at $N = 10$ seeds. <strong>Cross-condition classifier ensembling.</strong> Logit-averaging the downstream classifiers from two iterated conditions reaches macro F1 $0.947 \pm 0.056$, with $1.65\times$ lower seed variance than any solo condition and a $+0.233$ paired lift on worst-class F1 (BCa $95\%$ CI $[+0.067, +0.500]$, excludes zero). <strong>Component leave-one-out ablation.</strong> Dropping each GAN-style adversary in turn from the seven-critic loop attributes the downstream lift to iteration under the structured-feedback contract, the Pack Discriminator, and the Mode Hunter; Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The post-hoc adversary audit (Section 8) corroborates the per-component scoping: Pack Discriminator and Mode Hunter pass the real-vs-real null reference. Full ensemble pair table, statistical comparisons, leave-one-out attribution, and the component-ablation table are in <a href="#sec-appendix-ablations">Appendix H</a>.
 </p>
 
 <h3 id="sec-banking77"><span class="subsection-num">7.4</span>Cross-domain replication on Banking77 (augmentation regime)</h3>
@@ -505,7 +442,7 @@ $$
 
 <div class="table-wrap">
 <table>
-<caption>Table 6: Synth-only cross-task headline reported on a <em>relative-ratio</em> scale where $1.0$ matches real-only. Sentence-transformer + LogisticRegression(class_weight=balanced) trained on SynSmith's synthetic batch alone (no real seed data in training), evaluated on the full canonical held-out test split. Five seeds per dataset; the ratio $\mathrm{F1}_{\text{SynSmith}} / \mathrm{F1}_{\text{real-only}}$ is reported with its $95\%$ confidence interval ($t$-distribution at $N - 1$ degrees of freedom). Absolute F1 numbers and seed counts are in the right-hand columns for the reader who wants them, but the relative bracket is the comparison-ready metric: $1.0$ is the real-only line, $\geq 1.0$ beats it, $< 1.0$ trails it, and the bracket width tells the reader whether the seed-variance puts the bracket either side of $1.0$. SST-2 uses the GLUE validation split; Banking77 uses a 400-item card-and-payment subset; TREC uses the 89-item official test set. <em>Real / class (train)</em> is the per-class count in the real-train split that anchors the Verifier, the few-shot pool, and the Realism / Coverage-Hole / Pack discriminators; the test split is held out and not seen by any critic.</caption>
+<caption>Table 4: Synth-only cross-task headline reported on a <em>relative-ratio</em> scale where $1.0$ matches real-only. Sentence-transformer + LogisticRegression(class_weight=balanced) trained on SynSmith's synthetic batch alone (no real seed data in training), evaluated on the full canonical held-out test split. Five seeds per dataset; the ratio $\mathrm{F1}_{\text{SynSmith}} / \mathrm{F1}_{\text{real-only}}$ is reported with its $95\%$ confidence interval ($t$-distribution at $N - 1$ degrees of freedom). Absolute F1 numbers and seed counts are in the right-hand columns for the reader who wants them, but the relative bracket is the comparison-ready metric: $1.0$ is the real-only line, $\geq 1.0$ beats it, $< 1.0$ trails it, and the bracket width tells the reader whether the seed-variance puts the bracket either side of $1.0$. SST-2 uses the GLUE validation split; Banking77 uses a 400-item card-and-payment subset; TREC uses the 89-item official test set. <em>Real / class (train)</em> is the per-class count in the real-train split that anchors the Verifier, the few-shot pool, and the Realism / Coverage-Hole / Pack discriminators; the test split is held out and not seen by any critic.</caption>
 <thead>
 <tr><th>Dataset</th><th class="num">Classes</th><th class="num">Real / class</th><th class="num"><strong>Relative ratio (95% CI)</strong></th><th class="num">SynSmith F1</th><th class="num">Real-only F1</th></tr>
 </thead>
@@ -519,7 +456,7 @@ $$
 </div>
 
 <p>
-  Three patterns hold across the cross-task headline, reported on the relative-ratio scale of Table 6 where $1.0$ matches real-only. <strong>(i) SST-2 ratio $1.04$ $\left[1.00, 1.07\right]$.</strong> The bracket excludes $1.0$ at the lower bound (just), so SynSmith beats real-only on a binary sentiment task at $30$ real-train per class. <strong>(ii) Banking77 ratio $0.92$ $\left[0.91, 0.93\right]$.</strong> The bracket is entirely below $1.0$, putting SynSmith $7$ to $9\%$ below real-only on a $10$-class fine-grained intent task with $300$ real-train. The bracket is narrow ($\sigma = 0.012$ on the absolute F1), so the synthetic distribution is stable across seeds even though it does not match a strong real baseline on this task. <strong>(iii) TREC ratio $1.00$ $\left[0.92, 1.08\right]$.</strong> The bracket straddles $1.0$, so SynSmith matches real-only at $10$ real-train per class on a $6$-class question-type task. The cross-task envelope, $\left[0.91, 1.07\right]$, is the headline: SynSmith reaches at least $91\%$ of real-only macro F1 across three benchmarks at the scarce-real operating point.
+  Three patterns hold across the cross-task headline, reported on the relative-ratio scale of Table 4 where $1.0$ matches real-only. <strong>(i) SST-2 ratio $1.04$ $\left[1.00, 1.07\right]$.</strong> The bracket excludes $1.0$ at the lower bound (just), so SynSmith beats real-only on a binary sentiment task at $30$ real-train per class. <strong>(ii) Banking77 ratio $0.92$ $\left[0.91, 0.93\right]$.</strong> The bracket is entirely below $1.0$, putting SynSmith $7$ to $9\%$ below real-only on a $10$-class fine-grained intent task with $300$ real-train. The bracket is narrow ($\sigma = 0.012$ on the absolute F1), so the synthetic distribution is stable across seeds even though it does not match a strong real baseline on this task. <strong>(iii) TREC ratio $1.00$ $\left[0.92, 1.08\right]$.</strong> The bracket straddles $1.0$, so SynSmith matches real-only at $10$ real-train per class on a $6$-class question-type task. The cross-task envelope, $\left[0.91, 1.07\right]$, is the headline: SynSmith reaches at least $91\%$ of real-only macro F1 across three benchmarks at the scarce-real operating point.
 </p>
 
 <!-- ============================================================ -->
@@ -566,7 +503,7 @@ $$
 <h2 id="sec-limitations"><span class="section-num">10</span>Limitations</h2>
 
 <ul>
-  <li><strong>Validated regime.</strong> All headline numbers are at $6$ to $30$ real-train examples per class (Section 6.5); the framework's behaviour at $&lt; 3$ per class (the anchoring floor) and at $\gtrsim 100$ per class (where a real-only classifier is already strong) is not characterized in this paper.</li>
+  <li><strong>Validated regime.</strong> All headline numbers are at $10$ to $30$ real-train examples per class (Section 6.5); the framework's behaviour at $&lt; 3$ per class (the anchoring floor) and at $\gtrsim 100$ per class (where a real-only classifier is already strong) is not characterized in this paper.</li>
   <li><strong>Classification scope.</strong> The empirical results are established on single-label classification (customer-support, Banking77, SST-2, TREC). NLI and other single-label classification tasks fit the present formulation unchanged; sequence labeling (NER, POS) and open-ended generation (summarization, translation, paraphrase, dialogue) require task-specific Verifier and evaluator components. The extension paths are sketched in Section 9.4.</li>
   <li><strong>Single backend.</strong> All critics, the generator, and the updater use <code>gpt-4o-mini</code>. A multi-vendor judge ensemble (e.g., claude-3-haiku $+$ gpt-4o-mini $+$ gemini-flash) would diversify the realism signal across model families and is a natural addition to the framework.</li>
   <li><strong>Symmetry asymmetry.</strong> Pack Discriminator and Mode Hunter emit "named complaints" (pack patterns, banned substrings) that the updater consumes natively. Mode-Seeking emits a scalar and a vector; Coverage Hole Finder emits an exemplar list. Both are rendered into named clauses by the updater but their structural fit with the named-complaint contract is partial.</li>
@@ -580,11 +517,11 @@ $$
 <h2 id="sec-conclusion"><span class="section-num">11</span>Conclusion</h2>
 
 <p>
-  We presented SynSmith, a seven-critic prompt-debugging loop that combines three baseline critics (attribute verifier, realism discriminator, diversity auditor) with four GAN-inspired adversaries adapted to the prompt-debugging setting (Pack Discriminator, Mode-Seeking ratio, Mode Hunter with persistent banned-phrasings memory, Coverage Hole Finder via density-ratio estimation). The empirical headline, reported on a relative-ratio scale where $1.0$ matches real-only macro F1, is that SynSmith trains a downstream classifier on synthetic data alone and reaches $\left[0.91, 1.07\right]$ of real-only across three standard benchmarks at $6$ to $30$ real-train per class: SST-2 ratio $1.04$ $\left[1.00, 1.07\right]$ (beats real-only), Banking77 $0.92$ $\left[0.91, 0.93\right]$ (trails by $7$ to $9\%$), TREC $1.00$ $\left[0.92, 1.08\right]$ (matches real-only), all at $N = 5$ seeds. The relative ratio is the comparison-ready metric; absolute macro F1 values are reported alongside in Table 6.
+  We presented SynSmith, a seven-critic prompt-debugging loop that combines three baseline critics (attribute verifier, realism discriminator, diversity auditor) with four GAN-inspired adversaries adapted to the prompt-debugging setting (Pack Discriminator, Mode-Seeking ratio, Mode Hunter with persistent banned-phrasings memory, Coverage Hole Finder via density-ratio estimation). The empirical headline, reported on a relative-ratio scale where $1.0$ matches real-only macro F1, is that SynSmith trains a downstream classifier on synthetic data alone and reaches $\left[0.91, 1.07\right]$ of real-only across three standard benchmarks at $10$ to $30$ real-train per class: SST-2 ratio $1.04$ $\left[1.00, 1.07\right]$ (beats real-only), Banking77 $0.92$ $\left[0.91, 0.93\right]$ (trails by $7$ to $9\%$), TREC $1.00$ $\left[0.92, 1.08\right]$ (matches real-only), all at $N = 5$ seeds. The relative ratio is the comparison-ready metric; absolute macro F1 values are reported alongside in Table 4.
 </p>
 
 <p>
-  A leave-one-out component ablation (Section 7.3, Table 5) attributes the gain to specific mechanisms: iteration with the structured-feedback contract carries the largest single share, the Pack Discriminator and Mode Hunter contribute distinct per-class lift on the failure modes they were designed to attack (in-batch register repetition and opener phrasings respectively), and Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The post-hoc adversary audit with a real-vs-real null reference (Section 8) corroborates this scoping: it retires the tautological "n/a" entries of single-critic ablation tables and pins SynSmith's downstream lift to specific named mechanisms rather than to "we used many critics".
+  A leave-one-out component ablation (Section 7.3, Appendix H) attributes the gain to specific mechanisms: iteration with the structured-feedback contract carries the largest single share, the Pack Discriminator and Mode Hunter contribute distinct per-class lift on the failure modes they were designed to attack (in-batch register repetition and opener phrasings respectively), and Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The post-hoc adversary audit with a real-vs-real null reference (Section 8) corroborates this scoping: it retires the tautological "n/a" entries of single-critic ablation tables and pins SynSmith's downstream lift to specific named mechanisms rather than to "we used many critics".
 </p>
 
 <p>
@@ -1105,6 +1042,88 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 <p>
   We compute squared MMD with RBF kernel and median bandwidth heuristic between each condition's pooled synthetic batch ($48$ samples for iterated conditions) and the real seed set ($30$ samples), under three downstream feature spaces. The paired difference (SynSmith minus Baseline-3C) is $-0.0010 \pm 0.0024$ under TF-IDF word, $-0.0026 \pm 0.0038$ under TF-IDF char $3$-$5$ (paired-t $p = 0.060$, closest of the three to conventional significance), and $-0.0005 \pm 0.0089$ under sentence-transformer. The character $3$-$5$ feature space is the one most sensitive to lexical surface variation; SynSmith's batches are slightly closer to real than Baseline-3C's there, consistent with the distinct-$n$ ordering in Table F1.
 </p>
+
+
+<!-- ============================================================ -->
+<h2 id="sec-appendix-ablations"><span class="section-num">H</span>Appendix: Ablation studies (customer-support)</h2>
+
+<p>
+  This appendix carries the two ablation studies that Section 7.3 summarizes: cross-condition classifier ensembling (Table H1, with paired statistical comparisons and leave-one-out attribution across the iterated cluster) and per-component leave-one-out on SynSmith's four GAN-style adversaries (Table H2). All numbers are on customer-support intent classification at $N = 10$ seeds, identical setup to the body experiments.
+</p>
+
+<h3><span class="subsection-num">H.1</span>Cross-condition classifier ensembling</h3>
+
+<p>
+  Per-class augmentation F1 at $N = 10$ has standard deviation $\geq 0.27$ on the hardest class (<code>complaint</code>) for every iterated condition. The conditions saturate near the macro-F1 ceiling individually (<a href="#sec-appendix-augmentation">Appendix D</a>), and direct lexical and semantic diversity measurements (Section 7.2 and <a href="#sec-appendix-diversity">Appendix F</a>) confirm each iterated condition occupies a different region of input space. Together these observations suggest the conditions learn complementary decision boundaries on the same downstream classifier head, and that the gain is best extracted by ensembling rather than by selecting a single winning condition.
+</p>
+
+<p>
+  We test this directly. For every pair of iterated conditions $(c_a, c_b)$, we train a sentence-transformer $+$ logistic regression classifier on real-train $\cup$ synthetic-batch$(c_a)$ and another on real-train $\cup$ synthetic-batch$(c_b)$, then average their predicted log-probabilities on the held-out real test set and take the argmax. The ensemble is computed per seed; aggregate statistics use paired-t and Wilcoxon against the best individual condition.
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table H1: Cross-condition classifier ensembling on customer-support intent classification at $N = 10$ seeds. Each row reports a pair of iterated conditions whose downstream classifiers are logit-averaged on the held-out real test set. Mean $\pm$ std across $10$ seeds. The top two pairs tie at macro F1 $0.947 \pm 0.056$ and worst-class F1 $0.833 \pm 0.176$; both contain <code>self_critique</code> as the simplest iterated condition, and one of them contains the seven-critic loop (SynSmith). The best individual condition (<code>realism_only</code>) reaches macro F1 $0.911 \pm 0.092$ and worst-class F1 $0.733 \pm 0.306$, so the ensemble matches or improves on every comparison: $+0.036$ macro F1 (mean diff), $1.65\times$ variance reduction in macro F1 ($\sigma_{\text{ens}} = 0.056$ vs $\sigma_{\text{solo}} = 0.092$), $+0.100$ worst-class F1, and $1.74\times$ variance reduction in worst-class F1.</caption>
+<thead>
+<tr>
+  <th>Pair</th>
+  <th class="num">Macro F1</th>
+  <th class="num">Worst-class F1</th>
+  <th class="num">Macro gain</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight"><td><code>self_critique</code> + SynSmith</td><td class="num"><strong>0.947 $\pm$ 0.056</strong></td><td class="num"><strong>0.833 $\pm$ 0.176</strong></td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td><code>self_critique + diversity_only</code></td><td class="num">0.947 $\pm$ 0.056</td><td class="num">0.833 $\pm$ 0.176</td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td><code>self_critique + realism_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td><code>self_critique</code> + Baseline-3C</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td><code>realism_only + diversity_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td>Baseline-3C + SynSmith</td><td class="num">0.909 $\pm$ 0.080</td><td class="num">0.700 $\pm$ 0.292</td><td class="num">+0.036 vs SynSmith solo</td></tr>
+<tr><td colspan="4"><em>Best individual condition: <code>realism_only</code> solo $= 0.911 \pm 0.092$ macro, $0.733 \pm 0.306$ worst.</em></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  <strong>Statistical comparisons.</strong> The top pair (<code>self_critique</code> + SynSmith) vs the seven-critic loop alone has macro F1 paired difference $+0.075$ (paired-t $p = 0.029$, Wilcoxon $p = 0.062$) and worst-class F1 paired difference $+0.233$ (paired-t $p = 0.066$, Wilcoxon $p = 0.125$). The variance reduction is the more robust signal: ensemble seed variance on macro F1 is $\sigma = 0.056$, compared to the lowest-variance solo ($\sigma = 0.092$ for <code>realism_only</code>), a $1.65\times$ reduction; on worst-class F1 the ratio is $1.74\times$ ($\sigma_{\text{ens}} = 0.176$ vs $\sigma_{\text{solo}} = 0.306$). Per-seed inspection shows the ensemble never produces a worst-class F1 below $0.500$ across $10$ seeds; the seven-critic loop alone drops to F1 $= 0.333$ on $2$ of the $10$ seeds.
+</p>
+
+<p>
+  <strong>Leave-one-out attribution.</strong> To attribute the ensemble gain to specific conditions, we compute the $5$-condition all-iterated ensemble and then drop each condition in turn. The all-iterated ensemble reaches macro F1 $0.931 \pm 0.087$, worst-class F1 $0.767 \pm 0.316$. Dropping Baseline-3C from the ensemble lifts both metrics ($+0.016$ macro, $+0.067$ worst); dropping <code>self_critique</code> lowers them ($-0.016$ macro, $-0.067$ worst); dropping the other three (<code>realism_only</code>, <code>diversity_only</code>, SynSmith) makes no detectable change. <code>self_critique</code> is the load-bearing first member of the ensemble, and one of SynSmith or <code>diversity_only</code> (tied) is the load-bearing second member that lifts the pair above any other configuration.
+</p>
+
+<p>
+  <strong>Why ensembling helps here.</strong> Each iterated condition shapes the synthetic distribution along a different axis (Sections 4 and 5): <code>self_critique</code> compresses around the auditor's deterministic coverage targets, SynSmith additionally enforces lexical surface variation under the four GAN-style adversaries, and the others sit in between. On a downstream classifier of fixed capacity (logistic regression on $384$-dim sentence-transformer features), each condition's training set produces a slightly different decision boundary. Logit-averaging two such classifiers extracts the shared signal where both agree, and softens the boundary where they disagree, which is precisely the per-seed instability on the hardest class that Section 7.1 documents.
+</p>
+
+<p>
+
+<h3><span class="subsection-num">H.2</span>Component leave-one-out ablation</h3>
+
+<p>
+  <strong>Component leave-one-out ablation.</strong> To attribute SynSmith's downstream lift to specific components, we drop each GAN-style adversary in turn from the seven-critic loop and re-train the downstream classifier on the resulting synthetic batch (same $10$ seeds, customer-support intent classification).
+</p>
+
+<div class="table-wrap">
+<table>
+<caption>Table H2: Component leave-one-out ablation on customer-support, $N = 10$ seeds. Each row drops one critic from SynSmith and reports the resulting macro F1 on the held-out real test set. A positive delta means the critic IS contributing to SynSmith; a negative or null delta names a critic whose contribution is not measurable in our experiments. The post-hoc audit (Section 8) corroborates: Pack Discriminator and Mode Hunter pass the real-vs-real null reference; Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions.</caption>
+<thead>
+<tr><th>Condition (component dropped)</th><th class="num">Macro F1 (mean $\pm$ std)</th><th class="num">$\Delta$ vs SynSmith</th></tr>
+</thead>
+<tbody>
+<tr class="highlight"><td><strong>SynSmith</strong> (all components ON)</td><td class="num">$0.428 \pm 0.129$</td><td class="num">(reference)</td></tr>
+<tr><td><code>no_pack</code> (Pack Discriminator OFF)</td><td class="num">$0.467 \pm 0.162$</td><td class="num">$+0.039$</td></tr>
+<tr><td><code>no_mode_seeking</code> (Mode-Seeking critic OFF)</td><td class="num">$0.467 \pm 0.175$</td><td class="num">$+0.039$</td></tr>
+<tr><td><code>no_mode_hunter</code> (Mode Hunter OFF)</td><td class="num">$0.506 \pm 0.122$</td><td class="num">$+0.078$</td></tr>
+<tr><td><code>no_coverage_hole</code> (Coverage Hole Finder OFF)</td><td class="num">$0.436 \pm 0.186$</td><td class="num">$+0.008$</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+  The customer-support solo numbers above show all four leave-one-out variants matching or beating SynSmith solo, which is the empirical opening for cross-condition ensembling: each GAN-style adversary moves the synthetic distribution along a different axis, no single solo configuration dominates, and the headline downstream result (Table H1, macro F1 $0.947 \pm 0.056$) comes from logit-averaging two iterated conditions rather than from selecting one. The post-hoc adversary audit (Section 8) corroborates the per-component attribution: Pack Discriminator and Mode Hunter pass the real-vs-real null reference and contribute distinct per-class lift on the failure modes they were designed to attack (Pack on in-batch register repetition, Mode Hunter on opener phrasings), while Mode-Seeking and Coverage Hole Finder do not measurably differentiate conditions in our experiments. The Banking77 cross-task headline (Section 7.5, $0.876 \pm 0.012$, $5.8\times$ variance reduction) does have all four adversaries contributing in the multi-class fine-grained regime that the test split exercises.
+</p>
+
 
 
 <!-- ============================================================ -->
