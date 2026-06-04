@@ -366,21 +366,21 @@ $$
 <h3><span class="subsection-num">6.3</span>Conditions</h3>
 
 <p>
-  <strong>SynSmith</strong> is the seven-critic configuration (Verifier, Realism Discriminator, Diversity Auditor, Pack, Mode-Seeking, Mode Hunter, Coverage Hole Finder) iterated for three rounds with the Updater rewriting the generator prompt each round; it is the highlighted row of Table 3. <strong>Baseline-3C</strong> is the three-critic baseline (Verifier, Realism Discriminator, Diversity Auditor; the four GAN-style adversaries off), iterated identically; it is the within-paper ablation that isolates the contribution of the four GAN-style adversaries. The remaining condition labels (<code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, the six <code>no_X</code> leave-one-out variants) are stable identifiers used in the open-source CLI flag <code>--conditions</code>. For backward compatibility with the released experimental artefacts, SynSmith is invoked at the CLI as <code>--conditions full_attrforge</code> and Baseline-3C as <code>--conditions full_classic</code>; variant configurations retain the historical prefix (<code>full_attrforge_vs</code> for the Verbalized Sampling generator, <code>full_attrforge_3judge</code> for the multi-vendor judge ensemble, <code>full_attrforge_sibling</code> for the Class-Discriminability extension).
+  <strong>SynSmith</strong> is the seven-critic configuration (Verifier, Realism Discriminator, Diversity Auditor, Pack, Mode-Seeking, Mode Hunter, Coverage Hole Finder) iterated for three rounds with the Updater rewriting the generator prompt each round; it is the highlighted row of Table 3. <strong>Baseline-3C</strong> is the three-critic baseline (Verifier, Realism Discriminator, Diversity Auditor; the four GAN-style adversaries off), iterated identically; it is the within-paper ablation that isolates the contribution of the four GAN-style adversaries. The remaining baselines (<strong>Naive</strong>, <strong>Few-shot</strong>, <strong>Self-critique</strong>, <strong>Realism-only</strong>, <strong>Diversity-only</strong>, <strong>Attribute-only</strong>) and the four leave-one-out variants (<strong>Pack-OFF</strong>, <strong>Mode-Seeking-OFF</strong>, <strong>Mode-Hunter-OFF</strong>, <strong>Coverage-Hole-OFF</strong>) are stable identifiers in the open-source CLI flag <code>--conditions</code> under their historical underscore names (<code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, <code>attribute_only</code>, <code>no_pack</code>, <code>no_mode_seeking</code>, <code>no_mode_hunter</code>, <code>no_coverage_hole</code>); the display names in this paper use hyphens for readability. For backward compatibility with the released experimental artefacts, SynSmith is invoked at the CLI as <code>--conditions full_attrforge</code> and Baseline-3C as <code>--conditions full_classic</code>; variant configurations retain the historical prefix (<code>full_attrforge_vs</code> for the Verbalized Sampling generator, <code>full_attrforge_3judge</code> for the multi-vendor judge ensemble, <code>full_attrforge_sibling</code> for the Class-Discriminability extension).
 </p>
 
 <div class="table-wrap">
 <table>
-<caption>Table 3: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same ten random seeds on customer-support (17, 23, 41, 53, 89, 101, 109, 127, 137, 149) and same five seeds on Banking77 (17, 23, 41, 53, 89), same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: <code>naive</code> and <code>few_shot</code> use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). <code>few_shot</code> additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
+<caption>Table 3: Conditions evaluated. Same generator (live <code>gpt-4o-mini</code>, temperature 0.9), same ten random seeds on customer-support (17, 23, 41, 53, 89, 101, 109, 127, 137, 149) and same five seeds on Banking77 (17, 23, 41, 53, 89), same downstream evaluator. The conditions differ in which critics are enabled and in two non-critic settings: Naive and Few-shot use 1 iteration of 16 samples (16 total); the other five use 3 iterations of 16 samples (48 total). Few-shot additionally raises the generator's few-shot pool from 3 to 8 real exemplars. These non-critic differences are part of the standard baselines literature (one-shot vs few-shot vs iterated).</caption>
 <thead>
 <tr><th>Condition</th><th class="num">Iters</th><th>Verifier</th><th>Realism disc.</th><th>Auditor</th><th>Pack</th><th>Mode-seeking</th><th>Mode hunter</th><th>Coverage hole</th><th>Updater</th></tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">1</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">1</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">3</td><td>off</td><td>off</td><td>det.</td><td>off</td><td>off</td><td>off</td><td>off</td><td>on</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">3</td><td>off</td><td>on</td><td>det.</td><td>off</td><td>off</td><td>off</td><td>off</td><td>on</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">3</td><td>off</td><td>off</td><td>on</td><td>off</td><td>on</td><td>off</td><td>on</td><td>on</td></tr>
+<tr><td>Naive</td><td class="num">1</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td></tr>
+<tr><td>Few-shot</td><td class="num">1</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td><td>off</td></tr>
+<tr><td>Self-critique</td><td class="num">3</td><td>off</td><td>off</td><td>det.</td><td>off</td><td>off</td><td>off</td><td>off</td><td>on</td></tr>
+<tr><td>Realism-only</td><td class="num">3</td><td>off</td><td>on</td><td>det.</td><td>off</td><td>off</td><td>off</td><td>off</td><td>on</td></tr>
+<tr><td>Diversity-only</td><td class="num">3</td><td>off</td><td>off</td><td>on</td><td>off</td><td>on</td><td>off</td><td>on</td><td>on</td></tr>
 <tr><td>Baseline-3C</td><td class="num">3</td><td>on</td><td>on</td><td>on</td><td>off</td><td>off</td><td>off</td><td>off</td><td>on</td></tr>
 <tr class="highlight"><td>SynSmith</td><td class="num">3</td><td>on</td><td>on</td><td>on</td><td>on</td><td>on</td><td>on</td><td>on</td><td>on</td></tr>
 </tbody>
@@ -484,7 +484,7 @@ $$
 <h3><span class="subsection-num">9.2</span>Scope of the evaluation</h3>
 
 <p>
-  Three boundaries delimit the claims above. <em>Statistical scope:</em> the cross-condition ensemble gain over the best individual condition (<code>realism_only</code>) is $+0.036$ macro F1, paired-t $p = 0.310$, paired BCa $95\%$ CI $[-0.033, +0.089]$ which crosses zero at $N = 10$. The tighter signals are the variance reduction ($1.65\times$ on macro F1, $1.74\times$ on worst-class F1) and two BCa CIs that exclude zero: $+0.073$ macro F1 over Baseline-3C solo (BCa $[+0.009, +0.141]$) and $+0.233$ worst-class F1 over the seven-critic loop solo (BCa $[+0.067, +0.500]$). Both top-tied ensemble pairs (<code>self_critique</code> + SynSmith and <code>self_critique + diversity_only</code>) yield identical macro and worst-class F1, so the contribution attaches to <em>iteration with structured critics</em> rather than to the four GAN-style adversaries specifically. <em>Task scope:</em> customer-support and Banking77 share intent-classification structure; broader replication across instruction-following or open-ended generation is the natural next step. <em>Backend scope:</em> all critics, the generator, and the updater use <code>gpt-4o-mini</code>; the multi-vendor judge ensembling described in Section 10 as future work would diversify the realism signal across models.
+  Three boundaries delimit the claims above. <em>Statistical scope:</em> the cross-condition ensemble gain over the best individual condition (Realism-only) is $+0.036$ macro F1, paired-t $p = 0.310$, paired BCa $95\%$ CI $[-0.033, +0.089]$ which crosses zero at $N = 10$. The tighter signals are the variance reduction ($1.65\times$ on macro F1, $1.74\times$ on worst-class F1) and two BCa CIs that exclude zero: $+0.073$ macro F1 over Baseline-3C solo (BCa $[+0.009, +0.141]$) and $+0.233$ worst-class F1 over the seven-critic loop solo (BCa $[+0.067, +0.500]$). Both top-tied ensemble pairs (Self-critique + SynSmith and Self-critique + Diversity-only) yield identical macro and worst-class F1, so the contribution attaches to <em>iteration with structured critics</em> rather than to the four GAN-style adversaries specifically. <em>Task scope:</em> customer-support and Banking77 share intent-classification structure; broader replication across instruction-following or open-ended generation is the natural next step. <em>Backend scope:</em> all critics, the generator, and the updater use <code>gpt-4o-mini</code>; the multi-vendor judge ensembling described in Section 10 as future work would diversify the realism signal across models.
 </p>
 
 <h3><span class="subsection-num">9.3</span>Comparison with concurrent work</h3>
@@ -525,7 +525,7 @@ $$
 </p>
 
 <p>
-  On customer-support intent classification, SynSmith additionally combines with the simplest iterated baseline through cross-condition classifier ensembling (Section 7.3): logit-averaging two iterated conditions (e.g. <code>self_critique</code> with SynSmith) reaches macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, $+0.233$ on worst-class F1 over the seven-critic loop solo (BCa $95\%$ CI $[+0.067, +0.500]$, excludes zero), with $1.65\times$ lower seed variance than any solo condition. The ensemble result holds on the augmentation regime where a small real-train set is concatenated with the synthetic batch; on the cross-task synth-only headline above, SynSmith solo is the recommended configuration.
+  On customer-support intent classification, SynSmith additionally combines with the simplest iterated baseline through cross-condition classifier ensembling (Section 7.3): logit-averaging two iterated conditions (e.g. Self-critique with SynSmith) reaches macro F1 $0.947 \pm 0.056$ at $N = 10$ seeds, $+0.233$ on worst-class F1 over the seven-critic loop solo (BCa $95\%$ CI $[+0.067, +0.500]$, excludes zero), with $1.65\times$ lower seed variance than any solo condition. The ensemble result holds on the augmentation regime where a small real-train set is concatenated with the synthetic batch; on the cross-task synth-only headline above, SynSmith solo is the recommended configuration.
 </p>
 
 <p>
@@ -817,7 +817,7 @@ $$
 <h3><span class="subsection-num">C.2</span>Named baseline configurations, ablations, and example datasets</h3>
 
 <p>
-  Eight named baseline configurations are shipped under the <code>--conditions</code> flag of the experiment runner: <code>naive</code>, <code>few_shot</code>, <code>self_critique</code>, <code>realism_only</code>, <code>diversity_only</code>, <code>attribute_only</code>, Baseline-3C (CLI flag <code>--conditions full_classic</code>), and SynSmith (CLI flag <code>--conditions full_attrforge</code>); the historical CLI prefixes are retained for backward compatibility with the released artefacts. Leave-one-out ablation conditions enumerate each adversary's contribution: <code>no_pack</code>, <code>no_mode_seeking</code>, <code>no_mode_hunter</code>, <code>no_coverage_hole</code>, plus two scout-derived variants: SynSmith with the Verbalized Sampling generator (CLI flag <code>--conditions full_attrforge_vs</code>) and SynSmith with the multi-vendor debate realism critic (CLI flag <code>--conditions full_attrforge_3judge</code>). Three example datasets:
+  Eight named baseline configurations are shipped under the <code>--conditions</code> flag of the experiment runner: Naive, Few-shot, Self-critique, Realism-only, Diversity-only, Attribute-only, Baseline-3C (CLI flag <code>--conditions full_classic</code>), and SynSmith (CLI flag <code>--conditions full_attrforge</code>); the historical CLI prefixes are retained for backward compatibility with the released artefacts. Leave-one-out ablation conditions enumerate each adversary's contribution: Pack-OFF, Mode-Seeking-OFF, Mode-Hunter-OFF, Coverage-Hole-OFF, plus two scout-derived variants: SynSmith with the Verbalized Sampling generator (CLI flag <code>--conditions full_attrforge_vs</code>) and SynSmith with the multi-vendor debate realism critic (CLI flag <code>--conditions full_attrforge_3judge</code>). Three example datasets:
 </p>
 
 <ul>
@@ -907,12 +907,12 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 
 <figure>
   <img src="figures/main_run_002_per_class_aug.png" alt="Per-class augmentation F1 at n_real=30" />
-  <figcaption>Figure D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support intent classification ($10$ seeds). The rightmost (green) column in each group is the cross-condition ensemble of Section 7.3, <code>self_critique</code> $+$ SynSmith logit-averaged. The ensemble matches or improves on real-only across all five classes, with the largest lifts on the two harder classes (<code>complaint</code> $0.67 \to 0.83$, $+0.16$; <code>general_question</code> $0.80 \to 0.90$, $+0.10$).</figcaption>
+  <figcaption>Figure D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support intent classification ($10$ seeds). The rightmost (green) column in each group is the cross-condition ensemble of Section 7.3, Self-critique $+$ SynSmith logit-averaged. The ensemble matches or improves on real-only across all five classes, with the largest lifts on the two harder classes (<code>complaint</code> $0.67 \to 0.83$, $+0.16$; <code>general_question</code> $0.80 \to 0.90$, $+0.10$).</figcaption>
 </figure>
 
 <div class="table-wrap">
 <table>
-<caption>Table D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support. The right column is the cross-condition ensemble, logit-averaging <code>self_critique</code> and SynSmith.</caption>
+<caption>Table D2: Per-class augmentation F1 at $n_{\text{real}} = 30$ on customer-support. The right column is the cross-condition ensemble, logit-averaging Self-critique and SynSmith.</caption>
 <thead>
 <tr><th>class</th><th class="num">real-only</th><th class="num">Baseline-3C (solo)</th><th class="num">SynSmith (solo)</th><th class="num">ENS</th></tr>
 </thead>
@@ -977,7 +977,7 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 
 <div class="table-wrap">
 <table>
-<caption>Table F1: Direct lexical-diversity measurements on each condition's final pooled batch, mean $\pm$ std across $10$ seeds. Bold cells are the best per-column among iterated conditions. SynSmith has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-$4$ among the five iterated conditions, supporting the claim that the GAN-style adversaries inject lexical diversity on top of the iteration baseline. The non-iterated baselines (<code>naive</code> and <code>few_shot</code>) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; <code>few_shot</code>'s 8-exemplar real pool contributes additional surface diversity.</caption>
+<caption>Table F1: Direct lexical-diversity measurements on each condition's final pooled batch, mean $\pm$ std across $10$ seeds. Bold cells are the best per-column among iterated conditions. SynSmith has the highest distinct-$n$ for all $n \in \{1, 2, 3\}$ and the lowest self-BLEU-$4$ among the five iterated conditions, supporting the claim that the GAN-style adversaries inject lexical diversity on top of the iteration baseline. The non-iterated baselines (Naive and Few-shot) score higher on distinct-$n$ because they have not been narrowed by iterative prompt updates; Few-shot's 8-exemplar real pool contributes additional surface diversity.</caption>
 <thead>
 <tr>
   <th>Condition</th>
@@ -988,11 +988,11 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.534 $\pm$ 0.018</td><td class="num">0.894 $\pm$ 0.012</td><td class="num">0.971 $\pm$ 0.008</td><td class="num">0.147 $\pm$ 0.020</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">0.526 $\pm$ 0.019</td><td class="num">0.894 $\pm$ 0.013</td><td class="num">0.969 $\pm$ 0.011</td><td class="num">0.147 $\pm$ 0.018</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.361 $\pm$ 0.020</td><td class="num">0.781 $\pm$ 0.021</td><td class="num">0.926 $\pm$ 0.011</td><td class="num">0.230 $\pm$ 0.020</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.360 $\pm$ 0.026</td><td class="num">0.775 $\pm$ 0.027</td><td class="num">0.925 $\pm$ 0.018</td><td class="num">0.237 $\pm$ 0.038</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.361 $\pm$ 0.018</td><td class="num">0.775 $\pm$ 0.020</td><td class="num">0.921 $\pm$ 0.011</td><td class="num">0.242 $\pm$ 0.025</td></tr>
+<tr><td>Naive</td><td class="num">0.534 $\pm$ 0.018</td><td class="num">0.894 $\pm$ 0.012</td><td class="num">0.971 $\pm$ 0.008</td><td class="num">0.147 $\pm$ 0.020</td></tr>
+<tr><td>Few-shot</td><td class="num">0.526 $\pm$ 0.019</td><td class="num">0.894 $\pm$ 0.013</td><td class="num">0.969 $\pm$ 0.011</td><td class="num">0.147 $\pm$ 0.018</td></tr>
+<tr><td>Self-critique</td><td class="num">0.361 $\pm$ 0.020</td><td class="num">0.781 $\pm$ 0.021</td><td class="num">0.926 $\pm$ 0.011</td><td class="num">0.230 $\pm$ 0.020</td></tr>
+<tr><td>Realism-only</td><td class="num">0.360 $\pm$ 0.026</td><td class="num">0.775 $\pm$ 0.027</td><td class="num">0.925 $\pm$ 0.018</td><td class="num">0.237 $\pm$ 0.038</td></tr>
+<tr><td>Diversity-only</td><td class="num">0.361 $\pm$ 0.018</td><td class="num">0.775 $\pm$ 0.020</td><td class="num">0.921 $\pm$ 0.011</td><td class="num">0.242 $\pm$ 0.025</td></tr>
 <tr><td>Baseline-3C</td><td class="num">0.364 $\pm$ 0.018</td><td class="num">0.788 $\pm$ 0.025</td><td class="num">0.929 $\pm$ 0.018</td><td class="num">0.225 $\pm$ 0.032</td></tr>
 <tr class="highlight"><td>SynSmith</td><td class="num"><strong>0.371 $\pm$ 0.027</strong></td><td class="num"><strong>0.792 $\pm$ 0.031</strong></td><td class="num"><strong>0.935 $\pm$ 0.016</strong></td><td class="num"><strong>0.221 $\pm$ 0.030</strong></td></tr>
 </tbody>
@@ -1016,11 +1016,11 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">10.108 $\pm$ 0.818</td><td class="num">$1.00\times$</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">9.940 $\pm$ 0.615</td><td class="num">$0.98\times$</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">19.111 $\pm$ 1.715</td><td class="num">$1.89\times$</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">19.407 $\pm$ 2.591</td><td class="num">$1.92\times$</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">18.703 $\pm$ 1.410</td><td class="num">$1.85\times$</td></tr>
+<tr><td>Naive</td><td class="num">10.108 $\pm$ 0.818</td><td class="num">$1.00\times$</td></tr>
+<tr><td>Few-shot</td><td class="num">9.940 $\pm$ 0.615</td><td class="num">$0.98\times$</td></tr>
+<tr><td>Self-critique</td><td class="num">19.111 $\pm$ 1.715</td><td class="num">$1.89\times$</td></tr>
+<tr><td>Realism-only</td><td class="num">19.407 $\pm$ 2.591</td><td class="num">$1.92\times$</td></tr>
+<tr><td>Diversity-only</td><td class="num">18.703 $\pm$ 1.410</td><td class="num">$1.85\times$</td></tr>
 <tr><td>Baseline-3C</td><td class="num">19.459 $\pm$ 1.994</td><td class="num">$1.92\times$</td></tr>
 <tr class="highlight"><td>SynSmith</td><td class="num">19.257 $\pm$ 1.751</td><td class="num">$1.91\times$</td></tr>
 </tbody>
@@ -1063,7 +1063,7 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 
 <div class="table-wrap">
 <table>
-<caption>Table H1: Cross-condition classifier ensembling on customer-support intent classification at $N = 10$ seeds. Each row reports a pair of iterated conditions whose downstream classifiers are logit-averaged on the held-out real test set. Mean $\pm$ std across $10$ seeds. The top two pairs tie at macro F1 $0.947 \pm 0.056$ and worst-class F1 $0.833 \pm 0.176$; both contain <code>self_critique</code> as the simplest iterated condition, and one of them contains the seven-critic loop (SynSmith). The best individual condition (<code>realism_only</code>) reaches macro F1 $0.911 \pm 0.092$ and worst-class F1 $0.733 \pm 0.306$, so the ensemble matches or improves on every comparison: $+0.036$ macro F1 (mean diff), $1.65\times$ variance reduction in macro F1 ($\sigma_{\text{ens}} = 0.056$ vs $\sigma_{\text{solo}} = 0.092$), $+0.100$ worst-class F1, and $1.74\times$ variance reduction in worst-class F1.</caption>
+<caption>Table H1: Cross-condition classifier ensembling on customer-support intent classification at $N = 10$ seeds. Each row reports a pair of iterated conditions whose downstream classifiers are logit-averaged on the held-out real test set. Mean $\pm$ std across $10$ seeds. The top two pairs tie at macro F1 $0.947 \pm 0.056$ and worst-class F1 $0.833 \pm 0.176$; both contain Self-critique as the simplest iterated condition, and one of them contains the seven-critic loop (SynSmith). The best individual condition (Realism-only) reaches macro F1 $0.911 \pm 0.092$ and worst-class F1 $0.733 \pm 0.306$, so the ensemble matches or improves on every comparison: $+0.036$ macro F1 (mean diff), $1.65\times$ variance reduction in macro F1 ($\sigma_{\text{ens}} = 0.056$ vs $\sigma_{\text{solo}} = 0.092$), $+0.100$ worst-class F1, and $1.74\times$ variance reduction in worst-class F1.</caption>
 <thead>
 <tr>
   <th>Pair</th>
@@ -1073,27 +1073,27 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </tr>
 </thead>
 <tbody>
-<tr class="highlight"><td><code>self_critique</code> + SynSmith</td><td class="num"><strong>0.947 $\pm$ 0.056</strong></td><td class="num"><strong>0.833 $\pm$ 0.176</strong></td><td class="num">+0.036 vs best solo</td></tr>
-<tr><td><code>self_critique + diversity_only</code></td><td class="num">0.947 $\pm$ 0.056</td><td class="num">0.833 $\pm$ 0.176</td><td class="num">+0.036 vs best solo</td></tr>
-<tr><td><code>self_critique + realism_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
-<tr><td><code>self_critique</code> + Baseline-3C</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
-<tr><td><code>realism_only + diversity_only</code></td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr class="highlight"><td>Self-critique + SynSmith</td><td class="num"><strong>0.947 $\pm$ 0.056</strong></td><td class="num"><strong>0.833 $\pm$ 0.176</strong></td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td>Self-critique + Diversity-only</td><td class="num">0.947 $\pm$ 0.056</td><td class="num">0.833 $\pm$ 0.176</td><td class="num">+0.036 vs best solo</td></tr>
+<tr><td>Self-critique + Realism-only</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td>Self-critique + Baseline-3C</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
+<tr><td>Realism-only + Diversity-only</td><td class="num">0.931 $\pm$ 0.087</td><td class="num">0.767 $\pm$ 0.316</td><td class="num">+0.020 vs best solo</td></tr>
 <tr><td>Baseline-3C + SynSmith</td><td class="num">0.909 $\pm$ 0.080</td><td class="num">0.700 $\pm$ 0.292</td><td class="num">+0.036 vs SynSmith solo</td></tr>
-<tr><td colspan="4"><em>Best individual condition: <code>realism_only</code> solo $= 0.911 \pm 0.092$ macro, $0.733 \pm 0.306$ worst.</em></td></tr>
+<tr><td colspan="4"><em>Best individual condition: Realism-only solo $= 0.911 \pm 0.092$ macro, $0.733 \pm 0.306$ worst.</em></td></tr>
 </tbody>
 </table>
 </div>
 
 <p>
-  <strong>Statistical comparisons.</strong> The top pair (<code>self_critique</code> + SynSmith) vs the seven-critic loop alone has macro F1 paired difference $+0.075$ (paired-t $p = 0.029$, Wilcoxon $p = 0.062$) and worst-class F1 paired difference $+0.233$ (paired-t $p = 0.066$, Wilcoxon $p = 0.125$). The variance reduction is the more robust signal: ensemble seed variance on macro F1 is $\sigma = 0.056$, compared to the lowest-variance solo ($\sigma = 0.092$ for <code>realism_only</code>), a $1.65\times$ reduction; on worst-class F1 the ratio is $1.74\times$ ($\sigma_{\text{ens}} = 0.176$ vs $\sigma_{\text{solo}} = 0.306$). Per-seed inspection shows the ensemble never produces a worst-class F1 below $0.500$ across $10$ seeds; the seven-critic loop alone drops to F1 $= 0.333$ on $2$ of the $10$ seeds.
+  <strong>Statistical comparisons.</strong> The top pair (Self-critique + SynSmith) vs the seven-critic loop alone has macro F1 paired difference $+0.075$ (paired-t $p = 0.029$, Wilcoxon $p = 0.062$) and worst-class F1 paired difference $+0.233$ (paired-t $p = 0.066$, Wilcoxon $p = 0.125$). The variance reduction is the more robust signal: ensemble seed variance on macro F1 is $\sigma = 0.056$, compared to the lowest-variance solo ($\sigma = 0.092$ for Realism-only), a $1.65\times$ reduction; on worst-class F1 the ratio is $1.74\times$ ($\sigma_{\text{ens}} = 0.176$ vs $\sigma_{\text{solo}} = 0.306$). Per-seed inspection shows the ensemble never produces a worst-class F1 below $0.500$ across $10$ seeds; the seven-critic loop alone drops to F1 $= 0.333$ on $2$ of the $10$ seeds.
 </p>
 
 <p>
-  <strong>Leave-one-out attribution.</strong> To attribute the ensemble gain to specific conditions, we compute the $5$-condition all-iterated ensemble and then drop each condition in turn. The all-iterated ensemble reaches macro F1 $0.931 \pm 0.087$, worst-class F1 $0.767 \pm 0.316$. Dropping Baseline-3C from the ensemble lifts both metrics ($+0.016$ macro, $+0.067$ worst); dropping <code>self_critique</code> lowers them ($-0.016$ macro, $-0.067$ worst); dropping the other three (<code>realism_only</code>, <code>diversity_only</code>, SynSmith) makes no detectable change. <code>self_critique</code> is the load-bearing first member of the ensemble, and one of SynSmith or <code>diversity_only</code> (tied) is the load-bearing second member that lifts the pair above any other configuration.
+  <strong>Leave-one-out attribution.</strong> To attribute the ensemble gain to specific conditions, we compute the $5$-condition all-iterated ensemble and then drop each condition in turn. The all-iterated ensemble reaches macro F1 $0.931 \pm 0.087$, worst-class F1 $0.767 \pm 0.316$. Dropping Baseline-3C from the ensemble lifts both metrics ($+0.016$ macro, $+0.067$ worst); dropping Self-critique lowers them ($-0.016$ macro, $-0.067$ worst); dropping the other three (Realism-only, Diversity-only, SynSmith) makes no detectable change. Self-critique is the load-bearing first member of the ensemble, and one of SynSmith or Diversity-only (tied) is the load-bearing second member that lifts the pair above any other configuration.
 </p>
 
 <p>
-  <strong>Why ensembling helps here.</strong> Each iterated condition shapes the synthetic distribution along a different axis (Sections 4 and 5): <code>self_critique</code> compresses around the auditor's deterministic coverage targets, SynSmith additionally enforces lexical surface variation under the four GAN-style adversaries, and the others sit in between. On a downstream classifier of fixed capacity (logistic regression on $384$-dim sentence-transformer features), each condition's training set produces a slightly different decision boundary. Logit-averaging two such classifiers extracts the shared signal where both agree, and softens the boundary where they disagree, which is precisely the per-seed instability on the hardest class that Section 7.1 documents.
+  <strong>Why ensembling helps here.</strong> Each iterated condition shapes the synthetic distribution along a different axis (Sections 4 and 5): Self-critique compresses around the auditor's deterministic coverage targets, SynSmith additionally enforces lexical surface variation under the four GAN-style adversaries, and the others sit in between. On a downstream classifier of fixed capacity (logistic regression on $384$-dim sentence-transformer features), each condition's training set produces a slightly different decision boundary. Logit-averaging two such classifiers extracts the shared signal where both agree, and softens the boundary where they disagree, which is precisely the per-seed instability on the hardest class that Section 7.1 documents.
 </p>
 
 <p>
@@ -1112,10 +1112,10 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </thead>
 <tbody>
 <tr class="highlight"><td><strong>SynSmith</strong> (all components ON)</td><td class="num">$0.428 \pm 0.129$</td><td class="num">(reference)</td></tr>
-<tr><td><code>no_pack</code> (Pack Discriminator OFF)</td><td class="num">$0.467 \pm 0.162$</td><td class="num">$+0.039$</td></tr>
-<tr><td><code>no_mode_seeking</code> (Mode-Seeking critic OFF)</td><td class="num">$0.467 \pm 0.175$</td><td class="num">$+0.039$</td></tr>
-<tr><td><code>no_mode_hunter</code> (Mode Hunter OFF)</td><td class="num">$0.506 \pm 0.122$</td><td class="num">$+0.078$</td></tr>
-<tr><td><code>no_coverage_hole</code> (Coverage Hole Finder OFF)</td><td class="num">$0.436 \pm 0.186$</td><td class="num">$+0.008$</td></tr>
+<tr><td>Pack Discriminator OFF</td><td class="num">$0.467 \pm 0.162$</td><td class="num">$+0.039$</td></tr>
+<tr><td>Mode-Seeking critic OFF</td><td class="num">$0.467 \pm 0.175$</td><td class="num">$+0.039$</td></tr>
+<tr><td>Mode Hunter OFF</td><td class="num">$0.506 \pm 0.122$</td><td class="num">$+0.078$</td></tr>
+<tr><td>Coverage Hole Finder OFF</td><td class="num">$0.436 \pm 0.186$</td><td class="num">$+0.008$</td></tr>
 </tbody>
 </table>
 </div>
@@ -1155,11 +1155,11 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </tr>
 </thead>
 <tbody>
-<tr><td><code>naive</code></td><td class="num">0.45 &plusmn; 0.15</td><td class="num">&minus;0.11</td><td class="num">3.60 &plusmn; 0.55</td></tr>
-<tr><td><code>few_shot</code></td><td class="num">0.34 &plusmn; 0.07</td><td class="num">&minus;0.22</td><td class="num">4.00 &plusmn; 0.00</td></tr>
-<tr><td><code>self_critique</code></td><td class="num">0.56 &plusmn; 0.09</td><td class="num">+0.00</td><td class="num">3.60 &plusmn; 0.55</td></tr>
-<tr><td><code>realism_only</code></td><td class="num">0.55 &plusmn; 0.03</td><td class="num">&minus;0.01</td><td class="num">2.60 &plusmn; 1.14</td></tr>
-<tr><td><code>diversity_only</code></td><td class="num">0.59 &plusmn; 0.11</td><td class="num">+0.03</td><td class="num">4.00 &plusmn; 0.00</td></tr>
+<tr><td>Naive</td><td class="num">0.45 &plusmn; 0.15</td><td class="num">&minus;0.11</td><td class="num">3.60 &plusmn; 0.55</td></tr>
+<tr><td>Few-shot</td><td class="num">0.34 &plusmn; 0.07</td><td class="num">&minus;0.22</td><td class="num">4.00 &plusmn; 0.00</td></tr>
+<tr><td>Self-critique</td><td class="num">0.56 &plusmn; 0.09</td><td class="num">+0.00</td><td class="num">3.60 &plusmn; 0.55</td></tr>
+<tr><td>Realism-only</td><td class="num">0.55 &plusmn; 0.03</td><td class="num">&minus;0.01</td><td class="num">2.60 &plusmn; 1.14</td></tr>
+<tr><td>Diversity-only</td><td class="num">0.59 &plusmn; 0.11</td><td class="num">+0.03</td><td class="num">4.00 &plusmn; 0.00</td></tr>
 <tr><td>Baseline-3C</td><td class="num">0.58 &plusmn; 0.10</td><td class="num">+0.02</td><td class="num">3.80 &plusmn; 0.45</td></tr>
 <tr class="highlight"><td>SynSmith</td><td class="num">0.53 &plusmn; 0.08</td><td class="num">&minus;0.03</td><td class="num">3.80 &plusmn; 0.45</td></tr>
 </tbody>
@@ -1167,7 +1167,7 @@ print(pair_result.macro_f1, pair_result.worst_class_f1)
 </div>
 
 <p>
-  Two adversary metrics differentiate conditions cleanly. First, the <strong>Pack Discriminator</strong>: <code>few_shot</code> achieves the lowest pack accuracy ($0.34 \pm 0.07$, well below the $0.56$ real-vs-real null reference) because its 16-sample batch inherits diversity from an 8-exemplar real pool that the iterated conditions narrow through repeated prompting. Among iterated conditions, SynSmith sits at the low (more diverse) end ($0.53$, below null), matching the distinct-$n$ and self-BLEU ordering from Table F1 and corroborating the Vendi-score ranking. Second, the <strong>Mode Hunter</strong> finds an average of $3.6$ to $3.8$ residual LLM-tic phrasings in the final pooled batch of each iterated condition; the SynSmith Mode Hunter library accumulates $11.6 \pm 0.6$ distinct banned phrasings across three iterations and we verify each is suppressed in subsequent generation.
+  Two adversary metrics differentiate conditions cleanly. First, the <strong>Pack Discriminator</strong>: Few-shot achieves the lowest pack accuracy ($0.34 \pm 0.07$, well below the $0.56$ real-vs-real null reference) because its 16-sample batch inherits diversity from an 8-exemplar real pool that the iterated conditions narrow through repeated prompting. Among iterated conditions, SynSmith sits at the low (more diverse) end ($0.53$, below null), matching the distinct-$n$ and self-BLEU ordering from Table F1 and corroborating the Vendi-score ranking. Second, the <strong>Mode Hunter</strong> finds an average of $3.6$ to $3.8$ residual LLM-tic phrasings in the final pooled batch of each iterated condition; the SynSmith Mode Hunter library accumulates $11.6 \pm 0.6$ distinct banned phrasings across three iterations and we verify each is suppressed in subsequent generation.
 </p>
 
 
